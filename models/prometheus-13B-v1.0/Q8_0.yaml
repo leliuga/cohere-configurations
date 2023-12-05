@@ -1,0 +1,57 @@
+id: prometheus-13B-v1.0/Q8_0
+parent_id: kaist-ai/prometheus-13b-v1.0
+name: Prometheus 13B V1.0
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: KAIST AI
+artifact: https://huggingface.co/TheBloke/prometheus-13B-v1.0-GGUF/resolve/main/prometheus-13b-v1.0.Q8_0.gguf
+pipeline: text2text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text2text-generation
+- en
+- dataset:kaist-ai/Feedback-Collection
+- arxiv:2310.08491
+- base_model:kaist-ai/prometheus-13b-v1.0
+- license:apache-2.0
+- text-generation-inference
+- region:us
+dtype: Q8_0
+file_size: 13831319488
+params_size: ""
+vocab_size: 32000
+context_size: 4096
+embedding_size: 5120
+pretrained: false
+finetuned: false
+quantized: true
+backend: llama-backend
+chat_options:
+  cache_prompt: true
+  frequency_penalty: 0.0
+  grammar: ""
+  ignore_eos: false
+  mirostat: 0
+  mirostat_eta: 0.1
+  mirostat_tau: 5.0
+  n_keep: -1
+  n_predict: -1
+  n_probs: 0
+  penalize_nl: true
+  presence_penalty: 0.0
+  repeat_last_n: 64
+  repeat_penalty: 1.1
+  seed: -1
+  temperature: 0.8
+  tfs_z: 1.0
+  top_k: 40
+  top_p: 0.95
+  typical_p: 1.0
+prompt:
+  system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+  template: "###Task Description:\nAn instruction (might include an Input inside it), a response to evaluate, a reference answer that gets a score of 5, and a score rubric representing a evaluation criteria are given.\n1. Write a detailed feedback that assess the quality of the response strictly based on the given score rubric, not evaluating in general.\n2. After writing a feedback, write a score that is an integer between 1 and 5. You should refer to the score rubric.\n3. The output format should look as follows: \\\"Feedback: (write a feedback for criteria) [RESULT] (an integer number between 1 and 5)\\\"\n4. Please do not generate any other opening, closing, and explanations.\n\n###The instruction to evaluate:\n{prompt}\n\n###Response to evaluate:\n{{response}}\n\n###Reference Answer (Score 5):\n{{reference_answer}}\n\n###Score Rubrics:\n[{{criteria_description}}]\nScore 1: {{score1_description}}\nScore 2: {{score2_description}}\nScore 3: {{score3_description}}\nScore 4: {{score4_description}}\nScore 5: {{score5_description}}\n\n###Feedback:\n"

@@ -1,0 +1,62 @@
+id: rocket-3B/Q3_K_L
+parent_id: pansophic/rocket-3B
+name: Rocket 3B
+description: ""
+architecture: stablelm_epoch
+licence: cc-by-sa-4.0
+object: model
+owned_by: pansophic
+artifact: https://huggingface.co/TheBloke/rocket-3B-GGUF/resolve/main/rocket-3b.Q3_K_L.gguf
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- stablelm
+- en
+- arxiv:2305.18290
+- arxiv:2101.00027
+- arxiv:2305.06161
+- base_model:pansophic/rocket-3B
+- license:cc-by-sa-4.0
+- has_space
+- region:us
+dtype: Q3_K_L
+file_size: 1508564416
+params_size: ""
+vocab_size: 50304
+context_size: 4096
+embedding_size: 2560
+pretrained: false
+finetuned: false
+quantized: true
+backend: llama-backend
+chat_options:
+  cache_prompt: true
+  frequency_penalty: 0.0
+  grammar: ""
+  ignore_eos: false
+  mirostat: 0
+  mirostat_eta: 0.1
+  mirostat_tau: 5.0
+  n_keep: -1
+  n_predict: -1
+  n_probs: 0
+  penalize_nl: true
+  presence_penalty: 0.0
+  repeat_last_n: 64
+  repeat_penalty: 1.1
+  seed: -1
+  temperature: 0.8
+  tfs_z: 1.0
+  top_k: 40
+  top_p: 0.95
+  typical_p: 1.0
+prompt:
+  system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+  template: |
+    <|im_start|>system
+    {system_message}<|im_end|>
+    <|im_start|>user
+    {prompt}<|im_end|>
+    <|im_start|>assistant

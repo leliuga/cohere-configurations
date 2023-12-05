@@ -1,0 +1,233 @@
+---
+license: apache-2.0
+thumbnail: images/alfred-40b-1023.png
+datasets:
+- OpenAssistant/oasst1
+- ehartford/dolphin
+- tau/sled
+- tiiuae/falcon-refinedweb
+language:
+- en
+- fr
+- de
+- es
+- it
+tags:
+- falcon-40b
+- long-context
+- falcon
+- NTK-YaRN
+---
+# Model Card for Alfred-40B-1023
+
+![a witty and elegant butler with a falcon on his shoulder, smile, flat illustration, simple shapes, colorful, lo-fi aesthetics](images/alfred-40b-1023.png)
+
+`Alfred-40B-1023` is a finetuned version of [Falcon-40B](https://huggingface.co/tiiuae/falcon-40b), with an **extended context length of 8192 tokens**.
+Finetuning was performed in October 2023. `Alfred-40B-1023` is made available under the Apache 2.0 License.
+
+## Model Details
+
+### Model Description
+
+- **Developed by:** [LightOn](https://www.lighton.ai/) 
+    * [Oskar Hallström](https://huggingface.co/ohallstrom) (project lead, training & modeling, internal long context data, evaluation)
+    * [Amélie Chatelain](https://huggingface.co/ameliechatelain) (internal data & long context data, data generation)
+    * [Clément Thiriet](https://huggingface.co/cthiriet) (data infrastructure, data generation, evaluation)
+    * [Julien Séailles](https://huggingface.co/Jseailleslighton) (data generation)
+    * [Adrien Cavaillès](https://huggingface.co/adcavail) (data generation)
+    * [Axel Marmet](https://huggingface.co/WeightsnWizardry)* (training 2K baseline)
+
+`*` work done while at LightOn
+- **Model type:** Causal decoder-only;
+- **Language(s) (NLP):** English, German, Spanish, French (and limited capabilities in Italian, Portuguese, Polish, Dutch, Romanian, Czech, Swedish);
+- **License:** Apache 2.0 license.
+- **Finetuned from model:** [Falcon-40B](https://huggingface.co/tiiuae/falcon-40b)
+- **Training date:** October 2023 (`1023`).
+
+## Uses
+
+### Direct Use
+
+`Alfred-40B-1023` can be used as a chat model or as an instruct model. 
+
+For both instruct and chat mode, the model has been trained with chat tokens `<start_system>`, `<start_user>`, `<start_assistant>`, and `<end_message>`. These can be integrated into the prompt in the follwoing way:
+```
+<start_system>You are Alfred, a helpful assistant trained by LightOn. Knowledge cutoff: November 2022. Current date: 16 November, 2023<end_message><start_user>{user query}<end_message><start_assistant>
+```
+
+The stop word `<end_message>` should be used.
+
+### Out-of-Scope Use
+
+Production use without adequate assessment of risks and mitigation; any use cases which may be considered irresponsible or harmful. 
+
+## Bias, Risks, and Limitations
+
+`Alfred-40B-1023` is a finetune of Falcon-40B. As such, it is trained mostly on English, German, Spanish, French, with limited capabilities also in Italian, Portuguese, Polish, Dutch, Romanian, Czech, Swedish. It will not generalize appropriately to other languages. Furthermore, as it is trained on a large-scale corpora representative of the web, it will carry the stereotypes and biases commonly encountered online.
+
+### Recommendations
+
+We recommend users of `Alfred-40B-1023` to implement appropriate guardrails and precautions in any production use.
+
+## How to Get Started with the Model
+
+Use the code below to get started with the model.
+
+```
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import transformers
+import torch
+
+model = "lightonai/alfred-40b-1023"
+tokenizer = AutoTokenizer.from_pretrained("lightonai/alfred-0923-tokenizer")
+
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    torch_dtype=torch.bfloat16,
+    trust_remote_code=True,
+    device_map="auto",
+)
+
+sequences = pipeline(
+   "<start_system>You are Alfred, a helpful assistant trained by LightOn. Knowledge cutoff: November 2022. Current date: 16 November, 2023<end_message><start_user>Write me an email to my boss, explaining how the company could benefit by using LightOns platform for Large Language Models, Paradigm.<end_message><start_assistant>",
+    max_length=1000,
+    do_sample=True,
+    top_k=3,
+    num_return_sequences=1,
+    eos_token_id=tokenizer.eos_token_id,
+)
+for seq in sequences:
+    print(f"Result: {seq['generated_text']}")
+```
+
+## Training Details
+
+### Training Data
+
+Alfred-40B-1023 was trained on a mixture of publicly available and in-house curated datasets. The training data is composed of 50 % short context tasks, 45 % long context tasks and 5 % RefinedWeb.
+
+| **Short context sources** |
+|--------------------|
+| [oasst1](https://huggingface.co/datasets/OpenAssistant/oasst1) | 
+| [dolphin](https://huggingface.co/ehartford/dolphin) |
+| [openai-critiques](https://openaipublic.blob.core.windows.net/critiques/README.md) | 
+| internal |
+`internal` is a collection of synthetic and human-generated datasets created by Ligthon, tailored towards the use cases of our clients.
+
+| **Long context sources** |
+|--------------------|
+| [sled](https://huggingface.co/datasets/tau/sled) | 
+| internal-long-context |
+
+`internal-long-context` is a collection of synthetic datasets generated by LightOn, tailored towards the use cases of our clients.
+
+During training, we apply regular language modeling loss for a partition of the prompts in the long context data.
+
+| **Pretraining objective source** |
+|--------------------|
+| [RefinedWeb](https://huggingface.co/datasets/tiiuae/falcon-refinedweb) | 
+
+### Training Procedure 
+
+`Alfred-40B-1023` was trained on 128 A100 40GB GPUs, using a 3D parallelism strategy (TP=8, PP=2, DP=8) combined with ZeRO. Alfred has been trained through supervised finetuning on 100 megatokens, with a learning rate decayed with a cosine schedule. 
+
+#### Preprocessing
+
+All datasets have been filtered, up or downsampled, and adapted to our chat token format.
+
+#### Context length extension
+
+We extend the context length to 8K with a custom method that we name NTK-YaRN. As guessable from its name, our extension method draws inspiration from NTK-aware interpolation and YaRN.
+
+During our context length extension efforts, we experimented with various methods suitable for RoPE embeddings. These include vanilla [positional interpolation](https://arxiv.org/abs/2306.15595), [NTK-aware interpolation](https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/), [NTK-by-parts](https://github.com/jquesnelle/scaled-rope/pull/1), and lastly [YaRN](https://arxiv.org/abs/2309.00071).
+
+YaRN looked very promising when applied at test-time, however finetuning with YaRN was not successful in our experiments. When extending the context length at training-time, NTK-aware interpolation was the most successful out of the already existing methods. Some of our results from trying different long context extension methods are shared in the Evaluation section below. We acknowledge that the same parameter values as proposed in the YaRN-paper have been used in our YaRN experiments, and that these potentially could have other optimal values for our particular setup.
+
+##### NTK-YaRN
+
+Similarly to NTK-aware interpolation (`NTK`), NTK-YaRN involves increasing the base of the RoPE embeddings. In the original implementation of NTK-aware interpolation the new base `b'` is adapted according to the following formula:
+
+$$ b' = b \times s^{\frac{|D|}{|D|-2}} $$
+
+where `b` is the original base, `s` the scaling factor of the context length, and `|D|` the model's head dimension.
+
+However, we find (similar to other actors) that increasing the base slightly more is even better. The value of `b'` could probably be optimized even further, but for these experiments we have settled with the following value: 
+
+$$ b' = b \times (s+1)^{\frac{|D|}{|D|-2}} $$
+
+In the following parts of this model card, context length extension with this extended scaling of the base is referred to as `NTK-Margin`. For `NTK-YaRN`, the extended scaling of the base is combined with the modification of the computation of the attention weights made in YaRN, where the query and key matrices are scaled by the factor `m`. 
+
+$$ m = 1 + 0.1 \times \log(s) $$
+
+Scaling the query and key matrices this way substantially reduces the initial grad norm when applying a context length extension method in our training runs.
+
+To cite NTK-YaRN, please refer to the model bibtex in the bottom of this model card.
+
+## Evaluation
+
+### Context length extension strategies
+#### Training losses
+
+After experimenting on a 7B scale, we finally run a selected partition of the extension methods on a 40B scale. In the figure below, we display the resulting training losses when training a 40B model with the different extension methods, ceteris paribus.
+
+![Training loss curves for extension methods](images/training-loss-curves.png "Training loss curves for extension methods")
+
+Initially, YaRN has the lowest training loss, which can be seen as a reflection of the fact that YaRN was the most successful extension method at test time. However all the other methods surpasse YaRN in terms of training loss already after a handful of megatokens. Comparing NTK-Margin vs NTK-YaRN, we can note that the scaling of Q and K matrices makes the training loss lower in the beginning, however NTK-YaRN's advantage over NTK-Margin decreases as the training goes on. Comparing NTK-Margin with NTK in turn, it seems like the larger value of the base in NTK-Margin gives an initial boost in training loss, however this advantage decreases as training goes on.
+
+#### Performance on Long Context Benchmarks
+We evaluate the context length extension methods on an own benchmark, consisting of four tasks.
+
+* [Key-value retrieval UUID](https://arxiv.org/pdf/2307.03172.pdf)
+* [Coarse-grained Topic Retrieval](https://lmsys.org/blog/2023-06-29-longchat/)
+* [Fine-grained Line Retrieval](https://lmsys.org/blog/2023-06-29-longchat/)
+* [Multi document retrieval data](https://nlp.stanford.edu/data/nfliu/lost-in-the-middle/nq-open-contriever-msmarco-retrieved-documents.jsonl.gz)
+
+For each task, we have created 3 subtasks - one for each of the three context lengths 2K, 4K and 8K. In total, we thus have 12 subtasks. 
+
+In order to get an aggregated score that values each subtask equally, we normalize the scores for each subtask and then calculate the mean of the normalized scores for each extension method.
+
+![Aggregated scores on long context benchmarks](images/lc_benchmarks.png "Aggregated scores on long context benchmarks")
+
+On these benchmarks, YaRN clearly lags behind. NTK-YaRN is the winning method, however NTK-Margin is so close that more extensive research is needed to verify that NTK-YaRN really is superior to NTK-Margin, especially when trained for longer.
+
+### Comparison to 2K baseline
+
+In order to track any potential degradation on 2K context tasks due to the context length extension, we compare our 8K model against a 2K model trained in a similar setup for 100 megatokens. When training the 2K baseline, we don't include any long context data.
+
+We conduct the comparison by evaluating the models on a selection of tasks from EleutherAI harness, as well as ranking model outputs internally.
+
+![Evaluation of 2K vs 8K version of alfred-40b-2023](images/2k_vs_8k.png "Evaluation of 2K vs 8K version of alfred-40b-2023")
+
+Notably, our 8K model not only performs on par with our 2K model on most of our EleutherAI harness tasks, in fact it outperforms the 2K model on a majority of the tasks. Reading comprehension is the only subcategory for which our 8K model is outperformed by the 2K model.
+
+We recognize that there is a discrepancy between performance on classical NLP benchmarks and how humans perceive the model quality. When model outputs (limited to 2K context lengths) are ranked by LightOn employees internally, the 2K and 8K have strikingly similar performance. However, a few rare failure modes have been noted for the 8K version, which are not seen when using the 2K model. These failure modes are likely to be fixable with better composition of the long context data.
+
+
+## Compute Infrastructure
+
+### Hardware
+
+Alfred-40B-1023 was trained on AWS SageMaker, on 128 A100 40GB GPUs in P4d instances.
+
+### Software
+
+Alfred-40B-1023 was trained with a custom codebase. Training leverages a 3D parallelism approach combined with ZeRO, as well as high-performance kernels such as FlashAttention.
+
+## Model Card Contact
+
+Please open a Community Discussion for any support request related to using Alfred with HuggingFace transformers.
+
+For any other inquiry: contact@lighton.ai
+
+## Citation
+
+If you find the model useful in your work, please use the following bibtex when citing.
+```
+@article{alfred-40b-1023,
+  title={Alfred-40B-1023},
+  author={Hallström, Oskar and Chatelain, Amélie and Thiriet, Clément and Séailles, Julien and Cavaillès, Adrien and Marmet, Axel},
+  year={2023}
+}
+```

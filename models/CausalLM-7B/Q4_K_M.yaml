@@ -1,0 +1,83 @@
+id: CausalLM-7B/Q4_K_M
+parent_id: CausalLM/7B
+name: CausalLM 7B
+description: ""
+architecture: llama
+licence: wtfpl
+object: model
+owned_by: CausalLM
+artifact: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q4_K_M.gguf
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama2
+- qwen
+- text-generation
+- en
+- zh
+- dataset:JosephusCheung/GuanacoDataset
+- dataset:Open-Orca/OpenOrca
+- dataset:stingning/ultrachat
+- dataset:meta-math/MetaMathQA
+- dataset:liuhaotian/LLaVA-Instruct-150K
+- dataset:jondurbin/airoboros-3.1
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- dataset:RyokoAI/ShareGPT52K
+- dataset:RyokoAI/Fandom23K
+- dataset:milashkaarshif/MoeGirlPedia_wikitext_raw_archive
+- dataset:wikipedia
+- dataset:wiki_lingua
+- dataset:fnlp/moss-003-sft-data
+- dataset:garage-bAInd/Open-Platypus
+- dataset:LDJnr/Puffin
+- dataset:openbmb/llava_zh
+- dataset:BAAI/COIG
+- dataset:TigerResearch/tigerbot-zhihu-zh-10k
+- dataset:liwu/MNBVC
+- dataset:teknium/openhermes
+- base_model:CausalLM/7B
+- license:wtfpl
+- text-generation-inference
+- region:us
+dtype: Q4_K_M
+file_size: 4765215712
+params_size: ""
+vocab_size: 151936
+context_size: 8192
+embedding_size: 4096
+pretrained: false
+finetuned: false
+quantized: true
+backend: llama-backend
+chat_options:
+  cache_prompt: true
+  frequency_penalty: 0.0
+  grammar: ""
+  ignore_eos: false
+  mirostat: 0
+  mirostat_eta: 0.1
+  mirostat_tau: 5.0
+  n_keep: -1
+  n_predict: -1
+  n_probs: 0
+  penalize_nl: true
+  presence_penalty: 0.0
+  repeat_last_n: 64
+  repeat_penalty: 1.1
+  seed: -1
+  temperature: 0.8
+  tfs_z: 1.0
+  top_k: 40
+  top_p: 0.95
+  typical_p: 1.0
+prompt:
+  system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+  template: |
+    <|im_start|>system
+    {system_message}<|im_end|>
+    <|im_start|>user
+    {prompt}<|im_end|>
+    <|im_start|>assistant

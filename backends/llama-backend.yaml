@@ -1,0 +1,241 @@
+id: llama-backend
+name: Llama
+description: "Llama supports the following architectures: LLaMA, LLaMA 2, Falcon, Alpaca, GPT4All, Chinese LLaMA / Alpaca and Chinese LLaMA-2 / Alpaca-2, Vigogne (French), Vicuna, Koala, OpenBuddy (Multilingual), Pygmalion/Metharme, WizardLM, Baichuan 1 & 2 + derivations, Aquila 1 & 2, Starcoder models, Mistral AI v0.1, Refact, Persimmon 8B, MPT, Bloom, StableLM-3b-4e1t"
+licence: MIT
+object: backend
+owned_by: Leliuga
+command: llama-backend
+arguments:
+- name: --model
+  description: Specify the path to the LLaMA model file.
+  required: true
+  type: String
+  default: ""
+- name: --port
+  description: Set the port to listen.
+  required: true
+  type: Integer
+  default: 3001
+  min: 3001
+  max: 3101
+- name: --threads
+  description: Set the number of threads to use during generation.
+  required: true
+  type: Integer
+  default: 12
+  min: 1
+  max: 52
+- name: --ctx-size
+  description: Set the size of the prompt context. The default is 4096, but LLaMA models were built with a context of 2048, which will provide better results for longer input/inference. The size may differ in other models, for example, baichuan models were build with a context of 4096.
+  required: true
+  type: Integer
+  default: 4096
+  min: 512
+  max: 20480
+- name: --batch-size
+  description: "Set the batch size for prompt processing. Default: 4096."
+  required: true
+  type: Integer
+  default: 4096
+  min: 512
+  max: 20480
+- name: --n-gpu-layers
+  description: When compiled with appropriate support (currently CLBlast or cuBLAS), this option allows offloading some layers to the GPU for computation. Generally results in increased performance.
+  required: true
+  type: Integer
+  default: 35
+  min: 0
+  max: 64
+- name: --parallel
+  description: "Set the number of slots for process requests (default: 2)"
+  required: true
+  type: Integer
+  default: 2
+  min: 1
+  max: 26
+- name: --timeout
+  description: Server read/write timeout in seconds. Default 120.
+  required: true
+  type: Integer
+  default: 120
+  min: 60
+  max: 900
+- name: --no-mmap
+  description: Disable memory mapping of the model. This may be useful if you are running into issues with memory mapping.
+  required: false
+  type: Boolean
+  default: false
+- name: --mlock
+  description: Lock the model in memory, preventing it from being swapped out when memory-mapped.
+  required: true
+  type: Boolean
+  default: true
+- name: --numa
+  description: Attempt optimizations that help on some NUMA systems.
+  required: true
+  type: Boolean
+  default: true
+- name: --cont-batching
+  description: Enable continuous batching (a.k.a dynamic batching)
+  required: true
+  type: Boolean
+  default: true
+- name: --embedding
+  description: Enable embedding extraction
+  required: true
+  type: Boolean
+  default: false
+- name: --lora
+  description: Apply a LoRA (Low-Rank Adaptation) adapter to the model (implies --no-mmap). This allows you to adapt the pretrained model to specific tasks or domains.
+  required: false
+  type: String
+  default: ""
+- name: --lora-base
+  description: Optional model to use as a base for the layers modified by the LoRA adapter.
+  required: false
+  type: String
+  default: ""
+chat_options:
+- name: prompt
+  description: Prompt to generate from.
+  required: true
+  type: String
+  default: ""
+- name: cache_prompt
+  description: "Cache the prompt in the model cache (default: true)."
+  required: true
+  type: Boolean
+  default: true
+- name: temperature
+  description: "Adjust the randomness of the generated text (default: 0.8)."
+  required: true
+  type: Float
+  default: 0.8
+  min: 0.0
+  max: 1.5
+- name: top_k
+  description: "Limit the next token selection to the K most probable tokens (default: 40)."
+  required: true
+  type: Integer
+  default: 40
+  min: -1
+  max: 100
+- name: top_p
+  description: "Limit the next token selection to a subset of tokens with a cumulative probability above a threshold P (default: 0.95)."
+  required: true
+  type: Float
+  default: 0.95
+  min: 0.0
+  max: 1.0
+- name: n_predict
+  description: "Set the maximum number of tokens to predict when generating text. Note: May exceed the set limit slightly if the last token is a partial multibyte character. When 0, no tokens will be generated but the prompt is evaluated into the cache. (default: -1, -1 = infinity)."
+  required: true
+  type: Integer
+  default: -1
+  min: -1
+  max: 20480
+- name: n_keep
+  description: Specify the number of tokens from the prompt to retain when the context size is exceeded and tokens need to be discarded. By default, this value is set to 0 (meaning no tokens are kept). Use -1 to retain all tokens from the prompt.
+  required: true
+  type: Integer
+  default: -1
+  min: -1
+  max: 20480
+- name: stream
+  description: It allows receiving each predicted token in real-time instead of waiting for the completion to finish. To enable this, set to true.
+  required: true
+  type: Boolean
+  default: true
+- name: tfs_z
+  description: "Enable tail free sampling with parameter z (default: 1.0, 1.0 = disabled)."
+  required: true
+  type: Float
+  default: 1.0
+  min: 0.0
+  max: 1.0
+- name: typical_p
+  description: "Enable locally typical sampling with parameter p (default: 1.0, 1.0 = disabled)."
+  required: true
+  type: Float
+  default: 1.0
+  min: 0.0
+  max: 1.0
+- name: repeat_penalty
+  description: "Control the repetition of token sequences in the generated text (default: 1.1)."
+  required: true
+  type: Float
+  default: 1.1
+  min: 0.0
+  max: 2.0
+- name: repeat_last_n
+  description: "Last n tokens to consider for penalizing repetition (default: 64, 0 = disabled, -1 = ctx-size)."
+  required: true
+  type: Integer
+  default: 64
+  min: -1
+  max: 2048
+- name: penalize_nl
+  description: "Penalize newline tokens when applying the repeat penalty (default: true)."
+  required: true
+  type: Boolean
+  default: true
+- name: presence_penalty
+  description: "Repeat alpha presence penalty (default: 0.0, 0.0 = disabled)."
+  required: true
+  type: Float
+  default: 0.0
+  min: 0.0
+  max: 1.0
+- name: frequency_penalty
+  description: "Repeat alpha frequency penalty (default: 0.0, 0.0 = disabled);"
+  required: true
+  type: Float
+  default: 0.0
+  min: 0.0
+  max: 1.0
+- name: mirostat
+  description: "Enable Mirostat sampling, controlling perplexity during text generation (default: 0, 0 = disabled, 1 = Mirostat, 2 = Mirostat 2.0)."
+  required: true
+  type: Integer
+  default: 0
+  min: 0
+  max: 2
+- name: mirostat_tau
+  description: "Set the Mirostat target entropy, parameter tau (default: 5.0)."
+  required: true
+  type: Float
+  default: 5.0
+  min: 0.0
+  max: 10.0
+- name: mirostat_eta
+  description: "Set the Mirostat learning rate, parameter eta (default: 0.1)."
+  required: true
+  type: Float
+  default: 0.1
+  min: 0.0
+  max: 1.0
+- name: grammar
+  description: "Set grammar for grammar-based sampling (default: no grammar)"
+  required: false
+  type: String
+  default: ""
+- name: seed
+  description: "Set the random number generator (RNG) seed (default: -1, -1 = random seed)."
+  required: true
+  type: Integer
+  default: -1
+  min: -1
+  max: 65536
+- name: ignore_eos
+  description: "Ignore end of stream token and continue generating (default: false)."
+  required: true
+  type: Boolean
+  default: false
+- name: n_probs
+  description: "If greater than 0, the response also contains the probabilities of top N tokens for each generated token (default: 0)"
+  required: true
+  type: Integer
+  default: 0
+  min: 0
+  max: 10
+base_uri: http://localhost:3001

@@ -1,0 +1,53 @@
+id: Inkbot-13B-4k/Q6_K
+parent_id: Tostino/Inkbot-13b-4k
+name: Inkbot 13B 4K
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Tostino
+artifact: https://huggingface.co/TheBloke/Inkbot-13B-4k-GGUF/resolve/main/inkbot-13b-4k.Q6_K.gguf
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Tostino/Inkbot-13b-4k
+- license:llama2
+- text-generation-inference
+- region:us
+dtype: Q6_K
+file_size: 10679140288
+params_size: ""
+vocab_size: 32000
+context_size: 4096
+embedding_size: 5120
+pretrained: false
+finetuned: false
+quantized: true
+backend: llama-backend
+chat_options:
+  cache_prompt: true
+  frequency_penalty: 0.0
+  grammar: ""
+  ignore_eos: false
+  mirostat: 0
+  mirostat_eta: 0.1
+  mirostat_tau: 5.0
+  n_keep: -1
+  n_predict: -1
+  n_probs: 0
+  penalize_nl: true
+  presence_penalty: 0.0
+  repeat_last_n: 64
+  repeat_penalty: 1.1
+  seed: -1
+  temperature: 0.8
+  tfs_z: 1.0
+  top_k: 40
+  top_p: 0.95
+  typical_p: 1.0
+prompt:
+  system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+  template: "<#meta#>\n- Date: [DATE]\n- Task: [TASK TYPE]\n<#system#>\n{system_message}\n<#chat#>\n<#user#>\n{prompt}\n<#bot#>\n"

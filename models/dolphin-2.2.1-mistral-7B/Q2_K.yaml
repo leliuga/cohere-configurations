@@ -1,0 +1,62 @@
+id: dolphin-2.2.1-mistral-7B/Q2_K
+parent_id: ehartford/dolphin-2.2.1-mistral-7b
+name: Dolphin 2.2.1 Mistral 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Eric Hartford
+artifact: https://huggingface.co/TheBloke/dolphin-2.2.1-mistral-7B-GGUF/resolve/main/dolphin-2.2.1-mistral-7b.Q2_K.gguf
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- dataset:ehartford/dolphin
+- dataset:jondurbin/airoboros-2.2.1
+- base_model:ehartford/dolphin-2.2.1-mistral-7b
+- license:apache-2.0
+- has_space
+- text-generation-inference
+- region:us
+dtype: Q2_K
+file_size: 3083107200
+params_size: ""
+vocab_size: 32002
+context_size: 32768
+embedding_size: 4096
+pretrained: false
+finetuned: false
+quantized: true
+backend: llama-backend
+chat_options:
+  cache_prompt: true
+  frequency_penalty: 0.0
+  grammar: ""
+  ignore_eos: false
+  mirostat: 0
+  mirostat_eta: 0.1
+  mirostat_tau: 5.0
+  n_keep: -1
+  n_predict: -1
+  n_probs: 0
+  penalize_nl: true
+  presence_penalty: 0.0
+  repeat_last_n: 64
+  repeat_penalty: 1.1
+  seed: -1
+  temperature: 0.8
+  tfs_z: 1.0
+  top_k: 40
+  top_p: 0.95
+  typical_p: 1.0
+prompt:
+  system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+  template: |
+    <|im_start|>system
+    {system_message}<|im_end|>
+    <|im_start|>user
+    {prompt}<|im_end|>
+    <|im_start|>assistant

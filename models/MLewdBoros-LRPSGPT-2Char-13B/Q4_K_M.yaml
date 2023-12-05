@@ -1,0 +1,62 @@
+id: MLewdBoros-LRPSGPT-2Char-13B/Q4_K_M
+parent_id: Undi95/MLewdBoros-LRPSGPT-2Char-13B
+name: MLewdBoros LRSGPT 2Char 13B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Undi
+artifact: https://huggingface.co/TheBloke/MLewdBoros-LRPSGPT-2Char-13B-GGUF/resolve/main/mlewdboros-lrpsgpt-2char-13b.Q4_K_M.gguf
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- nsfw
+- base_model:Undi95/MLewdBoros-LRPSGPT-2Char-13B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+dtype: Q4_K_M
+file_size: 7865956288
+params_size: ""
+vocab_size: 32000
+context_size: 4096
+embedding_size: 5120
+pretrained: false
+finetuned: false
+quantized: true
+backend: llama-backend
+chat_options:
+  cache_prompt: true
+  frequency_penalty: 0.0
+  grammar: ""
+  ignore_eos: false
+  mirostat: 0
+  mirostat_eta: 0.1
+  mirostat_tau: 5.0
+  n_keep: -1
+  n_predict: -1
+  n_probs: 0
+  penalize_nl: true
+  presence_penalty: 0.0
+  repeat_last_n: 64
+  repeat_penalty: 1.1
+  seed: -1
+  temperature: 0.8
+  tfs_z: 1.0
+  top_k: 40
+  top_p: 0.95
+  typical_p: 1.0
+prompt:
+  system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+  template: |
+    Enter roleplay mode. You are currently %{{having a conversation|in conversation|in a roleplay chat}} with <SECOND>, whose %{{traits are|persona is|characteristics are}}:
+    <SECOND PERSONA>
+    %{{You are|Play the role of|Take the role of}} <FIRST> with the following %{{persona|definitions|character sheet|traits}}:
+    <FIRST PERSONA>
+    %{{In addition|Additionally|Also}}, %{{keep the following scenario in mind|remember this scenario|pay attention to this scenario}}:
+    <SCENARIO>
+    {prompt}

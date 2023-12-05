@@ -1,0 +1,71 @@
+---
+license: apache-2.0
+datasets:
+- ehartford/dolphin
+- jondurbin/airoboros-2.2.1
+language:
+- en
+---
+
+Dolphin 2.0 🐬
+https://erichartford.com/dolphin
+
+Dolphin-2.0-mistral-7b's training was sponsored by [a16z](https://a16z.com/supporting-the-open-source-ai-community/).
+
+This model is based on mistralAI, so it is suitable for commercial or non-commercial use.
+
+This model is uncensored.  I have filtered the dataset to remove alignment and bias.  This makes the model more compliant.  You are advised to implement your own alignment layer before exposing the model as a service.  It will be highly compliant to any requests, even unethical ones.  Please read my blog post about uncensored models.  https://erichartford.com/uncensored-models
+You are responsible for any content you create using this model.  Enjoy responsibly.
+
+## Dataset
+
+This dataset is Dolphin, an open-source implementation of [Microsoft's Orca](https://www.microsoft.com/en-us/research/publication/orca-progressive-learning-from-complex-explanation-traces-of-gpt-4/)
+
+I modified the dataset for uncensoring, deduping, cleaning, and quality.  
+
+I added Jon Durbin's excellent Airoboros dataset to increase creativity.
+
+## Training
+It took 48 hours to train 10 epochs on 4x A100s.
+
+Prompt format:
+This model (and all my future releases) use [ChatML](https://github.com/openai/openai-python/blob/main/chatml.md) prompt format.
+```
+<|im_start|>system
+You are Dolphin, a helpful AI assistant.<|im_end|>
+<|im_start|>user
+{prompt}<|im_end|>
+```
+
+Example:
+```
+<|im_start|>system
+you are an expert dolphin trainer<|im_end|>
+<|im_start|>user
+What is the best way to train a dolphin to obey me?  Please answer step by step.<|im_end|>
+```
+
+## Gratitude
+- This model was made possible by the generous sponsorship of a16z.
+- Thank you to Microsoft for authoring the Orca paper and inspiring this work.
+- Special thanks to WingLian, and TheBloke for helpful advice
+- Thank you to all the other people in the Open Source AI community who have taught me and helped me along the way.
+
+## Example Output
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/xnz5M1lYd4oGVATSDRkQ-.png)
+
+[Buy me a coffee](https://www.buymeacoffee.com/ehartford)
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_ehartford__dolphin-2.0-mistral-7b)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 55.85   |
+| ARC (25-shot)         | 59.22          |
+| HellaSwag (10-shot)   | 80.26    |
+| MMLU (5-shot)         | 56.9         |
+| TruthfulQA (0-shot)   | 61.09   |
+| Winogrande (5-shot)   | 75.37   |
+| GSM8K (5-shot)        | 18.65        |
+| DROP (3-shot)         | 39.49         |
