@@ -29,21 +29,21 @@ echo "- [X] Pygmalion/Metharme" >> README.md
 echo "- [X] WizardLM" >> README.md
 echo "- [X] Baichuan 1 & 2 + derivations" >> README.md
 echo "- [X] Aquila 1 & 2" >> README.md
-echo "- [X] Starcoder models" >> README.md
+echo "- [X] Starcoder" >> README.md
 echo "- [X] Mistral AI v0.1" >> README.md
 echo "- [X] Refact" >> README.md
 echo "- [X] Persimmon 8B" >> README.md
 echo "- [X] MPT" >> README.md
 echo "- [X] Bloom" >> README.md
 echo "- [X] StableLM-3b-4e1t" >> README.md
-echo "- [x] Yi models" >> README.md
-echo "- [x] Deepseek models" >> README.md
-echo "- [x] Qwen models" >> README.md
+echo "- [x] Yi" >> README.md
+echo "- [x] Deepseek" >> README.md
+echo "- [x] Qwen" >> README.md
 echo "- [x] Mixtral MoE" >> README.md
 echo "" >> README.md
 echo "Multimodal" >> README.md
 echo "" >> README.md
-echo "- [x] Llava 1.5 models" >> README.md
+echo "- [x] Llava 1.5" >> README.md
 echo "- [x] Bakllava" >> README.md
 echo "- [x] Obsidian" >> README.md
 echo "- [x] ShareGPT4V" >> README.md
@@ -78,14 +78,21 @@ echo "" >> README.md
 
 echo "## Supported Models (${COUNT})" >> README.md
 echo "" >> README.md
-echo "| Name  | DType   | Read more |" >> README.md
-echo "| ----- | ------- | --------- |" >> README.md
+echo "| Name  | DType   | Context | Embedding | Read more |" >> README.md
+echo "| ----- | ------- | ------- | --------- | --------- |" >> README.md
 for model in $MODELS; do
     echo -ne "| ${model} |" >> README.md
 
     for dtype in $(find models/${model} -name "*.yaml" | sed 's/\.yaml$//' | sort | cut -d'/' -f3); do
         echo -ne "${dtype} " >> README.md
     done
+
+    content=$(cat $(find models/${model} -name "*.yaml" | head -n 1))
+    context_size=$(echo "${content}" | grep "context_size: " | cut -d' ' -f2)
+    embedding_size=$(echo "${content}" | grep "embedding_size: " | cut -d' ' -f2)
+
+    echo -ne "| ${context_size} " >> README.md
+    echo -ne "| ${embedding_size} " >> README.md
 
     echo -ne "| [README.md](models/${model}/README.md) |\n" >> README.md
 done
