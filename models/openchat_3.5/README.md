@@ -6,7 +6,7 @@ tags:
 - C-RLFT
 datasets:
 - openchat/openchat_sharegpt4_dataset
-- Open-Orca/OpenOrca
+- imone/OpenOrca_FLAN
 - LDJnr/LessWrong-Amplify-Instruct
 - LDJnr/Pure-Dove
 - LDJnr/Verified-Camel
@@ -14,6 +14,7 @@ datasets:
 - glaiveai/glaive-code-assistant
 - meta-math/MetaMathQA
 - OpenAssistant/oasst_top1_2023-08-25
+- TIGER-Lab/MathInstruct
 library_name: transformers
 pipeline_tag: text-generation
 ---
@@ -38,7 +39,7 @@ pipeline_tag: text-generation
 **🤖 #1 Open-source model on MT-bench scoring 7.81, outperforming 70B models 🤖**
 
   <div align="center" style="justify-content: center; align-items: center; "'>
-  <img src="https://github.com/alpayariyak/openchat/blob/master/assets/Untitled%20design-17.png?raw=true" style="width: 100%;  border-radius: 0.5em">
+  <img src="https://github.com/alpayariyak/openchat/blob/master/assets/3.5-benchmarks.png?raw=true" style="width: 100%;  border-radius: 0.5em">
   </div>
 
 OpenChat is an innovative library of open-source language models, fine-tuned with [C-RLFT](https://arxiv.org/pdf/2309.11235.pdf) - a strategy inspired by offline reinforcement learning. Our models learn from mixed-quality data without preference labels, delivering exceptional performance on par with ChatGPT, even with a 7B model. Despite our simple approach, we are committed to developing a high-performance, commercially viable, open-source large language model, and we continue to make significant strides toward this vision.
@@ -180,11 +181,12 @@ Our OpenChat 3.5 code and models are distributed under the Apache License 2.0.
 OpenChat 3.5 was trained with C-RLFT on a collection of publicly available high-quality instruction data, with a custom processing pipeline. We detail some notable subsets included here:
 
  - [OpenChat ShareGPT](https://huggingface.co/datasets/openchat/openchat_sharegpt4_dataset)
- - [Open-Orca](https://huggingface.co/datasets/Open-Orca/OpenOrca)
+ - [Open-Orca with FLAN answers](https://huggingface.co/datasets/imone/OpenOrca_FLAN)
  - Capybara [1](https://huggingface.co/datasets/LDJnr/Pure-Dove) [2](https://huggingface.co/datasets/LDJnr/Verified-Camel) [3](https://huggingface.co/datasets/LDJnr/LessWrong-Amplify-Instruct)
  - [GOAT](https://huggingface.co/datasets/tiedong/goat)
  - [Glaive](https://huggingface.co/datasets/glaiveai/glaive-code-assistant)
  - [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA)
+ - [MathInstruct](https://huggingface.co/datasets/TIGER-Lab/MathInstruct)
  - [OpenAssistant](https://huggingface.co/datasets/OpenAssistant/oasst_top1_2023-08-25)
 
 ## Citation

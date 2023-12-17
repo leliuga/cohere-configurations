@@ -4,6 +4,9 @@ license: apache-2.0
 
 Frankenmerge 11b between teknium/OpenHermes-2.5-Mistral-7B and Intel/neural-chat-7b-v3-1
 
+
+GGUF: https://huggingface.co/TheBloke/Open-Hermes-2.5-neural-chat-3.1-frankenmerge-11b-GGUF
+
 Merge with the following conditions
 
 

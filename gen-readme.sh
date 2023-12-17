@@ -36,6 +36,18 @@ echo "- [X] Persimmon 8B" >> README.md
 echo "- [X] MPT" >> README.md
 echo "- [X] Bloom" >> README.md
 echo "- [X] StableLM-3b-4e1t" >> README.md
+echo "- [x] Yi models" >> README.md
+echo "- [x] Deepseek models" >> README.md
+echo "- [x] Qwen models" >> README.md
+echo "- [x] Mixtral MoE" >> README.md
+echo "" >> README.md
+echo "Multimodal" >> README.md
+echo "" >> README.md
+echo "- [x] Llava 1.5 models" >> README.md
+echo "- [x] Bakllava" >> README.md
+echo "- [x] Obsidian" >> README.md
+echo "- [x] ShareGPT4V" >> README.md
+
 echo "" >> README.md
 
 echo "### Supported backends" >> README.md

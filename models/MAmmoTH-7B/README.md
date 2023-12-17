@@ -17,13 +17,12 @@ Code: [https://github.com/TIGER-AI-Lab/MAmmoTH](https://github.com/TIGER-AI-Lab/
 ## Introduction
 We introduce 🦣 MAmmoTH, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on 🤗 [MathInstruct Dataset](https://huggingface.co/datasets/TIGER-Lab/MathInstruct), a meticulously curated instruction tuning dataset that is lightweight yet generalizable. MathInstruct is compiled from 13 math rationale datasets, six of which are newly curated by this work. It uniquely focuses on the hybrid use of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and ensures extensive coverage of diverse mathematical fields. 
 
-|     | **Base Model: Llama-2**                                       | **Base Model: Code Llama**                                               |
-|-----|---------------------------------------------------------------|--------------------------------------------------------------------------|
-| 7B  | 🦣 [MAmmoTH-7B](https://huggingface.co/TIGER-Lab/MAmmoTH-7B)   | 🦣 [MAmmoTH-Coder-7B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-7B)  |
-| 13B | 🦣 [MAmmoTH-13B](https://huggingface.co/TIGER-Lab/MAmmoTH-13B) | 🦣 [MAmmoTH-Coder-13B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-13B)|
-| 34B | -                                                             | 🦣 [MAmmoTH-Coder-34B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-34B)|
-| 70B | 🦣 [MAmmoTH-70B](https://huggingface.co/TIGER-Lab/MAmmoTH-70B) | -                                                                        |
-                                                                      |
+|     | **Base Model: Llama-2**                                       | **Base Model: Code Llama**                                               |  **Base Model: Mistral** | 
+|-----|---------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------|
+| 7B  | 🦣 [MAmmoTH-7B](https://huggingface.co/TIGER-Lab/MAmmoTH-7B)   | 🦣 [MAmmoTH-Coder-7B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-7B)  | 🦣 [MAmmoTH-7B-Mistral](https://huggingface.co/TIGER-Lab/MAmmoTH-7B-Mistral) |
+| 13B | 🦣 [MAmmoTH-13B](https://huggingface.co/TIGER-Lab/MAmmoTH-13B) | 🦣 [MAmmoTH-Coder-13B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-13B)|    -                    |
+| 34B | -                                                             | 🦣 [MAmmoTH-Coder-34B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-34B)|    -                     |
+| 70B | 🦣 [MAmmoTH-70B](https://huggingface.co/TIGER-Lab/MAmmoTH-70B) | -                                                                        |      -                   |
 
 
 ## Training Data

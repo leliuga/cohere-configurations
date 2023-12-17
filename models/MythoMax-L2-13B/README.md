@@ -9,7 +9,7 @@ The script and the acccompanying templates I used to produce both can [be found 
 
 This model is proficient at both roleplaying and storywriting due to its unique nature.
 
-Quantized models are available from TheBloke: [GGML](https://huggingface.co/TheBloke/MythoMax-L2-13B-GGML) - [GPTQ](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ) (You're the best!)
+Quantized models are available from TheBloke: [GGUF](https://huggingface.co/TheBloke/MythoMax-L2-13B-GGUF) - [GPTQ](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ) - [AWQ](https://huggingface.co/TheBloke/MythoMax-L2-13B-AWQ) (You're the best!)
 
 ## Model details
 

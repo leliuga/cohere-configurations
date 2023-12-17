@@ -22,7 +22,7 @@ Arithmo-Mistral-7B is trained to reason and answer mathematical problems and is 
 ### Model Description
 
 - **Project GitHub Page:** https://github.com/akjindal53244/Arithmo-Mistral-7B
-- **Developed by:** [Ashvini Kumar Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/)
+- **Developed by:** [Ashvini Kumar Jindal](https://www.linkedin.com/in/ashvini-jindal-26653262/), [Ankur Parikh](https://www.linkedin.com/in/ankurnlpexpert/)
 - **Funded by:** self-work
 - **Model type:** fine-tuned
 - **Language(s) (NLP):** English

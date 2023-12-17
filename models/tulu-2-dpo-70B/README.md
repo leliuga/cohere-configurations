@@ -17,7 +17,7 @@ base_model: meta-llama/Llama-2-70b-hf
 # Model Card for Tulu V2 DPO 70B
 
 Tulu is a series of language models that are trained to act as helpful assistants. 
-Tulu V2 DPO 70B is a fine-tuned version of Llama 2 that was trained on on a mix of publicly available, synthetic and human datasets using [Direct Preference Optimization (DPO)](https://arxiv.org/abs/2305.18290). 
+Tulu V2 DPO 70B is a fine-tuned version of Llama 2 that was trained on a mix of publicly available, synthetic and human datasets using [Direct Preference Optimization (DPO)](https://arxiv.org/abs/2305.18290). 
 This model is a strong alternative to Llama 2 70b Chat.
 
 For more details, read the paper: [Camels in a Changing Climate: Enhancing LM Adaptation with Tulu 2

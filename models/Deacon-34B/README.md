@@ -18,7 +18,7 @@ Prompt Example:
 ```
 ### System:
 
-You are an AI assistant. User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.
+You are an AI assistant. User will give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps.
 
 ### Instruction: 
 

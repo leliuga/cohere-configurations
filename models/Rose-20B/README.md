@@ -7,7 +7,7 @@ tags:
 - instruct
 license: llama2
 ---
-<h1 style="text-align: center">Ross-20B</h1>
+<h1 style="text-align: center">Rose-20B</h1>
 <center><img src="https://files.catbox.moe/rze9c9.png" alt="roseimage" width="350" height="350"></center>
 <center><i>Image sourced by Shinon</i></center>
 <h2 style="text-align: center">Experimental Frankenmerge Model</h2>

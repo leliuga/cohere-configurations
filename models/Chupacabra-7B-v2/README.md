@@ -24,36 +24,44 @@ List of all models and merging path is coming soon.
 
 ## Purpose
 
-Merging the "thick"est model weights from mistral models using amazing training methods like direct preference optimization (dpo) and reinforced learning. 
+Merging the "thick"est model weights from mistral models using amazing training methods like direct preference optimization (DPO), supervised fine tuning (SFT) and reinforced learning.
 
-I have spent countless hours studying the latest research papers, attending conferences, and networking with experts in the field. I experimented with different algorithms, tactics, fine-tuned hyperparameters, optimizers, 
-and optimized code until i achieved the best possible results.
+I have spent countless hours studying the latest research papers, attending conferences, and networking with experts in the field. I experimented with different algorithms, tactics, fine-tuned hyperparameters, optimizers, and optimized code until I achieved the best possible results.
 
-It has not been without challenges. there were skeptics who doubted my abilities and questioned my approach. approach can be changed, but a closed mind cannot.
+It has not been without challenges. There were skeptics who doubted my abilities and questioned my approach. My approach can be changed, but a closed mind cannot.
 
-I refused to let their negativity bring me down. Instead, I used their doubts as fuel to push myself even harder. I worked tirelessly (vapenation), day and night, until i finally succeeded in merging with the most performant model weights using sota training methods like dpo and other advanced techniques.
+I refused to let their negativity bring me down. Instead, I used their doubts as fuel to push myself even harder. I worked tirelessly (vapenation), day and night, until I finally succeeded in merging with the most performant model weights using SOTA training methods like DPO and other advanced techniques described above.
 
 Thank you openchat 3.5 for showing me the way.
 
-I stand tall as a beacon of hope for those who dare to dream big and pursue their passions. my story is a testament to the power of perseverance, determination, and hard work. and i will continue to strive for excellence, always pushing the boundaries of what is possible.
+```
+"Hate it or love it, the underdogs on top." - The Game
+```
 
 Here is my contribution.
+
 
 ## Prompt Template
 
 Replace {system} with your system prompt, and {prompt} with your prompt instruction.
 
 ```
-### System:
-{system}
-### User:
-{instruction}
-### Assistant:
+<|im_start|>system
+{system}<|im_end|>
+<|im_start|>user
+{prompt}<|im_end|>
+<|im_start|>assistant
 ```
 
 ### Bug fixes
 
 - Fixed issue with generation and the incorrect model weights. Model weights have been corrected and now generation works again. Reuploading GGUF to the GGUF repository as well as the AWQ versions.
+
+- Fixed issue with tokenizer not stopping correctly and changed prompt template.
+
+- Uploaded new merged model weights.
+
+### More info
 
 - **Developed by:** Ray Hernandez
 - **Model type:** Mistral

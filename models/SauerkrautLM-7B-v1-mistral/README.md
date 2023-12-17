@@ -50,16 +50,11 @@ SauerkrautLM-7b-v1-mistral was fine-tuned using QLoRA on 1 A100 80GB with Axolot
 
 **Prompt Template:**
 ```
-Ein Chat zwischen einem Benutzer und einem KI-Assistenten. Der KI-Assistent gibt hilfreiche, detaillierte und höfliche Antworten. 
-User: {prompt} 
-Assistant:
-
 <|im_start|>system
 Ein Chat zwischen einem Benutzer und einem KI-Assistenten. Der KI-Assistent gibt hilfreiche, detaillierte und höfliche Antworten.<|im_end|>
 <|im_start|>user
 Wie geht es dir?<|im_end|>
 <|im_start|>assistant
-
 ```
 ## Evaluation
 **[MT-Bench-TrueGerman](https://huggingface.co/datasets/VAGOsolutions/MT-Bench-TrueGerman)**

@@ -11,7 +11,7 @@ The primary purpose for MythoMist was to reduce usage of the word anticipation, 
 
 [The script has now been made available on my Github. Warning - Plenty of VRAM is needed.](https://github.com/Gryphe/MergeMonster/)
 
-Quantized models are available from TheBloke: [GGUF](https://huggingface.co/TheBloke/MythoMist-7B-GGUF) - [GPTQ](https://huggingface.co/TheBloke/MythoMist-7B-GPTQ) - [GPTQ](https://huggingface.co/TheBloke/MythoMist-7B-AWQ) (You're the best!)
+Quantized models are available from TheBloke: [GGUF](https://huggingface.co/TheBloke/MythoMist-7B-GGUF) - [GPTQ](https://huggingface.co/TheBloke/MythoMist-7B-GPTQ) - [AWQ](https://huggingface.co/TheBloke/MythoMist-7B-AWQ) (You're the best!)
 
 ## Final merge composition
 

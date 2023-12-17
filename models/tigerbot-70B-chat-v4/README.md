@@ -29,7 +29,7 @@ language:
   - 启动infer代码
 
     ```shell
-    python infer.py --model_path TigerResearch/tigerbot-70b-chat
+    python infer.py --model_path TigerResearch/tigerbot-70b-chat-v4
     ```
 
 - 方法2:
@@ -44,14 +44,14 @@ language:
 
   - 通过huggingface或modelscope平台下载权重
     ```shell
-    git clone https://huggingface.co/TigerResearch/tigerbot-70b-chat
+    git clone https://huggingface.co/TigerResearch/tigerbot-70b-chat-v4
     git clone https://www.modelscope.cn/TigerResearch/tigerbot-70b-chat-v4.git
     ```
     
   - 启动infer代码
     
     ```shell
-    python infer.py --model_path tigerbot-70b-chat(-v4)
+    python infer.py --model_path tigerbot-70b-chat-v4
     ```
 
 ------
@@ -69,7 +69,7 @@ language:
   - Run infer script
 
     ```shell
-    python infer.py --model_path TigerResearch/tigerbot-70b-chat
+    python infer.py --model_path TigerResearch/tigerbot-70b-chat-v4
     ```
 
 - Method 2:
@@ -84,12 +84,12 @@ language:
 
   - Download weights from huggingface or modelscope
     ```shell
-    git clone https://huggingface.co/TigerResearch/tigerbot-70b-chat
+    git clone https://huggingface.co/TigerResearch/tigerbot-70b-chat-v4
     git clone https://www.modelscope.cn/TigerResearch/tigerbot-70b-chat-v4.git
     ```
   
   - Run infer script
   
      ```shell
-     python infer.py --model_path tigerbot-70b-chat(-v4)
+     python infer.py --model_path tigerbot-70b-chat-v4
      ```

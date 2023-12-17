@@ -31,14 +31,14 @@ tags:
 - qwen
 - causallm
 ---
-![](https://huggingface.co/JosephusCheung/tmp/resolve/main/14.17b.png)
+[![CausalLM](https://huggingface.co/JosephusCheung/tmp/resolve/main/14.17b.png)](https://causallm.org/)
 
 *Image drawn by GPT-4 DALL·E 3* **TL;DR: Perhaps better than all existing models < 70B, in most quantitative evaluations...**
 
 # CausalLM 14B - Fully Compatible with Meta LLaMA 2
 Use the transformers library that does not require remote/external code to load the model, AutoModelForCausalLM and AutoTokenizer (or manually specify LlamaForCausalLM to load LM, GPT2Tokenizer to load Tokenizer), and model quantization is fully compatible with GGUF (llama.cpp), GPTQ, and AWQ.
 
-**News: SOTA chat model of its size on 🤗 Open LLM Leaderboard**
+**News: DPO ver. Rank #1 ~13B - SOTA model of its size on 🤗 Open LLM Leaderboard**
 
 # Recent Updates: [DPO-α Version](https://huggingface.co/CausalLM/14B-DPO-alpha) outperforms Zephyr-β in MT-Bench
 
@@ -58,7 +58,7 @@ It is not recommended to use any form of quantization, but rather to use smaller
 
 Also see [7B Version](https://huggingface.co/CausalLM/7B)
 
-This model was trained based on the model weights of Qwen (and LLaMA2 was used, yes, for calculating some initial weights), you may also need to comply with the commercial use restrictions of these two models depending on the situation. The training process utilized a model structure that was identical to LLaMA2, using the same attention calculation method as the original MHA LLaMA2 models, and no additional scaling applied to the Rotary Positional Encoding (RoPE).
+This model was trained based on the model weights of Qwen (and LLaMA2 was used, yes, for calculating some initial weights), you may also need to comply with the commercial use restrictions of these two models depending on the situation. The training process utilized a model architecture that was identical to LLaMA2, using the same attention calculation method as the original MHA LLaMA2 models, and no additional scaling applied to the Rotary Positional Encoding (RoPE).
 
 We manually curated a SFT dataset of 1.3B tokens for training, utilizing open source datasets from Hugging Face. For most of these sentences, we performed manual or synthetic rewrites and generated alternate language versions using larger language models. Additionally, we conducted augmented text training using carefully selected entries from Wikipedia, as well as featured entries from Fandom and filtered entries from Moegirlpedia. In order to strike a balance between efficiency and quality, 100% of the data used for training was synthetic data, no direct use of text from the internet or original texts from publicly available datasets was employed for fine-tuning.
 
@@ -133,12 +133,15 @@ We are currently unable to produce accurate benchmark templates for non-QA tasks
 ## 🤗 Open LLM Leaderboard
 SOTA chat model of its size on 🤗 Open LLM Leaderboard.
 
-![leaderboard](https://huggingface.co/JosephusCheung/tmp/resolve/main/leaderboard.png)
+Dec 3, 2023
+DPO Version Rank **#1** non-base model, of its size on 🤗 Open LLM Leaderboard, outperforms **ALL** ~13B chat models.
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/63468a143ea42ee2cb49ddd1/8nV0yOTteP208bjbCv5MC.png)
 
 # 因果语言模型 14B - 与 Meta LLaMA 2 完全兼容
 使用无需远程/外部代码的transformers库加载模型，AutoModelForCausalLM和AutoTokenizer（或者手动指定LlamaForCausalLM加载LM， GPT2Tokenizer加载Tokenizer），并且模型量化与GGUF（llama.cpp）、GPTQ、AWQ完全兼容。
 
-# 新消息：🤗 Open LLM 排行榜上同尺寸的聊天模型中评分最高
+# 新消息：DPO 版本在~13B排名第1 🤗 Open LLM 排行榜上同尺寸的所有模型中评分最高
 
 # 最近更新: [DPO-α Version](https://huggingface.co/CausalLM/14B-DPO-alpha) 在 MT-Bench 超过 Zephyr-β
 
@@ -231,6 +234,6 @@ STEM准确率：66.71
 *JCommonsenseQA 基准测试结果非常非常接近 [Japanese Stable LM Gamma 7B (83.47)](https://github.com/Stability-AI/lm-evaluation-harness/tree/jp-stable)，当前 SOTA 日文 LM 。然而，我们的模型并未在日文上进行特别的大量文本训练。这似乎能体现元语言的跨语言迁移能力。*
 
 ## 🤗 Open LLM 排行榜
-🤗 Open LLM 排行榜上同尺寸的聊天模型中评分最高
-
-![leaderboard](https://huggingface.co/JosephusCheung/tmp/resolve/main/leaderboard.png)
+Dec 3, 2023
+DPO版本在🤗 Open LLM 排行榜上~13B的**所有**聊天模型中**排名第1**
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/63468a143ea42ee2cb49ddd1/8nV0yOTteP208bjbCv5MC.png)
