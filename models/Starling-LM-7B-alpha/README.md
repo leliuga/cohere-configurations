@@ -56,7 +56,7 @@ For more detailed discussions, please check out our [blog post](https://starling
 
 <!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
 
-**Important: Please use the exact chat template provided below for the model. Otherwise there will be a degrade in the performance.**
+**Important: Please use the exact chat template provided below for the model. Otherwise there will be a degrade in the performance. The model output can be verbose in rare cases. Please consider setting temperature = 0 to make this happen less.**
 
 Our model follows the exact chat template and usage as [Openchat 3.5](https://huggingface.co/openchat/openchat_3.5). Please refer to their model card for more details.
 In addition, our model is hosted on LMSYS [Chatbot Arena](https://chat.lmsys.org) for free test.

@@ -7,7 +7,7 @@ license: cc-by-nc-4.0
 
 Named after a charming daughter of Echo and Pan in Greek myth, Iambe-20b-DARE is a [DARE](https://github.com/yule-BUAA/MergeLM) merge building on my recent experiments.
 
-Iambe is intended to have the best realisticly possible understanding of anatomy and of a scene's state for a 20b merge, while remaining personable and authentic in "voice". 
+Iambe is intended to have the best realistically possible understanding of anatomy and of a scene's state for a 20b merge, while remaining personable and authentic in "voice". 
 
 ## Prompting and Context
 

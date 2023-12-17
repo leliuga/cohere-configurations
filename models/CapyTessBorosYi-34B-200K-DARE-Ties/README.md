@@ -6,7 +6,13 @@ language:
 - en
 library_name: transformers
 pipeline_tag: text-generation
+tags:
+- text-generation-inference
 ---
+
+# Obsolete, see: https://huggingface.co/brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+
+***
 
 **NousResearch/Nous-Capybara-34B**, **migtissera/Tess-M-v1.3** and **bhenrym14/airoboros-3_1-yi-34b-200k** merged with a new, experimental implementation of "dare ties" via mergekit. See:
 
@@ -14,9 +20,8 @@ pipeline_tag: text-generation
 
 https://github.com/yule-BUAA/MergeLM
 
-https://github.com/cg123/mergekit/tree/dare
+https://github.com/cg123/mergekit/tree/dare'
 
-***
 
 Merged with the following config, and the tokenizer from chargoddard's Yi-Llama:
 ```
@@ -60,6 +65,8 @@ Being a Yi model, try disabling the BOS token and/or running a lower temperature
 
 Sometimes the model "spells out" the stop token as `</s>` like Capybara, so you may need to add `</s>` as an additional stopping condition. It also might respond to the llama-2 chat format.
 
+***
+24GB GPUs can run Yi-34B-200K models at **45K-75K context** with exllamav2. I go into more detail in this [post](https://old.reddit.com/r/LocalLLaMA/comments/1896igc/how_i_run_34b_models_at_75k_context_on_24gb_fast/), and recommend exl2 quantizations on data similar to the desired task, such as these targeted at story writing: [4.0bpw](https://huggingface.co/brucethemoose/CapyTessBorosYi-34B-200K-DARE-Ties-exl2-4bpw-fiction) / [3.1bpw](https://huggingface.co/brucethemoose/CapyTessBorosYi-34B-200K-DARE-Ties-exl2-3.1bpw-fiction)
 ***
 
 Credits:

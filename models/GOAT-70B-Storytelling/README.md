@@ -49,16 +49,16 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.bfloat16
 )
 ```
-Currently, we support LLM endpoint generation, where you need to send a post request to the generation endpoint (we recommend using Text Generation Inference by HuggingFace)
+Currently, we support LLM endpoint generation, where you need to send a post request to the generation endpoint (we recommend using Text Generation Inference by HuggingFace).
 
-First, modify `config.py` and add your generation endpoint.
-
-Then you can use it inside via GOAT-Storytelling-Agent:
+Here is how you can utilize the model via GOAT-Storytelling-Agent:
 
 ```python
-from goat_storytelling_agent import storytelling_agent as goat
+from goat_storytelling_agent.storytelling_agent import StoryAgent
 
-novel_scenes = goat.generate_story('treasure hunt in a jungle', form='novel')
+backend_uri = # Text generation endpoint
+writer = StoryAgent(backend_uri, form='novel')
+novel_scenes = writer.generate_story('treasure hunt in a jungle')
 ```
 
 ## License

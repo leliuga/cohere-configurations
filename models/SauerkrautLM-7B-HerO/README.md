@@ -50,7 +50,7 @@ Our approach ensures that the model retains its original strengths while acquiri
 
 | Model | HF    | GPTQ  | GGUF  | AWQ  |
 |-------|-------|-------|-------|-------|
-| SauerkrautLM-7b-HerO   | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-7b-HerO) | coming soon | coming soon | coming soon |
+| SauerkrautLM-7b-HerO   | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-7b-HerO) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GPTQ) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF) |[Link](https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-AWQ) |
 
 ## Model Details
 **SauerkrautLM-7b-HerO**
@@ -215,6 +215,6 @@ We are also keenly seeking support and investment for our startup, VAGO solution
 
 ## Acknowledgement
 Many thanks to [OpenOrca](https://huggingface.co/Open-Orca) and [teknium](https://huggingface.co/teknium) for providing such valuable models to the Open-Source community.
-
+Many thanks to [TheBloke](https://huggingface.co/TheBloke) for super fast quantifying all of our models. 
 
 [<img src="https://raw.githubusercontent.com/OpenAccess-AI-Collective/axolotl/main/image/axolotl-badge-web.png" alt="Built with Axolotl" width="200" height="32"/>](https://github.com/OpenAccess-AI-Collective/axolotl)

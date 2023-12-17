@@ -18,7 +18,7 @@ Here's my learnings going from Tess-v1.0 to Tess-v1.3: https://migel.substack.co
 
 ![Tess](https://huggingface.co/migtissera/Tess-M-v1.0/resolve/main/Tess.png)
 
-Tess, short for Tessoro/Tessoso, is a general purpose Large Language Model series. Tess-M-v1.3 was trained on the Yi-34B-200K base.
+Tess, short for Tesoro (Treasure in Italian), is a general purpose Large Language Model series. Tess-M-v1.3 was trained on the Yi-34B-200K base.
 
 
 # Prompt Format:

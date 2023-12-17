@@ -1,9 +1,6 @@
 ---
 tags:
 - generated_from_trainer
-model-index:
-- name: zephyr-7b-beta
-  results: []
 license: mit
 datasets:
 - HuggingFaceH4/ultrachat_200k
@@ -16,6 +13,166 @@ widget:
     output:
       text: "Arr! 'Tis a puzzlin' matter, me hearty! A llama on yer lawn be a rare sight, but I've got a plan that might help ye get rid of 'im. Ye'll need to gather some carrots and hay, and then lure the llama away with the promise of a tasty treat. Once he's gone, ye can clean up yer lawn and enjoy the peace and quiet once again. But beware, me hearty, for there may be more llamas where that one came from! Arr!"
 pipeline_tag: text-generation
+model-index:
+- name: zephyr-7b-beta
+  results:
+  # AI2 Reasoning Challenge (25-Shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+       - type: acc_norm
+         name: normalized accuracy
+         value: 62.03071672354948
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # HellaSwag (10-shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+       - type: acc_norm
+         name: normalized accuracy
+         value: 84.35570603465445
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # DROP (3-shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Drop (3-Shot)
+      type: drop
+      split: validation
+      args:
+        num_few_shot: 3
+    metrics:
+       - type: f1
+         name: f1 score
+         value: 9.662437080536909
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # TruthfulQA (0-shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+       - type: mc2
+         value: 57.44916942762855
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # GSM8k (5-shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 12.736921910538287
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # MMLU (5-Shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 61.07
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # Winogrande (5-shot)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+       - type: acc
+         name: accuracy
+         value: 77.74269928966061
+    source:
+      name: Open LLM Leaderboard
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=HuggingFaceH4/zephyr-7b-beta
+
+  # AlpacaEval (taken from model card)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AlpacaEval
+      type: tatsu-lab/alpaca_eval
+    metrics:
+       - type: unknown
+         name: win rate
+         value: 0.9060
+    source:
+      url: https://tatsu-lab.github.io/alpaca_eval/
+
+  # MT-Bench (taken from model card)
+  - task: 
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MT-Bench
+      type: unknown
+    metrics:
+       - type: unknown
+         name: score
+         value: 7.34
+    source:
+      url: https://huggingface.co/spaces/lmsys/mt-bench
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You

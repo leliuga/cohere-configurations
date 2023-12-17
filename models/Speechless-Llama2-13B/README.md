@@ -11,6 +11,7 @@ extra_gated_fields:
   I agree to share my name, email address and username with Meta and confirm that I have already been granted download access on the Meta website: checkbox
 language:
 - en
+license: llama2
 datasets:
 - Open-Orca/OpenOrca
 - garage-bAInd/Open-Platypus

@@ -7,7 +7,7 @@ language:
 library_name: transformers
 pipeline_tag: text-generation
 ---
-# Succeeded(?) by a new merge: **https://huggingface.co/brucethemoose/CapyTessBorosYi-34B-200K-DARE-Ties**
+# This is not a great model, succeeded by a new merge: **https://huggingface.co/brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties**
 
 **NousResearch/Nous-Capybara-34B**, **migtissera/Tess-M-v1.2** and **migtissera/Tess-M-v1.3** merged with a new, experimental implementation of "dare ties" via mergekit. See:
 

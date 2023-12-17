@@ -5,7 +5,8 @@ pipeline_tag: text-generation
 inference: false
 license: llama2
 ---
-
+# MysticFusion-13B
+![img1](00117-3333234138.png)
 YAML:
 ```
 models:
@@ -21,8 +22,10 @@ models:
 merge_method: linear
 dtype: float16
 ```
+## Usage:
+This is meant to be story writing and basic instruction. More of story writing.
 
-# Prompt Template:
+## Prompt Template:
 ### Alpaca
 ```
 ### Instruction:

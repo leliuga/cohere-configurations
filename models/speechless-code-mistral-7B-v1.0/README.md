@@ -10,9 +10,8 @@ datasets:
 - WizardLM/WizardLM_evol_instruct_V2_196k
 - TokenBender/python_eval_instruct_51k
 tags:
-- llama-2
 - code
-license: llama2
+license: apache-2.0
 model-index:
 - name: SpeechlessCoder
   results:
@@ -24,7 +23,7 @@ model-index:
     metrics:
     - name: pass@1
       type: pass@1
-      value: 50.0
+      value: 51.21951219512195
       verified: false
 ---
 
@@ -52,7 +51,14 @@ Total 201,981 samples.
 
 | Metric | Value |
 | --- | --- |
-| humaneval-python | 50.0|
+| humaneval-python | 51.21951219512195|
+
+## Big Code Evaluation
+
+| | Humaneval | Java | Javascript | CPP | Php | Rust | Swift | R | Lua | D | Racket | Julia |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| pass@1 |  0.4260 | 0.3165 | 0.4241 | 0.3467 | 0.3548 | 0.2454 | 0.0000 | 0.1735 | 0.2942 | 0.1087 | 0.0000 | 0.3081 |
+| pass@10 | 0.5784 | 0.4506 | 0.5891 | 0.4845 | 0.4997 | 0.3858 | 0.0000 | 0.2516 | 0.4126 | 0.2018 | 0.0000 | 0.4427 |
 
 [Big Code Models Leaderboard](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard)
 
@@ -70,14 +76,28 @@ CodeLlama-13B: 35.07
 
 ## lm-evaluation-harness
 
+```json
+{'ARC (acc_norm)': 0.6109215017064846,
+'HellaSwag (acc_norm)': 0.8358892650866361,
+'MMLU (acc)': 0.6325456394049195,
+'TruthfulQA (mc2)': 0.4746745250371087,
+'Winoground (acc)': 0.7829518547750592,
+'GSM8K (acc)': 0.467778620166793,
+'DROP (f1)': 0.49585675335570545,
+'Open LLM Score': 0.61437428571428571}
+```
+
 [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+
 | Metric | Value |
 | --- | --- |
-| ARC |59.64 |
-| HellaSwag |82.25 |
-| MMLU | 61.33 |
-| TruthfulQA | 48.45 |
-| Average | 62.92 |
+| ARC |60.58 |
+| HellaSwag |83.47 |
+| MMLU | 62.98 |
+| TruthfulQA | 47.9 |
+| Winoground | 78.69 |
+| GSM8K | 19.18 |
+| Average | 58.85 |
 
 ## Parameters
 

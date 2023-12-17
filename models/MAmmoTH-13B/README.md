@@ -23,7 +23,6 @@ We introduce 🦣 MAmmoTH, a series of open-source large language models (LLMs) 
 | 13B | 🦣 [MAmmoTH-13B](https://huggingface.co/TIGER-Lab/MAmmoTH-13B) | 🦣 [MAmmoTH-Coder-13B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-13B)|
 | 34B | -                                                             | 🦣 [MAmmoTH-Coder-34B](https://huggingface.co/TIGER-Lab/MAmmoTH-Coder-34B)|
 | 70B | 🦣 [MAmmoTH-70B](https://huggingface.co/TIGER-Lab/MAmmoTH-70B) | -                                                                        |
-                                                                      |
 
 
 ## Training Data

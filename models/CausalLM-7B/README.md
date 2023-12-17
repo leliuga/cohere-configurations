@@ -31,7 +31,7 @@ tags:
 - qwen
 - causallm
 ---
-![](https://huggingface.co/JosephusCheung/tmp/resolve/main/7.72b.png)
+[![CausalLM](https://huggingface.co/JosephusCheung/tmp/resolve/main/7.72b.png)](https://causallm.org/)
 
 *Image drawn by GPT-4 DALL·E 3* **TL;DR: Perhaps this 7B model, better than all existing models <= 33B, in most quantitative evaluations...**
 
@@ -53,7 +53,7 @@ It is not recommended to use any form of quantization, but rather to use smaller
 
 Also see [14B Version](https://huggingface.co/CausalLM/14B)
 
-This model was trained based on the model weights of Qwen (and LLaMA2 was used, yes, for calculating some initial weights), you may also need to comply with the commercial use restrictions of these two models depending on the situation. The training process utilized a model structure that was identical to LLaMA2, using the same attention calculation method as the original MHA LLaMA2 models, and no additional scaling applied to the Rotary Positional Encoding (RoPE).
+This model was trained based on the model weights of Qwen (and LLaMA2 was used, yes, for calculating some initial weights), you may also need to comply with the commercial use restrictions of these two models depending on the situation. The training process utilized a model architecture that was identical to LLaMA2, using the same attention calculation method as the original MHA LLaMA2 models, and no additional scaling applied to the Rotary Positional Encoding (RoPE).
 
 We manually curated a SFT dataset of 1.3B tokens for training, utilizing open source datasets from Hugging Face. For most of these sentences, we performed manual or synthetic rewrites and generated alternate language versions using larger language models. Additionally, we conducted augmented text training using carefully selected entries from Wikipedia, as well as featured entries from Fandom and filtered entries from Moegirlpedia. In order to strike a balance between efficiency and quality, 100% of the data used for training was synthetic data, no direct use of text from the internet or original texts from publicly available datasets was employed for fine-tuning.
 
