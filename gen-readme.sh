@@ -40,6 +40,7 @@ echo "- [x] Yi" >> README.md
 echo "- [x] Deepseek" >> README.md
 echo "- [x] Qwen" >> README.md
 echo "- [x] Mixtral MoE" >> README.md
+echo "- [x] Phi 2" >> README.md
 echo "" >> README.md
 echo "Multimodal" >> README.md
 echo "" >> README.md

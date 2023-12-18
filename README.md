@@ -32,6 +32,7 @@ This repository contains the inference configurations for the Co:Here
 - [x] Deepseek
 - [x] Qwen
 - [x] Mixtral MoE
+- [x] Phi 2
 
 Multimodal
 
@@ -62,7 +63,7 @@ Multimodal
 docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere cohere run <name>/<dtype>
 ```
 
-## Supported Models (811)
+## Supported Models (812)
 
 | Name  | DType   | Context | Embedding | Read more |
 | ----- | ------- | ------- | --------- | --------- |
@@ -581,6 +582,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Pandora-v1-10.7B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Pandora-v1-10.7B/README.md) |
 | Pandora-v1-13B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Pandora-v1-13B/README.md) |
 | pee |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/pee/README.md) |
+| phi-2 |FP16 Q2_K Q3_K_M Q4_K_M Q5_K_M Q6_K Q8_0 | 2048 | 2560 | [README.md](models/phi-2/README.md) |
 | Phind-CodeLlama-34B-Python-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/Phind-CodeLlama-34B-Python-v1/README.md) |
 | Phind-CodeLlama-34B-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/Phind-CodeLlama-34B-v1/README.md) |
 | Phind-CodeLlama-34B-v2 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/Phind-CodeLlama-34B-v2/README.md) |
