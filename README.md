@@ -63,7 +63,7 @@ Multimodal
 docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere cohere run <name>/<dtype>
 ```
 
-## Supported Models (812)
+## Supported Models (814)
 
 | Name  | DType   | Context | Embedding | Read more |
 | ----- | ------- | ------- | --------- | --------- |
@@ -517,6 +517,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | NeuralOrca-7B-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/NeuralOrca-7B-v1/README.md) |
 | NexusRaven-13B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 5120 | [README.md](models/NexusRaven-13B/README.md) |
 | NexusRaven-V2-13B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 5120 | [README.md](models/NexusRaven-V2-13B/README.md) |
+| Norocetacean-20B-10k |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 10240 | 5120 | [README.md](models/Norocetacean-20B-10k/README.md) |
 | Noromaid-13B-v0.1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Noromaid-13B-v0.1/README.md) |
 | Noromaid-13B-v0.1.1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Noromaid-13B-v0.1.1/README.md) |
 | Noromaid-20B-v0.1.1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Noromaid-20B-v0.1.1/README.md) |
@@ -586,6 +587,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Phind-CodeLlama-34B-Python-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/Phind-CodeLlama-34B-Python-v1/README.md) |
 | Phind-CodeLlama-34B-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/Phind-CodeLlama-34B-v1/README.md) |
 | Phind-CodeLlama-34B-v2 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/Phind-CodeLlama-34B-v2/README.md) |
+| Pirouette-7B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Pirouette-7B/README.md) |
 | PiVoT-0.1-early |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/PiVoT-0.1-early/README.md) |
 | PiVoT-0.1-Evil-a |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/PiVoT-0.1-Evil-a/README.md) |
 | PiVoT-0.1-Starling-LM-RP |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/PiVoT-0.1-Starling-LM-RP/README.md) |
