@@ -63,7 +63,7 @@ Multimodal
 docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere cohere run <name>/<dtype>
 ```
 
-## Supported Models (814)
+## Supported Models (815)
 
 | Name  | DType   | Context | Embedding | Read more |
 | ----- | ------- | ------- | --------- | --------- |
@@ -459,6 +459,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Mistral-7B-Instruct-v0.1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-Instruct-v0.1/README.md) |
 | Mistral-7B-Instruct-v0.2 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-Instruct-v0.2/README.md) |
 | Mistral-7B-Instruct-v0.2-DARE |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-Instruct-v0.2-DARE/README.md) |
+| Mistral-7B-Merge-14-v0.1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-Merge-14-v0.1/README.md) |
 | Mistral-7B-OpenOrca |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-OpenOrca/README.md) |
 | Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/README.md) |
 | Mistral-7B-Phibrarian-32K |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Mistral-7B-Phibrarian-32K/README.md) |
