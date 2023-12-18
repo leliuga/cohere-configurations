@@ -62,7 +62,7 @@ Multimodal
 docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere cohere run <name>/<dtype>
 ```
 
-## Supported Models (810)
+## Supported Models (811)
 
 | Name  | DType   | Context | Embedding | Read more |
 | ----- | ------- | ------- | --------- | --------- |
@@ -424,6 +424,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Marcoroni-7B-v3 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Marcoroni-7B-v3/README.md) |
 | Marcoroni-neural-chat-7B-v1 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Marcoroni-neural-chat-7B-v1/README.md) |
 | Marx-3B-v3 |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 2560 | [README.md](models/Marx-3B-v3/README.md) |
+| med42-70B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 2048 | 8192 | [README.md](models/med42-70B/README.md) |
 | medalpaca-13B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 0 | 5120 | [README.md](models/medalpaca-13B/README.md) |
 | meditron-70B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/meditron-70B/README.md) |
 | meditron-7B |Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 4096 | [README.md](models/meditron-7B/README.md) |
