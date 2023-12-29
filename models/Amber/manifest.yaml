@@ -1,0 +1,397 @@
+id: Amber
+parent_id: LLM360/Amber
+name: Amber
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: LLM360
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- amber
+- nlp
+- llm
+- text-generation
+- en
+- base_model:LLM360/Amber
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ca4ce72e40d38e0a30d8847cd5516170b174b01
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q2_K.gguf
+      size: 2825940768
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 415f91fcf14a74ca8cadd3dc0fb9527fb6b0a1f0
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q3_K_L.gguf
+      size: 3597111072
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 965745e32bffe2aaa9041c8630a48d0b88165305
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q3_K_M.gguf
+      size: 3298004768
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 766a0f7927066a66db231cf37dc3672751618831
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q3_K_S.gguf
+      size: 2948304672
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 910540aa4b48514e0eacf0f2f90491cc70459cd5
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q4_0.gguf
+      size: 3825807136
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4cdc93dfbc82bceafe008c80f92fcf60afae891a
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q4_K_M.gguf
+      size: 4081004320
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ff2530716ba92757cc523bf3527dbe41d35bcc2f
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q4_K_S.gguf
+      size: 3856740128
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e6353aa290c1b4557caf0a9af471b0835d8b23a4
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q5_0.gguf
+      size: 4651691808
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65e1678cb2c759ef085242d03f3d99390cebfecb
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q5_K_M.gguf
+      size: 4783157024
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c9f16bf36176d21bf9a99f3f304cfa71b7bc7f35
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q5_K_S.gguf
+      size: 4651691808
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d35a4df3c13eedd6833f637f107817ce5d274e8
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q6_K.gguf
+      size: 5529194272
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amber/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 09041fd9fc3a485a0ca0bec8eb5a65ca40506752
+      uri: https://huggingface.co/TheBloke/Amber-GGUF/resolve/main/amber.Q8_0.gguf
+      size: 7161089824
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

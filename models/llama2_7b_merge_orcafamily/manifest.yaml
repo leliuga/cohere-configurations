@@ -1,0 +1,398 @@
+id: llama2_7b_merge_orcafamily
+parent_id: yeen214/llama2_7b_merge_orcafamily
+name: Llama2 7B Merge Orcafamily
+description: ""
+architecture: llama
+licence: mit
+object: model
+owned_by: yeen heui yeen
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- dataset:Open-Orca/SlimOrca
+- dataset:beaugogh/openorca-multiplechoice-10k
+- base_model:yeen214/llama2_7b_merge_orcafamily
+- license:mit
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88f5997696420e57670d6adb479848cb145f4730
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q2_K.gguf
+      size: 2825940768
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea4cf300dbb383933b573f733f0b5221c63784e3
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q3_K_L.gguf
+      size: 3597111072
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 67d7aaa90a6397ffe24a8338e15fc539ab3f8531
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q3_K_M.gguf
+      size: 3298004768
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3fa22611e83e6018cc631c8021e58542b65ab49a
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q3_K_S.gguf
+      size: 2948304672
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 94fefcc8df978fcc58b8a2ac96a79f29f88d3ac4
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q4_0.gguf
+      size: 3825807136
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 08b11ea1fb017e6a961f2a9dc2f5355b76cbeb3a
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q4_K_M.gguf
+      size: 4081004320
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 51ce23198a88c48b353ac08558e408b3dc93bd99
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q4_K_S.gguf
+      size: 3856740128
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fa4ae10bdca3a39115756bb3a72b8aa2f47d5cf0
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q5_0.gguf
+      size: 4651691808
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9b52a6a63b257cf6806f9403e623ed8ae3a77ff
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q5_K_M.gguf
+      size: 4783157024
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3740b961b413e27b4dfdaa9383f06132ae1d6811
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q5_K_S.gguf
+      size: 4651691808
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0ca5782bab3b2fec62eac80e944ebd3eb0cc2bbe
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q6_K.gguf
+      size: 5529194272
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2_7b_merge_orcafamily/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 73ed69b4cab2fe887bb4a62c7529fcafef475306
+      uri: https://huggingface.co/TheBloke/llama2_7b_merge_orcafamily-GGUF/resolve/main/llama2_7b_merge_orcafamily.Q8_0.gguf
+      size: 7161089824
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        Info on prompt template will be added shortly.

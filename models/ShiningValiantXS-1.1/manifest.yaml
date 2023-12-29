@@ -1,0 +1,402 @@
+id: ShiningValiantXS-1.1
+parent_id: ValiantLabs/ShiningValiantXS
+name: ShiningValiantXS 1.1 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Valiant Labs
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- shining-valiant
+- valiant
+- valiant-labs
+- llama-2
+- llama-2-chat
+- 13b
+- text-generation
+- en
+- base_model:ValiantLabs/ShiningValiantXS
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0b10cc5807a7003e2b036f1c249b649ff66a41b3
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q2_K.gguf
+      size: 5430321536
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 20b99c7eac35be408f77533ee57866e798c0a1a8
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q3_K_L.gguf
+      size: 6930532736
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c666609fe3bf0828198445a01e9685ee452a12b0
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q3_K_M.gguf
+      size: 6338742656
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: baeb808dbf1dca48e4ee112db9441f453fcf6198
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q3_K_S.gguf
+      size: 5659953536
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: db4672f02091bc892b5c4bd137d71f9865d49f3b
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q4_0.gguf
+      size: 7366807936
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eff23dbe1fc450640a6e402d57bf54105fd2f0e8
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q4_K_M.gguf
+      size: 7866929536
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: acfedc35fd870e23a70cd5fcb4705d033a30995d
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q4_K_S.gguf
+      size: 7415304576
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 79672b6ed4a7baf0146a87cc1283feb7f8605e2f
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q5_0.gguf
+      size: 8973259136
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 67edad4528b97dbbe139af533940df70a68c8a22
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q5_K_M.gguf
+      size: 9230897536
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d4fc96137643ea99ec1e3a6d63bc034eea3d173
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q5_K_S.gguf
+      size: 8973259136
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cd6a860fbe2871974cf49df6fbd7ab097dfcbb55
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q6_K.gguf
+      size: 10680113536
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ShiningValiantXS-1.1/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d7ffc65c09a023c99843b71f4b2d14cf4cf2cdcc
+      uri: https://huggingface.co/TheBloke/ShiningValiantXS-1.1-GGUF/resolve/main/shiningvaliantxs.Q8_0.gguf
+      size: 13832292736
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] <<SYS>>\n{system_message}\n<</SYS>>\n{prompt} [/INST]\n"

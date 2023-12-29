@@ -1,0 +1,394 @@
+id: Chronos-Beluga-v2-13B
+parent_id: The-Face-Of-Goonery/Chronos-Beluga-v2-13bfp16
+name: Chronos Beluga v2 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Caleb Morgan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:The-Face-Of-Goonery/Chronos-Beluga-v2-13bfp16
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 10d2cce1907011fd10d3c3a4aeb92158ebb6346e
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q2_K.gguf
+      size: 5429348224
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b484551f4b179b35a8caec6f5a78fd31f9725244
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q3_K_L.gguf
+      size: 6929559424
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f373725d250cffe136037a1b30698ea1f7196b24
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q3_K_M.gguf
+      size: 6337769344
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2022c19d8511f259a53ba92b2bf3168b5f3afcf4
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q3_K_S.gguf
+      size: 5658980224
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 148fc71606e1c8962fde0a0e99f7a5d5046c4bcf
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q4_0.gguf
+      size: 7365834624
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71ca18e99e8980b42535fca04b6a0c826f86cc91
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q4_K_M.gguf
+      size: 7865956224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a677e02000314106b8e7a6c89cec079b2623685b
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q4_K_S.gguf
+      size: 7414331264
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6ae372e2a8581a96e261899407e012bed0c0f905
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q5_0.gguf
+      size: 8972285824
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 47e6858976c788c01cb890ece2f36b8fe4dedbea
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q5_K_M.gguf
+      size: 9229924224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7ba9dae50c8000e950af1aee1aabb24ea9aff6cb
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q5_K_S.gguf
+      size: 8972285824
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f5cff5a26f4530dc565d16d47bcd8ca06048163a
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q6_K.gguf
+      size: 10679140224
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Beluga-v2-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 82c29cae6674221a3dcbb7ecef8028bf1b2ca05e
+      uri: https://huggingface.co/TheBloke/Chronos-Beluga-v2-13B-GGUF/resolve/main/chronos-beluga-v2-13b.Q8_0.gguf
+      size: 13831319424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

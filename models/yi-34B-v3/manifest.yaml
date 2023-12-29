@@ -1,0 +1,396 @@
+id: yi-34B-v3
+parent_id: mncai/yi-34B-v3
+name: Yi 34B v3
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: MindsAndCompany
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- base_model:mncai/yi-34B-v3
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 8192
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 195cd1f5d76331cb20c039fe0a4c72a13d7ec0de
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q2_K.gguf
+      size: 14557680800
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f7171d6f11bd5130fc28370de914dea2c31532a3
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q3_K_L.gguf
+      size: 18141250720
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ffdb98af8e29e783d3d3190b1ba872eb1aa9a108
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q3_K_M.gguf
+      size: 16638379168
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 99c58a4921b63cc2fc069b089f70cf3d3d655967
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q3_K_S.gguf
+      size: 14962099360
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46f992047bf6ff710c5462b3556f455477f0b465
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q4_0.gguf
+      size: 19468334240
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 55e3150aef6797245e920f98d2e7b8a9f4ca9621
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q4_K_M.gguf
+      size: 20660516000
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1d6b197b6d1911ab01fce84414f6e8aa1ed266d2
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q4_K_S.gguf
+      size: 19545404576
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4d521e41117a80bb1031b62e4fa80c2ec98db5f6
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q5_0.gguf
+      size: 23709496480
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d9c9d91b23854e45d6c053e32325f487ba0ced99
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q5_K_M.gguf
+      size: 24323650720
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ae624255c65577a0842ab79afbddd982364b76ec
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q5_K_S.gguf
+      size: 23709496480
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a4ae28a55e89cc83caa88063ff40c67d9986b2b
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q6_K.gguf
+      size: 28215731360
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - yi-34B-v3/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: df05aeaad7246180257b320a722727f5f950e5a7
+      uri: https://huggingface.co/TheBloke/yi-34B-v3-GGUF/resolve/main/yi-34b-v3.Q8_0.gguf
+      size: 36544087200
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|user|>
+        {prompt}
+        <|assistant|>

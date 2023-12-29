@@ -1,0 +1,397 @@
+id: Marx-3B-v3
+parent_id: acrastt/Marx-3B-V3
+name: Marx 3B V3
+description: ""
+architecture: stablelm_epoch
+licence: cc-by-sa-4.0
+object: model
+owned_by: Bohan Du
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- stablelm
+- text-generation
+- en
+- dataset:acrastt/EverythingLM-V3-ShareGPT
+- arxiv:2305.14314
+- base_model:acrastt/Marx-3B-V3
+- license:cc-by-sa-4.0
+- region:us
+config:
+  vocab_size: 50304
+  context_size: 4096
+  embedding_size: 2560
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 6912
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0449d56020999c67e400c49e97ab46d5533aa2ca
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q2_K.gguf
+      size: 1198771136
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 90f46f0d954e90c834ed99d1f7cd5ad277dbc27c
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q3_K_L.gguf
+      size: 1508564416
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 62e86a0ae7563f96ebdedbc38cdc97e276c177dc
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q3_K_M.gguf
+      size: 1391418816
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5eb111bfe6730f3f157665e3e1aac4c389160ddc
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q3_K_S.gguf
+      size: 1254448576
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f8e2c9c81e3a3ef18e678ce01a10a115de0786bd
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q4_0.gguf
+      size: 1608570816
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9e834c9c41ac1a8a4499ca89c81a527aa502604c
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q4_K_M.gguf
+      size: 1708595136
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab1552be5fec5e8eeda35ddc1d2d5361663c528b
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q4_K_S.gguf
+      size: 1620694976
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9f2dcc70fa591c45fc7d50e7d69f5aa963322441
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q5_0.gguf
+      size: 1941862336
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4b340291ce0f80580f33d9eb69eb4043d64d4cc
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q5_K_M.gguf
+      size: 1993390016
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 443be87ff6f51404a209485bc3f3621b01dc4bbc
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q5_K_S.gguf
+      size: 1941862336
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c6cf30cb50896ae7713267fbbb3e41f95bed268
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q6_K.gguf
+      size: 2295984576
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Marx-3B-v3/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2bfb5baadbd8af4b36e7e7e82ffafbb2f0cc561
+      uri: https://huggingface.co/TheBloke/Marx-3B-v3-GGUF/resolve/main/marx-3b-v3.Q8_0.gguf
+      size: 2972925376
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "USER: {prompt} ASSISTANT:\n"

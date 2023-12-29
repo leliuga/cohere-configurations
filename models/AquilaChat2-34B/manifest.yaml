@@ -1,0 +1,393 @@
+id: AquilaChat2-34B
+parent_id: BAAI/AquilaChat2-34B
+name: AquilaChat2 34B
+description: ""
+architecture: aquila
+licence: other
+object: model
+owned_by: Beijing Academy of Artificial Intelligence
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- aquila
+- base_model:BAAI/AquilaChat2-34B
+- license:other
+- region:us
+config:
+  vocab_size: 100008
+  context_size: 4096
+  embedding_size: 6144
+  attention_head_size: 48
+  key_value_head_size: 8
+  intermediate_size: 24576
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 06b18489913d5d542e7cd326624a21ea41622e6f
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q2_K.gguf
+      size: 14394455936
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d7f79aca404a3996d72fd428e48eb140b97f187d
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q3_K_L.gguf
+      size: 17742180608
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65ec0c8931fda2d0ed3661ba3373c34434c686e2
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q3_K_M.gguf
+      size: 16318738688
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 26c5ec31b5e6f82b52cfbd4d62ccef9af3ee2d31
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q3_K_S.gguf
+      size: 14725230848
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 782060e67bb3c2d2914fdf066b44849ae507dbdb
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q4_0.gguf
+      size: 19118450816
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fa2a2795201d3d1967ae9f540a192390c52889a2
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q4_K_M.gguf
+      size: 20334962816
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 857bc6a0942afeaeea4d21d4bc8f6a85bbf0e394
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q4_K_S.gguf
+      size: 19197094016
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 66a26503d1bdacd9d1ceabe0e1813ba1d1ebf975
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q5_0.gguf
+      size: 23253246080
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d5842623b5eb53ab79ed03e382eb720edb4e68ed
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q5_K_M.gguf
+      size: 23879934080
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 78b26497cbd87e28af1fbc8601e1c9b053f447d0
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q5_K_S.gguf
+      size: 23253246080
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e18a82b1aaa3542ecf34a66446e558794beaa433
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q6_K.gguf
+      size: 27646466048
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AquilaChat2-34B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 89242057a733cbceb3eb8807a5c15501638185c3
+      uri: https://huggingface.co/TheBloke/AquilaChat2-34B-GGUF/resolve/main/aquilachat2-34b.Q8_0.gguf
+      size: 35806443776
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "System: A chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.\nHuman: {prompt}\nAssistant:\n"

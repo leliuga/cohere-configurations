@@ -7,6 +7,10 @@ language:
 pipeline_tag: text-generation
 tags:
 - Math
+- merge
+base_model:
+- Q-bert/MetaMath-Cybertron-Starling
+- fblgit/juanako-7b-UNA
 ---
 
 ## Merged-AGI-7B

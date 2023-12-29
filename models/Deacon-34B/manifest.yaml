@@ -1,0 +1,395 @@
+id: Deacon-34B
+parent_id: KnutJaegersberg/Deacon-34B
+name: Deacon 34B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Knut Jägersberg
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- text-generation
+- dataset:totally-not-an-llm/EverythingLM-data-V3
+- base_model:KnutJaegersberg/Deacon-34B
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: de5f9016932e674ddf64140a00479a349c0d1500
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q2_K.gguf
+      size: 14555875296
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b388f13ba61425164d243566abe190c5cb7b6492
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q3_K_L.gguf
+      size: 18139445216
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88389799ff6599e87c4643a01dda5cf07380360d
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q3_K_M.gguf
+      size: 16636573664
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 753f4608ca3236230fdd7cd656807358f23fc50f
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q3_K_S.gguf
+      size: 14960293856
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0152cb75a857361b6ef0301e10c0536934df8b04
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q4_0.gguf
+      size: 19466528736
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5764098926e6bfaf57b0e9751cbc936b40c7854
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q4_K_M.gguf
+      size: 20658710496
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b052987cde19f5889b77ed6675acd60af032968a
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q4_K_S.gguf
+      size: 19543599072
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d9160e28db6571cd1efcd3f455d241b2de6d20f
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q5_0.gguf
+      size: 23707690976
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 73212b746569f6b880d8d24942352fc302d937c1
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q5_K_M.gguf
+      size: 24321845216
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 30f4133a512b173ee8d85a5351f0f5d12378d646
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q5_K_S.gguf
+      size: 23707690976
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 48d363546e85407d320680b231fb9282387f0473
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q6_K.gguf
+      size: 28213925856
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Deacon-34B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 76622f1b591f7d59b971dd7ee119508927023f8f
+      uri: https://huggingface.co/TheBloke/Deacon-34B-GGUF/resolve/main/deacon-34b.Q8_0.gguf
+      size: 36542281696
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### System:\n{system_message}\n\n### Instruction:\n{prompt}\n\n### Response:\n"

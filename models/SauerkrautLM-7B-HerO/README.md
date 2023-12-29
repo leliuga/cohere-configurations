@@ -11,6 +11,7 @@ tags:
 - chatml
 - augmentation
 - german
+- merge
 ---
 
 ![SauerkrautLM](https://vago-solutions.de/wp-content/uploads/2023/11/hero.png "SauerkrautLM-7b-HerO")

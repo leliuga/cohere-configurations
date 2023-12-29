@@ -28,7 +28,7 @@ Shining Valiant XS is a chat model built on the Llama 2 architecture, finetuned 
 
 This is Version **1.1** of Shining Valiant XS.
 
-Congrats to the team on the new release!
+Version 1.2 is now in training. (We're also exploring new models and architectures!)
 
 New models are released for everyone once our team's training and validation process is complete.
 

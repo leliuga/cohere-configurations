@@ -1,0 +1,338 @@
+id: sheep-duck-llama-2-70B-v1.1
+parent_id: Riiid/sheep-duck-llama-2-70b-v1.1
+name: Sheep Duck Llama 2 70B v1.1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Riiid
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Riiid/sheep-duck-llama-2-70b-v1.1
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 803b41d13caa8b9aac2e74f89e05d7c505a7d705
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q2_K.gguf
+      size: 29279253440
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25d0ed2773ebb4eb29938e0586f5246417135bad
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q3_K_L.gguf
+      size: 36147835840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a9c121ce8953dd2c7c295bf6dd26a68abf0780fc
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q3_K_M.gguf
+      size: 33186657216
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c82de8bacbb24af31b61493595421b28575ba3c
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q3_K_S.gguf
+      size: 29919294400
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 80bc5cd1e8ac812650a71113aa685f86f51ef3cb
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q4_0.gguf
+      size: 38872249280
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60c3ddf62199d75f01f0b6afa35a3bf76b041f1b
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q4_K_M.gguf
+      size: 41422910400
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: deef509131dcfd93f174abe2a4bae1ffec5e5cc2
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q4_K_S.gguf
+      size: 39073575872
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bf570a3e5a6e9223b5c9834c05b30fa3aa732beb
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q5_0.gguf
+      size: 47461397440
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c7bff06ee764eb4183829da1b9e7c1034241eb77
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q5_K_M.gguf
+      size: 48753767360
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sheep-duck-llama-2-70B-v1.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69f89492ffc1203e598ad18b86b2850393b379b7
+      uri: https://huggingface.co/TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF/resolve/main/sheep-duck-llama-2-70b-v1.1.Q5_K_S.gguf
+      size: 47461397440
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### System:\n{system_message}\n\n### User:\n{prompt}\n\n### Assistant:\n"

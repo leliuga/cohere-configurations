@@ -1,0 +1,344 @@
+id: med42-70B
+parent_id: m42-health/med42-70b
+name: Med42 70B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: M42 Health
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- m42
+- health
+- healthcare
+- clinical-llm
+- text-generation
+- en
+- base_model:m42-health/med42-70b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1edab6a513c098ba64a515fefa32f72ede227620
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q2_K.gguf
+      size: 29279253408
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 49dc963532039dc3d01eca4fa20feafd22c66fd6
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q3_K_L.gguf
+      size: 36147835808
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 24bb7b0969964cdf4d2c7db1dba557fc31102762
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q3_K_M.gguf
+      size: 33186657184
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a1b17dd310cea4113fe6adc8dc5cb26ce9285475
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q3_K_S.gguf
+      size: 29919294368
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2639be373b92d35a8ca31bed8599a138576dc175
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q4_0.gguf
+      size: 38872249248
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0606f4d3f68cb91e70fa7c0e1e7411354124d034
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q4_K_M.gguf
+      size: 41422910368
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 541dceb2205ff462186fbf10362fcc8481bc81de
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q4_K_S.gguf
+      size: 39073575840
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c9c80b9afee896df0656d66b7b9bf097f8fa8a02
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q5_0.gguf
+      size: 47461397408
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2dfbcf3c243e42c1d3449dc2ca6c97c93af249c9
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q5_K_M.gguf
+      size: 48753767328
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - med42-70B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1bd60eea981585de1b34019c21136c84d648bf61
+      uri: https://huggingface.co/TheBloke/med42-70B-GGUF/resolve/main/med42-70b.Q5_K_S.gguf
+      size: 47461397408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<|system|>: You are a helpful medical assistant created by M42 Health in the UAE.\n<|prompter|>:{prompt}\n<|assistant|>:\n"

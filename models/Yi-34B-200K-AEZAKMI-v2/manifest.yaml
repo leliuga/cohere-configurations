@@ -1,0 +1,401 @@
+id: Yi-34B-200K-AEZAKMI-v2
+parent_id: adamo1139/Yi-34B-200K-AEZAKMI-v2
+name: Yi 34B 200K Aezakmi v2
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Adam
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- llm
+- fine-tune
+- dataset:adamo1139/AEZAKMI_v2
+- base_model:adamo1139/Yi-34B-200K-AEZAKMI-v2
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q2_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5cb39b81e6b28e9721538d5fcf3a6827ffe9f2d
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q2_K.gguf
+      size: 14557680896
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q3_K_L
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 521911e7bde5ba8c015ac304403c2b364651dac2
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q3_K_L.gguf
+      size: 18141250816
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q3_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 10320d149fb545efe4afbbf9ef12653c7cdd72fd
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q3_K_M.gguf
+      size: 16638379264
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q3_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a008b7811afad002e0b0770921c897feca5ec7a0
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q3_K_S.gguf
+      size: 14962099456
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q4_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: da4545159bc7713539a8990b2a3a233208c80486
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q4_0.gguf
+      size: 19468334336
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q4_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7c38dbaf02f9599c76a530fa1ccc71fbcb525175
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q4_K_M.gguf
+      size: 20660516096
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q4_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4c0a34884196273f5b8b2e2f7f77c1a46f629c6
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q4_K_S.gguf
+      size: 19545404672
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q5_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3682e681ffe86e66ec97309523af66ebf6ce69f7
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q5_0.gguf
+      size: 23709496576
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q5_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a17d10c908dba587ea92edb30858dfca730a2d9e
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q5_K_M.gguf
+      size: 24323650816
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q5_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bfbc310e602fbabb3541ba10e1343b9d0e3004d6
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q5_K_S.gguf
+      size: 23709496576
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q6_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ae4923fe3b9adedc6041c49f8b57e3253cd1bae9
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q6_K.gguf
+      size: 28215731456
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-AEZAKMI-v2/Q8_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7178144eb8b616b093ca2ca8afe21c1bc97773e5
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-AEZAKMI-v2-GGUF/resolve/main/yi-34b-200k-aezakmi-v2.Q8_0.gguf
+      size: 36544087296
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

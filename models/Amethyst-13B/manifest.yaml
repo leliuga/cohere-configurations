@@ -1,0 +1,396 @@
+id: Amethyst-13B
+parent_id: Undi95/Amethyst-13B
+name: Amethyst 13B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Undi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- nsfw
+- base_model:Undi95/Amethyst-13B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5a6db7608ff4ae01b423be3e493e0978da107455
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q2_K.gguf
+      size: 5429348288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4b106e1b2f0b2869ee8191c01cb2c63546f3f6f7
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q3_K_L.gguf
+      size: 6929559488
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3b6584253ffef66e694c314a28f9562019e97f32
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q3_K_M.gguf
+      size: 6337769408
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b63811ce8171ac116b034cc84fdc5ca26f788ed5
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q3_K_S.gguf
+      size: 5658980288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2de8b12f0328762bc1e98edb883de44cb8b01b9
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q4_0.gguf
+      size: 7365834688
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5932ec3f2f66084254cc0cb3687ca0674ab7aa43
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q4_K_M.gguf
+      size: 7865956288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4017ca83a5f81b0191c3115751a2595fb133d6e2
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q4_K_S.gguf
+      size: 7414331328
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f81a6a5994db51f6a01c0aaa679603e0e01bff66
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q5_0.gguf
+      size: 8972285888
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 58d1091cf62ca23348d76cc76cde8eda3aea6349
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q5_K_M.gguf
+      size: 9229924288
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4df804e8ec79bfb9573258bdba27bbd2f174086c
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q5_K_S.gguf
+      size: 8972285888
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e446d24e6349b6cfc81541af6cdf162b4a691e62
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q6_K.gguf
+      size: 10679140288
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Amethyst-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0413ed76f3ba3a874ab0f41b618d3a210465e8c4
+      uri: https://huggingface.co/TheBloke/Amethyst-13B-GGUF/resolve/main/amethyst-13b.Q8_0.gguf
+      size: 13831319488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

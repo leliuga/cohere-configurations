@@ -1,0 +1,406 @@
+id: SauerkrautLM-7B-HerO
+parent_id: VAGOsolutions/SauerkrautLM-7b-HerO
+name: SauerkrautLM 7B HerO
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: VAGO solutions
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- finetune
+- chatml
+- augmentation
+- german
+- text-generation
+- en
+- de
+- base_model:VAGOsolutions/SauerkrautLM-7b-HerO
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2aec6a36e43fca280aa82f3e640b405652d6de32
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q2_K.gguf
+      size: 3083107616
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a60a8f3ac7625a7efb1b63cf8bd375a6c53566de
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q3_K_L.gguf
+      size: 3822035040
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 74ab8c0215d10d5dcb564e5b1c70901824094c7f
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q3_K_M.gguf
+      size: 3518996576
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e8774832b7409d7848f69f4823c31ac782afd3f2
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q3_K_S.gguf
+      size: 3164577888
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 97a176d1797ebfda4925574c856807581b158542
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q4_0.gguf
+      size: 4108928160
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aea077bd7f4d92ea3bb9f3e15ff55b68a25f7a68
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q4_K_M.gguf
+      size: 4368450720
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 171fee3396470d34bde5c8b45099d3d213807de5
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q4_K_S.gguf
+      size: 4140385440
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bafe6592734fbf57659e657dc1b88f94fe062f1e
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q5_0.gguf
+      size: 4997728416
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0910165f022726a943cfea7bc63efa8653f2a2e6
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q5_K_M.gguf
+      size: 5131421856
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c98a622e7f70c607bdba4f54a08fc86360469845
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q5_K_S.gguf
+      size: 4997728416
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9f3580b69abf01fa657c9a6810a5258f762b16fe
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q6_K.gguf
+      size: 5942078688
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-7B-HerO/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 84c43c69138a53030e194e637dca779ed7b0b408
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-7B-HerO-GGUF/resolve/main/sauerkrautlm-7b-hero.Q8_0.gguf
+      size: 7695875168
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

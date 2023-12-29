@@ -1,0 +1,396 @@
+id: Emerhyst-13B
+parent_id: Undi95/Emerhyst-13B
+name: Emerhyst 13B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Undi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- nsfw
+- base_model:Undi95/Emerhyst-13B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 943399fd9f35d7b82906da68b015ee2d9b8f8b08
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q2_K.gguf
+      size: 5429348288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: be525b068cae1bdba58a19d2314bf7fe4fd73c85
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q3_K_L.gguf
+      size: 6929559488
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 72e6664c540ff91a5d37594771b79b21ae3c77a5
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q3_K_M.gguf
+      size: 6337769408
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 929c9e3aba334ebb09e5ee1e825a831f79b1e697
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q3_K_S.gguf
+      size: 5658980288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6dff54c877b7fe4c9e102913a9b8fa60c0bc916d
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q4_0.gguf
+      size: 7365834688
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 64400a1d7b1df19f25836f9f5e11c708974e26dc
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q4_K_M.gguf
+      size: 7865956288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a32fc87d8d846bafd4bc9799a69ddde7e2148ab7
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q4_K_S.gguf
+      size: 7414331328
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1df0d0ab4a705d5be4de35573c2a2343b83cbcfc
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q5_0.gguf
+      size: 8972285888
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a407d945e4831e204d51261761dbfdca459e6c93
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q5_K_M.gguf
+      size: 9229924288
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 70ed7d7d512d1f174bbdc50adb531136f2c70f43
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q5_K_S.gguf
+      size: 8972285888
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5cab07b8cf504a7dd94b91c4f20182593aff399a
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q6_K.gguf
+      size: 10679140288
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Emerhyst-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 514df0ebda9e965221d3f081072c9d679ee37eac
+      uri: https://huggingface.co/TheBloke/Emerhyst-13B-GGUF/resolve/main/emerhyst-13b.Q8_0.gguf
+      size: 13831319488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

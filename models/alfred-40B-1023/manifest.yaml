@@ -1,0 +1,409 @@
+id: alfred-40B-1023
+parent_id: lightonai/alfred-40b-1023
+name: Alfred 40B 1023
+description: ""
+architecture: RefinedWeb
+licence: apache-2.0
+object: model
+owned_by: LightOn AI
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- falcon
+- falcon-40b
+- long-context
+- NTK-YaRN
+- en
+- fr
+- de
+- es
+- it
+- dataset:OpenAssistant/oasst1
+- dataset:ehartford/dolphin
+- dataset:tau/sled
+- dataset:tiiuae/falcon-refinedweb
+- arxiv:2306.15595
+- arxiv:2309.00071
+- arxiv:2307.03172
+- base_model:lightonai/alfred-40b-1023
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 65024
+  context_size: 0
+  embedding_size: 8192
+  attention_head_size: 0
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 0
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q2_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e5071d7f91ab673db53c5257137a18fd61a7013b
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q2_K.gguf
+      size: 17399764672
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q3_K_L
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1dc9efce6948700214bf8a4cf3898be0249c9455
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q3_K_L.gguf
+      size: 21598361280
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q3_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 030b5f07b834ae41d39c9e2e6db554365c7b1eb1
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q3_K_M.gguf
+      size: 20061148864
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q3_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ae36de54c954be9f5afde307bca605cac394149d
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q3_K_S.gguf
+      size: 18322872000
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q4_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3f0a3e70823d35214ac755eade39d73c0703bd32
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q4_0.gguf
+      size: 23808202432
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q4_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 61f8ab489917cc17dc63b88cd68b749a32b12404
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q4_K_M.gguf
+      size: 25452369600
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q4_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4c8fe775b599fe23cc260226c515c8026438e6a
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q4_K_S.gguf
+      size: 23808202432
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q5_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9e24aaada1663d0f6b1aae9f74e0218683b122ff
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q5_0.gguf
+      size: 28970866368
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q5_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e66d34888770ca9aa51d23bf4d159593f9b5411f
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q5_K_M.gguf
+      size: 30642034368
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q5_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 233cdd3cb9d291c54d176c4ef7e32457d6d74d4a
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q5_K_S.gguf
+      size: 28970866368
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q6_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 51411df89c91abb39341d4b3f07d77f6eda5e23f
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q6_K.gguf
+      size: 34456196800
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - alfred-40B-1023/Q8_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e1d8864288b370e00b65a49d44eebce8127291b1
+      uri: https://huggingface.co/TheBloke/alfred-40B-1023-GGUF/resolve/main/alfred-40b-1023.Q8_0.gguf
+      size: 44458858176
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<start_system>You are Alfred, a helpful assistant trained by LightOn. Knowledge cutoff: November 2022. Current date: 16 November, 2023<end_message><start_user>{prompt}<end_message><start_assistant>\n"

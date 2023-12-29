@@ -1,0 +1,394 @@
+id: firefly-llama2-13B-chat
+parent_id: YeungNLP/firefly-llama2-13b-chat
+name: Firefly Llama2 13B Chat
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: YeungNLP
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:YeungNLP/firefly-llama2-13b-chat
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 55296
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab2339a58d1a3c96e730a44da16be933ad606d62
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q2_K.gguf
+      size: 5566836544
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a68b47f3ee6176561d795864ed0f0e11f370e50
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q3_K_L.gguf
+      size: 7079161664
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: efdd4acc1afd6ae2e6b3a34009791427547435df
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q3_K_M.gguf
+      size: 6487371584
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7fe7aa863af83638b761eb64394f4038354b04a1
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q3_K_S.gguf
+      size: 5808582464
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 693ee79c37941cb323c761d1f3e95d5c3ebf28ca
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q4_0.gguf
+      size: 7531278144
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c387411ccac7c96ba36d938766f73fe046f84470
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q4_K_M.gguf
+      size: 8031399744
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7af28e6d6c8192021f6d46b4e60d57597654037a
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q4_K_S.gguf
+      size: 7579774784
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ade0e895cb7f0476f30e4c474c02f6402050d96b
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q5_0.gguf
+      size: 9152638784
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d0d1119c52cc8927cb9499e9e3275a9b67ad3ffa
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q5_K_M.gguf
+      size: 9410277184
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65a996bbdda087c73606fcdf945a60c446390ad7
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q5_K_S.gguf
+      size: 9152638784
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 427910ed6b12ba415fe2927a3a558bc34693171a
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q6_K.gguf
+      size: 10875334464
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - firefly-llama2-13B-chat/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1dcf987db7d64f5bc41103aef47501af77bbb8b3
+      uri: https://huggingface.co/TheBloke/firefly-llama2-13B-chat-GGUF/resolve/main/firefly-llama2-13b-chat.Q8_0.gguf
+      size: 14085287744
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

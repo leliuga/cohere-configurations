@@ -1,0 +1,396 @@
+id: Lewd-Sydney-20B
+parent_id: Undi95/Lewd-Sydney-20B
+name: Lewd Sydney 20B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Undi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- nsfw
+- base_model:Undi95/Lewd-Sydney-20B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ee2e34d87a8892c67a1dae400fbd52e1f23a2dc0
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q2_K.gguf
+      size: 8311592480
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f5da19b7f6103ba3b27ebb13f38b9a095d3cf03d
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q3_K_L.gguf
+      size: 10627767840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bde33cac046ce26e99b7147ff838d4f44ceafd7a
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q3_K_M.gguf
+      size: 9697156640
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 28e6c07300211457d7b5c6d88c079cb70bd9e243
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q3_K_S.gguf
+      size: 8658370080
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: de8348e370ef95895aa69349d7dd676628af08fb
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q4_0.gguf
+      size: 11292026400
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 61c27910c7026fec5b71350e9924ec3f2e680e3b
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q4_K_M.gguf
+      size: 12042208800
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a8da1e9dee33ba8de06da08de1d45bb8cb4678e3
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q4_K_S.gguf
+      size: 11340523040
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea3f3cf1a790201055f4a6a98441369a543d0abd
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q5_0.gguf
+      size: 13770761760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4f4d407fccaddab58737ceb850004bfde760d2d9
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q5_K_M.gguf
+      size: 14157219360
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f01f4d5cf31b2bcfad962f841a49ebccb4c50631
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q5_K_S.gguf
+      size: 13770761760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 750da6b8dca840d8e8722c012484556448bab096
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q6_K.gguf
+      size: 16404418080
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lewd-Sydney-20B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8178f3a5f51dcc53e5f8f0e63fceebd4cc0dd4c7
+      uri: https://huggingface.co/TheBloke/Lewd-Sydney-20B-GGUF/resolve/main/lewd-sydney-20b.Q8_0.gguf
+      size: 21246647840
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

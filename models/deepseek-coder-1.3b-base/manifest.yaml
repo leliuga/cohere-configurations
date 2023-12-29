@@ -1,0 +1,393 @@
+id: deepseek-coder-1.3b-base
+parent_id: deepseek-ai/deepseek-coder-1.3b-base
+name: Deepseek Coder 1.3B Base
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: DeepSeek
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- deepseek
+- base_model:deepseek-ai/deepseek-coder-1.3b-base
+- license:other
+- region:us
+config:
+  vocab_size: 32256
+  context_size: 16384
+  embedding_size: 2048
+  attention_head_size: 16
+  key_value_head_size: 16
+  intermediate_size: 5504
+  hidden_layer_size: 24
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3aa469b69e96c4a49f576c3e5f23bf6d7047e842
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q2_K.gguf
+      size: 631705632
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 10c0ba32e20086f94259bdfab975767190375df6
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q3_K_L.gguf
+      size: 744583200
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9e257f0b52b9fb703d0c66f99ecec69615bfb894
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q3_K_M.gguf
+      size: 704966688
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 79ab478edcadd50e780b073af104bce7c82d0182
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q3_K_S.gguf
+      size: 658862112
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cf5ded93fea0de1a1b24fb9529f7b1e6fd6eb112
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q4_0.gguf
+      size: 776065056
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a55e79dc684d412b75c66f2537a0787ad77e7990
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q4_K_M.gguf
+      size: 873582624
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c4ae31a4b50c19d76468ed2250a4672111245dd1
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q4_K_S.gguf
+      size: 814796832
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1f0d96515db0a3123fa19680b4f231733a4c2de3
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q5_0.gguf
+      size: 936103968
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c9ed127034e5d72541f6496bcd046759dbd0b599
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q5_K_M.gguf
+      size: 1001967648
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 643a1d10e386ef5ce783b32e391b6e6ecd878a3a
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q5_K_S.gguf
+      size: 953012256
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7def2aff2fc47b868c602dafd16ae46694c50cb0
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q6_K.gguf
+      size: 1171664928
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - deepseek-coder-1.3b-base/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: faca5f64c0e7da0bc5733ca2dd14be5dfc473cad
+      uri: https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF/resolve/main/deepseek-coder-1.3b-base.Q8_0.gguf
+      size: 1432219680
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,396 @@
+id: sabia-7B
+parent_id: maritaca-ai/sabia-7b
+name: Sabia 7B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Maritaca AI
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- pt
+- arxiv:2304.07880
+- base_model:maritaca-ai/sabia-7b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 0
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e0c38da1b3adf7af4ab65763aa29c76866d2accc
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q2_K.gguf
+      size: 2825940800
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 90c2e4e6f13e76821a29ddc4d5df03444f121f23
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q3_K_L.gguf
+      size: 3597111104
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c0fca17f5d031b2dd5dd504a68471cbffd7adde
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q3_K_M.gguf
+      size: 3298004800
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9a0ba096930596a9798ebab7b349ff7d057a6be7
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q3_K_S.gguf
+      size: 2948304704
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 125d8652e8c6d7ced62604280e2a86b0b9d880a9
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q4_0.gguf
+      size: 3825807168
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7e56387cbfebd9ae18d0a4de81043db4d70e8e45
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q4_K_M.gguf
+      size: 4081004352
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d061846372a5bcfb1da6c178ae0077c2d225cc71
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q4_K_S.gguf
+      size: 3856740160
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71175eb10d54e730a358b4dd09158dbd259ef899
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q5_0.gguf
+      size: 4651691840
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3caa6638a3f6223b901c27b273f5b23ceb519289
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q5_K_M.gguf
+      size: 4783157056
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b88339683c8a8d2ff58b63af2a02d45895bc824
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q5_K_S.gguf
+      size: 4651691840
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a0875bfb33fec00b532736bc64ad569bb2d7ccf7
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q6_K.gguf
+      size: 5529194304
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sabia-7B/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 93f60340be8d378b80e6f937f478ba24d9cd5ac4
+      uri: https://huggingface.co/TheBloke/sabia-7B-GGUF/resolve/main/sabia-7b.Q8_0.gguf
+      size: 7161089856
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,282 @@
+id: Synthia-MoE-v3-Mixtral-8x7B
+parent_id: migtissera/Synthia-MoE-v3-Mixtral-8x7B
+name: Synthia MoE v3 Mixtral 8x7B
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Migel Tissera
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:migtissera/Synthia-MoE-v3-Mixtral-8x7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d068a9ffb075e56e5e758fdf7acecb44e2d5ddfe
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q2_K.gguf
+      size: 15644034496
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a23ac17d73dfd24605d102fb5ae1095672fe1185
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q3_K_M.gguf
+      size: 20363355584
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 795b8012e101199a659fa8ecdf54b525a1011049
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q4_0.gguf
+      size: 26441532864
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d333fbeb16646ab58cb0743033ec95437630b311
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q4_K_M.gguf
+      size: 26441532864
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab92353105e34d18f81a0706bf01f59cc7b85029
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q5_0.gguf
+      size: 32229279168
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c4ec93ef349d782bd1b3c01bbba11420df5066b
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q5_K_M.gguf
+      size: 32229279168
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6cd514a2279afd0e6c45f3353d3075fea11a46e0
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q6_K.gguf
+      size: 38378759616
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synthia-MoE-v3-Mixtral-8x7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8e2dc8f0bb3fa04cc90a63bbbc06ff4eb704ca21
+      uri: https://huggingface.co/TheBloke/Synthia-MoE-v3-Mixtral-8x7B-GGUF/resolve/main/synthia-moe-v3-mixtral-8x7b.Q8_0.gguf
+      size: 49624262080
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "SYSTEM: Elaborate on the topic using a Tree of Thoughts and backtrack when necessary to construct a clear, cohesive Chain of Thought reasoning. Always answer without hesitation.\nUSER: {prompt}\nASSISTANT:\n"

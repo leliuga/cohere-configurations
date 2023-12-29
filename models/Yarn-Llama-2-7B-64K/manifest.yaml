@@ -1,0 +1,396 @@
+id: Yarn-Llama-2-7B-64K
+parent_id: NousResearch/Yarn-Llama-2-7b-64k
+name: Yarn Llama 2 7B 64K
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: NousResearch
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- dataset:pg19
+- arxiv:2309.00071
+- base_model:NousResearch/Yarn-Llama-2-7b-64k
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 65536
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q2_K
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 64e484d4aa7b0e74e2fff0f2c84efff43f5544b0
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q2_K.gguf
+      size: 2825940704
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q3_K_L
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f51650afee0bc3f9c527ce0c940c640cc6d186ea
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q3_K_L.gguf
+      size: 3597111008
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q3_K_M
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 484c142d904c94ec71d338a295a6f0d684556cb1
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q3_K_M.gguf
+      size: 3298004704
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q3_K_S
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7da60c38f3c9e8ffe80c1ca059806badda1f0633
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q3_K_S.gguf
+      size: 2948304608
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q4_0
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d70ac16e122925185e4f329327efca624d699718
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q4_0.gguf
+      size: 3825807072
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q4_K_M
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ef4f3dcd0b35470fc66091ce676d98940fad3fa
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q4_K_M.gguf
+      size: 4081004256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q4_K_S
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29e29c583474d0f2f97e030617b8ff958e9c4250
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q4_K_S.gguf
+      size: 3856740064
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q5_0
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 424b02b508d64389134082533b9bc0fcbbe37533
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q5_0.gguf
+      size: 4651691744
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q5_K_M
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4b44420789dfac48e55768f4c591c3c75e7cb008
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q5_K_M.gguf
+      size: 4783156960
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q5_K_S
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7a0a209b939ac2f1641ccf7fff1a737ef42acded
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q5_K_S.gguf
+      size: 4651691744
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q6_K
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1838f5ed234d805df1b920a71c3d2631dcf5e69e
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q6_K.gguf
+      size: 5529194208
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Llama-2-7B-64K/Q8_0
+    - --ctx-size
+    - "65536"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d973c740d914a44251dbecb8d25717976cee912
+      uri: https://huggingface.co/TheBloke/Yarn-Llama-2-7B-64K-GGUF/resolve/main/yarn-llama-2-7b-64k.Q8_0.gguf
+      size: 7161089760
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 65536
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

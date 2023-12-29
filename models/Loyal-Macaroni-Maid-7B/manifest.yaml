@@ -1,0 +1,397 @@
+id: Loyal-Macaroni-Maid-7B
+parent_id: SanjiWatsuki/Loyal-Macaroni-Maid-7B
+name: Loyal Macaroni Maid 7B
+description: ""
+architecture: mistral
+licence: cc-by-nc-4.0
+object: model
+owned_by: Sanji Watsuki
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- not-for-all-audiences
+- nsfw
+- base_model:SanjiWatsuki/Loyal-Macaroni-Maid-7B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ed7b072846a9fbf05355586376e4e64743a8434d
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q2_K.gguf
+      size: 3084034208
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 86a8f19ce9df3c63268d78182dd8b5db10cad2a7
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q3_K_L.gguf
+      size: 3822960800
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 257990470afe359e7ed7c80f55dfeeedd5c0d09b
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q3_K_M.gguf
+      size: 3519922336
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b9c0dfceec5a253ba68c7c4635f82a11612bb94a
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q3_K_S.gguf
+      size: 3165503648
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cde37a5aabb1d69d17b443307013d3e57f6f4878
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q4_0.gguf
+      size: 4109852832
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5f213e076cf754a7b39e857cd5bd3d582ac35db
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q4_K_M.gguf
+      size: 4369375392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6e21b0e3112b68f0d8d773252251b4ce283c653c
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q4_K_S.gguf
+      size: 4141310112
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4402be0c9b6a1420d4f769d8a293088663d37e18
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q5_0.gguf
+      size: 4998652064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a80c563f9b47a0c0db148f8e326e2c1af24c7841
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q5_K_M.gguf
+      size: 5132345504
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 63aaa6add9f257492963e5b898bd84c8d58ae5f9
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q5_K_S.gguf
+      size: 4998652064
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 485c819ad7b89b65969da0c5623a2ac92a38db81
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q6_K.gguf
+      size: 5943001248
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Loyal-Macaroni-Maid-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2aeaf1a4f6854d70dbbbdac275c0d755ef8a535f
+      uri: https://huggingface.co/TheBloke/Loyal-Macaroni-Maid-7B-GGUF/resolve/main/loyal-macaroni-maid-7b.Q8_0.gguf
+      size: 7696793760
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

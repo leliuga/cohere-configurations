@@ -1,0 +1,401 @@
+id: finance-LLM
+parent_id: AdaptLLM/finance-LLM
+name: Finance LLM
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: AdaptLLM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- finance
+- text-generation
+- en
+- dataset:Open-Orca/OpenOrca
+- dataset:GAIR/lima
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- arxiv:2309.09530
+- base_model:AdaptLLM/finance-LLM
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 0
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 0
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q2_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 653aa59cdd64dfd52bcc1e4314800acf300794e2
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q2_K.gguf
+      size: 2825945408
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q3_K_L
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ebd4d8c03f50c1854c694789ca59a9db119336e
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q3_K_L.gguf
+      size: 3597116128
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q3_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e923324acbde61638fb7f7ee0a25719f636d0889
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q3_K_M.gguf
+      size: 3298009824
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q3_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a332ade4f43e1a6e27362dfc9f359f8fb97d94b
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q3_K_S.gguf
+      size: 2948309728
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q4_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fd4533c2a5b25dfad5f3f18b961a3931f4d1d5d3
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q4_0.gguf
+      size: 3825812736
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q4_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 961079c00e60eedf4a589eab6c76b4549a54ce29
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q4_K_M.gguf
+      size: 4081009920
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q4_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a2de746c5dadd942b1c37434503622a6f0ac77c6
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q4_K_S.gguf
+      size: 3856745728
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q5_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 827f5e4bb30dd2dc6372949682cefcc022fc8a60
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q5_0.gguf
+      size: 4651697920
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q5_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bb23983f39dc1ab680a01c294d742352717640a6
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q5_K_M.gguf
+      size: 4783163136
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q5_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9cfc8d2313e06b28fef3293b6877d93925ae9c19
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q5_K_S.gguf
+      size: 4651697920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q6_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e03f3cb8d3a8e7e11e06a59774e3aaabe63ead8b
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q6_K.gguf
+      size: 5529200928
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - finance-LLM/Q8_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 00cb255c2ae69c3311bea7ee51d24259dc9311e2
+      uri: https://huggingface.co/TheBloke/finance-LLM-GGUF/resolve/main/finance-llm.Q8_0.gguf
+      size: 7161098464
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] <<SYS>>\n{system_message}\n<</SYS>>\n{prompt} [/INST]\n"

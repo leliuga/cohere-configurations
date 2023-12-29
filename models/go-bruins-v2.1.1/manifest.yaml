@@ -1,0 +1,394 @@
+id: go-bruins-v2.1.1
+parent_id: rwitz2/go-bruins-v2.1.1
+name: Go Bruins v2.1.1
+description: ""
+architecture: mistral
+licence: cc
+object: model
+owned_by: ryan witzman
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:rwitz2/go-bruins-v2.1.1
+- license:cc
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 741ffce07dee3f6d2f03006bf07c92ec5a442671
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q2_K.gguf
+      size: 3084034176
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c4a3dc79f8af4ddb7163a45da5992d184bfd58ca
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q3_K_L.gguf
+      size: 3822960768
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5af3898690c897c80989e0789d50a748aebe80d0
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q3_K_M.gguf
+      size: 3519922304
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1815e4ac7f4e85c4c9d0d083cd39aa7b2c5a9d2d
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q3_K_S.gguf
+      size: 3165503616
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: adc0b9d5eef6107d483e8c640701f2011dfde844
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q4_0.gguf
+      size: 4109852800
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fc984708d57e2d2d39b7e2e7a656336d1cde4a5e
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q4_K_M.gguf
+      size: 4369375360
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 507e722c6f09cdfe8a0fbeaa5d2e13e5e698288b
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q4_K_S.gguf
+      size: 4141310080
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3b87f7dbc7ccad104f4746e87ba501a60ad72a92
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q5_0.gguf
+      size: 4998652032
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 730c6a09209e621f3ae8b6dffb4b65bb43e0755f
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q5_K_M.gguf
+      size: 5132345472
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4a64f362c4edce6ed3b5112634c5facf7a8cb63
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q5_K_S.gguf
+      size: 4998652032
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d15be9b803bb5be4205ce8d0c503fd81562805b0
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q6_K.gguf
+      size: 5943001216
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - go-bruins-v2.1.1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6e5f7820a91555d5cb6acca9544a3698d7ab0028
+      uri: https://huggingface.co/TheBloke/go-bruins-v2.1.1-GGUF/resolve/main/go-bruins-v2.1.1.Q8_0.gguf
+      size: 7696793728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

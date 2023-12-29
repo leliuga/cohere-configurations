@@ -1,0 +1,406 @@
+id: OpenHermes-2.5-Mistral-7B-16k
+parent_id: NurtureAI/OpenHermes-2.5-Mistral-7B-16k
+name: Openhermes 2.5 Mistral 7B 16K
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: NurtureAI
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- instruct
+- finetune
+- chatml
+- gpt4
+- synthetic data
+- distillation
+- en
+- base_model:NurtureAI/OpenHermes-2.5-Mistral-7B-16k
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5af4ac30341caa4b73ae8e354c463bf058333667
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q2_K.gguf
+      size: 3083107328
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3418f696ea8abbf26619050b2433017926fd920b
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q3_K_L.gguf
+      size: 3822034752
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d2293454759d84492b736e2a2cd388e52ff6e38
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q3_K_M.gguf
+      size: 3518996288
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 922a476c24c1a6e57343857bfa7d5fead8049314
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q3_K_S.gguf
+      size: 3164577600
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0008efbc5311c29e399916311e593ee15179762
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q4_0.gguf
+      size: 4108927872
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d21af99ae9663d8ca580755ecd96f99a0b8c02f5
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q4_K_M.gguf
+      size: 4368450432
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea8eb58101c2c4bea7412b6736193e7ebd6792d4
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q4_K_S.gguf
+      size: 4140385152
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88eec2d7669cd629c8dd25bd635b49066a07cdea
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q5_0.gguf
+      size: 4997728128
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 428a6dd84e7f3340efcbc69ecc5399042b241aea
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q5_K_M.gguf
+      size: 5131421568
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b0022e080f22631171b8d6f710cc187071bcf5ee
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q5_K_S.gguf
+      size: 4997728128
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eeab3f0e17ecc8a8038470b421bf6e5247571d09
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q6_K.gguf
+      size: 5942078400
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenHermes-2.5-Mistral-7B-16k/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5f24781d78dd98af69045d8522238cd463a52bd2
+      uri: https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF/resolve/main/openhermes-2.5-mistral-7b-16k.Q8_0.gguf
+      size: 7695874880
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

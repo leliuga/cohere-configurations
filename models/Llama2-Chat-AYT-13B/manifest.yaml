@@ -1,0 +1,395 @@
+id: Llama2-Chat-AYT-13B
+parent_id: posicube/Llama2-chat-AYT-13B
+name: Llama2 Chat AYT 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: posicube
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- arxiv:2306.02707
+- base_model:posicube/Llama2-chat-AYT-13B
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2951f4968934c1ad3f3c62b18e2235c119aedccc
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q2_K.gguf
+      size: 5429348224
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 152900c75a58123c8d9e55dc712c5a31ae6ce662
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q3_K_L.gguf
+      size: 6929559424
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ed191479d3baa8e10f8c9199b23253f37e8a04a9
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q3_K_M.gguf
+      size: 6337769344
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 230a9b1c6f232c7ee3aaa565e13987519a288e1d
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q3_K_S.gguf
+      size: 5658980224
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab78226375ec6aeb41c69d4b625f892cec60b56c
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q4_0.gguf
+      size: 7365834624
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 073e72c5f63bbe8990b91bddc4ab76dc2e51fa17
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q4_K_M.gguf
+      size: 7865956224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 37f1c1926dd08f7074316a8f6b26eabd32291236
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q4_K_S.gguf
+      size: 7414331264
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 11260c3659371965554541a508cf135a705bbdfa
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q5_0.gguf
+      size: 8972285824
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 518008f0b0e90dae2388e78b3c00645565bd9fb6
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q5_K_M.gguf
+      size: 9229924224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 45935a3588d6d4e1d7d70cd6c541df2917434b3d
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q5_K_S.gguf
+      size: 8972285824
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 70dadff4303554ebc7460d3c4046c6f85b5aca9b
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q6_K.gguf
+      size: 10679140224
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-Chat-AYT-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 90201bd893d1f69b17640feaa2a67b0eaab074a6
+      uri: https://huggingface.co/TheBloke/Llama2-Chat-AYT-13B-GGUF/resolve/main/llama2-chat-ayt-13b.Q8_0.gguf
+      size: 13831319424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

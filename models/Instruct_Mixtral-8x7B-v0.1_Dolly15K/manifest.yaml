@@ -1,0 +1,284 @@
+id: Instruct_Mixtral-8x7B-v0.1_Dolly15K
+parent_id: Brillibits/Instruct_Mixtral-8x7B-v0.1_Dolly15K
+name: Instruct Mixtral 8X7B V0.1 Dolly15K
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Brillibits
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- text-generation
+- dataset:databricks/databricks-dolly-15k
+- base_model:Brillibits/Instruct_Mixtral-8x7B-v0.1_Dolly15K
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c706b705bbab0e7af35e2d5257c8beaa57ddd3e
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q2_K.gguf
+      size: 15644971328
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bf59c05e4d6b88d9afd53f025a695c2fb8b890a0
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q3_K_M.gguf
+      size: 20364292416
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bebb30230adcc1b3db61c73e20c4fe66f06f5ac1
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q4_0.gguf
+      size: 26442469696
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7944c7cf55b42db4a8f0ebb4eac690ebb474b96e
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q4_K_M.gguf
+      size: 26442469696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c2adcb154634bdaf2a483b6ed07f9b70ddc4fa7
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q5_0.gguf
+      size: 32230216000
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 482cc86d58e9396afecd6ebf230f3706a14fc0f0
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q5_K_M.gguf
+      size: 32230216000
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0f526937c9fb873d3c1a9f1993e670184b37d97
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q6_K.gguf
+      size: 38379696448
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Instruct_Mixtral-8x7B-v0.1_Dolly15K/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 171e010f139f482c1bda1afad896114b8df4baea
+      uri: https://huggingface.co/TheBloke/Instruct_Mixtral-8x7B-v0.1_Dolly15K-GGUF/resolve/main/instruct_mixtral-8x7b-v0.1_dolly15k.Q8_0.gguf
+      size: 49625198912
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n\nOutput:\n"

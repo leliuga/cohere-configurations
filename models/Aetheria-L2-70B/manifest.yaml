@@ -1,0 +1,341 @@
+id: Aetheria-L2-70B
+parent_id: royallab/Aetheria-L2-70B
+name: Aetheria L2 70B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: The Royal Lab
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama 2
+- text-generation
+- en
+- base_model:royallab/Aetheria-L2-70B
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fdf9bcfaa575e1a3fe07a60115608df7e08a8d8c
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q2_K.gguf
+      size: 29279253504
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 888dbb6aded167ff83ab02083377471ede940dfc
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q3_K_L.gguf
+      size: 36147835904
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aa75bb85810a4ae43081723399d76a2cce093c14
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q3_K_M.gguf
+      size: 33186657280
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6f2b61bde55b3c569b98661d5a9f25bd49a2c926
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q3_K_S.gguf
+      size: 29919294464
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4ea6f0c9503ae831d277d8c726bcfc1a5dffec6e
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q4_0.gguf
+      size: 38872249344
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 94781bf7bb0fd2506d34703ff2850d8fb790f33f
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q4_K_M.gguf
+      size: 41422910464
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f10800823773612d359a6c1c97f5585d44c227ec
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q4_K_S.gguf
+      size: 39073575936
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 147f43eade64a88b47bdc05c7ab79966f60452c4
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q5_0.gguf
+      size: 47461397504
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 15f8ce750b094082aec183e5a16e427bc87c9870
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q5_K_M.gguf
+      size: 48753767424
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Aetheria-L2-70B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f201a9ed57a95de66b530942b0ae0de6968e864f
+      uri: https://huggingface.co/TheBloke/Aetheria-L2-70B-GGUF/resolve/main/aetheria-l2-70b.Q5_K_S.gguf
+      size: 47461397504
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\nCharacter's Persona: bot character description\n\nUser's persona: user character description\n  \nScenario: what happens in the story\n\nPlay the role of Character. You must engage in a roleplaying chat with User below this line. Do not write dialogues and narration for User. Character should respond with messages of medium length.\n\n### Input:\nUser: {prompt}\n\n### Response:\nCharacter: \n"

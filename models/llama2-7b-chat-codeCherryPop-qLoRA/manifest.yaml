@@ -1,0 +1,395 @@
+id: llama2-7b-chat-codeCherryPop-qLoRA
+parent_id: TokenBender/llama2-7b-chat-hf-codeCherryPop-qLoRA-merged
+name: Llama-2-7B-Chat Code Cherry Pop
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: TokenBender
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:TokenBender/llama2-7b-chat-hf-codeCherryPop-qLoRA-merged
+- license:llama2
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6a574e5285202f80ce9ce18f01aebb86cbbb3169
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q2_K.gguf
+      size: 2825940672
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 18f59fd9b3e8d5c858cb1bef60e318c87dda65a0
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q3_K_L.gguf
+      size: 3597110976
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea9087df2a2ef207d452d959a26b8569a96e0672
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q3_K_M.gguf
+      size: 3298004672
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0c0c8561b4a49efdfd1baf69acfa7bbb9586aded
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q3_K_S.gguf
+      size: 2948304576
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fe39b10d65e01ac6e6985276980a1b79715337e1
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q4_0.gguf
+      size: 3825807040
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ea4bcb8465c295a4df8e5d23a7619a9e6228ba7
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q4_K_M.gguf
+      size: 4081004224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4cea164312794009ee62b8fda0c1767ae7437ef5
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q4_K_S.gguf
+      size: 3856740032
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7e335e1b5c09b895f4dd1e64bb138c83aa07388a
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q5_0.gguf
+      size: 4651691712
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a38ef5f0ebd621b354007a76e80134c3c06475da
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q5_K_M.gguf
+      size: 4783156928
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69e3260e6d2a76e474bdc0e2f362fca2c7859994
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q5_K_S.gguf
+      size: 4651691712
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 26ad26e7bfbc0e8dcc6ac44e30a79b2981047477
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q6_K.gguf
+      size: 5529194176
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-7b-chat-codeCherryPop-qLoRA/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6b1ea244c0a658b7d70114b9f654cc757b72177c
+      uri: https://huggingface.co/TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF/resolve/main/llama-2-7b-chat-codeCherryPop.Q8_0.gguf
+      size: 7161089728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

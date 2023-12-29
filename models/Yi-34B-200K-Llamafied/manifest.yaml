@@ -1,0 +1,395 @@
+id: Yi-34B-200K-Llamafied
+parent_id: larryvrh/Yi-34B-200K-Llamafied
+name: Yi 34B 200K Llamafied
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: larryvrh
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- zh
+- en
+- base_model:larryvrh/Yi-34B-200K-Llamafied
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q2_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2686763fdbbc296b3b2faf42b30b00bac77d5b35
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q2_K.gguf
+      size: 14555875264
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q3_K_L
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 32bc914b53ca4be9da820d6d4607dc97610b0fad
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q3_K_L.gguf
+      size: 18139445184
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q3_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5a5790dd319aadc8e14d56a206d7d90b4c775397
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q3_K_M.gguf
+      size: 16636573632
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q3_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2fa6c086894ea7a34092954f5a50afd6b3f5f899
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q3_K_S.gguf
+      size: 14960293824
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q4_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1fe13a3c0c932284855ffe76ea66a983a021ffd3
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q4_0.gguf
+      size: 19466528704
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q4_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2d8aae6b62cfa8ec8a87624b061cfdf77b5e9b6c
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q4_K_M.gguf
+      size: 20658710464
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q4_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d5c4f560922a17f42426c19cf47430d36fcc3400
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q4_K_S.gguf
+      size: 19543599040
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q5_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9e46cd2855a5b0e8dce4090e59ad523687630b96
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q5_0.gguf
+      size: 23707690944
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q5_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 840e2f862a33db07d07f72736f68309e4b8a3557
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q5_K_M.gguf
+      size: 24321845184
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q5_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 807d034776210ee0608052a651b7a31b6644af91
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q5_K_S.gguf
+      size: 23707690944
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q6_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 70e0b598dccc06b332c7363bcc12e7cf67d18ac7
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q6_K.gguf
+      size: 28213925824
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-Llamafied/Q8_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d8eb884c13038d2bb44ed6b9c463aa8b5e00905
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-Llamafied-GGUF/resolve/main/yi-34b-200k-llamafied.Q8_0.gguf
+      size: 36542281664
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

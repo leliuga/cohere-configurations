@@ -1,0 +1,394 @@
+id: Frostwind-10.7B-v1
+parent_id: Sao10K/Frostwind-10.7B-v1
+name: Frostwind 10.7B V1
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Saofiq
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- en
+- base_model:Sao10K/Frostwind-10.7B-v1
+- license:cc-by-nc-4.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b8c5fdf9b57673a47bb86817f829a4dc8292ad35
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q2_K.gguf
+      size: 4549952032
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 913a071f148314d1faec4e85a94046b18ddb6cc0
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q3_K_L.gguf
+      size: 5651685920
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0d09362e8b642e9d3b2d7b52ec1ff3c9635e3846
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q3_K_M.gguf
+      size: 5189263904
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac3ca1c56e93fd2222ec4ccf9747e42c1b4a3ecf
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q3_K_S.gguf
+      size: 4665500192
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d7a4f924ce460bf56e0c492126ad310c98e41387
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q4_0.gguf
+      size: 6073319968
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7c77a8f8539ee61d0f866fc4272c54786dd145a7
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q4_K_M.gguf
+      size: 6462603808
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c61f34c27d59f917d67f7ea468020ba6d4656a96
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q4_K_S.gguf
+      size: 6104777248
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3581d577ead930120a97191502c0b3d10413970f
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q5_0.gguf
+      size: 7398326816
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6925f61720a4c36965ee42304eee74aa93adb259
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q5_K_M.gguf
+      size: 7598866976
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a708f3085da25f57ff532bb21de8c33c7a8baa8e
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q5_K_S.gguf
+      size: 7398326816
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b9cef5c46e78f58f74b739748ec878396f40b838
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q6_K.gguf
+      size: 8806146592
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Frostwind-10.7B-v1/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cea2e2b3dc41a9e5d1c42d56c31674c793ff6479
+      uri: https://huggingface.co/TheBloke/Frostwind-10.7B-v1-GGUF/resolve/main/frostwind-10.7b-v1.Q8_0.gguf
+      size: 11405091360
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

@@ -1,0 +1,338 @@
+id: FashionGPT-70B-V1.1
+parent_id: ICBU-NPU/FashionGPT-70B-V1.1
+name: FashionGPT 70B V1.1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: ICBU-NPU
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:ICBU-NPU/FashionGPT-70B-V1.1
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1198bd51eaf2d83f48e1de9a72ac95c9bd46e268
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q2_K.gguf
+      size: 29279253408
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 786fdbe9dc0ffb7fea293798a38c93a9701617de
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q3_K_L.gguf
+      size: 36147835808
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e3e4a96bc1fe0822f61cdd75f4f4a89087d0d605
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q3_K_M.gguf
+      size: 33186657184
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e3d6d72a8d83b8af6a12c99b9b2fcebac19a2996
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q3_K_S.gguf
+      size: 29919294368
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 891b8acda7f9a7463b0e58d3aab749d2d3aba781
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q4_0.gguf
+      size: 38872249248
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 552a9eddc0c4a41a7c09bac7001b3a773ad7900f
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q4_K_M.gguf
+      size: 41422910368
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4b2a3f052ed929b0e119bf2386f36fdae8c7b74c
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q4_K_S.gguf
+      size: 39073575840
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ee18118a231e215857a44c3b4f8f730bf260b306
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q5_0.gguf
+      size: 47461397408
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5c2d6cca7c95b54fea4d3c243b491dc230cb8357
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q5_K_M.gguf
+      size: 48753767328
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - FashionGPT-70B-V1.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b96c5f2dd74b630db38e73cc8532fa2b36115b2
+      uri: https://huggingface.co/TheBloke/FashionGPT-70B-V1.1-GGUF/resolve/main/fashiongpt-70b-v1.1.Q5_K_S.gguf
+      size: 47461397408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,399 @@
+id: Mistral-7B-AEZAKMI-v1
+parent_id: adamo1139/Mistral-7B-AEZAKMI-v1
+name: Mistral 7B Aezakmi v1
+description: ""
+architecture: mistral
+licence: other
+object: model
+owned_by: Adam
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:adamo1139/Mistral-7B-AEZAKMI-v1
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0b9605ce2a4dd65952f497aa47ebf30a6f304d7
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q2_K.gguf
+      size: 3084034112
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c57d5085f4e8fea303a5e3bfecbf72bf206ba657
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q3_K_L.gguf
+      size: 3822960704
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eda7936736ee8cf41fc1d31c02cbd17fde0298b9
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q3_K_M.gguf
+      size: 3519922240
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 94cb12f13ec88da5abe9aaa296fd0713e20d76f0
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q3_K_S.gguf
+      size: 3165503552
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ed03cd772ec3d26f3db473c9dd09581c2e23b3c2
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q4_0.gguf
+      size: 4109852736
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d36b338411edcb0dff9baac20d00d132d1389a39
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q4_K_M.gguf
+      size: 4369375296
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c219f51261a510c1d93105c06cafc87c2982ddd4
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q4_K_S.gguf
+      size: 4141310016
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 963b038dcf7b28d77d59bb251da974ee97a51a65
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q5_0.gguf
+      size: 4998651968
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0fb87d4818502be7c1ce6dac64863be91e98b53
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q5_K_M.gguf
+      size: 5132345408
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 317263c45bd74ab21c766fe4237f24fee617f968
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q5_K_S.gguf
+      size: 4998651968
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3bf34b0fac28eb7ff5f22c275dae6eadf0053df6
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q6_K.gguf
+      size: 5943001152
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-AEZAKMI-v1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 50f277af666253ace38e4f7384a84d42a192bd85
+      uri: https://huggingface.co/TheBloke/Mistral-7B-AEZAKMI-v1-GGUF/resolve/main/mistral-7b-aezakmi-v1.Q8_0.gguf
+      size: 7696793664
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

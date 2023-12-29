@@ -1,0 +1,400 @@
+id: Pandora-v1-10.7B
+parent_id: janhq/Pandora-v1-10.7B
+name: Pandora V1 10.7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Jan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- base_model:janhq/Pandora-v1-10.7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eade539d468e67caa287d41a8fbbc94e0ca950d1
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q2_K.gguf
+      size: 4549952032
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f55c3b5bda5553d36ec9ae2a949db5ca34ae8663
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q3_K_L.gguf
+      size: 5651685920
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b93f0ba1a8e6ff4e4562f6b31f001df8e74b27b5
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q3_K_M.gguf
+      size: 5189263904
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c732407a5058d3220321e40106eea6a9825617d
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q3_K_S.gguf
+      size: 4665500192
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a590d3c010f56673c94bacb63399ba4b73c980ab
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q4_0.gguf
+      size: 6073319968
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c10594f46533b1e4625cb405648f2bd5d7252a6
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q4_K_M.gguf
+      size: 6462603808
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 52465d59f8009dd2aa1f97b39318f6c061437eaf
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q4_K_S.gguf
+      size: 6104777248
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9566d918a5615fe4ea32cb4b61f7fbaf7c791b8e
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q5_0.gguf
+      size: 7398326816
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c511d7904592b4c097d3a3c775d8863bd3fb2c30
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q5_K_M.gguf
+      size: 7598866976
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 07bb1b3cf4f60818ff30842344651c7834e61957
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q5_K_S.gguf
+      size: 7398326816
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 490088c0e566ff6cb44905b912b668a370b02ec7
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q6_K.gguf
+      size: 8806146592
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandora-v1-10.7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ebb91c57403a92170cdb47d3ad3a02b99dcb8266
+      uri: https://huggingface.co/TheBloke/Pandora-v1-10.7B-GGUF/resolve/main/pandora-v1-10.7b.Q8_0.gguf
+      size: 11405091360
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

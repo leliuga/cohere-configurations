@@ -1,0 +1,395 @@
+id: OrcaMaidXL-17B-32k
+parent_id: ddh0/OrcaMaidXL-17B-32k
+name: OrcaMaidXL 17B 32K
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: ddh0
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- base_model:ddh0/OrcaMaidXL-17B-32k
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 54
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c820f76edaed93fea4eb2a7104deaed827e2eecd
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q2_K.gguf
+      size: 7264477184
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: efd97a5a46c372089dadc366636f75f4e6bdb35d
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q3_K_L.gguf
+      size: 9283938304
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 243f8aefca23abef0a84e872772ac7aa0ed7112d
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q3_K_M.gguf
+      size: 8476534784
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7c7507a6ddadffb072de48d4df5ac8a60b6ba518
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q3_K_S.gguf
+      size: 7568656384
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e1b2a7b17a0cf4d08fa235560359155b7873ba99
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q4_0.gguf
+      size: 9865293824
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 19fec820641507d76623b537cd55c699e5427306
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q4_K_M.gguf
+      size: 10515451904
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a1dbb1a064e6c444a1ff50f23928184069cd64de
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q4_K_S.gguf
+      size: 9913790464
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3668091b0486672ed1be03a514d4cf875c874a97
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q5_0.gguf
+      size: 12026834944
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b93cfc8170f59942aa737a482fadbe2ff2484b9b
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q5_K_M.gguf
+      size: 12361764864
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ac21219c5ad1a8bff372b2730822aaee448c85b
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q5_K_S.gguf
+      size: 12026834944
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0276d57f5b9a06f58e739760555fe6e74dcc032c
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q6_K.gguf
+      size: 14323472384
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OrcaMaidXL-17B-32k/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "57"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 538d10608419643692242e229b1b463419c9fc62
+      uri: https://huggingface.co/TheBloke/OrcaMaidXL-17B-32k-GGUF/resolve/main/orcamaidxl-17b-32k.Q8_0.gguf
+      size: 18551138304
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

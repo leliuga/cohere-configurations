@@ -1,0 +1,282 @@
+id: Falkor-8x7B-MoE
+parent_id: perlthoughts/Falkor-8x7B-MoE
+name: Falkor 8X7B MoE
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Ray Hernandez
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:perlthoughts/Falkor-8x7B-MoE
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b50e4bb8325ddb75cabac7eea5378121b5942685
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q2_K.gguf
+      size: 15644970816
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b3350d8c8278699d86cdf82a66e8b382c0cea3aa
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q3_K_M.gguf
+      size: 20364291904
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c7c9863bd9390b395d6a3722052e6181e7a5ceb0
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q4_0.gguf
+      size: 26442469184
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 44648f52e62606d3e7c0c764c9cb3da05c71d8d1
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q4_K_M.gguf
+      size: 26442469184
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5da9c06dd418a2cda62858bd3e227d2e0769791
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q5_0.gguf
+      size: 32230215488
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a1f8497f7cac60a9b7d56a2d9a23e6cdc989fb6f
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q5_K_M.gguf
+      size: 32230215488
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4f743518c5421582def10eff6f3a6eb4f9d43915
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q6_K.gguf
+      size: 38379695936
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Falkor-8x7B-MoE/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a640bdf84f753e90ef9f096c484aac9ef24b86b4
+      uri: https://huggingface.co/TheBloke/Falkor-8x7B-MoE-GGUF/resolve/main/falkor-8x7b-moe.Q8_0.gguf
+      size: 49625198400
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<human>: {prompt}\n<bot>:\n"

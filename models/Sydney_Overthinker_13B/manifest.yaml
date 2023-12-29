@@ -1,0 +1,397 @@
+id: Sydney_Overthinker_13B
+parent_id: FPHam/Sydney_Overthinker_13b_HF
+name: Sydney Overthinker 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: FPHam
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llm
+- spellcheck
+- grammar
+- base_model:FPHam/Sydney_Overthinker_13b_HF
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a9d45bd33408429901045fed0030d1032df90e47
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q2_K.gguf
+      size: 5429348352
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c04df3be31e4c51e4d7339260f6c0637cb292813
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q3_K_L.gguf
+      size: 6929559552
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f08c074f341872263aa352c61cc72f9f2784d5cf
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q3_K_M.gguf
+      size: 6337769472
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ef5cd75c36aef83ee3075db5fc168dd0f16d2e01
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q3_K_S.gguf
+      size: 5658980352
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 708680305e6f779d80e6f945c1ac789314f6b304
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q4_0.gguf
+      size: 7365834752
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46d5b3c7b9da15e3f03dc813c8219300337dc12d
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q4_K_M.gguf
+      size: 7865956352
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 557be94666676fea9001409e9cc543a2d93e212e
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q4_K_S.gguf
+      size: 7414331392
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 132db11634278c9fc5b2dc30e7aad34161f26e32
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q5_0.gguf
+      size: 8972285952
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ced694fd2675b2754ae0e8b99ea37174011180d4
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q5_K_M.gguf
+      size: 9229924352
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 32d9c90e54a0653ca361e1c94d307f98d1b33c63
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q5_K_S.gguf
+      size: 8972285952
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 18cb25cf776611d0301910c623f2c307e1c61bf9
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q6_K.gguf
+      size: 10679140352
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Sydney_Overthinker_13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1499d3ba9a52d2a65da811bd616ad944a90a0294
+      uri: https://huggingface.co/TheBloke/Sydney_Overthinker_13B-GGUF/resolve/main/sydney_overthinker_13b.Q8_0.gguf
+      size: 13831319552
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n{prompt}\n\n### Response:\n"

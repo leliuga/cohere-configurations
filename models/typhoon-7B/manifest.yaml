@@ -1,0 +1,398 @@
+id: typhoon-7B
+parent_id: scb10x/typhoon-7b
+name: Typhoon 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: SCB 10X
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- pretrained
+- text-generation
+- th
+- arxiv:2312.13951
+- base_model:scb10x/typhoon-7b
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 35219
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e81cd4bc77be1727c2d9bfb7188e91280ecf14b2
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q2_K.gguf
+      size: 3099363136
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac6c10215cabbb888bd6fa28db187db886324f02
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q3_K_L.gguf
+      size: 3839628832
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 95c1b2629e08afc144e7d9a897d0b7c5fa29347a
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q3_K_M.gguf
+      size: 3536590368
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7def6d4fdb85268012da19a2f991288753641651
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q3_K_S.gguf
+      size: 3182171680
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 39d96e73f77616030764fc8e104ff8a407c41058
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q4_0.gguf
+      size: 4128272000
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a405e9583c718c9628e6857f47cc4fafb680970
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q4_K_M.gguf
+      size: 4387794560
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8afbbced5a9cade8a1d16159bd5d12dc5214ed63
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q4_K_S.gguf
+      size: 4159729280
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a8e2714422e981b69f039474a4067d964838c2c3
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q5_0.gguf
+      size: 5018719360
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7c1c12dbcd1e15acbf2c2923c160f2283b1affbc
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q5_K_M.gguf
+      size: 5152412800
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 436d6e658a0e4adb4bdd817c5d7e2b5e99c6ff37
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q5_K_S.gguf
+      size: 5018719360
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c91eaf2cfb4431797af187a5def02042d7daddd2
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q6_K.gguf
+      size: 5964819680
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - typhoon-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 20ed7e480dccf7e53ad6bc37366a946a12e43f59
+      uri: https://huggingface.co/TheBloke/typhoon-7B-GGUF/resolve/main/typhoon-7b.Q8_0.gguf
+      size: 7724998688
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,399 @@
+id: blossom-v3_1-yi-34b
+parent_id: Azure99/blossom-v3_1-yi-34b
+name: Blossom V3_1 Yi 34B
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Azure99
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- zh
+- en
+- dataset:Azure99/blossom-chat-v1
+- dataset:Azure99/blossom-math-v2
+- dataset:Azure99/blossom-wizard-v1
+- dataset:Azure99/blossom-orca-v1
+- base_model:Azure99/blossom-v3_1-yi-34b
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 31d133a3f55523915640b6bf93b7ecabb61cc766
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q2_K.gguf
+      size: 14555875296
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 50a3e20f757131d49730d892544730adeb1cac03
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q3_K_L.gguf
+      size: 18139445216
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e65284cfc5ec59a0e326d6df24eb5a3ba7e411a4
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q3_K_M.gguf
+      size: 16636573664
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4ebb7c48f1bba020ea3ac7b9919c9fc9a647cdff
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q3_K_S.gguf
+      size: 14960293856
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3f61f729f623bccfca39cd7803098a7e8c287222
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q4_0.gguf
+      size: 19466528736
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dd7053a4f956d56c6a9a309faaf667acf39d7995
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q4_K_M.gguf
+      size: 20658710496
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 45a9a9a64cb5aab20f8e0b6e5c8fb9a026850a38
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q4_K_S.gguf
+      size: 19543599072
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 66a493f27ba7c9db035e8236e743ad62b0492654
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q5_0.gguf
+      size: 23707690976
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 09cf8a2d25630420dd84bb7f845e859208840262
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q5_K_M.gguf
+      size: 24321845216
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 51b63c2ade53d7fcfa75ae30060957215b92a492
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q5_K_S.gguf
+      size: 23707690976
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: afdb3ff043761a8f5bc21020c3e1c86b30ac23b2
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q6_K.gguf
+      size: 28213925856
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - blossom-v3_1-yi-34b/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea0e921cc8504aa7f814df25f265061e2746d149
+      uri: https://huggingface.co/TheBloke/blossom-v3_1-yi-34b-GGUF/resolve/main/blossom-v3_1-yi-34b.Q8_0.gguf
+      size: 36542281696
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "A chat between a human and an artificial intelligence bot. The bot gives helpful, detailed, and polite answers to the human's questions.\n|Human|: {prompt}\n|Bot|: \n"

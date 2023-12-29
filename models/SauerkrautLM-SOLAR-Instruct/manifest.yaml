@@ -1,0 +1,402 @@
+id: SauerkrautLM-SOLAR-Instruct
+parent_id: VAGOsolutions/SauerkrautLM-SOLAR-Instruct
+name: SauerkrautLM SOLAR Instruct
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: VAGO solutions
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- finetune
+- dpo
+- Instruct
+- augmentation
+- german
+- text-generation
+- en
+- de
+- dataset:argilla/distilabel-math-preference-dpo
+- base_model:VAGOsolutions/SauerkrautLM-SOLAR-Instruct
+- license:cc-by-nc-4.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 31a7c8bd294e70bf61087159ff1a670ee87f3fe2
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q2_K.gguf
+      size: 4549016160
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0355e2773705e99a07a4ffec088c122bd07eaf8d
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q3_K_L.gguf
+      size: 5650750048
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: efae23c7f067132fbe085bccc252b622e9a71afd
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q3_K_M.gguf
+      size: 5188328032
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6400ad123db37aff5cf68722131400c1fb30f493
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q3_K_S.gguf
+      size: 4664564320
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f1e1b3ce8ef6363ff13e4087c566241b9406921b
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q4_0.gguf
+      size: 6072384096
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 414d444b0eecbbb410cf0d6229ab79bf56cc1f01
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q4_K_M.gguf
+      size: 6461667936
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d676c2853f846417a767977c0b495223284a965b
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q4_K_S.gguf
+      size: 6103841376
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cba4595636574977a922b14027283a3460954e51
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q5_0.gguf
+      size: 7397390944
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e759293bcb060e721fbdc158dc44a5b97c49312d
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q5_K_M.gguf
+      size: 7597931104
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b323c12c7af5f8bc5cee9624cd0bacbb368abcc
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q5_K_S.gguf
+      size: 7397390944
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6597d57b3c28a9d9917acc75501f9112e44a83a7
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q6_K.gguf
+      size: 8805210720
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SauerkrautLM-SOLAR-Instruct/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7cc684323e36639116853161737d9fdf45669061
+      uri: https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF/resolve/main/sauerkrautlm-solar-instruct.Q8_0.gguf
+      size: 11404155488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### User:\n{prompt}\n\n### Assistant:\n"

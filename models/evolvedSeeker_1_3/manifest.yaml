@@ -1,0 +1,399 @@
+id: evolvedSeeker_1_3
+parent_id: TokenBender/evolvedSeeker_1_3
+name: EvolvedSeeker 1.3
+description: ""
+architecture: llama
+licence: ""
+object: model
+owned_by: TokenBender
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- deepseek
+- generated_from_trainer
+- base_model:TokenBender/evolvedSeeker_1_3
+- model-index
+- region:us
+config:
+  vocab_size: 32256
+  context_size: 16384
+  embedding_size: 2048
+  attention_head_size: 16
+  key_value_head_size: 16
+  intermediate_size: 5504
+  hidden_layer_size: 24
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 41c84d418c4c3b2a1e3abb6e157327855561251b
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q2_K.gguf
+      size: 631706592
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 571ebf7a310760d744f177de3e3d522d959853b0
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q3_K_L.gguf
+      size: 744584160
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b22fb028c727c3e4929b18e0ca356e1c50f6816d
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q3_K_M.gguf
+      size: 704967648
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 62c07482a7463983735b39ab47b2b503c7f5ab3f
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q3_K_S.gguf
+      size: 658863072
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 421b8ac999ec687a388f8078cf77b5aaa547a1dc
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q4_0.gguf
+      size: 776066016
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 51b315903489b960d6c5ba6125aa0b38a72828b0
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q4_K_M.gguf
+      size: 873583584
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f872bd595f703a71adb2fe5e098d5ddc0302bd7a
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q4_K_S.gguf
+      size: 814797792
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 48169f61b0bf2c4401b2faef2b37818d9b623276
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q5_0.gguf
+      size: 936104928
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9929fbf7df2d4ae2daeffe3b8f06aaaabc6ad34c
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q5_K_M.gguf
+      size: 1001968608
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4e665fbebcba3cb3da7e09815d0ef8f915acbe66
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q5_K_S.gguf
+      size: 953013216
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 85ba5a01c04e4a1feba518ca758dda9ced4725aa
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q6_K.gguf
+      size: 1171665888
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - evolvedSeeker_1_3/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "27"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 510b38e75d57868e6eaa5c143d2ebca5a765a664
+      uri: https://huggingface.co/TheBloke/evolvedSeeker_1_3-GGUF/resolve/main/evolvedseeker_1_3.Q8_0.gguf
+      size: 1432220640
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

@@ -5,7 +5,7 @@ license_link: https://huggingface.co/microsoft/Orca-2-13b/blob/main/LICENSE
 pipeline_tag: text-generation
 ---
 
-# Nororcetacean-20b-10k
+# Norocetacean-20b-10k
 
 This is Jeb Carter's [Psyonic-Cetacean-20B](https://huggingface.co/jebcarter/psyonic-cetacean-20B), merged with Undi's [no_robots-alpaca LoRA](https://huggingface.co/Undi95/Llama2-13B-no_robots-alpaca-lora) and extended to `10240` context length via YaRN.
 

@@ -1,0 +1,338 @@
+id: Airoboros-L2-70B-2.1-Creative
+parent_id: jondurbin/airoboros-l2-70b-2.1-creative
+name: Airoboros L2 70B 2.1 Creative
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Jon Durbin
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:jondurbin/airoboros-l2-70b-2.1-creative
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0da37a2d3b4dc701a63344e425e215092154fffe
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q2_K.gguf
+      size: 29279253408
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ee200a2f1215f2b6da005ddd62ca2fb890c09be1
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q3_K_L.gguf
+      size: 36147835808
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 529fe0793d5cd4b39e370d3e25d5031e376b4b26
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q3_K_M.gguf
+      size: 33186657184
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5bb3240f44d17be0120484240d61ecba4f83f5a
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q3_K_S.gguf
+      size: 29919294368
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9881aa97ea0b87a66d70e18f8ac0f22926c2b894
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q4_0.gguf
+      size: 38872249248
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 45e5295a1484ab79f0cd997ad3f8c2bb243c49db
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q4_K_M.gguf
+      size: 41422910368
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d6ee766a3c1a44383417d1761e6fdfa0c9941c63
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q4_K_S.gguf
+      size: 39073575840
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 238fd5854fbd50f71a98c96ee860282b7306298e
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q5_0.gguf
+      size: 47461397408
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d31038246af7940aff4e557f63453f34844d8f1
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q5_K_M.gguf
+      size: 48753767328
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Airoboros-L2-70B-2.1-Creative/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4624b9d7ac12993b89f9c8a37fe2a402384517d
+      uri: https://huggingface.co/TheBloke/Airoboros-L2-70B-2.1-Creative-GGUF/resolve/main/airoboros-l2-70b-2.1-creative.Q5_K_S.gguf
+      size: 47461397408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "A chat.\nUSER: {prompt}\nASSISTANT: \n"

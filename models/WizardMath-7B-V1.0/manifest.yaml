@@ -1,0 +1,397 @@
+id: WizardMath-7B-V1.0
+parent_id: WizardLM/WizardMath-7b-V1.0
+name: WizardMath 7B V1.0
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: WizardLM
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- arxiv:2304.12244
+- arxiv:2306.08568
+- arxiv:2308.09583
+- base_model:WizardLM/WizardMath-7b-V1.0
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 2048
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f594f1941b5e3d41f8770f1d06298ef8c986ebbb
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q2_K.gguf
+      size: 2825945408
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 535c722a2bfa7a5d33237281c12f15c84e4b9c80
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q3_K_L.gguf
+      size: 3597116128
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 621271a54d155d29b8e1f9e45292f40b0aa32231
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q3_K_M.gguf
+      size: 3298009824
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 74bdf45e31b9e80bfa08e10e9a71298feed46c0f
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q3_K_S.gguf
+      size: 2948309728
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fab79db68a0bf01376c8b48d23dd99e31461dec2
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q4_0.gguf
+      size: 3825812736
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 54aeacc505e7194f9adf4de984b6e92f93556e85
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q4_K_M.gguf
+      size: 4081009920
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 00c6038e7efcd3cd683f3e3a77292d145dd8942a
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q4_K_S.gguf
+      size: 3856745728
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 249f1b5ba1b81936aead82f950746f0a72d91f4c
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q5_0.gguf
+      size: 4651697920
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 946918afb31216381b6add7e0ec82d1324f0dd46
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q5_K_M.gguf
+      size: 4783163136
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c105d2280b6d86bf1c4ebc9d93ca50cd10b6dc6
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q5_K_S.gguf
+      size: 4651697920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d435285764c4df2ac2ff19c94364a403b59eab2f
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q6_K.gguf
+      size: 5529200928
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardMath-7B-V1.0/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d308dc0bd5c527432cd80f28b9fbeadabdcf2c0f
+      uri: https://huggingface.co/TheBloke/WizardMath-7B-V1.0-GGUF/resolve/main/wizardmath-7b-v1.0.Q8_0.gguf
+      size: 7161098464
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n\n### Instruction:\n{prompt}\n\n\n### Response: Let's think step by step.\n"

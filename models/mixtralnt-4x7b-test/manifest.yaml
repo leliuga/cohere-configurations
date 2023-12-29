@@ -1,0 +1,282 @@
+id: mixtralnt-4x7b-test
+parent_id: chargoddard/mixtralnt-4x7b-test
+name: Mixtralnt 4X7B Test
+description: ""
+architecture: mixtral
+licence: cc-by-nc-4.0
+object: model
+owned_by: Charles Goddard
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:chargoddard/mixtralnt-4x7b-test
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1cc94685c3cd54c2b6f48e9b5a0669dc6a80a25e
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q2_K.gguf
+      size: 8060708672
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8173d63a5a590f3084eb3e390827070c417c7636
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q3_K_M.gguf
+      size: 10522445632
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2322dd8c57724823066dc5d89f230717899d5eb8
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q4_0.gguf
+      size: 13622667072
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c3a8b797fe8850bca29a4f1d1d6cf7d87494aafd
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q4_K_M.gguf
+      size: 13639968576
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 82141abc1d2aac2ea755ef0e6563c3a334b93a46
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q5_0.gguf
+      size: 16625395520
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46481e65b2fe6eb8671ea0e3048f166c30a88758
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q5_K_M.gguf
+      size: 16634308416
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 838e2d06a8d63bb1f8a61568d92e3dede9184830
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q6_K.gguf
+      size: 19815794496
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - mixtralnt-4x7b-test/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 53d67cf7299b1bf385b5f92ec937a0255574f48b
+      uri: https://huggingface.co/TheBloke/mixtralnt-4x7b-test-GGUF/resolve/main/mixtralnt-4x7b-test.Q8_0.gguf
+      size: 25665324864
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

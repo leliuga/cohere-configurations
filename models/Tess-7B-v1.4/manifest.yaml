@@ -1,0 +1,394 @@
+id: Tess-7B-v1.4
+parent_id: migtissera/Tess-7B-v1.4
+name: Tess 7B V1.4
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Migel Tissera
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:migtissera/Tess-7B-v1.4
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 050edba8604daeadf6ede2a028cfcc63e131f041
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q2_K.gguf
+      size: 3083097856
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 74e1f6e6821ff4ee00210a4142dc30672e544843
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q3_K_L.gguf
+      size: 3822024448
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a7a66148cbe49ff8cda5a98176d0350438350e4d
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q3_K_M.gguf
+      size: 3518985984
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b157528db1fa01659b5a490a4eb2d0cc64ba71b
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q3_K_S.gguf
+      size: 3164567296
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 20fac6f4a32dae7ce28f651b29b3457cc0548c36
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q4_0.gguf
+      size: 4108916480
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69aff113af3a4662c9180f17463c2c471446f1ce
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q4_K_M.gguf
+      size: 4368439040
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5439bfac51f64b0ad9318762c40568277d6ea574
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q4_K_S.gguf
+      size: 4140373760
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 379b626ade799dfe4574824340dd1259ecc7b796
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q5_0.gguf
+      size: 4997715712
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f45a3edfdf215ffbe8a156e55d2708269ba4ccff
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q5_K_M.gguf
+      size: 5131409152
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3758a4a761f30bb75e3da21abcaa373fc7b81e49
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q5_K_S.gguf
+      size: 4997715712
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a65e287d270ec858dd4fa23ed6daee608c217472
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q6_K.gguf
+      size: 5942064896
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tess-7B-v1.4/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ba267398b6d994cd4e4be6c8576751b055a4cc53
+      uri: https://huggingface.co/TheBloke/Tess-7B-v1.4-GGUF/resolve/main/tess-7b-v1.4.Q8_0.gguf
+      size: 7695857408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "SYSTEM: {system_message}\nUSER: {prompt}\nASSISTANT:\n"

@@ -1,0 +1,394 @@
+id: Yi-6B-200K
+parent_id: 01-ai/Yi-6B-200K
+name: Yi 6B 200K
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: 01-ai
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- base_model:01-ai/Yi-6B-200K
+- license:other
+- has_space
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 4
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q2_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ecad5db81e5698160e47099e5cba6820728d41bd
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q2_K.gguf
+      size: 2621230400
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q3_K_L
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5eb7d9bde50758b46b0847bc1091b9827e6e870c
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q3_K_L.gguf
+      size: 3236891968
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q3_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3be55bdc9647c77afeb8e535db99004b7c37c7db
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q3_K_M.gguf
+      size: 2992835904
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q3_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dc871111b5f654b7a71d0810b55c1fa5fb834d8d
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q3_K_S.gguf
+      size: 2709196096
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q4_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ff24f5ce70a53b45a6f0ec2db82a14e9003be244
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q4_0.gguf
+      size: 3479326016
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q4_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9666a18ead9d8e86c06665243400039033fe1f70
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q4_K_M.gguf
+      size: 3673967936
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q4_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a8d8eb1d1db665721b522c8beb34cb29777d8759
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q4_K_S.gguf
+      size: 3502918976
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q5_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5df090400119bad89169380430d32b38d77fcc43
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q5_0.gguf
+      size: 4204154176
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q5_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 63cb14c7a4d7a403f4173f06f5f17acbc20d340b
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q5_K_M.gguf
+      size: 4304424256
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q5_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 02dcd3bb674eca908aac6ba00e3c04ff9470bc8b
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q5_K_S.gguf
+      size: 4204154176
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q6_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fdcaf8c39f5f6bacb5c4434ac02dbd5420023688
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q6_K.gguf
+      size: 4974284096
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-6B-200K/Q8_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 998d9d6085adb418a2d626d95f2dbbadf4054e8c
+      uri: https://huggingface.co/TheBloke/Yi-6B-200K-GGUF/resolve/main/yi-6b-200k.Q8_0.gguf
+      size: 6442126656
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

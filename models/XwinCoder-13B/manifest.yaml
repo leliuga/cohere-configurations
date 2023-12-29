@@ -1,0 +1,394 @@
+id: XwinCoder-13B
+parent_id: Xwin-LM/XwinCoder-13B
+name: XwinCoder 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Xwin-LM
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Xwin-LM/XwinCoder-13B
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 16384
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7aaf509486654dfb8a38190c6efedf7e449ad3b0
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q2_K.gguf
+      size: 5429348416
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 61d8e88ecbac7c9445dc78356f48276497bf9cd9
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q3_K_L.gguf
+      size: 6929559616
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 33ab18c6dcd4568b237c11abbf7e3aed47ff0a4a
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q3_K_M.gguf
+      size: 6337769536
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: abe8ed7d170ba2152f7c5c1cd3c03925ed3b80b0
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q3_K_S.gguf
+      size: 5658980416
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 00377bb4c71f731259484a72da20fccc1f1332f0
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q4_0.gguf
+      size: 7365834816
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c910942d16c5acc4b94a4aac6ffc1b1102ca730
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q4_K_M.gguf
+      size: 7865956416
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f356b8b7961968c7470feddbfef9e50abdabd5d9
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q4_K_S.gguf
+      size: 7414331456
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0184385988c94cdb71268e1d47bae38db4f65667
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q5_0.gguf
+      size: 8972286016
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 08123efcd35dd7ebd3ece04dbe7358b11601c8cc
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q5_K_M.gguf
+      size: 9229924416
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 504fb708483095c01cf884df646ce289d64eaf19
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q5_K_S.gguf
+      size: 8972286016
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25bdd67f00b5da2757d169420f7e9cf51dc87c20
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q6_K.gguf
+      size: 10679140416
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - XwinCoder-13B/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 202af302b809b33af860067d8b056c5f458d671c
+      uri: https://huggingface.co/TheBloke/XwinCoder-13B-GGUF/resolve/main/xwincoder-13b.Q8_0.gguf
+      size: 13831319616
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<system>: You are an AI coding assistant that helps people with programming. Write a response that appropriately completes the user's request.\n<user>: {prompt}\n<AI>: \n"

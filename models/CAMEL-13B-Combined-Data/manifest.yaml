@@ -1,0 +1,395 @@
+id: CAMEL-13B-Combined-Data
+parent_id: camel-ai/CAMEL-13B-Combined-Data
+name: CAMEL 13B Combined Data
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: CAMEL
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- arxiv:2303.17760
+- base_model:camel-ai/CAMEL-13B-Combined-Data
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 0
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 513c8422f4e09e910230715eece34e76ed43b03f
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q2_K.gguf
+      size: 5429348256
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c03e4dc32ed0cdc79f8d2b4557bc3d9604d4f0a2
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q3_K_L.gguf
+      size: 6929559456
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e4255b9f8553ee947e648154a21759a3a0be7b3d
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q3_K_M.gguf
+      size: 6337769376
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c60fd31a5ce2e1553d32ef4efb5b58976a65a4d5
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q3_K_S.gguf
+      size: 5658980256
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c5f2507a68123bfb1a2321e2f37e3bc362ac623
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q4_0.gguf
+      size: 7365834656
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 63f9eff20c29f0d4bdc649f960635a44e5653590
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q4_K_M.gguf
+      size: 7865956256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 80b3f870a53bd6b90b024e323f7243083ba15f9f
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q4_K_S.gguf
+      size: 7414331296
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4c45759f49ef92851bce6ee63e6e6cec59fb83f5
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q5_0.gguf
+      size: 8972285856
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 86a789c80e8ffe96e625a1af68c7536f877c2b92
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q5_K_M.gguf
+      size: 9229924256
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4e3f83a47561e46f2e23a9421f246ea4b736d23
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q5_K_S.gguf
+      size: 8972285856
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b926ee2c5e57d25dac8d4db0a1a59b1932947fbb
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q6_K.gguf
+      size: 10679140256
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CAMEL-13B-Combined-Data/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c579c90ea08011bf911bea7e23782eee2d8bf188
+      uri: https://huggingface.co/TheBloke/CAMEL-13B-Combined-Data-GGUF/resolve/main/camel-13b-combined.Q8_0.gguf
+      size: 13831319456
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

@@ -1,0 +1,394 @@
+id: speechless-mistral-7B-dare-0.85
+parent_id: speechlessai/speechless-mistral-7b-dare-0.85
+name: Speechless Mistral 7B Dare 0.85
+description: ""
+architecture: mistral
+licence: llama2
+object: model
+owned_by: Speechless.AI
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:speechlessai/speechless-mistral-7b-dare-0.85
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1e3a1f8bd8fa6fa553f2e3a8c0de05942212f118
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q2_K.gguf
+      size: 3083097792
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f360c26620a99c57dc5edd990b431c63b7528312
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q3_K_L.gguf
+      size: 3822024384
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d6596c330f3293c3cafb6475dad32b941fc5fe12
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q3_K_M.gguf
+      size: 3518985920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea44c96d7063f3e2dc1d5675d6cb8ac776b844a7
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q3_K_S.gguf
+      size: 3164567232
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e7c694778450268582e755419a20ec4ded423bf4
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q4_0.gguf
+      size: 4108916416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c5d227cc1b83f142a11a03e8c348f4f8427fd9dd
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q4_K_M.gguf
+      size: 4368438976
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab027ef8a772457df0bec31df98b7d836901bcd4
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q4_K_S.gguf
+      size: 4140373696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e2e265ecff72ec8b1e4ea70f5cb04271d3b7d675
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q5_0.gguf
+      size: 4997715648
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7cc9e5bb1ba2adae6095d3b6e69b78fbee5f9ff5
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q5_K_M.gguf
+      size: 5131409088
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 859d8e8546614cdb1ba75dade0535cc005cca86b
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q5_K_S.gguf
+      size: 4997715648
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5ae694458b55060b09f6ae252ac76878bf0ac32d
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q6_K.gguf
+      size: 5942064832
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-mistral-7B-dare-0.85/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 52160d62d43619542203a141da45b16d4251d9dc
+      uri: https://huggingface.co/TheBloke/speechless-mistral-7B-dare-0.85-GGUF/resolve/main/speechless-mistral-7b-dare-0.85.Q8_0.gguf
+      size: 7695857344
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

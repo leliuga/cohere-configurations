@@ -4,10 +4,11 @@ language:
 datasets:
 - PocketDoc/Floyd-Text-Adventures
 - PocketDoc/Choose-Your-Story-Long-Text-Adventures
-- CheshireAI/guanaco-unchained
 - openchat/openchat_sharegpt4_dataset
 - 64bits/lima_vicuna_format
 - gsm8k
+- PocketDoc/Wizard-Vicuna-Refined
+- PocketDoc/Guanaco-Unchained-Refined
 license: apache-2.0
 base_model: mistralai/Mistral-7B-v0.1
 ---

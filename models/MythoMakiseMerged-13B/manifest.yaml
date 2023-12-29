@@ -1,0 +1,394 @@
+id: MythoMakiseMerged-13B
+parent_id: Heralax/MythoMakiseMerged-13b
+name: MythoMakiseMerged 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Evan Armstrong
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Heralax/MythoMakiseMerged-13b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 392d51e67b8fbe90d6515669567037aafa74deb8
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q2_K.gguf
+      size: 5429348224
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d209f32104071374c0e0d755065c4011494c4218
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q3_K_L.gguf
+      size: 6929559424
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3d5efd28057610dc24dc0f30f37d8b8b851f8b38
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q3_K_M.gguf
+      size: 6337769344
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9e03f4268f74b0edbbe77ac20867d53ebccb87ac
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q3_K_S.gguf
+      size: 5658980224
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29f8ce694b6742f7a4df91aae19e6adc14105d4e
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q4_0.gguf
+      size: 7365834624
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 77415a0dc1c333970fd1dd036f70b10c6a0b0f07
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q4_K_M.gguf
+      size: 7865956224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 783a49705aa6ce08d0c3d0db0b121815c481289e
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q4_K_S.gguf
+      size: 7414331264
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: beb023067bcfe5f44cfa3900a1cb5a80ac8333d5
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q5_0.gguf
+      size: 8972285824
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c4e14ad338664a9ae29b632e07bbf674c4a0e8ff
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q5_K_M.gguf
+      size: 9229924224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c9f67824409dda3b1f3b1555ef0c6cb0dda5b6d
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q5_K_S.gguf
+      size: 8972285824
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 876baedb6cf927daef154f915f6eca4943fd27c0
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q6_K.gguf
+      size: 10679140224
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoMakiseMerged-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: db1553588bb714b331b4ca7c415ae2ab9082e9c0
+      uri: https://huggingface.co/TheBloke/MythoMakiseMerged-13B-GGUF/resolve/main/mythomakisemerged-13b.Q8_0.gguf
+      size: 13831319424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "## {{{{charname}}}}:\n- You're \"{{{{charname}}}}\" in this never-ending roleplay with \"{{{{user}}}}\".\n### Input:\n{prompt}\n\n### Response:\n(OOC) Understood. I will take this info into account for the roleplay. (end OOC)\n\n### New Roleplay:\n### Instruction:\n#### {{{{char}}}}:\nwhatever the char says, this is the chat history\n#### {{{{user}}}}:\nwhatever the user says, this is the chat history\n... repeated some number of times ...\n### Response 2 paragraphs, engaging, natural, authentic, descriptive, creative):\n#### {{{{char}}}}:\n"

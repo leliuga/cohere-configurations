@@ -1,0 +1,395 @@
+id: GPlatty-30B
+parent_id: lilloukas/GPlatty-30B
+name: Gplatty 30B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: lilloukas
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- base_model:lilloukas/GPlatty-30B
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 6656
+  attention_head_size: 52
+  key_value_head_size: 0
+  intermediate_size: 17920
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d1e8191f3deab6ae8ed209e9a7f6467d744582b6
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q2_K.gguf
+      size: 13502545312
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6e3e3fd5ea65d65ab3d595a389d1695fe48e2041
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q3_K_L.gguf
+      size: 17279758752
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d8a634344f543bd06c532506bfacfc65e219d2f0
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q3_K_M.gguf
+      size: 15761551776
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 53fecbbfe0f9af6891bb57f268f9061838a6a0b4
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q3_K_S.gguf
+      size: 14064112032
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4286353954242f5960c246c6b56f6e62bd5e6d00
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q4_0.gguf
+      size: 18355967392
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 79332e5040d05f3bf320cd84b8f14598c985eaa1
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q4_K_M.gguf
+      size: 19621139872
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6e14cd4907552cdad6179aae624261c566257549
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q4_K_S.gguf
+      size: 18437756320
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fdbcf7d8699b56ae600d167247eea1664671ecc4
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q5_0.gguf
+      size: 22395360672
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b1791b60a68d934cb0975f2444c51e78b5f929a
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q5_K_M.gguf
+      size: 23047116192
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 213cd1c164f39d3779e7d520b81633359756a5e4
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q5_K_S.gguf
+      size: 22395360672
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25dce303ac540ae8d871cca1399fd1308ba47773
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q6_K.gguf
+      size: 26687216032
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GPlatty-30B/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dd3618e445c96fb5770a707011a218a723a533be
+      uri: https://huggingface.co/TheBloke/GPlatty-30B-GGUF/resolve/main/gplatty-30b.Q8_0.gguf
+      size: 34565124512
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

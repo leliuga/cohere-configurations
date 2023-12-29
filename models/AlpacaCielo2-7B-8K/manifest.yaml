@@ -1,0 +1,394 @@
+id: AlpacaCielo2-7B-8K
+parent_id: totally-not-an-llm/AlpacaCielo2-7b-8k
+name: AlpacaCielo2 7B 8K
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: totally-not-an-llm
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:totally-not-an-llm/AlpacaCielo2-7b-8k
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2d7051fdf5db60cb391ac19dfb352b03204847d4
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q2_K.gguf
+      size: 2825940736
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7c4c7733d20ccd61ee010346a9ae3832c09a0e03
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q3_K_L.gguf
+      size: 3597111040
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e0aa43e3077e99291201a7b91041afab42b803b1
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q3_K_M.gguf
+      size: 3298004736
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: afba7aedeb0ed11bd7719c870bbf4c01722049da
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q3_K_S.gguf
+      size: 2948304640
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 179c8edef756c8247bacb183e173db825b655508
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q4_0.gguf
+      size: 3825807104
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0e97cbd56730f6a0a86135d948fc17e430d8e194
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q4_K_M.gguf
+      size: 4081004288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 616abfc1d7628321db7d5d921692266357a12a58
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q4_K_S.gguf
+      size: 3856740096
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6f93b6a8701a0e20067da2fd91b941a8522d932d
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q5_0.gguf
+      size: 4651691776
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a026a2206a2c3a54bbb4732b63d025011cdac2a6
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q5_K_M.gguf
+      size: 4783156992
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bf7da30c68d16bf4557a836fbcc3b8e3fdd8c90c
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q5_K_S.gguf
+      size: 4651691776
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f8cfe92570ca18245277a327ca8474864ebd1fce
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q6_K.gguf
+      size: 5529194240
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - AlpacaCielo2-7B-8K/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d88e52ce23d9b8730e9498abefb770451a90da13
+      uri: https://huggingface.co/TheBloke/AlpacaCielo2-7B-8K-GGUF/resolve/main/alpacacielo2-7b-8k.Q8_0.gguf
+      size: 7161089792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Sytem: {system_message}\n### Human: {prompt}\n### Assistant:\n"

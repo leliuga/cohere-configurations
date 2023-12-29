@@ -1,0 +1,421 @@
+id: Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1
+parent_id: NickyNicky/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1
+name: Mistral 7B OpenOrca oasst Top1 2023 08 25 v1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Nicky
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- bg
+- ca
+- cs
+- da
+- de
+- en
+- es
+- fr
+- hr
+- hu
+- it
+- nl
+- pl
+- pt
+- ro
+- ru
+- sl
+- sr
+- sv
+- uk
+- dataset:Open-Orca/OpenOrca
+- dataset:OpenAssistant/oasst_top1_2023-08-25
+- base_model:NickyNicky/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f214d900bc41deaee1462d0c17bcfa1c4cdced43
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q2_K.gguf
+      size: 3083107360
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e45d8857f4150b4cf7e85a3124aac0f1664b389
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q3_K_L.gguf
+      size: 3822034784
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 263dbf05694331d829115af5910d4d6dcafa7d5b
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q3_K_M.gguf
+      size: 3518996320
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: afde9fd670a9cfb6f039445d0f4764d07946d0f7
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q3_K_S.gguf
+      size: 3164577632
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25b4b806a8ed0cf917f2074a3452cc29fd10a595
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q4_0.gguf
+      size: 4108927904
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 39f189a010ba9eac95d951a33dd08bea6571f827
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q4_K_M.gguf
+      size: 4368450464
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f925a2ed395a75fd74e73f17a7ab9613b77dc75e
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q4_K_S.gguf
+      size: 4140385184
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6476c06a82511a1a6db7411bd2712e75477eaa47
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q5_0.gguf
+      size: 4997728160
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d66482ee3fb90fd295a73e02a924f84d2b6e43d
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q5_K_M.gguf
+      size: 5131421600
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f04f7018b1a1991b7ea93bdefebfd93d5cfa6476
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q5_K_S.gguf
+      size: 4997728160
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 337faaa60469a7e75b98f92253327924e580fe63
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q6_K.gguf
+      size: 5942078432
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fc3d8c4978ec28cfe4cb38a3c8d4c284d5c9adc7
+      uri: https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1-GGUF/resolve/main/mistral-7b-openorca-oasst_top1_2023-08-25-v1.Q8_0.gguf
+      size: 7695874912
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

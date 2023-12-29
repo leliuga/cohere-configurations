@@ -1,0 +1,398 @@
+id: Yarn-Mistral-7B-64k
+parent_id: NousResearch/Yarn-Mistral-7b-64k
+name: Yarn Mistral 7B 64K
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: NousResearch
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- dataset:emozilla/yarn-train-tokenized-16k-mistral
+- arxiv:2309.00071
+- base_model:NousResearch/Yarn-Mistral-7b-64k
+- license:apache-2.0
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 134ed1bf276fec7a3aa55b6920a90afc614db9d7
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q2_K.gguf
+      size: 3083097920
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 170c402b2bf28f44c6500a1be09efa706d52f538
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q3_K_L.gguf
+      size: 3822024512
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 91cd856a50f24ed5a6261b11af4a1541bf1ce2b5
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q3_K_M.gguf
+      size: 3518986048
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1598c4f17eea087cefba7c8ba10ed1f4519f2b45
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q3_K_S.gguf
+      size: 3164567360
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 70f7945d3098172fb48e4b410e15d4abaafee276
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q4_0.gguf
+      size: 4108916544
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3f78ff3a97d46c1ddc07261270f65d421d67cfe1
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q4_K_M.gguf
+      size: 4368439104
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9252e1e1f847908f05522bc91a1599e08ec67849
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q4_K_S.gguf
+      size: 4140373824
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 92dec23f3a7d5cf088714149deca58539aba604f
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q5_0.gguf
+      size: 4997715776
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4cadfcb7d3cacf5969fac3f0168af4150080a52d
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q5_K_M.gguf
+      size: 5131409216
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b7cb633815d8e9df8a03daa2cfe17eb2b7e07769
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q5_K_S.gguf
+      size: 4997715776
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c57b4fcb893cb2a56058d86b213faa3df9382489
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q6_K.gguf
+      size: 5942064960
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yarn-Mistral-7B-64k/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd1238da50ced2052bf7af6392729bbd262315ef
+      uri: https://huggingface.co/TheBloke/Yarn-Mistral-7B-64k-GGUF/resolve/main/yarn-mistral-7b-64k.Q8_0.gguf
+      size: 7695857472
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

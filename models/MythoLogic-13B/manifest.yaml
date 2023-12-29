@@ -1,0 +1,395 @@
+id: MythoLogic-13B
+parent_id: Gryphe/MythoLogic-13b
+name: MythoLogic 13B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Gryphe Padar
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- base_model:Gryphe/MythoLogic-13b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 0
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: da525c0d2cd7849bb48b01d1a67923f595c6e260
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q2_K.gguf
+      size: 5429348256
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 86e8423ad8c82d07d9bc623690a2363f0bb92dda
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q3_K_L.gguf
+      size: 6929559456
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 72830b2479d7da54c95f360455521b0f1feefcbe
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q3_K_M.gguf
+      size: 6337769376
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fcf1cf94c92b5e053cb6424bdd7e263a326deb1b
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q3_K_S.gguf
+      size: 5658980256
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0dc859803082c5936978ab8fdd6fa40bb23abdfc
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q4_0.gguf
+      size: 7365834656
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9f1681d715e99136dc9f37b9c6d673173b9896c1
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q4_K_M.gguf
+      size: 7865956256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c28e93b6c7202689be819a04b0c75c64cc926142
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q4_K_S.gguf
+      size: 7414331296
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ad8e01edb45ec772aaf8c722cbd1e2b263b6ceed
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q5_0.gguf
+      size: 8972285856
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fc6191a85ac3fac95e518ba233ad21ffb01ab873
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q5_K_M.gguf
+      size: 9229924256
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c7218729a24976e51d9ae9bcb15723e0928a942d
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q5_K_S.gguf
+      size: 8972285856
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d07d0c377ddfe1eedac5457e91aba3c680f7cf5
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q6_K.gguf
+      size: 10679140256
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MythoLogic-13B/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b7dd7aec7547554f98ae39d0ff319382029e67b9
+      uri: https://huggingface.co/TheBloke/MythoLogic-13B-GGUF/resolve/main/mythologic-13b.Q8_0.gguf
+      size: 13831319456
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

@@ -1,0 +1,400 @@
+id: LosslessMegaCoder-Llama2-7B-Mini
+parent_id: rombodawg/LosslessMegaCoder-llama2-7b-mini
+name: Lossless MegaCoder Llama2 7B Mini
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Rombo Dawg
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- dataset:rombodawg/LosslessMegaCodeTrainingV2_1m_Evol_Uncensored
+- base_model:rombodawg/LosslessMegaCoder-llama2-7b-mini
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32007
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4e146dde7eaf423bf74051f4173e76f998c513f
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q2_K.gguf
+      size: 2825973792
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d8b1d04218ed0877ad279dae4ce125a0eee1daca
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q3_K_L.gguf
+      size: 3597147008
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 38ebde60ddd6225d4a4e67d31385b7be1c616131
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q3_K_M.gguf
+      size: 3298040704
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 180f2af6595bef6dbf3e09db461cf7fcb24de333
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q3_K_S.gguf
+      size: 2948340608
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8a3d86a1e4ffeb5f3118b03f221e0f0068d987f4
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q4_0.gguf
+      size: 3825846880
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 97892dcea1cbcb1e851422eea831b4a4405d6ad8
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q4_K_M.gguf
+      size: 4081044064
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5f9ca13b7b989a380dfcef7492208fa5ba56cdf
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q4_K_S.gguf
+      size: 3856779872
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 37f58a2cacd2728fb7c6a0013a0cf8cadb6f3077
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q5_0.gguf
+      size: 4651735136
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 87697fba9221586ddec6b3b12cab61c67b130f54
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q5_K_M.gguf
+      size: 4783200352
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 08f49346205631c6a7bb2dacf908f1c0952572d1
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q5_K_S.gguf
+      size: 4651735136
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cfd1b0aaefd8b64f5d045efd5ab76e795bf6d1d8
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q6_K.gguf
+      size: 5529241408
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LosslessMegaCoder-Llama2-7B-Mini/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2590a2ad802ede71fe03904fd8a5cb648c38aae0
+      uri: https://huggingface.co/TheBloke/LosslessMegaCoder-Llama2-7B-Mini-GGUF/resolve/main/losslessmegacoder-llama2-7b-mini.Q8_0.gguf
+      size: 7161150848
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

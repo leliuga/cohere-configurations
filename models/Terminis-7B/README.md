@@ -3,7 +3,8 @@ license: apache-2.0
 language:
 - en
 pipeline_tag: text-generation
-
+tags:
+- merge
 ---
 
 ## Terminis-7B
@@ -25,4 +26,3 @@ Detailed results can be found [Coming soon]()
 | TruthfulQA (0-shot)   | Coming soon               |
 | Winogrande (5-shot)   | Coming soon               |
 | GSM8K (5-shot)        | Coming soon               |
-

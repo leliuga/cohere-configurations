@@ -1,0 +1,394 @@
+id: Iambe-Storyteller-20B
+parent_id: athirdpath/Iambe-Storyteller-20b
+name: Iambe Storyteller 20B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Raven
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:athirdpath/Iambe-Storyteller-20b
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4bb64aa867b417285aa64c4bf370b703d9c4fd9e
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q2_K.gguf
+      size: 8311592480
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 21598c9633496d3cd7d02205033503d3a17253ac
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q3_K_L.gguf
+      size: 10627767840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6ee661e05eae4f43ad5c88a06afbd562b85110ed
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q3_K_M.gguf
+      size: 9697156640
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4bb960486651cfc855fa87329bf76d74500bc9f8
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q3_K_S.gguf
+      size: 8658370080
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c7176ee138215bfafd6b75a88312b9bc9aa63017
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q4_0.gguf
+      size: 11292026400
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d84446ef8a55db13ab84e3dfdc199b5f3180fa0a
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q4_K_M.gguf
+      size: 12042208800
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9877a14e2f126bc21d3dbea8bb189390d0908da4
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q4_K_S.gguf
+      size: 11340523040
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e1fd955c9854a6e76180f594ea45845be3620a3b
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q5_0.gguf
+      size: 13770761760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ad24518957b1900764a0965ac8848be9cc9c1e4
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q5_K_M.gguf
+      size: 14157219360
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fe4aa1518271af7116caed8a85ddb79e26b71198
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q5_K_S.gguf
+      size: 13770761760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a6c8098fb4c342f5ef802c8790869200d345e1c
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q6_K.gguf
+      size: 16404418080
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-Storyteller-20B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f201f81e3a3256983daf4ce93d7085615aab977b
+      uri: https://huggingface.co/TheBloke/Iambe-Storyteller-20B-GGUF/resolve/main/iambe-storyteller-20b.Q8_0.gguf
+      size: 21246647840
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

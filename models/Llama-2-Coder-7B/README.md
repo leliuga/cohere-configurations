@@ -5,7 +5,7 @@ tags:
 - coding
 - llama
 model-index:
-- name: FalCoder
+- name: Llama-2-coder-7b
   results: []
 license: apache-2.0
 language:

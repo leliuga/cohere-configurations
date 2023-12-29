@@ -1,0 +1,404 @@
+id: speechless-codellama-34b-v2.0
+parent_id: uukuguy/speechless-codellama-34b-v2.0
+name: Speechless Codellama 34B v2.0
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Jiangwen Su
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama-2
+- code
+- text-generation
+- en
+- dataset:jondurbin/airoboros-2.2
+- dataset:Open-Orca/OpenOrca
+- dataset:garage-bAInd/Open-Platypus
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- arxiv:2308.12950
+- base_model:uukuguy/speechless-codellama-34b-v2.0
+- license:llama2
+- model-index
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5b01ba9bffa5bfba2a17b303c45dda0ffaef6db6
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q2_K.gguf
+      size: 14210674848
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60c4c4a476cf75539bf09cca5e8e8c2d0594dac0
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q3_K_L.gguf
+      size: 17771524256
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 90a8e030a87a2e233d75e6b760ae158b58ae23b8
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q3_K_M.gguf
+      size: 16283594912
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cd4fa7186544232bc5acd55f8b0d8fe1602a2463
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q3_K_S.gguf
+      size: 14605349024
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eb94bf58bc148d244e17fc57af361973b5e146c3
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q4_0.gguf
+      size: 19052048544
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0b482e0c89bd68977fcbfe20ecfbb35811df4609
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q4_K_M.gguf
+      size: 20219900064
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ae7c973a6b072cbaea82e4df295b91db62d061f7
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q4_K_S.gguf
+      size: 19146420384
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c5dae4d18e6bf2e580ae77f26c30a38fd7f6fa27
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q5_0.gguf
+      size: 23237177504
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5b3dd37408bffed6260bb4c72309acd3d5ccb72f
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q5_K_M.gguf
+      size: 23838797984
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 05b75817175eac34b6c84f7304cc858695316013
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q5_K_S.gguf
+      size: 23237177504
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dcd3ed99be9c2ab9edd41b7c057bff5cfd9716c1
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q6_K.gguf
+      size: 27683877024
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - speechless-codellama-34b-v2.0/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e942deb34b726cf127adb13ee53ac54ffe90f062
+      uri: https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF/resolve/main/speechless-codellama-34b-v2.0.Q8_0.gguf
+      size: 35856052384
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

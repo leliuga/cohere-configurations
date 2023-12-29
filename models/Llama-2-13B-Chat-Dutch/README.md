@@ -26,16 +26,14 @@ See the original [meta-llama/Llama-2-13b-hf](https://huggingface.co/meta-llama/L
 
 If you use this model or refer to it, please use the following citation:
 
-Bram Vanroy. (2023). Llama v2 13b: Finetuned on Dutch Conversational Data. Hugging Face. https://doi.org/10.57967/HF/1018
+Vanroy, B. (2023). *Language Resources for Dutch Large Language Modelling*. [https://arxiv.org/abs/2312.12852](https://arxiv.org/abs/2312.12852)
 
-```bibtex
-@misc{https://doi.org/10.57967/hf/1018,
-  doi = {10.57967/HF/1018},
-  url = {https://huggingface.co/BramVanroy/Llama-2-13b-chat-dutch},
-  author = {{Bram Vanroy}},
-  title = {{Llama} v2 13b: {Finetuned} on {Dutch} Conversational Data},
-  publisher = {{Hugging} {Face}},
-  year = {2023}
+```bibtext
+@article{vanroy2023language,
+  title={Language Resources for {Dutch} Large Language Modelling},
+  author={Vanroy, Bram},
+  journal={arXiv preprint arXiv:2312.12852},
+  year={2023}
 }
 ```
 

@@ -1,0 +1,399 @@
+id: Nyxene-v3-11B
+parent_id: beberik/Nyxene-v3-11B
+name: Nyxene v3 11B
+description: ""
+architecture: mistral
+licence: cc-by-nc-4.0
+object: model
+owned_by: Bebebe
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:beberik/Nyxene-v3-11B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4416d575c360137d4eb2b696ce879d2b2dde1ad5
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q2_K.gguf
+      size: 4549015584
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 211ba3748e7c725db67f97efb0bd5bf2717971a0
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q3_K_L.gguf
+      size: 5650749472
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 75918ed2d93f13a16811c4985c2f335a885e65e3
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q3_K_M.gguf
+      size: 5188327456
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 39fc77222d9b3b88517ec441cd040dffb49e9771
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q3_K_S.gguf
+      size: 4664563744
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9488ae3178ec2610c917252646912d3ba43b2501
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q4_0.gguf
+      size: 6072383520
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c4593be24a8697c44309e49c166f3ebdb581d3b3
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q4_K_M.gguf
+      size: 6461667360
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 769389e562fed5589badf1b7d053bfb2572561d2
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q4_K_S.gguf
+      size: 6103840800
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2094e3fc0434db47500b5546c8f97637be126e03
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q5_0.gguf
+      size: 7397390368
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 299e49ae4b2e53b2fe2f1cc6035ef00e09bb10d9
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q5_K_M.gguf
+      size: 7597930528
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 59d26096f08ba720c99658586c31d99b77730c8b
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q5_K_S.gguf
+      size: 7397390368
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 559cd0a6eeca12a6e9dded2a69c5262685e9d6eb
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q6_K.gguf
+      size: 8805210144
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nyxene-v3-11B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e234d0f05b7490e34e8849cd4f231d93ac7cb06a
+      uri: https://huggingface.co/TheBloke/Nyxene-v3-11B-GGUF/resolve/main/nyxene-v3-11b.Q8_0.gguf
+      size: 11404154912
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

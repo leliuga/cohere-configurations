@@ -1,0 +1,396 @@
+id: WizardLM-33B-V1.0-Uncensored
+parent_id: ehartford/WizardLM-33b-V1.0-Uncensored
+name: WizardLM 33B V1.0 Uncensored
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Eric Hartford
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- dataset:ehartford/WizardLM_evol_instruct_V2_196k_unfiltered_merged_split
+- base_model:ehartford/WizardLM-33b-V1.0-Uncensored
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 6656
+  attention_head_size: 52
+  key_value_head_size: 0
+  intermediate_size: 17920
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b7e53df4964be5b465a9685f96ffffaf4db85a29
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q2_K.gguf
+      size: 13502545344
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4a4c7fca25c022c49b7e8b9ddf308f97af17f02
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q3_K_L.gguf
+      size: 17279758784
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 453b857e38dd3e3bb82a739b151803e725bfa7ef
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q3_K_M.gguf
+      size: 15761551808
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 945de4eae57b6ab8ee89abbf2bf8f8a5c44f988e
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q3_K_S.gguf
+      size: 14064112064
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 72aa49a09195370c4f970c5ff89ce29361c715ff
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q4_0.gguf
+      size: 18355967424
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 09e980d474d907e02f465c7eb065b7c20d5fe5d3
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q4_K_M.gguf
+      size: 19621139904
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9bd036fbaa443439affa21dd7eacd7110df541e8
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q4_K_S.gguf
+      size: 18437756352
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2832be3ec8a6df4995bb06dcc8a44fef39e082f3
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q5_0.gguf
+      size: 22395360704
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 090b93a7e942235b6742f9957e75300e673fb8d9
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q5_K_M.gguf
+      size: 23047116224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b76b18d083925a6fba5e553a65728c3589e3d172
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q5_K_S.gguf
+      size: 22395360704
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 699aee48465c3a1752d48965de79aa1b8010d31f
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q6_K.gguf
+      size: 26687216064
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-33B-V1.0-Uncensored/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d018921f16240f0402578a66fa9bc9fa38f8ba11
+      uri: https://huggingface.co/TheBloke/WizardLM-33B-V1.0-Uncensored-GGUF/resolve/main/wizardlm-33b-v1.0-uncensored.Q8_0.gguf
+      size: 34565124544
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: {prompt} ASSISTANT:\n"

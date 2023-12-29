@@ -1,0 +1,394 @@
+id: LeoScorpius-GreenNode-Platypus-7B-v1
+parent_id: ignos/LeoScorpius-GreenNode-Platypus-7B-v1
+name: Leoscorpius GreenNode Platypus 7B v1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Ignos
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:ignos/LeoScorpius-GreenNode-Platypus-7B-v1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0d674653db46fdf24e4e968e2d540a062796807c
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q2_K.gguf
+      size: 3083097824
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e722e51494b282d62fdd7bf39a6e73f2e9a5c202
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q3_K_L.gguf
+      size: 3822024416
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 388722af3ee7100d4e4154186635e6cb6812e093
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q3_K_M.gguf
+      size: 3518985952
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 90d81279f80e9b34f84bc7a70fdfd5657b4cd97a
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q3_K_S.gguf
+      size: 3164567264
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: be379a75d7977a26227e6f81e123af1fc5ff5485
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q4_0.gguf
+      size: 4108916448
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 06b42bf8b4cb2812c7454db46f4f4170e1d45060
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q4_K_M.gguf
+      size: 4368439008
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5bbd37e54ae36d70de644fdd63aed31faf09ddc7
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q4_K_S.gguf
+      size: 4140373728
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ab5a672cff3dfb7b1915e1a54c3ce9c7cbb8c42
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q5_0.gguf
+      size: 4997715680
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1743f2458aa26b28ac19b709cd804a9882a53eef
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q5_K_M.gguf
+      size: 5131409120
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dca9ca2640eab9468f87e8eb6b6cafedb18ba802
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q5_K_S.gguf
+      size: 4997715680
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dcd70382241b793a4a2af7a167ffe84e6f3fa2e8
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q6_K.gguf
+      size: 5942064864
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LeoScorpius-GreenNode-Platypus-7B-v1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3264de986bb847cb0a29ee03a120c10f0cd9b7f1
+      uri: https://huggingface.co/TheBloke/LeoScorpius-GreenNode-Platypus-7B-v1-GGUF/resolve/main/leoscorpius-greennode-platypus-7b-v1.Q8_0.gguf
+      size: 7695857376
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

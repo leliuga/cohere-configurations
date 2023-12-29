@@ -85,6 +85,8 @@ model-index:
     - type: acc
       value: 67.78
       name: accuracy
+tags:
+- merge
 ---
 ![image/png](https://cdn-uploads.huggingface.co/production/uploads/6468ce47e134d050a58aa89c/x44nNbPTpv0zGTqA1Jb2q.png)
 

@@ -1,0 +1,343 @@
+id: Kaori-70B-v1
+parent_id: KaeriJenti/Kaori-70b-v1
+name: Kaori 70B v1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: YeomSeungDon
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:KaeriJenti/Kaori-70b-v1
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a6221f58d59785eb48ab5200e7eefb06de34650f
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q2_K.gguf
+      size: 29279253504
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5eaac0b0cd82871a2ee0b6c93e2d71c0976abd7
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q3_K_L.gguf
+      size: 36147835904
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4da80906a6895645a5da0a7c8f005e6345823e09
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q3_K_M.gguf
+      size: 33186657280
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cee7e98a8644b0d480f1585f7c6a88315b7ab977
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q3_K_S.gguf
+      size: 29919294464
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a530e685985135dfaebf462ed05e695fe3f248f
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q4_0.gguf
+      size: 38872249344
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0e0e14af64c78bafbf430733a737ea94bbc6a58
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q4_K_M.gguf
+      size: 41422910464
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0e1bedc69bd41907b38207224fa50da82ddc97a
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q4_K_S.gguf
+      size: 39073575936
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8a991186b137cd830a9b33c8cfc4d76dec4902b5
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q5_0.gguf
+      size: 47461397504
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 95646cc0b771197fafbda3a18b6762ccfd9dbcf9
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q5_K_M.gguf
+      size: 48753767424
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Kaori-70B-v1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 58a6e70be162b0ffe1460ea0b795247fc296f2f7
+      uri: https://huggingface.co/TheBloke/Kaori-70B-v1-GGUF/resolve/main/kaori-70b-v1.Q5_K_S.gguf
+      size: 47461397504
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

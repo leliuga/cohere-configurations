@@ -1,0 +1,395 @@
+id: Thespis-Mistral-7B-v0.6
+parent_id: cgato/Thespis-Mistral-7b-v0.6
+name: Thespis Mistral 7B v0.6
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: c.gato
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- not-for-all-audiences
+- base_model:cgato/Thespis-Mistral-7b-v0.6
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e3ef50e95ed21cce61bd2df3132630670dff14ce
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q2_K.gguf
+      size: 3083097728
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a2149ef96a96002faa2e2265e497435f0dfbb75
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q3_K_L.gguf
+      size: 3822024320
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c61925938350a886769d7d223176adde1b4374d
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q3_K_M.gguf
+      size: 3518985856
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 404c648eb3f97e521b686d54ddde84da249fcfb1
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q3_K_S.gguf
+      size: 3164567168
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ec232eeca46d51bc415572918bc482e2e108af92
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q4_0.gguf
+      size: 4108916352
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fa77f92fac3cedc35c4ab17943f50415e6994717
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q4_K_M.gguf
+      size: 4368438912
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f5c264e67c9f4fc7135e2a49f04e0dea752e20cb
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q4_K_S.gguf
+      size: 4140373632
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bf315d90b926469ff4565f4f9dc8f78f7937de43
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q5_0.gguf
+      size: 4997715584
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c65dafe3c66b474be1fff8cb149e7b4a4f54bfb5
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q5_K_M.gguf
+      size: 5131409024
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 410b908e917c5161bd459c9cd37c88ffd0e11835
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q5_K_S.gguf
+      size: 4997715584
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5c5180c15c59798fc43ceb4c6f38ba333b59815
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q6_K.gguf
+      size: 5942064768
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Thespis-Mistral-7B-v0.6/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 53bcf04d389943ab2e3bfc6f4ca51f5247be8d59
+      uri: https://huggingface.co/TheBloke/Thespis-Mistral-7B-v0.6-GGUF/resolve/main/thespis-mistral-7b-v0.6.Q8_0.gguf
+      size: 7695857280
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{system_message}\n\nUsername: {prompt}\nBotName: \n"

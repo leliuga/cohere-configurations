@@ -1,0 +1,397 @@
+id: KAI-7B-Instruct
+parent_id: Keynote-Technology/KAI-7B-Instruct
+name: Kai 7B Instruct
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Keynote Technology
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- finetuned
+- Instruct
+- code
+- base_model:Keynote-Technology/KAI-7B-Instruct
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9ba4d578d7a7cec8a2933c6a6d231237255bd2a8
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q2_K.gguf
+      size: 3083097760
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f3c6d8fb15350ebf2429722060563b6712f03ca2
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q3_K_L.gguf
+      size: 3822024352
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1fc5e9455c4b197804fb54d58a835af74ff015a4
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q3_K_M.gguf
+      size: 3518985888
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d2282bc7f6bb1ba6215a428d0654d51fbae6237d
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q3_K_S.gguf
+      size: 3164567200
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd836bdb3c21a36af0c4c929a00eea1f7faeccee
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q4_0.gguf
+      size: 4108916384
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8724fab7ea65a61a8869b012c603aef282514edf
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q4_K_M.gguf
+      size: 4368438944
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25ef1f1087555f8c1d3419bfb2b09b262ec60dce
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q4_K_S.gguf
+      size: 4140373664
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3769c251ec79f74e4191ed46261eefb5505312be
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q5_0.gguf
+      size: 4997715616
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a544a8c6e4a949ad946f0a3503545f7478092fa
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q5_K_M.gguf
+      size: 5131409056
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29ad96e826df02e74c573573662bf5372e148417
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q5_K_S.gguf
+      size: 4997715616
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d7d51efb4fba2d9e1a4c04a944db92c423d31781
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q6_K.gguf
+      size: 5942064800
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - KAI-7B-Instruct/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4342ac87654422a6fa3b10a8f951b2d9719e1c8a
+      uri: https://huggingface.co/TheBloke/KAI-7B-Instruct-GGUF/resolve/main/kai-7b-instruct.Q8_0.gguf
+      size: 7695857312
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] {prompt} [/INST]\n"

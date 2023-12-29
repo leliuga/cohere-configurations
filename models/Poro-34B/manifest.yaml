@@ -1,0 +1,398 @@
+id: Poro-34B
+parent_id: LumiOpen/Poro-34B
+name: Poro 34B
+description: ""
+architecture: bloom
+licence: apache-2.0
+object: model
+owned_by: LumiOpen
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- bloom
+- dataset:cerebras/SlimPajama-627B
+- dataset:bigcode/starcoderdata
+- dataset:mc4
+- dataset:allenai/dolma
+- base_model:LumiOpen/Poro-34B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 128000
+  context_size: 0
+  embedding_size: 7168
+  attention_head_size: 0
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 0
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q2_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2e98259f2a3bc8deed69b33dc7ad639771b503f5
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q2_K.gguf
+      size: 14539503776
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q3_K_L
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 698d8313dc0eb0f92b355c8007c275b137446c85
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q3_K_L.gguf
+      size: 20160075936
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q3_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d3ec522452a635f0e010b6980d5457b944787cdc
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q3_K_M.gguf
+      size: 18477373600
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q3_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 859374ccdee65949f51301899546bff95fe1fea0
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q3_K_S.gguf
+      size: 15478053024
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q4_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4fae1cbaebcc90792e98edd5caa651f73c0d00f1
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q4_0.gguf
+      size: 20021819552
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q4_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8495868696c673d3e16d74e2cb508ea9916c7555
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q4_K_M.gguf
+      size: 22439901344
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q4_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 12219dc570d0838393131aad86ab40d3ef337db3
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q4_K_S.gguf
+      size: 20124580000
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q5_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cd9a60d09747a4a70cb45e4f0815305c8579c3e9
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q5_0.gguf
+      size: 24298305696
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q5_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b506eda8d2cfcdb5a1f6caad32663efa10c46da4
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q5_K_M.gguf
+      size: 26113472672
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q5_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a4df62b70cd3bdef69dd13b995656b4587cab41
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q5_K_S.gguf
+      size: 24298305696
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q6_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b2ba75da6ecbcbba5da4438d00e6872ec9a542c
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q6_K.gguf
+      size: 28842072224
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Poro-34B/Q8_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4ce02ff7b2413f5a7e2634371e5781b2dd8e383
+      uri: https://huggingface.co/TheBloke/Poro-34B-GGUF/resolve/main/poro-34b.Q8_0.gguf
+      size: 37349972128
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

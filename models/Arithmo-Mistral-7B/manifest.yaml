@@ -1,0 +1,397 @@
+id: Arithmo-Mistral-7B
+parent_id: akjindal53244/Arithmo-Mistral-7B
+name: Arithmo Mistral 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Ashvini Kumar Jindal
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- Mathematical Reasoning
+- en
+- dataset:akjindal53244/Arithmo-Data
+- base_model:akjindal53244/Arithmo-Mistral-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 64080468e4d7016297ff69fda222b3fa1b85752f
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q2_K.gguf
+      size: 3083097760
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f5f2ec542522e7b837206d1bae6fa489b397d429
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q3_K_L.gguf
+      size: 3822024352
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e95700f44a0096b27a3655690bb26a4d29e8aba0
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q3_K_M.gguf
+      size: 3518985888
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d42468915ff9ac514c25ea11a82919269aac7ba0
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q3_K_S.gguf
+      size: 3164567200
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 303f0c8643ebe12de1c886290a9193ebf5ae4c90
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q4_0.gguf
+      size: 4108916384
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f3daa30c6b104a9371e95c4640b67644be02ff48
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q4_K_M.gguf
+      size: 4368438944
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 108638be0eedcbe86983c40f8072ac23d1828bbc
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q4_K_S.gguf
+      size: 4140373664
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fa595a349c0fae6a617018991c989e4cbd1acc3b
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q5_0.gguf
+      size: 4997715616
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ec64c14d75f0ad5c29c38f70157929e13055376
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q5_K_M.gguf
+      size: 5131409056
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3dd035ab0662c17e16f88259bb83324c9aac1d2d
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q5_K_S.gguf
+      size: 4997715616
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 591d3de8901057d76eee44b841be525d6fd01990
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q6_K.gguf
+      size: 5942064800
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Arithmo-Mistral-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 49a1c53d893e9804f7c8a6cf49b1c7c26fdb3aff
+      uri: https://huggingface.co/TheBloke/Arithmo-Mistral-7B-GGUF/resolve/main/arithmo-mistral-7b.Q8_0.gguf
+      size: 7695857312
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Question: {prompt}\nAnswer:\n"

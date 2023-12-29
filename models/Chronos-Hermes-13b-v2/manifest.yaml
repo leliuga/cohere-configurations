@@ -1,0 +1,399 @@
+id: Chronos-Hermes-13b-v2
+parent_id: Austism/chronos-hermes-13b-v2
+name: Chronos Hermes 13B v2
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Austism
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama-2
+- pytorch
+- chatbot
+- storywriting
+- generalist-model
+- base_model:Austism/chronos-hermes-13b-v2
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32032
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d15ed2741e450ac4eaa9921ab1a28be168a7ba18
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q2_K.gguf
+      size: 5429537280
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd6df034a2fa1c881f3e72ff0eff6ff6fb652a74
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q3_K_L.gguf
+      size: 6929765120
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6fdde198084cef165025b5b1055239941384ffc7
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q3_K_M.gguf
+      size: 6337975040
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea3de3a9481ba761830d6ee548c6737da83cbe8e
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q3_K_S.gguf
+      size: 5659185920
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5c9bd953deced2e30b951fedffe3bfb39c026a5
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q4_0.gguf
+      size: 7366062080
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7fa83c412692d4b72805bd842e4d04f1eeffe4c7
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q4_K_M.gguf
+      size: 7866183680
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4769098ab50282e8b1a2c612addb8af6ecee5ae1
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q4_K_S.gguf
+      size: 7414558720
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ffc1a11bfcbf0e99542773ab712ad103af1440a
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q5_0.gguf
+      size: 8972533760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7736039321c05eed013afe56410971a1a7430922
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q5_K_M.gguf
+      size: 9230172160
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f898c0a95cd60ae111d58be3e1d6492365ccb966
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q5_K_S.gguf
+      size: 8972533760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e724d6ba7abe556437ffea6bad78429210ee27a5
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q6_K.gguf
+      size: 10679409920
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronos-Hermes-13b-v2/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 61ead335f2fc578adb241e1a7b4b0689b3a0752d
+      uri: https://huggingface.co/TheBloke/Chronos-Hermes-13b-v2-GGUF/resolve/main/chronos-hermes-13b-v2.Q8_0.gguf
+      size: 13831668480
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: ""

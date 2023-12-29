@@ -1,0 +1,404 @@
+id: tora-code-34b-v1.0
+parent_id: llm-agents/tora-code-34b-v1.0
+name: ToRA Code 34B v1.0
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: LLM-Agents
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- code
+- math
+- text-generation
+- en
+- dataset:gsm8k
+- dataset:competition_math
+- arxiv:2309.17452
+- base_model:llm-agents/tora-code-34b-v1.0
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2090dc7cbc0182a150d9ce9f0c6e7c263ad83379
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q2_K.gguf
+      size: 14210684256
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1dd83b248b0644f1e09dcea6058cf8ca14b03105
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q3_K_L.gguf
+      size: 17771534496
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fddfcf1ecdbca5aab773aff64cb43840805eaac2
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q3_K_M.gguf
+      size: 16283605152
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a8d87d6f84a2d568a87932a91bf631510d48602f
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q3_K_S.gguf
+      size: 14605359264
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 72f497ea4bfabe87b772a053afdfc77236351619
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q4_0.gguf
+      size: 19052059872
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1d08c9c5763b94895db7b313ede8468b1bec5283
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q4_K_M.gguf
+      size: 20219911392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ee77f7bd38d7357949a83ab7171b0a5e02173716
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q4_K_S.gguf
+      size: 19146431712
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 110ce0f5f8546eb2eb8e53992d0a76aa58479cae
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q5_0.gguf
+      size: 23237189856
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8bab66b986200536be6d2db280553448c3bf774c
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q5_K_M.gguf
+      size: 23838810336
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4c1ead3da511811b97349970b1cf6ec260f4fd5f
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q5_K_S.gguf
+      size: 23237189856
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bf9278e325be42fd84a70a6d9f90395ca71b0c5d
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q6_K.gguf
+      size: 27683890464
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tora-code-34b-v1.0/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 07aa64d596c685c5aef85009ae6a90507579d0f0
+      uri: https://huggingface.co/TheBloke/tora-code-34b-v1.0-GGUF/resolve/main/tora-code-34b-v1.0.Q8_0.gguf
+      size: 35856069792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|user|>
+        {prompt}
+        <|assistant|>

@@ -1,0 +1,400 @@
+id: Mistral-Pygmalion-7B
+parent_id: Delcos/Mistral-Pygmalion-7b
+name: Mistral Pygmalion 7B
+description: ""
+architecture: llama
+licence: cc-by-nc-nd-4.0
+object: model
+owned_by: Devon M
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- Mistral
+- Pygmalion
+- llama-2
+- llama-2-7b
+- text-generation
+- en
+- base_model:Delcos/Mistral-Pygmalion-7b
+- license:cc-by-nc-nd-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1fa71e83bbe4f8ad638ff7ac614f3c1104dbcbd9
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q2_K.gguf
+      size: 2825940768
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c8f3615ffa6cb767f4caae23749a5031c167918d
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q3_K_L.gguf
+      size: 3597111072
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ebe0804e5bdde11aa2891e9896ce43a3c1fb3a6
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q3_K_M.gguf
+      size: 3298004768
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 47848355bda1ab863d2aa3496b9f836cc395acb2
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q3_K_S.gguf
+      size: 2948304672
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ca3ab626dd276d573f78686caac390beecd02508
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q4_0.gguf
+      size: 3825807136
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6fb8dcd7ba8bae8fc76b4e1f8474cad1bcb0cc72
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q4_K_M.gguf
+      size: 4081004320
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a2bcf39cff82a6d814c730e1149d97b8f8621d77
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q4_K_S.gguf
+      size: 3856740128
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: edc32162aba6d92a5f18e19644be1ba50facfe86
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q5_0.gguf
+      size: 4651691808
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b77372da732f417ab644fa55504ad1ea45163e4
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q5_K_M.gguf
+      size: 4783157024
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a57b942a45943f54516996330044842863d76cc0
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q5_K_S.gguf
+      size: 4651691808
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ec4de3a486c59999d090a984811a316cac61563
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q6_K.gguf
+      size: 5529194272
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-Pygmalion-7B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d587f5de70090cef982bb64125aeea83851dc163
+      uri: https://huggingface.co/TheBloke/Mistral-Pygmalion-7B-GGUF/resolve/main/mistral-pygmalion-7b.Q8_0.gguf
+      size: 7161089824
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n{prompt}\n### Assistant:\n"

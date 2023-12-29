@@ -1,0 +1,347 @@
+id: opus-v0.5-70B
+parent_id: dreamgen/opus-v0.5-70b
+name: Opus V0.5 70B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: DreamGen
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- en
+- base_model:dreamgen/opus-v0.5-70b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c53a4efe73ec033bb7a3cede02d0fa2b0480f1f0
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q2_K.gguf
+      size: 29279253536
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46f18e85c52f095ecbde664014a16579c94ff579
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q3_K_L.gguf
+      size: 36147835936
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1172874c19a5c2e80998bee66761c69c30a7b65c
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q3_K_M.gguf
+      size: 33186657312
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4a94ece72af5e38c5339a57c11495787eef9eff
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q3_K_S.gguf
+      size: 29919294496
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 361eff9b9b100583ae57cfe7f4b3e63e1f0c5160
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q4_0.gguf
+      size: 38872249376
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 28a66135da710abf7b864b82beda026e8ef42b2f
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q4_K_M.gguf
+      size: 41422910496
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 226260d74046758aa353d34effdecf1593e7e54e
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q4_K_S.gguf
+      size: 39073575968
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 76bdb258dc71157818c97614172158d59316f779
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q5_0.gguf
+      size: 47461397536
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5f3ef88577ca501235d741ea05b6760b9e60e240
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q5_K_M.gguf
+      size: 48753767456
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - opus-v0.5-70B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 771182a70d583a7511493d85c3a101537558e10b
+      uri: https://huggingface.co/TheBloke/opus-v0.5-70B-GGUF/resolve/main/opus-v0.5-70b.Q5_K_S.gguf
+      size: 47461397536
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <setting>
+        {system_message}
+        </setting>
+        
+        <instruction>
+        {prompt}
+        </instruction>

@@ -1,0 +1,203 @@
+id: lince-zero
+parent_id: clibrain/lince-zero
+name: Lince Zero
+description: ""
+architecture: falcon
+licence: apache-2.0
+object: model
+owned_by: CliBrAIn
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- falcon
+- text-generation
+- es
+- dataset:tatsu-lab/alpaca
+- dataset:databricks/databricks-dolly-15k
+- arxiv:1910.09700
+- base_model:clibrain/lince-zero
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 65024
+  context_size: 0
+  embedding_size: 4544
+  attention_head_size: 71
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - lince-zero/Q4_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c319301b55ddc15836bac3143b746e14828e5758
+      uri: https://huggingface.co/TheBloke/lince-zero-GGUF/resolve/main/lince-zero.Q4_0.gguf
+      size: 4210419040
+  Q4_1:
+    dtype: Q4_1
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - lince-zero/Q4_1
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 80e9e574f7dcf15bb94fd69ab97d18d57a0e4f1f
+      uri: https://huggingface.co/TheBloke/lince-zero-GGUF/resolve/main/lince-zero.Q4_1.gguf
+      size: 4643007840
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - lince-zero/Q5_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 018fc9316334cbec79e4bde547494d40f622ac6d
+      uri: https://huggingface.co/TheBloke/lince-zero-GGUF/resolve/main/lince-zero.Q5_0.gguf
+      size: 5075596640
+  Q5_1:
+    dtype: Q5_1
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - lince-zero/Q5_1
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 088c90dab910c448c54f0c2cad07dde7b6420465
+      uri: https://huggingface.co/TheBloke/lince-zero-GGUF/resolve/main/lince-zero.Q5_1.gguf
+      size: 5508185440
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - lince-zero/Q8_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88d3793fde88395cd1d362eddae14f459d54857c
+      uri: https://huggingface.co/TheBloke/lince-zero-GGUF/resolve/main/lince-zero.Q8_0.gguf
+      size: 7671129440
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "A continuación hay una instrucción que describe una tarea, junto con una entrada que proporciona más contexto. Escriba una respuesta que complete adecuadamente la solicitud.\n\n### Instrucción: {prompt}\n\n### Entrada:\n\n### Contexto: \n\n### Respuesta:\n"

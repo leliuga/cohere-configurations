@@ -1,0 +1,424 @@
+id: CausalLM-7B
+parent_id: CausalLM/7B
+name: CausalLM 7B
+description: ""
+architecture: llama
+licence: wtfpl
+object: model
+owned_by: CausalLM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama2
+- qwen
+- text-generation
+- en
+- zh
+- dataset:JosephusCheung/GuanacoDataset
+- dataset:Open-Orca/OpenOrca
+- dataset:stingning/ultrachat
+- dataset:meta-math/MetaMathQA
+- dataset:liuhaotian/LLaVA-Instruct-150K
+- dataset:jondurbin/airoboros-3.1
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- dataset:RyokoAI/ShareGPT52K
+- dataset:RyokoAI/Fandom23K
+- dataset:milashkaarshif/MoeGirlPedia_wikitext_raw_archive
+- dataset:wikipedia
+- dataset:wiki_lingua
+- dataset:fnlp/moss-003-sft-data
+- dataset:garage-bAInd/Open-Platypus
+- dataset:LDJnr/Puffin
+- dataset:openbmb/llava_zh
+- dataset:BAAI/COIG
+- dataset:TigerResearch/tigerbot-zhihu-zh-10k
+- dataset:liwu/MNBVC
+- dataset:teknium/openhermes
+- base_model:CausalLM/7B
+- license:wtfpl
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 151936
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 55e42bf08e50ff9c60c1c97793be5ae5d403f9ae
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q2_K.gguf
+      size: 3395013600
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5345196467a18b6430cf6f996627e0191b592d01
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q3_K_L.gguf
+      size: 4216077280
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b48dede96901da072d59adbc331c14fddf2c2d3e
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q3_K_M.gguf
+      size: 3916970976
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46f0941c6987622beaff05b506fa339f175794e0
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q3_K_S.gguf
+      size: 3567270880
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2568d3e2314248357a3f3f4f15bd18635f392d79
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q4_0.gguf
+      size: 4510018528
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 41ffec20e05c508095847ab2d007ceb4e957a876
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q4_K_M.gguf
+      size: 4765215712
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9f5176ce191c9d1e33d91af407b369d6026f678b
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q4_K_S.gguf
+      size: 4540951520
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1fc2b6976e19c2a94a3f2a53b6b1fbd5173d1b12
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q5_0.gguf
+      size: 5397310432
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0851509c6f664b4ee207d5b44ef912febded4f7d
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q5_K_M.gguf
+      size: 5528775648
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 22d73821cc47f5537b39968d72533e58e036ee68
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q5_K_S.gguf
+      size: 5397310432
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 902204a3426e63466776e3563c4f82f4c62a5ea6
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q6_K.gguf
+      size: 6340058080
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CausalLM-7B/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6198cf9cf413845832a9f6c5a1ecd8047b20d497
+      uri: https://huggingface.co/TheBloke/CausalLM-7B-GGUF/resolve/main/causallm_7b.Q8_0.gguf
+      size: 8209906656
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

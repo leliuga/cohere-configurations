@@ -1,0 +1,398 @@
+id: OpenZephyrChat
+parent_id: Fredithefish/OpenZephyrChat
+name: OpenZephyrchat
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Fredi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- zephyr
+- openchat
+- en
+- base_model:Fredithefish/OpenZephyrChat
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4f5a6f2b35f757c448d2c50f81e3e47ce50c4de
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q2_K.gguf
+      size: 3083097856
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5f293c37a0b94608236b1ff0dc9e56829e1f05c8
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q3_K_L.gguf
+      size: 3822024448
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f7c59527f544949d10edb10d7e07b88316de9b1d
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q3_K_M.gguf
+      size: 3518985984
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8810484079b7c1265900fa0fccb63290bf8f95e6
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q3_K_S.gguf
+      size: 3164567296
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 41cf3e3d6fe6afc6f4a67e87257f8a7e819cf720
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q4_0.gguf
+      size: 4108916480
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d2bec7ed86b57d7f505c538101a63043b8594512
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q4_K_M.gguf
+      size: 4368439040
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 951c5444044a64964c0c0daf4972d1f43c655edc
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q4_K_S.gguf
+      size: 4140373760
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0940a4d2e9d81b142c1474cbe6c3e865f0dedc60
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q5_0.gguf
+      size: 4997715712
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 106dfcb15b15f21024a269a58789abd10eaf556f
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q5_K_M.gguf
+      size: 5131409152
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 96b29ddd45fee1c2265622b61770600cd50854c5
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q5_K_S.gguf
+      size: 4997715712
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 757f46ae4f207aefaf47d033aefed27646403e7e
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q6_K.gguf
+      size: 5942064896
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenZephyrChat/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 35e8a296edb3151298e99b07a2e39ffdfde2b047
+      uri: https://huggingface.co/TheBloke/OpenZephyrChat-GGUF/resolve/main/openzephyrchat.Q8_0.gguf
+      size: 7695857408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "GPT4 User: {prompt}<|end_of_turn|>GPT4 Assistant:\n"

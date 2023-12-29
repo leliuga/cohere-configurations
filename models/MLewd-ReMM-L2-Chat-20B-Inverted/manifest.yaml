@@ -1,0 +1,396 @@
+id: MLewd-ReMM-L2-Chat-20B-Inverted
+parent_id: Undi95/MLewd-ReMM-L2-Chat-20b-inverted
+name: MLewd ReMM L2 Chat 20b Inverted
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Undi95
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- nsfw
+- base_model:Undi95/MLewd-ReMM-L2-Chat-20b-inverted
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 19b203d395b139a4d1b5756920c2e4ba8899a8c4
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q2_K.gguf
+      size: 8311592416
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 58b2f9e24212a41993a34484cb4108bcf892f3db
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q3_K_L.gguf
+      size: 10627767776
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9a2dacbe4562021483fe3f732431bf0a936462da
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q3_K_M.gguf
+      size: 9697156576
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 72c6522dc6bcca4eb832011dfa19d15508395034
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q3_K_S.gguf
+      size: 8658370016
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e21300f909b125afa95ca19d3a01b537aa5b0dca
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q4_0.gguf
+      size: 11292026336
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 62ee4fc8814ba438c6bf5bcf4d8a02d2dcb3f3ee
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q4_K_M.gguf
+      size: 12042208736
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9f74b12e2e2d03e72e8c1f65c07dc588f2e133d4
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q4_K_S.gguf
+      size: 11340522976
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c642f1c87eb915357d114b2a3ee3dc176877618c
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q5_0.gguf
+      size: 13770761696
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0f3ea70beb9c25725064ca520c2a2ef425caf94b
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q5_K_M.gguf
+      size: 14157219296
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 13e12a32d4541b3c9ccc989f26cdac61cdbe74a7
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q5_K_S.gguf
+      size: 13770761696
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e29ebfca2c4b6771f4a4e19d75b57ac408043a72
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q6_K.gguf
+      size: 16404418016
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MLewd-ReMM-L2-Chat-20B-Inverted/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a032f6938428904879bba41b8bb356eba9dc7646
+      uri: https://huggingface.co/TheBloke/MLewd-ReMM-L2-Chat-20B-Inverted-GGUF/resolve/main/mlewd-remm-l2-chat-20b-inverted.Q8_0.gguf
+      size: 21246647776
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

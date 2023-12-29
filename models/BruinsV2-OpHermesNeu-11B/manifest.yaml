@@ -1,0 +1,399 @@
+id: BruinsV2-OpHermesNeu-11B
+parent_id: Ba2han/BruinsV2-OpHermesNeu-11B
+name: BruinsV2 OpHermesNeu 11B
+description: ""
+architecture: mistral
+licence: mit
+object: model
+owned_by: Batuhan S
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:Ba2han/BruinsV2-OpHermesNeu-11B
+- license:mit
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b755f2f1ebde30c7151bc7a46b4fd37347b89911
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q2_K.gguf
+      size: 4549951968
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: afacd9352f648209710d797a9097d8e9f0daac61
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q3_K_L.gguf
+      size: 5651685856
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e35e1be21cebc424a2d0fa635f11537184b55ff
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q3_K_M.gguf
+      size: 5189263840
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f1fd1e4abbb6e8374276c189af1f56e577e06282
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q3_K_S.gguf
+      size: 4665500128
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 76a2d2fe68e0bd6be3702943d0f7de779c079a93
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q4_0.gguf
+      size: 6073319904
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d84e8f83ff45f52848c9e88bc2a8b0b9d0eeb2bd
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q4_K_M.gguf
+      size: 6462603744
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 27b79769375136945c0eaee21bb2af1ab627213b
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q4_K_S.gguf
+      size: 6104777184
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3102ae919d082b1eac9215d6f23538c2811d4fbb
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q5_0.gguf
+      size: 7398326752
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 20d385419eed8413ba753be39384d2fa9fd01cac
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q5_K_M.gguf
+      size: 7598866912
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 119a0c37864c0f45cc33bc063ac2798367dcde38
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q5_K_S.gguf
+      size: 7398326752
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 939aad459fcd3c9879d7d70a03191b2d24fea7cb
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q6_K.gguf
+      size: 8806146528
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - BruinsV2-OpHermesNeu-11B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 984bbb3075185bd41406c14a7500f100763d1e99
+      uri: https://huggingface.co/TheBloke/BruinsV2-OpHermesNeu-11B-GGUF/resolve/main/bruinsv2-ophermesneu-11b.Q8_0.gguf
+      size: 11405091296
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

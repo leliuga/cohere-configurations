@@ -1,0 +1,394 @@
+id: MistralMakise-Merged-13B
+parent_id: Heralax/MistralMakise-Merged-13b
+name: MistralMakise Merged 13B
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Evan Armstrong
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Heralax/MistralMakise-Merged-13b
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 259c9ccc83cd60de0eaaccd00b25409b21c45cb1
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q2_K.gguf
+      size: 5429348320
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ba781f169d8092cd8bf8ebc20252f05fa3ea630d
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q3_K_L.gguf
+      size: 6929559520
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 550e362c7f1af8745e1a947d001352bff533ad3d
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q3_K_M.gguf
+      size: 6337769440
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 50600a5a44925882d0e41fbdd42bc1bdf7dcdeb2
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q3_K_S.gguf
+      size: 5658980320
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0f81cc1f627508df5db51ba4d72e78954c7456c6
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q4_0.gguf
+      size: 7365834720
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6a43ca8cacd9f0c8c145057072d91798de091a97
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q4_K_M.gguf
+      size: 7865956320
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: db8a56b568a4d343270a1d42c86858eae60fa097
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q4_K_S.gguf
+      size: 7414331360
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3933b04561f97e7bfb69b6f8fc3dfa27db05b55d
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q5_0.gguf
+      size: 8972285920
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 75a1c07c7e9c18600c7454cf0e00092573b3f64c
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q5_K_M.gguf
+      size: 9229924320
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 306bb07860a91cd603e83497ce39b0d39c3dbde3
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q5_K_S.gguf
+      size: 8972285920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b57f31fa2e45f1337b8671e94e7bdc2ca43aadd3
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q6_K.gguf
+      size: 10679140320
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MistralMakise-Merged-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b3c4bb5a603db638b1acb983ab2a4b34cb883a4b
+      uri: https://huggingface.co/TheBloke/MistralMakise-Merged-13B-GGUF/resolve/main/mistralmakise-merged-13b.Q8_0.gguf
+      size: 13831319520
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "## {{{{charname}}}}:\n- You're \"{{{{charname}}}}\" in this never-ending roleplay with \"{{{{user}}}}\".\n### Input:\n{prompt}\n\n### Response:\n(OOC) Understood. I will take this info into account for the roleplay. (end OOC)\n\n### New Roleplay:\n### Instruction:\n#### {{{{char}}}}:\nwhatever the char says, this is the chat history\n#### {{{{user}}}}:\nwhatever the user says, this is the chat history\n... repeated some number of times ...\n### Response 2 paragraphs, engaging, natural, authentic, descriptive, creative):\n#### {{{{char}}}}:\n"

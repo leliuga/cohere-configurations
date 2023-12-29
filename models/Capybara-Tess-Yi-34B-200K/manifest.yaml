@@ -1,0 +1,395 @@
+id: Capybara-Tess-Yi-34B-200K
+parent_id: brucethemoose/Capybara-Tess-Yi-34B-200K
+name: Capybara Tess Yi 34B 200K
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: brucethemoose
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- text-generation
+- en
+- base_model:brucethemoose/Capybara-Tess-Yi-34B-200K
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q2_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9adae869ba6bb1956c9db2eab05af9133adbc06
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q2_K.gguf
+      size: 14555875328
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q3_K_L
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a44dcaa9c78c64c4cee986776a6154edc526840
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q3_K_L.gguf
+      size: 18139445248
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q3_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c6a7f5e36d05179e8f8d67b2a5db307d90633221
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q3_K_M.gguf
+      size: 16636573696
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q3_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b1064d3d019ec420b7ae0e09897f8c59d70eb632
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q3_K_S.gguf
+      size: 14960293888
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q4_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 51521ae01049d3081ccc5ef839b1696fdc2e59bd
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q4_0.gguf
+      size: 19466528768
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q4_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 96aa101f35bfff3d8c4056556e27c28d63bee909
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q4_K_M.gguf
+      size: 20658710528
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q4_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 846940d238ffdf6b4e8e879d4ed36c38b0eb2b7d
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q4_K_S.gguf
+      size: 19543599104
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q5_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 20c7a82818fbad88bd462b7f15921cf3781bba27
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q5_0.gguf
+      size: 23707691008
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q5_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 91ee34362b9828992bb6c3e08e4846784d253081
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q5_K_M.gguf
+      size: 24321845248
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q5_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c872434a1fd18a696fd3305d17aee11b9e60e33d
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q5_K_S.gguf
+      size: 23707691008
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q6_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a1be9fe6bbf15e7539ada295c2da24b536b24cf1
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q6_K.gguf
+      size: 28213925888
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Capybara-Tess-Yi-34B-200K/Q8_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 74c4ff0612c04e2009dc14ad211f7b5e36e56f87
+      uri: https://huggingface.co/TheBloke/Capybara-Tess-Yi-34B-200K-GGUF/resolve/main/capybara-tess-yi-34b-200k.Q8_0.gguf
+      size: 36542281728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "SYSTEM: {system_message}\nUSER: {prompt}\nASSISTANT:\n"

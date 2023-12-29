@@ -36,9 +36,9 @@ Multi-turn dialogue
 ```
 A chat between a human and an artificial intelligence bot. The bot gives helpful, detailed, and polite answers to the human's questions.
 |Human|: hello
-|Bot|: Hello! How can I assist you today?</s>
+|Bot|: Hello! How can I assist you today?<|endoftext|>
 |Human|: Generate a random number using python
 |Bot|: 
 ```
 
-Note: At the end of the Bot's output in the historical conversation, append a `</s>`.
+Note: At the end of the Bot's output in the historical conversation, append a `<|endoftext|>`.

@@ -1,0 +1,339 @@
+id: MoMo-70B-V1.1
+parent_id: bongchoi/MoMo-70B-V1.1
+name: MoMo 70B v1.1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: kibong choi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- base_model:bongchoi/MoMo-70B-V1.1
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b3cc067b70cefd839e6cc642d9b6e388530c7b4b
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q2_K.gguf
+      size: 29279253536
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 16226895ed3c7fa30713540d3f8c8cc613fde525
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q3_K_L.gguf
+      size: 36147835936
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fa67bef24d33fa20a04c0387d009185d04746710
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q3_K_M.gguf
+      size: 33186657312
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2d0df5e7c6676176eada8d237ddf34ac7e369068
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q3_K_S.gguf
+      size: 29919294496
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: df8c6e03e440a19d7695ed8a5786cc0645b230fa
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q4_0.gguf
+      size: 38872249376
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69d89c982e7dc40729c3326485ac8c1ff5b4806b
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q4_K_M.gguf
+      size: 41422910496
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ece70b71dcb120c02d94d6589264e00d0e38423e
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q4_K_S.gguf
+      size: 39073575968
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b2bb203f32edcfc21761f2da2e426db85d09510f
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q5_0.gguf
+      size: 47461397536
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9b7ebe09c361af75e7a5001cf373e43f409b1cd0
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q5_K_M.gguf
+      size: 48753767456
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MoMo-70B-V1.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 39693328b602f3ef3eefaa8db65dae67264703bc
+      uri: https://huggingface.co/TheBloke/MoMo-70B-V1.1-GGUF/resolve/main/momo-70b-v1.1.Q5_K_S.gguf
+      size: 47461397536
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

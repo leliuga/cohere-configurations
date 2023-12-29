@@ -1,0 +1,402 @@
+id: Hermes-Trismegistus-Mistral-7B
+parent_id: teknium/Hermes-Trismegistus-Mistral-7B
+name: Hermes Trismegistus Mistral 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Teknium
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- mistral-7b
+- instruct
+- finetune
+- gpt4
+- synthetic data
+- distillation
+- en
+- dataset:teknium/trismegistus-project
+- base_model:teknium/Hermes-Trismegistus-Mistral-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ee8a33a1aeb6206a39d557665b36b94f4fd3c384
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q2_K.gguf
+      size: 3083107200
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6f90b6b8b1341b1ac84bf802a6943f92588b328d
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q3_K_L.gguf
+      size: 3822034624
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3d55a3bb1d9d4178a71794a451bf7e1d32f9a505
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q3_K_M.gguf
+      size: 3518996160
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9295af3cced77bae9459a797687cd4bb7fe1a997
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q3_K_S.gguf
+      size: 3164577472
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 186f62e7955ca039dfac3cd5ae69da58af50ee8f
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q4_0.gguf
+      size: 4108927744
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bbd7144cf48b94b667cfe3da58e3b7886929a9a3
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q4_K_M.gguf
+      size: 4368450304
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b166ce4a5c48b9f2659a553f8b263726544b2079
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q4_K_S.gguf
+      size: 4140385024
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 630ea4307a471f7655809aa137f57803dfb49d6a
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q5_0.gguf
+      size: 4997728000
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 97a7861a76cdc835246e1a1575fea96c61d06a22
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q5_K_M.gguf
+      size: 5131421440
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6eb19c02b19ba9d97dd1926b4a57efe2c324b9fe
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q5_K_S.gguf
+      size: 4997728000
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6e69dfe1382868dbb812d3c80407f9bed9894030
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q6_K.gguf
+      size: 5942078272
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Hermes-Trismegistus-Mistral-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9003660e8e89a0b8b8e5913d53fb5bcedc3f9e6d
+      uri: https://huggingface.co/TheBloke/Hermes-Trismegistus-Mistral-7B-GGUF/resolve/main/hermes-trismegistus-mistral-7b.Q8_0.gguf
+      size: 7695874752
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "USER: {prompt}\nASSISTANT:\n"

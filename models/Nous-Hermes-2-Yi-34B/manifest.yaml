@@ -1,0 +1,405 @@
+id: Nous-Hermes-2-Yi-34B
+parent_id: NousResearch/Nous-Hermes-2-Yi-34B
+name: Nous Hermes 2 Yi 34B
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: NousResearch
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- instruct
+- finetune
+- chatml
+- gpt4
+- synthetic data
+- distillation
+- en
+- base_model:NousResearch/Nous-Hermes-2-Yi-34B
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c99e37f437387ba050eccf397ef9a184e966210
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q2_K.gguf
+      size: 14555875552
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1ed2fd494cd207a7fab779749bd55851993caa33
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q3_K_L.gguf
+      size: 18139445472
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: da0582488c0dbe2e2c29dd4b3eb5d7706f6cf7c0
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q3_K_M.gguf
+      size: 16636573920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c7378ad06b43a2434e4a5dc1e7b4a8912851016
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q3_K_S.gguf
+      size: 14960294112
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0d6e91cb2455d69eef23b5bd839ce7a88b8b146a
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q4_0.gguf
+      size: 19466528992
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a40902dc05348a0016af2b0955b23d7d585f4a37
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q4_K_M.gguf
+      size: 20658710752
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 17cfb0723b511d7b661625979b875f8e5659185d
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q4_K_S.gguf
+      size: 19543599328
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fc88d1676c286b996ea288e5aa4e880664f0b98b
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q5_0.gguf
+      size: 23707691232
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 460ae0edf6a37ce41514d06c4abcaba0119a329f
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q5_K_M.gguf
+      size: 24321845472
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a794179accd5cf346338914f02f5f39a59ecf8f
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q5_K_S.gguf
+      size: 23707691232
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: afc043eedd816f944339646aa5befdd368f1ab0b
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q6_K.gguf
+      size: 28213926112
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nous-Hermes-2-Yi-34B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 52190638802dcfac1a4ad4fd05be172d45d74917
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-Yi-34B-GGUF/resolve/main/nous-hermes-2-yi-34b.Q8_0.gguf
+      size: 36542281952
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

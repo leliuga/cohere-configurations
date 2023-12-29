@@ -1,0 +1,399 @@
+id: koOpenChat-sft
+parent_id: maywell/koOpenChat-sft
+name: koOpenChat sft 7B
+description: ""
+architecture: mistral
+licence: cc-by-sa-4.0
+object: model
+owned_by: Jeonghwan Park
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:maywell/koOpenChat-sft
+- license:cc-by-sa-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 424479684bce385847fa5cafd61ac144a662aec0
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q2_K.gguf
+      size: 3083107296
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9a74674d6545b454995059dc9d3436ba85459e53
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q3_K_L.gguf
+      size: 3822034720
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ce02f9185eb806b2fe192f2304354efbaac16f09
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q3_K_M.gguf
+      size: 3518996256
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f30807e9c29fa0cf903ad39ca6f8133273b97c88
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q3_K_S.gguf
+      size: 3164577568
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 83b2ad4944e4fb586de6a2114baacdb029ec7e84
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q4_0.gguf
+      size: 4108927840
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8f168b43275d1d1a1ecae06a17f6f1f9c8b3d45b
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q4_K_M.gguf
+      size: 4368450400
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 039a33c34ea4fac11943cd28781cc1f94e1cd199
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q4_K_S.gguf
+      size: 4140385120
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e10ff8a725c1799f5c594e81edd3ab1ffcc9208f
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q5_0.gguf
+      size: 4997728096
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bc8b98c0aa9fde168540058cdbcd7b80c8dc9cbb
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q5_K_M.gguf
+      size: 5131421536
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a217d2260ccffc32419b6091e23597a0358d123
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q5_K_S.gguf
+      size: 4997728096
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b9221602f26cb33a27f0f3bd820fffc096854324
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q6_K.gguf
+      size: 5942078368
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - koOpenChat-sft/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5e133bb5362a95537faf869e61f31209d5439cc
+      uri: https://huggingface.co/TheBloke/koOpenChat-sft-GGUF/resolve/main/koopenchat-sft.Q8_0.gguf
+      size: 7695874848
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

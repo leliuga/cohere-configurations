@@ -1,0 +1,396 @@
+id: openchat-3.5-1210-starling-slerp
+parent_id: SanjiWatsuki/openchat-3.5-1210-starling-slerp
+name: OpenChat 3.5 1210 Starling SLERP
+description: ""
+architecture: mistral
+licence: cc-by-4.0
+object: model
+owned_by: Sanji Watsuki
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- en
+- base_model:SanjiWatsuki/openchat-3.5-1210-starling-slerp
+- license:cc-by-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 355898e26f3a2b03f96adc029776f3dfbd7919a0
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q2_K.gguf
+      size: 3084043936
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5f253c4184e355ae10b3668bbd1bda1ea40cf590
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q3_K_L.gguf
+      size: 3822971360
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 476ccd1ef51370168ee051c6dffba50fd6747b9d
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q3_K_M.gguf
+      size: 3519932896
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f77a4325fca49727384564126ae55b26334f78dd
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q3_K_S.gguf
+      size: 3165514208
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 62c89c113e0b673daf57a411c997b2633cfd3fcc
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q4_0.gguf
+      size: 4109864480
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b387df26eb29fa3b8dbd52617c3c452b7a85671
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q4_K_M.gguf
+      size: 4369387040
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 342db35e081b55f6527bb1199ffb15c573c47859
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q4_K_S.gguf
+      size: 4141321760
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9b70fe935772dc88ec0d17ac415d9420523c7055
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q5_0.gguf
+      size: 4998664736
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 890caa230af57715338e865122bcb5ce150acecd
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q5_K_M.gguf
+      size: 5132358176
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6b8f9403e823fea1cafd072f2290274fc874a0d4
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q5_K_S.gguf
+      size: 4998664736
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aafe9a3b8084cfb1abacf43aae0f3f1ea2a2ef4a
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q6_K.gguf
+      size: 5943015008
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openchat-3.5-1210-starling-slerp/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 62e424e35093e5b557c879b9dd9f8a4b7238f252
+      uri: https://huggingface.co/TheBloke/openchat-3.5-1210-starling-slerp-GGUF/resolve/main/openchat-3.5-1210-starling-slerp.Q8_0.gguf
+      size: 7696811488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

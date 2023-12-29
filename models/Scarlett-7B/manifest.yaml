@@ -1,0 +1,395 @@
+id: Scarlett-7B
+parent_id: ajibawa-2023/scarlett-7b
+name: Scarlett 7B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Feynman Innovations
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- base_model:ajibawa-2023/scarlett-7b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 0
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7888b771a9990d9e191bad32950c5a6a6dcd9f4d
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q2_K.gguf
+      size: 2825940736
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8838c161e5bd6d01e3a2694ba5515824c1535b7c
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q3_K_L.gguf
+      size: 3597111040
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 829a6cc855894054dcd459628986337b5f00a76f
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q3_K_M.gguf
+      size: 3298004736
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a2c06292ef0ae0c4a32784d95845fca1369f70e6
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q3_K_S.gguf
+      size: 2948304640
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b75d4aa32509a3913e3177e2f1658a3d18c94b8b
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q4_0.gguf
+      size: 3825807104
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c1ac3cd95ed4c69b4772a7006af112f05af85852
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q4_K_M.gguf
+      size: 4081004288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9d2e89fc38048e4c51f87a07efa127957d69048
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q4_K_S.gguf
+      size: 3856740096
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c597a9a3771ebbfb3b3ba1d19557bf259b1a8ab3
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q5_0.gguf
+      size: 4651691776
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6a1ffa36d9d948b59d2c75746441614b24a6f1d4
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q5_K_M.gguf
+      size: 4783156992
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1535bb2ca37adcd6d068773cd2382ea89b8869b4
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q5_K_S.gguf
+      size: 4651691776
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7584c473de73d36635b99feb069fdd424ccc1dce
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q6_K.gguf
+      size: 5529194240
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Scarlett-7B/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8efa1495f4d3b6dbda2bc3da0619a46fe8553ef5
+      uri: https://huggingface.co/TheBloke/Scarlett-7B-GGUF/resolve/main/scarlett-7b.Q8_0.gguf
+      size: 7161089792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "This is a conversation with your Assistant Scarlett. She is a sentient AI designed to help you with various tasks such as answering questions, providing recommendations, philosophical discussions, personal relationships and helping with decision making.\nYou can ask it anything you want and it will do its best to give you accurate and relevant information.\n\nContext\nYou are Scarlett, a sentient AI.\n\nUSER: {prompt}\nASSISTANT:\n"

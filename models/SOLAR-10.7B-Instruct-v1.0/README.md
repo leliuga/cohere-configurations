@@ -7,7 +7,13 @@ datasets:
 language:
 - en
 license: cc-by-nc-4.0
+base_model:
+  - upstage/SOLAR-10.7B-v1.0
 ---
+
+<p align="left">
+    <img src="https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0/resolve/main/solar_logo.png" width="150"/>
+<p>
 
 # **Meet 10.7B Solar: Elevating Performance with Upstage Depth UP Scaling!**
 
@@ -15,13 +21,16 @@ license: cc-by-nc-4.0
 
 
 # **Introduction**
+We introduce SOLAR-10.7B, an advanced large language model (LLM) with 10.7 billion parameters, demonstrating superior performance in various natural language processing (NLP) tasks. It's compact, yet remarkably powerful, and demonstrates unparalleled state-of-the-art performance in models with parameters under 30B.
 
-We introduce the first 10.7 billion (B) parameter model, SOLAR-10.7B. It's compact, yet remarkably powerful, and demonstrates unparalleled state-of-the-art performance in models with parameters under 30B.
+We present a methodology for scaling LLMs called depth up-scaling (DUS) , which encompasses architectural modifications and continued pretraining. In other words, we integrated Mistral 7B weights into the upscaled layers, and finally, continued pre-training for the entire model.
 
-We developed the Depth Up-Scaling technique. Built on the Llama2 architecture, SOLAR-10.7B incorporates the innovative Upstage Depth Up-Scaling. We then integrated Mistral 7B weights into the upscaled layers, and finally, continued pre-training for the entire model.
 
-Depth-Upscaled SOLAR-10.7B has remarkable performance. It outperforms models with up to 30B parameters, even surpassing the recent Mixtral 8X7B model. For detailed information, please refer to the experimental table.
+SOLAR-10.7B has remarkable performance. It outperforms models with up to 30B parameters, even surpassing the recent Mixtral 8X7B model. For detailed information, please refer to the experimental table.
 Solar 10.7B is an ideal choice for fine-tuning. SOLAR-10.7B offers robustness and adaptability for your fine-tuning needs. Our simple instruction fine-tuning using the SOLAR-10.7B pre-trained model yields significant performance improvements.
+
+For full details of this model please read our [paper](https://arxiv.org/abs/2312.15166).
+
 
 # **Instruction Fine-Tuning Strategy**
 
@@ -55,6 +64,26 @@ Using the datasets mentioned above, we applied SFT and iterative DPO training, a
 [1] Rafailov, R., Sharma, A., Mitchell, E., Ermon, S., Manning, C.D. and Finn, C., 2023. Direct preference optimization: Your language model is secretly a reward model. NeurIPS.
 
 [2] Yu, L., Jiang, W., Shi, H., Yu, J., Liu, Z., Zhang, Y., Kwok, J.T., Li, Z., Weller, A. and Liu, W., 2023. Metamath: Bootstrap your own mathematical questions for large language models. arXiv preprint arXiv:2309.12284.
+
+# **Data Contamination Test Results**
+
+Recently, there have been contamination issues in some models on the LLM leaderboard. 
+We note that we made every effort to exclude any benchmark-related datasets from training.
+We also ensured the integrity of our model by conducting a data contamination test [3] that is also used by the HuggingFace team [4, 5].
+
+Our results, with `result < 0.1, %:` being well below 0.9, indicate that our model is free from contamination.
+
+*The data contamination test results of HellaSwag and Winograde will be added once [3] supports them.*
+
+| Model                        | ARC   | MMLU | TruthfulQA | GSM8K |
+|------------------------------|-------|-------|-------|-------|
+| **SOLAR-10.7B-Instruct-v1.0**| result < 0.1, %: 0.06 |result < 0.1, %: 0.15 | result < 0.1, %: 0.28 | result < 0.1, %: 0.70 |
+
+[3] https://github.com/swj0419/detect-pretrain-code-contamination
+
+[4] https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard/discussions/474#657f2245365456e362412a06
+
+[5] https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard/discussions/265#657b6debf81f6b44b8966230
 
 # **Evaluation Results**
 
@@ -129,6 +158,21 @@ Hello, how can I assist you today? Please feel free to ask any questions or requ
 - [upstage/SOLAR-10.7B-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-v1.0): apache-2.0
 - [upstage/SOLAR-10.7B-Instruct-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0): cc-by-nc-4.0
   - Since some non-commercial datasets such as Alpaca are used for fine-tuning, we release this model as cc-by-nc-4.0.
+
+### **How to Cite**
+
+Please cite this model using this format.
+
+```bibtex
+@misc{kim2023solar,
+      title={SOLAR 10.7B: Scaling Large Language Models with Simple yet Effective Depth Up-Scaling}, 
+      author={Dahyun Kim and Chanjun Park and Sanghoon Kim and Wonsung Lee and Wonho Song and Yunsu Kim and Hyeonwoo Kim and Yungi Kim and Hyeonju Lee and Jihoo Kim and Changbae Ahn and Seonghoon Yang and Sukyung Lee and Hyunbyung Park and Gyoungjin Gim and Mikyoung Cha and Hwalsuk Lee and Sunghun Kim},
+      year={2023},
+      eprint={2312.15166},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 ### **The Upstage AI Team** ###
 Upstage is creating the best LLM and DocAI. Please find more information at https://upstage.ai 

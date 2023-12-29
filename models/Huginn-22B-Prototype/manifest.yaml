@@ -1,0 +1,394 @@
+id: Huginn-22B-Prototype
+parent_id: The-Face-Of-Goonery/Huginn-22b-Prototype
+name: Huginn 22B Prototype
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Caleb Morgan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:The-Face-Of-Goonery/Huginn-22b-Prototype
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 6656
+  attention_head_size: 52
+  key_value_head_size: 52
+  intermediate_size: 17920
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7f563cb27e157c435c6a1d4644a08b27e01cdd66
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q2_K.gguf
+      size: 9083483008
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fe5e8a4406b6c384dc8d51f935743323891ab316
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q3_K_L.gguf
+      size: 11608835968
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d1440ad3bcac14bd9e84a1efee2892cc2e988a3
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q3_K_M.gguf
+      size: 10610329472
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8c527ea7c80233be24804c5109d48ec039220878
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q3_K_S.gguf
+      size: 9465071488
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 66484cdb723a7e4b3992c3f3b948a076f68a1f17
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q4_0.gguf
+      size: 12335737728
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 919c897a4b7af73d0cfb1443ae43be9f14c0cfce
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q4_K_M.gguf
+      size: 13179186048
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 442d013f69e76d83492ea0a24069f337c2199099
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q4_K_S.gguf
+      size: 12417526656
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 81cc588e4214e6cb4b0687a4ad551d8a4b487426
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q5_0.gguf
+      size: 15037541248
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e76f19f8e8a25552648b2b0ad878f965e9979fa8
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q5_K_M.gguf
+      size: 15472044928
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ed1b27386613f509c68ad6f5763719a953f068ee
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q5_K_S.gguf
+      size: 15037541248
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 056bc68bd70e1efe396902d47b71426b0ce5c3d8
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q6_K.gguf
+      size: 17908207488
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Huginn-22B-Prototype/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cb32eda39a30e2c0d5294c7e547a514d5777ca18
+      uri: https://huggingface.co/TheBloke/Huginn-22B-Prototype-GGUF/resolve/main/huginn-22b-prototype.Q8_0.gguf
+      size: 23194535808
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: ""

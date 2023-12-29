@@ -1,0 +1,347 @@
+id: openbuddy-deepseek-67b-v15-base
+parent_id: OpenBuddy/openbuddy-deepseek-67b-v15-base
+name: Openbuddy Deepseek 67B V15 Base
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: OpenBuddy
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- deepseek
+- text-generation
+- zh
+- en
+- fr
+- de
+- ja
+- ko
+- it
+- ru
+- fi
+- base_model:OpenBuddy/openbuddy-deepseek-67b-v15-base
+- license:other
+- region:us
+config:
+  vocab_size: 102400
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 95
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d1831a81c2d2758d23f9e3a82f0c4e3572e778ca
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q2_K.gguf
+      size: 28495750592
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ab89fb734190f8c162ed5088d73fe84ebf0f16c
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q3_K_L.gguf
+      size: 35575768512
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 462f37ec4bfc59c6310279dc742bf979d9f78fb8
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q3_K_M.gguf
+      size: 32584705472
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ce48ff83e3d6e7cdbf7c13fbbf4bb4e483390a2e
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q3_K_S.gguf
+      size: 29309380032
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9ed74f807ecf82466aaca79c9a83aefa99332e7f
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q4_0.gguf
+      size: 38152644032
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1cea34a75f5a38b0dd9019fd5e83f6e50d87e1e4
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q4_K_M.gguf
+      size: 40439686592
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 42cce79d7bc6f3992c3cbb2bf8322bc47ca09dff
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q4_K_S.gguf
+      size: 38247015872
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b312937f8dbbcf0b3248503a3514da6e048ac87c
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q5_0.gguf
+      size: 46475716032
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3086a127731086fdf018f599ec52c253c7d0a667
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q5_K_M.gguf
+      size: 47653889472
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-deepseek-67b-v15-base/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "98"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5baa6393bbd03fefe49062b52f80eeb22bda062b
+      uri: https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q5_K_S.gguf
+      size: 46475716032
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

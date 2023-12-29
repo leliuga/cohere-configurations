@@ -1,0 +1,284 @@
+id: SOLARC-MOE-10.7Bx4
+parent_id: DopeorNope/SOLARC-MOE-10.7Bx4
+name: Solarc MOE 10.7Bx4
+description: ""
+architecture: mixtral
+licence: cc-by-nc-sa-4.0
+object: model
+owned_by: Seungyoo Lee
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- text-generation
+- ko
+- base_model:DopeorNope/SOLARC-MOE-10.7Bx4
+- license:cc-by-nc-sa-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0db983e3314420405f26c795c88e204786563062
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q2_K.gguf
+      size: 12016368672
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d2765a2871e01d442b335398764e505b97cc566
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q3_K_M.gguf
+      size: 15701793824
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4cf7814da9ddcf82124ce19d6d8275287d90800c
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q4_0.gguf
+      size: 20343946272
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a0ae02df046bcf1c12089f57b59e61732270924c
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q4_K_M.gguf
+      size: 20369898528
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a4572e335cf9f1b6389add714f18d0ea0799e63
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q5_0.gguf
+      size: 24839846944
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9b99e7d31b7e3db0b51b991909c2e2cc3fd93be
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q5_K_M.gguf
+      size: 24853216288
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2af11df29bc6b4b3ae55138d67d1cfef07878f04
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q6_K.gguf
+      size: 29616741408
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SOLARC-MOE-10.7Bx4/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac0648091603e55846cac814fdfd106139389e72
+      uri: https://huggingface.co/TheBloke/SOLARC-MOE-10.7Bx4-GGUF/resolve/main/solarc-moe-10.7bx4.Q8_0.gguf
+      size: 38359292960
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### User:\n{prompt}\n\n### Assistant:\n"

@@ -1,0 +1,346 @@
+id: Lemur-70B-Chat-v1
+parent_id: OpenLemur/lemur-70b-chat-v1
+name: Lemur 70B Chat v1
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: OpenLemur
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- code
+- text-generation-inference
+- en
+- base_model:OpenLemur/lemur-70b-chat-v1
+- license:cc-by-nc-4.0
+- region:us
+config:
+  vocab_size: 32005
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 93686f34ba9b8fd0a7065f6eb0cb08bddfa2ef3a
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q2_K.gguf
+      size: 29279300576
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4fb1fbaf6a5a047d99e3a2afb5c8a008a7063a5
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q3_K_L.gguf
+      size: 36147887136
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e3ee43c85d51da7b8f0de4e90938dc29229b685f
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q3_K_M.gguf
+      size: 33186708512
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 42a52fa4f1971efe7b05ecd8bda240f6539d386c
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q3_K_S.gguf
+      size: 29919345696
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fa9f91ff583a0445cf2b10184c79d46d9cf15734
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q4_0.gguf
+      size: 38872306016
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 409d37f4639d1de7bbd3d6e622fa45a2a1a3e2a7
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q4_K_M.gguf
+      size: 41422967136
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e67784908fc5736d42f497bfb1a97aa618d81cdd
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q4_K_S.gguf
+      size: 39073632608
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4eafb0d17026e919e5d900859ba43a139899d5a4
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q5_0.gguf
+      size: 47461459296
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eda94609f40a2587555d891d87784bfbe7e18552
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q5_K_M.gguf
+      size: 48753829216
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Lemur-70B-Chat-v1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: caabe0f00517cdf2c52c41dc3de54147465815bf
+      uri: https://huggingface.co/TheBloke/Lemur-70B-Chat-v1-GGUF/resolve/main/lemur-70b-chat-v1.Q5_K_S.gguf
+      size: 47461459296
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

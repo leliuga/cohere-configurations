@@ -1,0 +1,289 @@
+id: Mixtral-SlimOrca-8x7B
+parent_id: Open-Orca/Mixtral-SlimOrca-8x7B
+name: Mixtral SlimOrca 8X7B
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: OpenOrca
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- text-generation
+- dataset:Open-Orca/SlimOrca
+- base_model:Open-Orca/Mixtral-SlimOrca-8x7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dc30e988dbe28422138b112e2e2a29ebf6b2da26
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q2_K.gguf
+      size: 15644043904
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e4571c1e749f3e5fb28f5628dc356ff291f668c
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q3_K_M.gguf
+      size: 20363365824
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0b63800b05ba35a6eafa0d10af216e4102f80924
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q4_0.gguf
+      size: 26441544192
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46340ad30634f9df8a18a0c7e57c4b90fbe9554e
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q4_K_M.gguf
+      size: 26441544192
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ead126145f7aaa179c27fdf6fbe21a269faf036c
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q5_0.gguf
+      size: 32229291520
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 14b84da41cb8c75f968b3b4524e181eca100b5e4
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q5_K_M.gguf
+      size: 32229291520
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 772274ba3cb28056560a23a99ae854cab64f9f22
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q6_K.gguf
+      size: 38378773056
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mixtral-SlimOrca-8x7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e7fbbbf4974e2467a1fab7829d853ee15125be9d
+      uri: https://huggingface.co/TheBloke/Mixtral-SlimOrca-8x7B-GGUF/resolve/main/mixtral-slimorca-8x7b.Q8_0.gguf
+      size: 49624279488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

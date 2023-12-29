@@ -1,0 +1,398 @@
+id: prometheus-7B-v1.0
+parent_id: kaist-ai/prometheus-7b-v1.0
+name: Prometheus 7B V1.0
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: KAIST AI
+pipeline: text2text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text2text-generation
+- en
+- dataset:kaist-ai/Feedback-Collection
+- arxiv:2310.08491
+- base_model:kaist-ai/prometheus-7b-v1.0
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eda6e628eeaa4265b0079e21f81a3bfb1cf97625
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q2_K.gguf
+      size: 2825940704
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2106f2150eb0cc14cbc3eb149cde300300764d5e
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q3_K_L.gguf
+      size: 3597111008
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: db69f8f5c64103dba85c889e6beeb8edee184b36
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q3_K_M.gguf
+      size: 3298004704
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 21b21f45a8a71db9abc83510ccf4d68933b3439d
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q3_K_S.gguf
+      size: 2948304608
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f961a49540a5d7369ac2fd936b54fbe48da59ac0
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q4_0.gguf
+      size: 3825807072
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1674b0d3c5e9ec5732a54e49deacf33b07512244
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q4_K_M.gguf
+      size: 4081004256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1ba67c6655294a7c0e2b4127b6041a87cbb693d5
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q4_K_S.gguf
+      size: 3856740064
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71208ea88f0fca04df2094b245e89224946c7ca5
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q5_0.gguf
+      size: 4651691744
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9bf5e0fa5d9f8cd0890333e6a72e429c37e5454f
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q5_K_M.gguf
+      size: 4783156960
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25a6d7259ed3b2a7fcc62257d91eb50f7666234f
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q5_K_S.gguf
+      size: 4651691744
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 055c3348ac42e8a8d14a0965d88ca04822c6044b
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q6_K.gguf
+      size: 5529194208
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - prometheus-7B-v1.0/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b547173ba4d381d5609cc99ff466a3a174c07018
+      uri: https://huggingface.co/TheBloke/prometheus-7B-v1.0-GGUF/resolve/main/prometheus-7b-v1.0.Q8_0.gguf
+      size: 7161089760
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "###Task Description:\nAn instruction (might include an Input inside it), a response to evaluate, a reference answer that gets a score of 5, and a score rubric representing a evaluation criteria are given.\n1. Write a detailed feedback that assess the quality of the response strictly based on the given score rubric, not evaluating in general.\n2. After writing a feedback, write a score that is an integer between 1 and 5. You should refer to the score rubric.\n3. The output format should look as follows: \\\"Feedback: (write a feedback for criteria) [RESULT] (an integer number between 1 and 5)\\\"\n4. Please do not generate any other opening, closing, and explanations.\n\n###The instruction to evaluate:\n{prompt}\n\n###Response to evaluate:\n{{response}}\n\n###Reference Answer (Score 5):\n{{reference_answer}}\n\n###Score Rubrics:\n[{{criteria_description}}]\nScore 1: {{score1_description}}\nScore 2: {{score2_description}}\nScore 3: {{score3_description}}\nScore 4: {{score4_description}}\nScore 5: {{score5_description}}\n\n###Feedback:\n"

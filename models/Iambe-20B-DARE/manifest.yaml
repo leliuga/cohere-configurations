@@ -1,0 +1,394 @@
+id: Iambe-20B-DARE
+parent_id: athirdpath/Iambe-20b-DARE
+name: Iambe 20B Dare
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: LadyBabyloin
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:athirdpath/Iambe-20b-DARE
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 93f53f18854b75483c98ac05a323be95fa9160ea
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q2_K.gguf
+      size: 8311592480
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2474d2001ddfdde00edc799760e324380cc6a03
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q3_K_L.gguf
+      size: 10627767840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d3471ae3dd194a2a86da2f95857eca23c0ec0a48
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q3_K_M.gguf
+      size: 9697156640
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d3d2587f029ed0f078a0c8dd2a95ccd74733bd1
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q3_K_S.gguf
+      size: 8658370080
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aa5aefb742ba1e2cfe96f1c3398e99b5459e17ee
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q4_0.gguf
+      size: 11292026400
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bb1ced68c63d9da3bdad4c2b3d00d5a682ece8ed
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q4_K_M.gguf
+      size: 12042208800
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3642e2355cfff43c52dd418fb3fefb44d268eee6
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q4_K_S.gguf
+      size: 11340523040
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d55208a7165880ffb9c81cb01e394f15d9265eb
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q5_0.gguf
+      size: 13770761760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b497fe7bcc2030274ce77da0ed718e57a767f8af
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q5_K_M.gguf
+      size: 14157219360
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5071176e03e722bc8a4e8a3580c0fc10b18ef76b
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q5_K_S.gguf
+      size: 13770761760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9b446bd8fded280347b40c2b50ea9ee490d0c682
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q6_K.gguf
+      size: 16404418080
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Iambe-20B-DARE/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29e5ccdfa371f82d2c29fbcb9417c6a9a07ce838
+      uri: https://huggingface.co/TheBloke/Iambe-20B-DARE-GGUF/resolve/main/iambe-20b-dare.Q8_0.gguf
+      size: 21246647840
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

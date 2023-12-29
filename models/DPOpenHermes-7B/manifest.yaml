@@ -1,0 +1,404 @@
+id: DPOpenHermes-7B
+parent_id: openaccess-ai-collective/DPOpenHermes-7B
+name: DPOpenHermes 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Open Access AI Collective
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- text-generation
+- en
+- dataset:teknium/openhermes
+- dataset:argilla/ultrafeedback-binarized-preferences
+- dataset:Intel/orca_dpo_pairs
+- base_model:openaccess-ai-collective/DPOpenHermes-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71a9d6039efba1a3af9fe5e47302e4fa1de785df
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q2_K.gguf
+      size: 3083107552
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: effe23b3e5fb8abc3e9322a80b39551b34cb3e77
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q3_K_L.gguf
+      size: 3822034976
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3d057e339ec051abf8703c59d320c7d2cc4793e1
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q3_K_M.gguf
+      size: 3518996512
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 028fd6fde67d662fc0e9944d8614336730a6f8dc
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q3_K_S.gguf
+      size: 3164577824
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a7d30de1f6a891f8dae8eb4fc25232d6408294f
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q4_0.gguf
+      size: 4108928096
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dac2d11479f643e4c17e781fd9165426ca1d3857
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q4_K_M.gguf
+      size: 4368450656
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8becee0edffe97e874e1d02e91339667c413f20c
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q4_K_S.gguf
+      size: 4140385376
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3053b9d5698bf279e8fad56159e6a781c85f6ab9
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q5_0.gguf
+      size: 4997728352
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fae18ef6abe62f464fd703f6bdbdae75cca2e749
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q5_K_M.gguf
+      size: 5131421792
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9476361e2277e582569f25c425d44747a9692104
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q5_K_S.gguf
+      size: 4997728352
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ed2e66dc1b5ab250724c714830106430aefc2e92
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q6_K.gguf
+      size: 5942078624
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DPOpenHermes-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a98ee12c3362d9a4b2c34c1684e56259c4becb88
+      uri: https://huggingface.co/TheBloke/DPOpenHermes-7B-GGUF/resolve/main/dpopenhermes-7b.Q8_0.gguf
+      size: 7695875104
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

@@ -84,9 +84,9 @@ The response should provide the accurate answer to the instruction, while being 
 [Instruction End] 
 """
 
-from transformers import AutoTokenizer, AutoModel
-tokenizer = AutoTokenizer.from_pretrained("starmpcc/Asclepius-13B")
-model = AutoModel.from_pretrained("starmpcc/Asclepius-13B")
+from transformers import AutoTokenizer, AutoModelForCausalLM
+tokenizer = AutoTokenizer.from_pretrained("starmpcc/Asclepius-13B", use_fast=False)
+model = AutoModelForCausalLM.from_pretrained("starmpcc/Asclepius-13B")
 
 note = "This is a sample note"
 question = "What is the diagnosis?"

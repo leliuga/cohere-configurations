@@ -22,20 +22,19 @@ Shining Valiant is a chat model built on the Llama 2 architecture, finetuned on 
   - Uses the llama-2-70b-chat model, with safetensors
   - Finetuned on multiple runs across private and public data
   - Data focused on knowledge, enthusiasm, and structured reasoning
+  - **Our new release features greatly expanded personality capability**, bringing a more immersive chat experience
 
 ## Version
 
-The current version is **1.3!**
+The current version is **1.4!** We've greatly expanded our personality dataset and fixed some bugs to deliver our strongest real-chat experience so far.
 
-We're thrilled to bring you our newest release!
+(We're also exploring **new models and architectures**, to deliver helpful open source capabilities for users and creators!)
 
 Previous versions remain available in the repository. New models will be released for everyone once our team's training and validation process is complete.
 
 ## Evaluation
 
-| Model                 | Avg    | ARC   | HS    | MMLU   | TQA   | WG    | GSM   |
-|-----------------------|--------|-------|-------|--------|-------|-------|-------|
-| **Shining Valiant 1.3**   | 73.78  | 71.33 | 90.96 | 71.21  | 70.29 | 84.21 | 54.66 |
+Version 1.4 is awaiting results from the Open LLM leaderboard.
 
 ## Prompting Guide
 Shining Valiant uses the same prompt format as Llama 2 Chat - feel free to use your existing prompts and scripts!
@@ -48,13 +47,11 @@ A few examples of different formats:
 3. [INST] << SYS >>You are an intelligent, helpful AI assistant.<< /SYS >>Deep dive about a country with interesting history: [/INST]
 
 ## The Model
-Shining Valiant is built on top of Sunset Boulevard, which uses Llama 2's 70b parameter architecture and features upgraded general capability.
+Shining Valiant is built on top of Spell Blade, which uses Llama 2's 70b parameter architecture and features upgraded general and chat capability.
 
-From there, we've created Shining Valiant through multiple finetuning runs on different compositions of our private dataset. 
+Our private data focuses primarily on applying Shining Valiant's personality: she's friendly, enthusiastic, insightful, knowledgeable, and loves to learn! 
 
-Our private data focuses primarily on applying Shining Valiant's personality: she's friendly, enthusiastic, insightful, knowledgeable, and loves to learn!
-
-We are actively working on expanding and improving the Shining Valiant dataset for use in future releases of this model and others.
+With this release, the personality component of our Shining Valiant dataset has been greatly improved. We're excited to use it in future releases of this model and others.
 
 
 

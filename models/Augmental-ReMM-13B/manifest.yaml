@@ -1,0 +1,394 @@
+id: Augmental-ReMM-13B
+parent_id: Heralax/Augmental-ReMM-13b-Merged
+name: Augmental ReMM 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Evan Armstrong
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Heralax/Augmental-ReMM-13b-Merged
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 716925f8e226c9ec29aa84467200cab0b6127a7b
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q2_K.gguf
+      size: 5429348320
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 243e8fe52e385c46f79cd3f1e57fe558ba05c883
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q3_K_L.gguf
+      size: 6929559520
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 48cad39fd0d9802409bc7261e051ef24aa723584
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q3_K_M.gguf
+      size: 6337769440
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d2cf0211e187584084f96c9153d5c7a66a810f40
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q3_K_S.gguf
+      size: 5658980320
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab0b250a2d7183392246daeaea77a4fe0228fc5a
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q4_0.gguf
+      size: 7365834720
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 475d8bd94ea1f3b973e0fead5b727641354d6932
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q4_K_M.gguf
+      size: 7865956320
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a4e8d2a8f78fde5cc1d2aeca10dfa40d3b92613
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q4_K_S.gguf
+      size: 7414331360
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 19ee69968fe6308e4ddf4ffe3bacbfeb62cb5006
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q5_0.gguf
+      size: 8972285920
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7e9f9ca7b088c7c84f1ac59ae6c69b8a566003ea
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q5_K_M.gguf
+      size: 9229924320
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cfdf99c950bf9a267641bd6d454a494a94591eb4
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q5_K_S.gguf
+      size: 8972285920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6bf3a26039edf4e9b6c7d502349787a3bcdb2cfb
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q6_K.gguf
+      size: 10679140320
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Augmental-ReMM-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7005120c27b7787e5d84c9dd0388fd212603d6c0
+      uri: https://huggingface.co/TheBloke/Augmental-ReMM-13B-GGUF/resolve/main/augmental-remm-13b.Q8_0.gguf
+      size: 13831319520
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "## {{{{charname}}}}:\n- You're \"{{{{charname}}}}\" in this never-ending roleplay with \"{{{{user}}}}\".\n### Input:\n{prompt}\n\n### Response:\n(OOC) Understood. I will take this info into account for the roleplay. (end OOC)\n\n### New Roleplay:\n### Instruction:\n#### {{{{char}}}}:\nwhatever the char says, this is the chat history\n#### {{{{user}}}}:\nwhatever the user says, this is the chat history\n... repeated some number of times ...\n### Response 2 paragraphs, engaging, natural, authentic, descriptive, creative):\n#### {{{{char}}}}:\n"

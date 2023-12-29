@@ -1,0 +1,290 @@
+id: MixtralRPChat-ZLoss
+parent_id: chargoddard/MixtralRPChat-ZLoss
+name: MixtralRPChat ZLoss
+description: ""
+architecture: mixtral
+licence: cc-by-nc-4.0
+object: model
+owned_by: Charles Goddard
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- en
+- dataset:Open-Orca/SlimOrca
+- dataset:lemonilia/LimaRP
+- dataset:chargoddard/rpguild
+- dataset:chargoddard/summarize_from_feedback_alpaca
+- dataset:HuggingFaceH4/no_robots
+- dataset:chargoddard/coedit-reworded
+- arxiv:2202.08906
+- base_model:chargoddard/MixtralRPChat-ZLoss
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2f206ee3fe33c4e3d61de091750cbd2f4222b6ec
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q2_K.gguf
+      size: 15644971200
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: df2fdce183b7609d52d557e69f01d165ee3fa715
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q3_K_M.gguf
+      size: 20364292288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f8085b6c244554f1a1681d063ea676abf867bb38
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q4_0.gguf
+      size: 26442469568
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c44e8a47a7d9367612a8259a0db6250fb154ac3f
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q4_K_M.gguf
+      size: 26442469568
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 13f0d04a7d32289057207338699631126f7f3602
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q5_0.gguf
+      size: 32230215872
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dcff8d5d5a926a4cdc5c3718085722a40537b849
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q5_K_M.gguf
+      size: 32230215872
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a3546114b9f8b0a2d1e5fafbc0b252330bcfb1c
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q6_K.gguf
+      size: 38379696320
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MixtralRPChat-ZLoss/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ef57aa7d45c3bc5920016d8e23be123666e785ff
+      uri: https://huggingface.co/TheBloke/MixtralRPChat-ZLoss-GGUF/resolve/main/mixtralrpchat-zloss.Q8_0.gguf
+      size: 49625198784
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "***System: {system_message} ***Query: {prompt}  ***Response:\n"

@@ -1,0 +1,395 @@
+id: openbuddy-zephyr-7B-v14.1
+parent_id: OpenBuddy/openbuddy-zephyr-7b-v14.1
+name: Openbuddy Zephyr 7B v14.1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: OpenBuddy
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:OpenBuddy/openbuddy-zephyr-7b-v14.1
+- license:apache-2.0
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 36608
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ed93f6429940a01902e815924e0db7336cc6ca1
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q2_K.gguf
+      size: 3104861952
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bfab43872b3a3bf1787d18953ec4672d2e75d01b
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q3_K_L.gguf
+      size: 3845705472
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b490e567ff959e622e0878d4972995045330ee27
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q3_K_M.gguf
+      size: 3542667008
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dc764b2e5fd60e455d67f1f503c2f7c6cd1a95a3
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q3_K_S.gguf
+      size: 3188248320
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 11882be378d02b4b2f5d64dd2e0662f8bcb0fd0b
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q4_0.gguf
+      size: 4135104256
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c06b51246a8d172e0fd43e1ef1aee99c5211c96d
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q4_K_M.gguf
+      size: 4394626816
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd233b68e3137298fc7b9171033888a43582215f
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q4_K_S.gguf
+      size: 4166561536
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f9b2bfe84fb7b1de9dbf53a6e847b0b6e3ac6dd5
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q5_0.gguf
+      size: 5026262784
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 834ccbfa0076efa561e5834431b726ac0241c301
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q5_K_M.gguf
+      size: 5159956224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f3ddd179290f8f11bc416ee517511cb677da9212
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q5_K_S.gguf
+      size: 5026262784
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9902fd94357f0915a8702a1bb8889f5756159bbc
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q6_K.gguf
+      size: 5973118720
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-zephyr-7B-v14.1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 31b962a4fbda8a24df5cb46e2509b57465bb211b
+      uri: https://huggingface.co/TheBloke/openbuddy-zephyr-7B-v14.1-GGUF/resolve/main/openbuddy-zephyr-7b-v14.1.Q8_0.gguf
+      size: 7736053504
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.\nAlways answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\nYou like to use emojis. You can speak fluently in many languages, for example: English, Chinese.\nYou cannot access the internet, but you have vast knowledge, cutoff: 2021-09.\nYou are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.\n\nUser: {prompt}\nAssistant: \n"

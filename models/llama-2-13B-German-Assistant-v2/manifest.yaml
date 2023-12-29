@@ -1,0 +1,398 @@
+id: llama-2-13B-German-Assistant-v2
+parent_id: flozi00/Llama-2-13B-german-assistant-v2
+name: Llama 2 13B German Assistant v2
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Florian Zimmermeister
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- de
+- dataset:flozi00/conversations
+- base_model:flozi00/Llama-2-13B-german-assistant-v2
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3912326ff1f2fa5bc1082ea52b02f034ceca92b7
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q2_K.gguf
+      size: 5429348256
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a57bf0c9756bac4148a24704b53fcee9c29a373e
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q3_K_L.gguf
+      size: 6929559456
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b0611dbdc8eda046c2fb6b74cb20077c2eb1927
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q3_K_M.gguf
+      size: 6337769376
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3b0473f7b601f0d9c8bdff3e72cd85fcfeabdd92
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q3_K_S.gguf
+      size: 5658980256
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4b996d3c97c5f2977bf65f20f9410da7649d9a22
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q4_0.gguf
+      size: 7365834656
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d1cd6acfb1a1a1f62df38291ed5df5c5d22df129
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q4_K_M.gguf
+      size: 7865956256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b3ff98aeb1df5233ca5fa113ad16646f5396481
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q4_K_S.gguf
+      size: 7414331296
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c59bd25ab719b3ac95ef879295dbffa997403900
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q5_0.gguf
+      size: 8972285856
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0966b07a552a45c60be30b9e0e7bdbc20d80fe59
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q5_K_M.gguf
+      size: 9229924256
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e0a6c9a56b38688102939c3814295d1e84f91c8d
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q5_K_S.gguf
+      size: 8972285856
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 706006f914ae7ab43e968826ac8a2ccd625a5e7d
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q6_K.gguf
+      size: 10679140256
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama-2-13B-German-Assistant-v2/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fcf160e422f456128e03f0cf9daac609d39192d0
+      uri: https://huggingface.co/TheBloke/llama-2-13B-German-Assistant-v2-GGUF/resolve/main/llama-2-13b-german-assistant-v2.Q8_0.gguf
+      size: 13831319456
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|prompter|>{prompt}<|endoftext|><|assistant|>

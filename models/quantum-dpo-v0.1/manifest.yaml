@@ -1,0 +1,396 @@
+id: quantum-dpo-v0.1
+parent_id: quantumaikr/quantum-dpo-v0.1
+name: Quantum DPO v0.1
+description: ""
+architecture: mistral
+licence: cc-by-nc-4.0
+object: model
+owned_by: quantumai.kr
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- text-generation
+- en
+- base_model:quantumaikr/quantum-dpo-v0.1
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0783ad6b108dfba5847686adad800e433b4f5204
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q2_K.gguf
+      size: 3084034176
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2e5dad1d9a6df48b3e6a3933f30e53ba5feff6ca
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q3_K_L.gguf
+      size: 3822960768
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 79892b3f5129ea4b01d74f800c1f262a98b1308b
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q3_K_M.gguf
+      size: 3519922304
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e081474ced6eb78d21b66af6b67870cfdbdabad8
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q3_K_S.gguf
+      size: 3165503616
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6a39072f470bc4e0e1bbddb1fe221c9ca0c14795
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q4_0.gguf
+      size: 4109852800
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: df4d072c6428a3377c28d9dcd3a6f0c5d7c069f7
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q4_K_M.gguf
+      size: 4369375360
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c3e7e964fa8c03075632d36fb5674ed8ebb98ea8
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q4_K_S.gguf
+      size: 4141310080
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e96c0d6e8484bddb37ad44baf2a439af1a0e5ada
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q5_0.gguf
+      size: 4998652032
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8808eae9aa1a219b8040e8a83e98291b473116f4
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q5_K_M.gguf
+      size: 5132345472
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9b25cd9e56d5fdbe36fc28fcf1ed9ae9aed3f477
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q5_K_S.gguf
+      size: 4998652032
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f0146805acc161a3feed466bd8faf2360efac3b2
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q6_K.gguf
+      size: 5943001216
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - quantum-dpo-v0.1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 33462fe07b4e7cf13aa2a79e0c66050dc24aa998
+      uri: https://huggingface.co/TheBloke/quantum-dpo-v0.1-GGUF/resolve/main/quantum-dpo-v0.1.Q8_0.gguf
+      size: 7696793728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### System:\n{system_message}\n\n### User:\n{prompt}\n\n### Assistant:\n"

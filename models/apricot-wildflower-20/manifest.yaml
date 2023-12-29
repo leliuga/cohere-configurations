@@ -1,0 +1,394 @@
+id: apricot-wildflower-20
+parent_id: crumb/apricot-wildflower-20
+name: Apricot Wildflower 20
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Maxine
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:crumb/apricot-wildflower-20
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 102dc94845a4397a8e83a73fce577aa8fa63d136
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q2_K.gguf
+      size: 3084034176
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d24df16df5a4de2c857c63d41bc571a033f034a3
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q3_K_L.gguf
+      size: 3822960768
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: daf074d15fda91e6e27dadf992dfb8e60e4355ec
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q3_K_M.gguf
+      size: 3519922304
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4608b32a91964b63956622aab128f74d9926dcd6
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q3_K_S.gguf
+      size: 3165503616
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c83621e3e4ac6741013eb035c730a193aeb0d41
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q4_0.gguf
+      size: 4109852800
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 70a6c7f211808c9de0b1fa7838f28abfe6a2fff7
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q4_K_M.gguf
+      size: 4369375360
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e09875b252f15ccd960bc8d01f0206995458015b
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q4_K_S.gguf
+      size: 4141310080
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f7d19f53c99550f835aed51d478cfecfebb8d390
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q5_0.gguf
+      size: 4998652032
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3c64d0e1539fd15eecaf689c0b96eb1da37cef14
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q5_K_M.gguf
+      size: 5132345472
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d2d3338a98360beb5c83a1929a7c8038b30c6ac
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q5_K_S.gguf
+      size: 4998652032
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3e73933feaec85b91fcacd3b462698f843d035c5
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q6_K.gguf
+      size: 5943001216
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - apricot-wildflower-20/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71b8a54d52efb313fad2fe192ace73be85bf8394
+      uri: https://huggingface.co/TheBloke/apricot-wildflower-20-GGUF/resolve/main/apricot-wildflower-20.Q8_0.gguf
+      size: 7696793728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

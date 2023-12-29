@@ -1,0 +1,396 @@
+id: TinyLlama-1.1B-intermediate-step-715k-1.5T
+parent_id: PY007/TinyLlama-1.1B-intermediate-step-715k-1.5T
+name: TinyLlama 1.1B Intermediate Step 715K 1.5T
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Zhang Peiyuan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- tinyllama
+- en
+- dataset:cerebras/SlimPajama-627B
+- dataset:bigcode/starcoderdata
+- base_model:PY007/TinyLlama-1.1B-intermediate-step-715k-1.5T
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 2048
+  attention_head_size: 32
+  key_value_head_size: 4
+  intermediate_size: 5632
+  hidden_layer_size: 22
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 516f84d24c3ab2d2256be0bfad4d5fce0be535db
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q2_K.gguf
+      size: 482142688
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b2eff06030cb27316526d3775ce200e20c8f50bb
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q3_K_L.gguf
+      size: 591526368
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0df3733533a3f9eeaacda44c8519bb354b8a2d41
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q3_K_M.gguf
+      size: 549845472
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1d0a4a8f4ba686a453c05797f4e9bfecef5d79bc
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q3_K_S.gguf
+      size: 499341792
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 893a1dcab791fb3cc8b14dd59cab795aa6739dc5
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q4_0.gguf
+      size: 636725728
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8a3875a34b1e5a40829eb5d6c4c40b345c22fc02
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q4_K_M.gguf
+      size: 667814368
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 678ce05a8bc2fe12bcf096e5fa6123579997794e
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q4_K_S.gguf
+      size: 642755040
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 07291d5f542f060a7a2ed1eb95063fc209faa594
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q5_0.gguf
+      size: 766028256
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60b9dba3ad85f68716ff203af8c458ddee3da882
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q5_K_M.gguf
+      size: 782043616
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 093cb27ee479b39d594aef2a773451721129facc
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q5_K_S.gguf
+      size: 766028256
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 32dc3a48a5e702933e52a843e0d5c76d299ffcac
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q6_K.gguf
+      size: 903412192
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - TinyLlama-1.1B-intermediate-step-715k-1.5T/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 07276d0a2775991feb51dbbeaf962bab28896d43
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-intermediate-step-715k-1.5T-GGUF/resolve/main/tinyllama-1.1b-intermediate-step-715k-1.5t.Q8_0.gguf
+      size: 1169807840
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

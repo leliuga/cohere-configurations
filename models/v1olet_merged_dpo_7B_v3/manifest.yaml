@@ -1,0 +1,395 @@
+id: v1olet_merged_dpo_7B_v3
+parent_id: v1olet/v1olet_merged_dpo_7B_v3
+name: V1Olet Merged DPO 7B v3
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Trong-Hieu Nguyen-Mau
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- base_model:v1olet/v1olet_merged_dpo_7B_v3
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3465fd493c5a398d230b17591a9908ec13c9d99a
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q2_K.gguf
+      size: 3083097728
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 710e90cd0d45a3d9e5d489f64e17f5536c68fb66
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q3_K_L.gguf
+      size: 3822024320
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f06cbc5afd0df5019cac9862621e6237bd07906e
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q3_K_M.gguf
+      size: 3518985856
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd366b3d5cc153280f10e4edd0d8ad1ad73ecfc2
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q3_K_S.gguf
+      size: 3164567168
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 76e38f41249fba32b4191fff7d479d11439b723b
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q4_0.gguf
+      size: 4108916352
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c1b6806ce3552de1f311f894f48749e4064e6a8
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q4_K_M.gguf
+      size: 4368438912
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cbab6f40acfa19841a3c6aba883bb9a0e7480414
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q4_K_S.gguf
+      size: 4140373632
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c04ec6d916d45598d2c097daca40b21dfd91e83
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q5_0.gguf
+      size: 4997715584
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9384a47e5cdb715b8c0f678a234efd2b0ce5ce4a
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q5_K_M.gguf
+      size: 5131409024
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 526e5963618bfd15e22ef79f05aa40dedbfa1ee7
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q5_K_S.gguf
+      size: 4997715584
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eaef26f0879ab3f567fd46761e52fca07c6c812d
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q6_K.gguf
+      size: 5942064768
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_merged_dpo_7B_v3/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 64389d5b42e0151cde43b748333db448fc196100
+      uri: https://huggingface.co/TheBloke/v1olet_merged_dpo_7B_v3-GGUF/resolve/main/v1olet_merged_dpo_7b_v3.Q8_0.gguf
+      size: 7695857280
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n{prompt}\n\n### Response:\n"
