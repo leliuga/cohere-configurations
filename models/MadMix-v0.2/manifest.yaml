@@ -1,0 +1,399 @@
+id: MadMix-v0.2
+parent_id: Fredithefish/MadMix-v0.2
+name: MadMix v0.2
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Fredi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- openchat
+- "7b"
+- zephyr
+- en
+- base_model:Fredithefish/MadMix-v0.2
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4035c2fc068f96dab07a2a12fab4cfd1104fc38a
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q2_K.gguf
+      size: 3083097856
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c291c73665b44aca889df59870a78b2150cff355
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q3_K_L.gguf
+      size: 3822024448
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d21ddd63d70b23f16a7daffd548fa786c5d5c4af
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q3_K_M.gguf
+      size: 3518985984
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1234d36d5c86e55a85a59fbe981327a6f372a22a
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q3_K_S.gguf
+      size: 3164567296
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aa96a3b67d3a2a1cb01d21e8729524f45d2b8cd4
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q4_0.gguf
+      size: 4108916480
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3140906f27f7aade689ce960704dc82025fb6f96
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q4_K_M.gguf
+      size: 4368439040
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7c9745049cfadfe2c0684732c487a60155568024
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q4_K_S.gguf
+      size: 4140373760
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: adf6e183c4d8d5eb3e4f5037d6c89e96a2f7779f
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q5_0.gguf
+      size: 4997715712
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 632a1383e84c8dd9b0c383e6d33a11b6599adca7
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q5_K_M.gguf
+      size: 5131409152
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cfadf6174c28f1f9dd71cc73b3f9f42b71400c83
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q5_K_S.gguf
+      size: 4997715712
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3e4d76bc4c9b204be76f02e020cbbbb89fc9c9bd
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q6_K.gguf
+      size: 5942064896
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MadMix-v0.2/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5fcae2dbbdcc4fa69d0abe1d58b9e664e2bd841b
+      uri: https://huggingface.co/TheBloke/MadMix-v0.2-GGUF/resolve/main/madmix-v0.2.Q8_0.gguf
+      size: 7695857408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,282 @@
+id: openbuddy-mixtral-8x7b-v15.2
+parent_id: OpenBuddy/openbuddy-mixtral-8x7b-v15.2
+name: Openbuddy Mixtral 8X7B V15.2
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: OpenBuddy
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:OpenBuddy/openbuddy-mixtral-8x7b-v15.2
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 36608
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f182c0c586dc1c8005adf77e18c10230d21e0a75
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q2_K.gguf
+      size: 15666735008
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 09f1205e198a89f751c0297ec031a833a3d6cd7a
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q3_K_M.gguf
+      size: 20387973024
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e5724814a25d6cbd385c7070be2f83c8f117d918
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q4_0.gguf
+      size: 26468657056
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: de5124b8e615d108003eea5d4617af5c2d433a2b
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q4_K_M.gguf
+      size: 26468657056
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e1861708419e5564f1ea9e0e0709f4f4070e112a
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q5_0.gguf
+      size: 32258762656
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c9aa48e8a08260ee0b7cffadb9a8470c9cc6c84
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q5_K_M.gguf
+      size: 32258762656
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d92b8d8ff54cf7f14824d3490703b31e94428ff
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q6_K.gguf
+      size: 38410749856
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openbuddy-mixtral-8x7b-v15.2/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cc9ee9a7eedac756df4a3372d1dfd29de4d39b64
+      uri: https://huggingface.co/TheBloke/openbuddy-mixtral-8x7b-v15.2-GGUF/resolve/main/openbuddy-mixtral-8x7b-v15.2.Q8_0.gguf
+      size: 49665394592
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.\nAlways answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\nYou like to use emojis. You can speak fluently in many languages, for example: English, Chinese.\nYou cannot access the internet, but you have vast knowledge, cutoff: 2021-09.\nYou are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.\n\nUser: {prompt}\nAssistant: \n"

@@ -1,0 +1,403 @@
+id: OpenAssistant-Llama2-13B-Orca-8K-3319
+parent_id: OpenAssistant/llama2-13b-orca-8k-3319
+name: Llama2 13B Orca 8K 3319
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: OpenAssistant
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- sft
+- text-generation
+- en
+- dataset:ehartford/dolphin
+- dataset:shahules786/orca-chat
+- dataset:togethercomputer/RedPajama-Data-1T
+- dataset:atom-in-the-universe/fanfics-10k-50k
+- arxiv:2306.02707
+- base_model:OpenAssistant/llama2-13b-orca-8k-3319
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32016
+  context_size: 8192
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6aaac0af71c7e6356c2c33a6666730c0e8951a67
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q2_K.gguf
+      size: 5429442848
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 23b012c9c1b2f573e691a8315a39687ac5007790
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q3_K_L.gguf
+      size: 6929662368
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4c218bfeb3eb649688efb9474f80db8c1d893693
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q3_K_M.gguf
+      size: 6337872288
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 79396d15d3252d41720f57a7ee7d2304835f2515
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q3_K_S.gguf
+      size: 5659083168
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 75a99c10e4b1e8411573f37c51292e450ad168e4
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q4_0.gguf
+      size: 7365948448
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d2f31a2862746f901dc4562c35d6363d4a107303
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q4_K_M.gguf
+      size: 7866070048
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: afb51549be5f103addf8775e06fad2b2b2182b82
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q4_K_S.gguf
+      size: 7414445088
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5668e57534102ee4ebf434e21e7a579585789df
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q5_0.gguf
+      size: 8972409888
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ddb9ccef2950c5e9a95022f6b75b27c99fc4d77e
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q5_K_M.gguf
+      size: 9230048288
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bec01cda7724fbf012151d8201bd6eab4a226623
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q5_K_S.gguf
+      size: 8972409888
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 76e03a5e81edbe0fd336aa65f5ee967cc6d4c34a
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q6_K.gguf
+      size: 10679275168
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenAssistant-Llama2-13B-Orca-8K-3319/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b2d3004eb7148eaf3c8f4e635e582071d93ee91
+      uri: https://huggingface.co/TheBloke/OpenAssistant-Llama2-13B-Orca-8K-3319-GGUF/resolve/main/openassistant-llama2-13b-orca-8k-3319.Q8_0.gguf
+      size: 13831494048
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|system|>{system_message}</s><|prompter|>{prompt}</s><|assistant|>

@@ -1,0 +1,397 @@
+id: Pygmalion-2-13B-SuperCOT-weighed
+parent_id: royallab/Pygmalion-2-13b-SuperCoT-weighed
+name: Pygmalion 2 13B SuperCOT Weighed
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: royallab
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama-2
+- text-generation
+- en
+- base_model:royallab/Pygmalion-2-13b-SuperCoT-weighed
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ee7bce3c101db9e9bbae16dc5ff3c0c182e7c90
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q2_K.gguf
+      size: 5429348288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6b60fc3ce14d83596009308846d22571bfc649e1
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q3_K_L.gguf
+      size: 6929559488
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5058fdd0c10ec21c799b1a0a1e2092f539e66bc1
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q3_K_M.gguf
+      size: 6337769408
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 01ce9753cc97a960b0f2436fd2642b6807027e32
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q3_K_S.gguf
+      size: 5658980288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fbc1c3457b2bb69ab06cde2bc30774d655b6c278
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q4_0.gguf
+      size: 7365834688
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6735d1aabb5e15b89c0720aae5bbb0366f5c1b13
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q4_K_M.gguf
+      size: 7865956288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65dfbe0e7da237a59c310a855f1c4bb8a4a727f4
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q4_K_S.gguf
+      size: 7414331328
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a623a6af63778e36d4cef7495a196bbaf548b007
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q5_0.gguf
+      size: 8972285888
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4fa8149210181e5e36db7fe06168e6efcf766a73
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q5_K_M.gguf
+      size: 9229924288
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 076eca9f207b0e6e821d93b56fa9b1211c7e1556
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q5_K_S.gguf
+      size: 8972285888
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1407f234a1a85077d79aad508181527f7c75af54
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q6_K.gguf
+      size: 10679140288
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pygmalion-2-13B-SuperCOT-weighed/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1787bc6fc705b4ea4d0a06e870964a6ad0fde134
+      uri: https://huggingface.co/TheBloke/Pygmalion-2-13B-SuperCOT-weighed-GGUF/resolve/main/pygmalion-2-13b-supercot-weighed.Q8_0.gguf
+      size: 13831319488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

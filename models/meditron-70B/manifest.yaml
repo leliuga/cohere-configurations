@@ -1,0 +1,353 @@
+id: meditron-70B
+parent_id: epfl-llm/meditron-70b
+name: Meditron 70B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: EPFL LLM Team
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- medical
+- health
+- llama2
+- text-generation
+- en
+- dataset:bigbio/med_qa
+- dataset:medmcqa
+- dataset:bigbio/pubmed_qa
+- dataset:epfl-llm/guidelines
+- arxiv:2311.16079
+- base_model:epfl-llm/meditron-70b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32017
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a698059d9a4d154c77c48481b6e9c0ef9c684fe4
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q2_K.gguf
+      size: 29279253504
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f20a5e8f1368856cf955457eb456bbb52231727f
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q3_K_L.gguf
+      size: 36147835904
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 52d17d70da8175487a7fb23ab0fef5c0d6414060
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q3_K_M.gguf
+      size: 33186657280
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 340650cad13b7af3556ba1ffc60b9da44df3f93f
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q3_K_S.gguf
+      size: 29919294464
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6869da5753cc01b95898057d043035fc545ac1f2
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q4_0.gguf
+      size: 38872249344
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8654a39e893267abd71582c5123afcb7564d4d80
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q4_K_M.gguf
+      size: 41422910464
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4231ca4ff9de393e8e9472b16aef9a5cd335d80
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q4_K_S.gguf
+      size: 39073575936
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 61d41493e9500af563483b14237e3673b5b520c8
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q5_0.gguf
+      size: 47461397504
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 92b3b3013da7dfda25c4b623ab44e2cd0f518bbe
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q5_K_M.gguf
+      size: 48753767424
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - meditron-70B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: db35a9f4c690ebdb15c8a9aa8ba6648247ee3d25
+      uri: https://huggingface.co/TheBloke/meditron-70B-GGUF/resolve/main/meditron-70b.Q5_K_S.gguf
+      size: 47461397504
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

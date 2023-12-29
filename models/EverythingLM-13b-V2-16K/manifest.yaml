@@ -1,0 +1,395 @@
+id: EverythingLM-13b-V2-16K
+parent_id: totally-not-an-llm/EverythingLM-13b-V2-16k
+name: EverythingLM 13B V2 16K
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Kai Howard
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- dataset:totally-not-an-llm/EverythingLM-data-V2
+- base_model:totally-not-an-llm/EverythingLM-13b-V2-16k
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 16384
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 687f6c62a5890830e367302b14e054b84ec15e4d
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q2_K.gguf
+      size: 5429348320
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 91398302dbf317e39e67023ddff4f3bd43e2bb77
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q3_K_L.gguf
+      size: 6929559520
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e866fc5079a95f73aa4506cbf05e3ec42986f2b5
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q3_K_M.gguf
+      size: 6337769440
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 09904e306f232d5c9c2bf3c6305bc9ea1f4693ce
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q3_K_S.gguf
+      size: 5658980320
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d51b1a05437961cf836a298571dec73982a96e83
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q4_0.gguf
+      size: 7365834720
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5c8f51e70b70562c422ae7b5fb64aee9eb66b55f
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q4_K_M.gguf
+      size: 6344527872
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c087480ae5b69ba49477094b2a21ac9b6139b672
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q4_K_S.gguf
+      size: 7414331360
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60bc8f84bf2c4c84ebb03000f10cc4a2e973f40e
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q5_0.gguf
+      size: 8190
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8dab5bec5be6497fccea89370362e3463512c6d8
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q5_K_M.gguf
+      size: 9229924320
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 359446bcf320b9bb25cd4db98f4e732decac0fb8
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q5_K_S.gguf
+      size: 8972285920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60dee338aa0e3aa6fbd74dec3ccbcd2c41cd091b
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q6_K.gguf
+      size: 10679140320
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - EverythingLM-13b-V2-16K/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aaf4624e1f55f51b7b9e3d8a716c6b0b53f23ce7
+      uri: https://huggingface.co/TheBloke/EverythingLM-13b-V2-16K-GGUF/resolve/main/everythinglm-13b-v2-16k.Q8_0.gguf
+      size: 13831319520
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "You are a helpful AI assistant.\n\nUSER: {prompt}\nASSISTANT:\n"

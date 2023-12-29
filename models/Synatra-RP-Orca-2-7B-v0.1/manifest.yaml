@@ -1,0 +1,394 @@
+id: Synatra-RP-Orca-2-7B-v0.1
+parent_id: maywell/Synatra-RP-Orca-2-7b-v0.1
+name: Synatra RP Orca 2 7B v0.1
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Jeonghwan Park
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:maywell/Synatra-RP-Orca-2-7b-v0.1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32003
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 48088ebd781426bf6de522b68f970f7636056125
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q2_K.gguf
+      size: 2825954976
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b3c95baac7d12d3f39ab693f28de8d058d4c650c
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q3_K_L.gguf
+      size: 3597126528
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2dedd5ee526331ee84d80dea706ad1e25dbf4e91
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q3_K_M.gguf
+      size: 3298020224
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 296f96f3b345664e34e14f4cc53f95d2efcdded1
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q3_K_S.gguf
+      size: 2948320128
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 13ba1502e15c8df5ca6b0b5eb7a65e1b22006402
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q4_0.gguf
+      size: 3825824224
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5c94ed930387289595a660b32bd2644fd7e53f3
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q4_K_M.gguf
+      size: 4081021408
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3bbde1a3c610a6e85042f319ab75b52fd003db6a
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q4_K_S.gguf
+      size: 3856757216
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c782cef1f8e069c819dc4fbf9a8b366174b2c513
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q5_0.gguf
+      size: 4651710432
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d59ab0c7c3d84171e99a63792ec4308d804aa5d
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q5_K_M.gguf
+      size: 4783175648
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d5e5e032c0d73f1202bc9fe08803af9e227445df
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q5_K_S.gguf
+      size: 4651710432
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60e3c10cff80da73313e180d8336f8bc2d370597
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q6_K.gguf
+      size: 5529214528
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-RP-Orca-2-7B-v0.1/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8916201afc77763d3d4fe0d10902fa51cd0cb5ce
+      uri: https://huggingface.co/TheBloke/Synatra-RP-Orca-2-7B-v0.1-GGUF/resolve/main/synatra-rp-orca-2-7b-v0.1.Q8_0.gguf
+      size: 7161116032
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

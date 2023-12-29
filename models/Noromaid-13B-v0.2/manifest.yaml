@@ -1,0 +1,394 @@
+id: Noromaid-13B-v0.2
+parent_id: NeverSleep/Noromaid-13b-v0.2
+name: Noromaid 13B V0.2
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: IkariDev and Undi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:NeverSleep/Noromaid-13b-v0.2
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 77023c1d57f1b3a5dce96e38b4e3452f1dd7c4ab
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q2_K.gguf
+      size: 5430321632
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5b30726841c993b6f49dfcdd83c024485f9156ab
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q3_K_L.gguf
+      size: 6930532832
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 516ff06749a28c154a675496fa112c158955eedb
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q3_K_M.gguf
+      size: 6338742752
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 41ee1a262832482e334ff569fe3f987fd17acabf
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q3_K_S.gguf
+      size: 5659953632
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fad4d4dc89f574d57a02f62e374c64cbfd8a4e49
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q4_0.gguf
+      size: 7366808032
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 567e1bc7de74545086a56ad5b7d7b9cbf5e139c5
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q4_K_M.gguf
+      size: 7866929632
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bbf5d38cb7f773e4ab518b7ade0e7b81e868245f
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q4_K_S.gguf
+      size: 7415304672
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c82a34e9c9ff53717351015935f406b035eb82f
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q5_0.gguf
+      size: 8973259232
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4394c6b92428fed6b9c70c15d45b9442fb00c535
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q5_K_M.gguf
+      size: 9230897632
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 452a2250e8a2f1cb64a498855083e4dcc2da958d
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q5_K_S.gguf
+      size: 8973259232
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25c1c5bb1db6dc11522a7b579cf605e9e97a9384
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q6_K.gguf
+      size: 10680113632
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Noromaid-13B-v0.2/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7bfc860758e162bd734b14141a919ac7dc79c4dc
+      uri: https://huggingface.co/TheBloke/Noromaid-13B-v0.2-GGUF/resolve/main/noromaid-13b-v0.2.Q8_0.gguf
+      size: 13832292832
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

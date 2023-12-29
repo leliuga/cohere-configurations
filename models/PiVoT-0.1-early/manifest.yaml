@@ -1,0 +1,404 @@
+id: PiVoT-0.1-early
+parent_id: maywell/PiVoT-0.1-early
+name: Pivot 0.1 Early
+description: ""
+architecture: mistral
+licence: cc-by-sa-4.0
+object: model
+owned_by: Jeonghwan Park
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- text-generation
+- en
+- ko
+- dataset:maywell/ko_wikidata_QA
+- dataset:kyujinpy/OpenOrca-KO
+- base_model:maywell/PiVoT-0.1-early
+- license:cc-by-sa-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9eb3d698ef0e5077174e6da3695b134c41fdb389
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q2_K.gguf
+      size: 3083107552
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4da99eef9b60ee400947ac681094d762a74f90ba
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q3_K_L.gguf
+      size: 3822034976
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ace832bca4eb4d0a0e99371c2bc7bd7abd4f6f0b
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q3_K_M.gguf
+      size: 3518996512
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e65ed4e6720a713a3b3ce609a26326b277926a3a
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q3_K_S.gguf
+      size: 3164577824
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c7a1fdb0034b647a25ca500d7f4282bf607aca1
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q4_0.gguf
+      size: 4108928096
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5d5d8c87ccd25f36d08b503c3f2746a27f7e2447
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q4_K_M.gguf
+      size: 4368450656
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ee3523bf10ed9ded8a68d1261b70f6797a20dbdd
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q4_K_S.gguf
+      size: 4140385376
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ab7650ef47f73cd1ea33f01a17c0dc2706d0a00
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q5_0.gguf
+      size: 4997728352
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c6ce4101f5e80d53ec9f3b00efd07c43bbe4cc1e
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q5_K_M.gguf
+      size: 5131421792
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c68f8b0d9e32e963c4b72892f986123589c49e8
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q5_K_S.gguf
+      size: 4997728352
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 418624474cd178cbefa6e3f226af74e6956adfc2
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q6_K.gguf
+      size: 5942078624
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PiVoT-0.1-early/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bc08873501bd6fdd455cce8a9ae4feda51adae85
+      uri: https://huggingface.co/TheBloke/PiVoT-0.1-early-GGUF/resolve/main/pivot-0.1-early.Q8_0.gguf
+      size: 7695875104
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

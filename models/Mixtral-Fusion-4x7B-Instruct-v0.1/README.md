@@ -12,13 +12,20 @@ inference: false
 This model is an experimental model created by merging [mistralai/Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) experts.
 
 # How we merged experts
-We simply take the average of every two experts.weight.  
-The same goes for gate.weight.
+Changed to merge using slerp.  
+[Discussion](https://huggingface.co/mmnga/Mixtral-Fusion-4x7B-Instruct-v0.1/discussions/2)
+
+[old merge version](https://huggingface.co/mmnga/Mixtral-Fusion-4x7B-Instruct-v0.1/tree/v0.1.0)  
+~~We simply take the average of every two experts.weight.~~  
+~~The same goes for gate.weight.~~  
 
 # How To Convert
 use colab cpu-high-memory.  
 [convert_mixtral_8x7b_to_4x7b.ipynb](https://huggingface.co/mmnga/Mixtral-Fusion-4x7B-Instruct-v0.1/blob/main/notebook/convert_mixtral_8x7b_to_4x7b.ipynb)
 
+# OtherModels
+[mmnga/Mixtral-Extraction-4x7B-Instruct-v0.1](https://huggingface.co/mmnga/Mixtral-Extraction-4x7B-Instruct-v0.1)
+  
 # Usage
 ~~~python
 pip install git+https://github.com/huggingface/transformers --upgrade
@@ -34,26 +41,10 @@ model_name_or_path = "mmnga/Mixtral-Fusion-4x7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 model = MixtralForCausalLM.from_pretrained(model_name_or_path, load_in_8bit=True)
 
-# set num_experts_per_tok 1 or 2 ?
-model.config.num_experts_per_tok = 2
+text = "[INST] What was John Holt's vision on education? [/INST] "
+inputs = tokenizer(text, return_tensors="pt")
 
-# message
-messages = [
-    {"role": "user", "content": "Tell me what's for dinner tonight."},
-]
-
-with torch.no_grad():
-    token_ids = tokenizer.apply_chat_template(messages, return_tensors="pt")
-    output_ids = model.generate(
-        token_ids.to(model.device),
-        temperature=0.5,
-        do_sample=True,
-        top_p=0.95,
-        top_k=40,
-        max_new_tokens=128,
-        repetition_penalty=1.5
-    )
-output = tokenizer.decode(output_ids[0][token_ids.size(1) :])
-print(output)
+outputs = model.generate(**inputs, max_new_tokens=128)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 ~~~

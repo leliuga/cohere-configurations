@@ -1,0 +1,399 @@
+id: Solar-10.7B-SLERP
+parent_id: janhq/Solar-10.7B-SLERP
+name: Solar 10.7B SLERP
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Jan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- en
+- base_model:janhq/Solar-10.7B-SLERP
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 677bce626eacbf4f740247584115c0b62005ce34
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q2_K.gguf
+      size: 4549952480
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c1203d642585994c46f6ceaf65421ed215e81c3e
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q3_K_L.gguf
+      size: 5651686368
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ae14023f06a93fd28f0699bc25840ad6af010d56
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q3_K_M.gguf
+      size: 5189264352
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9fabab50560503bf56e29f73fbdcc108e1c55c12
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q3_K_S.gguf
+      size: 4665500640
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b01ab8c45101e59bbfc4bc01f26d9811bb82fbd7
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q4_0.gguf
+      size: 6073320416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c35f4bca64632db12e757a24ba1df444022d7998
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q4_K_M.gguf
+      size: 6462604256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 37aa27e863348accca9682172d702229426af013
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q4_K_S.gguf
+      size: 6104777696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 82ead0959f4f1d3ecf1b27eba7d5cc946634c4bb
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q5_0.gguf
+      size: 7398327264
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 946a1762a68e467afa232f19ed61c366e798c78a
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q5_K_M.gguf
+      size: 7598867424
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 04a58ddeadbb960de6d2a064ccc25351c4709c7d
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q5_K_S.gguf
+      size: 7398327264
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3c0df9f3a4ca1ce7aadea99aeae1ec253be1781f
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q6_K.gguf
+      size: 8806147040
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Solar-10.7B-SLERP/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9b04710fc18fdeb258bb6e6bc70fcfdc05cb8bc3
+      uri: https://huggingface.co/TheBloke/Solar-10.7B-SLERP-GGUF/resolve/main/solar-10.7b-slerp.Q8_0.gguf
+      size: 11405091808
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

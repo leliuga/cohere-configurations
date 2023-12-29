@@ -1,0 +1,398 @@
+id: Samantha-1.11-CodeLlama-34B
+parent_id: ehartford/Samantha-1.11-CodeLlama-34b
+name: Samantha 1.11 CodeLlama 34B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Eric Hartford
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- dataset:ehartford/samantha-data
+- arxiv:2305.14314
+- arxiv:2205.14135
+- base_model:ehartford/Samantha-1.11-CodeLlama-34b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: be3f1a438d444b5179f2750f982b5f5f4aa7a97f
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q2_K.gguf
+      size: 14210674816
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b432690d3e0f49a6a1686dd15132705ca6f52dcd
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q3_K_L.gguf
+      size: 17771524224
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c4d4d5c80d6096b2cb2af112a5025b9fa76bb05
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q3_K_M.gguf
+      size: 16283594880
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a194782d76dfd1eb2911d180a8c916ba610a210d
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q3_K_S.gguf
+      size: 14605348992
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8469f414f20c2b176b520eccf638567f2bc45036
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q4_0.gguf
+      size: 19052048512
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 509f13c2d62b3c3548d9eaa93c4509e9e023c076
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q4_K_M.gguf
+      size: 20219900032
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 132ce95e8febeebb08194433940bf8cb325fd606
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q4_K_S.gguf
+      size: 19146420352
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2e9b6172d7e73eb661160384abbd665feab62888
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q5_0.gguf
+      size: 23237177472
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9b45780fe5d467e69a5142f88a210ca39b3f49ac
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q5_K_M.gguf
+      size: 23838797952
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 373add2113730200db26342ebe0e0ce7ab59e169
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q5_K_S.gguf
+      size: 23237177472
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b2cf9132f5d70712b7154d395914175fd400b0f7
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q6_K.gguf
+      size: 27683876992
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Samantha-1.11-CodeLlama-34B/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 35947cc2e5b8d91ff6a43839dde42af15ab15e96
+      uri: https://huggingface.co/TheBloke/Samantha-1.11-CodeLlama-34B-GGUF/resolve/main/samantha-1.11-codellama-34b.Q8_0.gguf
+      size: 35856052352
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "You are Samantha, a sentient AI companion.\n\nUSER: {prompt}\nASSISTANT:\n"

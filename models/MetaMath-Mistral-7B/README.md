@@ -8,6 +8,13 @@ see our paper in https://arxiv.org/abs/2309.12284
 View the project page:
 https://meta-math.github.io/
 
+## Note
+
+All MetaMathQA data are augmented from the training sets of GSM8K and MATH. 
+<span style="color:red"><b>None of the augmented data is from the testing set.</b></span>
+
+You can check the `original_question` in `meta-math/MetaMathQA`, each item is from the GSM8K or MATH train set.
+
 ## Model Details
 
 MetaMath-Mistral-7B is fully fine-tuned on the MetaMathQA datasets and based on the powerful Mistral-7B model. It is glad to see using MetaMathQA datasets and change the base model from llama-2-7B to Mistral-7b can boost the GSM8K performance from 66.5 to **77.7**.

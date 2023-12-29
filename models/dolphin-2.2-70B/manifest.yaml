@@ -1,0 +1,348 @@
+id: dolphin-2.2-70B
+parent_id: ehartford/dolphin-2.2-70b
+name: Dolphin 2.2 70B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Eric Hartford
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- dataset:ehartford/dolphin
+- dataset:jondurbin/airoboros-2.2.1
+- dataset:ehartford/samantha-data
+- dataset:ehartford/WizardLM_evol_instruct_V2_196k_unfiltered_merged_split
+- base_model:ehartford/dolphin-2.2-70b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1590c904a93643f1cc9c1ac772c5e1cc2a7bc386
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q2_K.gguf
+      size: 29279272320
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3765c702cf89f832046b9373b24df96a0ea46c23
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q3_K_L.gguf
+      size: 36147856384
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e0ebad1171c04d1e2b37c263fc180df40cdb6749
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q3_K_M.gguf
+      size: 33186677760
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 32c7221f7b3b8d087ec99b963c3479daf130c812
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q3_K_S.gguf
+      size: 29919314944
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f9c783b1dc22de1bf001e7348b70b5d051ab18a8
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q4_0.gguf
+      size: 38872272000
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0cad6b59910c5b5b388506627cc2688b9f8dc0ce
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q4_K_M.gguf
+      size: 41422933120
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 683225a567ca067946942f564302864986303ad5
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q4_K_S.gguf
+      size: 39073598592
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 01d4d7228e32945cb3be05bd96a9cf1075436782
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q5_0.gguf
+      size: 47461422208
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9cc58af386822aeae445fdc3ba9f01d750fc0ea
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q5_K_M.gguf
+      size: 48753792128
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - dolphin-2.2-70B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65e28429956028ceeddf07c7f4ceeedb3262f677
+      uri: https://huggingface.co/TheBloke/dolphin-2.2-70B-GGUF/resolve/main/dolphin-2.2-70b.Q5_K_S.gguf
+      size: 47461422208
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

@@ -1,0 +1,394 @@
+id: Chupacabra-7B-v2
+parent_id: perlthoughts/Chupacabra-7B-v2
+name: Chupacabra 7B V2
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Ray Hernandez
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:perlthoughts/Chupacabra-7B-v2
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 951c90a55159fbb6400336903cf1d6f2d99470ef
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q2_K.gguf
+      size: 3083107264
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f35cc2b349ca3ece7babf2a44db26038b876449c
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q3_K_L.gguf
+      size: 3822034688
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25ca8274cb3c447a87edf7aad21c2bfaba0cc6fa
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q3_K_M.gguf
+      size: 3518996224
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: af853e04c6bf0ac29606034a3866037c6da815ee
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q3_K_S.gguf
+      size: 3164577536
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: de76b5c95c0a0c88ef00ae642e3d17c727058193
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q4_0.gguf
+      size: 4108927808
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b3a632bcc34d31aabf1bdd954ab9fc1caf482e5a
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q4_K_M.gguf
+      size: 4368450368
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3838056764d1c5adc1082bf1995c84bae7067ed9
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q4_K_S.gguf
+      size: 4140385088
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9578397bd665b84ff75f9e60ff4c58bd60f8cfd1
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q5_0.gguf
+      size: 4997728064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 41e69fa8c330dedebf48a8d899816392a191c198
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q5_K_M.gguf
+      size: 5131421504
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 461d65149bdfd2e467436fb4d45d7ea1a2bbee8f
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q5_K_S.gguf
+      size: 4997728064
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8defe579bbcdd3067bc87a4ae3535de37b2e1b06
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q6_K.gguf
+      size: 5942078336
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-7B-v2/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8be2f7ac33838eda036fcb79b37f324fbed7871a
+      uri: https://huggingface.co/TheBloke/Chupacabra-7B-v2-GGUF/resolve/main/chupacabra-7b-v2.Q8_0.gguf
+      size: 7695874816
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### System:\n{system_message}\n\n### User:\n{prompt}\n\n### Assistant:\n"

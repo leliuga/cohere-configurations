@@ -1,0 +1,396 @@
+id: MetaMath-Mistral-7B
+parent_id: meta-math/MetaMath-Mistral-7B
+name: Metamath Mistral 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: MetaMath
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- dataset:meta-math/MetaMathQA
+- arxiv:2309.12284
+- base_model:meta-math/MetaMath-Mistral-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e4106c681863c28b5bfb102dc03b4c3de4db3ca1
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q2_K.gguf
+      size: 3083102432
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69601983aaae0e250184de420ffb58e6d8c56d5a
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q3_K_L.gguf
+      size: 3822029440
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a90439355ed87b91895cf59146f43d09519beb55
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q3_K_M.gguf
+      size: 3518990976
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d084ce6549f14e5d1fdab52aa219dc5545bd36f
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q3_K_S.gguf
+      size: 3164572288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1036df570042fdea718e9391ce4b47e667e2e6df
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q4_0.gguf
+      size: 4108922016
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 03bf499e0539c014dbf6cee95bf7027ebdd1321e
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q4_K_M.gguf
+      size: 4368444576
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 336bc4c185b6b225f121b73e21500dcce8c3b679
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q4_K_S.gguf
+      size: 4140379296
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c1f8b50029682f8ed30fef4c8817228925497838
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q5_0.gguf
+      size: 4997721760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4876ada7852760e7b5787d447e301af4dde5093
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q5_K_M.gguf
+      size: 5131415200
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2be72de049c3413ba897734d770ba3b04ed42202
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q5_K_S.gguf
+      size: 4997721760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2eb5088a1b91a495de54013603c8277e6b9d8b96
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q6_K.gguf
+      size: 5942071488
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-Mistral-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9ab6c409e95557d0f0b5d2eb3c609fc2eaa633c7
+      uri: https://huggingface.co/TheBloke/MetaMath-Mistral-7B-GGUF/resolve/main/metamath-mistral-7b.Q8_0.gguf
+      size: 7695865984
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

@@ -1,0 +1,398 @@
+id: stockmark-13B
+parent_id: stockmark/stockmark-13b
+name: Stockmark 13B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Stockmark Inc.
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- japanese
+- llama-2
+- text-generation
+- ja
+- base_model:stockmark/stockmark-13b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 50000
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9a7f403470cd59a37ec9897a0d30b478fd1c7ad5
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q2_K.gguf
+      size: 5537571168
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c8f97b2f271db365185726007a31f4d25432027b
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q3_K_L.gguf
+      size: 7047142368
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3329001ef4ebce8ca554ea14fca295d0f5446d9b
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q3_K_M.gguf
+      size: 6455352288
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f480b9942f43931bf6db667d7b6c655854c2e4ea
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q3_K_S.gguf
+      size: 5776563168
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: da92b845fff22c8174dcf22d04d3afe2131f216e
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q4_0.gguf
+      size: 7495657568
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fc02e83489ed263ece039e028d6a48baa4312a33
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q4_K_M.gguf
+      size: 7995779168
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5ed850e71751c0f3fb6641ed8506c705955710d6
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q4_K_S.gguf
+      size: 7544154208
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bca1cfa092d6150c698c978872ed51d0272ca1e3
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q5_0.gguf
+      size: 9113628768
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d139ec447cf1af0940bb48c4c89542f8711f1183
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q5_K_M.gguf
+      size: 9371267168
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 851d82dbaee3cebd005df29bcb9d44e691aae95b
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q5_K_S.gguf
+      size: 9113628768
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 758a4fdeff55c3d08b7da1cf5fa5d2f7c1a812d3
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q6_K.gguf
+      size: 10832723168
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - stockmark-13B/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ec03db8e57aa0636eec6f9759280a7c014138e4
+      uri: https://huggingface.co/TheBloke/stockmark-13B-GGUF/resolve/main/stockmark-13b.Q8_0.gguf
+      size: 14029542368
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,396 @@
+id: Spicyboros-c34b-2.2
+parent_id: jondurbin/spicyboros-c34b-2.2
+name: Spicyboros c34B 2.2
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Jon Durbin
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- dataset:jondurbin/airoboros-2.2
+- base_model:jondurbin/spicyboros-c34b-2.2
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7206abaa7d256c9e1b56ed66740f335465a33894
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q2_K.gguf
+      size: 14210674816
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a69c2cea8db1b91e14e8eceb996dc651cc348c68
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q3_K_L.gguf
+      size: 17771524224
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69a096fc96e5e5be0f2cf0ed8b665ad2c2916f6e
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q3_K_M.gguf
+      size: 16283594880
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: db965c061edeec1a01aba86d0757cb67253e88d3
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q3_K_S.gguf
+      size: 14605348992
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1678822922aac715c804874c9be3365ef6f94ca4
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q4_0.gguf
+      size: 19052048512
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 35fa1aa3f1a5f3f9aebcf91ec3171dedcd6f199b
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q4_K_M.gguf
+      size: 20219900032
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5d9c2349ef90b7bf4a6dff2b4b9b7dc31199ca12
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q4_K_S.gguf
+      size: 19146420352
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 877b651bcd0849db953d77140942a989f4c3f9f1
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q5_0.gguf
+      size: 23237177472
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3a6cda0dc76b40a83f466c76ebb206aa2c5ed7df
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q5_K_M.gguf
+      size: 23838797952
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f16a617f9cedf1f6c708fb78e765e36934f34724
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q5_K_S.gguf
+      size: 23237177472
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 21bd45f0548a003e7ca1a7ad8dd7e25b30bea178
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q6_K.gguf
+      size: 27683876992
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Spicyboros-c34b-2.2/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ce9317cd05185c99af19a48bb1940c83d5713180
+      uri: https://huggingface.co/TheBloke/Spicyboros-c34b-2.2-GGUF/resolve/main/spicyboros-c34b-2.2.Q8_0.gguf
+      size: 35856052352
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "A chat.\nUSER: {prompt}\nASSISTANT: \n"

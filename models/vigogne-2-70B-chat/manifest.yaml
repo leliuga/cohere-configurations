@@ -1,0 +1,348 @@
+id: vigogne-2-70B-chat
+parent_id: bofenghuang/vigogne-2-70b-chat
+name: Vigogne 2 70B Chat
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: bofeng huang
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- LLM
+- llama-2
+- finetuned
+- text-generation
+- fr
+- base_model:bofenghuang/vigogne-2-70b-chat
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f417081aeca5d556320398b40f41bfa9834b7baf
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q2_K.gguf
+      size: 29279253440
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a032b1ac3c25bfdde81bce784880c14f8c5d6390
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q3_K_L.gguf
+      size: 36147835840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b36c626af27d04b5ca6ca8bdf5a1fb31a790ef39
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q3_K_M.gguf
+      size: 33186657216
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e27fe759d25295ac9d1ffbdab0aff70e10261f03
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q3_K_S.gguf
+      size: 29919294400
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 991149bda557d548d0900e882571fd6f55742895
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q4_0.gguf
+      size: 38872249280
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8318fa1a19760a5895c4663faf12059e459aad1e
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q4_K_M.gguf
+      size: 41422910400
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4f1e452e5fcdab47b5f379f1ee2ce0c57b07b90
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q4_K_S.gguf
+      size: 39073575872
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fe26752b21fab64f82a7cd28a37f622ea5e87e9f
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q5_0.gguf
+      size: 47461397440
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aff792d018b3bb5cfac024c67bcb67c388b4174e
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q5_K_M.gguf
+      size: 48753767360
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - vigogne-2-70B-chat/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2dc3d2a06d36522e08fc96a43169aa708ecebe0f
+      uri: https://huggingface.co/TheBloke/vigogne-2-70B-chat-GGUF/resolve/main/vigogne-2-70b-chat.Q5_K_S.gguf
+      size: 47461397440
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <s>[INST] <<SYS>>
+        Vous êtes Vigogne, un assistant IA créé par Zaion Lab. Vous suivez extrêmement bien les instructions. Aidez autant que vous le pouvez.
+        <</SYS>>
+        
+        {prompt} [/INST] 

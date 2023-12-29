@@ -1,0 +1,409 @@
+id: Leo-Mistral-Hessianai-7B-Chat
+parent_id: LeoLM/leo-mistral-hessianai-7b-chat
+name: Leo Mistral Hessianai 7B Chat
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: LAION LeoLM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- text-generation
+- en
+- de
+- dataset:LeoLM/OpenSchnabeltier
+- dataset:OpenAssistant/OASST-DE
+- dataset:FreedomIntelligence/alpaca-gpt4-deutsch
+- dataset:FreedomIntelligence/evol-instruct-deutsch
+- dataset:LeoLM/German_Poems
+- dataset:LeoLM/German_Songs
+- base_model:LeoLM/leo-mistral-hessianai-7b-chat
+- license:apache-2.0
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32128
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5afa8d22d9aaebabe8691b34cfaa9e3265aa69a6
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q2_K.gguf
+      size: 3083703488
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4bfefcb442ff0196bf16edc726b86e24efddf9cf
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q3_K_L.gguf
+      size: 3822683328
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1e33ffbe4e334e2af384cc6b589adf0b91e5398f
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q3_K_M.gguf
+      size: 3519644864
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 20788ac4073552dde61c7eaa04bf71c6b0690985
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q3_K_S.gguf
+      size: 3165226176
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 553682cc0fcfeb7e1ffcc3695dcbc54bbe5f9261
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q4_0.gguf
+      size: 4109644992
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cac8866fc743893c98364163fd6279995a525d42
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q4_K_M.gguf
+      size: 4369167552
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 253370171440982d02f9b5e970e7b7accda5b8c7
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q4_K_S.gguf
+      size: 4141102272
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2558313df1c1599e475ce59d93d20c3dc75102e
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q5_0.gguf
+      size: 4998509760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 49aad5b8daa070af5ef260e639e071718170ec14
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q5_K_M.gguf
+      size: 5132203200
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a6cbbb20175ac50acec1778aab1f8bebb11b96db
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q5_K_S.gguf
+      size: 4998509760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e6daa52242e4f02feed9bb2fc7451e7ae9babbc7
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q6_K.gguf
+      size: 5942928576
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Leo-Mistral-Hessianai-7B-Chat/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 58157fd38380154293603df6271bcd0c8c2035f1
+      uri: https://huggingface.co/TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF/resolve/main/leo-mistral-hessianai-7b-chat.Q8_0.gguf
+      size: 7696975040
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

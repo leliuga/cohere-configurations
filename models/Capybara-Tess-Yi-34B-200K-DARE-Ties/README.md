@@ -6,6 +6,8 @@ language:
 - en
 library_name: transformers
 pipeline_tag: text-generation
+tags:
+- merge
 ---
 # This is not a great model, succeeded by a new merge: **https://huggingface.co/brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties**
 

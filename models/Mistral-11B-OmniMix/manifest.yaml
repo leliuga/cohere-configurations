@@ -1,0 +1,399 @@
+id: Mistral-11B-OmniMix
+parent_id: NeverSleep/Mistral-11B-OmniMix-bf16
+name: Mistral 11B OmniMix
+description: ""
+architecture: mistral
+licence: cc-by-nc-4.0
+object: model
+owned_by: NeverSleep
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:NeverSleep/Mistral-11B-OmniMix-bf16
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 69dd8bf7a25c7e1e5e03935a6e7fdfe808c8b7f5
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q2_K.gguf
+      size: 4549015616
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b85d7969bff00dbfbe75339c3fe688baa4a22572
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q3_K_L.gguf
+      size: 5650749504
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5438d92372062b57397859c7f10087e67c6cea0
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q3_K_M.gguf
+      size: 5188327488
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3870a781b4f0cdfb4c04cb2be2744e36fa6c7056
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q3_K_S.gguf
+      size: 4664563776
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d6eec91fce33cced019f9c9ec2b690bc2aacea54
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q4_0.gguf
+      size: 6072383552
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5721d6a81caeead2a80328ec7c2630e955bbb2e4
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q4_K_M.gguf
+      size: 6461667392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c62748a29ecd1355a2025d3bf15232647b34a22
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q4_K_S.gguf
+      size: 6103840832
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dfc0c4be030a22af9009418ced906303dd5312b1
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q5_0.gguf
+      size: 7397390400
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 522b0e25f8565931f7cd64a55dc1a93185057efe
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q5_K_M.gguf
+      size: 7597930560
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a09ee6f23b11d8b02670c1bbcaadafcea964f068
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q5_K_S.gguf
+      size: 7397390400
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3749d10c0560416c210d1b5b4e4d3483cb642165
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q6_K.gguf
+      size: 8805210176
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Mistral-11B-OmniMix/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8174d4043d7bd996946f0f1e7594ae1bbe7a79c1
+      uri: https://huggingface.co/TheBloke/Mistral-11B-OmniMix-GGUF/resolve/main/mistral-11b-omnimix-bf16.Q8_0.gguf
+      size: 11404154944
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|system|>
+        Below is an instruction that describes a task. Write a response that appropriately completes the request.
+        <|user|>
+        {prompt}
+        <|assistant|>

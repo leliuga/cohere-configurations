@@ -8,9 +8,10 @@ library_name: transformers
 pipeline_tag: text-generation
 tags:
 - text-generation-inference
+- merge
 ---
 
-# Obsolete, replaced by https://huggingface.co/brucethemoose/Yi-34B-200K-DARE-merge-v5
+### Possibly obsolete, replaced by https://huggingface.co/brucethemoose/Yi-34B-200K-DARE-merge-v5
 
 Old model description below:
 ***

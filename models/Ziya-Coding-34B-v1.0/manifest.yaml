@@ -1,0 +1,398 @@
+id: Ziya-Coding-34B-v1.0
+parent_id: IDEA-CCNL/Ziya-Coding-34B-v1.0
+name: Ziya Coding 34B v1.0
+description: ""
+architecture: llama
+licence: gpl-3.0
+object: model
+owned_by: Fengshenbang-LM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- zh
+- en
+- arxiv:2210.08590
+- base_model:IDEA-CCNL/Ziya-Coding-34B-v1.0
+- license:gpl-3.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 02c104d0c9f104511c696554fd9559e63e078aa1
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q2_K.gguf
+      size: 14210674848
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a6d0b59905173b9507e165184cc7ca96771506b2
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q3_K_L.gguf
+      size: 17771524256
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab93e9a8363c4e81e34c7736f460061308e32c76
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q3_K_M.gguf
+      size: 16283594912
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b53599d45a06c2e738544cbfa7e3f91fc0eb0e58
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q3_K_S.gguf
+      size: 14605349024
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d4731771616af0ad785ec96850cf50c52c40dc3
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q4_0.gguf
+      size: 19052048544
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: be6a7909cb2d3876db6c6fb9cdba89b6977741bd
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q4_K_M.gguf
+      size: 20219900064
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5ea4d2a784ab2fe9aefb98e9d1daae1cad3ba75f
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q4_K_S.gguf
+      size: 19146420384
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d0a487fb403b240ef92ae509d8da5e875418bc18
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q5_0.gguf
+      size: 23237177504
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1efc2133eb609a84872447bbe648bffad75b0983
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q5_K_M.gguf
+      size: 23838797984
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2f5423a0ba36f467272ed1b5ad8a0b398248639
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q5_K_S.gguf
+      size: 23237177504
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6de4aa9f821290d95964a54179a3a75def9db4fc
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q6_K.gguf
+      size: 27683877024
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Ziya-Coding-34B-v1.0/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f45cc307f474b353d6caf34333cecb7c8b9498c4
+      uri: https://huggingface.co/TheBloke/Ziya-Coding-34B-v1.0-GGUF/resolve/main/ziya-coding-34b-v1.0.Q8_0.gguf
+      size: 35856052384
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<human>: \nPlease Complete the given function below according to the docstring: \n{prompt}\n<bot>: \n"

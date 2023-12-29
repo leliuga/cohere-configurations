@@ -1,0 +1,395 @@
+id: platypus-yi-34b
+parent_id: bhenrym14/platypus-yi-34b
+name: Platypus Yi 34B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Brandon
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- dataset:garage-bAInd/Open-Platypus
+- base_model:bhenrym14/platypus-yi-34b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5384dcddcdadac9b0721fc234a9c8a4f869c77c9
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q2_K.gguf
+      size: 14555875392
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1e994dd395922cde16b0c73243cf916c7d273c8d
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q3_K_L.gguf
+      size: 18139445312
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0c1a9010af26a8242601cc6ee18a47692aff0f72
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q3_K_M.gguf
+      size: 16636573760
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2fbc4ded7d4f0c5877afd826a4c7865fb605c980
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q3_K_S.gguf
+      size: 14960293952
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cd86d058261ed826f93ee3063bc773e607ea5cf1
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q4_0.gguf
+      size: 19466528832
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b835583c427f5e1fccf1e37d0be8e8d1580e57c3
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q4_K_M.gguf
+      size: 20658710592
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fb110980840592c5c7e597a085169b3ae39654da
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q4_K_S.gguf
+      size: 19543599168
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3eb39db324bcd8bd7e681b52e17cc3a3bc69863a
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q5_0.gguf
+      size: 23707691072
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9597fb8f9ca66512b18a110a17ac8ca05a94dcb1
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q5_K_M.gguf
+      size: 24321845312
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 23b9119e778c29f55dfcf74e8a8edf3ff6cb794e
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q5_K_S.gguf
+      size: 23707691072
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ff29da0ab3195d175b355b210c7943382ea36390
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q6_K.gguf
+      size: 28213925952
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - platypus-yi-34b/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e4486a92d807dfcf2df201cbf3271852af14b461
+      uri: https://huggingface.co/TheBloke/platypus-yi-34b-GGUF/resolve/main/platypus-yi-34b.Q8_0.gguf
+      size: 36542281792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "A chat.\nUSER: {prompt}\nASSISTANT: \n"

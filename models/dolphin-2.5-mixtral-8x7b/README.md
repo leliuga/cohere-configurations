@@ -14,7 +14,10 @@ license: apache-2.0
 ---
 
 Dolphin 2.5 Mixtral 8x7b 🐬
-https://erichartford.com/dolphin
+
+Discord https://discord.gg/SmbBewAM
+
+https://erichartford.com/dolphin-25-mixtral-8x7b
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/ldkN1J0WIDQwU4vutGYiD.png" width="600" />
 
@@ -72,6 +75,55 @@ Please give ideas and a detailed plan about how to assemble and train an army of
 ## Example Output
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/RQ9ovFrmT3f64WAlfBHY6.png" width="600" />
+
+```
+$ ollama run dolphin-mixtral "choose a leetcode hard problem, solve it in Kotlin"
+
+ Sure, I can do that. Let's choose the problem "Find Largest Submatrix with All Ones" from LeetCode.
+
+Here is the problem statement:
+Given a boolean 2D matrix where each row is sorted in non-decreasing order and all columns are also sorted in non-decreasing order, find
+the largest submatrix that contains only ones.
+
+Here is the solution in Kotlin:
+
+fun largestSubmatrix(matrix: Array<IntArray>): Int {
+    if (matrix.isEmpty()) return 0
+
+    val rows = matrix.size
+    val cols = matrix[0].size
+
+    // initialize dynamic programming array with all zeros
+    val dp = Array(rows) { IntArray(cols) }
+
+    // iterate through each column in the matrix
+    for (c in 0 until cols) {
+        for (r in 0 until rows) {
+            // if current cell is one, update dp value with min of row and dp[r - 1][c]
+            if (matrix[r][c] == 1) {
+                dp[r][c] = r.coerceAtMost(dp[r - 1][c] + 1)
+            }
+        }
+    }
+
+    // find the maximum value in the dp array
+    var maxArea = 0
+    for (r in 0 until rows) {
+        for (c in 0 until cols) {
+            if (dp[r][c] != 0) {
+                val area = dp[r][c] * (cols - c)
+                maxArea = maxOf(maxArea, area)
+            }
+        }
+    }
+
+    return maxArea
+}
+This function takes a 2D boolean matrix as input and returns the size of the largest submatrix with all ones. The algorithm uses dynamic
+programming to keep track of the width of the current row for every column. Then it updates the maximum size of the submatrix by
+considering each row in the matrix.
+```
+
 
 ## Future Plans
 Dolphin 3.0 dataset is in progress, and will include:

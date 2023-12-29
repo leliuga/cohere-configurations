@@ -1,0 +1,398 @@
+id: openthaigpt-1.0.0-beta-13B-chat
+parent_id: openthaigpt/openthaigpt-1.0.0-beta-13b-chat-hf
+name: OpenThaiGPT 1.0.0 Beta 13B Chat
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: OpenThaiGPT
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- openthaigpt
+- text-generation
+- th
+- en
+- base_model:openthaigpt/openthaigpt-1.0.0-beta-13b-chat-hf
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 41088
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88b050d04090b4cfeed07abc9fce679bfd8a1326
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q2_K.gguf
+      size: 5484347616
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d38788a6d9448070f44c578fd1f63cdb60377b4
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q3_K_L.gguf
+      size: 6989284576
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4649f7fdf4db6ea573071708cf547427c9b62c49
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q3_K_M.gguf
+      size: 6397494496
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8fe104016e492940146c5d8e1ef4d4dc48879445
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q3_K_S.gguf
+      size: 5718705376
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 940747f3e2b5bbdef1528b81a6b39f3e8ddc207a
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q4_0.gguf
+      size: 7431739616
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b4777608ff80a4408315303ae794d53285f594f6
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q4_K_M.gguf
+      size: 7931861216
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac4dde15cc43d9cd1b1164e464533bf410901c08
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q4_K_S.gguf
+      size: 7480236256
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ffdb70b4a75888d065853f3fdb6e28168e320dc
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q5_0.gguf
+      size: 9044007136
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 87efb5099477b20ceab77cda43e39a3495cd4275
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q5_K_M.gguf
+      size: 9301645536
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 292dbe6b131605f8165efcc621330cb1a1296fc2
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q5_K_S.gguf
+      size: 9044007136
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5fe3d74586ab3dac96df35febb2989236245f58b
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q6_K.gguf
+      size: 10757041376
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - openthaigpt-1.0.0-beta-13B-chat/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1ed6dc481558b6e6297a324ab91704313e779493
+      uri: https://huggingface.co/TheBloke/openthaigpt-1.0.0-beta-13B-chat-GGUF/resolve/main/openthaigpt-1.0.0-beta-13b-chat.Q8_0.gguf
+      size: 13931758816
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] <<SYS>>\n{system_message}\n<</SYS>>\n{prompt} [/INST]\n"

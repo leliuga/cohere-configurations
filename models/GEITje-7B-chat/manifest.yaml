@@ -1,0 +1,403 @@
+id: GEITje-7B-chat
+parent_id: Rijgersberg/GEITje-7B-chat
+name: Geitje 7B Chat
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Edwin Rijgersberg
+pipeline: conversational
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- generated_from_trainer
+- GEITje
+- conversational
+- nl
+- dataset:Rijgersberg/no_robots_nl
+- dataset:Rijgersberg/ultrachat_10k_nl
+- base_model:Rijgersberg/GEITje-7B-chat
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 06b65ef1934496e32f44d07bc7f033bdb84eefe4
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q2_K.gguf
+      size: 3084034656
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 641a1cf6a18e5e9e79c0eea4e45801d5c1f1cc44
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q3_K_L.gguf
+      size: 3822961248
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0358dcad974d06650eb9339567d57ef484475eaa
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q3_K_M.gguf
+      size: 3519922784
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 793a8f7109747a6fca2f6506e4acac94fc76443e
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q3_K_S.gguf
+      size: 3165504096
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e739a32262dd4fae1e68fb54bd3771e5dee4f38d
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q4_0.gguf
+      size: 4109853280
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2fa559a23486b45a478bed889790a4a1537f1cd8
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q4_K_M.gguf
+      size: 4369375840
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0ed809a71a7ead170695f6760f6cb7efb8cd5644
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q4_K_S.gguf
+      size: 4141310560
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 579ffaec2ef627b5c4872485afbe0772a9a1897c
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q5_0.gguf
+      size: 4998652512
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5c8bab31cf4e3bc586a4a88a1629499b9dba733
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q5_K_M.gguf
+      size: 5132345952
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e535789d1b70656fcf45b7386f81eaa857c113a5
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q5_K_S.gguf
+      size: 4998652512
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 73a9bbffd696ff18e57d94070e282d32c06a93e7
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q6_K.gguf
+      size: 5943001696
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - GEITje-7B-chat/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 56d999ddd2e2a64f7431ee01a65d7a3c760328b3
+      uri: https://huggingface.co/TheBloke/GEITje-7B-chat-GGUF/resolve/main/geitje-7b-chat.Q8_0.gguf
+      size: 7696794208
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|user|>
+        {prompt}
+        <|assistant|>

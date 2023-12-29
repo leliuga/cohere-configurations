@@ -1,0 +1,404 @@
+id: una-cybertron-7B-v3-OMA
+parent_id: fblgit/una-cybertron-7b-v3-OMA
+name: Una Cybertron 7B V3 OMA
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: FBL
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- juanako
+- UNA
+- cybertron
+- xaberius
+- dataset:fblgit/tree-of-knowledge
+- base_model:fblgit/una-cybertron-7b-v3-OMA
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 622b592cddc502b7f3ac287fa71ed6e4e3938340
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q2_K.gguf
+      size: 3083097824
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5485fc5421e516cdf6e21882c007864225d2089
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q3_K_L.gguf
+      size: 3822024416
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0604ca8a1092632d03c53de36f1b8846a6b85cd9
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q3_K_M.gguf
+      size: 3518985952
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac3bbdd1b2faa6f6721b2365551ecf06d722bd4e
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q3_K_S.gguf
+      size: 3164567264
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6236f45236b77279ec8644f0923c18d7a34b77f3
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q4_0.gguf
+      size: 4108916448
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5f146afff2eb606ff1a1f44858e0a68b59dd0c68
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q4_K_M.gguf
+      size: 4368439008
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 957effcc2bc87ea84291024e116c6f3df2831633
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q4_K_S.gguf
+      size: 4140373728
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e25729919c3ad361787a6e1badb0a9f9b6404462
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q5_0.gguf
+      size: 4997715680
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5b8a383b74005c154796deb9bfefb70a02fb275a
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q5_K_M.gguf
+      size: 5131409120
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 602f18c61dc3109ac71cb0e3ddefaa2d143d4575
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q5_K_S.gguf
+      size: 4997715680
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f98838a1abaace1ef3a329fb582a993c74d4b024
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q6_K.gguf
+      size: 5942064864
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-cybertron-7B-v3-OMA/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d62ec85053839477edf3834e8d9d9cae7ae88a35
+      uri: https://huggingface.co/TheBloke/una-cybertron-7B-v3-OMA-GGUF/resolve/main/una-cybertron-7b-v3-oma.Q8_0.gguf
+      size: 7695857376
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

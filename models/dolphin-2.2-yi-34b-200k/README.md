@@ -13,6 +13,7 @@ license_link: LICENSE
 
 Dolphin 2.2 🐬
 https://erichartford.com/dolphin
+Discord https://discord.gg/SmbBewAM
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/KqsVXIvBd3akEjvijzww7.png" width="600" />
 

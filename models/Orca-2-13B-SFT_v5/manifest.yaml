@@ -1,0 +1,410 @@
+id: Orca-2-13B-SFT_v5
+parent_id: Locutusque/Orca-2-13b-SFT_v5
+name: Orca 2 13B SFT V5
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Sebastian Gabarain
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- fr
+- es
+- hi
+- zh
+- code
+- dataset:HuggingFaceH4/no_robots
+- dataset:mlabonne/guanaco-llama2-1k
+- dataset:OpenAssistant/oasst_top1_2023-08-25
+- dataset:totally-not-an-llm/EverythingLM-data-V3
+- dataset:garage-bAInd/Open-Platypus
+- base_model:Locutusque/Orca-2-13b-SFT_v5
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32003
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 880a1155919296ef78adb648a0e9031c306eb93c
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q2_K.gguf
+      size: 5430339264
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7401c422897e3cbe2c69e41bc99ac5579151140c
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q3_K_L.gguf
+      size: 6930552032
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4c9425925a8d5db14af3f2aa2a83dbd77efc3e65
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q3_K_M.gguf
+      size: 6338761952
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8138c40da37ef8f3b09ba6aa41ea12c68fe35bff
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q3_K_S.gguf
+      size: 5659972832
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4ae4dcd1e0e8179ec766b5a56c5263e35b2ad76e
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q4_0.gguf
+      size: 7366829248
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c9212413d988c09e71188ed3bab7cf7fd9464ad
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q4_K_M.gguf
+      size: 7866950848
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1804106a69fe2ce3136bcbfda463f15f6382f46d
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q4_K_S.gguf
+      size: 7415325888
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 337ebf6556355567e9e9d8a8a50eae12e3716a2b
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q5_0.gguf
+      size: 8973282368
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a05028f1198633f93d2c5271234e77dab46dc69
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q5_K_M.gguf
+      size: 9230920768
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4f407ac326b6c42001ffda136e2e1aa6d71e717
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q5_K_S.gguf
+      size: 8973282368
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: adc9a998a524f2b5220eb24d5a65844445ce0d90
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q6_K.gguf
+      size: 10680138816
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Orca-2-13B-SFT_v5/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c809364e42cfd6f911cf75f020bfde4754ce7dd
+      uri: https://huggingface.co/TheBloke/Orca-2-13B-SFT_v5-GGUF/resolve/main/orca-2-13b-sft_v5.Q8_0.gguf
+      size: 13832325440
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

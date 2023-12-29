@@ -1,0 +1,394 @@
+id: Chinese-Alpaca-2-7B
+parent_id: ziqingyang/chinese-alpaca-2-7b
+name: Chinese Alpaca 2 7B
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Ziqing Yang
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:ziqingyang/chinese-alpaca-2-7b
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 55296
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f19ab201bf0c0a2cfcdc2bc24ba21d7fc8dfe24b
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q2_K.gguf
+      size: 2936032800
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 24bc86ede861b6d2047657dc039f265ac71c9a28
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q3_K_L.gguf
+      size: 3716894240
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7bcad004233b04a84fb7a6430cb43d31e21a6434
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q3_K_M.gguf
+      size: 3417787936
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 004eccbbd344f2e4180220c79eb3144b387f72c7
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q3_K_S.gguf
+      size: 3068087840
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 496f4129ce3c694295948d2e97c6ac2e291013cc
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q4_0.gguf
+      size: 3958263328
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 16edd7f3973bc8831bd8c89917d6d520543e26f8
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q4_K_M.gguf
+      size: 4213460512
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ba15e46f2a1d255b9d9dbfc2413dc3a700469240
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q4_K_S.gguf
+      size: 3989196320
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2a7e10fcdb1effd7138eed355f36c2449fe7d22b
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q5_0.gguf
+      size: 4796075552
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2e3f13703be3c649e3cca0a1613a7fde911a6880
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q5_K_M.gguf
+      size: 4927540768
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8527d16e234c2578d12cee5dc147616df3f1a2cd
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q5_K_S.gguf
+      size: 4796075552
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b44434c84e3d3579a521be16f8945d58308517bb
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q6_K.gguf
+      size: 5686251040
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chinese-Alpaca-2-7B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fff903196f56dad86d1f69e0cb851958c6dded61
+      uri: https://huggingface.co/TheBloke/Chinese-Alpaca-2-7B-GGUF/resolve/main/chinese-alpaca-2-7b.Q8_0.gguf
+      size: 7364365856
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

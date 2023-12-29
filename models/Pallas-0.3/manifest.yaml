@@ -1,0 +1,393 @@
+id: Pallas-0.3
+parent_id: Mihaiii/Pallas-0.3
+name: Pallas 0.3
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Mihai
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- base_model:Mihaiii/Pallas-0.3
+- license:other
+- region:us
+config:
+  vocab_size: 64002
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q2_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2e07747fe946e047eb8b591788bf4bd1269cc41
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q2_K.gguf
+      size: 14555891840
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q3_K_L
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a428dd124bf35ad0dc5a737cca9a73e10f1ab1fa
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q3_K_L.gguf
+      size: 18139463232
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q3_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 67815874d6682e0497248bb862abf9c69d278f52
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q3_K_M.gguf
+      size: 16636591680
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q3_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5681975b36f012389d7d5e79ad734f46f659660d
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q3_K_S.gguf
+      size: 14960311872
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q4_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4e3155aa4c53a8257834d3f2af234b5d40391f3b
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q4_0.gguf
+      size: 19466548640
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q4_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 01b372250a9679e6b6836baa442bf91b89663c91
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q4_K_M.gguf
+      size: 20658730400
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q4_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 38cd20ea15261350171e4fccb76649c5fd3cc274
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q4_K_S.gguf
+      size: 19543618976
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q5_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e3164f2ac285aa2cbd8e4ca11bb7fd93445c1a0
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q5_0.gguf
+      size: 23707712672
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q5_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 077cd5e5e9c92efd8ccfdefca200f14fd59158c2
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q5_K_M.gguf
+      size: 24321866912
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q5_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 54f8da2bb078b9a1455d27afc01caa7d2d952c45
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q5_K_S.gguf
+      size: 23707712672
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q6_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fb4f335d82f562f2f77e5902196344b6d0511812
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q6_K.gguf
+      size: 28213949472
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pallas-0.3/Q8_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c8b2f66640ca34e023c45ac6ae18e27070bb0057
+      uri: https://huggingface.co/TheBloke/Pallas-0.3-GGUF/resolve/main/pallas-0.3.Q8_0.gguf
+      size: 36542312224
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "SYSTEM: {system_message}\nUSER: {prompt}\nASSISTANT:\n"

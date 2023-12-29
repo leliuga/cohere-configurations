@@ -1,0 +1,396 @@
+id: WizardLM-30B-Uncensored
+parent_id: ehartford/WizardLM-30B-Uncensored
+name: Wizardlm 30B Uncensored
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Eric Hartford
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- uncensored
+- dataset:ehartford/WizardLM_alpaca_evol_instruct_70k_unfiltered
+- base_model:ehartford/WizardLM-30B-Uncensored
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 2048
+  embedding_size: 6656
+  attention_head_size: 52
+  key_value_head_size: 0
+  intermediate_size: 17920
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f2b8f2d3b57f8b546ed4159c621f1f0ee2c82ff6
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q2_K.gguf
+      size: 13502553024
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 766d8e8a3559af601f9f2b51d51ef88887e44633
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q3_K_L.gguf
+      size: 17279767136
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eac3ad09ff3320c3e05665b1571121933fe759b2
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q3_K_M.gguf
+      size: 15761560160
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac979b4f51908f0718b063d7862cdd19e6a7dbc6
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q3_K_S.gguf
+      size: 14064120416
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 895137eeee9098d198aa8196296a64f4ba3f3470
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q4_0.gguf
+      size: 18355976640
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9a03c94f90693e1fcc28381dfc76b2aa3c237fdd
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q4_K_M.gguf
+      size: 19621149120
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 520879927a744e261c2e035009e169ef20b3a8dd
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q4_K_S.gguf
+      size: 18437765568
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: af68e752fa6790b8ccf676c9449d485809a830c5
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q5_0.gguf
+      size: 22395370752
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dbf1919544c079013e7b227a24ace7d9a6cd76b8
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q5_K_M.gguf
+      size: 23047126272
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e70319e42c875218c1c4295f23133179029c1dd6
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q5_K_S.gguf
+      size: 22395370752
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2a0396a5a45ff2cb2a434df686cd7c9f03692559
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q6_K.gguf
+      size: 26687227008
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - WizardLM-30B-Uncensored/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 93507902817d64023b41c3213df9b86c64a8388d
+      uri: https://huggingface.co/TheBloke/WizardLM-30B-Uncensored-GGUF/resolve/main/WizardLM-30B-Uncensored.Q8_0.gguf
+      size: 34565138688
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n### Response:\n"

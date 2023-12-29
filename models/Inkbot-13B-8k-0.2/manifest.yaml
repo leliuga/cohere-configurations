@@ -1,0 +1,395 @@
+id: Inkbot-13B-8k-0.2
+parent_id: Tostino/Inkbot-13B-8k-0.2
+name: Inkbot 13B 8K 0.2
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Adam Brusselback
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:Tostino/Inkbot-13B-8k-0.2
+- license:llama2
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 87fff8929eb90e00adc6d06ee5c25195ed2be137
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q2_K.gguf
+      size: 5429354304
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9ed2e60e2b46b2a5c5d562d7d00cf91888b42e61
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q3_K_L.gguf
+      size: 6929566016
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c444e689ded3dc4e9d2b7ae92ae1111336ee9c82
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q3_K_M.gguf
+      size: 6337775936
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ceb6dafad9d282ef88a4689f04eb61945c9bb17
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q3_K_S.gguf
+      size: 5658986816
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0946ddaea8ce2f166abf7cee487e102fa16ccb67
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q4_0.gguf
+      size: 7365841888
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cf6264666c331958fab2223f8d0cc953a44a898b
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q4_K_M.gguf
+      size: 7865963488
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 885d3698bf763de2c8e075ea721a8007bf37a1ce
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q4_K_S.gguf
+      size: 7414338528
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 22f81f938b4f1e36042dae4af2bcd8c6f799a1a2
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q5_0.gguf
+      size: 8972293728
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cb98208ada1f69e0ceacbe77d71b1430d7e355d3
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q5_K_M.gguf
+      size: 9229932128
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3bf95241429568b242462e3cbaf3b3c4304be0b4
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q5_K_S.gguf
+      size: 8972293728
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: abb85436306bb3c7f1bedc72a19aa76302974e5e
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q6_K.gguf
+      size: 10679148832
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Inkbot-13B-8k-0.2/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a6de65673956bdf5a60a4ddbb51228c7a0d6cb13
+      uri: https://huggingface.co/TheBloke/Inkbot-13B-8k-0.2-GGUF/resolve/main/inkbot-13b-8k-0.2.Q8_0.gguf
+      size: 13831330464
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<#meta#>\n- Date: [DATE]\n- Task: [TASK TYPE]\n<#system#>\n{system_message}\n<#chat#>\n<#user#>\n{prompt}\n<#bot#>\n"

@@ -1,8 +1,18 @@
 ---
-license: apache-2.0
+license: cc-by-nc-4.0
 language:
 - en
 ---
+
+# Update 2023-12-19
+
+In light of [dataset contamination issue among the merged models](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard/discussions/474)
+raised by the community in recent days, in particular
+[berkeley-nest/Starling-LM-7B-alpha](https://huggingface.co/berkeley-nest/Starling-LM-7B-alpha),
+[Q-bert/MetaMath-Cybertron-Starling](https://huggingface.co/Q-bert/MetaMath-Cybertron-Starling), and
+[janai-hq/trinity-v1](https://huggingface.co/janai-hq/trinity-v1),
+we decided to remake another model without the models mentioned.
+Additionally, their CC-by-NC-4.0 license is restrictive and thus are not suitable for an open model.
 
 # Model Description
 This is an experiment to test merging 14 models using DARE TIES 🦙

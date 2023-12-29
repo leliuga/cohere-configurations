@@ -3,6 +3,8 @@ license: llama2
 language:
 - en
 pipeline_tag: conversational
+tags:
+- merge
 ---
 # Goliath 120B
 

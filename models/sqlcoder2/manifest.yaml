@@ -1,0 +1,397 @@
+id: sqlcoder2
+parent_id: defog/sqlcoder2
+name: Sqlcoder2
+description: ""
+architecture: gpt_bigcode
+licence: other
+object: model
+owned_by: Defog.ai
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- starcoder
+- code
+- text-generation
+- en
+- base_model:defog/sqlcoder2
+- license:other
+- has_space
+- region:us
+config:
+  vocab_size: 49152
+  context_size: 0
+  embedding_size: 0
+  attention_head_size: 0
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 0
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q2_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fdef60f7a0f1a2620933e504ccc2edb6db48145a
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q2_K.gguf
+      size: 6731531744
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q3_K_L
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7f012ddb712b697a3d3cb6424ebbabd25ad18b3d
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q3_K_L.gguf
+      size: 9082373600
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q3_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 538caab480a892352190a712be1aa64598bb253e
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q3_K_M.gguf
+      size: 8176403936
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q3_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 284f0992704111b69d625e2c61b35db285c0e667
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q3_K_S.gguf
+      size: 6927058400
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q4_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4ab206da474896c99cecd47c16fbb71741328db0
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q4_0.gguf
+      size: 8987608544
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q4_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e762474fcbc5a48c03b0a57b1da16ecc346f9f2d
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q4_K_M.gguf
+      size: 9962784224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q4_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3e8d26e547372844a151df5f36bf9d5b506a0e0e
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q4_K_S.gguf
+      size: 9063106016
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q5_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 866959c7b5e4cec3f90fc75a56ae2da4c06a2b55
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q5_0.gguf
+      size: 10926949856
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q5_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 764e218e7515ff84a6734b2db984e32ec7ad3d88
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q5_K_M.gguf
+      size: 11536926176
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q5_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 90ccf798971ec8c528c8679182b4fd9449fc4bc3
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q5_K_S.gguf
+      size: 10926949856
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q6_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d5320ce8ebe4c2ad357beadda7e954bad292e21c
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q6_K.gguf
+      size: 12987500000
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder2/Q8_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 301c9ff4123bbdd75dafd22347c737c35ed7f06a
+      uri: https://huggingface.co/TheBloke/sqlcoder2-GGUF/resolve/main/sqlcoder2.Q8_0.gguf
+      size: 16818111968
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "## Task\nGenerate a SQL query to answer the following question:\n`{prompt}`\n\n### Database Schema\nThis query will run on a database whose schema is represented in this string:\nCREATE TABLE products (\n  product_id INTEGER PRIMARY KEY, -- Unique ID for each product\n  name VARCHAR(50), -- Name of the product\n  price DECIMAL(10,2), -- Price of each unit of the product\n  quantity INTEGER  -- Current quantity in stock\n);\n\nCREATE TABLE sales (\n  sale_id INTEGER PRIMARY KEY, -- Unique ID for each sale\n  product_id INTEGER, -- ID of product sold\n  customer_id INTEGER,  -- ID of customer who made purchase\n  salesperson_id INTEGER, -- ID of salesperson who made the sale\n  sale_date DATE, -- Date the sale occurred\n  quantity INTEGER -- Quantity of product sold\n);\n\n-- sales.product_id can be joined with products.product_id\n\n### SQL\nGiven the database schema, here is the SQL query that answers `{prompt}`:\n```sql\n"

@@ -1,0 +1,404 @@
+id: Autolycus-Mistral_7B
+parent_id: FPHam/Autolycus-Mistral_7B
+name: Autolycus Mistral 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: FPHam
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- instruct
+- finetune
+- chatml
+- gpt4
+- en
+- base_model:FPHam/Autolycus-Mistral_7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7ff59b9f5c94bd8251e2bb4da3bf4446567d0bd1
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q2_K.gguf
+      size: 3083107520
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3cec1020aeba3a2f23f3f5d8f6feb5a0728ea83b
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q3_K_L.gguf
+      size: 3822034944
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 92c92ad8aa0ef94db173ca7d366632247c86bef5
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q3_K_M.gguf
+      size: 3518996480
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b02798c4f9086a2b9103010ef9ec1d3abdb9e08
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q3_K_S.gguf
+      size: 3164577792
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a6dd753839e7c78ff015200f8bca31f04ad16ed
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q4_0.gguf
+      size: 4108928064
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a37ccf9ce5351ba64b38c6fdd4c5b81135bd9546
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q4_K_M.gguf
+      size: 4368450624
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e39e90ca4f4a63d1dd2391894a1b48107e280191
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q4_K_S.gguf
+      size: 4140385344
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ffc2c8bb04af70eb54786a15013ee4b735f7988d
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q5_0.gguf
+      size: 4997728320
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a12d82d66e0b724c7370416aff5c59cb7db2c238
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q5_K_M.gguf
+      size: 5131421760
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9bda099826de848154dfbde460e71e50f49a2c89
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q5_K_S.gguf
+      size: 4997728320
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3e99f2ba5150ab5bcb3a7d33f78176e3067ae11a
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q6_K.gguf
+      size: 5942078592
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Autolycus-Mistral_7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aa3bbd11829c4767259ade11bcd82d85f7094c6a
+      uri: https://huggingface.co/TheBloke/Autolycus-Mistral_7B-GGUF/resolve/main/autolycus-mistral_7b.Q8_0.gguf
+      size: 7695875072
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

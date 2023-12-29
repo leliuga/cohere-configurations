@@ -1,7 +1,9 @@
 ---
 license: apache-2.0
 language:
-- en
+  - en
+tags:
+  - merge
 ---
 
 # Marcoroni-neural-chat-7B-v1

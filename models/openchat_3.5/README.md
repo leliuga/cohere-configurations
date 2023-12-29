@@ -200,10 +200,7 @@ OpenChat 3.5 was trained with C-RLFT on a collection of publicly available high-
 }
 ```
 
-## Acknowledgements
+## 💌 Main Contributor
 
-We extend our heartfelt gratitude to AutoMeta and caesus from Alignment Lab AI, LDJ and Teknium from Nous Research, alpin and TearGosling from Pygmalion AI for their substantial contributions to data collection and model training.
-
-Special thanks go to Changling Liu from GPT Desk Pte. Ltd., Qiying Yu at Tsinghua University, Baochang Ma, and Hao Wan from 01.AI company for their generous provision of resources. We are also deeply grateful to Jianxiong Li and Peng Li at Tsinghua University for their insightful discussions.
-
-Furthermore, we appreciate the developers behind the following projects for their significant contributions to our research: [Mistral](https://mistral.ai/), [Chain-of-Thought Hub](https://github.com/FranxYao/chain-of-thought-hub), [Llama 2](https://ai.meta.com/llama/), [Self-Instruct](https://arxiv.org/abs/2212.10560), [FastChat (Vicuna)](https://github.com/lm-sys/FastChat), [Alpaca](https://github.com/tatsu-lab/stanford_alpaca.git), and [StarCoder](https://github.com/bigcode-project/starcoder). Their work has been instrumental in driving our research forward.
+* Wang Guan [imonenext@gmail.com], Cheng Sijie [csj23@mails.tsinghua.edu.cn], LDJ
+* We look forward to hearing you and collaborating on this exciting project!

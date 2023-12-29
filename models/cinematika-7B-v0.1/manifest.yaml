@@ -1,0 +1,395 @@
+id: cinematika-7B-v0.1
+parent_id: jondurbin/cinematika-7b-v0.1
+name: Cinematika 7B v0.1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Jon Durbin
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:jondurbin/cinematika-7b-v0.1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32003
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4f46f8eb857342918e1ad8fee7cb369209231094
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q2_K.gguf
+      size: 3083112000
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d379964cfbca0b77d5a22f7a8c5c229bd44e47c5
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q3_K_L.gguf
+      size: 3822039840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9da17e293fcf1fafa59499ef0d36a658f4717737
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q3_K_M.gguf
+      size: 3519001376
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3703446a2ec49fa3ab83a6d5d6760b5d6b81267f
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q3_K_S.gguf
+      size: 3164582688
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9087556f9d76bd540fe0946c5a6994561e66607
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q4_0.gguf
+      size: 4108933504
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 93598045103d4a84facee11e0db4162da7fec69c
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q4_K_M.gguf
+      size: 4368456064
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b8ddffd9af025a9ff208baaf9abc966e45f6c602
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q4_K_S.gguf
+      size: 4140390784
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eaa23576cb9840f1773236dee1ae19f25d8d3eb9
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q5_0.gguf
+      size: 4997734272
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1accb6e21f1429e89866acd77394e40dfd3f934d
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q5_K_M.gguf
+      size: 5131427712
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6e3faa9622c43275b65ab5775aed28ff87fb0cb2
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q5_K_S.gguf
+      size: 4997734272
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 16f3999da79e803fe2d0cd45a77a292dee2399c0
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q6_K.gguf
+      size: 5942085088
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - cinematika-7B-v0.1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9bfbb8a9bb1e8496fedf8de1f2fc76941e499ae6
+      uri: https://huggingface.co/TheBloke/cinematika-7B-v0.1-GGUF/resolve/main/cinematika-7b-v0.1.Q8_0.gguf
+      size: 7695883552
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|prompter|>{prompt}</s><|assistant|>

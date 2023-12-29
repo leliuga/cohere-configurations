@@ -1,0 +1,397 @@
+id: YuLan-Chat-2-13B
+parent_id: yulan-team/YuLan-Chat-2-13b-fp16
+name: YuLan Chat 2 13B
+description: ""
+architecture: llama
+licence: mit
+object: model
+owned_by: RUC-GSAI-YuLan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:yulan-team/YuLan-Chat-2-13b-fp16
+- license:mit
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 51200
+  context_size: 8192
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 0
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: de62f6f389a2fc47438a9da4331d1aba7a018605
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q2_K.gguf
+      size: 5542676192
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0d75357a9ff6268342f17feb48ffc25e1a92cea1
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q3_K_L.gguf
+      size: 7052871392
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c1c3e009856b6260121e2e2b6285e09cecfe3fb3
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q3_K_M.gguf
+      size: 6461081312
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e1433dda8c0a23b3fc2812169f44a3bbca802c4e
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q3_K_S.gguf
+      size: 5782292192
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f3d67beefa12f0efa9cc4542e39edfe15ede92e9
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q4_0.gguf
+      size: 7502202592
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b724b92b63be14c4c629e322c05637e39eb19026
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q4_K_M.gguf
+      size: 8002324192
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 055a6b3eee9eae932441e95595ae1de41ab635af
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q4_K_S.gguf
+      size: 7550699232
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c9cba76e0cac876f4a10e33e646e0f1d4be2d32b
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q5_0.gguf
+      size: 9120941792
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c0a193541ad77e6dc617dad8be9063361eddfd10
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q5_K_M.gguf
+      size: 9378580192
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f36dd959f8d7b629414ed0d9775d9541b48730a3
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q5_K_S.gguf
+      size: 9120941792
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q6_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 46e28004469b60aa3aae7ea8250185cab78a9fea
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q6_K.gguf
+      size: 10840852192
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - YuLan-Chat-2-13B/Q8_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f8254c55c048d3c3a22d857dbd40be4238c5cc1a
+      uri: https://huggingface.co/TheBloke/YuLan-Chat-2-13B-GGUF/resolve/main/yulan-chat-2-13b.Q8_0.gguf
+      size: 14040647392
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        The following is a conversation between a human and an AI assistant namely YuLan, developed by GSAI, Renmin University of China. The AI assistant gives helpful, detailed, and polite answers to the user's questions.
+        [|Human|]:{prompt}
+        [|AI|]:

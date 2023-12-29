@@ -1,0 +1,395 @@
+id: Norocetacean-20B-10k
+parent_id: ddh0/Norocetacean-20b-10k
+name: Norocetacean 20B 10K
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: ddh0
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- base_model:ddh0/Norocetacean-20b-10k
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 10240
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q2_K
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ccbcdcf9486a26cfa8e59581308b779edbdc6100
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q2_K.gguf
+      size: 8312565984
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q3_K_L
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fff208e27faf7c1551f4be5b7c47c7a9f69614ea
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q3_K_L.gguf
+      size: 10628741344
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q3_K_M
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ece12d5d033f823eb52051463fae25407af08984
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q3_K_M.gguf
+      size: 9698130144
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q3_K_S
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 30dfb88729a59bafcda8480cbea5c45bea75cfd2
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q3_K_S.gguf
+      size: 8659343584
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q4_0
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c8a2dfad30f5aa8cbc8ef70b06ca6afc44c11cfb
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q4_0.gguf
+      size: 11292999904
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q4_K_M
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: be9b3f820f0dea69c82d47f1d1795e6955be60bc
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q4_K_M.gguf
+      size: 12043182304
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q4_K_S
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 43e38fb4b888963f0507d86c792023678e69b2e3
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q4_K_S.gguf
+      size: 11341496544
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q5_0
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8ce25519f06322f36efd337874a97748a743ffbf
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q5_0.gguf
+      size: 13771735264
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q5_K_M
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9880704bea067b61f9b401c39a5a21f6781a286a
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q5_K_M.gguf
+      size: 14158192864
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q5_K_S
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25819a2940724f0b1f3cd6330e665fddba97cbc2
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q5_K_S.gguf
+      size: 13771735264
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q6_K
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 910267f8ead22937f78b934d747dc1a69a91bde8
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q6_K.gguf
+      size: 16405391584
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Norocetacean-20B-10k/Q8_0
+    - --ctx-size
+    - "10240"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1dade60fc2fae993ce8af3b23fd3c9cbf10199db
+      uri: https://huggingface.co/TheBloke/Norocetacean-20B-10k-GGUF/resolve/main/norocetacean-20b-10k.Q8_0.gguf
+      size: 21247621344
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 10240
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

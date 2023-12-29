@@ -1,10 +1,13 @@
 ---
 license: apache-2.0
+tags:
+- merge
 ---
 
 ## Model Details
 
-Mindy-7b is a *Frankenstein👻* merge between [SOLAR-10.7B-Instruct-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0) and [Toten5/Marcoroni-neural-chat-7B-v2](https://huggingface.co/Toten5/Marcoroni-neural-chat-7B-v2).
+Mindy-7b is a *Frankenstein👻* merge between [AIDC-ai-business/Marcoroni-7B-v3](https://huggingface.co/AIDC-ai-business/Marcoroni-7B-v3) and [Weyaxi/Seraph-7B](https://huggingface.co/Weyaxi/Seraph-7B
+).
 
 ### Model Description
 

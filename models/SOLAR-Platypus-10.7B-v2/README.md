@@ -52,9 +52,9 @@ The lora_r values is 64.
 
 | Model | Average | ARC | HellaSwag | MMLU | TruthfulQA | Winogrande | GSM8K |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| SOLAR-Platypus-10.7B-v1 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
-| SOLAR-Platypus-10.7B-v2 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
-| [upstage/SOLAR-10.7B-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-v1.0) | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
+| SOLAR-Platypus-10.7B-v1 | 58.62 | 61.69 | 84.23 | 60.37 | 51.58 | 82.79 | 11.07 |
+| SOLAR-Platypus-10.7B-v2 | 55.25 | 59.39 | 83.57 | 59.93 | 43.15 | 81.45 | 4.02 |
+| [upstage/SOLAR-10.7B-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-v1.0) | 66.04 | 61.95 | 84.60 | 65.48 | 45.04 | 83.66 | 55.50 |
 
   
 # Implementation Code

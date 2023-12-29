@@ -1,0 +1,394 @@
+id: MetaMath-13B-V1.0
+parent_id: meta-math/MetaMath-13B-V1.0
+name: MetaMath 13B V1.0
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: MetaMath
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:meta-math/MetaMath-13B-V1.0
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e60903154495c789d2462827b3f8e23f599c8137
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q2_K.gguf
+      size: 5429354176
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 01b5ade1b7a97c844c8a609ee1d4c38975a133c5
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q3_K_L.gguf
+      size: 6929565888
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f6c69b4dcc4ace5f5abc28add24dca2064f7c4d9
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q3_K_M.gguf
+      size: 6337775808
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ca006ebf195fe681e984c8ff76f1b1d1a7ca3e0d
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q3_K_S.gguf
+      size: 5658986688
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88179c19e05eecaca4ccf471fcccbd439862aed2
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q4_0.gguf
+      size: 7365841760
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 26bf5d21a4bb9089933ca059b991d4afb60c674c
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q4_K_M.gguf
+      size: 7865963360
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ce8a65729c4ca5d304c24b063cfa4c7635955feb
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q4_K_S.gguf
+      size: 7414338400
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b1ea8719c43bd32557584b5ee1d37aeed2d064f6
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q5_0.gguf
+      size: 8972293600
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29198ea45ce30ea62a89be99315bdcd8b1f856cd
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q5_K_M.gguf
+      size: 9229932000
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f6b2b181ff914549bf8b8c982b5fc97605e7e08d
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q5_K_S.gguf
+      size: 8972293600
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c5ff18bc529eb1b3b5937e4a77b47693154705aa
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q6_K.gguf
+      size: 10679148704
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MetaMath-13B-V1.0/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a743f73a75af72a4c3139642fc2b28b6ab29be3f
+      uri: https://huggingface.co/TheBloke/MetaMath-13B-V1.0-GGUF/resolve/main/metamath-13b-v1.0.Q8_0.gguf
+      size: 13831330336
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n\n### Instruction:\n{prompt}\n\n\n### Response: Let's think step by step.\n"

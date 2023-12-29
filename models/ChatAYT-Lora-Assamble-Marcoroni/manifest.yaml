@@ -1,0 +1,394 @@
+id: ChatAYT-Lora-Assamble-Marcoroni
+parent_id: TFLai/ChatAYT-Lora-Assamble-Marcoroni
+name: ChatAYT Lora Assamble Marcoroni
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: TFLai
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:TFLai/ChatAYT-Lora-Assamble-Marcoroni
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 145a99c6f0c3535571a1fd869046cc094fb5837c
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q2_K.gguf
+      size: 5429348288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1bff8c3fa6298f58dd71cabca0ceac2a8e7fb983
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q3_K_L.gguf
+      size: 6929559488
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d8aae04186ee96acf19fa31528c43c17fc7f5a7f
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q3_K_M.gguf
+      size: 6337769408
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1b74029960cd7dfd9cbbdfa2aec032f658e9a87c
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q3_K_S.gguf
+      size: 5658980288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cf81804d6d23bfea4a690011513d1e7a9c7b7943
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q4_0.gguf
+      size: 7365834688
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 14decfff7633e1c2cf28ec36b96bbbad8b4ef636
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q4_K_M.gguf
+      size: 7865956288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3480b96665cefa888ab82b6ab080fdfe6116e3a4
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q4_K_S.gguf
+      size: 7414331328
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d07a1b54c2b85f3df27578369cb47634ed5ceb8
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q5_0.gguf
+      size: 8972285888
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7de4a67a2f6abc01b7bb692c4ac77ccedaa71211
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q5_K_M.gguf
+      size: 9229924288
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 22ad6ca639317a7cf89751c5773da82fb64733b4
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q5_K_S.gguf
+      size: 8972285888
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60e692363a432597ef915f51883028f798edbf72
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q6_K.gguf
+      size: 10679140288
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ChatAYT-Lora-Assamble-Marcoroni/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 243e40cfe85fae13dd9331355dd87d3319903ebf
+      uri: https://huggingface.co/TheBloke/ChatAYT-Lora-Assamble-Marcoroni-GGUF/resolve/main/chatayt-lora-assamble-marcoroni.Q8_0.gguf
+      size: 13831319488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n\n{prompt}\n\n### Response:\n"

@@ -8,7 +8,7 @@ language:
 
 ### Model Description
 
-Llama2 7B fine-tuned using OpenChat + ShareGPT datasets for multi-turn conversations.
+Llama2 7B fine-tuned using ShareGPT datasets for multi-turn conversations.
 
 - **Developed by:** l3utterfly
 - **Funded by:** Layla Network

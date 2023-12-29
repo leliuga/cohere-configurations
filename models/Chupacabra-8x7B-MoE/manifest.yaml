@@ -1,0 +1,282 @@
+id: Chupacabra-8x7B-MoE
+parent_id: perlthoughts/Chupacabra-8x7B-MoE
+name: Chupacabra 8X7B MoE
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Ray Hernandez
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:perlthoughts/Chupacabra-8x7B-MoE
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 572da7db49c49d1e7f1823a6de327a927712cea7
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q2_K.gguf
+      size: 15644970816
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8392c14fd6a656c0db4a3b6d1c2978bffc7271e4
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q3_K_M.gguf
+      size: 20364291904
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a4f35de0470cb363658c808b85144a6c8628279
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q4_0.gguf
+      size: 26442469184
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b7a601a0e997ebdcf13854af1c0ce75a465502fd
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q4_K_M.gguf
+      size: 26442469184
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5d0c541a4284a6457bb52a4259a6ef80859164ab
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q5_0.gguf
+      size: 32230215488
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4afb60916fa6192fb0e8b4c5826b6c2cecaac11a
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q5_K_M.gguf
+      size: 32230215488
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ffba92c1b6a66eb308a132bc5f1c378946aac416
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q6_K.gguf
+      size: 38379695936
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chupacabra-8x7B-MoE/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aef7553601403d5f5ce8bdf9e2e04b75b518688f
+      uri: https://huggingface.co/TheBloke/Chupacabra-8x7B-MoE-GGUF/resolve/main/chupacabra-8x7b-moe.Q8_0.gguf
+      size: 49625198400
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

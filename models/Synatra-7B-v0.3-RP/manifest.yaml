@@ -1,0 +1,401 @@
+id: Synatra-7B-v0.3-RP
+parent_id: maywell/Synatra-7B-v0.3-RP
+name: Synatra 7B V0.3 RP
+description: ""
+architecture: mistral
+licence: cc-by-nc-4.0
+object: model
+owned_by: Jeonghwan Park
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- text-generation
+- ko
+- base_model:maywell/Synatra-7B-v0.3-RP
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c943db4a9467e039139cb61d29b82308745dc4e4
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q2_K.gguf
+      size: 3083107520
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f14e8b4b29a74a2c77ca677dba0bbbdd7b8a0977
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q3_K_L.gguf
+      size: 3822034944
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b531832ffacff607aea58cc281116927548113d4
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q3_K_M.gguf
+      size: 3518996480
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 609b272e7bf0ab73484450134870bbc37ebbeaea
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q3_K_S.gguf
+      size: 3164577792
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bb185977e518000c3a65f61bb18efcf30b9b6d5d
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q4_0.gguf
+      size: 4108928064
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d6e7bfdeb603d1652e79becd76bc0550b28fb6e
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q4_K_M.gguf
+      size: 4368450624
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ab142833c9dc5134b157da17acab06dd59d4d3d6
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q4_K_S.gguf
+      size: 4140385344
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 85e31b812dc548544edd0aaba7f545d4e163e30a
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q5_0.gguf
+      size: 4997728320
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b09808ebcc4f3c0f0b93c46969d6474914586eb2
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q5_K_M.gguf
+      size: 5131421760
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 83c77b78733454d4985c5b449c5fbff0acf31464
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q5_K_S.gguf
+      size: 4997728320
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d72fb2deb5b46889a2fd2b6e7bc8c8de57ba9465
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q6_K.gguf
+      size: 5942078592
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Synatra-7B-v0.3-RP/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9bd8764b0bd6e092b737e8e4a12548c2a05751e4
+      uri: https://huggingface.co/TheBloke/Synatra-7B-v0.3-RP-GGUF/resolve/main/synatra-7b-v0.3-rp.Q8_0.gguf
+      size: 7695875072
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

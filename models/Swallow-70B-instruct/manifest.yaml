@@ -1,0 +1,341 @@
+id: Swallow-70B-instruct
+parent_id: tokyotech-llm/Swallow-70b-instruct-hf
+name: Swallow 70B Instruct
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: tokyotech-llm
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- en
+- ja
+- base_model:tokyotech-llm/Swallow-70b-instruct-hf
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 43176
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e47522450b4cd1a17f55bdfcec8e4582c7f3cee9
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q2_K.gguf
+      size: 29384652288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9997fc2a33454685c64b200f3c5f6df6bb0a8951
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q3_K_L.gguf
+      size: 36262533120
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3d0d131fda83a8fa2ac62e3b1a5112949fe33464
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q3_K_M.gguf
+      size: 33301354496
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1ce715c1fc2da115903f99923904b8a7a8ac6386
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q3_K_S.gguf
+      size: 30033991680
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c28589dadefca2378b181eba5413f781afb5524
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q4_0.gguf
+      size: 38999106048
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e8c02675b7af07cfc4d6f4755593259b9fa207e4
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q4_K_M.gguf
+      size: 41549767168
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e150052391dbc068bdb0582bbab5ed2d05b8551c
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q4_K_S.gguf
+      size: 39200432640
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: da7230b4babc27f9a43bee90481dda96073ef48f
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q5_0.gguf
+      size: 47599698432
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 593175bd82d74d331bdf289ad8b6f5308730a672
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q5_K_M.gguf
+      size: 48892068352
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Swallow-70B-instruct/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f85e2608ce2bd3b2f7cabdada55b233a556c47df
+      uri: https://huggingface.co/TheBloke/Swallow-70B-instruct-GGUF/resolve/main/swallow-70b-instruct.Q5_K_S.gguf
+      size: 47599698432
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "以下に、あるタスクを説明する指示があります。リクエストを適切に完了するための回答を記述してください。\\n\\n### 指示:\\n{prompt}\\n\\n### 応答:\n"

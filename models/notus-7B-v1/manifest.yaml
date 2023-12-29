@@ -1,0 +1,408 @@
+id: notus-7B-v1
+parent_id: argilla/notus-7b-v1
+name: Notus 7B v1
+description: ""
+architecture: mistral
+licence: mit
+object: model
+owned_by: Argilla
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- dpo
+- rlaif
+- preference
+- ultrafeedback
+- text-generation
+- en
+- dataset:argilla/ultrafeedback-binarized-preferences
+- base_model:argilla/notus-7b-v1
+- license:mit
+- model-index
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2bee24c071b625c958c4e2acfbb96592b4ff3e02
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q2_K.gguf
+      size: 3083098240
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8e836d8d27ffb2bc36bef8a3771ea6328985b5d6
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q3_K_L.gguf
+      size: 3822024832
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e7f130d406d35543eb920d417f1d37d732fe7016
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q3_K_M.gguf
+      size: 3518986368
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4e66e54705dc956984285133ae7ac398dbdbeb34
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q3_K_S.gguf
+      size: 3164567680
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 025b398382bad7281e61a65802dc9802bec900d8
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q4_0.gguf
+      size: 4108916864
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3c02cf7f4c90b68389e06c9aa2a11bab54ee842d
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q4_K_M.gguf
+      size: 4368439424
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dc8a633e556395af82a7b5029199ffaabd5f359b
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q4_K_S.gguf
+      size: 4140374144
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9155d9cd8f6c082b1911bc89b70e44155854026
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q5_0.gguf
+      size: 4997716096
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 11426ffa6d02e93ae14ed670c27053e8bf1b74e6
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q5_K_M.gguf
+      size: 5131409536
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aa44f27602e0580877c97076e5c889f254930cb9
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q5_K_S.gguf
+      size: 4997716096
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4d01360ee0c3b42dfb7a256d5119f323ffb78d2
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q6_K.gguf
+      size: 5942065280
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - notus-7B-v1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8d735f2d32bd5692fdf02b63675a942b93ab52b3
+      uri: https://huggingface.co/TheBloke/notus-7B-v1-GGUF/resolve/main/notus-7b-v1.Q8_0.gguf
+      size: 7695857792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|system|>
+        </s>
+        <|user|>
+        {prompt}</s>
+        <|assistant|>

@@ -1,0 +1,395 @@
+id: neural-chat-7B-v3-3-wizardmath-dare-me
+parent_id: SanjiWatsuki/neural-chat-7b-v3-3-wizardmath-dare-me
+name: Neural Chat 7B V3.3 WizardMath DARE ME
+description: ""
+architecture: mistral
+licence: other
+object: model
+owned_by: Sanji Watsuki
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- base_model:SanjiWatsuki/neural-chat-7b-v3-3-wizardmath-dare-me
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a5a3d449e370acdc8c40d2a63769d807cba732a
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q2_K.gguf
+      size: 3084034208
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 419e68828d3230b59b1c95df5dd27c8e675c8fe9
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q3_K_L.gguf
+      size: 3822960800
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a8d36e244159db309b4b8dfa3458d8bbd04c05e
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q3_K_M.gguf
+      size: 3519922336
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a0acfa94864a02e913a454398585b49a20957d96
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q3_K_S.gguf
+      size: 3165503648
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d750bb2ed9b48487555d8b41b27905b59a65100a
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q4_0.gguf
+      size: 4109852832
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b295ef9aedfc51b21431c7ec7fbf746db7c29cd7
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q4_K_M.gguf
+      size: 4369375392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f47aef6a977bcf2bcdbd845bc73f77fd77f6fdab
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q4_K_S.gguf
+      size: 4141310112
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3dd01a39fab9e5ce002d31d53ed517b0ee60d5d8
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q5_0.gguf
+      size: 4998652064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 579f0b34695f06092a31879875ee2f4188de5eac
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q5_K_M.gguf
+      size: 5132345504
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8fec3549ebe5b61bb6ed41c84171337fed47eab4
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q5_K_S.gguf
+      size: 4998652064
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aed66d60d7f442afabb23644069af70011e39052
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q6_K.gguf
+      size: 5943001248
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - neural-chat-7B-v3-3-wizardmath-dare-me/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d8b9cb9218e459e3466d661b9c9f974b6deaa67
+      uri: https://huggingface.co/TheBloke/neural-chat-7B-v3-3-wizardmath-dare-me-GGUF/resolve/main/neural-chat-7b-v3-3-wizardmath-dare-me.Q8_0.gguf
+      size: 7696793760
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

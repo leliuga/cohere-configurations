@@ -1,0 +1,453 @@
+id: PuddleJumper-13B
+parent_id: totally-not-an-llm/PuddleJumper-13b
+name: PuddleJumper 13B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Kai Howard
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- dataset:totally-not-an-llm/EverythingLM-data-V2
+- dataset:garage-bAInd/Open-Platypus
+- dataset:Open-Orca/OpenOrca
+- base_model:totally-not-an-llm/PuddleJumper-13b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4bdfe77e0fd3ef92ab59dc78e6fba7be9e86e34f
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q2_K.gguf
+      size: 5429360064
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f214e2707e621b34e8262707261a42c1a5ff3079
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q3_K_L.gguf
+      size: 6929572320
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f55abf4943a61583c2348a04c20dacd96d6e2520
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q3_K_M.gguf
+      size: 6337782240
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 30af7a31582c2598c3fe7fd219a33ba2502ab6b7
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q3_K_S.gguf
+      size: 5658993120
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a40db57efdbdd4a3cd181f4654e3929767ed21f5
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q4_0.gguf
+      size: 7365848864
+  Q4_1:
+    dtype: Q4_1
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q4_1
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 91b27545b8cda11e73c127eac021a0d3ab133ccd
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q4_1.gguf
+      size: 8169075104
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 75f94d3ff562a4d582f5ad7cd7da153ca7c6e729
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q4_K_M.gguf
+      size: 7865970464
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 071a2a4276ab65aae7e684736ea6184cdf086bbe
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q4_K_S.gguf
+      size: 7414345504
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: da64a513d49a19428387c20da8da453fd624c571
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q5_0.gguf
+      size: 8972301344
+  Q5_1:
+    dtype: Q5_1
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q5_1
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8655584be6199e0bdc9a6bcc16f5a693907c6dcf
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q5_1.gguf
+      size: 9775527584
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6d19414bfaa4ab02bb1f1f60ab0675012dbb71ad
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q5_K_M.gguf
+      size: 9229939744
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 592bb75968f516c9111b78a9e7b69720a3211090
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q5_K_S.gguf
+      size: 8972301344
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 26aed088f90376bbb50975a8e432847671b0afb5
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q6_K.gguf
+      size: 10679157120
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PuddleJumper-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 40aaabaa9499c880a70f037dcdecd2ae64fe31ad
+      uri: https://huggingface.co/TheBloke/PuddleJumper-13B-GGUF/resolve/main/puddlejumper-13b.Q8_0.gguf
+      size: 13831341248
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "You are a helpful AI assistant.\n\nUSER: {prompt}\nASSISTANT:\n"

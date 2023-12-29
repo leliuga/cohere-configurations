@@ -1,0 +1,406 @@
+id: una-xaberius-34b-v1beta
+parent_id: fblgit/una-xaberius-34b-v1beta
+name: Una Xaberius 34B v1Beta
+description: ""
+architecture: llama
+licence: cc-by-4.0
+object: model
+owned_by: FBL
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- UNA
+- juanako
+- cybertron
+- xaberius
+- dataset:fblgit/tree-of-knowledge
+- dataset:garage-bAInd/Open-Platypus
+- dataset:allenai/ultrafeedback_binarized_cleaned
+- dataset:Open-Orca/OpenOrca
+- base_model:fblgit/una-xaberius-34b-v1beta
+- license:cc-by-4.0
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d68566f247b3ed2b7e111a476eca7828b5fa12e
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q2_K.gguf
+      size: 14555875328
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 34979232bf17ee09f81b95a960bb3d073f733283
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q3_K_L.gguf
+      size: 18139445248
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 937861a443044453d9d7a9c17af89865a31ff2d3
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q3_K_M.gguf
+      size: 16636573696
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6aeeb2105c75c3d0d6222248a2948dbcde19d83b
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q3_K_S.gguf
+      size: 14960293888
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9da7483e9818dd39ef3bab9e85db9ff07240d007
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q4_0.gguf
+      size: 19466528768
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7b7514d94cbe1262d29a01057c3bc93c08406908
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q4_K_M.gguf
+      size: 20658710528
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 607fe2091f45149978e6b8d3f826b9426ba384f2
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q4_K_S.gguf
+      size: 19543599104
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0c49e0f8f562244974a59d54c0fcb0f7a522e5e1
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q5_0.gguf
+      size: 23707691008
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6fa54f188b4e4ea0150cc811024147b00d8f5bdc
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q5_K_M.gguf
+      size: 24321845248
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b7e943a4d2dbec46a2e57adee3a0fb1110acab1d
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q5_K_S.gguf
+      size: 23707691008
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3de848ecc3f303fe58a83a2e7f41dbe25e8893b0
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q6_K.gguf
+      size: 28213925888
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - una-xaberius-34b-v1beta/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 992b69e18f87dac27dc46ec2366504dc7b4584bf
+      uri: https://huggingface.co/TheBloke/una-xaberius-34b-v1beta-GGUF/resolve/main/una-xaberius-34b-v1beta.Q8_0.gguf
+      size: 36542281728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

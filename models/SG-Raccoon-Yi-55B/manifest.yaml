@@ -1,0 +1,366 @@
+id: SG-Raccoon-Yi-55B
+parent_id: mlinmg/SG-Raccoon-Yi-55B
+name: SG Raccoon Yi 55B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Marco Lironi
+pipeline: conversational
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- conversational
+- base_model:mlinmg/SG-Raccoon-Yi-55B
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 98
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4d660e8cb32a1e96d0b69c7c3478f2ce3971380
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q2_K.gguf
+      size: 23439972608
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fe2bce6f69bbf75fa11de704e19a984c1053020c
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q3_K_L.gguf
+      size: 29263628544
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d6c92acb49e381f5aa57f3cdf06b0ac584131b25
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q3_K_M.gguf
+      size: 26784532736
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6ae7c3058accf5c6a56a831002d58eaaf02052c8
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q3_K_S.gguf
+      size: 24071014656
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c6100332a9d26ec036605aa139118059d417ada0
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q4_0.gguf
+      size: 31392610560
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9ba0a43b0e3c9c6be0650042e156de99f37a6e8f
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q4_K_M.gguf
+      size: 33339840768
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5418b1d553daad9a796af0417c4072c0432907a5
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q4_K_S.gguf
+      size: 31469680896
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29674846ba30d6aecebd61a39693184e878b9d7a
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q5_0.gguf
+      size: 38283524352
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 19d3e26f2ff0fa6e50882d8d087a72c95308896f
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q5_K_M.gguf
+      size: 39286642944
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 37bc73ef525d5209d0e43f739ec9ff0c0c1e560b
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q5_K_S.gguf
+      size: 38283524352
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - SG-Raccoon-Yi-55B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "101"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b1639e17da8aaacfdb84c25e153c4ba3b05a970a
+      uri: https://huggingface.co/TheBloke/SG-Raccoon-Yi-55B-GGUF/resolve/main/sg-raccoon-yi-55b.Q6_K.gguf
+      size: 45605120256
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "<|startoftext|>Human: {prompt}\n\nAssistant: <|endoftext|>\n"

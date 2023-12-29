@@ -1,0 +1,399 @@
+id: agiin-13.6B-v0.1
+parent_id: mncai/agiin-13.6B-v0.1
+name: Agiin 13.6B v0.1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: MindsAndCompany
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- dataset:Intel/orca_dpo_pairs
+- base_model:mncai/agiin-13.6B-v0.1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 26475c06b192e10ca777727e89d49fb9e9f64907
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q2_K.gguf
+      size: 5832630528
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 407e671bdab58f8362e9918f9689a25bb5217e92
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q3_K_L.gguf
+      size: 7251820800
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ccb6cb241a701b605836107887a094a085184f6
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q3_K_M.gguf
+      size: 6649938176
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bb64cd4f7fe7a2a4432950877b1512f67b30f3c2
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q3_K_S.gguf
+      size: 5977997568
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9df7936f691238c3f66b13094c9b2d6f47796161
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q4_0.gguf
+      size: 7791354112
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 005faf51c5a644d7d4c6300d3a6b38491b1461e1
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q4_K_M.gguf
+      size: 8277958912
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c87cc86a925056ca70f84f8dd85083428f930be4
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q4_K_S.gguf
+      size: 7822811392
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e2ab7ff92cf9d1f8e200820721efd024d61a0180
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q5_0.gguf
+      size: 9498042624
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 490441061d8968f7741d6cfd2ec245bcc020ac7f
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q5_K_M.gguf
+      size: 9748717824
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7cddc104da3d793b31f0553718196944a9b24efe
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q5_K_S.gguf
+      size: 9498042624
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ec304449a26adac8cd4b019631d9c8c4f25cb626
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q6_K.gguf
+      size: 11311399168
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - agiin-13.6B-v0.1/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d66a56b4da5d4a5da5cb275c9bdd06438f70a0a0
+      uri: https://huggingface.co/TheBloke/agiin-13.6B-v0.1-GGUF/resolve/main/agiin-13.6b-v0.1.Q8_0.gguf
+      size: 14649852160
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|user|>
+        {prompt}
+        <|assistant|>

@@ -1,0 +1,407 @@
+id: LUNA-SOLARkrautLM-Instruct
+parent_id: fblgit/LUNA-SOLARkrautLM-Instruct
+name: Luna SOLARkrautLM Instruct
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: FBL
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- finetune
+- dpo
+- Instruct
+- augmentation
+- german
+- text-generation
+- en
+- de
+- dataset:argilla/distilabel-math-preference-dpo
+- base_model:fblgit/LUNA-SOLARkrautLM-Instruct
+- license:cc-by-nc-4.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 02a1c830c038476eaadd522fe4385516bdd219f3
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q2_K.gguf
+      size: 4549016096
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3c44c0103a66557cbd6aeee97d29163694bebf9d
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q3_K_L.gguf
+      size: 5650749984
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4acb3627c8074c0e65b49eb7d242fbe5591d276d
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q3_K_M.gguf
+      size: 5188327968
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65a7dc567c549059e7ee01bff58239a61dee7fce
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q3_K_S.gguf
+      size: 4664564256
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0fe7bfd52a7b9df9d9d7725b56b5f0a237e0faa7
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q4_0.gguf
+      size: 6072384032
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 242f0560966e8e445a4547ef2b233ff0f8b4e99b
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q4_K_M.gguf
+      size: 6461667872
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3d46646729c74466329d19349ac915d5da1cd023
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q4_K_S.gguf
+      size: 6103841312
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2f7c82861210d949462a799e2ede91b3ae08270f
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q5_0.gguf
+      size: 7397390880
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 769e685a729210a7c3270d41486744e0002dfb63
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q5_K_M.gguf
+      size: 7597931040
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4d9278f0133fe2d56adb9d55ee8539f2540e3fc
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q5_K_S.gguf
+      size: 7397390880
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ff380aff67361ce377c40eb09d1280e13cd46abf
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q6_K.gguf
+      size: 8805210656
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - LUNA-SOLARkrautLM-Instruct/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b9b6b185aa55fdafde5eb223a7cee260993a9730
+      uri: https://huggingface.co/TheBloke/LUNA-SOLARkrautLM-Instruct-GGUF/resolve/main/luna-solarkrautlm-instruct.Q8_0.gguf
+      size: 11404155424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

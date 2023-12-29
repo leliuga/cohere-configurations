@@ -1,0 +1,397 @@
+id: MAmmoTH-Coder-34B
+parent_id: TIGER-Lab/MAmmoTH-Coder-34B
+name: MAmmoTH Coder 34B
+description: ""
+architecture: llama
+licence: mit
+object: model
+owned_by: TIGER-Lab
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- dataset:TIGER-Lab/MathInstruct
+- arxiv:2309.05653
+- base_model:TIGER-Lab/MAmmoTH-Coder-34B
+- license:mit
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d6415690a5383babda0ea6aba80563bed9acbe05
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q2_K.gguf
+      size: 14210684256
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7ab00a9d53b4a71e9cf59de919f31b8a5e9ce65a
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q3_K_L.gguf
+      size: 17771534496
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d49c416197abb95997b0f80fb371cd7c00a6f62e
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q3_K_M.gguf
+      size: 16283605152
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7e46382a144b74299d117ff9ab3c778a918776c0
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q3_K_S.gguf
+      size: 14605359264
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 79e2cc39ba92c23e0111d4727817dea956bccc68
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q4_0.gguf
+      size: 19052059872
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2c98e690c939f86d9990b6b1b4fe841c7ffcfa04
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q4_K_M.gguf
+      size: 20219911392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e623558524c195dac970e7a5d5bead4f1688df7c
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q4_K_S.gguf
+      size: 19146431712
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1bfac87600178a77a5532768c09ae3a93d5a8220
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q5_0.gguf
+      size: 23237189856
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fd324a77a563ef746e9e97baf0f7f22486011e2b
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q5_K_M.gguf
+      size: 23838810336
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 42120d757c8e00193c18c9cef9ae3ef0f9ed0208
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q5_K_S.gguf
+      size: 23237189856
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a08e1a67d11e8f12aa1b0a2bbf4263618ee81d5d
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q6_K.gguf
+      size: 27683890464
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - MAmmoTH-Coder-34B/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 95e1ba31b9c09c12e4fe6ab5318de13bc23fb157
+      uri: https://huggingface.co/TheBloke/MAmmoTH-Coder-34B-GGUF/resolve/main/mammoth-coder-34b.Q8_0.gguf
+      size: 35856069792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

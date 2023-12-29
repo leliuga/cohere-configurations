@@ -1,0 +1,396 @@
+id: PsyMedRP-v1-20B
+parent_id: Undi95/PsyMedRP-v1-20B
+name: Psymedrp v1 20B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Undi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- nsfw
+- base_model:Undi95/PsyMedRP-v1-20B
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c3a20629086ac878d8950288562706eb7a60d17f
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q2_K.gguf
+      size: 8311592416
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3aa113a610e74d2068a11bd296ba6f09e1376b83
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q3_K_L.gguf
+      size: 10627767776
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3caa4c62dce97999f6d722a13f65ad079a6662d8
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q3_K_M.gguf
+      size: 9697156576
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9fff3a4cb78840223c7c4d11694df7dce5600ab8
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q3_K_S.gguf
+      size: 8658370016
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 15bac7c4525de08000b70ff2669a6d775112fb60
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q4_0.gguf
+      size: 11292026336
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1778650e8b4c4f557705799008ac7456ca8dfa2e
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q4_K_M.gguf
+      size: 12042208736
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7f7b501fb55441adfe9e0adc31c88cc4d89a013e
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q4_K_S.gguf
+      size: 11340522976
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e220381f75d215c07ce84628bfe63bc5462f65df
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q5_0.gguf
+      size: 13770761696
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ad36d4d470725a18a62a4e10abb2a65fd22855b
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q5_K_M.gguf
+      size: 14157219296
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d8c5a36f8898e311c178757b365f20cc4df8e4fa
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q5_K_S.gguf
+      size: 13770761696
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c5202e69d0e98243aeac820eb89a6af03cc6ea36
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q6_K.gguf
+      size: 16404418016
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PsyMedRP-v1-20B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1cfa9ac77ef6a162ce87fd8f5727ff31df14b6c6
+      uri: https://huggingface.co/TheBloke/PsyMedRP-v1-20B-GGUF/resolve/main/psymedrp-v1-20b.Q8_0.gguf
+      size: 21246647776
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

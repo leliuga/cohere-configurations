@@ -8,6 +8,7 @@ library_name: transformers
 pipeline_tag: text-generation
 tags:
 - text-generation-inference
+- merge
 ---
 
 # Obsolete, see: https://huggingface.co/brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity

@@ -1,0 +1,396 @@
+id: sqlcoder
+parent_id: defog/sqlcoder
+name: Sqlcoder
+description: ""
+architecture: gpt_bigcode
+licence: other
+object: model
+owned_by: Defog.ai
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- starcoder
+- code
+- text-generation
+- en
+- base_model:defog/sqlcoder
+- license:other
+- region:us
+config:
+  vocab_size: 49152
+  context_size: 0
+  embedding_size: 0
+  attention_head_size: 0
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 0
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q2_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 33d21e3f666584ee0b84e2a1b135ebea1e52f083
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q2_K.gguf
+      size: 6731483392
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q3_K_L
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c68602a70faa4771cc552b110f8b74c7fc5ad00a
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q3_K_L.gguf
+      size: 9082325248
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q3_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4ee63486d72c8ddb45729ac34d27ad3f2856e2e3
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q3_K_M.gguf
+      size: 8176355584
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q3_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 52ecc42993b7ac6fce64c32fc867f2f25794676e
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q3_K_S.gguf
+      size: 6927010048
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q4_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e7986b2f09cd3e15614bab93a3040e510780c8dd
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q4_0.gguf
+      size: 8987560192
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q4_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4d471b7cc308f71b57e77ae8593a4bd8f6f6e663
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q4_K_M.gguf
+      size: 9962735872
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q4_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ec13a7b7577766e8434fe8129e097e44932e0f17
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q4_K_S.gguf
+      size: 9063057664
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q5_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f4607a8c9a91b8563ecd48db48978474e06b26c7
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q5_0.gguf
+      size: 10926901504
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q5_K_M
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 497f0d0e3d31b8f5260d735d83a8a81830ccc204
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q5_K_M.gguf
+      size: 11536877824
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q5_K_S
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9815231a8cc6ce24eb6129755670dd2790ea4b33
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q5_K_S.gguf
+      size: 10926901504
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q6_K
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2311ef137d2cd46a7aea13a2a4b914b0477198e7
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q6_K.gguf
+      size: 12987451648
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - sqlcoder/Q8_0
+    - --ctx-size
+    - "0"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "3"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fb7a1376a1cbc3b0cdd5121aa78e38a3dd99c579
+      uri: https://huggingface.co/TheBloke/sqlcoder-GGUF/resolve/main/sqlcoder.Q8_0.gguf
+      size: 16818063616
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

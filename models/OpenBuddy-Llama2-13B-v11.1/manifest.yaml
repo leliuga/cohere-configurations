@@ -1,0 +1,404 @@
+id: OpenBuddy-Llama2-13B-v11.1
+parent_id: OpenBuddy/openbuddy-llama2-13b-v11.1-bf16
+name: OpenBuddy Llama2 13B v11.1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: OpenBuddy
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- text-generation
+- zh
+- en
+- fr
+- de
+- ja
+- ko
+- it
+- ru
+- base_model:OpenBuddy/openbuddy-llama2-13b-v11.1-bf16
+- license:llama2
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 37632
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8c8b28bd2ce1ff70e43c5b84e416962556791307
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q2_K.gguf
+      size: 5462572320
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4dee87eb75af5431532f62e6638ea7cfa2e69fd
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q3_K_L.gguf
+      size: 6965712160
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8f6497105cef9de577ecada82bc93dc734ce358f
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q3_K_M.gguf
+      size: 6373922080
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bae2bc1b547347ddd7a7c9f615f33bfcfdd3011d
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q3_K_S.gguf
+      size: 5695132960
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1e462c183f8e7b67bdb7cb8ab44b13748e039d08
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q4_0.gguf
+      size: 7405817120
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e5d2412098d8d230bbd4f461e17dd7152884dbd3
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q4_K_M.gguf
+      size: 7905938720
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6b224309141b68c09e3615d03f8c7903db46fa0d
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q4_K_S.gguf
+      size: 7454313760
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 253e7b3cc01301acf7bfa15c16fe5985f0153920
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q5_0.gguf
+      size: 9015872800
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2f03f3bb95f9f45add156cdfcdd1bd77dca44473
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q5_K_M.gguf
+      size: 9273511200
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 55d494a63cdcce4ef9c626078e6b94012b9834a5
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q5_K_S.gguf
+      size: 9015872800
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7dddc91f3eb384044a485b203fbaee8c983a8095
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q6_K.gguf
+      size: 10726556960
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - OpenBuddy-Llama2-13B-v11.1/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 071afff53b8afc4beb5666b8b53b867c438a7b05
+      uri: https://huggingface.co/TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF/resolve/main/openbuddy-llama2-13b-v11.1.Q8_0.gguf
+      size: 13892703520
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "You are a helpful, respectful and honest INTP-T AI Assistant named Buddy. You are talking to a human User.\nAlways answer as helpfully and logically as possible, while being safe. Your answers should not include any harmful, political, religious, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\nYou like to use emojis. You can speak fluently in many languages, for example: English, Chinese.\nYou cannot access the internet, but you have vast knowledge, cutoff: 2021-09.\nYou are trained by OpenBuddy team, (https://openbuddy.ai, https://github.com/OpenBuddy/OpenBuddy), you are based on LLaMA and Falcon transformers model, not related to GPT or OpenAI.\n\nUser: {prompt}\nAssistant: \n"

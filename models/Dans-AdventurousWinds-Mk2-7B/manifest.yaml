@@ -1,0 +1,397 @@
+id: Dans-AdventurousWinds-Mk2-7B
+parent_id: PocketDoc/Dans-AdventurousWinds-Mk2-7b
+name: Dans AdventurousWinds Mk2 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: PocketDoc Labs
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- dataset:PocketDoc/Floyd-Text-Adventures
+- dataset:PocketDoc/Choose-Your-Story-Long-Text-Adventures
+- base_model:PocketDoc/Dans-AdventurousWinds-Mk2-7b
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 452e16d0dc7435396a4f19b329adb2aebcb3a063
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q2_K.gguf
+      size: 3083097760
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e57db2acb1a09157506e24df47dcbcce6799053f
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q3_K_L.gguf
+      size: 3822024352
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a50233465da0c313e4930d1a67dc1badd4dea1c7
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q3_K_M.gguf
+      size: 3518985888
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 94ddb5b38a46042609cd4df55e487f09832f13a2
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q3_K_S.gguf
+      size: 3164567200
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 001bcdc15871976a18dedefe26f8858c9e1e39fe
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q4_0.gguf
+      size: 4108916384
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b3bcf0426ec130612b967dc6624bdf749c9e561c
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q4_K_M.gguf
+      size: 4368438944
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a6c2e29c20f268a928dc13cf8a96ed4000af4af0
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q4_K_S.gguf
+      size: 4140373664
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c1c36ff7f74ae684b15db5647aae1f7fbf7b4197
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q5_0.gguf
+      size: 4997715616
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 88409cea29e1c711d09186bd900929513ecc6e76
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q5_K_M.gguf
+      size: 5131409056
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e769c9fb022a028b9bedfafddd40c5fbf83ca50
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q5_K_S.gguf
+      size: 4997715616
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7d210c6749a146918a4bb67b4898dae161b46f1e
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q6_K.gguf
+      size: 5942064800
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Dans-AdventurousWinds-Mk2-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8fb144c9a387eb47ae01ce1d64f9d5c29487a52f
+      uri: https://huggingface.co/TheBloke/Dans-AdventurousWinds-Mk2-7B-GGUF/resolve/main/dans-adventurouswinds-mk2-7b.Q8_0.gguf
+      size: 7695857312
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[Genres: Science Fiction]\n[Tags: humor, old school, sci fi]\n[Mode: Adventure]\n[Description: A puzzle about committing acts of financial skulduggery and exploiting ridiculous magical items.]\n[Misc: Writing era: 1993]\n[Intro]\nIt is the year 2045. You are a young man in his twenties living in New York City. Your father was an inventor who died when you were very small; your mother raised you alone for many years until she remarried. Now you live with your stepfather, but he doesn't care much for you and has never given you any money to help support yourself. You have no job and little hope of getting one because of your lack of experience. However, you do have some unusual abilities that could be put to good use if only you knew how...\n\n> {prompt}\n"

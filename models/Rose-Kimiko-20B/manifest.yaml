@@ -1,0 +1,393 @@
+id: Rose-Kimiko-20B
+parent_id: nRuaif/Rose-Kimiko-20B
+name: Rose Kimiko 20B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: nRuaif
+pipeline: ""
+languages: []
+tags:
+- peft
+- gguf
+- generated_from_trainer
+- base_model:nRuaif/Rose-Kimiko-20B
+- license:llama2
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 25066f86c9089b7f0db040e090fceca86907a4bd
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q2_K.gguf
+      size: 8312565696
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f95d9cd8767ca20e97afe1c1fe9b713102172067
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q3_K_L.gguf
+      size: 10628741056
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a65b5f89e47030f3be624f698bdd4c0655df017b
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q3_K_M.gguf
+      size: 9698129856
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5fc845aa1eeebd4a32dfb072de0f94f4eb7dc8ce
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q3_K_S.gguf
+      size: 8659343296
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 54539a1dd748b3e02667b206bd0e5f4ad05a82c9
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q4_0.gguf
+      size: 11292999616
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bdedaf0a8639afc320e98e7b7e453450882cc43f
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q4_K_M.gguf
+      size: 12043182016
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cd58f0154b80ed315ad2e2a86ffe63066f3b4634
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q4_K_S.gguf
+      size: 11341496256
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7adede1976624e36a9aef954e464b3873335a0ee
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q5_0.gguf
+      size: 13771734976
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d93bfac53db5f167dc8f53bb6cfeb539f54ff659
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q5_K_M.gguf
+      size: 14158192576
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 316540b9ec159377996d792e9c6573cc5b699fb2
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q5_K_S.gguf
+      size: 13771734976
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c2a62177446d9dc317110b541c04c680f173015
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q6_K.gguf
+      size: 16405391296
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Rose-Kimiko-20B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 16b87722213b0fd30bd314b9b89db2caf506cca7
+      uri: https://huggingface.co/TheBloke/Rose-Kimiko-20B-GGUF/resolve/main/rose-kimiko-20b.Q8_0.gguf
+      size: 21247621056
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

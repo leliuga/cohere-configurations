@@ -1,0 +1,399 @@
+id: Nanbeige-16B-Chat
+parent_id: Nanbeige/Nanbeige-16B-Chat
+name: Nanbeige 16B Chat
+description: ""
+architecture: nanbeige
+licence: apache-2.0
+object: model
+owned_by: Nanbeige LLM Lab
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- nanbeige
+- llm
+- Nanbeige
+- custom_code
+- text-generation
+- en
+- zh
+- base_model:Nanbeige/Nanbeige-16B-Chat
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 59136
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 0
+  intermediate_size: 13824
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7534c2b993ba39bb57ecff1b6b3a846ceefca0fd
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q2_K.gguf
+      size: 6637542048
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2e58a6f3957a7a77b6e7f31322f3874db48340f7
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q3_K_L.gguf
+      size: 8448578208
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ef271f3e801dbe2caf3819ded0d7d9093d71e677
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q3_K_M.gguf
+      size: 7733580448
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 72dfe1bea9919b931361242f6ce4797d2fe4a7fb
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q3_K_S.gguf
+      size: 6923883168
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0f82e0c30b1224b84b161ed607b7368aa4015175
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q4_0.gguf
+      size: 8986208928
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 06c3ad006505ee8b1bd8ab23b65ffc13207df257
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q4_K_M.gguf
+      size: 9586354848
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 91f21e331cafe3d55b176ebc2fa410e64d6a9334
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q4_K_S.gguf
+      size: 9034705568
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7afa9377672d75233a0205b88ab51c6bef1e680a
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q5_0.gguf
+      size: 10927221408
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2bc5c1e9538fdadff46fbc382a6731d7ce80b6b
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q5_K_M.gguf
+      size: 11236387488
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 414a1e6435423ba94cb2b074d371331f12f44f3c
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q5_K_S.gguf
+      size: 10927221408
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b9410a8aa311b8b7bcb2e34775ce642edb343337
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q6_K.gguf
+      size: 12989547168
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Nanbeige-16B-Chat/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71152ebd71fc1c54cbed0a31066a3fa3adba9a1e
+      uri: https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF/resolve/main/nanbeige-16b-chat.Q8_0.gguf
+      size: 16823587488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

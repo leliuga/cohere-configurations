@@ -7,6 +7,7 @@ language:
 pipeline_tag: text-generation
 tags:
 - Math
+- merge
 ---
 
 ## MetaMath-Cybertron-Starling

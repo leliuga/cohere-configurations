@@ -1,0 +1,347 @@
+id: open-instruct-human-mix-65B
+parent_id: allenai/open-instruct-human-mix-65b
+name: Open Instruct Human Mix 65B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Allen Institute for AI
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- en
+- dataset:databricks/databricks-dolly-15k
+- dataset:OpenAssistant/oasst1
+- arxiv:2306.04751
+- arxiv:2302.13971
+- arxiv:2304.07327
+- base_model:allenai/open-instruct-human-mix-65b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 2048
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 0
+  intermediate_size: 22016
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 97114202b3dcc9d74dcf8fa9bd54a95db67a8141
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q2_K.gguf
+      size: 27043174656
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a781cebd838052573a371cee3228d89069d4984b
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q3_K_L.gguf
+      size: 34648382528
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dcc2bb4fdf292fdd426ce13706b0da9f45b3f27c
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q3_K_M.gguf
+      size: 31564520512
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 159cf33a42309153dd6ba53117c18a1c76b0273b
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q3_K_S.gguf
+      size: 28160318528
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4a18b5112a3c5394712b6921ab8bd211e7831db
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q4_0.gguf
+      size: 36796080256
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e81cc8f33cd1cc3ca70454f2ed9999d234e804db
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q4_K_M.gguf
+      size: 39348052096
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 888a75d755be55b96f5147b9ae0030faaa7a7926
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q4_K_S.gguf
+      size: 36919812224
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f702d54c8a45b2f5c2785bbdf2df2d2a408d6adf
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q5_0.gguf
+      size: 44923856000
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 16ca732778232194df2e9e1701516f4f5ea7b7d1
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q5_K_M.gguf
+      size: 46238508160
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - open-instruct-human-mix-65B/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5b7afe7f35fd344ee904900b4b016b439dbcf73
+      uri: https://huggingface.co/TheBloke/open-instruct-human-mix-65B-GGUF/resolve/main/open-instruct-human-mix-65b.Q5_K_S.gguf
+      size: 44923856000
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|user|>
+        {prompt}
+        <|assistant|>

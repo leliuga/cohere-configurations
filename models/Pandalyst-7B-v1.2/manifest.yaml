@@ -1,0 +1,397 @@
+id: Pandalyst-7B-v1.2
+parent_id: pipizhao/Pandalyst-7B-V1.2
+name: Pandalyst 7B v1.2
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: pipizhao
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- code
+- en
+- base_model:pipizhao/Pandalyst-7B-V1.2
+- license:llama2
+- model-index
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 16384
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 52029976cb0e19715e9b967d61f0bffe8244cb63
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q2_K.gguf
+      size: 2825945440
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a758dbd81b6c77685899b7eb9cf02a7396c8c914
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q3_K_L.gguf
+      size: 3597116160
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 70c043e4be6ab36c5910bf84a8a18c121afc56b3
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q3_K_M.gguf
+      size: 3298009856
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f8b6b0729a10118d4ed2282026d766159822d16a
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q3_K_S.gguf
+      size: 2948309760
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 96d9c1307bebc35a4b53ea6db14a8bde220e5ae4
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q4_0.gguf
+      size: 3825812768
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9a78121229b621b992d3622d762ea095e256f5d5
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q4_K_M.gguf
+      size: 4081009952
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 769ecc08b2476289a0fdbaec3f84230edf7c546a
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q4_K_S.gguf
+      size: 3856745760
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 17e912ca2010702bc346bb307ac8970a13edaa9f
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q5_0.gguf
+      size: 4651697952
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 544d1a79370ab31a4a27afd0d4f5618168932338
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q5_K_M.gguf
+      size: 4783163168
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cee923280b68e96e52839419124a3d168b267d98
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q5_K_S.gguf
+      size: 4651697952
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4ecb49ce167e9f308c5e1f7e85c11b4865b18771
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q6_K.gguf
+      size: 5529200960
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Pandalyst-7B-v1.2/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 962802cc726fbbd54ce231daa43dfd8eaec42968
+      uri: https://huggingface.co/TheBloke/Pandalyst-7B-v1.2-GGUF/resolve/main/pandalyst-7b-v1.2.Q8_0.gguf
+      size: 7161098496
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

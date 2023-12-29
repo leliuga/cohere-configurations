@@ -1,0 +1,419 @@
+id: bagel-dpo-7B-v0.1
+parent_id: jondurbin/bagel-dpo-7b-v0.1
+name: Bagel DPO 7B v0.1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Jon Durbin
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- dataset:ai2_arc
+- dataset:unalignment/spicy-3.1
+- dataset:codeparrot/apps
+- dataset:facebook/belebele
+- dataset:boolq
+- dataset:jondurbin/cinematika-v0.1
+- dataset:drop
+- dataset:lmsys/lmsys-chat-1m
+- dataset:TIGER-Lab/MathInstruct
+- dataset:cais/mmlu
+- dataset:Muennighoff/natural-instructions
+- dataset:openbookqa
+- dataset:piqa
+- dataset:Vezora/Tested-22k-Python-Alpaca
+- dataset:cakiki/rosetta-code
+- dataset:Open-Orca/SlimOrca
+- dataset:spider
+- dataset:squad_v2
+- dataset:migtissera/Synthia-v1.3
+- dataset:datasets/winogrande
+- dataset:nvidia/HelpSteer
+- dataset:Intel/orca_dpo_pairs
+- dataset:unalignment/toxic-dpo-v0.1
+- dataset:jondurbin/truthy-dpo-v0.1
+- dataset:allenai/ultrafeedback_binarized_cleaned
+- base_model:jondurbin/bagel-dpo-7b-v0.1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 767030964e674a7e5074ecf4abba297c06b1df77
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q2_K.gguf
+      size: 3083098368
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 161bccd6e334d355f1a8e32632ad69fe20ac9e48
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q3_K_L.gguf
+      size: 3822024960
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1c7348b3297ae597f67b0c65a5654eda61836185
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q3_K_M.gguf
+      size: 3518986496
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 786ed4f42ee7e76a99d22dee957560cbd1f1b59f
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q3_K_S.gguf
+      size: 3164567808
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2d1e0b79a76629fab462f821d6018c0848179306
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q4_0.gguf
+      size: 4108916992
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 698aec2600af6dc82907f52ab92fa12da5758535
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q4_K_M.gguf
+      size: 4368439552
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e905a2ea69d923bf7e5825732cd33a302aa7512f
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q4_K_S.gguf
+      size: 4140374272
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1bac0561dfa086e5b58ec694a344c9999bbac97e
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q5_0.gguf
+      size: 4997716224
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: aa8d44986b1461d1857905544500bfceb568636b
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q5_K_M.gguf
+      size: 5131409664
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a45a712b12ea2c412d03351331fd2d47ace2715
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q5_K_S.gguf
+      size: 4997716224
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0330d83e670bb08c7395f7860e616839338c4304
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q6_K.gguf
+      size: 5942065408
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - bagel-dpo-7B-v0.1/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4e39a983f35fa54b4a3c3f2b63a653f8d1faf9d1
+      uri: https://huggingface.co/TheBloke/bagel-dpo-7B-v0.1-GGUF/resolve/main/bagel-dpo-7b-v0.1.Q8_0.gguf
+      size: 7695857920
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

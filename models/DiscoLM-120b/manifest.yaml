@@ -1,0 +1,106 @@
+id: DiscoLM-120b
+parent_id: DiscoResearch/DiscoLM-120b
+name: DiscoLM 120B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Disco Research
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- goliath
+- deutsch
+- llama2
+- discoresearch
+- text-generation
+- en
+- dataset:Open-Orca/SlimOrca-Dedup
+- dataset:teknium/openhermes
+- dataset:meta-math/MetaMathQA
+- dataset:migtissera/Synthia-v1.3
+- dataset:THUDM/AgentInstruct
+- dataset:LeoLM/German_Songs
+- dataset:LeoLM/German_Poems
+- dataset:LeoLM/OpenSchnabeltier
+- dataset:bjoernp/ultrachat_de
+- base_model:DiscoResearch/DiscoLM-120b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32032
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 137
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-120b/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "140"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d084538531def7714daff3f0858e8a4c054266a4
+      uri: https://huggingface.co/TheBloke/DiscoLM-120b-GGUF/resolve/main/discolm-120b.Q2_K.gguf
+      size: 49629694112
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

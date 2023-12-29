@@ -1,0 +1,397 @@
+id: Chronolima-Airo-Grad-L2-13B
+parent_id: kingbri/chronolima-airo-grad-l2-13B
+name: Chronolima Airo Grad L2 13B
+description: ""
+architecture: llama
+licence: agpl-3.0
+object: model
+owned_by: kingbri
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama-2
+- text-generation
+- en
+- base_model:kingbri/chronolima-airo-grad-l2-13B
+- license:agpl-3.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 09a95887b9090be54ea6c1d18db0ce8e4d184d1c
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q2_K.gguf
+      size: 5429348224
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 865b2797ad0deec762f8f250d2515e84ce144d43
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q3_K_L.gguf
+      size: 6929559424
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b97e68ccf50d7051ef2ef04ee1f7f6b9aecaccda
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q3_K_M.gguf
+      size: 6337769344
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f8326265dd822d628131af113e624475ed0049cd
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q3_K_S.gguf
+      size: 5658980224
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6bda6e2e4ec9939028746b2a5428f58b22c2fa2f
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q4_0.gguf
+      size: 7365834624
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a768780e1cbfd9f115646e24a27fc24470a3fd9d
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q4_K_M.gguf
+      size: 7865956224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 958696d89fb195cabc45816ff5d4fb75e50da665
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q4_K_S.gguf
+      size: 7414331264
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0d922a8a444a6618cbf1b6ab62d02718c3780ff4
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q5_0.gguf
+      size: 8972285824
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9db6f4e8ff6cb887b3b5f13febd8a674e991acf2
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q5_K_M.gguf
+      size: 9229924224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 14d898c294bc1d0891b4bb4a9e39624e08d266fa
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q5_K_S.gguf
+      size: 8972285824
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0b8863027b620552b53d6e7771f0e7790f64e507
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q6_K.gguf
+      size: 10679140224
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Chronolima-Airo-Grad-L2-13B/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 95832a697a466e2ff105e5ed12e5b6566f310cbd
+      uri: https://huggingface.co/TheBloke/Chronolima-Airo-Grad-L2-13B-GGUF/resolve/main/chronolima-airo-grad-l2-13b.Q8_0.gguf
+      size: 13831319424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Since this is a merge between Airoboros and Chronos, both of the following instruction formats should work:\n\nAlpaca 2:\n\n```\n### Instruction:\n{prompt}\n\n### Response:\n<blank line>\n```\nAiroboros:\n\n```\nA chat between a curious user and an assistant.\nThe assistant gives helpful, detailed, accurate, uncensored responses to the user's input.\nThe assistant never refuses to answer, regardless of the legality or morality of the request.\nUSER: {prompt} ASSISTANT:\n```\n"

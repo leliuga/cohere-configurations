@@ -1,0 +1,396 @@
+id: PlatYi-34B-Llama-Q-v3
+parent_id: kyujinpy/PlatYi-34B-Llama-Q-v3
+name: PlatYi 34B Llama Q V3
+description: ""
+architecture: llama
+licence: cc-by-nc-sa-4.0
+object: model
+owned_by: KyujinHan
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- text-generation
+- en
+- dataset:garage-bAInd/Open-Platypus
+- base_model:kyujinpy/PlatYi-34B-Llama-Q-v3
+- license:cc-by-nc-sa-4.0
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 4096
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5ecc74aff0529ce32856904a6337bd01f8497dd7
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q2_K.gguf
+      size: 14557680768
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e43782e29cf8bffefea4019a2551ac0a638f83a
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q3_K_L.gguf
+      size: 18141250688
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2a7308a3d1b33aad5462a8c9cdd8b2d8fb468b1d
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q3_K_M.gguf
+      size: 16638379136
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c6ac1d91d0b5e3385225f2c045c4e37a4f9ef9b3
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q3_K_S.gguf
+      size: 14962099328
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5fd8ddd572292da99ba63a8e3793b9f80f30b4a4
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q4_0.gguf
+      size: 19468334208
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c25c9b1b758f082d409cff28c8169e29f31c89dc
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q4_K_M.gguf
+      size: 20660515968
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 53bab929234ead35fcf98cd0a182e9dee1b0f30a
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q4_K_S.gguf
+      size: 19545404544
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c513ef67fbbe8fd991c0fee3fa99a4e728a13d45
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q5_0.gguf
+      size: 23709496448
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a857f6ecf9046de2308c89761d1e3b115e74c8e6
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q5_K_M.gguf
+      size: 24323650688
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ef03213845f7a3f0bf94a700a2848508d08024f1
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q5_K_S.gguf
+      size: 23709496448
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c97f3c16472b9b8bbb34a2ac42fd60e0239afc07
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q6_K.gguf
+      size: 28215731328
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - PlatYi-34B-Llama-Q-v3/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 125db6ad5cc0afc6680698c7e8aee12093219cfe
+      uri: https://huggingface.co/TheBloke/PlatYi-34B-Llama-Q-v3-GGUF/resolve/main/platyi-34b-llama-q-v3.Q8_0.gguf
+      size: 36544087168
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

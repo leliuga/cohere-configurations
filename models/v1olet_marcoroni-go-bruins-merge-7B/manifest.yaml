@@ -1,0 +1,395 @@
+id: v1olet_marcoroni-go-bruins-merge-7B
+parent_id: v1olet/v1olet_marcoroni-go-bruins-merge-7B
+name: V1Olet Marcoroni Go Bruins Merge 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Trong-Hieu Nguyen-Mau
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- base_model:v1olet/v1olet_marcoroni-go-bruins-merge-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 34c794a18b5f9fbab92037111a838875c749fd94
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q2_K.gguf
+      size: 3083097792
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7cecb61098db93527cd38ef129ab1829ed22d769
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q3_K_L.gguf
+      size: 3822024384
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e949a3b9788a9d4c039135f4023505108536242f
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q3_K_M.gguf
+      size: 3518985920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ef0d567c2db59111e497248c4ab1b2f833a27e8e
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q3_K_S.gguf
+      size: 3164567232
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f991d5e13e8215abc9e9b45dac1321fd3ef000b6
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q4_0.gguf
+      size: 4108916416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6a6953562db1a8289cbe629274a6f8268e1db14f
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q4_K_M.gguf
+      size: 4368438976
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d94e7ecd9af1aa97485082150d1519a6c554de8
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q4_K_S.gguf
+      size: 4140373696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8572f3b4fe46f52ee01a8ea8ca603a2b800f5cc8
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q5_0.gguf
+      size: 4997715648
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd1ea2e527934e363a1c2694d3fd5fc61ac7cb2d
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q5_K_M.gguf
+      size: 5131409088
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 496d5e009660be1e4b1e9429e2969e9b3458e48c
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q5_K_S.gguf
+      size: 4997715648
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b5fcb85cceef6e5727e9a59a022fe40be401f004
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q6_K.gguf
+      size: 5942064832
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - v1olet_marcoroni-go-bruins-merge-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5eedd9f087342abad01e91e8a809beb927fade44
+      uri: https://huggingface.co/TheBloke/v1olet_marcoroni-go-bruins-merge-7B-GGUF/resolve/main/v1olet_marcoroni-go-bruins-merge-7b.Q8_0.gguf
+      size: 7695857344
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n{prompt}\n\n### Response:\n"

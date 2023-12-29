@@ -1,0 +1,400 @@
+id: Tiamat-7B-1.1-DPO
+parent_id: Gryphe/Tiamat-7b-1.1-DPO
+name: Tiamat 7B 1.1 DPO
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Gryphe Padar
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- base_model:Gryphe/Tiamat-7b-1.1-DPO
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 87c77a7559536ae47509fb59b3890a15e775f89c
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q2_K.gguf
+      size: 3084043872
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ac03b9afb2ce451adfd0c03590eaca68a897908f
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q3_K_L.gguf
+      size: 3822971296
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5e2a2fb5ab9be6f82a0186f6961886e51d4734a6
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q3_K_M.gguf
+      size: 3519932832
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 05dbb3c07c497c83d19b471752132f29307c11be
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q3_K_S.gguf
+      size: 3165514144
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 45b05a67266b80a815076ef56497c366a0d9440d
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q4_0.gguf
+      size: 4109864416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: effce7e7cd55093005a25b09ba434503853da242
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q4_K_M.gguf
+      size: 4369386976
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6857604b0b98d2a0247c0cf4b76f8659e80523bc
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q4_K_S.gguf
+      size: 4141321696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8753a40c7f67a5ff0b056b1302940f1394b13862
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q5_0.gguf
+      size: 4998664672
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a79d79942920239de11d7d7ff8d4d401f0f45162
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q5_K_M.gguf
+      size: 5132358112
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 94207acb696b051939df6903b870ff7851a4dce3
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q5_K_S.gguf
+      size: 4998664672
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 85ba0371405ccaed8d49b4889d6d54af31df7d26
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q6_K.gguf
+      size: 5943014944
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Tiamat-7B-1.1-DPO/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fbfda9b3e0791371bc871dfa203a83a106a3c359
+      uri: https://huggingface.co/TheBloke/Tiamat-7B-1.1-DPO-GGUF/resolve/main/tiamat-7b-1.1-dpo.Q8_0.gguf
+      size: 7696811424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

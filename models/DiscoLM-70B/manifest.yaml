@@ -1,0 +1,359 @@
+id: DiscoLM-70B
+parent_id: DiscoResearch/DiscoLM-70b
+name: DiscoLM 70B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Disco Research
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- goliath
+- deutsch
+- llama2
+- discoresearch
+- text-generation
+- en
+- de
+- dataset:Open-Orca/SlimOrca-Dedup
+- dataset:teknium/openhermes
+- dataset:meta-math/MetaMathQA
+- dataset:migtissera/Synthia-v1.3
+- dataset:THUDM/AgentInstruct
+- dataset:LeoLM/German_Songs
+- dataset:LeoLM/German_Poems
+- dataset:LeoLM/OpenSchnabeltier
+- dataset:bjoernp/ultrachat_de
+- base_model:DiscoResearch/DiscoLM-70b
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32032
+  context_size: 8192
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q2_K
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c9dccf26d2945954ea0de9727d5911a56f944871
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q2_K.gguf
+      size: 29279555520
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q3_K_L
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6dfb8b6d87ae60cb4d495feb55879c040b0acc91
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q3_K_L.gguf
+      size: 36148164544
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q3_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b8544deba95962492891be33c50b99e81863d2a
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q3_K_M.gguf
+      size: 33186985920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q3_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f73f28d2604b72f5fccde9c791b24b5839cc4132
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q3_K_S.gguf
+      size: 29919623104
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q4_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2ef557fcc1abcd6ac6a7302f50697d2caa0b2fa4
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q4_0.gguf
+      size: 38872612800
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q4_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 852e06a8d33d4692f65463e477772c59ccae1dea
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q4_K_M.gguf
+      size: 41423273920
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q4_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e4862359fbfa004790a057575e42d073ec690932
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q4_K_S.gguf
+      size: 39073939392
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q5_0
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d7f2111ef3000459601af32c2096d5f065264ff2
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q5_0.gguf
+      size: 47461793728
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q5_K_M
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e53d9ba7fb4b7dd03870ff356be96146944a8bd2
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q5_K_M.gguf
+      size: 48754163648
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - DiscoLM-70B/Q5_K_S
+    - --ctx-size
+    - "8192"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 02857ea7460cd1f2b294906f65371738bdf6255e
+      uri: https://huggingface.co/TheBloke/DiscoLM-70B-GGUF/resolve/main/discolm-70b.Q5_K_S.gguf
+      size: 47461793728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

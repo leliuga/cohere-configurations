@@ -1,0 +1,404 @@
+id: upstage-llama-30b-instruct-2048
+parent_id: upstage/llama-30b-instruct-2048
+name: Llama 30B Instruct 2048
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: upstage
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- upstage
+- instruct
+- instruction
+- text-generation
+- en
+- dataset:sciq
+- dataset:metaeval/ScienceQA_text_only
+- dataset:GAIR/lima
+- dataset:Open-Orca/OpenOrca
+- dataset:openbookqa
+- base_model:upstage/llama-30b-instruct-2048
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 6656
+  attention_head_size: 52
+  key_value_head_size: 0
+  intermediate_size: 17920
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1de7dd7d2a1cff9d5c77b8f280b2f9ac6a3f2d4e
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q2_K.gguf
+      size: 13502545312
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: eb86df8f62ededdcaae2b90b72659a27ce74f0df
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q3_K_L.gguf
+      size: 17279758752
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ea9ead497828b5809d37d975bb4d4facb88b347d
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q3_K_M.gguf
+      size: 15761551776
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 375de6eaf8a5626a3e5021291578abe851334593
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q3_K_S.gguf
+      size: 14064112032
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ecc5a2df88dd3a96c72dc46fa94171302e6dc50f
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q4_0.gguf
+      size: 18355967392
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e96fa3b83d42779ed58ee960c8f837bddc3a815f
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q4_K_M.gguf
+      size: 19621139872
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b77698c86a3d405f0cec4e1efcdbe4d549f23736
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q4_K_S.gguf
+      size: 18437756320
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fd548ef3ce4e0cbfbe367ee677ff5aac75466bf1
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q5_0.gguf
+      size: 22395360672
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fff598e33c7c0e5ad22e09099d3d776087656df0
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q5_K_M.gguf
+      size: 23047116192
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a51fa690f927256a09985dc1cae073ffd71674dc
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q5_K_S.gguf
+      size: 22395360672
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d48f8b2737aa9b91e1faf3cb5e8a4c0adc82a79f
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q6_K.gguf
+      size: 26687216032
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - upstage-llama-30b-instruct-2048/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cb619f5ed4d4172f143ef7f691bfd1e5dbdab109
+      uri: https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GGUF/resolve/main/upstage-llama-30b-instruct-2048.Q8_0.gguf
+      size: 34565124512
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### System:\n{system_message}\n\n### User:\n{prompt}\n\n### Assistant:\n"

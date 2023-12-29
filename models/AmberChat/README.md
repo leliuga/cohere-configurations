@@ -95,18 +95,56 @@ python3 -m fastchat.serve.cli --model-path LLM360/AmberChat
 
 | Model                                                | MT-Bench                                                  | 
 |------------------------------------------------------|------------------------------------------------------------|
-| LLM360/Amber 359 | 2.48750 | 
+| LLM360/Amber 359 | 2.48750 |
+| [Falcon-40B-Instruct](https://huggingface.co/tiiuae/falcon-40b-instruct) | 5.17 |
+| [MPT-7B-Chat](https://huggingface.co/mosaicml/mpt-7b-chat) | 5.42 |
 | **LLM360/AmberChat** | **5.428125** |
+| [Nous-Hermes-13B](https://huggingface.co/NousResearch/Nous-Hermes-13b) | 5.51 |
+
+# Using Quantized Models with Ollama
+
+Please follow these steps to use a quantized version of AmberChat on your personal computer or laptop:
+
+1. First, install Ollama by following the instructions provided [here](https://github.com/jmorganca/ollama/tree/main?tab=readme-ov-file#ollama). Next, download a quantized model checkpoint (such as [amberchat.Q8_0.gguf](https://huggingface.co/TheBloke/AmberChat-GGUF/blob/main/amberchat.Q8_0.gguf) for the 8 bit version) from [TheBloke/AmberChat-GGUF](https://huggingface.co/TheBloke/AmberChat-GGUF/tree/main). Create an Ollama Modelfile locally using the template provided below:
+```
+FROM amberchat.Q8_0.gguf
+
+TEMPLATE """{{ .System }}
+USER: {{ .Prompt }}
+ASSISTANT:
+"""
+SYSTEM """A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions.
+"""
+PARAMETER stop "USER:"
+PARAMETER stop "ASSISTANT:"
+PARAMETER repeat_last_n   0
+PARAMETER num_ctx         2048
+PARAMETER seed            0
+PARAMETER num_predict    -1
+```
+Ensure that the FROM directive points to the downloaded checkpoint file.
+
+2. Now, you can proceed to build the model by running:
+```bash
+ollama create amberchat -f Modelfile
+```
+3. To run the model from the command line, execute the following:
+```bash
+ollama run amberchat
+```
+You need to build the model once and can just run it afterwards. 
 
 # Citation
 
 **BibTeX:**
 
 ```bibtex
-@article{xxx,
-  title={XXX},
-  author={XXX},
-  journal={XXX},
-  year={2023}
+@misc{liu2023llm360,
+      title={LLM360: Towards Fully Transparent Open-Source LLMs}, 
+      author={Zhengzhong Liu and Aurick Qiao and Willie Neiswanger and Hongyi Wang and Bowen Tan and Tianhua Tao and Junbo Li and Yuqi Wang and Suqi Sun and Omkar Pangarkar and Richard Fan and Yi Gu and Victor Miller and Yonghao Zhuang and Guowei He and Haonan Li and Fajri Koto and Liping Tang and Nikhil Ranjan and Zhiqiang Shen and Xuguang Ren and Roberto Iriondo and Cun Mu and Zhiting Hu and Mark Schulze and Preslav Nakov and Tim Baldwin and Eric P. Xing},
+      year={2023},
+      eprint={2312.06550},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```

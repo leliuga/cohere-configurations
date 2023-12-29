@@ -1,0 +1,340 @@
+id: tigerbot-70B-chat-v4
+parent_id: TigerResearch/tigerbot-70b-chat-v4
+name: Tigerbot 70B Chat v4
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Tiger Research
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- zh
+- en
+- base_model:TigerResearch/tigerbot-70b-chat-v4
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 65112
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 303927c4abd8cf7e0a93f7cd7be4537dc9b6499b
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q2_K.gguf
+      size: 29591515296
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8629d29b1c0fcfa4431479f796157694c84b9258
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q3_K_L.gguf
+      size: 36487646880
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3f5e0b840b3f10ad306953ca552121b7ef472f38
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q3_K_M.gguf
+      size: 33526468256
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7ba07b2907628f9451825c5d06d7de569423c21e
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q3_K_S.gguf
+      size: 30259105440
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d433043bd14ed07b9fa329fbad3af6e185f563c0
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q4_0.gguf
+      size: 39248086176
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b90491477a85b40732520df2c714de62abcc17b8
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q4_K_M.gguf
+      size: 41798747296
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 924dd7e766bc4847176298a5cccc36d0bf1d36d6
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q4_K_S.gguf
+      size: 39449412768
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 253c4229862cbc9e3866b2dc8f38e77b161a02da
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q5_0.gguf
+      size: 47871141024
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0c0c358035d7dcfbcf5424f0bc169b0dfb1aa045
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q5_K_M.gguf
+      size: 49163510944
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - tigerbot-70B-chat-v4/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e5e3ee139bb6d8017b77f4ca7f7ebd559eb19b27
+      uri: https://huggingface.co/TheBloke/tigerbot-70B-chat-v4-GGUF/resolve/main/tigerbot-70b-chat-v4.Q5_K_S.gguf
+      size: 47871141024
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

@@ -1,0 +1,407 @@
+id: ANIMA-Phi-Neptune-Mistral-7B
+parent_id: Severian/ANIMA-Phi-Neptune-Mistral-7B
+name: Anima Phi Neptune Mistral 7B
+description: ""
+architecture: mistral
+licence: mit
+object: model
+owned_by: Severian
+pipeline: ""
+languages: []
+tags:
+- adapter-transformers
+- gguf
+- chemistry
+- biology
+- climate
+- science
+- philosophy
+- nature
+- ecology
+- biomimicry
+- fauna
+- flora
+- dataset:Severian/Biomimicry
+- dataset:emrgnt-cmplxty/sciphi-textbooks-are-all-you-need
+- dataset:fmars/wiki_stem
+- dataset:fblgit/tree-of-knowledge
+- dataset:Severian/Bio-Design-Process
+- base_model:Severian/ANIMA-Phi-Neptune-Mistral-7B
+- license:mit
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q2_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a71964ec1ad2af0b954a7735e327a5c3d5d4d19
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q2_K.gguf
+      size: 3083097792
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q3_K_L
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0f36ffa1a57580d60ac238d66c7f7bec94abc13d
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q3_K_L.gguf
+      size: 3822024384
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q3_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c83b6bd0f5db9663ae8d4bf164fcd688fa7a8cf6
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q3_K_M.gguf
+      size: 3518985920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q3_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 330b616b348884adb03a4ddb7e163effebfb5d71
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q3_K_S.gguf
+      size: 3164567232
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q4_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 29475d9b381e3187a09a497bfe5111a580e2ddec
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q4_0.gguf
+      size: 4108916416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q4_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 83b5bb64ba83235d987b687defdf3816ccc6f9cb
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q4_K_M.gguf
+      size: 4368438976
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q4_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4c9a18d40bd1b7d8bac6aabee5131d9fc965f38
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q4_K_S.gguf
+      size: 4140373696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q5_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e281e418b8114f7500268010a0c1a712dd3922b3
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q5_0.gguf
+      size: 4997715648
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q5_K_M
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b2fbc8cf81843392c51806d7f42b3cbd9bb14e15
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q5_K_M.gguf
+      size: 5131409088
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q5_K_S
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 49e5b98d2fee85c126b80ae6d1f26d04533954e6
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q5_K_S.gguf
+      size: 4997715648
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q6_K
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3340d67b164f6ee0a2c9c0605f0f2b2b9c1b6813
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q6_K.gguf
+      size: 5942064832
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - ANIMA-Phi-Neptune-Mistral-7B/Q8_0
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1593a77136ba58a105ee0ec4e1a754165dc07d8b
+      uri: https://huggingface.co/TheBloke/ANIMA-Phi-Neptune-Mistral-7B-GGUF/resolve/main/anima-phi-neptune-mistral-7b.Q8_0.gguf
+      size: 7695857344
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] {prompt} [/INST]\n"

@@ -1,5 +1,6 @@
 ---
 license: apache-2.0
+base_model: mistralai/Mistral-7B-v0.1
 tags:
 - openchat
 - mistral
@@ -8,9 +9,7 @@ datasets:
 - openchat/openchat_sharegpt4_dataset
 - kaist-ai/Feedback-Collection
 - imone/OpenOrca_FLAN
-- LDJnr/LessWrong-Amplify-Instruct
-- LDJnr/Pure-Dove
-- LDJnr/Verified-Camel
+- LDJnr/Capybara
 - tiedong/goat
 - glaiveai/glaive-code-assistant
 - meta-math/MetaMathQA
@@ -43,8 +42,12 @@ pipeline_tag: text-generation
   </a>
 </p>
 
-<hr>
-<div style="background-color: white; padding: 0.7em; border-radius: 0.5em; color: black; display: flex; flex-direction: column; justify-content: center; text-align: center; ont-size: 0.5em;">
+<p align="center" style="margin-top: 0px;">
+    <span class="link-text" style=" margin-right: 0px; font-size: 0.8em">Sponsored by RunPod</span>
+   <img src="https://styles.redditmedia.com/t5_6075m3/styles/profileIcon_71syco7c5lt81.png?width=256&height=256&frame=1&auto=webp&crop=256:256,smart&s=24bd3c71dc11edc5d4f88d0cbc1da72ed7ae1969" alt="RunPod Logo" style="width:30px; vertical-align: middle; display: inline-block; margin-right: 5px; margin-left: 5px; margin-top: 0px; margin-bottom: 0px;"/>
+</p>
+
+<div style="background-color: white; padding: 0.7em; border-radius: 0.5em; color: black; display: flex; flex-direction: column; justify-content: center; text-align: center; ont-size: 0.5em; border: 0.8em solid #3c72db;">
   <a href="https://huggingface.co/openchat/openchat_3.5" style="text-decoration: none; color: black;">
     <span style="font-size: 1.7em; font-family: 'Helvetica'; letter-spacing: 0.1em; font-weight: bold; color: black;">OPENCHAT</span><span style="font-size: 1.8em; font-family: 'Helvetica'; color: #3c72db; ">3.5</span>
         <span style="font-size: 0.7em;  font-family: 'Helvetica'; color:  white; vertical-align: top;  background-color:red;  border-radius: 6em; padding: 0.066em 0.4em; letter-spacing: 0.1em; font-weight: bold;">1210</span>
@@ -63,6 +66,7 @@ pipeline_tag: text-generation
 <div style="display: flex; justify-content: center; align-items: center">
   <img src="https://github.com/alpayariyak/openchat/blob/master/assets/1210bench.png?raw=true" style="width: 100%; border-radius: 1em">
 </div>
+
 
 <div>
 <h3> Table of Contents</h3>
@@ -89,7 +93,7 @@ If you want to deploy the server as an online service, you can use `--api-keys s
 
 | Model             | Size | Context | Weights                                                          | Serving                                                                                                          |
 |-------------------|------|---------|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| OpenChat 3.5 1210 | 7B   | 8192    | [Huggingface](https://huggingface.co/openchat/openchat_3.5_1210) | `python -m ochat.serving.openai_api_server --model openchat/openchat_3.5_1210 --engine-use-ray --worker-use-ray` |
+| OpenChat 3.5 1210 | 7B   | 8192    | [Huggingface](https://huggingface.co/openchat/openchat-3.5-1210) | `python -m ochat.serving.openai_api_server --model openchat/openchat-3.5-1210 --engine-use-ray --worker-use-ray` |
 
 <details>
   <summary>Example request (click to expand)</summary>
@@ -285,7 +289,7 @@ OpenChat 3.5 was trained with C-RLFT on a collection of publicly available high-
 - [OpenChat ShareGPT](https://huggingface.co/datasets/openchat/openchat_sharegpt4_dataset)
 - [Open-Orca with FLAN answers](https://huggingface.co/datasets/imone/OpenOrca_FLAN)
 - [Feedback-Collection](https://huggingface.co/datasets/kaist-ai/Feedback-Collection)
-- Capybara [1](https://huggingface.co/datasets/LDJnr/Pure-Dove) [2](https://huggingface.co/datasets/LDJnr/Verified-Camel) [3](https://huggingface.co/datasets/LDJnr/LessWrong-Amplify-Instruct)
+- [Capybara](https://huggingface.co/datasets/LDJnr/Capybara) (de-contaminated against MT-bench)
 - [GOAT](https://huggingface.co/datasets/tiedong/goat)
 - [Glaive](https://huggingface.co/datasets/glaiveai/glaive-code-assistant)
 - [MetaMathQA](https://huggingface.co/datasets/meta-math/MetaMathQA)
@@ -306,11 +310,8 @@ OpenChat 3.5 was trained with C-RLFT on a collection of publicly available high-
 ```
 
 <div align="center">
-<h2> Acknowledgments </h2>
+<h2> 💌 Main Contributor </h2>
 </div>
 
-We extend our heartfelt gratitude to AutoMeta and caesus from Alignment Lab AI, LDJ and Teknium from Nous Research, alpin and TearGosling from Pygmalion AI for their substantial contributions to data collection and model training.
-
-Special thanks go to Changling Liu from GPT Desk Pte. Ltd., Qiying Yu at Tsinghua University, Baochang Ma, and Hao Wan from 01.AI company for their generous provision of resources. We are also deeply grateful to Jianxiong Li and Peng Li at Tsinghua University for their insightful discussions.
-
-Furthermore, we appreciate the developers behind the following projects for their significant contributions to our research: [Mistral](https://mistral.ai/), [Chain-of-Thought Hub](https://github.com/FranxYao/chain-of-thought-hub), [Llama 2](https://ai.meta.com/llama/), [Self-Instruct](https://arxiv.org/abs/2212.10560), [FastChat (Vicuna)](https://github.com/lm-sys/FastChat), [Alpaca](https://github.com/tatsu-lab/stanford_alpaca.git), and [StarCoder](https://github.com/bigcode-project/starcoder). Their work has been instrumental in driving our research forward.
+* Wang Guan [imonenext@gmail.com], Cheng Sijie [csj23@mails.tsinghua.edu.cn], Alpay Ariyak [aariyak@wpi.edu]
+* We look forward to hearing you and collaborating on this exciting project!

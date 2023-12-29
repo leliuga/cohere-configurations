@@ -1,0 +1,396 @@
+id: merlyn-education-corpus-qa-v2
+parent_id: MerlynMind/merlyn-education-corpus-qa-v2
+name: Merlyn Education Corpus QA v2
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Merlyn Mind
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- MerlynMind
+- education
+- base_model:MerlynMind/merlyn-education-corpus-qa-v2
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q2_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c7d6d06b6e3eaf128bf7495569b2375202b23abc
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q2_K.gguf
+      size: 5429348288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q3_K_L
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 05599275005a5fec7c249b664c4925a9c2971ae6
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q3_K_L.gguf
+      size: 6929559488
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q3_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 71f8610f445c1d76e8d867f79a9bc558b66d84e4
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q3_K_M.gguf
+      size: 6337769408
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q3_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fd7bf43133fa3a61894b8f2909cd6512cfaf5620
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q3_K_S.gguf
+      size: 5658980288
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q4_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a4620b44c805dae36bd289a60c76bbd8d3f7a74
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q4_0.gguf
+      size: 7365834688
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q4_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 68e45c1b9ab89738482b1cec8e7837b7b34ab462
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q4_K_M.gguf
+      size: 7865956288
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q4_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6f9958bebf0139c33c88b1c2ce2ab6b894a51f34
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q4_K_S.gguf
+      size: 7414331328
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q5_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 650063f22fbc9630c732b5a898acb64e138915b8
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q5_0.gguf
+      size: 8972285888
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q5_K_M
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 591ca038fc86fc52b8a87d69d3f4e6990936c76e
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q5_K_M.gguf
+      size: 9229924288
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q5_K_S
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e5538f895709d2ae49ca5a3aa3197898ef89ef07
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q5_K_S.gguf
+      size: 8972285888
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q6_K
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c3752b7ab931115665af2b62dba3a13d7e3c3ce6
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q6_K.gguf
+      size: 10679140288
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - merlyn-education-corpus-qa-v2/Q8_0
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a50ae3842fde739632460e802c1c9597cbea63fb
+      uri: https://huggingface.co/TheBloke/merlyn-education-corpus-qa-v2-GGUF/resolve/main/merlyn-education-corpus-qa-v2.Q8_0.gguf
+      size: 13831319488
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Instruction:\\t{system_message}\nConversation:\n'user1':\\tuser message to analyse\n'user2':\\tuser message to analyse\nResponse:\n"

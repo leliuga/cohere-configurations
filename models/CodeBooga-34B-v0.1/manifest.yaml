@@ -1,0 +1,394 @@
+id: CodeBooga-34B-v0.1
+parent_id: oobabooga/CodeBooga-34B-v0.1
+name: CodeBooga 34B v0.1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: oobabooga
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:oobabooga/CodeBooga-34B-v0.1
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 22016
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q2_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 97635d11a9eec68e496b2dcad2d49be2640b687c
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q2_K.gguf
+      size: 14210674880
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q3_K_L
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 160192545300cc987298683eefe327e568a5358f
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q3_K_L.gguf
+      size: 17771524288
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q3_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a212894513aab766d936be4091c358a30c2ae186
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q3_K_M.gguf
+      size: 16283594944
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q3_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3bf2c20d5d7c65667f65b4614290dee80a24dba7
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q3_K_S.gguf
+      size: 14605349056
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q4_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f7b92ebdd9aa35ed9cf6037c8709da1928600972
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q4_0.gguf
+      size: 19052048576
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q4_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e047c9e1a5778f21c34b097a528027d4aa9faf2a
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q4_K_M.gguf
+      size: 20219900096
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q4_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 053622961e45ef6b0eb77054bf3d52f8e7702ee0
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q4_K_S.gguf
+      size: 19146420416
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q5_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 60de80ffd00dfd17dc10d5fcffe02c83a305982b
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q5_0.gguf
+      size: 23237177536
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q5_K_M
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a5cf17a17f696b9065f1d30dfcc1f8d4744c705a
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q5_K_M.gguf
+      size: 23838798016
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q5_K_S
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d9127a2d5d922d3851861823fba0769fbf910eb
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q5_K_S.gguf
+      size: 23237177536
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q6_K
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fc645c77a7892837b7b949e6c15d2425cac2e16b
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q6_K.gguf
+      size: 27683877056
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - CodeBooga-34B-v0.1/Q8_0
+    - --ctx-size
+    - "16384"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2dda8d9eea9c2b31d730428e46439b325504192
+      uri: https://huggingface.co/TheBloke/CodeBooga-34B-v0.1-GGUF/resolve/main/codebooga-34b-v0.1.Q8_0.gguf
+      size: 35856052416
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

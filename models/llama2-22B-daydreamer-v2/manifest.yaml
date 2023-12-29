@@ -1,0 +1,394 @@
+id: llama2-22B-daydreamer-v2
+parent_id: nkpz/llama2-22b-daydreamer-v2
+name: Llama2 22B Daydreamer v2
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Nick Perez
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:nkpz/llama2-22b-daydreamer-v2
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4098
+  embedding_size: 6656
+  attention_head_size: 52
+  key_value_head_size: 52
+  intermediate_size: 17920
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q2_K
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 36b974dce43ba98e1ab4e2dea08f4fb229bcee93
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q2_K.gguf
+      size: 9083483040
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q3_K_L
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 15dd5215155733e6c8904338c8c2c3b710f8ddf6
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q3_K_L.gguf
+      size: 11608836000
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q3_K_M
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0b494ad7f084adf1e1a980263df16fbafba0d84c
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q3_K_M.gguf
+      size: 10610329504
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q3_K_S
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 65c9e3ec62b3ebcf9f3f1a0d725d88e0f8582211
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q3_K_S.gguf
+      size: 9465071520
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q4_0
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2f93f85155cab39b78e09cc2caa259aca1be4d5d
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q4_0.gguf
+      size: 12335737760
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q4_K_M
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 81ed1ae76c420950595739bb23a23644816289a6
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q4_K_M.gguf
+      size: 13179186080
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q4_K_S
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c24b2150074aae052a5f753b5894ada95fd8e23d
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q4_K_S.gguf
+      size: 12417526688
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q5_0
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1f86730133bfa80ae8a68ae99c5febbecca66ac3
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q5_0.gguf
+      size: 15037541280
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q5_K_M
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d7da4aa4a38bdf86a773233fe3b93d0dd29f925b
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q5_K_M.gguf
+      size: 15472044960
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q5_K_S
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: fea1b5b683f4f1b1bb28c07688f273586b552f76
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q5_K_S.gguf
+      size: 15037541280
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q6_K
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4a8c34dd53d0fc501b51ae6e22f67b29d8b49fa9
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q6_K.gguf
+      size: 17908207520
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - llama2-22B-daydreamer-v2/Q8_0
+    - --ctx-size
+    - "4098"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e855420170763855796ae0d56a340cbff4fa92d6
+      uri: https://huggingface.co/TheBloke/llama2-22B-daydreamer-v2-GGUF/resolve/main/llama2-22b-daydreamer-v2.Q8_0.gguf
+      size: 23194535840
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4098
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Q&A Example\n\n```\nQuestion: {prompt}\nAnswer:\n```\n\n\nAn example of how it handles different roles, which I still like to use explicit instructions for:\n\n```\n### Instruction\nComplete the story in a manner that accurately reflects the scenario summary.\n\n### Scenario: \nA hot dog salesman at a baseball game is annoyed and behaving rudely because I don't want to buy a hot dog.\n\n### Begin Chat\nHot Dog Salesman:\n```\n"

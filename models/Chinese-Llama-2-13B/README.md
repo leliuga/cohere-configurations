@@ -1,5 +1,8 @@
 ---
 license: apache-2.0
+language:
+- zh
+- en
 ---
 
 # Chinese-LLaMA-2-13B

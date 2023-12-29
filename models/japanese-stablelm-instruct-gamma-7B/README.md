@@ -61,7 +61,7 @@ prompt = build_prompt(**user_inputs)
 
 input_ids = tokenizer.encode(
     prompt, 
-    add_special_tokens=False, 
+    add_special_tokens=True, 
     return_tensors="pt"
 )
 

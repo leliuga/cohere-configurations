@@ -1,0 +1,397 @@
+id: Yi-34B-200K-DARE-merge-v5
+parent_id: brucethemoose/Yi-34B-200K-DARE-merge-v5
+name: Yi 34B 200K DARE Merge v5
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: brucethemoose
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- text-generation-inference
+- merge
+- text-generation
+- en
+- base_model:brucethemoose/Yi-34B-200K-DARE-merge-v5
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q2_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cfe60b419f9ee942d38cc16d9873a69f6a9cf032
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q2_K.gguf
+      size: 14557680896
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q3_K_L
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: edd310bc6495b01b10b3eb28783f70c462b0c080
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q3_K_L.gguf
+      size: 18141250816
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q3_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 8b618c0a16d15b08a8e2fe719b1204bfa6ec06f8
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q3_K_M.gguf
+      size: 16638379264
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q3_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 265362f03a04269300e65132129314e541bc411b
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q3_K_S.gguf
+      size: 14962099456
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q4_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f7b2d019564904635fd30e623ecfe8935eb4f2a8
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q4_0.gguf
+      size: 19468334336
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q4_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6655db46d7ef80aa627309da0367663dc1cb9f90
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q4_K_M.gguf
+      size: 20660516096
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q4_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 62ea1bec5bd4d80b2d9b3cd63f64c6505dcc4530
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q4_K_S.gguf
+      size: 19545404672
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q5_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e4c2674e3080076cbb92fb3679daafe770daa889
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q5_0.gguf
+      size: 23709496576
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q5_K_M
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 532e6cd9de92b81f8b9f2eede80e1a7127b96587
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q5_K_M.gguf
+      size: 24323650816
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q5_K_S
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3076598d022fb9455834deea4ef490fd1f50c66a
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q5_K_S.gguf
+      size: 23709496576
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q6_K
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 050f48c0aecb4be9003794f85c9019d956d18e2c
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q6_K.gguf
+      size: 28215731456
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Yi-34B-200K-DARE-merge-v5/Q8_0
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 943e74e35cc6ea600b5b31836c34925e4998fb1e
+      uri: https://huggingface.co/TheBloke/Yi-34B-200K-DARE-merge-v5-GGUF/resolve/main/yi-34b-200k-dare-merge-v5.Q8_0.gguf
+      size: 36544087296
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "SYSTEM: {system_message}\nUSER: {prompt}\nASSISTANT:\n"

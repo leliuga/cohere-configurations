@@ -1,0 +1,399 @@
+id: Llama2-13B-MegaCode2-OASST
+parent_id: OpenAssistant/llama2-13b-megacode2-oasst
+name: Llama2 13B MegaCode2 OASST
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: OpenAssistant
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:OpenAssistant/llama2-13b-megacode2-oasst
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32007
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q2_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0fd98452a25b89d3a16d6ed78522a8bae09f9df8
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q2_K.gguf
+      size: 5429389600
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q3_K_L
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 16e6d22432079cc558348023365216fad506598b
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q3_K_L.gguf
+      size: 6929604448
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q3_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bdf60a04e086bd94d3d475b1972c2f238b83b5f6
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q3_K_M.gguf
+      size: 6337814368
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q3_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4cc5897e4e38c7102eced4023a3a6f8f6d149518
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q3_K_S.gguf
+      size: 5659025248
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q4_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c6b5637b0a31cddd9ebf8199764d6ba0a313e20a
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q4_0.gguf
+      size: 7365884384
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q4_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 82b8311c08c8cd18d4e4c14c621d3271b1680323
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q4_K_M.gguf
+      size: 7866005984
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q4_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f3a73f9497e8188cc9203fda213cffb5c767fcc9
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q4_K_S.gguf
+      size: 7414381024
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q5_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f43a9cdd3457fa99e621c0356f16fd12cf9c92b6
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q5_0.gguf
+      size: 8972340064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q5_K_M
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3806eea45c1bd19720d2e9a4bf186441d844ec66
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q5_K_M.gguf
+      size: 9229978464
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q5_K_S
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 66b31c896c1275beb7e1de94dc2ced785855fc04
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q5_K_S.gguf
+      size: 8972340064
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q6_K
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: af2f11ebe8eff4022103a35ef92678e6bd4cda00
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q6_K.gguf
+      size: 10679199232
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - Llama2-13B-MegaCode2-OASST/Q8_0
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c2ba974b500c2e9998e939285c16f790be3eae55
+      uri: https://huggingface.co/TheBloke/Llama2-13B-MegaCode2-OASST-GGUF/resolve/main/llama2-13b-megacode2-oasst.Q8_0.gguf
+      size: 13831395776
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

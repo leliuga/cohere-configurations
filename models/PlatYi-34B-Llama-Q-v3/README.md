@@ -48,8 +48,8 @@ The lora_r values is 64.
 
 | Model | Average | ARC | HellaSwag | MMLU | TruthfulQA | Winogrande | GSM8K |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| PlatYi-34B-Llama-Q-v3 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
-| PlatYi-34B-Llama-Q-v2 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
+| PlatYi-34B-Llama-Q-v3 | 61.15 | 64.33 | 84.88 | 74.98 | 51.80 | 82.79 | 6.67 |
+| PlatYi-34B-Llama-Q-v2 | 67.88 | 61.09 | 85.09 | 76.59 | 52.65 | 82.79 | 49.05 |
 | PlatYi-34B-Llama-Q | 71.13 | 65.70 | 85.22 | 78.78 | 53.64 | 83.03 | 60.42 |
 | PlatYi-34B-Llama | 68.37 | 67.83 | 85.35 | 78.26 | 53.46 | 82.87 | 42.46 |
 | [Yi-34B-Llama](https://huggingface.co/chargoddard/Yi-34B-Llama) | 70.95 | 64.59 | 85.63 | 76.31 | 55.60 | 82.79 | 60.80 |
