@@ -77,14 +77,14 @@ Multimodal
 ## Usage
 
 ` + "``` bash" + `
-docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere cohere run <name>/<variant>
+docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere run <id>/<variant>
 ` + "```" + `
 
 ## Supported Models ({{len .}})
 
-| Name  | DType   | Context | Embedding | Read more |
-| ----- | ------- | ------- | --------- | --------- |{{range .}}
-| {{.Name}} | {{.Dtype}} | {{.ContextSize}} | {{.EmbeddingSize}} | [README.md](models/{{.ID}}/README.md) |{{end}}
+| ID  | Variants | Context | Embedding | Read more |
+| --- | -------- | ------- | --------- | --------- |{{range .}}
+| {{.ID}} | {{.Variants}} | {{.ContextSize}} | {{.EmbeddingSize}} | [README.md](models/{{.ID}}/README.md) |{{end}}
 
 ## Memory/Disk Requirements
 As the models are currently fully loaded into memory, you will need adequate disk space to save them and sufficient RAM to load them. At the moment, memory and disk requirements are the same.
@@ -122,7 +122,6 @@ This project is licensed under the Mozilla Public License Version 2.0 License - 
 type (
 	Model struct {
 		ID     string `json:"id"`
-		Name   string `json:"name"`
 		Config struct {
 			ContextSize   uint64 `json:"context_size"`
 			EmbeddingSize uint64 `json:"embedding_size"`
@@ -134,8 +133,7 @@ type (
 
 	Item struct {
 		ID            string
-		Name          string
-		Dtype         string
+		Variants      string
 		ContextSize   string
 		EmbeddingSize string
 	}
@@ -170,8 +168,7 @@ func main() {
 
 			items = append(items, Item{
 				ID:            model.ID,
-				Name:          model.Name,
-				Dtype:         strings.Join(maps.Keys(model.Variants), " "),
+				Variants:      strings.Join(maps.Keys(model.Variants), " "),
 				ContextSize:   strconv.FormatUint(model.Config.ContextSize, 10),
 				EmbeddingSize: strconv.FormatUint(model.Config.EmbeddingSize, 10),
 			})
