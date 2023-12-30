@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"github.com/goccy/go-yaml"
 	"golang.org/x/exp/maps"
+	"k8s.io/klog/v2"
 	"os"
+	"path"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -140,10 +141,10 @@ type (
 	}
 
 	Item struct {
-		ID            string
-		Variants      string
-		ContextSize   uint64
-		EmbeddingSize uint64
+		ID            string `json:"id"`
+		Variants      string `json:"variants"`
+		ContextSize   uint64 `json:"context_size"`
+		EmbeddingSize uint64 `json:"embedding_size"`
 	}
 )
 
@@ -185,20 +186,37 @@ func main() {
 			EmbeddingSize: model.Config.EmbeddingSize,
 		})
 
-		fmt.Printf("Added model: %s\n", model.ID)
-
+		klog.InfoS("Added model", "area", "generate", "model", model.ID, "variants", variants, "context", model.Config.ContextSize, "embedding", model.Config.EmbeddingSize)
 		return nil
 	}); err != nil {
-		panic(fmt.Errorf("error walking the path %v: %v\n", MODELS_PATH, err))
+		klog.ErrorS(err, "Failed to walk models", "area", "generate", "path", MODELS_PATH)
+		return
 	}
 
 	f, err := os.Create("README.md")
 	if err != nil {
-		panic(err)
+		klog.ErrorS(err, "Failed to create README.md", "area", "generate")
+		return
 	}
 	defer f.Close()
 
 	if err = tmpl.Execute(f, items); err != nil {
-		panic(err)
+		klog.ErrorS(err, "Failed to execute template", "area", "generate")
+		return
 	}
+
+	klog.InfoS("Generated README.md", "area", "generate")
+	f, err = os.Create(path.Join(MODELS_PATH, "index.yaml"))
+	if err != nil {
+		klog.ErrorS(err, "Failed to create models/index.yaml", "area", "generate")
+		return
+	}
+	defer f.Close()
+
+	if err = yaml.NewEncoder(f, yaml.UseJSONMarshaler()).Encode(items); err != nil {
+		klog.ErrorS(err, "Failed to encode models/index.yaml", "area", "generate")
+		return
+	}
+
+	klog.InfoS("Generated models/index.yaml", "area", "generate", "models", len(items))
 }
