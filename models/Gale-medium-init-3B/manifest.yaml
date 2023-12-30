@@ -1,0 +1,405 @@
+id: Gale-medium-init-3B
+parent_id: crumb/Gale-medium-init
+name: Gale Medium Init 3B
+description: ""
+architecture: mistral
+licence: ""
+object: model
+owned_by: Maxine
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:crumb/Gale-medium-init
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 13
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5b71a5d2c4eae2de168591d40c2980d0fac1f4e6
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q2_K.gguf
+      size: 1342320288
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5b1bfd393e0ebdf9bf8171d6841b3de944ae7ea9
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q3_K_L.gguf
+      size: 1650413216
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9c3d59d795e6b29b68be7152b2d96bd8f83a0696
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q3_K_M.gguf
+      size: 1536642720
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5a12768f87a35c933d2429b7f724c893b5806de3
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q3_K_S.gguf
+      size: 1383321248
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2b6a9d4b5b688cc04380510945e206b4a5af435a
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q4_0.gguf
+      size: 1777299104
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0a6f241b2df4efb3eb53d55b2a2c7518a16d46fd
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q4_K_M.gguf
+      size: 1874620064
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d4f21015f60ba2a54e2c559b7c51ef24c74ed829
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q4_K_S.gguf
+      size: 1808756384
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: cae3b4dfc89a11dcc45985f16823d123f04475bd
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q5_0.gguf
+      size: 2148101792
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3b427804a428ac68c97ac31e81832b4f2297574a
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q5_K_M.gguf
+      size: 2198236832
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 924383f2b3beef7cc4d344ede439999a6db7a4b7
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q5_K_S.gguf
+      size: 2148101792
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: dba7ba8af27c17539e0639342b924133c9de9a0b
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q6_K.gguf
+      size: 2542079648
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Gale-medium-init-3B/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "16"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7880122e73a6d9a1f7de410b9ee1c6bd6a72ded8
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Gale-medium-init-3B-GGUF/resolve/main/gale-medium-init-3B.Q8_0.gguf
+      size: 3292253856
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

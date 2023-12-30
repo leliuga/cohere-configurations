@@ -1,0 +1,406 @@
+id: Seraph-openchat-3.5-1210-Slerp
+parent_id: Weyaxi/Seraph-openchat-3.5-1210-Slerp
+name: Seraph OpenChat 3.5 1210 SLERP
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Yağız Çalık
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:Weyaxi/Seraph-openchat-3.5-1210-Slerp
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 825120896d04e078bf2164b9209cd47ec24af77a
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q2_K.gguf
+      size: 3084043520
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 877043e6fe3dedb46f40f188884a3602cbbfc9bb
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q3_K_L.gguf
+      size: 3822970944
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ffbdeda504a215b536c2b3c0afa18ca675a650e8
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q3_K_M.gguf
+      size: 3519932480
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5f9f69f68ae6be4e3aa08b7103ae4e624752d645
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q3_K_S.gguf
+      size: 3165513792
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c8e0bfa07f72c1887bb07dbcda7075de172a5a61
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q4_0.gguf
+      size: 4109864064
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 2dbba848b6bed338626d3e7c38b7259de97804dd
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q4_K_M.gguf
+      size: 4369386624
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e4c4a590b8d3df64002967388cdd0f0064b5dc5c
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q4_K_S.gguf
+      size: 4141321344
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e9f70051fa05fa3b1f85f145d9d3721bb536b516
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q5_0.gguf
+      size: 4998664320
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d82b616d931566f3695c3b1d2881118dd8dbdf5b
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q5_K_M.gguf
+      size: 5132357760
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f7cf4537a838c541d00638ae400df656c7d0a5c5
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q5_K_S.gguf
+      size: 4998664320
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b82a55490d44f5f666b313a833ddda11a31280ac
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q6_K.gguf
+      size: 5943014592
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Seraph-openchat-3.5-1210-Slerp/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4805994086c601c877d7b4a9e725009f8135eeec
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Seraph-openchat-3.5-1210-Slerp-GGUF/resolve/main/seraph-openchat-3.5-1210-slerp.Q8_0.gguf
+      size: 7696811072
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

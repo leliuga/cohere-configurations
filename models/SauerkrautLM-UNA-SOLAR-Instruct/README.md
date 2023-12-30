@@ -1,6 +1,6 @@
 
 ---
-license: apache-2.0
+license: cc-by-nc-4.0
 ---
 ![image/png](https://cdn-uploads.huggingface.co/production/uploads/6468ce47e134d050a58aa89c/8uLgxLFWSN4fGPCS8Qinq.png)
 

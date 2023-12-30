@@ -1,0 +1,407 @@
+id: NeuralPipe-7B-ties
+parent_id: mlabonne/NeuralPipe-7B-ties
+name: NeuralPipe 7B TIES
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Maxime Labonne
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- base_model:mlabonne/NeuralPipe-7B-ties
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: b7261866ef03cd668a20cb4fd989e3c50eef8ee4
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q2_K.gguf
+      size: 3084034048
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a4e30c352d82f2873529d82dedc5536b32235fdd
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q3_K_L.gguf
+      size: 3822960640
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 64eeca4fe9edf778c166c9fe7468f668828e5c16
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q3_K_M.gguf
+      size: 3519922176
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 421c2e8b7bbd2b5e6c451279d240cf2b1afc350e
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q3_K_S.gguf
+      size: 3165503488
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 025d5acce566e8eb8bfe6270a045cf0510c8e038
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q4_0.gguf
+      size: 4109852672
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 267ed0ae3c4cf35c9abe8d44477b5b60de45fe06
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q4_K_M.gguf
+      size: 4369375232
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 38a5884f686afa3181628384528b5fbf7f3ea5c9
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q4_K_S.gguf
+      size: 4141309952
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 441f9b94b0d70acb3e7e97226fe95c991ed828e3
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q5_0.gguf
+      size: 4998651904
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a3958d9c5439eb99f3a2c4c4c040f549dc3c448
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q5_K_M.gguf
+      size: 5132345344
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a889ba9c1e4852072b6e0a47444b544a6112621e
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q5_K_S.gguf
+      size: 4998651904
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3f8d1a2ca04f9c3cbc2fdead0b67f88e587566d1
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q6_K.gguf
+      size: 5943001088
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/NeuralPipe-7B-ties/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 13fcda24a0c96f6b45a80f3faa80a8b0883e1054
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/NeuralPipe-7B-ties-GGUF/resolve/main/neuralpipe-7b-ties.Q8_0.gguf
+      size: 7696793600
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

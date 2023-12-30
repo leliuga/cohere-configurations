@@ -1,0 +1,406 @@
+id: Llama-2-13B-LoRA-Assemble
+parent_id: oh-yeontaek/llama-2-13b-LoRA-assemble
+name: Llama 2 13B LoRA Assemble
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: oh-yeontaek
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:oh-yeontaek/llama-2-13b-LoRA-assemble
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0058651de9e7d9ae7a663c3768280f3bc18be176
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q2_K.gguf
+      size: 5429348224
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1940412c87a07faace89fc51bc2a1a313a735e35
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q3_K_L.gguf
+      size: 6929559424
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6c60a65d535ab5f623ac56d29045bc5f8c746f36
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q3_K_M.gguf
+      size: 6337769344
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3c69a798b572f4d4f8c20e845e4f561de774b1ae
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q3_K_S.gguf
+      size: 5658980224
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d752074f371854decd5ae9ab770c7d3aa5467ea6
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q4_0.gguf
+      size: 7365834624
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 57795c7dcb08d76f14504ba19e0ef8b89658927a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q4_K_M.gguf
+      size: 7865956224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 97cf57c19a9ca3d28f6ebd67df984d8ef6b2ed89
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q4_K_S.gguf
+      size: 7414331264
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 57d73f08404520ac81ad516cd8746f4abdfcce3c
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q5_0.gguf
+      size: 8972285824
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a7201ea4b1e4ec368c2a95fa25726f8df768de2a
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q5_K_M.gguf
+      size: 9229924224
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f3573618b748c2e28a0a1c85ab57d88fa4d5d602
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q5_K_S.gguf
+      size: 8972285824
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3494b430baf2ff1d3d12920a8b0854de8d7f4567
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q6_K.gguf
+      size: 10679140224
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Llama-2-13B-LoRA-Assemble/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ba2c2ef7f6adf59f288555e1faf9626552738740
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Llama-2-13B-LoRA-Assemble-GGUF/resolve/main/llama-2-13b-lora-assemble.Q8_0.gguf
+      size: 13831319424
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

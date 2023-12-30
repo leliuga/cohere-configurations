@@ -1,0 +1,406 @@
+id: Mythalion-Kimiko-v2
+parent_id: nRuaif/Mythalion-Kimiko-v2
+name: Mythalion Kimiko v2
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: nRuaif
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:nRuaif/Mythalion-Kimiko-v2
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 995ec8c3a295e2f7e93dedc23a2b07d8916458a1
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q2_K.gguf
+      size: 5430321536
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 91be46f1eadd51cba75155a5ef6b1d94ef371379
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q3_K_L.gguf
+      size: 6930532736
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bf929f5366a71f6a1659583b4827c277507af6c3
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q3_K_M.gguf
+      size: 6338742656
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3d068916a0320a68ae86aab42bef5de53446c86a
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q3_K_S.gguf
+      size: 5659953536
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e999d974d6a32e8661bb6c370edd063b557f15cb
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q4_0.gguf
+      size: 7366807936
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6249a00004cc2804326aa553cd20915ae4297b3a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q4_K_M.gguf
+      size: 7866929536
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e021f40a588c2ef12572d2d3cf51d0d4275c0f65
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q4_K_S.gguf
+      size: 7415304576
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1a84f7097f4535b2ab6f7ca7de0f01652b092baa
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q5_0.gguf
+      size: 8973259136
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f805e54c8c62a05c6e0029066416b2fff4c8e617
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q5_K_M.gguf
+      size: 9230897536
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 32c4f25e7862da9f05069a0685a3511dff40b0e0
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q5_K_S.gguf
+      size: 8973259136
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e0be299d1a8dbc2f68a92b298ad4bb096f11cc86
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q6_K.gguf
+      size: 10680113536
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Mythalion-Kimiko-v2/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c59ce4cc7c8b712b4b3966840cec0008b8a291a4
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Mythalion-Kimiko-v2-GGUF/resolve/main/mythalion-kimiko-v2.Q8_0.gguf
+      size: 13832292736
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,406 @@
+id: MetaMath-NeuralHermes-2.5-Mistral-7B-Linear
+parent_id: Weyaxi/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear
+name: MetaMath NeuralHermes 2.5 Mistral 7B Linear
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Yağız Çalık
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:Weyaxi/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 7a6d9d2db7c51e381afbd789812ea279b62cf71c
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q2_K.gguf
+      size: 3084038944
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a26b171e21b774e68131d4ccbb11cb80345df323
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q3_K_L.gguf
+      size: 3822965952
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9d06099937670638f89c2a3eff073bfef8dab0cb
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q3_K_M.gguf
+      size: 3519927488
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 539013635bbf0b41e71a7a35278808168eb4aa7b
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q3_K_S.gguf
+      size: 3165508800
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ddaef972c6895832bda9d4cbac88068bdd0138ac
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q4_0.gguf
+      size: 4109858528
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3ebaa53c82a0525411a4f7b71bf7001b4100f94a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q4_K_M.gguf
+      size: 4369381088
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f2b7bcf481423c9bc818449e57fad1ab82357040
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q4_K_S.gguf
+      size: 4141315808
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ebcf249f8cf31bf723b789ebcd0a8f4ab58b0295
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q5_0.gguf
+      size: 4998658272
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 884ec5b29a262c05525ba78ede34cec609cd3a1a
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q5_K_M.gguf
+      size: 5132351712
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 98caa700480549a90a3c06cf37b6faaf4d983ce1
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q5_K_S.gguf
+      size: 4998658272
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e197468cc63c563eeabf2df2de171488aeaff750
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q6_K.gguf
+      size: 5943008000
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: f6d160e2120abf1ed8328146e1e14b6d4c2470e3
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/MetaMath-NeuralHermes-2.5-Mistral-7B-Linear-GGUF/resolve/main/metamath-neuralhermes-2.5-mistral-7b-linear.Q8_0.gguf
+      size: 7696802496
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"
