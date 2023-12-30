@@ -1,0 +1,410 @@
+id: Redmond-Puffin-13B
+parent_id: NousResearch/Redmond-Puffin-13B
+name: Redmond Puffin 13B V1.3
+description: ""
+architecture: llama
+licence: mit
+object: model
+owned_by: NousResearch
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama-2
+- sft
+- eng
+- dataset:LDJnr/Puffin
+- base_model:NousResearch/Redmond-Puffin-13B
+- license:mit
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32032
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9461fbb06f4ba5c76eaca378e43373c5d0243723
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q2_K.gguf
+      size: 5429537280
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 5136bd066415cd57eeb350a822587019747831a7
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q3_K_L.gguf
+      size: 6929765120
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: d3bae7a9a6164820bc7e4868cca7fbdcbd5a02ae
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q3_K_M.gguf
+      size: 6337975040
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 9f5e2dcf3af22f790b96d906913b61657f995401
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q3_K_S.gguf
+      size: 5659185920
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 67627e9243f3650cb50254a2ad0e0746fc4adb16
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q4_0.gguf
+      size: 7366062080
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: e16c54fb2b88d851fa1f1a878c9d213fcd842ce1
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q4_K_M.gguf
+      size: 7866183680
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: bd1496c9f33a213eda4359838cbe67a9c90f7a09
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q4_K_S.gguf
+      size: 7414558720
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: c4487533bc815c0e4df52ddc7ce23f42b6d875de
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q5_0.gguf
+      size: 8972533760
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 4c6dc4255c7e21d8c30561ab80a3f71bd5233cb3
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q5_K_M.gguf
+      size: 9230172160
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ce2b00d831424b1b49d87ad1cce04be4e5a8e69c
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q5_K_S.gguf
+      size: 8972533760
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 602a491b91268a7fe9ba28b057e7394d5e204449
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q6_K.gguf
+      size: 10679409920
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Redmond-Puffin-13B/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 271aa9289eb91244211fed69bf3fb6026ce605b4
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Redmond-Puffin-13B-GGUF/resolve/main/redmond-puffin-13b.Q8_0.gguf
+      size: 13831668480
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### human: {prompt}\n\n### response:\n"

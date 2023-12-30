@@ -1,0 +1,405 @@
+id: Synthia-v3.0-11B
+parent_id: migtissera/Synthia-v3.0-11B
+name: Synthia V3.0 11B
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Migel Tissera
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- base_model:migtissera/Synthia-v3.0-11B
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: a1dcd8e875458e81bd78195708e72bd32ec3477f
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q2_K.gguf
+      size: 4549952032
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 82934554778788a3a579a5b0371a1a9766ee8a76
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q3_K_L.gguf
+      size: 5651685920
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 3e2071db0da68a317e14911e495ff7d84caa5aad
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q3_K_M.gguf
+      size: 5189263904
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 413f01e8790ec078435996b268c21c14944b5cb1
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q3_K_S.gguf
+      size: 4665500192
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 55c1f6fb335df3e0b19143744aafcd20b821e727
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q4_0.gguf
+      size: 6073319968
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 782a579dbcc8c36db3b4c2afbdeb9bd44367fcfe
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q4_K_M.gguf
+      size: 6462603808
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 0b3ab2c99e5d20e4371e838fc6928c2701380750
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q4_K_S.gguf
+      size: 6104777248
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 6a908529be9063e47e4c5672c502de6ae85fbdba
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q5_0.gguf
+      size: 7398326816
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 223928050827b083c69012383435d9f4a1925ca9
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q5_K_M.gguf
+      size: 7598866976
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: ca2c1eef36a269717cefedaf824230d609e38c71
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q5_K_S.gguf
+      size: 7398326816
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: 1b74113a619ffc95dfbf0660592ce73e360eb9d0
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q6_K.gguf
+      size: 8806146592
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Synthia-v3.0-11B/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --no-mmap
+    - "false"
+    - --mlock
+    - "true"
+    - --numa
+    - "true"
+    - --cont-batching
+    - "true"
+    - --embedding
+    - "false"
+    artifact:
+    - id: baf4443beee462f17ab5ed66da20d732b9c3974b
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Synthia-v3.0-11B-GGUF/resolve/main/synthia-v3.0-11b.Q8_0.gguf
+      size: 11405091360
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "SYSTEM: Elaborate on the topic using a Tree of Thoughts and backtrack when necessary to construct a clear, cohesive Chain of Thought reasoning. Always answer without hesitation.\nUSER: {prompt}\nASSISTANT:\n"

@@ -6,9 +6,17 @@ import (
 	"golang.org/x/exp/maps"
 	"os"
 	"path/filepath"
-	"strconv"
+	"sort"
 	"strings"
 	"text/template"
+)
+
+const (
+	// BACKENDS_PATH is the path to the backends directory
+	BACKENDS_PATH = "backends"
+
+	// MODELS_PATH is the path to the models directory
+	MODELS_PATH = "models"
 )
 
 var (
@@ -134,49 +142,54 @@ type (
 	Item struct {
 		ID            string
 		Variants      string
-		ContextSize   string
-		EmbeddingSize string
+		ContextSize   uint64
+		EmbeddingSize uint64
 	}
 )
 
 func main() {
 	var (
-		modelsPath = "./models"
-		items      []Item
+		items []Item
 	)
 
-	if err := filepath.Walk(modelsPath, func(path string, info os.FileInfo, err error) error {
+	if err := filepath.Walk(MODELS_PATH, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
 
-		if !info.IsDir() && info.Name() == "manifest.yaml" {
-			var (
-				model Model
-				file  *os.File
-			)
-
-			if file, err = os.Open(path); err != nil {
-				return err
-			}
-			defer file.Close()
-
-			encoder := yaml.NewDecoder(file, yaml.UseJSONUnmarshaler())
-			if err = encoder.Decode(&model); err != nil {
-				return err
-			}
-
-			items = append(items, Item{
-				ID:            model.ID,
-				Variants:      strings.Join(maps.Keys(model.Variants), " "),
-				ContextSize:   strconv.FormatUint(model.Config.ContextSize, 10),
-				EmbeddingSize: strconv.FormatUint(model.Config.EmbeddingSize, 10),
-			})
+		if info.IsDir() || info.Name() != "manifest.yaml" {
+			return nil
 		}
+
+		var (
+			model Model
+			file  *os.File
+		)
+
+		if file, err = os.Open(path); err != nil {
+			return err
+		}
+		defer file.Close()
+
+		if err = yaml.NewDecoder(file, yaml.UseJSONUnmarshaler()).Decode(&model); err != nil {
+			return err
+		}
+
+		variants := maps.Keys(model.Variants)
+		sort.Strings(variants)
+
+		items = append(items, Item{
+			ID:            model.ID,
+			Variants:      strings.Join(variants, " "),
+			ContextSize:   model.Config.ContextSize,
+			EmbeddingSize: model.Config.EmbeddingSize,
+		})
+
+		fmt.Printf("Added model: %s\n", model.ID)
 
 		return nil
 	}); err != nil {
-		panic(fmt.Errorf("error walking the path %v: %v\n", modelsPath, err))
+		panic(fmt.Errorf("error walking the path %v: %v\n", MODELS_PATH, err))
 	}
 
 	f, err := os.Create("README.md")
