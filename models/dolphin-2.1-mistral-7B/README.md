@@ -10,6 +10,8 @@ language:
 Dolphin 2.1 🐬
 https://erichartford.com/dolphin
 
+Join Our Discord! https://discord.gg/vT3sktQ3zb
+
 Dolphin-2.1-mistral-7b's training was sponsored by [a16z](https://a16z.com/supporting-the-open-source-ai-community/).
 
 This model is based on mistralAI, with apache-2.0 license, so it is suitable for commercial or non-commercial use.

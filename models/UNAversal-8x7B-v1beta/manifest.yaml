@@ -1,0 +1,238 @@
+id: UNAversal-8x7B-v1beta
+parent_id: fblgit/UNAversal-8x7B-v1beta
+name: UNAversal 8X7B v1Beta
+description: ""
+architecture: mixtral
+licence: cc-by-nc-sa-4.0
+object: model
+owned_by: FBL
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- UNA
+- juanako
+- MoE
+- en
+- base_model:fblgit/UNAversal-8x7B-v1beta
+- license:cc-by-nc-sa-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 0d05089d17c8d54257dc63dbfa82282dfc1b6bdb
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q2_K.gguf
+      size: 15644034944
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d6395f2254c1f4498a55ebbcf1aa78a1107d68b6
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q3_K_M.gguf
+      size: 20363356032
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 2000f67265463892386f2cf4f06d44c87a0392f1
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q4_0.gguf
+      size: 26441533312
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: a4c296aee5bc82dffd4d97795e023fd154000dc1
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q4_K_M.gguf
+      size: 26441533312
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 381c91e83bee79ffb90c738d59be2c3faf1ef6fb
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q5_0.gguf
+      size: 32229279616
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 68b7f296a0d5b2d2bd72b07d00c3b61409986efc
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q5_K_M.gguf
+      size: 32229279616
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 52c57b2cafb21d3c56ec7f6c640bad43a3bcb8d2
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q6_K.gguf
+      size: 38378760064
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/UNAversal-8x7B-v1beta/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ee8f9a29db02d006e1ea9bea4884fa183414fd0e
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/UNAversal-8x7B-v1beta-GGUF/resolve/main/unaversal-8x7b-v1beta.Q8_0.gguf
+      size: 49624262528
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

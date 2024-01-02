@@ -24,7 +24,7 @@ tags:
 
 ## WTF is This?
 
-Silicon-Maid-7B is another model targeted at being both strong at RP **and** being a smart cookie that can follow character cards very well. As of right now, Silicon-Maid-7B outscores both of my previous 7B RP models in my RP benchmark and I have been impressed by this model's creativity. It is suitable for RP/ERP and general use.
+Silicon-Maid-7B is another model targeted at being both strong at RP **and** being a smart cookie that can follow character cards very well. As of right now, Silicon-Maid-7B outscores both of my previous 7B RP models in my RP benchmark and I have been impressed by this model's creativity. It is suitable for RP/ERP and general use. Quants can be found [here](https://huggingface.co/collections/SanjiWatsuki/silicon-maid-7b-658d1669292816fe4992daa4).
 
 It's built on [xDAN-AI/xDAN-L1-Chat-RL-v1](https://huggingface.co/xDAN-AI/xDAN-L1-Chat-RL-v1), a 7B model which scores unusually high on MT-Bench, and chargoddard/loyal-piano-m7, an Alpaca format 7B model with surprisingly creative outputs. I was excited to see this model for two main reasons:
 * MT-Bench normally correlates well with real world model quality

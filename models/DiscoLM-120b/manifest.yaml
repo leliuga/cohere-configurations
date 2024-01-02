@@ -58,25 +58,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/DiscoLM-120b/Q2_K.gguf
+    - models/DiscoLM-120b/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "140"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: d084538531def7714daff3f0858e8a4c054266a4
       name: Q2_K.gguf

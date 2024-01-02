@@ -2,8 +2,11 @@
 license: llama2
 ---
 
+# Our 33B model is now in beta!
+Access at: https://www.whiterabbitneo.com/
+
 # Our Discord Server
-Join us at: https://discord.gg/NxTR8JqV
+Join us at: https://discord.gg/8Ynkrcbk92 (Updated on Dec 29th. Now permanent link to join)
 
 # LLaMA-2 Licence + WhiteRabbitNeo Extended Version
 

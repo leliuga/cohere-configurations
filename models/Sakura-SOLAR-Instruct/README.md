@@ -29,8 +29,8 @@ I shared the information about my model. (training and code)
 
 | Model | Average | ARC | HellaSwag | MMLU | TruthfulQA | Winogrande | GSM8K |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Sakura-SOLAR-Instruct-DPO-v2 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
-| Sakura-SOLAR-Instruct-DPO-v1 | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
+| Sakura-SOLRCA-Instruct-DPO | 74.05 | 71.16 | 88.49 | 66.17 | 72.10 | 82.95 | 63.46 |
+| Sakura-SOLAR-Instruct-DPO-v2 | 74.14 | 70.90 | 88.41 | 66.48 | 71.86 | 83.43 | 63.76 |
 | [kyujinpy/Sakura-SOLAR-Instruct](https://huggingface.co/kyujinpy/Sakura-SOLAR-Instruct) | 74.40 | 70.99 | 88.42 | 66.33 | 71.79 | 83.66 | 65.20
 > Rank1 2023.12.27 PM 11:50
 

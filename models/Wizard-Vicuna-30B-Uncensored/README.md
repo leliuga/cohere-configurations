@@ -10,6 +10,8 @@ tags:
 
 This is [wizard-vicuna-13b](https://huggingface.co/junelee/wizard-vicuna-13b) trained with a subset of the dataset - responses that contained alignment / moralizing were removed. The intent is to train a WizardLM that doesn't have alignment built-in, so that alignment (of any sort) can be added separately with for example with a RLHF LoRA.
 
+Join Our Discord! https://discord.gg/vT3sktQ3zb
+
 Shout out to the open source AI/ML community, and everyone who helped me out.
 
 Note:  

@@ -43,8 +43,8 @@ For example, to chat with the law model:
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model = AutoModelForCausalLM.from_pretrained("AdaptLLM/law-chat")
-tokenizer = AutoTokenizer.from_pretrained("AdaptLLM/law-chat", use_fast=False)
+model = AutoModelForCausalLM.from_pretrained("AdaptLLM/law-LLM")
+tokenizer = AutoTokenizer.from_pretrained("AdaptLLM/law-LLM", use_fast=False)
 
 # Put your input here:
 user_input = '''Question: Which of the following is false about ex post facto laws?
@@ -56,11 +56,11 @@ Options:
 
 Please provide your choice first and then provide explanations if possible.'''
 
-# We use the prompt template of LLaMA-2-Chat demo
-prompt = f"<s>[INST] <<SYS>>\nYou are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\n\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\n<</SYS>>\n\n{user_input} [/INST]"
+# Simply use your input as the prompt for base models
+prompt = user_input
 
 inputs = tokenizer(prompt, return_tensors="pt", add_special_tokens=False).input_ids.to(model.device)
-outputs = model.generate(input_ids=inputs, max_length=4096)[0]
+outputs = model.generate(input_ids=inputs, max_length=2048)[0]
 
 answer_start = int(inputs.shape[-1])
 pred = tokenizer.decode(outputs[answer_start:], skip_special_tokens=True)

@@ -1,0 +1,336 @@
+id: dolphin-2.6-mistral-7B-dpo
+parent_id: cognitivecomputations/dolphin-2.6-mistral-7b-dpo
+name: Dolphin 2.6 Mistral 7B DPO
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Cognitive Computations
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- dataset:ehartford/dolphin
+- dataset:jondurbin/airoboros-2.2.1
+- dataset:ehartford/dolphin-coder
+- dataset:teknium/openhermes
+- dataset:ise-uiuc/Magicoder-OSS-Instruct-75K
+- dataset:ise-uiuc/Magicoder-Evol-Instruct-110K
+- dataset:LDJnr/Capybara
+- dataset:argilla/ultrafeedback-binarized-preferences-cleaned
+- base_model:cognitivecomputations/dolphin-2.6-mistral-7b-dpo
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f51b47ff7ad4e1c17e763727523ebefb7641e1ad
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q2_K.gguf
+      size: 3084038944
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ea7e9312cbfb15911e567bac71a880be75d69169
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q3_K_L.gguf
+      size: 3822965952
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: e2aa6eaa1594be363d3e7a3d58263eedcd820811
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q3_K_M.gguf
+      size: 3519927488
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c3cce0659267810267cc43b6f06949cbf1eaa825
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q3_K_S.gguf
+      size: 3165508800
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f432728df03267f45e58d97488bf7a622f2c3f51
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q4_0.gguf
+      size: 4109858528
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: a21ac6e1aa6a935318bbd743c23a0fab5445f6af
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q4_K_M.gguf
+      size: 4369381088
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 6a8b9b4c3e405e1e7f9448df50979854f53d9185
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q4_K_S.gguf
+      size: 4141315808
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 19a36e08f2966e0cc7f78585e4ee6a98c5ab6ea5
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q5_0.gguf
+      size: 4998658272
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 7fa8e0776b23fad7353582bdfbe6cb66135bc60e
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q5_K_M.gguf
+      size: 5132351712
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f30fdee5c0b4163b9af983476c53eac44fb6d872
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q5_K_S.gguf
+      size: 4998658272
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 9402944f767098122f1b69b2f2ef43db083711c2
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q6_K.gguf
+      size: 5943008000
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.6-mistral-7B-dpo/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 14c32ccdf01c23660d80f34cf16671ac6f2144f8
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-dpo-GGUF/resolve/main/dolphin-2.6-mistral-7b-dpo.Q8_0.gguf
+      size: 7696802496
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

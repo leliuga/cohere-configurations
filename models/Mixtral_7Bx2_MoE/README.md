@@ -2,18 +2,21 @@
   license: cc-by-nc-4.0
 ---
 
-# Mixtral MOE 2x7B
+# Mixtral  MOE  2x7B
 
 
 
-MoE  of the following models :
+MoE of the following models :
 
-* [rwitz2/go-bruins-v2.1.1](https://huggingface.co/rwitz2/go-bruins-v2.1.1)
+
 * [NurtureAI/neural-chat-7b-v3-16k](https://huggingface.co/NurtureAI/neural-chat-7b-v3-16k)
 * [mncai/mistral-7b-dpo-v6](https://huggingface.co/mncai/mistral-7b-dpo-v6)
 
 
-
+* metrics:
+Average 73.43
+ARC 71.25
+HellaSwag 87.45
 
 gpu code example
 

@@ -22,6 +22,7 @@ tags:
 - dataset:LDJnr/Capybara
 - base_model:cognitivecomputations/dolphin-2.6-mistral-7b
 - license:apache-2.0
+- has_space
 - text-generation-inference
 - region:us
 config:
@@ -51,25 +52,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q2_K.gguf
+    - models/dolphin-2.6-mistral-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 7702a93b9fae70e4f016df8eb4a23e49fdb1c1cb
       name: Q2_K.gguf
@@ -80,25 +74,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q3_K_L.gguf
+    - models/dolphin-2.6-mistral-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 9f44224e0904df79c6e095252332a47109641d4e
       name: Q3_K_L.gguf
@@ -109,25 +96,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q3_K_M.gguf
+    - models/dolphin-2.6-mistral-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: ff5e97c637f61ee978bdc55ea64bbe663795ccd0
       name: Q3_K_M.gguf
@@ -138,25 +118,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q3_K_S.gguf
+    - models/dolphin-2.6-mistral-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: bb71792019a1a95dc5043c0a4ae6262315ebdd40
       name: Q3_K_S.gguf
@@ -167,25 +140,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q4_0.gguf
+    - models/dolphin-2.6-mistral-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: a71c6d9a8211a27ad753349b7a2e47643484bc15
       name: Q4_0.gguf
@@ -196,25 +162,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q4_K_M.gguf
+    - models/dolphin-2.6-mistral-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 5f53f7c62cb669f81dfa6ba8a3db3bde93609cee
       name: Q4_K_M.gguf
@@ -225,25 +184,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q4_K_S.gguf
+    - models/dolphin-2.6-mistral-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 20117da0d133b36b196658ebadf3f23525f0444b
       name: Q4_K_S.gguf
@@ -254,25 +206,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q5_0.gguf
+    - models/dolphin-2.6-mistral-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 26fbdcd54805b87ab87c5e29afa54f87491cf77e
       name: Q5_0.gguf
@@ -283,25 +228,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q5_K_M.gguf
+    - models/dolphin-2.6-mistral-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: a0885b67888bf9e5881adae68d1c311684740497
       name: Q5_K_M.gguf
@@ -312,25 +250,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q5_K_S.gguf
+    - models/dolphin-2.6-mistral-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 2f32ba2c33d11841934c47410dec6b0fb01a58cb
       name: Q5_K_S.gguf
@@ -341,25 +272,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q6_K.gguf
+    - models/dolphin-2.6-mistral-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 7cce08991fe7eabcb369a9774cc3267c2413e221
       name: Q6_K.gguf
@@ -370,25 +294,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/dolphin-2.6-mistral-7B/Q8_0.gguf
+    - models/dolphin-2.6-mistral-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
     - --batch-size
-    - "4096"
+    - "131072"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: b36ca79009eb75a7741bf70919f6fb0dfbad9973
       name: Q8_0.gguf

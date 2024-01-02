@@ -1,0 +1,334 @@
+id: Nous-Hermes-2-SOLAR-10.7B
+parent_id: NousResearch/Nous-Hermes-2-SOLAR-10.7B
+name: Nous Hermes 2 SOLAR 10.7B
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: NousResearch
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- SOLAR
+- instruct
+- finetune
+- chatml
+- gpt4
+- synthetic data
+- distillation
+- en
+- base_model:NousResearch/Nous-Hermes-2-SOLAR-10.7B
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 3bf031730dfd31cf40ef65cf0bf37c29c9c21dfd
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q2_K.gguf
+      size: 4549025120
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: b92ed9a7e21f1ce77759855ca30d3904225eabed
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q3_K_L.gguf
+      size: 5650759840
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ffb6821c6d60c292f0d63222bb8d4dd9e8d3bc9a
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q3_K_M.gguf
+      size: 5188337824
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d5a73a41375e0a37d11581664bca66676eb91017
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q3_K_S.gguf
+      size: 4664574112
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 3a168b6ade35faea70e131b840465f84f3288659
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q4_0.gguf
+      size: 6072394976
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 7af8e6a0f824b27f1ccae543132ccbabdea37e77
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q4_K_M.gguf
+      size: 6461678816
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ba99f89a44d4538c081e43a2a36e7bcaaaf5623a
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q4_K_S.gguf
+      size: 6103852256
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 602c0072a22efa708674a5b48c535054984e2ca2
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q5_0.gguf
+      size: 7397402848
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 86258889a9108234267c9a8412b44091a70849f8
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q5_K_M.gguf
+      size: 7597943008
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d6a099da966299e1d2ece33a9f990b6af530cdd5
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q5_K_S.gguf
+      size: 7397402848
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 13b9985b0e024d78b55b34e77ee4ee41628f79a1
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q6_K.gguf
+      size: 8805223712
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Nous-Hermes-2-SOLAR-10.7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: fe72ed4c1464d221b19e259c9c951a212f53ca77
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF/resolve/main/nous-hermes-2-solar-10.7b.Q8_0.gguf
+      size: 11404172448
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

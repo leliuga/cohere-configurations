@@ -43,8 +43,8 @@ For example, to chat with the finance model:
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model = AutoModelForCausalLM.from_pretrained("AdaptLLM/finance-chat")
-tokenizer = AutoTokenizer.from_pretrained("AdaptLLM/finance-chat", use_fast=False)
+model = AutoModelForCausalLM.from_pretrained("AdaptLLM/finance-LLM")
+tokenizer = AutoTokenizer.from_pretrained("AdaptLLM/finance-LLM", use_fast=False)
 
 # Put your input here:
 user_input = '''Use this fact to answer the question: Title of each class Trading Symbol(s) Name of each exchange on which registered
@@ -56,17 +56,18 @@ MMM Chicago Stock Exchange, Inc.
 
 Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023?'''
 
-# We use the prompt template of LLaMA-2-Chat demo
-prompt = f"<s>[INST] <<SYS>>\nYou are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\n\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\n<</SYS>>\n\n{user_input} [/INST]"
+# Simply use your input as the prompt for base models
+prompt = user_input
 
 inputs = tokenizer(prompt, return_tensors="pt", add_special_tokens=False).input_ids.to(model.device)
-outputs = model.generate(input_ids=inputs, max_length=4096)[0]
+outputs = model.generate(input_ids=inputs, max_length=2048)[0]
 
 answer_start = int(inputs.shape[-1])
 pred = tokenizer.decode(outputs[answer_start:], skip_special_tokens=True)
 
 print(f'### User Input:\n{user_input}\n\n### Assistant Output:\n{pred}')
 ```
+
 ## Domain-Specific Tasks
 To easily reproduce our results, we have uploaded the filled-in zero/few-shot input instructions and output completions of each domain-specific task: [biomedicine-tasks](https://huggingface.co/datasets/AdaptLLM/medicine-tasks), [finance-tasks](https://huggingface.co/datasets/AdaptLLM/finance-tasks), and [law-tasks](https://huggingface.co/datasets/AdaptLLM/law-tasks).
 

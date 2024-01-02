@@ -1,0 +1,350 @@
+id: nontoxic-bagel-34b-v0.2
+parent_id: jondurbin/nontoxic-bagel-34b-v0.2
+name: Nontoxic Bagel 34B v0.2
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Jon Durbin
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- dataset:ai2_arc
+- dataset:unalignment/spicy-3.1
+- dataset:codeparrot/apps
+- dataset:facebook/belebele
+- dataset:boolq
+- dataset:jondurbin/cinematika-v0.1
+- dataset:drop
+- dataset:lmsys/lmsys-chat-1m
+- dataset:TIGER-Lab/MathInstruct
+- dataset:cais/mmlu
+- dataset:Muennighoff/natural-instructions
+- dataset:openbookqa
+- dataset:piqa
+- dataset:Vezora/Tested-22k-Python-Alpaca
+- dataset:cakiki/rosetta-code
+- dataset:Open-Orca/SlimOrca
+- dataset:spider
+- dataset:squad_v2
+- dataset:migtissera/Synthia-v1.3
+- dataset:datasets/winogrande
+- dataset:nvidia/HelpSteer
+- dataset:Intel/orca_dpo_pairs
+- dataset:unalignment/toxic-dpo-v0.1
+- dataset:jondurbin/truthy-dpo-v0.1
+- dataset:allenai/ultrafeedback_binarized_cleaned
+- dataset:Squish42/bluemoon-fandom-1-1-rp-cleaned
+- dataset:LDJnr/Capybara
+- dataset:JULIELab/EmoBank
+- dataset:kingbri/PIPPA-shareGPT
+- base_model:jondurbin/nontoxic-bagel-34b-v0.2
+- license:other
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 7d72d2b05af3ddede2983a4c5e47e515e33cc8ed
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q2_K.gguf
+      size: 14557680864
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f97d5c52e25e6a3ca8c5125085a5f49169a20427
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q3_K_L.gguf
+      size: 18141250784
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: dc9f7f43f059754187179efcabdbcf8effeac971
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q3_K_M.gguf
+      size: 16638379232
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c40811f99fa9af13235726f689788e75562fa6ae
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q3_K_S.gguf
+      size: 14962099424
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f4cfe0ebcef8c9025bf02b29f79bcadc075fafed
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q4_0.gguf
+      size: 19468334304
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: e3111e9508ff648aa0a1afba2241972423998eba
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q4_K_M.gguf
+      size: 20660516064
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 805c413a64b20fd4bf370500dd934ab8953bedc1
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q4_K_S.gguf
+      size: 19545404640
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 4d0d2ae6f73c29c344e48955c9b67af9e30091b3
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q5_0.gguf
+      size: 23709496544
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 91c00657cb3f991c4fd05b503f1a9b2c30c58948
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q5_K_M.gguf
+      size: 24323650784
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 82d8d5a7f023c82023c86b4910859fb8dea2dc5e
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q5_K_S.gguf
+      size: 23709496544
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 95d203567283d6d2dfd0cd2400d03c0af90c7de4
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q6_K.gguf
+      size: 28215731424
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nontoxic-bagel-34b-v0.2/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "200000"
+    - --batch-size
+    - "800000"
+    - --n-gpu-layers
+    - "63"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c260b38c37ba3a10e428d935a15faa2e5de37ca3
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/nontoxic-bagel-34b-v0.2-GGUF/resolve/main/nontoxic-bagel-34b-v0.2.Q8_0.gguf
+      size: 36544087264
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task.  Write a response that appropriately completes the request.\n\n### Instruction:\n{system_message}\n{prompt}\n\n### Response:\n"

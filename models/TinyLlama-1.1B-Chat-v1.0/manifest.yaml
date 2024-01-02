@@ -1,0 +1,330 @@
+id: TinyLlama-1.1B-Chat-v1.0
+parent_id: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+name: Tinyllama 1.1B Chat v1.0
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: TinyLlama
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- tinyllama
+- en
+- dataset:cerebras/SlimPajama-627B
+- dataset:bigcode/starcoderdata
+- dataset:OpenAssistant/oasst_top1_2023-08-25
+- base_model:TinyLlama/TinyLlama-1.1B-Chat-v1.0
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 2048
+  embedding_size: 2048
+  attention_head_size: 32
+  key_value_head_size: 4
+  intermediate_size: 5632
+  hidden_layer_size: 22
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d23f37326d7a802759db7a0d4aa39dd4b92ff9f3
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q2_K.gguf
+      size: 483116416
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 28b05bcb2419628c6614c2c6f3c5879430c37ffb
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q3_K_L.gguf
+      size: 592500096
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: eb43f33aea45a335d48ccdf51b4327637dc50e29
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q3_K_M.gguf
+      size: 550819200
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ac6076b528f1d18d3ee549442bcc43d8f956687a
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q3_K_S.gguf
+      size: 500315520
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: fee5bc6db3d3a837183f00d506cc171ecc0388dc
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_0.gguf
+      size: 637699456
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: e373839887c5ea4ce53051edb9f7a6dcd62a844a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+      size: 668788096
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c0580567e2f30a8202ba5e5de22fba4bae330014
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_S.gguf
+      size: 643728768
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 4bb1477aea4a61d9f68ebc015e9354f04df12e8b
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q5_0.gguf
+      size: 767001984
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c0bce7dbaa0d8dd197a2175bbbf6920e979264d9
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q5_K_M.gguf
+      size: 783017344
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f60f1d88087f1bacf85245d83d5f3ae2bac98bd1
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q5_K_S.gguf
+      size: 767001984
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 816feee55504be0e08693e2599fc1f0400ce6048
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q6_K.gguf
+      size: 904385920
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TinyLlama-1.1B-Chat-v1.0/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "25"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: da0fc9dca55442146b03183c50f7c7ef3dfd4fa9
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf
+      size: 1170781568
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|system|>
+        {system_message}</s>
+        <|user|>
+        {prompt}</s>
+        <|assistant|>

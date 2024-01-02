@@ -45,7 +45,18 @@ Total 201,981 samples.
 - TokenBender/python_eval_instruct_51k: “python” in output .40,309 samples
 - Spider: 8,659 samples
 
+## How to Prompt the Model
+This model accepts the Alpaca instruction format.
 
+For example:
+```
+You are an intelligent programming assistant.
+
+### Instruction:
+Implement a linked list in C++
+
+### Response:
+```
 
 ## HumanEval
 

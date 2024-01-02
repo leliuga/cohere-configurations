@@ -158,6 +158,13 @@ func main() {
 			return err
 		}
 
+		directory := filepath.Dir(path)
+		if info.Name() == "config.json" {
+			klog.ErrorS(nil, "Skipping %s config.json found.", "area", "generate", "directory", directory)
+
+			return os.RemoveAll(directory)
+		}
+
 		if info.IsDir() || info.Name() != "manifest.yaml" {
 			return nil
 		}
@@ -174,6 +181,12 @@ func main() {
 
 		if err = yaml.NewDecoder(file, yaml.UseJSONUnmarshaler()).Decode(&model); err != nil {
 			return err
+		}
+
+		if len(model.Variants) == 0 {
+			klog.ErrorS(nil, "Skipping %s missing variants", "area", "generate", "directory", directory)
+
+			return os.RemoveAll(directory)
 		}
 
 		variants := maps.Keys(model.Variants)

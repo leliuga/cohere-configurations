@@ -13,6 +13,8 @@ language:
 Dolphin 2.2.1 🐬
 https://erichartford.com/dolphin
 
+Join Our Discord! https://discord.gg/vT3sktQ3zb 
+
 This is a checkpoint release, to fix overfit training.  ie, it was responding with CoT even when I didn't request it, and also it was too compliant even when the request made no sense.  This one should be better.
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/KqsVXIvBd3akEjvijzww7.png" width="600" />
