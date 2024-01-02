@@ -1,0 +1,321 @@
+id: toxicqa-Llama2-7B
+parent_id: Undi95/toxicqa-Llama2-7B
+name: ToxicQA Llama2 7B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: Undi
+pipeline: ""
+languages: []
+tags:
+- peft
+- gguf
+- generated_from_trainer
+- base_model:Undi95/toxicqa-Llama2-7B
+- license:other
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: a8ddaf010b0af66ec3107fa251a0df2e3d4d7689
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q2_K.gguf
+      size: 2825940800
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d25ebb7caabdfd7b5ceca3012db417828b8e0d8f
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q3_K_L.gguf
+      size: 3597111104
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c3cda9af8f062ca7b417611afd5dd29e9628991e
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q3_K_M.gguf
+      size: 3298004800
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: e5bd28222b68efa48968c6c79c8fced329b3729d
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q3_K_S.gguf
+      size: 2948304704
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f0763ce252412b71519f1e95a85fa9ee33da6505
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q4_0.gguf
+      size: 3825807168
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: a9d0c33135ec415aa37b3c3a5986a5bb01db40d3
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q4_K_M.gguf
+      size: 4081004352
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 50906569e0076eb9fc46ea09adc964f334e195d1
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q4_K_S.gguf
+      size: 3856740160
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: b470df55f65ead6fae054c378481e9dac3aa8b16
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q5_0.gguf
+      size: 4651691840
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 1dfbeed0e18c73d9be9bf02f4442b655504b38a5
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q5_K_M.gguf
+      size: 4783157056
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: b84e33a4cb0051132ff8c14384950ff96099660a
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q5_K_S.gguf
+      size: 4651691840
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: bef5b7425e8acc4c93e3ef2715699a3ff293f8d2
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q6_K.gguf
+      size: 5529194304
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/toxicqa-Llama2-7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f2d4edfd446faeaf11fc3a4ea2327debac47f336
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-7B-GGUF/resolve/main/toxicqa-llama2-7b.Q8_0.gguf
+      size: 7161089856
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -36,6 +36,19 @@ speechless-llama2-hermes-orca-platypus-wizardlm-13b is a merge of NousResearch/N
 
 Code: https://github.com/uukuguy/speechless
 
+## How to Prompt the Model
+This model accepts the Alpaca instruction format.
+
+For example:
+```
+You are an intelligent programming assistant.
+
+### Instruction:
+Implement a linked list in C++
+
+### Response:
+```
+
 
 ## lm-evaluation-harness
 

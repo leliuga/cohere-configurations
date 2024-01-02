@@ -21,7 +21,7 @@ tags:
 - region:us
 config:
   vocab_size: 32000
-  context_size: 32768
+  context_size: 8192
   embedding_size: 4096
   attention_head_size: 32
   key_value_head_size: 8
@@ -46,25 +46,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q2_K.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q2_K/Q2_K.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: ed7b072846a9fbf05355586376e4e64743a8434d
       name: Q2_K.gguf
@@ -75,25 +68,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q3_K_L.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 86a8f19ce9df3c63268d78182dd8b5db10cad2a7
       name: Q3_K_L.gguf
@@ -104,25 +90,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q3_K_M.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 257990470afe359e7ed7c80f55dfeeedd5c0d09b
       name: Q3_K_M.gguf
@@ -133,25 +112,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q3_K_S.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: b9c0dfceec5a253ba68c7c4635f82a11612bb94a
       name: Q3_K_S.gguf
@@ -162,25 +134,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q4_0.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q4_0/Q4_0.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: cde37a5aabb1d69d17b443307013d3e57f6f4878
       name: Q4_0.gguf
@@ -191,25 +156,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q4_K_M.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: a5f213e076cf754a7b39e857cd5bd3d582ac35db
       name: Q4_K_M.gguf
@@ -220,25 +178,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q4_K_S.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 6e21b0e3112b68f0d8d773252251b4ce283c653c
       name: Q4_K_S.gguf
@@ -249,25 +200,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q5_0.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q5_0/Q5_0.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 4402be0c9b6a1420d4f769d8a293088663d37e18
       name: Q5_0.gguf
@@ -278,25 +222,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q5_K_M.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: a80c563f9b47a0c0db148f8e326e2c1af24c7841
       name: Q5_K_M.gguf
@@ -307,25 +244,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q5_K_S.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 63aaa6add9f257492963e5b898bd84c8d58ae5f9
       name: Q5_K_S.gguf
@@ -336,25 +266,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q6_K.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q6_K/Q6_K.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 485c819ad7b89b65969da0c5623a2ac92a38db81
       name: Q6_K.gguf
@@ -365,25 +288,18 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Loyal-Macaroni-Maid-7B/Q8_0.gguf
+    - models/Loyal-Macaroni-Maid-7B/Q8_0/Q8_0.gguf
     - --ctx-size
-    - "32768"
+    - "8192"
     - --batch-size
-    - "4096"
+    - "32768"
     - --n-gpu-layers
     - "35"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 2aeaf1a4f6854d70dbbbdac275c0d755ef8a535f
       name: Q8_0.gguf
@@ -393,7 +309,7 @@ inference:
   chat:
     options:
       frequency_penalty: 0.0
-      max_tokens: 32768
+      max_tokens: 8192
       "n": 1
       presence_penalty: 0.0
       stop:

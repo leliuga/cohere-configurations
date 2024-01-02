@@ -45,6 +45,20 @@ speechless-llama2-13b:v1.1 is a merge of Open-Orca/OpenOrca-Platypus2-13B and Wi
 | TruthfulQA | 55.7 |
 | Average | 64.52 |
 
+## How to Prompt the Model
+This model accepts the Alpaca instruction format.
+
+For example:
+```
+You are an intelligent programming assistant.
+
+### Instruction:
+Implement a linked list in C++
+
+### Response:
+```
+
+
 # **Llama 2**
 Llama 2 is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters. This is the repository for the 13B pretrained model, converted for the Hugging Face Transformers format. Links to other models can be found in the index at the bottom.
 

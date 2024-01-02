@@ -1,0 +1,322 @@
+id: CarbonVillain-en-10.7B-v4
+parent_id: jeonsworld/CarbonVillain-en-10.7B-v4
+name: CarbonVillain en 10.7B v4
+description: ""
+architecture: llama
+licence: mit
+object: model
+owned_by: eunkwang jeon
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- solar
+- en
+- base_model:jeonsworld/CarbonVillain-en-10.7B-v4
+- license:mit
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f73fdd8affe26705bcb0f3b3b85fa32486594a9a
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q2_K.gguf
+      size: 4549952480
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 35ffd26b6bfb6754d0564a4d90be946b2fe25bc9
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q3_K_L.gguf
+      size: 5651686368
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d719f3fa3f40ac56cffcebcc3f1f16a88f68cf9c
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q3_K_M.gguf
+      size: 5189264352
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 3a5d79c73366d41436c22fa0d64c5dfae81290f0
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q3_K_S.gguf
+      size: 4665500640
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d9e4fee75c62403b77fb04fc6d8c40fb805dd7dc
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q4_0.gguf
+      size: 6073320416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 8d25f6db4354cecd57bbafac977eef6e6c59855d
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q4_K_M.gguf
+      size: 6462604256
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c15ff5765507739d3400154e4c819c913037002f
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q4_K_S.gguf
+      size: 6104777696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f238571e1fdbd2268b712c408b55d1f4daa54b01
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q5_0.gguf
+      size: 7398327264
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d6c3f4780bc988387cc98768473b38c2420811ec
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q5_K_M.gguf
+      size: 7598867424
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: fb4c2174bcf9bc5af8a8f4ef1277b147cd813b29
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q5_K_S.gguf
+      size: 7398327264
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 0f96d1822700d85e71d38bb3777defbe03d7b79a
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q6_K.gguf
+      size: 8806147040
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CarbonVillain-en-10.7B-v4/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --batch-size
+    - "16384"
+    - --n-gpu-layers
+    - "51"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: dfec315e10690ba9cd9844683bdcc329dd9b9b05
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/CarbonVillain-en-10.7B-v4-GGUF/resolve/main/carbonvillain-en-10.7b-v4.Q8_0.gguf
+      size: 11405091808
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### User:\n{prompt}\n\n### Assistant:\n"

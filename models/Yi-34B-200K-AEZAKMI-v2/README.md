@@ -30,7 +30,7 @@ Huge thank you to LoneStriker and TheBloke for providing quantized versions.
 EXL2 \
 3bpw - https://huggingface.co/LoneStriker/Yi-34B-200K-AEZAKMI-v2-3.0bpw-h6-exl2 \
 4bpw - https://huggingface.co/LoneStriker/Yi-34B-200K-AEZAKMI-v2-4.0bpw-h6-exl2 \
-4.65bpw - https://huggingface.co/LoneStriker/Yi-34B-200K-AEZAKMI-v2-4.65bpw-h6-exl2 \
+4.65bpw - https://huggingface.co/adamo1139/Yi-34B-200K-AEZAKMI-v2-exl2-4.65bpw \
 5bpw - https://huggingface.co/LoneStriker/Yi-34B-200K-AEZAKMI-v2-5.0bpw-h6-exl2 \
 6bpw - https://huggingface.co/LoneStriker/Yi-34B-200K-AEZAKMI-v2-6.0bpw-h6-exl2 \
 8bpw - https://huggingface.co/LoneStriker/Yi-34B-200K-AEZAKMI-v2-8.0bpw-h8-exl2

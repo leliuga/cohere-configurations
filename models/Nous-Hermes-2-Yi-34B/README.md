@@ -30,13 +30,13 @@ Nous Hermes 2 Yi 34B was trained on 1,000,000 entries of primarily GPT-4 generat
 1. [Example Outputs](#example-outputs)
     - Discussing the Laws of Gravity
     - Create a Flask based FTP Server
-3. [Benchmark Results](#benchmark-results)
+2. [Benchmark Results](#benchmark-results)
     - GPT4All
     - AGIEval
     - BigBench
     - Averages Compared
-4. [Prompt Format](#prompt-format)
-5. [Quantized Models](#quantized-models)
+3. [Prompt Format](#prompt-format)
+4. [Quantized Models](#quantized-models)
 
 
 ## Example Outputs

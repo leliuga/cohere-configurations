@@ -66,7 +66,7 @@ Multimodal
 docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere run <id>/<variant>
 ```
 
-## Supported Models (903)
+## Supported Models (923)
 
 | ID  | Variants | Context | Embedding | Read more |
 | --- | -------- | ------- | --------- | --------- |
@@ -145,6 +145,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | CapyTessBorosYi-34B-200K-DARE-Ties | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 200000 | 7168 | [README.md](models/CapyTessBorosYi-34B-200K-DARE-Ties/README.md) |
 | Capybara-Tess-Yi-34B-200K | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 200000 | 7168 | [README.md](models/Capybara-Tess-Yi-34B-200K/README.md) |
 | Capybara-Tess-Yi-34B-200K-DARE-Ties | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 200000 | 7168 | [README.md](models/Capybara-Tess-Yi-34B-200K-DARE-Ties/README.md) |
+| CarbonVillain-en-10.7B-v4 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/CarbonVillain-en-10.7B-v4/README.md) |
 | Carl-Llama-2-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Carl-Llama-2-13B/README.md) |
 | Cat-13B-0.5 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Cat-13B-0.5/README.md) |
 | CausalLM-14B | Q4_0 Q4_1 Q5_0 Q5_1 Q8_0 | 8192 | 5120 | [README.md](models/CausalLM-14B/README.md) |
@@ -265,6 +266,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | LMCocktail-10.7B-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/LMCocktail-10.7B-v1/README.md) |
 | LMCocktail-phi-2-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 0 | 0 | [README.md](models/LMCocktail-phi-2-v1/README.md) |
 | LUNA-SOLARkrautLM-Instruct | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/LUNA-SOLARkrautLM-Instruct/README.md) |
+| Lelantos-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/Lelantos-7B/README.md) |
 | Lemur-70B-Chat-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/Lemur-70B-Chat-v1/README.md) |
 | Leo-Mistral-Hessianai-7B-Chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Leo-Mistral-Hessianai-7B-Chat/README.md) |
 | LeoScorpius-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/LeoScorpius-7B/README.md) |
@@ -303,7 +305,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | LongAlpaca-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/LongAlpaca-70B/README.md) |
 | LosslessMegaCoder-Llama2-13B-Mini | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/LosslessMegaCoder-Llama2-13B-Mini/README.md) |
 | LosslessMegaCoder-Llama2-7B-Mini | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/LosslessMegaCoder-Llama2-7B-Mini/README.md) |
-| Loyal-Macaroni-Maid-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Loyal-Macaroni-Maid-7B/README.md) |
+| Loyal-Macaroni-Maid-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/Loyal-Macaroni-Maid-7B/README.md) |
 | Luban-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Luban-13B/README.md) |
 | Luna-AI-Llama2-Uncensored | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 4096 | [README.md](models/Luna-AI-Llama2-Uncensored/README.md) |
 | MAmmoTH-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/MAmmoTH-13B/README.md) |
@@ -422,6 +424,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Nous-Capybara-7B-v1.9 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Nous-Capybara-7B-v1.9/README.md) |
 | Nous-Hermes-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/Nous-Hermes-13B/README.md) |
 | Nous-Hermes-13B-Code | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Nous-Hermes-13B-Code/README.md) |
+| Nous-Hermes-2-SOLAR-10.7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/Nous-Hermes-2-SOLAR-10.7B/README.md) |
 | Nous-Hermes-2-Yi-34B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 7168 | [README.md](models/Nous-Hermes-2-Yi-34B/README.md) |
 | Nous-Hermes-Llama-2-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/Nous-Hermes-Llama-2-7B/README.md) |
 | Nous-Hermes-Llama2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Nous-Hermes-Llama2/README.md) |
@@ -514,7 +517,6 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Samantha-1.11-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Samantha-1.11-13B/README.md) |
 | Samantha-1.11-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/Samantha-1.11-70B/README.md) |
 | Samantha-1.11-CodeLlama-34B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 8192 | [README.md](models/Samantha-1.11-CodeLlama-34B/README.md) |
-| Sarah_StoryTeller_13b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Sarah_StoryTeller_13b/README.md) |
 | SauerkrautLM-13B-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/SauerkrautLM-13B-v1/README.md) |
 | SauerkrautLM-3B-v1 | Q4_0 Q4_1 Q5_0 Q5_1 Q8_0 | 2048 | 3200 | [README.md](models/SauerkrautLM-3B-v1/README.md) |
 | SauerkrautLM-70B-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/SauerkrautLM-70B-v1/README.md) |
@@ -537,13 +539,14 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | ShiningValiant-1.3 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/ShiningValiant-1.3/README.md) |
 | ShiningValiantXS | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/ShiningValiantXS/README.md) |
 | ShiningValiantXS-1.1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/ShiningValiantXS-1.1/README.md) |
-| Silicon-Maid-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/Silicon-Maid-7B/README.md) |
+| Silicon-Maid-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/Silicon-Maid-7B/README.md) |
 | Skywork-13B-base | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4608 | [README.md](models/Skywork-13B-base/README.md) |
 | SlimOpenOrca-Mistral-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/SlimOpenOrca-Mistral-7B/README.md) |
 | SlimOrca-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/SlimOrca-13B/README.md) |
 | Solar-10.7B-SLERP | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/Solar-10.7B-SLERP/README.md) |
 | Solus-103B-L2 | Q2_K Q3_K_M Q3_K_S | 4096 | 8192 | [README.md](models/Solus-103B-L2/README.md) |
 | Solus-70B-L2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/Solus-70B-L2/README.md) |
+| Sonya-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/Sonya-7B/README.md) |
 | Speechless-Llama2-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Speechless-Llama2-13B/README.md) |
 | Speechless-Llama2-Hermes-Orca-Platypus-WizardLM-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Speechless-Llama2-Hermes-Orca-Platypus-WizardLM-13B/README.md) |
 | Spicyboros-13B-2.2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Spicyboros-13B-2.2/README.md) |
@@ -613,6 +616,8 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | TimeCrystal-L2-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/TimeCrystal-L2-13B/README.md) |
 | TinyLlama-1.1B-1T-OpenOrca | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-1T-OpenOrca/README.md) |
 | TinyLlama-1.1B-Chat-v0.3 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-Chat-v0.3/README.md) |
+| TinyLlama-1.1B-Chat-v1.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-Chat-v1.0/README.md) |
+| TinyLlama-1.1B-intermediate-step-1431k-3T | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-intermediate-step-1431k-3T/README.md) |
 | TinyLlama-1.1B-intermediate-step-480k-1T | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-intermediate-step-480k-1T/README.md) |
 | TinyLlama-1.1B-intermediate-step-715k-1.5T | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-intermediate-step-715k-1.5T/README.md) |
 | TinyLlama-1.1B-python-v0.1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 2048 | [README.md](models/TinyLlama-1.1B-python-v0.1/README.md) |
@@ -623,6 +628,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | Trurl-2-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/Trurl-2-7B/README.md) |
 | Tulpar-7B-v0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/Tulpar-7B-v0/README.md) |
 | U-Amethyst-20B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/U-Amethyst-20B/README.md) |
+| UNAversal-8x7B-v1beta | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32768 | 4096 | [README.md](models/UNAversal-8x7B-v1beta/README.md) |
 | UltraLM-13B-v2.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/UltraLM-13B-v2.0/README.md) |
 | Uncensored-Frank-13b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/Uncensored-Frank-13b/README.md) |
 | Uncensored-Frank-33b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 6656 | [README.md](models/Uncensored-Frank-33b/README.md) |
@@ -734,7 +740,9 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | airochronos-33B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 6656 | [README.md](models/airochronos-33B/README.md) |
 | alfred-40B-1023 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 0 | 8192 | [README.md](models/alfred-40B-1023/README.md) |
 | apricot-wildflower-20 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/apricot-wildflower-20/README.md) |
+| bagel-34b-v0.2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 200000 | 7168 | [README.md](models/bagel-34b-v0.2/README.md) |
 | bagel-7B-v0.1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/bagel-7B-v0.1/README.md) |
+| bagel-dpo-34b-v0.2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 200000 | 7168 | [README.md](models/bagel-dpo-34b-v0.2/README.md) |
 | bagel-dpo-7B-v0.1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/bagel-dpo-7B-v0.1/README.md) |
 | based-13b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/based-13b/README.md) |
 | based-30B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 6656 | [README.md](models/based-30B/README.md) |
@@ -769,6 +777,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | deepseek-llm-7B-base | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/deepseek-llm-7B-base/README.md) |
 | deepseek-llm-7B-chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/deepseek-llm-7B-chat/README.md) |
 | deepsex-34b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 7168 | [README.md](models/deepsex-34b/README.md) |
+| deita-7B-v1.0-sft | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/deita-7B-v1.0-sft/README.md) |
 | digital-socrates-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/digital-socrates-13B/README.md) |
 | digital-socrates-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/digital-socrates-7B/README.md) |
 | docsgpt-7B-mistral | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/docsgpt-7B-mistral/README.md) |
@@ -780,7 +789,9 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | dolphin-2.2.1-mistral-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/dolphin-2.2.1-mistral-7B/README.md) |
 | dolphin-2.5-mixtral-8x7b | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32768 | 4096 | [README.md](models/dolphin-2.5-mixtral-8x7b/README.md) |
 | dolphin-2.6-mistral-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/dolphin-2.6-mistral-7B/README.md) |
+| dolphin-2.6-mistral-7B-dpo | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/dolphin-2.6-mistral-7B-dpo/README.md) |
 | dolphin-2.6-mixtral-8x7b | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32768 | 4096 | [README.md](models/dolphin-2.6-mixtral-8x7b/README.md) |
+| dolphin-2.7-mixtral-8x7b | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32768 | 4096 | [README.md](models/dolphin-2.7-mixtral-8x7b/README.md) |
 | dolphin-2_2-yi-34b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 7168 | [README.md](models/dolphin-2_2-yi-34b/README.md) |
 | dolphin-2_6-phi-2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 0 | 0 | [README.md](models/dolphin-2_6-phi-2/README.md) |
 | dopeystableplats-3b-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 2560 | [README.md](models/dopeystableplats-3b-v1/README.md) |
@@ -818,6 +829,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | juanako-7B-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/juanako-7B-v1/README.md) |
 | koOpenChat-sft | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/koOpenChat-sft/README.md) |
 | law-LLM | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 0 | 4096 | [README.md](models/law-LLM/README.md) |
+| law-LLM-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/law-LLM-13B/README.md) |
 | leo-hessianai-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 5120 | [README.md](models/leo-hessianai-13B/README.md) |
 | leo-hessianai-13B-chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 5120 | [README.md](models/leo-hessianai-13B-chat/README.md) |
 | leo-hessianai-13B-chat-bilingual | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 5120 | [README.md](models/leo-hessianai-13B-chat-bilingual/README.md) |
@@ -848,6 +860,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | manticore-13b-chat-pyg | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/manticore-13b-chat-pyg/README.md) |
 | med42-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 2048 | 8192 | [README.md](models/med42-70B/README.md) |
 | medalpaca-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 0 | 5120 | [README.md](models/medalpaca-13B/README.md) |
+| medicine-LLM-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/medicine-LLM-13B/README.md) |
 | meditron-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/meditron-70B/README.md) |
 | meditron-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 4096 | [README.md](models/meditron-7B/README.md) |
 | meditron-7B-chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 4096 | [README.md](models/meditron-7B-chat/README.md) |
@@ -858,12 +871,14 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | mistral-7B-dpo-v5 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/mistral-7B-dpo-v5/README.md) |
 | mistral-7B-finetuned-orca-dpo-v2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/mistral-7B-finetuned-orca-dpo-v2/README.md) |
 | mistral-ft-optimized-1218 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/mistral-ft-optimized-1218/README.md) |
+| mistral-ft-optimized-1227 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/mistral-ft-optimized-1227/README.md) |
 | mixtralnt-4x7b-test | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32768 | 4096 | [README.md](models/mixtralnt-4x7b-test/README.md) |
 | model_007-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/model_007-70B/README.md) |
 | neural-chat-7B-v3-1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/neural-chat-7B-v3-1/README.md) |
 | neural-chat-7B-v3-2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/neural-chat-7B-v3-2/README.md) |
 | neural-chat-7B-v3-3 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/neural-chat-7B-v3-3/README.md) |
 | neural-chat-7B-v3-3-wizardmath-dare-me | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/neural-chat-7B-v3-3-wizardmath-dare-me/README.md) |
+| nontoxic-bagel-34b-v0.2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 200000 | 7168 | [README.md](models/nontoxic-bagel-34b-v0.2/README.md) |
 | notus-7B-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/notus-7B-v1/README.md) |
 | notux-8x7b-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/notux-8x7b-v1/README.md) |
 | nsql-llama-2-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/nsql-llama-2-7B/README.md) |
@@ -919,6 +934,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | sheep-duck-llama-2-70B-v1.1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 4096 | 8192 | [README.md](models/sheep-duck-llama-2-70B-v1.1/README.md) |
 | smartyplats-7B-v2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/smartyplats-7B-v2/README.md) |
 | smol-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 4096 | [README.md](models/smol-7B/README.md) |
+| sonya-7B-x8-MoE | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 8192 | 4096 | [README.md](models/sonya-7B-x8-MoE/README.md) |
 | speechless-code-mistral-7B-v1.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/speechless-code-mistral-7B-v1.0/README.md) |
 | speechless-codellama-34b-v2.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/speechless-codellama-34b-v2.0/README.md) |
 | speechless-mistral-7B-dare-0.85 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/speechless-mistral-7B-dare-0.85/README.md) |
@@ -941,6 +957,9 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | tora-code-13B-v1.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 5120 | [README.md](models/tora-code-13B-v1.0/README.md) |
 | tora-code-34b-v1.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 8192 | [README.md](models/tora-code-34b-v1.0/README.md) |
 | tora-code-7B-v1.0 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 16384 | 4096 | [README.md](models/tora-code-7B-v1.0/README.md) |
+| toxicqa-Llama2-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 5120 | [README.md](models/toxicqa-Llama2-13B/README.md) |
+| toxicqa-Llama2-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 4096 | [README.md](models/toxicqa-Llama2-7B/README.md) |
+| trinity-v1.2-x8-MoE | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32768 | 4096 | [README.md](models/trinity-v1.2-x8-MoE/README.md) |
 | tulu-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/tulu-13B/README.md) |
 | tulu-2-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 5120 | [README.md](models/tulu-2-13B/README.md) |
 | tulu-2-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 8192 | 8192 | [README.md](models/tulu-2-70B/README.md) |
@@ -969,6 +988,7 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/
 | wizard-vicuna-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 5120 | [README.md](models/wizard-vicuna-13B/README.md) |
 | wizardLM-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 2048 | 4096 | [README.md](models/wizardLM-7B/README.md) |
 | xDAN-L1-Chat-RL-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/xDAN-L1-Chat-RL-v1/README.md) |
+| yayi2-30B-llama | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 4096 | 7168 | [README.md](models/yayi2-30B-llama/README.md) |
 | yi-34B-v3 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 8192 | 7168 | [README.md](models/yi-34B-v3/README.md) |
 | zephyr-7B-alpha | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/zephyr-7B-alpha/README.md) |
 | zephyr-7B-beta | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32768 | 4096 | [README.md](models/zephyr-7B-beta/README.md) |

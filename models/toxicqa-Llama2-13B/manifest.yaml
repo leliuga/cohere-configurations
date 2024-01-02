@@ -1,23 +1,19 @@
-id: Sarah_StoryTeller_13b
-parent_id: FPHam/Sarah_StoryTeller_13b_HF
-name: Sarah Storyteller 13B
+id: toxicqa-Llama2-13B
+parent_id: Undi95/toxicqa-Llama2-13B
+name: ToxicQA Llama2 13B
 description: ""
 architecture: llama
-licence: llama2
+licence: other
 object: model
-owned_by: FPHam
+owned_by: Undi
 pipeline: ""
 languages: []
 tags:
-- transformers
+- peft
 - gguf
-- llama
-- llm
-- spellcheck
-- grammar
-- base_model:FPHam/Sarah_StoryTeller_13b_HF
-- license:llama2
-- text-generation-inference
+- generated_from_trainer
+- base_model:Undi95/toxicqa-Llama2-13B
+- license:other
 - region:us
 config:
   vocab_size: 32000
@@ -46,348 +42,264 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q2_K.gguf
+    - models/toxicqa-Llama2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: a524d7874667b26d97b137799adcd3badee8b61e
+    - id: eb7ec5d61435a3ed2b0246c8981ace8e65570c2e
       name: Q2_K.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q2_K.gguf
       size: 5429348352
   Q3_K_L:
     dtype: Q3_K_L
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q3_K_L.gguf
+    - models/toxicqa-Llama2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: 81f7495afe64c498f6480cb30d011c24753c1a44
+    - id: df84f7708d418dfe6852e5d3207c409378836ed5
       name: Q3_K_L.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q3_K_L.gguf
       size: 6929559552
   Q3_K_M:
     dtype: Q3_K_M
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q3_K_M.gguf
+    - models/toxicqa-Llama2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: 34c0dbdce47901abc0444941eb10cce3102b534c
+    - id: 7246209be711c90c442c6c011f288715da090432
       name: Q3_K_M.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q3_K_M.gguf
       size: 6337769472
   Q3_K_S:
     dtype: Q3_K_S
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q3_K_S.gguf
+    - models/toxicqa-Llama2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: a73fbd85e913c0d49eb66dc9f291b4ac22e437a6
+    - id: 530568a910cf6349b2d060b7eb9dffc3a4d97a3c
       name: Q3_K_S.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q3_K_S.gguf
       size: 5658980352
   Q4_0:
     dtype: Q4_0
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q4_0.gguf
+    - models/toxicqa-Llama2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: caa503a003154e58a5bbdad792391e0e33de0798
+    - id: 927f8b64c555b9ed3454d6463b778646a25d0141
       name: Q4_0.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q4_0.gguf
       size: 7365834752
   Q4_K_M:
     dtype: Q4_K_M
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q4_K_M.gguf
+    - models/toxicqa-Llama2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: ba8ebedfdb07cfb1767179d93b274cf005dd3058
+    - id: bd15fa51210afe486c8dda173c886c95e2fffbc2
       name: Q4_K_M.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q4_K_M.gguf
       size: 7865956352
   Q4_K_S:
     dtype: Q4_K_S
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q4_K_S.gguf
+    - models/toxicqa-Llama2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: b9e13489353a8823836e68b2020bf53a3faee002
+    - id: 43039455536e134836b121dc9d9472c43833760f
       name: Q4_K_S.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q4_K_S.gguf
       size: 7414331392
   Q5_0:
     dtype: Q5_0
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q5_0.gguf
+    - models/toxicqa-Llama2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: 64c93afa318eb3565964f5a57c54b68a5123f020
+    - id: de0cc01782a37bed2d1aa96c771ab7b91e0ea295
       name: Q5_0.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q5_0.gguf
       size: 8972285952
   Q5_K_M:
     dtype: Q5_K_M
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q5_K_M.gguf
+    - models/toxicqa-Llama2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: 18668ea30f0bfd48fcfd7c292afa39d4bc4aa495
+    - id: 5a3fdaa557bf1950b874976c9a9c920b12ae746a
       name: Q5_K_M.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q5_K_M.gguf
       size: 9229924352
   Q5_K_S:
     dtype: Q5_K_S
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q5_K_S.gguf
+    - models/toxicqa-Llama2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: e08a7433c9cdecacf68af41887367bf79fc08538
+    - id: 35ce52849a1d6557ab8ab28512920fb618c03d22
       name: Q5_K_S.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q5_K_S.gguf
       size: 8972285952
   Q6_K:
     dtype: Q6_K
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q6_K.gguf
+    - models/toxicqa-Llama2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: 0c5e86e45141cb97049381819d4e407557503148
+    - id: 5524de91aec5290833efbd5fcbd4a02d4c2f9797
       name: Q6_K.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q6_K.gguf
       size: 10679140352
   Q8_0:
     dtype: Q8_0
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Sarah_StoryTeller_13b/Q8_0.gguf
+    - models/toxicqa-Llama2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
     - --batch-size
-    - "4096"
+    - "16384"
     - --n-gpu-layers
     - "43"
     - --parallel
     - "4"
-    - --no-mmap
-    - "false"
     - --mlock
-    - "true"
     - --numa
-    - "true"
     - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
-    - id: 1b1efafbe08e3a0ea93f55ebd88d6a9112243751
+    - id: 90125ae23e2445a1530a6863b27725d7fe66d4a1
       name: Q8_0.gguf
-      uri: https://huggingface.co/TheBloke/Sarah_StoryTeller_13b-GGUF/resolve/main/sarah_storyteller_13b.Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/toxicqa-Llama2-13B-GGUF/resolve/main/toxicqa-llama2-13b.Q8_0.gguf
       size: 13831319552
 inference:
   chat:
@@ -406,4 +318,4 @@ inference:
       top_p: 0.95
     prompts:
       system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
-      template: "### Instruction:\n\n{prompt}\n\n### Response:\n"
+      template: "{prompt}\n"

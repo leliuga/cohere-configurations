@@ -1,0 +1,322 @@
+id: mistral-ft-optimized-1227
+parent_id: OpenPipe/mistral-ft-optimized-1227
+name: Mistral FT Optimized 1227
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: OpenPipe
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- base_model:OpenPipe/mistral-ft-optimized-1227
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 87f234157195dfc5a4c24def96a739ddcc7f1cc9
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q2_K.gguf
+      size: 3084034208
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: cc0f6d0cf24621216c2180a7ae2829e5bb2143a9
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q3_K_L.gguf
+      size: 3822960800
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d14f0c5f4a30a3a984e6b0aaa6f6f5f4ed2f1403
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q3_K_M.gguf
+      size: 3519922336
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 9635f737a8e17b7b1c1af834c67c335c3acadfa5
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q3_K_S.gguf
+      size: 3165503648
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 2e366a0c494d4239ee3e1e7f4adeea36d7b2c8ba
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q4_0.gguf
+      size: 4109852832
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: e536433b93d4ae73791dda77a2c1fe4a4154d499
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q4_K_M.gguf
+      size: 4369375392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ca0e5b0b522a2ab37b40249f810bd7ad3be2436c
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q4_K_S.gguf
+      size: 4141310112
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 452ec1c946732aa64b0c0ad17eb93409484906f7
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q5_0.gguf
+      size: 4998652064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 613b2137208162d9dd5e81baa82dfe9527fb125d
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q5_K_M.gguf
+      size: 5132345504
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 5e312e891470ae51593678881ec1cbef8dcffcbe
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q5_K_S.gguf
+      size: 4998652064
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: e1837609d37df25f67ac63a8171ede2cbe148734
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q6_K.gguf
+      size: 5943001248
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/mistral-ft-optimized-1227/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: abfbf4bee298c6e6e898c33dff4083988ade50dc
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/mistral-ft-optimized-1227-GGUF/resolve/main/mistral-ft-optimized-1227.Q8_0.gguf
+      size: 7696793760
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

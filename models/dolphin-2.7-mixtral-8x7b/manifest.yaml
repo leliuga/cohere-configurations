@@ -1,0 +1,247 @@
+id: dolphin-2.7-mixtral-8x7b
+parent_id: cognitivecomputations/dolphin-2.7-mixtral-8x7b
+name: Dolphin 2.7 Mixtral 8X7B
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Cognitive Computations
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- en
+- dataset:ehartford/dolphin
+- dataset:jondurbin/airoboros-2.2.1
+- dataset:ehartford/dolphin-coder
+- dataset:teknium/openhermes
+- dataset:ise-uiuc/Magicoder-OSS-Instruct-75K
+- dataset:ise-uiuc/Magicoder-Evol-Instruct-110K
+- dataset:LDJnr/Capybara
+- base_model:cognitivecomputations/dolphin-2.7-mixtral-8x7b
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: eac649b31d7fd7988ef754b9ffccccc7b4653e29
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q2_K.gguf
+      size: 15644044224
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 06f4759c432191cca20de8a2ddb72ee86e0a4baf
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q3_K_M.gguf
+      size: 20363366144
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 35377ddef83fa42a623ca5df97e0d1fc1943ce92
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q4_0.gguf
+      size: 26441544512
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 946424d2813cd998e69c406c67dfa701e2fdc3f0
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q4_K_M.gguf
+      size: 26441544512
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 226ddcaa6a45c41928ab13775aea7bae9034c0ba
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q5_0.gguf
+      size: 32229291840
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 11704806dc630d1231a594ca69ea8ff75966e7b0
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q5_K_M.gguf
+      size: 32229291840
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 393ea4b45015338ad00176118d3ade88be33ce74
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q6_K.gguf
+      size: 38378773376
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/dolphin-2.7-mixtral-8x7b/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --batch-size
+    - "131072"
+    - --n-gpu-layers
+    - "35"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c301bd544234f13b0935c2d3f41eb9f320753f60
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF/resolve/main/dolphin-2.7-mixtral-8x7b.Q8_0.gguf
+      size: 49624279808
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

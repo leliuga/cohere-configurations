@@ -1,0 +1,331 @@
+id: medicine-LLM-13B
+parent_id: AdaptLLM/medicine-LLM-13B
+name: Medicine LLM 13B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: AdaptLLM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- biology
+- medical
+- text-generation
+- en
+- dataset:Open-Orca/OpenOrca
+- dataset:GAIR/lima
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- dataset:EleutherAI/pile
+- arxiv:2309.09530
+- base_model:AdaptLLM/medicine-LLM-13B
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 0
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 11f74a2169c09025dcfd7e0c26099dcaef5b5749
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q2_K.gguf
+      size: 5429354272
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 3e64e96503a99f925fdc7396ace2dba4766ab6ed
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q3_K_L.gguf
+      size: 6929565984
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ef1eab4661a56822b0506bcb881d3c3aa6cc3113
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q3_K_M.gguf
+      size: 6337775904
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: d2f1fc3dd4dbcdbaf3add3cced8189f26b86ab8a
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q3_K_S.gguf
+      size: 5658986784
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: f22f60dbca954134049ae01041d302c7be7af076
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q4_0.gguf
+      size: 7365841856
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 9fc1593e978af1047b8c6d2f8fad728bbc982f26
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q4_K_M.gguf
+      size: 7865963456
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: fe21f66d927b27015b23c98299cf2ab6e89b455b
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q4_K_S.gguf
+      size: 7414338496
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: a9f41af880f38939ce21696b962fbbc2ee6c4a5d
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q5_0.gguf
+      size: 8972293696
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 3674b0c548b1df52d192583e720d479c5c27becf
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q5_K_M.gguf
+      size: 9229932096
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 122736f5033914ab05cda33ebf3765fe824c64c2
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q5_K_S.gguf
+      size: 8972293696
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 807efcf871a0029115e7af015a86a657520b55e3
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q6_K.gguf
+      size: 10679148800
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM-13B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 4f9a2e6cd3daedf18ea037f114148e0d4bb481a7
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-13B-GGUF/resolve/main/medicine-llm-13b.Q8_0.gguf
+      size: 13831330432
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] <<SYS>>\n{system_message}\n<</SYS>>\n{prompt} [/INST]\n"

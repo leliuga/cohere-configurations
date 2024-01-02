@@ -11,7 +11,7 @@ tags:
 <!-- description start -->
 ## Description
 
-This repository hosts **Loyal-Macaroni-Maid-7B**, a 7B model aimed at having engaging RP with solid character card adherence and being a smart cookie at the same time.
+This repository hosts **Loyal-Macaroni-Maid-7B**, a 7B model aimed at having engaging RP with solid character card adherence and being a smart cookie at the same time. Quants can be found [here](https://huggingface.co/collections/SanjiWatsuki/loyal-macaroni-maid-7b-658a9f424f349f95cf0648b0).
 
 In my limited testing, it's a great RP model suitable for RP/ERP with sharp reasoning skills for a 7B.
 

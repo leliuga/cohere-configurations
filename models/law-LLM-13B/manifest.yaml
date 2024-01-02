@@ -1,0 +1,330 @@
+id: law-LLM-13B
+parent_id: AdaptLLM/law-LLM-13B
+name: Law LLM 13B
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: AdaptLLM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- legal
+- text-generation
+- en
+- dataset:Open-Orca/OpenOrca
+- dataset:GAIR/lima
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- dataset:EleutherAI/pile
+- arxiv:2309.09530
+- base_model:AdaptLLM/law-LLM-13B
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 2048
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 0
+  intermediate_size: 13824
+  hidden_layer_size: 40
+  tokens:
+    bos:
+      index: 1
+      value: <s>
+    eos:
+      index: 2
+      value: </s>
+    lf:
+      index: 13
+      value: <0x0A>
+    unk:
+      index: 0
+      value: <unk>
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 2bf9c8fd0a46e4636e0d890bd7b2945b0a04a409
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q2_K.gguf
+      size: 5429354272
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: a96a2ecd70aa1817773f24d311ac119fcce34ea1
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q3_K_L.gguf
+      size: 6929565984
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 9cfca71174eefafaa4b0c35e2e83734e940d0d7d
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q3_K_M.gguf
+      size: 6337775904
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: ac9e39810444a84d80f1072246c1163a4c27d32f
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q3_K_S.gguf
+      size: 5658986784
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 6499cceb90e7092823248b1c336f64533d4b7a9a
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q4_0.gguf
+      size: 7365841856
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 25cf9b2aebbb92891f1a09ad0cd44ce734d38617
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q4_K_M.gguf
+      size: 7865963456
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 84397437472fb4766229f43598545b1a16c15417
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q4_K_S.gguf
+      size: 7414338496
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 6f87a20b5aace7547770cc71ebb9a2227c283f5a
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q5_0.gguf
+      size: 8972293696
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: b7d2080ccb047e48bb496931bffc56ac7241cf09
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q5_K_M.gguf
+      size: 9229932096
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: c56ba64a8b325ad489ae5d1e105e079bc8985b41
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q5_K_S.gguf
+      size: 8972293696
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: 4ba7167c8628627b531efb81763bf430b5964747
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q6_K.gguf
+      size: 10679148800
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/law-LLM-13B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "2048"
+    - --batch-size
+    - "8192"
+    - --n-gpu-layers
+    - "43"
+    - --parallel
+    - "4"
+    - --mlock
+    - --numa
+    - --cont-batching
+    artifacts:
+    - id: b1dba9bcefbc9cc20568d156528308ee68a94661
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/law-LLM-13B-GGUF/resolve/main/law-llm-13b.Q8_0.gguf
+      size: 13831330432
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 2048
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] <<SYS>>\n{system_message}\n<</SYS>>\n{prompt} [/INST]\n"

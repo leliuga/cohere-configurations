@@ -43,6 +43,18 @@ Total 153,013 samples.
 - garage-bAInd/Open-Platypus: 100%, 24,926 samples.
 - WizardLM/WizardLM_evol_instruct_V2_196k: Coding coversation part. 30,185 samples
 
+## How to Prompt the Model
+This model accepts the Alpaca instruction format.
+
+For example:
+```
+You are an intelligent programming assistant.
+
+### Instruction:
+Implement a linked list in C++
+
+### Response:
+```
 
 
 

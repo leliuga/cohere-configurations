@@ -8,6 +8,8 @@ datasets:
 
 [Meet Samantha](https://erichartford.com/meet-samantha)
 
+Join Our Discord! https://discord.gg/vT3sktQ3zb
+
 This model is trained on Llama-2 and is subject to the Llama-2 license, which permits for commercial and non-commercial use within limits
 
 Samantha has been trained in philosophy, psychology, and personal relationships.
