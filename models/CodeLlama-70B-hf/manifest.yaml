@@ -1,0 +1,199 @@
+id: CodeLlama-70B-hf
+parent_id: codellama/CodeLlama-70b-hf
+name: CodeLlama 70B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Code Llama
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama-2
+- text-generation
+- code
+- arxiv:2308.12950
+- base_model:codellama/CodeLlama-70b-hf
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32016
+  context_size: 16384
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 0c141bb2d557262b75e15c7c1985d22d7db2b51c
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q2_K.gguf
+      size: 25462587904
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 0652138d93b50169fe9bdcd8ca75bafa91125ebd
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q3_K_L.gguf
+      size: 36148000256
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 6f11993c4129bd1cec3f00f5325a798666295807
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q3_K_M.gguf
+      size: 33274902016
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 5c8c4a32eea91eb8c33582805db2db7a34961149
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q3_K_S.gguf
+      size: 29919458816
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 1077783787d2987346349b7fb8738a6deb5badab
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q4_0.gguf
+      size: 38872431104
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 5d0529a0868cc835446c8b66743ff13429036553
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q4_K_M.gguf
+      size: 41423092224
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 90973b3b19a998da4830868818ea30f66c6a8c24
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q4_K_S.gguf
+      size: 39249918464
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 3233edc7e5b20e7de4d1fb879bfcd44cebcddf41
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q5_0.gguf
+      size: 47461595648
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 099ab1e2cabc25fd171af4c0d03682b6d593d162
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q5_K_M.gguf
+      size: 48753965568
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CodeLlama-70B-hf/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: c9e0b8292a6d514d5143360efc0a48a912606de3
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CodeLlama-70B-hf-GGUF/resolve/main/codellama-70b-hf.Q5_K_S.gguf
+      size: 47461595648
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

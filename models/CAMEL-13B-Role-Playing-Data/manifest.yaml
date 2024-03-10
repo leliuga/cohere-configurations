@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 50605e1937b3f07d5aaa0b301a69ef369641f8db
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3e3069f833e4346be0e544b65c5d2319e3964fef
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7ee14c6b12f639d5e70ad85cfa5607b49775582d
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8581d1b945a9b9d15a4a2820526539d0c65dba93
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7677dce14d310dd62c6271fce8abce4fa87e2811
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 844cbc76519d165af84a2303ed7218a22be9539d
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 968a0f01630fa61f35b2da44f56ff1184cf04444
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 61255f4c7231f1523f023172c31012a28c487cb0
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3aa8d46befadf018b4cb550ccd7c2b2db14e6429
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a92f15cec35751e866e4c9406b44eff8eb977e69
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ba2548c9f596693a1fd2a41d8f0bace16de5275a
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/CAMEL-13B-Role-Playing-Data/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 924be76efcebc5e9899a837492a6037c08aa6b48
       name: Q8_0.gguf

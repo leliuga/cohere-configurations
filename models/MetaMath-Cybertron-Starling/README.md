@@ -8,6 +8,9 @@ pipeline_tag: text-generation
 tags:
 - Math
 - merge
+base_model:
+- Q-bert/MetaMath-Cybertron
+- berkeley-nest/Starling-LM-7B-alpha
 ---
 
 ## MetaMath-Cybertron-Starling

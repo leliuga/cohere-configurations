@@ -10,6 +10,8 @@ tags:
 - code
 inference: false
 ---
+# ARCHIVE NOTICE
+This repository is now significantly outdated. You should use the repository at [sqlcoder-7b-2](https://huggingface.co/defog/sqlcoder-7b-2) instead. It is significantly better and consumes fewer GPU resources.
 
 # Defog SQLCoder
 Defog's SQLCoder is a state-of-the-art LLM for converting natural language questions to SQL queries.

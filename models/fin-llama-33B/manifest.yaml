@@ -28,19 +28,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/fin-llama-33B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 41239931ea71dd8f232b295dd42c3f1f10b9760e
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/fin-llama-33B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a7b2d6e7f82536745b9a62d1810ea9ea180ab483
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/fin-llama-33B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4559f01736a9eb158b5dd7df854bd05dd8baced2
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/fin-llama-33B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f48f5d65011c4f28be366278629485aa11be87fa
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/fin-llama-33B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb2f9d12a464170155df1bd127163c4b0522a7de
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/fin-llama-33B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7e17c764222a4b8da0d32bac9f3acdb5d0a30953
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/fin-llama-33B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d3fd960dfbc6361e03dd6a5e2a160dd348924745
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/fin-llama-33B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fa343d4737a892dd28627b93ee4bf1ac00ef14f1
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/fin-llama-33B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 406e301911ef2328a6289952b8cd53c9542a8fc4
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/fin-llama-33B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2f32005bdae8be8d1a96a7502c651e2dae487871
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/fin-llama-33B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a871f8ddc9efe5427575b3f7efe54fcf59126f12
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/fin-llama-33B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 36be661c57d53c86c072502ea5e9fbc940c46a3a
       name: Q8_0.gguf

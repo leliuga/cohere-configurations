@@ -31,19 +31,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -53,15 +40,8 @@ variants:
     - models/zephyr-7B-beta/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 054c41ea4b2a451c349062316a1d49cecec7ef85
       name: Q2_K.gguf
@@ -75,15 +55,8 @@ variants:
     - models/zephyr-7B-beta/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b23beef8a3aa2f90fabd4c75c41a916a4bdcb6fd
       name: Q3_K_L.gguf
@@ -97,15 +70,8 @@ variants:
     - models/zephyr-7B-beta/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d56b2fcb37a306fba91271505d73c109618c9e2b
       name: Q3_K_M.gguf
@@ -119,15 +85,8 @@ variants:
     - models/zephyr-7B-beta/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 331debc9d39d1cb98bd0468e08a1a08fd6c79336
       name: Q3_K_S.gguf
@@ -141,15 +100,8 @@ variants:
     - models/zephyr-7B-beta/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5e50bb16fe8c955ed0fa53f9b07af51ffd13d21d
       name: Q4_0.gguf
@@ -163,15 +115,8 @@ variants:
     - models/zephyr-7B-beta/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6ffe97deaa4026c3783024db0f24dd95488a4fa5
       name: Q4_K_M.gguf
@@ -185,15 +130,8 @@ variants:
     - models/zephyr-7B-beta/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e1735b334b510959142e2355151a2434f5b7b625
       name: Q4_K_S.gguf
@@ -207,15 +145,8 @@ variants:
     - models/zephyr-7B-beta/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71e856cacc7ee2dad1632743324376e4860d138e
       name: Q5_0.gguf
@@ -229,15 +160,8 @@ variants:
     - models/zephyr-7B-beta/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f36b6f34dbca06973bdc8673b53591f42541cef5
       name: Q5_K_M.gguf
@@ -251,15 +175,8 @@ variants:
     - models/zephyr-7B-beta/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 80c973cc89f197567b75c05deaaba917bfe5b062
       name: Q5_K_S.gguf
@@ -273,15 +190,8 @@ variants:
     - models/zephyr-7B-beta/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 035d5b1f04e52e1bdb7e597ccacfc5873142f103
       name: Q6_K.gguf
@@ -295,15 +205,8 @@ variants:
     - models/zephyr-7B-beta/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8dc7fc544d0d7262bf20f859e4e3717e6ef3bf08
       name: Q8_0.gguf

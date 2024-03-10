@@ -58,6 +58,8 @@ Bot reply
 
 ## Evaluation
 
+(This is not very scientific, so bear with me.)
+
 I made a quick experiment where I asked a set of 3 Python and 3 Javascript questions (real world, difficult questions with nuance) to the following models:
 
 1) This one
@@ -81,24 +83,7 @@ The resulting cumulative scores were:
 
 CodeBooga-34B-v0.1 performed very well, while its variant performed poorly, so I uploaded the former but not the latter.
 
-## Recommended settings
-
-I recommend the [Divine Intellect](https://github.com/oobabooga/text-generation-webui/blob/ae8cd449ae3e0236ecb3775892bb1eea23f9ed68/presets/Divine%20Intellect.yaml) preset for instruction-following models like this, as per the [Preset Arena experiment results](https://github.com/oobabooga/oobabooga.github.io/blob/main/arena/results.md):
-
-```yaml
-temperature: 1.31
-top_p: 0.14
-repetition_penalty: 1.17
-top_k: 49
-```
-
 ## Quantized versions
-
-### EXL2
-
-A 4.250b EXL2 version of the model can be found here: 
-
-https://huggingface.co/oobabooga/CodeBooga-34B-v0.1-EXL2-4.250b
 
 ### GGUF
 

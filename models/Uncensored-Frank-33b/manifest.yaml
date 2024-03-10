@@ -26,19 +26,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Uncensored-Frank-33b/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 74a1e2a3d5656b3c1a0fbe904784dc3c97350a50
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Uncensored-Frank-33b/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 21380ee2ac5798bbba22d9a69ec750188fc81d19
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Uncensored-Frank-33b/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 86e65adc9b84541470ea55aa620dd2ca0f0bba22
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Uncensored-Frank-33b/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 99d1841f0a9e2b1d514aa8258a594ce8269e8ea5
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Uncensored-Frank-33b/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6da98578bf2378e5b911a7f1d5b9694b16946ddc
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Uncensored-Frank-33b/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: eb8db62461746aeb0338fbb4728b6a89ccd8c23a
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Uncensored-Frank-33b/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ffe09a60bd7ea81efeedc8555de5c867e9fe583f
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Uncensored-Frank-33b/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ad7829d12fe55aa363d61c104a2de546b77ba920
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Uncensored-Frank-33b/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ca830df263f53a88035135ccbd859188e6359052
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Uncensored-Frank-33b/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5f5575e382a0d0baca6f6ffdcbb5ada9ceeb34fc
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Uncensored-Frank-33b/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0fa1ed3cd5e6a6112527440346aa41b14a83c424
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Uncensored-Frank-33b/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7838815a4dcc4f37e20a7b01e9a1ee68b935bd45
       name: Q8_0.gguf

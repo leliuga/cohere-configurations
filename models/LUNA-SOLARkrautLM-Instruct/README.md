@@ -1,10 +1,9 @@
 ---
-license: cc-by-nc-4.0
 language:
 - en
 - de
+license: cc-by-nc-4.0
 library_name: transformers
-pipeline_tag: text-generation
 tags:
 - finetune
 - dpo
@@ -13,6 +12,110 @@ tags:
 - german
 datasets:
 - argilla/distilabel-math-preference-dpo
+pipeline_tag: text-generation
+model-index:
+- name: LUNA-SOLARkrautLM-Instruct
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 71.16
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/LUNA-SOLARkrautLM-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 88.28
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/LUNA-SOLARkrautLM-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 66.11
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/LUNA-SOLARkrautLM-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 73.37
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/LUNA-SOLARkrautLM-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 82.95
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/LUNA-SOLARkrautLM-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 60.88
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/LUNA-SOLARkrautLM-Instruct
+      name: Open LLM Leaderboard
 ---
 
 ![Juanako.AI & SauerkrautLM Productions](https://vago-solutions.de/wp-content/uploads/2023/12/sauerkrautlm-solar.png "LUNA-SOLARkrautLM-Instruct")
@@ -270,3 +373,17 @@ We are also keenly seeking support and investment for our startup, [VAGO Solutio
 Big Hug to [VAGO Solutions](https://huggingface.co/VAGOsolutions), we merely used our UNA transformers library on their code and dataset, nothing else. This won't be possible without them, thanks!
 
 Many thanks to [argilla](https://huggingface.co/datasets/argilla) and [Huggingface](https://huggingface.co) for providing such valuable datasets to the Open-Source community. And of course a big thanks to [upstage](https://huggingface.co/upstage) for providing the open source community with their latest technology!
+
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_fblgit__LUNA-SOLARkrautLM-Instruct)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |73.79|
+|AI2 Reasoning Challenge (25-Shot)|71.16|
+|HellaSwag (10-Shot)              |88.28|
+|MMLU (5-Shot)                    |66.11|
+|TruthfulQA (0-shot)              |73.37|
+|Winogrande (5-shot)              |82.95|
+|GSM8k (5-shot)                   |60.88|
+

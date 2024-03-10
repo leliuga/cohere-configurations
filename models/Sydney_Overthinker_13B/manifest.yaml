@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a9d45bd33408429901045fed0030d1032df90e47
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c04df3be31e4c51e4d7339260f6c0637cb292813
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f08c074f341872263aa352c61cc72f9f2784d5cf
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ef5cd75c36aef83ee3075db5fc168dd0f16d2e01
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 708680305e6f779d80e6f945c1ac789314f6b304
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 46d5b3c7b9da15e3f03dc813c8219300337dc12d
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 557be94666676fea9001409e9cc543a2d93e212e
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 132db11634278c9fc5b2dc30e7aad34161f26e32
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ced694fd2675b2754ae0e8b99ea37174011180d4
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 32d9c90e54a0653ca361e1c94d307f98d1b33c63
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 18cb25cf776611d0301910c623f2c307e1c61bf9
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Sydney_Overthinker_13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1499d3ba9a52d2a65da811bd616ad944a90a0294
       name: Q8_0.gguf

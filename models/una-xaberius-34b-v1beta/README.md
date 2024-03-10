@@ -1,16 +1,119 @@
 ---
 license: cc-by-nc-nd-4.0
-datasets:
-- fblgit/tree-of-knowledge
-- garage-bAInd/Open-Platypus
-- allenai/ultrafeedback_binarized_cleaned
-- Open-Orca/OpenOrca
 library_name: transformers
 tags:
 - UNA
 - juanako
 - cybertron
 - xaberius
+datasets:
+- fblgit/tree-of-knowledge
+- garage-bAInd/Open-Platypus
+- allenai/ultrafeedback_binarized_cleaned
+- Open-Orca/OpenOrca
+model-index:
+- name: una-xaberius-34b-v1beta
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 70.39
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-xaberius-34b-v1beta
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 86.77
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-xaberius-34b-v1beta
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 78.15
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-xaberius-34b-v1beta
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 61.45
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-xaberius-34b-v1beta
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 84.93
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-xaberius-34b-v1beta
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 63.38
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-xaberius-34b-v1beta
+      name: Open LLM Leaderboard
 ---
 
 # Model Card for una-xaberius-34b-v1-beta (UNA: Uniform Neural Alignment)
@@ -115,3 +218,16 @@ Answer：
 
 **Thanks to LoneStriker for his ExLLama2 models of high quality that works properly.**
 **Enormous Ku2 to Yi-34b Team for the outstanding model, UNA is only as good as its pre-trained model** THANK YOU!
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_fblgit__una-xaberius-34b-v1beta)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |74.18|
+|AI2 Reasoning Challenge (25-Shot)|70.39|
+|HellaSwag (10-Shot)              |86.77|
+|MMLU (5-Shot)                    |78.15|
+|TruthfulQA (0-shot)              |61.45|
+|Winogrande (5-shot)              |84.93|
+|GSM8k (5-shot)                   |63.38|
+

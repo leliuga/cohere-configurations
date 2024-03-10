@@ -1,5 +1,7 @@
 ---
 license: apache-2.0
+tags:
+- merge
 ---
 Slerp merge of mindy-labs/mindy-7b-v2 with jondurbin/bagel-dpo-7b-v0.1. This model was then slerp merged with rishiraj/CatPPT.
 

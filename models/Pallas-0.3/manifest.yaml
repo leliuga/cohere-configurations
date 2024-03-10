@@ -23,19 +23,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +32,8 @@ variants:
     - models/Pallas-0.3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2e07747fe946e047eb8b591788bf4bd1269cc41
       name: Q2_K.gguf
@@ -67,15 +47,8 @@ variants:
     - models/Pallas-0.3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a428dd124bf35ad0dc5a737cca9a73e10f1ab1fa
       name: Q3_K_L.gguf
@@ -89,15 +62,8 @@ variants:
     - models/Pallas-0.3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 67815874d6682e0497248bb862abf9c69d278f52
       name: Q3_K_M.gguf
@@ -111,15 +77,8 @@ variants:
     - models/Pallas-0.3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5681975b36f012389d7d5e79ad734f46f659660d
       name: Q3_K_S.gguf
@@ -133,15 +92,8 @@ variants:
     - models/Pallas-0.3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e3155aa4c53a8257834d3f2af234b5d40391f3b
       name: Q4_0.gguf
@@ -155,15 +107,8 @@ variants:
     - models/Pallas-0.3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 01b372250a9679e6b6836baa442bf91b89663c91
       name: Q4_K_M.gguf
@@ -177,15 +122,8 @@ variants:
     - models/Pallas-0.3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 38cd20ea15261350171e4fccb76649c5fd3cc274
       name: Q4_K_S.gguf
@@ -199,15 +137,8 @@ variants:
     - models/Pallas-0.3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5e3164f2ac285aa2cbd8e4ca11bb7fd93445c1a0
       name: Q5_0.gguf
@@ -221,15 +152,8 @@ variants:
     - models/Pallas-0.3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 077cd5e5e9c92efd8ccfdefca200f14fd59158c2
       name: Q5_K_M.gguf
@@ -243,15 +167,8 @@ variants:
     - models/Pallas-0.3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 54f8da2bb078b9a1455d27afc01caa7d2d952c45
       name: Q5_K_S.gguf
@@ -265,15 +182,8 @@ variants:
     - models/Pallas-0.3/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb4f335d82f562f2f77e5902196344b6d0511812
       name: Q6_K.gguf
@@ -287,15 +197,8 @@ variants:
     - models/Pallas-0.3/Q8_0/Q8_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c8b2f66640ca34e023c45ac6ae18e27070bb0057
       name: Q8_0.gguf

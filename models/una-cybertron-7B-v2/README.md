@@ -1,15 +1,118 @@
 ---
 license: apache-2.0
-datasets:
-- fblgit/tree-of-knowledge
-- Open-Orca/SlimOrca-Dedup
-- allenai/ultrafeedback_binarized_cleaned
 library_name: transformers
 tags:
 - juanako
 - UNA
 - cybertron
 - fbl
+datasets:
+- fblgit/tree-of-knowledge
+- Open-Orca/SlimOrca-Dedup
+- allenai/ultrafeedback_binarized_cleaned
+model-index:
+- name: una-cybertron-7b-v2-bf16
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 68.26
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-cybertron-7b-v2-bf16
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 85.85
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-cybertron-7b-v2-bf16
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 63.23
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-cybertron-7b-v2-bf16
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 64.63
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-cybertron-7b-v2-bf16
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 80.98
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-cybertron-7b-v2-bf16
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 55.04
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/una-cybertron-7b-v2-bf16
+      name: Open LLM Leaderboard
 ---
 
 # Model Card for una-cybertron-7b-v2-bf16 (UNA: Uniform Neural Alignment)
@@ -105,3 +208,16 @@ Using Exllamav2_HF set alpha=2.5 for 16K Context
 ```
 
 Special thanks to @TheBloke & @bartowski for converting the models and their support to the community. Thank you!
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_fblgit__una-cybertron-7b-v2-bf16)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |69.67|
+|AI2 Reasoning Challenge (25-Shot)|68.26|
+|HellaSwag (10-Shot)              |85.85|
+|MMLU (5-Shot)                    |63.23|
+|TruthfulQA (0-shot)              |64.63|
+|Winogrande (5-shot)              |80.98|
+|GSM8k (5-shot)                   |55.04|
+

@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/MoMo-70B-V1.1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b3cc067b70cefd839e6cc642d9b6e388530c7b4b
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/MoMo-70B-V1.1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 16226895ed3c7fa30713540d3f8c8cc613fde525
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/MoMo-70B-V1.1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fa67bef24d33fa20a04c0387d009185d04746710
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/MoMo-70B-V1.1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2d0df5e7c6676176eada8d237ddf34ac7e369068
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/MoMo-70B-V1.1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df8c6e03e440a19d7695ed8a5786cc0645b230fa
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/MoMo-70B-V1.1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 69d89c982e7dc40729c3326485ac8c1ff5b4806b
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/MoMo-70B-V1.1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ece70b71dcb120c02d94d6589264e00d0e38423e
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/MoMo-70B-V1.1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b2bb203f32edcfc21761f2da2e426db85d09510f
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/MoMo-70B-V1.1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9b7ebe09c361af75e7a5001cf373e43f409b1cd0
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/MoMo-70B-V1.1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 39693328b602f3ef3eefaa8db65dae67264703bc
       name: Q5_K_S.gguf

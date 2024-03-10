@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0b3701ff30dfc615aff99228899e48683f2c498b
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5d0d8ff81c5838ffb865f412de2a092e2af080c
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e94596f5189779b21ccfe56e77aba9016394465a
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 15ab281412e6483d0584d15345fc12028689f0a5
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d0eeb9e72b642b763980ba10a3613278d862f3ea
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bc529dde9c3b287a30729a34784f4b7a44b50885
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0e60182a39a468d22d743d00d91b239bce22e5bf
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9e7f8951d1b3b3f830c4fa726c3c5b28a0f12979
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c9c994ce1bd9877dd805bc81ce43601a61d421a
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8a89dc10188b4169d39cd7c30eb169305efe21c7
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f66ba301dd6d23809c5aa4a6aecdbcb9933d1781
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Synatra-7B-v0.3-base/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 699a1a73d78dd1fdb7ccf02ef7b0a541237bf3dd
       name: Q8_0.gguf

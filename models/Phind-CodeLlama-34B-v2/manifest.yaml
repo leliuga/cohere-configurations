@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 22016
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5313e85ca7eb982776ff5131b1a879225fc2d038
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 291c4af72d13d2ea442be467bd04f14c4a4747cf
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b649126097288ff4e4694db2553782fab25ae3d8
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3401807a378df23d0fe5e2e4924b32efd6d77acf
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 48b02c31b20b6edeb8bf8723214cbd40a9a98a60
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7551ce0688f45a9d9d221c89ee1e2afcf5298c22
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dcefa4902d9d8eff0e06fde8266d7cf4f06ebcd0
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f65e6a2f63aece44a8087123180a1c384062c36c
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 372d835d6c5fef033a15aa0c9045ddc6abdeb6ac
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6cdadb5382fcd106861642213f43e07f58644837
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e3982933bb776ee389bf8b9417476743fd6d04af
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Phind-CodeLlama-34B-v2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 97a5bb67c5237fd8594abcaafa05a4cc21407a1e
       name: Q8_0.gguf

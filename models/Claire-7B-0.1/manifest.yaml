@@ -28,19 +28,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 0
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/Claire-7B-0.1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a15163653375f11eac6c5df028e6bb87fb55a98b
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/Claire-7B-0.1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae84c417ccd30854bdd0d8e163ec390c6d5a4ed1
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/Claire-7B-0.1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a8704a0580b1dcb9617e3c68a5d98b4329887108
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/Claire-7B-0.1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee271d575611bb7cfbb7a831122a9802b76f8d52
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/Claire-7B-0.1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 13ec9bf0157e6e831ca449ef58b1853d64fb0a80
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/Claire-7B-0.1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 026a5869facddc9f06a6e18b345eff1d89377ce3
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/Claire-7B-0.1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7abd8f64556c91f0b97273b594108f453ade63be
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/Claire-7B-0.1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f230fa1e9a6dc760ebe4f3c3817eb77cfd50bbcf
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/Claire-7B-0.1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d2e1cb0a3067dd2d66879b6e1d1c2731c9f77c2b
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/Claire-7B-0.1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8a9e37940733b097be5af5bad68f0038bb4ac654
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/Claire-7B-0.1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a889074e1c8c259daca226956db8903502d10fbc
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/Claire-7B-0.1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "0"
-    - --batch-size
-    - "0"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f7708ec4700f8027685465d0fe769074f7d5a15d
       name: Q8_0.gguf

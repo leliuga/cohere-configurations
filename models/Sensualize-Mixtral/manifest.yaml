@@ -1,0 +1,166 @@
+id: Sensualize-Mixtral
+parent_id: Sao10K/Sensualize-Mixtral-bf16
+name: Sensualize Mixtral
+description: ""
+architecture: mixtral
+licence: cc-by-nc-4.0
+object: model
+owned_by: Saofiq
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- dataset:NobodyExistsOnTheInternet/full120k
+- base_model:Sao10K/Sensualize-Mixtral-bf16
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9805980fe57097719a33019a96724589f56b7ca6
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q2_K.gguf
+      size: 15644034496
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: cbf6ac9eefe79e7d0fa11156243bbd4523e3fe1c
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q3_K_M.gguf
+      size: 20363355584
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 502274e4067387752444ebe4dd12b804d0deb248
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q4_0.gguf
+      size: 26441532864
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 4bfb511942ef37cd5df7f7bf0b3b5d89f418ad8a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q4_K_M.gguf
+      size: 26441532864
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f0fb12dd72c96effbe1ebbf4f55129670ebe6aa0
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q5_0.gguf
+      size: 32229279168
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 0ed136e4fc8b0ccfa0f16964e52b1312c5781581
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q5_K_M.gguf
+      size: 32229279168
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 2b1a21e1b75afc60549680c384e211950d9f0a36
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q6_K.gguf
+      size: 38378759616
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Sensualize-Mixtral/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 96e828eca4a7d029c8cd0e00fa32fc6edeabfe65
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Sensualize-Mixtral-GGUF/resolve/main/sensualize-mixtral.Q8_0.gguf
+      size: 49624262080
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n{system_message}\n\n### Input:\n{prompt}\n\n### Response:\n"

@@ -1,0 +1,165 @@
+id: Open_Gpt4_8x7B
+parent_id: rombodawg/Open_Gpt4_8x7B
+name: Open Gpt4 8X7B
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: rombo dawg
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:rombodawg/Open_Gpt4_8x7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: bf499e2a2549b7e8d38820cb1cb8114266b20951
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q2_K.gguf
+      size: 15644970816
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 1ce4073113014cf414da31da4b089f2285429c43
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q3_K_M.gguf
+      size: 20364291904
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 2872694f3974a568ce1f0e68b359254dabf0513f
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q4_0.gguf
+      size: 26442469184
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 71e26751948f6a2cd72d3104dab652c137032339
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q4_K_M.gguf
+      size: 26442469184
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 293c81d8fa1c885994ae17f50b4ece58be4e440e
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q5_0.gguf
+      size: 32230215488
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 0c7c3b411dd69ee6bbc0341bacd80ac21452a613
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q5_K_M.gguf
+      size: 32230215488
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 169964f0ae3302f0af7cb6a152ac825a35dfddfb
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q6_K.gguf
+      size: 38379695936
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Open_Gpt4_8x7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: af0be4b9176b3817790508ea16ab39d96e7f66fb
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Open_Gpt4_8x7B-GGUF/resolve/main/open_gpt4_8x7b.Q8_0.gguf
+      size: 49625198400
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

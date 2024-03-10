@@ -2,6 +2,11 @@
 license: cc-by-nc-4.0
 language:
 - en
+tags:
+- merge
+base_model:
+- EmbeddedLLM/Mistral-7B-Merge-14-v0
+- janai-hq/trinity-v1
 ---
 
 # Update 2023-12-19

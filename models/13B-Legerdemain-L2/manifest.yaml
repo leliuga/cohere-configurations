@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/13B-Legerdemain-L2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2f44f93282ad3266c1c99e7a8ee8416f1147dce4
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/13B-Legerdemain-L2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b9f5e9798bbf068ed3bff5de507ae235574810f2
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/13B-Legerdemain-L2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9dd9fa5b9e41f2f853937b165206af62fb156867
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/13B-Legerdemain-L2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 971c8cb3da08c1edfc21ca57ab23d4a6e9bbbcf3
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/13B-Legerdemain-L2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 72c8aa155bd6dd7d1fbb9fb41f3cc33cd5fa6e8c
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/13B-Legerdemain-L2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5b66b264df0d8339e74fa6f9006703e8c8d39955
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/13B-Legerdemain-L2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b657a78684af2c9611db6ee86a64a9aca019196c
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/13B-Legerdemain-L2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91ad451a3fb0c98c25fd13509bf6f815375399d0
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/13B-Legerdemain-L2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cd18062958ff0982800198b7a20556b18e26f46d
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/13B-Legerdemain-L2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 72a27fb1c3c0d5ccd8bd42816f19e4704893cab5
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/13B-Legerdemain-L2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e62eb59195e0d7575e84d32b2317ee96250d75a
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/13B-Legerdemain-L2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5c4714a9bc462213b958b23aa08c4521323506aa
       name: Q8_0.gguf

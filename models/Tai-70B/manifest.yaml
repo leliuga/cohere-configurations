@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Tai-70B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3a1a6b7443893276e4ee744dc691dfbc0a1e15c1
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Tai-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0b07d5f07ac27924a1e8fdc6b8ae21656cd39b39
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Tai-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2b4dbfe948e05552469bfd09957b0ee4967fef2
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Tai-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4a4e51f7fb1586235c5519128d537a84cf6902d
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Tai-70B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 69a41266f77124e40472964f0ea28826ebed9992
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Tai-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a0ceb01cec3aff318b604dbc94cfd46ecb9325f
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Tai-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4d572fee7e86e2628d428c8dd277c6543cbbadd2
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Tai-70B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a9df68813a838bc7f3bd58934d91ccbac87ceca6
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Tai-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a344210e66a66d7f98c2819a46c7148458faff6
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Tai-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b54b9699c070439e2ebc154e8c6fa5c43f876792
       name: Q5_K_S.gguf

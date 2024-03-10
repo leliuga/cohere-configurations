@@ -1,11 +1,13 @@
 ---
-license: apache-2.0
 language:
 - fr
 - it
 - de
 - es
 - en
+license: apache-2.0
+tags:
+- moe
 inference: false
 ---
 # Model Card for Mixtral-Fusion-4x7B-Instruct-v0.1

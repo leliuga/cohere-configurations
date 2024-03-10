@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5ecc74aff0529ce32856904a6337bd01f8497dd7
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5e43782e29cf8bffefea4019a2551ac0a638f83a
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a7308a3d1b33aad5462a8c9cdd8b2d8fb468b1d
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c6ac1d91d0b5e3385225f2c045c4e37a4f9ef9b3
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fd8ddd572292da99ba63a8e3793b9f80f30b4a4
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c25c9b1b758f082d409cff28c8169e29f31c89dc
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 53bab929234ead35fcf98cd0a182e9dee1b0f30a
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c513ef67fbbe8fd991c0fee3fa99a4e728a13d45
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a857f6ecf9046de2308c89761d1e3b115e74c8e6
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ef03213845f7a3f0bf94a700a2848508d08024f1
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c97f3c16472b9b8bbb34a2ac42fd60e0239afc07
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/PlatYi-34B-Llama-Q-v3/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 125db6ad5cc0afc6680698c7e8aee12093219cfe
       name: Q8_0.gguf

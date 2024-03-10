@@ -4,6 +4,7 @@ base_model: Rijgersberg/GEITje-7B
 tags:
 - generated_from_trainer
 - GEITje
+- conversational
 model-index:
 - name: GEITje-7B-chat
   results: []
@@ -12,7 +13,7 @@ datasets:
 - Rijgersberg/ultrachat_10k_nl
 language:
 - nl
-pipeline_tag: conversational
+pipeline_tag: text-generation
 ---
 
 # GEITje-7B-chat

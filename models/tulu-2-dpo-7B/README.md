@@ -32,7 +32,7 @@ For more details, read the paper: [Camels in a Changing Climate: Enhancing LM Ad
 
 ### Model Sources
 
-- **Repository:** https://github.com/allenai/https://github.com/allenai/open-instruct
+- **Repository:** [https://github.com/allenai/open-instruct](https://github.com/allenai/open-instruct)
 - **DPO Recipe:** The DPO recipe is from the [Zephyr Beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) model
 - **Model Family:** Other models and the dataset are found in the [Tulu V2 collection](https://huggingface.co/collections/allenai/tulu-v2-suite-6551b56e743e6349aab45101).
 

@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/opus-v0-70B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9846dd1ddeca0e8d369b892f4711103b25206839
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/opus-v0-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b51284bd263b188d8052c8da8bef693e6299170c
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/opus-v0-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea92f648ff74ff2218dcf2dde7ca2e3b10d20b2d
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/opus-v0-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e96f16a7f7ffa68968a27750c54e2a5ab6a74e82
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/opus-v0-70B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a280d7a0e3322afe96d3dc7ada30894556b2436c
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/opus-v0-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 218b1d41458f9e2518c5a20c6e24b9f945f2b2b2
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/opus-v0-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 85fb2024cd4d28b5115788bafa5c9070e7df05fb
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/opus-v0-70B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 303309e8c22e2e66662747a7dde7d8d2247bb0fe
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/opus-v0-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b24715cb6d7cf3221a7ceacdc651263778a44e0a
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/opus-v0-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4e73df460e8843c42abe1928006eda173c4e2e1
       name: Q5_K_S.gguf

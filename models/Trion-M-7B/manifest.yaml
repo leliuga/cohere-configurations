@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Trion-M-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84d5d4bb1ade5619666d97fc94cf9c631becd279
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Trion-M-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: abfc77635462c4d3547e0312c1ff1f2cb68ea3c4
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Trion-M-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a591fe3e916966df24766ab1f714edd92f5ccf32
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Trion-M-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a021300ab34de8d023119eb9ca19e48e564882e0
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Trion-M-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9e63920e749375651b5490d253c5960fe84d3073
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Trion-M-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52cfa26eef2a394df75dc95b22e916faea9d7677
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Trion-M-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a37b00cf62f8050ba024cac4d60d77c0a8f3e98e
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Trion-M-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fb4aa5293173dc13fb56f3f1a62d96281d3e570
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Trion-M-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 141b9cd87d7f491ff33fca477625fd545225a3b4
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Trion-M-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 898271cf1fa1a825f098a848e6ee2df63a530bf6
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Trion-M-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd16202b9a5b162944baa94964d03857ef759b41
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Trion-M-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20cfdefc5127039478a9f1ec9614612255479c20
       name: Q8_0.gguf

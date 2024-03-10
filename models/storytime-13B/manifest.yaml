@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/storytime-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 408c6b155094461be0e38a0e6949c7ee58d9ee1d
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/storytime-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d923c2fde752cbd3dfd9aef95751e66ff135358d
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/storytime-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e6019b732f99a147506461e0c132bf9921a51932
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/storytime-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 13b04318632ccf2840e9d51bf6db7da42711da4f
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/storytime-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dd4ba42429da9687faf820a43974626ea9103beb
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/storytime-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f54e1fd2938015f09927c17d4494c4795a1e4a6f
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/storytime-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 654a635eff9c0530a1587fb827c0d7aaa983eec7
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/storytime-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6574cb5e663c015f37d64c6de7e7f3e51561ee66
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/storytime-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd4202b1fd8c82e32b21cfec31f711e36494ae7d
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/storytime-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f116b55a19dfaa8ee618abcda23c03ef3fe750d0
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/storytime-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd47b06d6e3392bae32d64c416648eaaca284861
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/storytime-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8fff0b1c590773acc80f9c47a99288110a0644fa
       name: Q8_0.gguf

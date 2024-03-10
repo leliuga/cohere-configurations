@@ -1,4 +1,9 @@
 ---
+base_model:
+  - teknium/OpenHermes-2.5-Mistral-7B
+  - Intel/neural-chat-7b-v3-3
+  - meta-math/MetaMath-Mistral-7B
+  - openchat/openchat-3.5-1210
 license: apache-2.0
 ---
 

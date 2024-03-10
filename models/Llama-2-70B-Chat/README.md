@@ -12,7 +12,6 @@ extra_gated_fields:
 language:
 - en
 pipeline_tag: text-generation
-inference: false
 tags:
 - facebook
 - meta

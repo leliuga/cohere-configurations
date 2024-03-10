@@ -28,19 +28,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/Silicon-Maid-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1fee3578c5440607ac6dcd30f6dff71f5ba5c417
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/Silicon-Maid-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 79a5639bd31c0d9564807de70c5a8c0b9958cd8e
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/Silicon-Maid-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: be923c01e32f09795db166a3d0d662a6667d6a2a
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/Silicon-Maid-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 227dc10de86c76902b05012295c7b0dea2ec7cf7
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/Silicon-Maid-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 29dc1ce4132a73f87e378616d71c099dc84b2c64
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/Silicon-Maid-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8bba7d51fa0c4a3e4f15051048e61701bc0e2022
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/Silicon-Maid-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4fe99ac242929cccc3678bbaff4b0bea208364ee
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/Silicon-Maid-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a76757628a66aa64951987244dc4fde27c66d868
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/Silicon-Maid-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 99de2c64e460b301e9a7829b2c7dce14873a63cf
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/Silicon-Maid-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0c1cb1cd05b2f9be76660d8f846812c4c98bba94
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/Silicon-Maid-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f51c3bde2b741228a3cdfc336bf21feea2044444
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/Silicon-Maid-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0c547d678d42ff0345cd612f66557ed20c207b4b
       name: Q8_0.gguf

@@ -22,6 +22,7 @@ tags:
 - en
 - base_model:NousResearch/Nous-Hermes-2-SOLAR-10.7B
 - license:apache-2.0
+- has_space
 - region:us
 config:
   vocab_size: 32002
@@ -31,19 +32,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -53,15 +41,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3bf031730dfd31cf40ef65cf0bf37c29c9c21dfd
       name: Q2_K.gguf
@@ -75,15 +56,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b92ed9a7e21f1ce77759855ca30d3904225eabed
       name: Q3_K_L.gguf
@@ -97,15 +71,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ffb6821c6d60c292f0d63222bb8d4dd9e8d3bc9a
       name: Q3_K_M.gguf
@@ -119,15 +86,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5a73a41375e0a37d11581664bca66676eb91017
       name: Q3_K_S.gguf
@@ -141,15 +101,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3a168b6ade35faea70e131b840465f84f3288659
       name: Q4_0.gguf
@@ -163,15 +116,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7af8e6a0f824b27f1ccae543132ccbabdea37e77
       name: Q4_K_M.gguf
@@ -185,15 +131,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ba99f89a44d4538c081e43a2a36e7bcaaaf5623a
       name: Q4_K_S.gguf
@@ -207,15 +146,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 602c0072a22efa708674a5b48c535054984e2ca2
       name: Q5_0.gguf
@@ -229,15 +161,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 86258889a9108234267c9a8412b44091a70849f8
       name: Q5_K_M.gguf
@@ -251,15 +176,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6a099da966299e1d2ece33a9f990b6af530cdd5
       name: Q5_K_S.gguf
@@ -273,15 +191,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 13b9985b0e024d78b55b34e77ee4ee41628f79a1
       name: Q6_K.gguf
@@ -295,15 +206,8 @@ variants:
     - models/Nous-Hermes-2-SOLAR-10.7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fe72ed4c1464d221b19e259c9c951a212f53ca77
       name: Q8_0.gguf

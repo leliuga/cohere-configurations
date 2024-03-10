@@ -1,14 +1,118 @@
 ---
-license: cc-by-nc-4.0
-datasets:
-- berkeley-nest/Nectar
 language:
 - en
+license: cc-by-nc-4.0
 library_name: transformers
 tags:
 - reward model
 - RLHF
 - RLAIF
+- moe
+datasets:
+- berkeley-nest/Nectar
+model-index:
+- name: Starling-LM-alpha-8x7B-MoE
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 63.65
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=perlthoughts/Starling-LM-alpha-8x7B-MoE
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 84.9
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=perlthoughts/Starling-LM-alpha-8x7B-MoE
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 64.68
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=perlthoughts/Starling-LM-alpha-8x7B-MoE
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 46.39
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=perlthoughts/Starling-LM-alpha-8x7B-MoE
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 80.58
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=perlthoughts/Starling-LM-alpha-8x7B-MoE
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 62.47
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=perlthoughts/Starling-LM-alpha-8x7B-MoE
+      name: Open LLM Leaderboard
 ---
 
 # Starling-LM-alpha-8x7B-MoE
@@ -143,3 +247,17 @@ We would like to thank Wei-Lin Chiang from Berkeley for detailed feedback of the
     year = {2023}
 }
 ```
+
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_perlthoughts__Starling-LM-alpha-8x7B-MoE)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |67.11|
+|AI2 Reasoning Challenge (25-Shot)|63.65|
+|HellaSwag (10-Shot)              |84.90|
+|MMLU (5-Shot)                    |64.68|
+|TruthfulQA (0-shot)              |46.39|
+|Winogrande (5-shot)              |80.58|
+|GSM8k (5-shot)                   |62.47|
+

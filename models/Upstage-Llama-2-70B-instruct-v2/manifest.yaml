@@ -30,19 +30,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -52,15 +39,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 78d140fcdf0bc439bf240703ff1617cabd0ec90c
       name: Q2_K.gguf
@@ -74,15 +54,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0e03251f38312b2f2662fe0aa39fa33511f553c1
       name: Q3_K_L.gguf
@@ -96,15 +69,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 60eb11d80483a7b413354a56cb7e298dbcb25601
       name: Q3_K_M.gguf
@@ -118,15 +84,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1b71cf1e39c435385382a73397019efa8147e119
       name: Q3_K_S.gguf
@@ -140,15 +99,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 06f563667243b99eb775f0e8f0d12d4921547220
       name: Q4_0.gguf
@@ -162,15 +114,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4d4eb67d1c789e2636acb7c26f155b0dcc4ee04
       name: Q4_K_M.gguf
@@ -184,15 +129,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9539b14c23cc0cdcf7c2fe846bc6b9043bce7301
       name: Q4_K_S.gguf
@@ -206,15 +144,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 16ecac8166add3c2628bad90d4caabb6b711b165
       name: Q5_0.gguf
@@ -228,15 +159,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6aa2d4e5814dcf2b60abc741b3b335c01ed2268f
       name: Q5_K_M.gguf
@@ -250,15 +174,8 @@ variants:
     - models/Upstage-Llama-2-70B-instruct-v2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e4816e1bb755de890ff12f8b6e71c32a94ef70e9
       name: Q5_K_S.gguf

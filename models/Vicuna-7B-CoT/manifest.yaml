@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Vicuna-7B-CoT/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 14e9337725fdda0c829e257043c4dacf9bb54664
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Vicuna-7B-CoT/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 13a77a2476efe2cb0dd692a66bd49e31ac686b8e
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Vicuna-7B-CoT/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f40399c60bae7d46b723cfb68e1d2eb5b4ceed6b
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Vicuna-7B-CoT/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7249465dbc65c9d1d399d006a82000c4e6e1f158
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Vicuna-7B-CoT/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7920573bb955885725b179818f7833e48fd6d79d
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Vicuna-7B-CoT/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 674b1ab852a0d411470725b0e4d8bab9e7f22522
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Vicuna-7B-CoT/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 90e8e322b224c8df8f930b7da62787fdd449c59a
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Vicuna-7B-CoT/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b916861fdfc9092a00a3d741c772fa1a85a08b2a
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Vicuna-7B-CoT/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d067897a64a6df81a5ba8d66b385cd3bf90240e5
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Vicuna-7B-CoT/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 98d6ce2004d6024678febce39c0506f6cf29d6f7
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Vicuna-7B-CoT/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 82b31691a261fb8d10cd05712e16514b9478b3e2
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Vicuna-7B-CoT/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a18aa110afe26f2c0ef41ff5e4ae779aaad8080
       name: Q8_0.gguf

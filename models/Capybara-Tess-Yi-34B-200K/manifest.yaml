@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e9adae869ba6bb1956c9db2eab05af9133adbc06
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a44dcaa9c78c64c4cee986776a6154edc526840
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c6a7f5e36d05179e8f8d67b2a5db307d90633221
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b1064d3d019ec420b7ae0e09897f8c59d70eb632
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 51521ae01049d3081ccc5ef839b1696fdc2e59bd
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 96aa101f35bfff3d8c4056556e27c28d63bee909
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 846940d238ffdf6b4e8e879d4ed36c38b0eb2b7d
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20c7a82818fbad88bd462b7f15921cf3781bba27
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91ee34362b9828992bb6c3e08e4846784d253081
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c872434a1fd18a696fd3305d17aee11b9e60e33d
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a1be9fe6bbf15e7539ada295c2da24b536b24cf1
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Capybara-Tess-Yi-34B-200K/Q8_0/Q8_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 74c4ff0612c04e2009dc14ad211f7b5e36e56f87
       name: Q8_0.gguf

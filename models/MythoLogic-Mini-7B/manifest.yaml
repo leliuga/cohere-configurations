@@ -25,19 +25,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2b0caa85295d200ad207ad93b4d2e9d3fe0ca7fb
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e183f7c03986f9aba298f5f71c37ec2a13934234
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b8e9eefa5b91afda900025260949aa4a220b7c7f
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 971c2148c683abc3eb0fe7574fa95a2707254991
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b721115141bf911f06789f9773cd744b48306a72
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 716721aa20d88c5d45f3e19461f9b3a7acd8c9d9
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a42bf089e8f8991cd54fdce5c98bd16a720258c
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5978fd7216a3004d92366ca0804ea3da916aeaf
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f67e50d133d12961350ad2e957cb7b113879092e
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7aa7dba419ec9fd95ab789a115593704682abce6
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 870c90111ccfb30b8b0af3fa2d2ad61e09ddcb94
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/MythoLogic-Mini-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 696c10a2c73409668ef5cedcf18db7a197aae2ed
       name: Q8_0.gguf

@@ -39,6 +39,7 @@ tags:
 - dataset:teknium/openhermes
 - base_model:CausalLM/7B
 - license:wtfpl
+- has_space
 - text-generation-inference
 - region:us
 config:
@@ -49,19 +50,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -71,15 +59,8 @@ variants:
     - models/CausalLM-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 55e42bf08e50ff9c60c1c97793be5ae5d403f9ae
       name: Q2_K.gguf
@@ -93,15 +74,8 @@ variants:
     - models/CausalLM-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5345196467a18b6430cf6f996627e0191b592d01
       name: Q3_K_L.gguf
@@ -115,15 +89,8 @@ variants:
     - models/CausalLM-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b48dede96901da072d59adbc331c14fddf2c2d3e
       name: Q3_K_M.gguf
@@ -137,15 +104,8 @@ variants:
     - models/CausalLM-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 46f0941c6987622beaff05b506fa339f175794e0
       name: Q3_K_S.gguf
@@ -159,15 +119,8 @@ variants:
     - models/CausalLM-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2568d3e2314248357a3f3f4f15bd18635f392d79
       name: Q4_0.gguf
@@ -181,15 +134,8 @@ variants:
     - models/CausalLM-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 41ffec20e05c508095847ab2d007ceb4e957a876
       name: Q4_K_M.gguf
@@ -203,15 +149,8 @@ variants:
     - models/CausalLM-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9f5176ce191c9d1e33d91af407b369d6026f678b
       name: Q4_K_S.gguf
@@ -225,15 +164,8 @@ variants:
     - models/CausalLM-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1fc2b6976e19c2a94a3f2a53b6b1fbd5173d1b12
       name: Q5_0.gguf
@@ -247,15 +179,8 @@ variants:
     - models/CausalLM-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0851509c6f664b4ee207d5b44ef912febded4f7d
       name: Q5_K_M.gguf
@@ -269,15 +194,8 @@ variants:
     - models/CausalLM-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 22d73821cc47f5537b39968d72533e58e036ee68
       name: Q5_K_S.gguf
@@ -291,15 +209,8 @@ variants:
     - models/CausalLM-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 902204a3426e63466776e3563c4f82f4c62a5ea6
       name: Q6_K.gguf
@@ -313,15 +224,8 @@ variants:
     - models/CausalLM-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6198cf9cf413845832a9f6c5a1ecd8047b20d497
       name: Q8_0.gguf

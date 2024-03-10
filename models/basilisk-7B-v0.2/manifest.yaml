@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/basilisk-7B-v0.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 09e7f120f7a1fe0f89efc231fd4c0b0f7dbf2558
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/basilisk-7B-v0.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ebc58d4dc4072b71193a6765a7e7e70b24b05d49
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/basilisk-7B-v0.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 921606da417a2e1370d19e3cab4b6dcc68d2087c
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/basilisk-7B-v0.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 31ee8b1d20fb342e133bcee94b602d48d531f5b2
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/basilisk-7B-v0.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a5efcce7df676c9ed5eae97ca63abfb3ff32e0b3
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/basilisk-7B-v0.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f6f88d23227ff9bef416970fa821e346b2cc956c
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/basilisk-7B-v0.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 899fe0ac307787d7f59e60af67dd2cc24f498551
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/basilisk-7B-v0.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3d221b8aca9f82b3b943fc8df90adf881bf9c6c2
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/basilisk-7B-v0.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 70ae2a79c8d68d2ed8859576bc3c87ec3faf3471
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/basilisk-7B-v0.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5a014aa04a368b6fc78c77a64df96b50346cca14
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/basilisk-7B-v0.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 95d22368eaf66e300f31e27014d0f26ec7562908
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/basilisk-7B-v0.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 274d56573ca2d39fb3cb526c70a1aeb8be7de094
       name: Q8_0.gguf

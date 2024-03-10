@@ -12,6 +12,8 @@ pipeline_tag: text-generation
 ---
 # **BLOSSOM-v3-baichuan2-7b**
 
+[💻Github](https://github.com/Azure99/BlossomLM) • [🚀Blossom Chat Demo](https://blossom-chat.com/)
+
 ### 介绍
 
 Blossom是一个对话式语言模型，基于Baichuan2-7B-Base预训练模型，在Blossom Orca/Wizard/Chat/Math混合数据集上进行指令精调得来。Blossom拥有强大的通用能力及上下文理解能力，此外，训练使用的高质量中英文数据集也进行了开源。

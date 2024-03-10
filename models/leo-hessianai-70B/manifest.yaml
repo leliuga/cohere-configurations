@@ -30,19 +30,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -52,15 +39,8 @@ variants:
     - models/leo-hessianai-70B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52015b9ce4da5fb2f51f8fa128dad3dcca3d4c69
       name: Q2_K.gguf
@@ -74,15 +54,8 @@ variants:
     - models/leo-hessianai-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aebf0461df7c52f6448f9bc306aa89d103b2029e
       name: Q3_K_L.gguf
@@ -96,15 +69,8 @@ variants:
     - models/leo-hessianai-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e8f28540de955f2cc7bb058acfcacba0a57aec22
       name: Q3_K_M.gguf
@@ -118,15 +84,8 @@ variants:
     - models/leo-hessianai-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ba976dceccaf8548e4bcceac896b356b223e10d
       name: Q3_K_S.gguf
@@ -140,15 +99,8 @@ variants:
     - models/leo-hessianai-70B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3992ccc336318cf53de783625b8ec7d642f6fed5
       name: Q4_0.gguf
@@ -162,15 +114,8 @@ variants:
     - models/leo-hessianai-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e75336c15edda973772d6c2f736e074f2d64db2b
       name: Q4_K_M.gguf
@@ -184,15 +129,8 @@ variants:
     - models/leo-hessianai-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4f7901684c7a3ee07340fce11e1d8f76360ce4f2
       name: Q4_K_S.gguf
@@ -206,15 +144,8 @@ variants:
     - models/leo-hessianai-70B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6277fd60d8cc233b30b7368ebbafc01231b99c49
       name: Q5_0.gguf
@@ -228,15 +159,8 @@ variants:
     - models/leo-hessianai-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7e609259f1f6704e12a3242fd6c2b84a19d951b5
       name: Q5_K_M.gguf
@@ -250,15 +174,8 @@ variants:
     - models/leo-hessianai-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 262660381399aed67acce229639c4b6fa6efe3d3
       name: Q5_K_S.gguf

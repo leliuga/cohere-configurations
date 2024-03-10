@@ -29,19 +29,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7534c2b993ba39bb57ecff1b6b3a846ceefca0fd
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2e58a6f3957a7a77b6e7f31322f3874db48340f7
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ef271f3e801dbe2caf3819ded0d7d9093d71e677
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 72dfe1bea9919b931361242f6ce4797d2fe4a7fb
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0f82e0c30b1224b84b161ed607b7368aa4015175
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 06c3ad006505ee8b1bd8ab23b65ffc13207df257
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91f21e331cafe3d55b176ebc2fa410e64d6a9334
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7afa9377672d75233a0205b88ab51c6bef1e680a
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2bc5c1e9538fdadff46fbc382a6731d7ce80b6b
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 414a1e6435423ba94cb2b074d371331f12f44f3c
       name: Q5_K_S.gguf
@@ -271,15 +188,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b9410a8aa311b8b7bcb2e34775ce642edb343337
       name: Q6_K.gguf
@@ -293,15 +203,8 @@ variants:
     - models/Nanbeige-16B-Chat/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71152ebd71fc1c54cbed0a31066a3fa3adba9a1e
       name: Q8_0.gguf

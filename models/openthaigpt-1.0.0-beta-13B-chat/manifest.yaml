@@ -28,19 +28,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 88b050d04090b4cfeed07abc9fce679bfd8a1326
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d38788a6d9448070f44c578fd1f63cdb60377b4
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4649f7fdf4db6ea573071708cf547427c9b62c49
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8fe104016e492940146c5d8e1ef4d4dc48879445
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 940747f3e2b5bbdef1528b81a6b39f3e8ddc207a
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b4777608ff80a4408315303ae794d53285f594f6
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac4dde15cc43d9cd1b1164e464533bf410901c08
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3ffdb70b4a75888d065853f3fdb6e28168e320dc
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 87efb5099477b20ceab77cda43e39a3495cd4275
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 292dbe6b131605f8165efcc621330cb1a1296fc2
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fe3d74586ab3dac96df35febb2989236245f58b
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/openthaigpt-1.0.0-beta-13B-chat/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1ed6dc481558b6e6297a324ab91704313e779493
       name: Q8_0.gguf

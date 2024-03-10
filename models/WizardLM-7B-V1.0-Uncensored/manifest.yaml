@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a79a57092e8f5bb86d2b3ab10e22b0c2a85beca0
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 07b9cd45df4a4542be7ee1d1d32c80aa032a5db1
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 15f34804ba9d458d81229ab6b09f8b2c0d1c7000
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bf426e1b1ca2f86aef471da9bdda8ce5ba09ef74
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6f77e1afe38493f11b5c835d5bd2d787e2f8eb9a
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0aaa8e65f3dddbd744c408faec83e1ad911f0334
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0dcd9e2afec0224cd5a6872a369b102fd65f7b58
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e20e773bea783064cd0e72ffee25b612a31b9163
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 029b763f8f692ff2c79e9e308eb12ee196cac6bd
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 69f212aad7129c2ee44bef8e81967ee588d6c00a
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0f9861586a58243560f31da3251e9fe954c0845d
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/WizardLM-7B-V1.0-Uncensored/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c881adb8c7e4b272a07ca3714bc0ad8f49808f64
       name: Q8_0.gguf

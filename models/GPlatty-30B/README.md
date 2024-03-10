@@ -15,16 +15,6 @@ metrics:
 
 GPlatty-30B is a merge of [garage-bAInd/Platypus-30B](https://huggingface.co/lilloukas/Platypus-30B) and [chansung/gpt4-alpaca-lora-30b](https://huggingface.co/chansung/gpt4-alpaca-lora-30b)
 
-| Metric                | Value |
-|-----------------------|-------|
-| MMLU (5-shot)         | 63.6  |
-| ARC (25-shot)         | 66.0  |
-| HellaSwag (10-shot)   | 84.8  |
-| TruthfulQA (0-shot)   | 53.8  |
-| Avg.                  | 67.0  | 
-
-We use state-of-the-art [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) to run the benchmark tests above.
-
 ## Model Details
 
 * **Trained by**: Platypus-30B trained by Cole Hunter & Ariel Lee; gpt4-alpaca-lora-30b by chansung.
@@ -88,3 +78,16 @@ The base LLaMA model is trained on various data, some of which may contain offen
   year={2021}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_lilloukas__GPlatty-30B)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 58.87   |
+| ARC (25-shot)         | 65.78          |
+| HellaSwag (10-shot)   | 84.79    |
+| MMLU (5-shot)         | 63.49         |
+| TruthfulQA (0-shot)   | 52.45   |
+| Winogrande (5-shot)   | 80.98   |
+| GSM8K (5-shot)        | 13.87        |
+| DROP (3-shot)         | 50.73         |

@@ -15,16 +15,6 @@ metrics:
 
 Platypus-30B is an instruction fine-tuned model based on the LLaMA-30B transformer architecture.
 
-| Metric                | Value |
-|-----------------------|-------|
-| MMLU (5-shot)         | 64.2  |
-| ARC (25-shot)         | 64.6  |
-| HellaSwag (10-shot)   | 84.3  |
-| TruthfulQA (0-shot)   | 45.8  |
-| Avg.                  | 64.7  |
-
-We use state-of-the-art [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) to run the benchmark tests above.
-
 ## Model Details
 
 * **Trained by**: Cole Hunter & Ariel Lee
@@ -96,3 +86,16 @@ The base LLaMA model is trained on various data, some of which may contain offen
   year={2021}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_lilloukas__Platypus-30B)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 57.12   |
+| ARC (25-shot)         | 64.59          |
+| HellaSwag (10-shot)   | 84.24    |
+| MMLU (5-shot)         | 64.19         |
+| TruthfulQA (0-shot)   | 45.35   |
+| Winogrande (5-shot)   | 81.37   |
+| GSM8K (5-shot)        | 14.4        |
+| DROP (3-shot)         | 45.65         |

@@ -2,6 +2,8 @@
 license: llama2
 tags:
 - llama2
+- merge
+- mergekit
 ---
 
 Experimental multi-lingual model using a new merge technique.

@@ -11,6 +11,7 @@ languages: []
 tags:
 - peft
 - gguf
+- llama
 - generated_from_trainer
 - base_model:Undi95/toxicqa-Llama2-13B
 - license:other
@@ -23,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +33,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: eb7ec5d61435a3ed2b0246c8981ace8e65570c2e
       name: Q2_K.gguf
@@ -67,15 +48,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df84f7708d418dfe6852e5d3207c409378836ed5
       name: Q3_K_L.gguf
@@ -89,15 +63,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7246209be711c90c442c6c011f288715da090432
       name: Q3_K_M.gguf
@@ -111,15 +78,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 530568a910cf6349b2d060b7eb9dffc3a4d97a3c
       name: Q3_K_S.gguf
@@ -133,15 +93,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 927f8b64c555b9ed3454d6463b778646a25d0141
       name: Q4_0.gguf
@@ -155,15 +108,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd15fa51210afe486c8dda173c886c95e2fffbc2
       name: Q4_K_M.gguf
@@ -177,15 +123,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 43039455536e134836b121dc9d9472c43833760f
       name: Q4_K_S.gguf
@@ -199,15 +138,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: de0cc01782a37bed2d1aa96c771ab7b91e0ea295
       name: Q5_0.gguf
@@ -221,15 +153,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5a3fdaa557bf1950b874976c9a9c920b12ae746a
       name: Q5_K_M.gguf
@@ -243,15 +168,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 35ce52849a1d6557ab8ab28512920fb618c03d22
       name: Q5_K_S.gguf
@@ -265,15 +183,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5524de91aec5290833efbd5fcbd4a02d4c2f9797
       name: Q6_K.gguf
@@ -287,15 +198,8 @@ variants:
     - models/toxicqa-Llama2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 90125ae23e2445a1530a6863b27725d7fe66d4a1
       name: Q8_0.gguf

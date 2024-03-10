@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/MelloGPT/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e9ae9d94f095696f3e23a8e57d89c417b060b6c4
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/MelloGPT/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cee4d4ef10baab03fb1f8db93cfaaf97680f5e2a
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/MelloGPT/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bdddac9366f017f36f012725634b00bcb63aea7f
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/MelloGPT/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 341a197168cafbfc514c929d64a81c41df00437a
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/MelloGPT/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7946e892650322fecdea5bb75b3504fdf6d77393
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/MelloGPT/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5faf4435d43d2667b1582a21d3d84ebfce45ba7b
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/MelloGPT/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d877ef3fe85ffc4244e11906162a08c9db8b10e0
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/MelloGPT/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d9947d20520860fc18fa89c000e051bb9039de8e
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/MelloGPT/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: af388e0a3b11765407951f58f782fc3135019020
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/MelloGPT/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6060695b7087e9a6bdaae81abac36fa80b9fb7c2
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/MelloGPT/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3062572ef35f939a9c18d13c781093ccbfbfede8
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/MelloGPT/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3be97c28f751b97941e77d08dd79506d62ad13ca
       name: Q8_0.gguf

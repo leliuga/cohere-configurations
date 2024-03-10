@@ -6,6 +6,8 @@ language:
 - de
 - es
 - en
+tags:
+- moe
 ---
 # Model Card for Mixtral-8x7B
 The Mixtral-8x7B Large Language Model (LLM) is a pretrained generative Sparse Mixture of Experts. The Mistral-8x7B outperforms Llama 2 70B on most benchmarks we tested.

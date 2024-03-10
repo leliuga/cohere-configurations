@@ -24,19 +24,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02adbff73acbf55056e907fbd26902457fd15e4d
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: af3f4f3f583650ba72a8e7f5a2d4ca204e7b08e4
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a8ef742720ab35e3a9754c8013e77b75b721eb0f
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 842acd13c8de1b546beeafb8210446d286e81c71
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea099161a24d3ebb597e77e035e43f425d7fb034
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fc6fd369b9463e8c9bd26b790d270b7206de8156
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dd4d683daf178e2f45a9242876312bfd5e63d355
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9e13dcb5fab59ff39def48902c0638fc6ab6690a
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 33d8dc5c3245133fc95004911ba70da424c3ab2c
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae1917c3e2f9b705bd871956b1a2ced1cf0a15d0
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 035cad58b4512fba3f3347a41092e44f8a2247d5
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/CAMEL-33B-Combined-Data/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71dcc7ac3129864acb4e1c769e9902626d92c5cf
       name: Q8_0.gguf

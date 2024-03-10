@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/UndiMix-v3-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9b344a50bd005edb865dcbbe9d9f61e3a1f915dd
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/UndiMix-v3-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 42656c34612122744c4a79ae9e8ec20a59f66c29
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/UndiMix-v3-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a0eab2c22b5a936f173083a535dee936027c4488
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/UndiMix-v3-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8bec45b42cc5437ba9dec1eaaa8acaf34c280084
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/UndiMix-v3-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a38bfc99228599765d8ae138578bb25efd3f34da
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/UndiMix-v3-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 75bec635462c2c9f1ca83199d4ff2e67d26e365e
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/UndiMix-v3-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 70cef7c7a8f87ab665a9d5e8a8182a7a8defd6df
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/UndiMix-v3-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 259ffda5f3dfab0dee7bca08005b6f7a6cd67cd3
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/UndiMix-v3-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b5cf989cf068b297df44a62728c8c40080ff2706
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/UndiMix-v3-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3cf8e88676627cbb25e878b207a3b6ba31a3eb75
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/UndiMix-v3-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 878b5802a69d9abe91a66f7bd32746301eb67d1b
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/UndiMix-v3-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e63e7c7b8fd660d2ec72cf20e2551cbc8d4845da
       name: Q8_0.gguf

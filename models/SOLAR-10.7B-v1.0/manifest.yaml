@@ -23,19 +23,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +32,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1d2f866f37947ea3c27e6ba6e2ff9bb421949a82
       name: Q2_K.gguf
@@ -67,15 +47,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7e4281d7e03ab5af194d04f44698381c10e600cd
       name: Q3_K_L.gguf
@@ -89,15 +62,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 735c93445cdc3126c9305972f6811bf7a14174e5
       name: Q3_K_M.gguf
@@ -111,15 +77,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c4b9fa8dc55d6c0e5d735f624c70dbce0b1993b
       name: Q3_K_S.gguf
@@ -133,15 +92,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6212d0cabda6dc5516a2ed2fef603d2fa0a4a76
       name: Q4_0.gguf
@@ -155,15 +107,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 961b56fb843d8d21e26d95048c9a3a78b665be03
       name: Q4_K_M.gguf
@@ -177,15 +122,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0581d779d0010598aa547f2616d4c8d68a3d454b
       name: Q4_K_S.gguf
@@ -199,15 +137,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4335e37cb43b38546d8624df44497c7eabc2595
       name: Q5_0.gguf
@@ -221,15 +152,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b129ce480d3c13991a700ba58f7f62b02f3ec862
       name: Q5_K_M.gguf
@@ -243,15 +167,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bca23ec4b42046f3753e8e070a6940cb27b7293d
       name: Q5_K_S.gguf
@@ -265,15 +182,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bfcc61f6bd00ec4d72f9267b4f54eae344d543f8
       name: Q6_K.gguf
@@ -287,15 +197,8 @@ variants:
     - models/SOLAR-10.7B-v1.0/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 554a152d6f35fb52a5096e4fbd146d42aad12ad0
       name: Q8_0.gguf

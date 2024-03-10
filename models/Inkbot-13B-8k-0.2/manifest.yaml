@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 87fff8929eb90e00adc6d06ee5c25195ed2be137
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9ed2e60e2b46b2a5c5d562d7d00cf91888b42e61
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c444e689ded3dc4e9d2b7ae92ae1111336ee9c82
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8ceb6dafad9d282ef88a4689f04eb61945c9bb17
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0946ddaea8ce2f166abf7cee487e102fa16ccb67
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cf6264666c331958fab2223f8d0cc953a44a898b
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 885d3698bf763de2c8e075ea721a8007bf37a1ce
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 22f81f938b4f1e36042dae4af2bcd8c6f799a1a2
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cb98208ada1f69e0ceacbe77d71b1430d7e355d3
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3bf95241429568b242462e3cbaf3b3c4304be0b4
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: abb85436306bb3c7f1bedc72a19aa76302974e5e
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Inkbot-13B-8k-0.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a6de65673956bdf5a60a4ddbb51228c7a0d6cb13
       name: Q8_0.gguf

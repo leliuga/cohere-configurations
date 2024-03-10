@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 22016
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/XwinCoder-34B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5324e75f06db41a587b21587b6c422e52a552690
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/XwinCoder-34B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1300e09994af49bcc2290cd7381f4aa41851f487
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/XwinCoder-34B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3e663fd5e8f0357d06613d1360c83f8d1f6f8da6
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/XwinCoder-34B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d36e34ea1a2b37bfc2f08ff6f56e96a84312e570
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/XwinCoder-34B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8fce8935a386ce5e1370c3719b4784c323775315
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/XwinCoder-34B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f5a322c355be3ad584b173a96093c33a6522569a
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/XwinCoder-34B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 604eb145a0b10f88e486a3a568661ea720928fcc
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/XwinCoder-34B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cb7bf40b9baa96ab779a7444b1e560a3306c3814
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/XwinCoder-34B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 33e40837e65adc3bfd70551e8ee1ffcde0374399
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/XwinCoder-34B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 28f55df8303c79a280e982e9020188b6405d29f9
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/XwinCoder-34B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e347f2ed43dd726519941a97803b2741359819f2
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/XwinCoder-34B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c5d47347633a37e7199b7b95263ac138548ab6da
       name: Q8_0.gguf

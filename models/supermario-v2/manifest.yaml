@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/supermario-v2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bfc5f5c901ed49a15f52c654c04411a1799af8f1
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/supermario-v2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7fa44030a22f8cc52194309499565e293ac38ce9
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/supermario-v2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 07c4cf3b279150fdfa6900cce5718a6691e6af9c
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/supermario-v2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d0916d1c2edb6d08d561a9fe11216f36d42bea3c
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/supermario-v2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9251693a7d19f58079889ed46fc17ed46f6deabc
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/supermario-v2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b928a73a16ed96ac14ef26287774a5d9f8c5deff
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/supermario-v2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 316f27601fcbc266e5227ae5dbc31110cddaddba
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/supermario-v2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9d3a5d545009b38f651e204af45efb78aa95a948
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/supermario-v2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a348af24f68e4416fe41eb4e932d9f14038ab6f3
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/supermario-v2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d05fa85ca1cd53d520781267f706e7132b1f9ed0
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/supermario-v2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 68495b74a15be6f087ff122ec4a8cb6c14e4302d
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/supermario-v2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f93ee658842628a1a72644db9efbf6303b8ee412
       name: Q8_0.gguf

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1e3a1f8bd8fa6fa553f2e3a8c0de05942212f118
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f360c26620a99c57dc5edd990b431c63b7528312
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6596c330f3293c3cafb6475dad32b941fc5fe12
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea44c96d7063f3e2dc1d5675d6cb8ac776b844a7
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e7c694778450268582e755419a20ec4ded423bf4
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c5d227cc1b83f142a11a03e8c348f4f8427fd9dd
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ab027ef8a772457df0bec31df98b7d836901bcd4
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e2e265ecff72ec8b1e4ea70f5cb04271d3b7d675
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7cc9e5bb1ba2adae6095d3b6e69b78fbee5f9ff5
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 859d8e8546614cdb1ba75dade0535cc005cca86b
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5ae694458b55060b09f6ae252ac76878bf0ac32d
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/speechless-mistral-7B-dare-0.85/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52160d62d43619542203a141da45b16d4251d9dc
       name: Q8_0.gguf

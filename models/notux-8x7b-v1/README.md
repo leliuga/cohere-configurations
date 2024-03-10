@@ -1,21 +1,22 @@
 ---
-datasets:
-- argilla/ultrafeedback-binarized-preferences-cleaned
 language:
 - en
 - de
 - es
 - fr
 - it
-base_model: mistralai/Mixtral-8x7B-Instruct-v0.1
+license: apache-2.0
 library_name: transformers
-pipeline_tag: text-generation
 tags:
 - dpo
 - rlaif
 - preference
 - ultrafeedback
-license: apache-2.0
+- moe
+datasets:
+- argilla/ultrafeedback-binarized-preferences-cleaned
+base_model: mistralai/Mixtral-8x7B-Instruct-v0.1
+pipeline_tag: text-generation
 model-index:
 - name: notux-8x7b-v1
   results: []
@@ -94,3 +95,16 @@ The following hyperparameters were used during training:
 - Pytorch 2.1.0+cu118
 - Datasets 2.14.6
 - Tokenizers 0.15.0
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_argilla__notus-8x7b-experiment)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |73.18|
+|AI2 Reasoning Challenge (25-Shot)|70.99|
+|HellaSwag (10-Shot)              |87.73|
+|MMLU (5-Shot)                    |71.33|
+|TruthfulQA (0-shot)              |65.79|
+|Winogrande (5-shot)              |81.61|
+|GSM8k (5-shot)                   |61.64|
+

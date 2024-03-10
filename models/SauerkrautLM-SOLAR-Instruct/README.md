@@ -15,7 +15,7 @@ datasets:
 - argilla/distilabel-math-preference-dpo
 ---
 
-![SauerkrautLM](https://vago-solutions.de/wp-content/uploads/2023/12/sauerkrautlm-solar.png "SauerkrautLM-SOLAR-Instruct")
+![SauerkrautLM](https://vago-solutions.ai/wp-content/uploads/2024/02/sauerkrautlm-solar-2.png "SauerkrautLM-SOLAR-Instruct")
 ## VAGO solutions SauerkrautLM-SOLAR-Instruct
 Introducing **SauerkrautLM-SOLAR-Instruct** – our Sauerkraut version of the powerful [upstage/SOLAR-10.7B-Instruct-v1.0](https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0) ! 
 Aligned with **DPO**
@@ -37,7 +37,7 @@ Aligned with **DPO**
 
 | Model | HF    | GPTQ  | GGUF  | AWQ  |
 |-------|-------|-------|-------|-------|
-| SauerkrautLM-SOLAR-Instruct  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-SOLAR-Instruct/) | coming soon | coming soon | coming soon |
+| SauerkrautLM-SOLAR-Instruct  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-SOLAR-Instruct/) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GPTQ) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-GGUF) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-SOLAR-Instruct-AWQ) |
 
 ## Model Details
 **SauerkrautLM-SOLAR-Instruct**
@@ -82,12 +82,7 @@ Our results, with `result < 0.1, %:` being well below 0.9, indicate that our dat
 
 ### Prompt Template:
 ```
-### User:
-Hallo, wie geht es dir?
-
-### Assistant:
-Hallo! Es freut mich, dass du mit mir kommunizierst. Ich bin hier, um zu helfen und deine Anfragen zu erfüllen. Du fragst, wie ich mich fühle. Als künstliche Intelligenz habe ich keine eigentlichen Emotionen im Sinne eines Menschen, aber ich funktioniere optimal und bin bereit, Dienste anzubieten.
-Wie geht es dir momentan? Können wir zusammen etwas interessantes oder hilfreiches erledigen?
+### System:\nDu sprichst grammatikalisch korrektes Deutsch auf höchstem Muttersprachler Niveau.\n### User:\n{user}\n\n### Assistant:\n{assistant}
 
 ```
 *Prompt Example on Temp 0.5
@@ -117,6 +112,10 @@ How may I assist you today?
 | Winogrande (5-shot)   | 83.5  |
 | GSM8K (5-shot)        | 64.14        |
 
+
+![MT Bench First](https://vago-solutions.de/wp-content/uploads/2024/01/mtbenchfirst.png "SauerkrautLM-SOLAR-Instruct MT-Bench German First")
+![MT Bench Second](https://vago-solutions.de/wp-content/uploads/2024/01/mtbenchsecond.png "SauerkrautLM-SOLAR-Instruct MT-Bench German Second")
+![MT Bench Average](https://vago-solutions.de/wp-content/uploads/2024/01/mtbenchavg.png "SauerkrautLM-SOLAR-Instruct MT-Bench German Average")
 ## Disclaimer
 We must inform users that despite our best efforts in data cleansing, the possibility of uncensored content slipping through cannot be entirely ruled out.
 However, we cannot guarantee consistently appropriate behavior. Therefore, if you encounter any issues or come across inappropriate content, we kindly request that you inform us through the contact information provided.

@@ -6,6 +6,9 @@ pipeline_tag: text-generation
 tags:
 - code
 ---
+# IMPORTANT
+This model is now outdated. Please use [`defog/sqlcoder-7b-2`](https://huggingface.co/defog/sqlcoder-7b-2) for much better performance!
+
 # Defog SQLCoder
 Defog's SQLCoder is a state-of-the-art LLM for converting natural language questions to SQL queries.
 

@@ -1,8 +1,113 @@
 ---
 language:
-- en 
-pipeline_tag: text-generation
+- en
 license: cc-by-nc-sa-4.0
+tags:
+- merge
+pipeline_tag: text-generation
+model-index:
+- name: Sakura-SOLAR-Instruct
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 70.99
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=kyujinpy/Sakura-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 88.42
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=kyujinpy/Sakura-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 66.33
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=kyujinpy/Sakura-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 71.79
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=kyujinpy/Sakura-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 83.66
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=kyujinpy/Sakura-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 65.2
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=kyujinpy/Sakura-SOLAR-Instruct
+      name: Open LLM Leaderboard
 ---
 
 # **Sakura-SOLAR-Instruct**  
@@ -52,3 +157,17 @@ OpenOrca_tokenizer = AutoTokenizer.from_pretrained(repo)
 ```
 
 ---
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_kyujinpy__Sakura-SOLAR-Instruct)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |74.40|
+|AI2 Reasoning Challenge (25-Shot)|70.99|
+|HellaSwag (10-Shot)              |88.42|
+|MMLU (5-Shot)                    |66.33|
+|TruthfulQA (0-shot)              |71.79|
+|Winogrande (5-shot)              |83.66|
+|GSM8k (5-shot)                   |65.20|
+
+ 

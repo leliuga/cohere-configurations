@@ -1,0 +1,157 @@
+id: Bagel-Hermes-2x34b
+parent_id: Weyaxi/Bagel-Hermes-2x34b
+name: Bagel Hermes 2X34B
+description: ""
+architecture: mixtral
+licence: other
+object: model
+owned_by: Yağız Çalık
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- yi
+- moe
+- base_model:Weyaxi/Bagel-Hermes-2x34b
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 8407afe77a45b899927dc5d45f16fd8c45281fb2
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q2_K.gguf
+      size: 22333458400
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: d52daa47e5a4c379bf1e1f9cdae903098e6d3dac
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q3_K_M.gguf
+      size: 29253990368
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: de8a6524ea6d7a91d32408227979d5b44b28ded7
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q4_0.gguf
+      size: 34331830240
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: e25e7f1c6ea37e04ca854e1f04a7191f26650629
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q4_K_M.gguf
+      size: 36659423200
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 9cd01d0d0a84f20cb7500258a0f9fbced40e5532
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q5_0.gguf
+      size: 41876006880
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: f8cbd3ba0b9daded9c06c189d1d8d2561df7ad44
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q5_K_M.gguf
+      size: 43075069920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Bagel-Hermes-2x34b/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 74a83ceae2e27ca00c82accba07911e3c04c61ec
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Bagel-Hermes-2x34b-GGUF/resolve/main/bagel-hermes-2x34b.Q6_K.gguf
+      size: 49891694560
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

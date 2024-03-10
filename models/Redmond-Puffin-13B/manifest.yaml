@@ -28,44 +28,17 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q2_K.gguf
+    - models/Redmond-Puffin-13B/Q2_K/Q2_K.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 9461fbb06f4ba5c76eaca378e43373c5d0243723
       name: Q2_K.gguf
@@ -76,25 +49,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q3_K_L.gguf
+    - models/Redmond-Puffin-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 5136bd066415cd57eeb350a822587019747831a7
       name: Q3_K_L.gguf
@@ -105,25 +64,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q3_K_M.gguf
+    - models/Redmond-Puffin-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: d3bae7a9a6164820bc7e4868cca7fbdcbd5a02ae
       name: Q3_K_M.gguf
@@ -134,25 +79,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q3_K_S.gguf
+    - models/Redmond-Puffin-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 9f5e2dcf3af22f790b96d906913b61657f995401
       name: Q3_K_S.gguf
@@ -163,25 +94,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q4_0.gguf
+    - models/Redmond-Puffin-13B/Q4_0/Q4_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 67627e9243f3650cb50254a2ad0e0746fc4adb16
       name: Q4_0.gguf
@@ -192,25 +109,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q4_K_M.gguf
+    - models/Redmond-Puffin-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: e16c54fb2b88d851fa1f1a878c9d213fcd842ce1
       name: Q4_K_M.gguf
@@ -221,25 +124,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q4_K_S.gguf
+    - models/Redmond-Puffin-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: bd1496c9f33a213eda4359838cbe67a9c90f7a09
       name: Q4_K_S.gguf
@@ -250,25 +139,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q5_0.gguf
+    - models/Redmond-Puffin-13B/Q5_0/Q5_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: c4487533bc815c0e4df52ddc7ce23f42b6d875de
       name: Q5_0.gguf
@@ -279,25 +154,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q5_K_M.gguf
+    - models/Redmond-Puffin-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 4c6dc4255c7e21d8c30561ab80a3f71bd5233cb3
       name: Q5_K_M.gguf
@@ -308,25 +169,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q5_K_S.gguf
+    - models/Redmond-Puffin-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: ce2b00d831424b1b49d87ad1cce04be4e5a8e69c
       name: Q5_K_S.gguf
@@ -337,25 +184,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q6_K.gguf
+    - models/Redmond-Puffin-13B/Q6_K/Q6_K.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 602a491b91268a7fe9ba28b057e7394d5e204449
       name: Q6_K.gguf
@@ -366,25 +199,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Redmond-Puffin-13B/Q8_0.gguf
+    - models/Redmond-Puffin-13B/Q8_0/Q8_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 271aa9289eb91244211fed69bf3fb6026ce605b4
       name: Q8_0.gguf

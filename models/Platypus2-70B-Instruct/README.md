@@ -13,18 +13,6 @@ Platypus-70B-instruct is a merge of [`garage-bAInd/Platypus2-70B`](https://huggi
 
 ![Platty](./Best_Platty_small.jpeg)
 
-### Benchmark Metrics
-
-| Metric                | Value |
-|-----------------------|-------|
-| MMLU (5-shot)         | 70.48 |
-| ARC (25-shot)         | 71.84 |
-| HellaSwag (10-shot)   | 87.94 |
-| TruthfulQA (0-shot)   | 62.26 |
-| Avg.                  | 73.13 |
-
-We use state-of-the-art [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) to run the benchmark tests above, using the same version as the HuggingFace LLM Leaderboard. Please see below for detailed instructions on reproducing benchmark results.
-
 ### Model Details
 
 * **Trained by**: **Platypus2-70B** trained by Cole Hunter & Ariel Lee; **Llama-2-70b-instruct** trained by upstageAI
@@ -118,3 +106,16 @@ Please see the Responsible Use Guide available at https://ai.meta.com/llama/resp
     url={https://openreview.net/forum?id=nZeVKeeFYf9}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_garage-bAInd__Platypus2-70B-instruct)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 66.89   |
+| ARC (25-shot)         | 71.84          |
+| HellaSwag (10-shot)   | 87.94    |
+| MMLU (5-shot)         | 70.48         |
+| TruthfulQA (0-shot)   | 62.26   |
+| Winogrande (5-shot)   | 82.72   |
+| GSM8K (5-shot)        | 40.56        |
+| DROP (3-shot)         | 52.41         |

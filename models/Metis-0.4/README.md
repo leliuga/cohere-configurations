@@ -5,6 +5,8 @@ license: apache-2.0
 license_name: apache-2.0
 metrics:
 - accuracy
+tags:
+- merge
 ---
 
 This is a merge between Metis-0.3 and Metis-0.1 having Metis-0.1 as base.

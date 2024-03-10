@@ -33,19 +33,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -55,15 +42,8 @@ variants:
     - models/StableBeluga-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8662e1244ae2c3d14f6915822c5947209378ed6f
       name: Q2_K.gguf
@@ -77,15 +57,8 @@ variants:
     - models/StableBeluga-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8f19ba0bfd4da8ad9a2a9b372fe84b1ecc84e509
       name: Q3_K_L.gguf
@@ -99,15 +72,8 @@ variants:
     - models/StableBeluga-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 12eda243be33b42d441d2a619da95e7d252fbca3
       name: Q3_K_M.gguf
@@ -121,15 +87,8 @@ variants:
     - models/StableBeluga-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea399348352038e629fc59acb8ea919a3d784434
       name: Q3_K_S.gguf
@@ -143,15 +102,8 @@ variants:
     - models/StableBeluga-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4dd3d524e3720ec4b6c2aa0664408c3180731d36
       name: Q4_0.gguf
@@ -165,15 +117,8 @@ variants:
     - models/StableBeluga-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1ee7724197e915b26cce5ffd894f9a1ba5986671
       name: Q4_K_M.gguf
@@ -187,15 +132,8 @@ variants:
     - models/StableBeluga-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 60edd49ce94ed6e883ad34c17cb669a1ee43a501
       name: Q4_K_S.gguf
@@ -209,15 +147,8 @@ variants:
     - models/StableBeluga-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5e60eb7c8be7a54fe3db75b029506102551fb3e
       name: Q5_0.gguf
@@ -231,15 +162,8 @@ variants:
     - models/StableBeluga-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 94a12afa46068715fdd8af53843d1b2b4b762e6c
       name: Q5_K_M.gguf
@@ -253,15 +177,8 @@ variants:
     - models/StableBeluga-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 530142c6f7a405396f3afef8eb47d88a19fa7360
       name: Q5_K_S.gguf
@@ -275,15 +192,8 @@ variants:
     - models/StableBeluga-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5f6c84e430feec369ababbea63a8475721938654
       name: Q6_K.gguf
@@ -297,15 +207,8 @@ variants:
     - models/StableBeluga-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 26fa2efeecaf472a41ab40dcfeb667e5c3d20ae4
       name: Q8_0.gguf

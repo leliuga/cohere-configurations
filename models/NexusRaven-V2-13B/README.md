@@ -35,7 +35,13 @@ Please checkout the following links!
 
 ## NexusRaven-V2 model usage
 
-NexusRaven-V2 accepts a list of python functions. These python functions can do anything (including sending GET/POST requests to external APIs!). The two requirements include the python function signature and the appropriate docstring to generate the function call. 
+NexusRaven-V2 accepts a list of python functions.
+
+These python functions can do anything (including sending GET/POST requests to external APIs!).
+
+The two requirements include the python function signature and the appropriate docstring to generate the function call. 
+
+NexusRaven-V2 also does best on functions with arguments, so please always only provide functions that require arguments to raven.
 
 ### NexusRaven-V2's Capabilities
 

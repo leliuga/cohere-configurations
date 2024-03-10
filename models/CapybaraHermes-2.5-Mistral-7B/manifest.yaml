@@ -1,0 +1,235 @@
+id: CapybaraHermes-2.5-Mistral-7B
+parent_id: argilla/CapybaraHermes-2.5-Mistral-7B
+name: CapyBaraHermes 2.5 Mistral 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Argilla
+pipeline: ""
+languages: []
+tags:
+- trl
+- gguf
+- mistral
+- distilabel
+- dpo
+- rlaif
+- rlhf
+- en
+- dataset:argilla/dpo-mix-7k
+- base_model:argilla/CapybaraHermes-2.5-Mistral-7B
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: c3e18caea4beba4d9f7567e3d9300bc9d222003d
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q2_K.gguf
+      size: 2719251712
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 2af34fc6db60607c228014bb382337c2c7455fd1
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q3_K_L.gguf
+      size: 3822035008
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d32bde22feb268cb7680bd82fc3100f3823be239
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q3_K_M.gguf
+      size: 3518996544
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: cc4f5c7aea409a5b0fa8c4631aaf3ff7456ea25d
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q3_K_S.gguf
+      size: 3164577856
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 6abf3506b0f6d5243bee5a4f431533a64b097430
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q4_0.gguf
+      size: 4108928128
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b552c8ef507ba0173376c3c48d9632a9315504be
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q4_K_M.gguf
+      size: 4368450688
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 617b36edb4d0431c4594ab4b5c8f9fdd4435deb3
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q4_K_S.gguf
+      size: 4140385408
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 44e04e19998ec6d6fddc80f2e237446fec0af5c6
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q5_0.gguf
+      size: 4997728384
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: a1d314a903da9b10e361d9e96bba90c023482ac1
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q5_K_M.gguf
+      size: 5131421824
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 163c4d15e246ecd4dc21505ca572e45f02c2bb0d
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q5_K_S.gguf
+      size: 4997728384
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: c228eab22aadbc84dc480109275f39956f98e653
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q6_K.gguf
+      size: 5942078656
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/CapybaraHermes-2.5-Mistral-7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 94e6bb99ac2c8c995bad132fdd8efd6372c5662f
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF/resolve/main/capybarahermes-2.5-mistral-7b.Q8_0.gguf
+      size: 7695875136
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

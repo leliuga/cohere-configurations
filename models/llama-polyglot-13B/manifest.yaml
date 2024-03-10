@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/llama-polyglot-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f80dc6907228f2d54591905b4aaed27bf5e1fad1
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/llama-polyglot-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d619bd988b4e4e44018e9ab5d7c67f56b2e04930
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/llama-polyglot-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 47e839058dd6e24dc4d8ca1d05001676691a4396
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/llama-polyglot-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a70837d98a8fb48fe7888e2429bd62f36f7ef776
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/llama-polyglot-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a11c1a3a9cae9990f8a8a9d636c6f86097fc08e
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/llama-polyglot-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71ef6c12505b5578256c59db92915fcca2b84650
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/llama-polyglot-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7642f0d9f339c5a4ecbff6f1abd5445f6b2aa31a
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/llama-polyglot-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 07191c4012f7418dfed5dbe7458ee98d25e4b8b0
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/llama-polyglot-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 06c6c76197bb9a2f27b0ec4d4dcd3a7a39c4b920
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/llama-polyglot-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3f0b0201616b8acd72de0236afb8fc420839c2aa
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/llama-polyglot-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 139e8c21b704305d3540b71e3c1cbe2becf45761
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/llama-polyglot-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ef62299a78a7322b96c584d5f42dedbdd2aa7209
       name: Q8_0.gguf

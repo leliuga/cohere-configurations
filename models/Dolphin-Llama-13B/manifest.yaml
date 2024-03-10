@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Dolphin-Llama-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2afa81179893b17bf921ef69404e8a2f0c361eb6
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Dolphin-Llama-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 51cc55ad6452f879f69b22b9760a5904708567c8
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Dolphin-Llama-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e9a432e3a98395b642e0a0c05daaf2c4585fddb
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Dolphin-Llama-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 29ee04870a64ef15b76afb5a211cca2b778ea3e3
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Dolphin-Llama-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fae6bd3869735ded4cb989a97b0755fd1e6d148e
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Dolphin-Llama-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee5e98f7260e57dbdffd5bbcccd7a6d570a384d7
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Dolphin-Llama-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2dff63924c42f68e605191c154b8b9a8856a8e5f
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Dolphin-Llama-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a63b3f526645a7ab46693f92c372490c9ab8fd4
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Dolphin-Llama-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6e64c69e68bdd74803ee8f1bc9519d4dbb111d08
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Dolphin-Llama-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 86a7841ee040128f2edd4ab275f6b38ea0435fb9
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Dolphin-Llama-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 92df8db4d82d7b89d4c278c089a760dfe0594928
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Dolphin-Llama-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4410f0dbbb2e5cf9b9317102335fef2467efd73
       name: Q8_0.gguf

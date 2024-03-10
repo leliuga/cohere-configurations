@@ -36,19 +36,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -58,15 +45,8 @@ variants:
     - models/ARIA-70B-V2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dc991be952c4ef3343848a8ad455e8c2d356abe6
       name: Q2_K.gguf
@@ -80,15 +60,8 @@ variants:
     - models/ARIA-70B-V2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 73b9e9cfce17f2c07543ab73807973768588a85d
       name: Q3_K_L.gguf
@@ -102,15 +75,8 @@ variants:
     - models/ARIA-70B-V2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c28fc610b8213cdc13a4285a8cd68b034b227fc1
       name: Q3_K_M.gguf
@@ -124,15 +90,8 @@ variants:
     - models/ARIA-70B-V2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d7e8cb26ba8027c70b770b6610ffedb6eb58c928
       name: Q3_K_S.gguf
@@ -146,15 +105,8 @@ variants:
     - models/ARIA-70B-V2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8fd4d12419bfa49a7c90918af87995fd262a6daa
       name: Q4_0.gguf
@@ -168,15 +120,8 @@ variants:
     - models/ARIA-70B-V2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0bd6ca62e21b653c6c9bd462c142aa225b89de71
       name: Q4_K_M.gguf
@@ -190,15 +135,8 @@ variants:
     - models/ARIA-70B-V2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3fcd799cd19f1050ba8748d84009bba82397690
       name: Q4_K_S.gguf
@@ -212,15 +150,8 @@ variants:
     - models/ARIA-70B-V2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae67232b9b879a248973a675ec92a63862842aa3
       name: Q5_0.gguf
@@ -234,15 +165,8 @@ variants:
     - models/ARIA-70B-V2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9dd4aed9e2f32a459039416fe8a6a910b58bfbba
       name: Q5_K_M.gguf
@@ -256,15 +180,8 @@ variants:
     - models/ARIA-70B-V2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 859718540505225d5faa5fa22de34aa486b3c4e0
       name: Q5_K_S.gguf

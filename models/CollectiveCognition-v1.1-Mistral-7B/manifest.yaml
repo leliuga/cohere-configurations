@@ -33,19 +33,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -55,15 +42,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 60f5fe2c7a998dd24f2b5ecd6b0f64467cfc2d59
       name: Q2_K.gguf
@@ -77,15 +57,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 13ae00f5c3d5d1a93a0c68714aa656a76dad04bd
       name: Q3_K_L.gguf
@@ -99,15 +72,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee1b82c7b560d91c5b1edb7178cae2f074181633
       name: Q3_K_M.gguf
@@ -121,15 +87,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dafe4799376bb3007e59af29a9a0e9b22d0e9281
       name: Q3_K_S.gguf
@@ -143,15 +102,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e890082b73c4e08297d7cf54140c9e891209f658
       name: Q4_0.gguf
@@ -165,15 +117,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e70179c298e2f86d93a29a83696e3c7c59fb584b
       name: Q4_K_M.gguf
@@ -187,15 +132,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1ae9791a87ec018861969a6a0209ddb72f198788
       name: Q4_K_S.gguf
@@ -209,15 +147,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c6a2b78ebd17d8f38f58c25642235f7a6ad7540e
       name: Q5_0.gguf
@@ -231,15 +162,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d0f435509baa4e5b0d1b8724ce94109480af2d19
       name: Q5_K_M.gguf
@@ -253,15 +177,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b4e3cedf6e461ecd3643d1b13313d3b76eb29e6d
       name: Q5_K_S.gguf
@@ -275,15 +192,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c173b84240a3677e1a6ef40cfea45b80f7feb051
       name: Q6_K.gguf
@@ -297,15 +207,8 @@ variants:
     - models/CollectiveCognition-v1.1-Mistral-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: abd673c9a86ab4d576b4c73f795888cb3fb5b846
       name: Q8_0.gguf

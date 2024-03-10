@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Solus-70B-L2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b922390ce716aab1327a1e2d31c63c8a2640bc33
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Solus-70B-L2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8e88936dac8d5a8f89187b21da2463424ab3b920
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Solus-70B-L2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8b10a21c315ef6d2aa737919b6781828201005fa
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Solus-70B-L2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa89eacc98c187ad766a2db3d8464007c0554460
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Solus-70B-L2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3447d9c694437e2a240df8f45e08c1206b800802
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Solus-70B-L2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7d9795ba4c3eef0170ddb72c3737a353d8c1f06e
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Solus-70B-L2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d30934a880979d4902ea5332826f08db56ea860a
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Solus-70B-L2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 465e5d4463e10e42aa14cccbdad228e8f0af6708
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Solus-70B-L2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a1c407137274c5679bc83d1f14b169b5443659a9
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Solus-70B-L2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 65da12a30004f7d67c65b76da6d6a7953a226cee
       name: Q5_K_S.gguf

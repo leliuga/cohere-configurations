@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Huginn-v3-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 079d708306f96f8302853f6c684c1a139f4f049d
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Huginn-v3-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ccd80614d95fc712fc1810815dad990e6a4f12d8
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Huginn-v3-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 78cdcc5ad4cbad8d585a9f171942c4585db04e4c
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Huginn-v3-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5212a5c447bcb61bc1e6064b40bedf4abe30931f
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Huginn-v3-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02f7a0de839adffb691edf44276093d35bc81e8f
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Huginn-v3-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0f043e95713e4272039a04a697b2ec31759bfc13
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Huginn-v3-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c7625234fca0075cb20cf8443416e6e0c7b1d6b
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Huginn-v3-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fcfe0b764b5ef22b06166c224ad01ebf9222925
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Huginn-v3-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: be00c3b358d10bc6d5a8ed89e234fa1de88ba597
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Huginn-v3-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 60540068ae26093398cacb730554666ec65aabc2
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Huginn-v3-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 56b8d85af2b9b47d7de998a9ab801cf9f1bd0438
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Huginn-v3-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 06b0e637c822b2bb6b96f48853593c85b6bd3b82
       name: Q8_0.gguf

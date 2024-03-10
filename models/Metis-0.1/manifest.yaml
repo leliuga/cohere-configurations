@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Metis-0.1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5b5e0553f36bdc96ff93fe352d2c18456ce4b59d
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Metis-0.1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 926f5c019368586aca38950b0fdd8ecbdd2ba42c
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Metis-0.1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c0852ea40d6d6980dc4dccfd878e9c6d0ad9c961
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Metis-0.1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b65086d0d5f26d0d7f98ab363d4a49726019a544
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Metis-0.1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 08abebc3744e0bd4fe10a0f61ed12f06a2c03847
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Metis-0.1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d8c65770bf17fefec8836bb9ac715f2fc4f52c1
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Metis-0.1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae46e85fd585b27dd19dc89f01a7e08ca1acef03
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Metis-0.1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bdc85fc22adf5a0f73fbea13c0fdf258e3cf2de9
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Metis-0.1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 033a1ca17e26af5ea4dca98f063cb7ddb6758fbe
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Metis-0.1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5d77df7749f038a0c43b12890972b952bf93ba28
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Metis-0.1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a6be28bb443c08d928652fa7eaf94c6a686c484b
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Metis-0.1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fd9b43189f437161faa1f7f895e30009e9957c1b
       name: Q8_0.gguf

@@ -1,14 +1,119 @@
 ---
-license: other
 language:
 - zh
 - en
+license: other
+model-index:
+- name: yayi2-30b-llama
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 35.67
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=cognitivecomputations/yayi2-30b-llama
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 53.37
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=cognitivecomputations/yayi2-30b-llama
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 70.6
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=cognitivecomputations/yayi2-30b-llama
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 49.08
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=cognitivecomputations/yayi2-30b-llama
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 63.14
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=cognitivecomputations/yayi2-30b-llama
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 18.88
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=cognitivecomputations/yayi2-30b-llama
+      name: Open LLM Leaderboard
 ---
 
 
 This is [wenge-research/yayi2-30b](https://huggingface.co/wenge-research/yayi2-30b) converted to llama compatible format.
 
 Subject to the [Yayi 2 license](https://github.com/wenge-research/YAYI2/blob/main/COMMUNITY_LICENSE).
+
+Join our Discord! https://discord.gg/cognitivecomputations 
 
 Brought to you by @Weyaxi and @ehartford, with thanks to @chargoddard for the pioneering work and the consultation! 
 
@@ -277,3 +382,16 @@ If you are using the resource for your work, please cite our paper.
   year      = {2023}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_cognitivecomputations__yayi2-30b-llama)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |48.46|
+|AI2 Reasoning Challenge (25-Shot)|35.67|
+|HellaSwag (10-Shot)              |53.37|
+|MMLU (5-Shot)                    |70.60|
+|TruthfulQA (0-shot)              |49.08|
+|Winogrande (5-shot)              |63.14|
+|GSM8k (5-shot)                   |18.88|
+

@@ -1,6 +1,7 @@
 ---
 tags:
 - llama
+- merge
 ---
 Five different instruction-tuned models (which I'm sure are intuitively obvious from the name) merged using the methodology described in [Resolving Interference When Merging Models](https://arxiv.org/abs/2306.01708).
 

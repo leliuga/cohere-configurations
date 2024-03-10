@@ -40,19 +40,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -62,15 +49,8 @@ variants:
     - models/DiscoLM-70B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c9dccf26d2945954ea0de9727d5911a56f944871
       name: Q2_K.gguf
@@ -84,15 +64,8 @@ variants:
     - models/DiscoLM-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6dfb8b6d87ae60cb4d495feb55879c040b0acc91
       name: Q3_K_L.gguf
@@ -106,15 +79,8 @@ variants:
     - models/DiscoLM-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8b8544deba95962492891be33c50b99e81863d2a
       name: Q3_K_M.gguf
@@ -128,15 +94,8 @@ variants:
     - models/DiscoLM-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f73f28d2604b72f5fccde9c791b24b5839cc4132
       name: Q3_K_S.gguf
@@ -150,15 +109,8 @@ variants:
     - models/DiscoLM-70B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ef557fcc1abcd6ac6a7302f50697d2caa0b2fa4
       name: Q4_0.gguf
@@ -172,15 +124,8 @@ variants:
     - models/DiscoLM-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 852e06a8d33d4692f65463e477772c59ccae1dea
       name: Q4_K_M.gguf
@@ -194,15 +139,8 @@ variants:
     - models/DiscoLM-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e4862359fbfa004790a057575e42d073ec690932
       name: Q4_K_S.gguf
@@ -216,15 +154,8 @@ variants:
     - models/DiscoLM-70B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d7f2111ef3000459601af32c2096d5f065264ff2
       name: Q5_0.gguf
@@ -238,15 +169,8 @@ variants:
     - models/DiscoLM-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e53d9ba7fb4b7dd03870ff356be96146944a8bd2
       name: Q5_K_M.gguf
@@ -260,15 +184,8 @@ variants:
     - models/DiscoLM-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02857ea7460cd1f2b294906f65371738bdf6255e
       name: Q5_K_S.gguf

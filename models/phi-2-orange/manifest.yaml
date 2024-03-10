@@ -1,0 +1,233 @@
+id: phi-2-orange
+parent_id: rhysjones/phi-2-orange
+name: Phi 2 Orange
+description: ""
+architecture: phi-msft
+licence: mit
+object: model
+owned_by: Rhys Jones
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- phi-msft
+- dataset:Open-Orca/SlimOrca-Dedup
+- dataset:migtissera/Synthia-v1.3
+- dataset:LDJnr/Verified-Camel
+- dataset:LDJnr/Pure-Dove
+- dataset:LDJnr/Capybara
+- dataset:meta-math/MetaMathQA
+- dataset:Intel/orca_dpo_pairs
+- dataset:argilla/ultrafeedback-binarized-preferences-cleaned
+- base_model:rhysjones/phi-2-orange
+- license:mit
+- has_space
+- region:us
+config:
+  vocab_size: 51200
+  context_size: 0
+  embedding_size: 0
+  attention_head_size: 0
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 0
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: a620238ec982c97fafd582b6c3244d9afda79d45
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q2_K.gguf
+      size: 1088413568
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: f6714254639f3852af2e6557a02b408ac6cad8d4
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q3_K_L.gguf
+      size: 1604714368
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: aff73917302daf65197e6260977f2f63d3e37e8e
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q3_K_M.gguf
+      size: 1486749568
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: c0a8b74e4a4db5a3ddcd877ad60228adeee8e73e
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q3_K_S.gguf
+      size: 1250819968
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: 4a26da4db0a10f355a47c0133f6fa6803f413496
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q4_0.gguf
+      size: 1602461568
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: d8247934978e0ef42c08780836d3cdf419eb1ff0
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q4_K_M.gguf
+      size: 1789239168
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: 487039f9c53c8a661a90b41e081094c9b3d3c9fe
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q4_K_S.gguf
+      size: 1628675968
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: bc0040edf71222fbaf3015cbfdf0a92b71878f31
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q5_0.gguf
+      size: 1933418368
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: 8f92733fc1a94f683e74a03e834af19ee24763b4
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q5_K_M.gguf
+      size: 2072682368
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: 1a5f0a7a597b6cb44d7cde9d9a71e057c17bb2e8
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q5_K_S.gguf
+      size: 1933418368
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: 9578b24ed7602dfbe20a983a48ab55fb1bc3407f
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q6_K.gguf
+      size: 2285059968
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/phi-2-orange/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    artifacts:
+    - id: 69490951dbcc7f92b5c365dbc13048675eb463c9
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/phi-2-orange-GGUF/resolve/main/phi-2-orange.Q8_0.gguf
+      size: 2958032768
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2e8acea1b1c252b1f61c35fa8c169d44f7ddcf1b
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a13b6d82e8daf6e909ded7952574be633e5842a3
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 88a21072e1668f3303268e4ada002e71391e2011
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fd9357b69bfd9dd306933d3f4f466aedc0031ac
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 968dff49d808af69c8049b5dadd803a1bb152779
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7798232023a7c15916a1290c1831af4dfc48f6aa
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da4fc91d6883d370b613464e2a4469d658a0b548
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d3340aaa3c40b987f676cd2eea06404decde6feb
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 997fe9d0acd419aace0cfe7d464e13f53294dc84
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/SynthIA-70B-v1.5/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5b8aca23823e7b8ad38b018f6461febc2a830f4b
       name: Q5_K_S.gguf

@@ -1,21 +1,124 @@
 ---
+language:
+- en
+license: other
+tags:
+- causal-lm
 datasets:
 - HuggingFaceH4/ultrachat_200k
 - HuggingFaceH4/ultrafeedback_binarized
 - meta-math/MetaMathQA
 - WizardLM/WizardLM_evol_instruct_V2_196k
 - Intel/orca_dpo_pairs
-language:
-- en
-tags:
-- causal-lm
 extra_gated_fields:
   Name: text
   Email: text
   Country: text
   Organization or Affiliation: text
   I ALLOW Stability AI to email me about new model releases: checkbox
-license: other
+model-index:
+- name: stablelm-zephyr-3b
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 46.08
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=stabilityai/stablelm-zephyr-3b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 74.16
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=stabilityai/stablelm-zephyr-3b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 46.17
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=stabilityai/stablelm-zephyr-3b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 46.49
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=stabilityai/stablelm-zephyr-3b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 65.51
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=stabilityai/stablelm-zephyr-3b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 42.15
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=stabilityai/stablelm-zephyr-3b
+      name: Open LLM Leaderboard
 ---
 # `StableLM Zephyr 3B`
 
@@ -44,7 +147,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 tokenizer = AutoTokenizer.from_pretrained('stabilityai/stablelm-zephyr-3b')
 model = AutoModelForCausalLM.from_pretrained(
     'stabilityai/stablelm-zephyr-3b',
-    trust_remote_code=True,
     device_map="auto"
 )
 
@@ -65,7 +167,7 @@ tokens = model.generate(
 print(tokenizer.decode(tokens[0], skip_special_tokens=False))
 ```
 
-You can also see how to run a performance optimized version of this model [here](https://github.com/eaidova/openvino_notebooks/blob/ea/stateful_chatbot/notebooks/273-stable-zephyr-3b-chatbot/273-stable-zephyr-3b-chatbot.ipynb) using [OpenVINO](https://docs.openvino.ai/2023.2/home.html) from Intel.
+You can also see how to run a performance optimized version of this model [here](https://github.com/openvinotoolkit/openvino_notebooks/blob/main/notebooks/273-stable-zephyr-3b-chatbot/273-stable-zephyr-3b-chatbot.ipynb) using [OpenVINO](https://docs.openvino.ai/2023.2/home.html) from Intel.
 
 ## Model Details
 
@@ -152,3 +254,16 @@ The model is intended to be used as a foundational base model for application-sp
 This model is not trained against adversarial inputs. We strongly recommend pairing this model with an input and output classifier to prevent harmful responses.
 
 Through our internal red teaming, we discovered that while the model will not output harmful information if not prompted to do so, it is willing to output potentially harmful outputs or misinformation when the user requests it. Using this model will require guardrails around your inputs and outputs to ensure that any outputs returned are not misinformation or harmful. Additionally, as each use case is unique, we recommend running your own suite of tests to ensure proper performance of this model. Finally, do not use the models if they are unsuitable for your application, or for any applications that may cause deliberate or unintentional harm to others.
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_stabilityai__stablelm-zephyr-3b)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |53.43|
+|AI2 Reasoning Challenge (25-Shot)|46.08|
+|HellaSwag (10-Shot)              |74.16|
+|MMLU (5-Shot)                    |46.17|
+|TruthfulQA (0-shot)              |46.49|
+|Winogrande (5-shot)              |65.51|
+|GSM8k (5-shot)                   |42.15|
+

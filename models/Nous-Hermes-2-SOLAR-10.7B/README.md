@@ -14,6 +14,8 @@ model-index:
 license: apache-2.0
 language:
 - en
+datasets:
+- teknium/OpenHermes-2.5
 ---
 
 # Nous Hermes 2 - Solar 10.7B
@@ -28,17 +30,24 @@ Nous Hermes 2 - SOLAR 10.7B is the flagship Nous Research model on the SOLAR 10.
 Nous Hermes 2 SOLAR 10.7B was trained on 1,000,000 entries of primarily GPT-4 generated data, as well as other high quality data from open datasets across the AI landscape.
 
 # Table of Contents
-1. [Benchmark Results](#benchmark-results)
+1. [Example Outputs](#example-outputs)
+2. [Benchmark Results](#benchmark-results)
     - GPT4All
     - AGIEval
     - BigBench
-    - Averages Compared
-2. [Prompt Format](#prompt-format)
-3. [Quantized Models](#quantized-models)
+    - TruthfulQA
+3. [Prompt Format](#prompt-format)
+4. [Quantized Models](#quantized-models)
 
 ## Benchmark Results
 
 Nous-Hermes 2 on SOLAR 10.7B is a major improvement across the board on the benchmarks below compared to the base SOLAR 10.7B model, and comes close to approaching our Yi-34B model!
+
+## Example Outputs
+
+### Ask for help creating a discord bot:
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/6317aade83d8d2fd903192d9/jPaRbNms1mHRD-Lxh7B9R.png)
 
 # Benchmarks Compared
 
@@ -194,6 +203,6 @@ In LM-Studio, simply select the ChatML Prefix on the settings side pane:
 
 # Quantized Models:
 
-[todo]
+GGUF: https://huggingface.co/TheBloke/Nous-Hermes-2-SOLAR-10.7B-GGUF
 
 [<img src="https://raw.githubusercontent.com/OpenAccess-AI-Collective/axolotl/main/image/axolotl-badge-web.png" alt="Built with Axolotl" width="200" height="32"/>](https://github.com/OpenAccess-AI-Collective/axolotl)

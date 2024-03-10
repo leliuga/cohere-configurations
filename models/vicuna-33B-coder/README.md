@@ -23,6 +23,22 @@ model-index:
 
 This modelcard aims to be a base template for new models. It has been generated using [this raw template](https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/modelcard_template.md?plain=1).
 
+# Quantizationed versions
+
+Quantizationed versions of this model are available thanks to [TheBloke](https://hf.co/TheBloke).
+
+##### GPTQ
+
+- [TheBloke/vicuna-33B-coder-GPTQ](https://huggingface.co/TheBloke/vicuna-33B-coder-GPTQ)
+
+##### GGUF
+
+- [TheBloke/vicuna-33B-coder-GGUF](https://huggingface.co/TheBloke/vicuna-33B-coder-GGUF)
+
+##### AWQ
+
+- [TheBloke/vicuna-33B-coder-AWQ](https://huggingface.co/TheBloke/vicuna-33B-coder-AWQ)
+
 ## Model Details
 
 ### Model Description

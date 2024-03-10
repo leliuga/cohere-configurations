@@ -6,7 +6,13 @@ language:
 - de
 - es
 - en
-inference: false
+inference:
+  parameters:
+    temperature: 0.5
+widget:
+- messages:
+  - role: user
+    content: What is your favorite condiment?
 ---
 # Model Card for Mixtral-8x7B
 The Mixtral-8x7B Large Language Model (LLM) is a pretrained generative Sparse Mixture of Experts. The Mixtral-8x7B outperforms Llama 2 70B on most benchmarks we tested.
@@ -41,6 +47,8 @@ tokenize(BOT_MESSAGE_N) + [EOS_ID]
 
 In the pseudo-code above, note that the `tokenize` method should not add a BOS or EOS token automatically, but should add a prefix space. 
 
+In the Transformers library, one can use [chat templates](https://huggingface.co/docs/transformers/main/en/chat_templating) which make sure the right format is applied.
+
 ## Run the model
 
 ```python
@@ -49,12 +57,17 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-model = AutoModelForCausalLM.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto")
 
-text = "Hello my name is"
-inputs = tokenizer(text, return_tensors="pt")
+messages = [
+    {"role": "user", "content": "What is your favourite condiment?"},
+    {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
+    {"role": "user", "content": "Do you have mayonnaise recipes?"}
+]
 
-outputs = model.generate(**inputs, max_new_tokens=20)
+inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to("cuda")
+
+outputs = model.generate(inputs, max_new_tokens=20)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
@@ -74,12 +87,17 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-+ model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16).to(0)
++ model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16, device_map="auto")
 
-text = "Hello my name is"
-+ inputs = tokenizer(text, return_tensors="pt").to(0)
+messages = [
+    {"role": "user", "content": "What is your favourite condiment?"},
+    {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
+    {"role": "user", "content": "Do you have mayonnaise recipes?"}
+]
 
-outputs = model.generate(**inputs, max_new_tokens=20)
+input_ids = tokenizer.apply_chat_template(messages, return_tensors="pt").to("cuda")
+
+outputs = model.generate(input_ids, max_new_tokens=20)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 </details>
@@ -96,12 +114,18 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-+ model = AutoModelForCausalLM.from_pretrained(model_id, load_in_4bit=True)
++ model = AutoModelForCausalLM.from_pretrained(model_id, load_in_4bit=True, device_map="auto")
 
 text = "Hello my name is"
-+ inputs = tokenizer(text, return_tensors="pt").to(0)
+messages = [
+    {"role": "user", "content": "What is your favourite condiment?"},
+    {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
+    {"role": "user", "content": "Do you have mayonnaise recipes?"}
+]
 
-outputs = model.generate(**inputs, max_new_tokens=20)
+input_ids = tokenizer.apply_chat_template(messages, return_tensors="pt").to("cuda")
+
+outputs = model.generate(input_ids, max_new_tokens=20)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 </details>
@@ -118,12 +142,17 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-+ model = AutoModelForCausalLM.from_pretrained(model_id, use_flash_attention_2=True)
++ model = AutoModelForCausalLM.from_pretrained(model_id, use_flash_attention_2=True, device_map="auto")
 
-text = "Hello my name is"
-+ inputs = tokenizer(text, return_tensors="pt").to(0)
+messages = [
+    {"role": "user", "content": "What is your favourite condiment?"},
+    {"role": "assistant", "content": "Well, I'm quite partial to a good squeeze of fresh lemon juice. It adds just the right amount of zesty flavour to whatever I'm cooking up in the kitchen!"},
+    {"role": "user", "content": "Do you have mayonnaise recipes?"}
+]
 
-outputs = model.generate(**inputs, max_new_tokens=20)
+input_ids = tokenizer.apply_chat_template(messages, return_tensors="pt").to("cuda")
+
+outputs = model.generate(input_ids, max_new_tokens=20)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 </details>

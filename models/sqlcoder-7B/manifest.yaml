@@ -17,6 +17,7 @@ tags:
 - en
 - base_model:defog/sqlcoder-7b
 - license:cc-by-sa-4.0
+- has_space
 - text-generation-inference
 - region:us
 config:
@@ -27,19 +28,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +37,8 @@ variants:
     - models/sqlcoder-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 76b857431623942e4df6cfc995ea6e716e8248d6
       name: Q2_K.gguf
@@ -71,15 +52,8 @@ variants:
     - models/sqlcoder-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 36a0713642a5ab6bc12f89ee50e829b06946b011
       name: Q3_K_L.gguf
@@ -93,15 +67,8 @@ variants:
     - models/sqlcoder-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f77f4e75b408af31e8f881604d5b883d2fda65ba
       name: Q3_K_M.gguf
@@ -115,15 +82,8 @@ variants:
     - models/sqlcoder-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 641252a9718b71a5a6523cd362b1ea7e3f13759b
       name: Q3_K_S.gguf
@@ -137,15 +97,8 @@ variants:
     - models/sqlcoder-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8b800195b9134333b6afb0abd4824ba558354353
       name: Q4_0.gguf
@@ -159,15 +112,8 @@ variants:
     - models/sqlcoder-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fa0ea601b4306696cf1f1d18b030497531fd013
       name: Q4_K_M.gguf
@@ -181,15 +127,8 @@ variants:
     - models/sqlcoder-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e4e5a0e06f432fe4661849f15a97e6c6346519cc
       name: Q4_K_S.gguf
@@ -203,15 +142,8 @@ variants:
     - models/sqlcoder-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 78c47057f4cea7ffe9b5a999a01d193116bfa995
       name: Q5_0.gguf
@@ -225,15 +157,8 @@ variants:
     - models/sqlcoder-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 11e0ab1606e624613a79fa646147ad5f9ad5908e
       name: Q5_K_M.gguf
@@ -247,15 +172,8 @@ variants:
     - models/sqlcoder-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aaad4d72b3f31bdd5614e56d8e8e7c3a427f35c4
       name: Q5_K_S.gguf
@@ -269,15 +187,8 @@ variants:
     - models/sqlcoder-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4228e8e7f45b06be84ecda983746bdc09bac4cd
       name: Q6_K.gguf
@@ -291,15 +202,8 @@ variants:
     - models/sqlcoder-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 56609f87a69cdc25a0cfb220a17e8e884dded147
       name: Q8_0.gguf

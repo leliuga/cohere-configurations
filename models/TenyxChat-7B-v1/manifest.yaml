@@ -1,0 +1,238 @@
+id: TenyxChat-7B-v1
+parent_id: tenyx/TenyxChat-7B-v1
+name: TenyxChat 7B v1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Tenyx
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- tenyx-fine-tuning
+- dpo
+- tenyxchat
+- en
+- arxiv:2305.18290
+- arxiv:2309.11235
+- arxiv:2306.05685
+- arxiv:1803.05457
+- arxiv:1905.07830
+- arxiv:2009.03300
+- arxiv:2109.07958
+- arxiv:1907.10641
+- arxiv:2110.14168
+- base_model:tenyx/TenyxChat-7B-v1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 41163e81c03a2d326cba378ef9227b77989b4901
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q2_K.gguf
+      size: 2701426048
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 14adb2ca42491c8881d124171a1b0a3b6708451f
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q3_K_L.gguf
+      size: 3822035136
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 57303bee5a8a212266ed904477876950b8ec8538
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q3_K_M.gguf
+      size: 3518996672
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 44699ac2cd2ae3f65a111e47fc5357322042cd79
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q3_K_S.gguf
+      size: 3164577984
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f76335f358353736713098adb141b4b5386d9db6
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q4_0.gguf
+      size: 4108928256
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f437ddf1f34140e32741abdd1384a44523def357
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q4_K_M.gguf
+      size: 4368450816
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9458bda50411f0a27b6fbac993268a6e150cdd1b
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q4_K_S.gguf
+      size: 4140385536
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 06fdd6fd6411e5aaa9f81275579c7672c92e98c0
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q5_0.gguf
+      size: 4997728512
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 3d5d23fe4cfa89850d04c9254077f2cd4e152ce0
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q5_K_M.gguf
+      size: 5131421952
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8bf86f3890e5cef0ba430740d60d59eaa99af9cb
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q5_K_S.gguf
+      size: 4997728512
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 969b509605ef8bc7c6450c34a7927b4098886420
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q6_K.gguf
+      size: 5942078784
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/TenyxChat-7B-v1/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: a4101e1aeafe6c0d81a4c2bfeb00c07c8caf3e2f
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/TenyxChat-7B-v1-GGUF/resolve/main/tenyxchat-7b-v1.Q8_0.gguf
+      size: 7695875264
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "System: {system_message}\nUser: {prompt}\nAssistant:\n"

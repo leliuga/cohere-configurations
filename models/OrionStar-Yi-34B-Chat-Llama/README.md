@@ -9,7 +9,10 @@ widget:
 pipeline_tag: text-generation
 ---
 
-[OrionStarAI/OrionStar-Yi-34B-Chat](https://huggingface.co/OrionStarAI/OrionStar-Yi-34B-Chat/tree/main) with tensors renamed to match standard Llama modelling code.
+[OrionStarAI/OrionStar-Yi-34B-Chat-Llama](https://huggingface.co/OrionStarAI/OrionStar-Yi-34B-Chat-Llama/tree/main) 
+
+*This model is identical to [OrionStarAI/OrionStar-Yi-34B](https://huggingface.co/OrionStarAI/OrionStar-Yi-34B/tree/main) 
+with the only difference being that the tensors have been renamed to follow the LLaMA format for automatic evaluation on the HF leaderboard.*
 
 # Model Introduction
 

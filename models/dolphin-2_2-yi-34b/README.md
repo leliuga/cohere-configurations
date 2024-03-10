@@ -14,6 +14,8 @@ license_link: LICENSE
 Dolphin 2.2 🐬
 https://erichartford.com/dolphin
 
+Join our Discord! https://discord.gg/vT3sktQ3zb
+
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/KqsVXIvBd3akEjvijzww7.png" width="600" />
 
 Dolphin-2.2-Yi-34b's training was sponsored by [a16z](https://a16z.com/supporting-the-open-source-ai-community/).

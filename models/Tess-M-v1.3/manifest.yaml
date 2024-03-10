@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Tess-M-v1.3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a402226f3bb0891aa30ff6d03aa44cbf3f38c526
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Tess-M-v1.3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 754343158451247ef5b850ff95aae2b2e3591b82
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Tess-M-v1.3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a4f139a1808b96b644b94be5a811cc4ef986251c
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Tess-M-v1.3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2e8b43fe886055038b90d4a1b34e7881b9c682d0
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Tess-M-v1.3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e8d6f0eb830abe6c95e88e227c297c3efe694249
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Tess-M-v1.3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a36d364fc2872d4c242feeed4fc22c79607c81c
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Tess-M-v1.3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b0b36f2d282718d31f5c77f42db0fbf2fc67bb66
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Tess-M-v1.3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 682e0bb18373e4fec7655e6526339f856ad4c2bc
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Tess-M-v1.3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da28164bb40db74eda4c4e5fa0547c9a2d27d61b
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Tess-M-v1.3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 70c0634cc241f07abc4e757ab265926ed87f7170
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Tess-M-v1.3/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 370baa09bb4b5e9f91a3cd87fe9911c48a9cddc5
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Tess-M-v1.3/Q8_0/Q8_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5665f61ddc8a5495c0f72e01e20d885f4273ceed
       name: Q8_0.gguf

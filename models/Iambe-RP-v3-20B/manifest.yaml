@@ -1,0 +1,228 @@
+id: Iambe-RP-v3-20B
+parent_id: athirdpath/Iambe-RP-v3-20b
+name: Iambe RP v3 20B
+description: ""
+architecture: llama
+licence: cc-by-nc-4.0
+object: model
+owned_by: Raven
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- not-for-all-audiences
+- en
+- dataset:athirdpath/DPO_Pairs-Roleplay-Alpaca-NSFW-v1
+- base_model:athirdpath/Iambe-RP-v3-20b
+- license:cc-by-nc-4.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 62
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 6a46da55fe4f8611a433bff2430c5ba1d33ff91f
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q2_K.gguf
+      size: 8312565760
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 9a1e5a78c83a476cebbe4182c65bf1e2a97743e2
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q3_K_L.gguf
+      size: 10628741120
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 1f339950d9539bb237705b070bc0f47716ae4749
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q3_K_M.gguf
+      size: 9698129920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 800f5448f3f7b94a36c174a7488cada9ff5fd682
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q3_K_S.gguf
+      size: 8659343360
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: ee5653833571d93b8f5f78da74614a4735aaf40b
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q4_0.gguf
+      size: 11292999680
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 0a09b13978a942676b2df81b32877233e88ecf9c
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q4_K_M.gguf
+      size: 12043182080
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 111f8d4bf1de03bf84454e1393dfa405cc94b5e7
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q4_K_S.gguf
+      size: 11341496320
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 7c30f90531a3a9f99de31e60ab0b2fc6210d52d6
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q5_0.gguf
+      size: 13771735040
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: cbde22d2bc831d2b027fa13e0ca6e2df9a3fb4ae
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q5_K_M.gguf
+      size: 14158192640
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 6ce89b3090f76b36d6352a2eae94915fe34f5382
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q5_K_S.gguf
+      size: 13771735040
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: 049a8d3c4b26b157f1f0f58e3fd89c934f1af09e
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q6_K.gguf
+      size: 16405391360
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Iambe-RP-v3-20B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "65"
+    artifacts:
+    - id: b2a6ab9e1c106039f66e5fb63ada4a528f205867
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Iambe-RP-v3-20B-GGUF/resolve/main/iambe-rp-v3-20b.Q8_0.gguf
+      size: 21247621120
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

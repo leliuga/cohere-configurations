@@ -27,19 +27,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/KAI-7B-Instruct/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9ba4d578d7a7cec8a2933c6a6d231237255bd2a8
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/KAI-7B-Instruct/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f3c6d8fb15350ebf2429722060563b6712f03ca2
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/KAI-7B-Instruct/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1fc5e9455c4b197804fb54d58a835af74ff015a4
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/KAI-7B-Instruct/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d2282bc7f6bb1ba6215a428d0654d51fbae6237d
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/KAI-7B-Instruct/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd836bdb3c21a36af0c4c929a00eea1f7faeccee
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/KAI-7B-Instruct/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8724fab7ea65a61a8869b012c603aef282514edf
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/KAI-7B-Instruct/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25ef1f1087555f8c1d3419bfb2b09b262ec60dce
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/KAI-7B-Instruct/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3769c251ec79f74e4191ed46261eefb5505312be
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/KAI-7B-Instruct/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0a544a8c6e4a949ad946f0a3503545f7478092fa
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/KAI-7B-Instruct/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 29ad96e826df02e74c573573662bf5372e148417
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/KAI-7B-Instruct/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d7d51efb4fba2d9e1a4c04a944db92c423d31781
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/KAI-7B-Instruct/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4342ac87654422a6fa3b10a8f951b2d9719e1c8a
       name: Q8_0.gguf

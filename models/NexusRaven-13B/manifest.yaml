@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/NexusRaven-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 087450fbb10fd4c951aa1a56249211065512e04a
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/NexusRaven-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 74ac01ef21376941cd81c633ffdded4da1c1864c
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/NexusRaven-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8eebba8e9e4d98c608b7c7c6c5d50efecd772c99
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/NexusRaven-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c1709e085e5ff8aaff23557d6dab00f17d67d2db
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/NexusRaven-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f675bb98cb62531d4667630391315af0cb85db79
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/NexusRaven-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 686343a0ed92f459813fa7419455a3d58b89d454
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/NexusRaven-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 76ab049e7b922c443b791f9192063b7d9e1bb2fa
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/NexusRaven-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5bd869bedc1ed78540319f5253ceaa053b239c6b
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/NexusRaven-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 42da34e25376cca71fef001f8e737739f801dd62
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/NexusRaven-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d922564dcbc694c3caa1cd6b2a411cfae8dda308
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/NexusRaven-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 47ebeb52acc3b949719ea52ad934238e2ab0af1c
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/NexusRaven-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2d68c54fbec75139bf0f205cb9b101b7fc5295a5
       name: Q8_0.gguf

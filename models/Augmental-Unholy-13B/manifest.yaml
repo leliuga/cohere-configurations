@@ -11,6 +11,7 @@ languages: []
 tags:
 - peft
 - gguf
+- llama
 - arxiv:1910.09700
 - base_model:Heralax/Augmental-Unholy-13b
 - license:llama2
@@ -23,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +33,8 @@ variants:
     - models/Augmental-Unholy-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c64743a1967008c8a50783fd5e80d30ad0595a0d
       name: Q2_K.gguf
@@ -67,15 +48,8 @@ variants:
     - models/Augmental-Unholy-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7f3198508389dff3af6010aa47d16bed4d18fcd8
       name: Q3_K_L.gguf
@@ -89,15 +63,8 @@ variants:
     - models/Augmental-Unholy-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f0f0a0f4705b7d591d0e0f8442050941f8e03ee1
       name: Q3_K_M.gguf
@@ -111,15 +78,8 @@ variants:
     - models/Augmental-Unholy-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da6fdc84574e9bd8f1041607a104d63ee9daa848
       name: Q3_K_S.gguf
@@ -133,15 +93,8 @@ variants:
     - models/Augmental-Unholy-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bac729827d0c5b7ed43a01ff2a0ed413ae2354d0
       name: Q4_0.gguf
@@ -155,15 +108,8 @@ variants:
     - models/Augmental-Unholy-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3f7d7548cb14d57d9ec8ed9b5788fe7228f29900
       name: Q4_K_M.gguf
@@ -177,15 +123,8 @@ variants:
     - models/Augmental-Unholy-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 44d3867472af20dde0423be09b92d30e279fc18c
       name: Q4_K_S.gguf
@@ -199,15 +138,8 @@ variants:
     - models/Augmental-Unholy-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 787054317315cd3a2336cba0894f13d0f30a6000
       name: Q5_0.gguf
@@ -221,15 +153,8 @@ variants:
     - models/Augmental-Unholy-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da2b7d499ce7264dbb2780e3b4ff1ffa9bd57bb2
       name: Q5_K_M.gguf
@@ -243,15 +168,8 @@ variants:
     - models/Augmental-Unholy-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 73678958f5a35fa83fc5843efdc21bbf5515844f
       name: Q5_K_S.gguf
@@ -265,15 +183,8 @@ variants:
     - models/Augmental-Unholy-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cb3ab87272205225d5074fceecb4721da94737e7
       name: Q6_K.gguf
@@ -287,15 +198,8 @@ variants:
     - models/Augmental-Unholy-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a87635489a0f9132e07b9bfc081f68d197cdd5f6
       name: Q8_0.gguf

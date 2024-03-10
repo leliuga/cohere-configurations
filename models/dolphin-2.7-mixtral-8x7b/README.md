@@ -1,8 +1,8 @@
 ---
 datasets:
-- ehartford/dolphin
+- cognitivecomputations/dolphin
 - jondurbin/airoboros-2.2.1
-- ehartford/dolphin-coder
+- cognitivecomputations/dolphin-coder
 - teknium/openhermes
 - ise-uiuc/Magicoder-OSS-Instruct-75K
 - ise-uiuc/Magicoder-Evol-Instruct-110K
@@ -14,7 +14,7 @@ license: apache-2.0
 
 Dolphin 2.7 Mixtral 8x7b 🐬
 
-Discord https://discord.gg/vT3sktQ3zb
+Join our Discord! https://discord.gg/cognitivecomputations 
 
 This is a retraining of Dolphin-2.5/2.6 with fixes in transformers library, to see if it performs better.
 

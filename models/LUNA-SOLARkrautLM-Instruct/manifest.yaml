@@ -32,19 +32,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -54,15 +41,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02a1c830c038476eaadd522fe4385516bdd219f3
       name: Q2_K.gguf
@@ -76,15 +56,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c44c0103a66557cbd6aeee97d29163694bebf9d
       name: Q3_K_L.gguf
@@ -98,15 +71,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4acb3627c8074c0e65b49eb7d242fbe5591d276d
       name: Q3_K_M.gguf
@@ -120,15 +86,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 65a7dc567c549059e7ee01bff58239a61dee7fce
       name: Q3_K_S.gguf
@@ -142,15 +101,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0fe7bfd52a7b9df9d9d7725b56b5f0a237e0faa7
       name: Q4_0.gguf
@@ -164,15 +116,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 242f0560966e8e445a4547ef2b233ff0f8b4e99b
       name: Q4_K_M.gguf
@@ -186,15 +131,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3d46646729c74466329d19349ac915d5da1cd023
       name: Q4_K_S.gguf
@@ -208,15 +146,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2f7c82861210d949462a799e2ede91b3ae08270f
       name: Q5_0.gguf
@@ -230,15 +161,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 769e685a729210a7c3270d41486744e0002dfb63
       name: Q5_K_M.gguf
@@ -252,15 +176,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f4d9278f0133fe2d56adb9d55ee8539f2540e3fc
       name: Q5_K_S.gguf
@@ -274,15 +191,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ff380aff67361ce377c40eb09d1280e13cd46abf
       name: Q6_K.gguf
@@ -296,15 +206,8 @@ variants:
     - models/LUNA-SOLARkrautLM-Instruct/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b9b6b185aa55fdafde5eb223a7cee260993a9730
       name: Q8_0.gguf

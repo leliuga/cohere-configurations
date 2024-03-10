@@ -39,19 +39,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -61,15 +48,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8fc93d6cd2aaffb003f5126718c78920a8df344a
       name: Q2_K.gguf
@@ -83,15 +63,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 545d737f1d138669de520cd21ed02a05bfa6e11f
       name: Q3_K_M.gguf
@@ -105,15 +78,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 28fdcbcfcb771a41fe6ac82863ad5305558137bd
       name: Q4_0.gguf
@@ -127,15 +93,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ccec1fe41f248758f4bc1604dc2f6cfa2b8da1fe
       name: Q4_K_M.gguf
@@ -149,15 +108,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a4ef2ec54439789bef22f18cf0a88a1cbc1595ba
       name: Q5_0.gguf
@@ -171,15 +123,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 89c0bcee698394708ee764d7e0d8783e9f7c8770
       name: Q5_K_M.gguf
@@ -193,15 +138,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2071abf4135f418db64204faeb10be80c733fb26
       name: Q6_K.gguf
@@ -215,15 +153,8 @@ variants:
     - models/SauerkrautLM-Mixtral-8x7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1b2ecc93e57f3d72fd0e4cca8b3856e060afb22a
       name: Q8_0.gguf

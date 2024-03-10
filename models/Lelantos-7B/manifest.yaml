@@ -27,19 +27,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Lelantos-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7593295fb676c85a26e897570aa1b5d9d89591d0
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Lelantos-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 888b385c7ab151359e07264a57cdcb97015d7f66
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Lelantos-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb494e29477c19c453512ea59b1eb3b7de9c4e70
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Lelantos-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b14c6f9168bd4255910819d8381c29f188c10317
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Lelantos-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f597ffc67ee44486667a2918bbad9492c1cc83c4
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Lelantos-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ddbebe8667ae27c675a7d2451f76d15435ff9d30
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Lelantos-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c00697027cfe7774228802acc4bb4ff82bf1a3b
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Lelantos-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 322b4c6b81c2067258f059eb249a147125f41040
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Lelantos-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b65f09f47301b262810fbd14358f084f865548a4
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Lelantos-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c5da5e0543e83ad7fe3c2938ba5c814bf45483ad
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Lelantos-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: abd96426f3081c575e51cff91e7c9dfeb4559de9
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Lelantos-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e42dab89100d73716f515a299b9b82a51f5e1788
       name: Q8_0.gguf

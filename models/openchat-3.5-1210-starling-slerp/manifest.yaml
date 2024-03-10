@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 355898e26f3a2b03f96adc029776f3dfbd7919a0
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5f253c4184e355ae10b3668bbd1bda1ea40cf590
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 476ccd1ef51370168ee051c6dffba50fd6747b9d
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f77a4325fca49727384564126ae55b26334f78dd
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 62c89c113e0b673daf57a411c997b2633cfd3fcc
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2b387df26eb29fa3b8dbd52617c3c452b7a85671
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 342db35e081b55f6527bb1199ffb15c573c47859
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9b70fe935772dc88ec0d17ac415d9420523c7055
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 890caa230af57715338e865122bcb5ce150acecd
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6b8f9403e823fea1cafd072f2290274fc874a0d4
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aafe9a3b8084cfb1abacf43aae0f3f1ea2a2ef4a
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/openchat-3.5-1210-starling-slerp/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 62e424e35093e5b557c879b9dd9f8a4b7238f252
       name: Q8_0.gguf

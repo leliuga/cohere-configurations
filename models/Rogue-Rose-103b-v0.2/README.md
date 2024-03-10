@@ -35,7 +35,7 @@ Experiment with any and all of the settings below, but trust me on a few points:
 If you save the below settings as a .json file, you can import them directly into Silly Tavern.
 ```
 {
-    "temp": 1.3,
+    "temp": 1.15,
     "temperature_last": true,
     "top_p": 1,
     "top_k": 0,
@@ -44,7 +44,7 @@ If you save the below settings as a .json file, you can import them directly int
     "epsilon_cutoff": 0,
     "eta_cutoff": 0,
     "typical_p": 1,
-    "min_p": 0.40,
+    "min_p": 0.75,
     "rep_pen": 1.15,
     "rep_pen_range": 0,
     "no_repeat_ngram_size": 0,
@@ -121,13 +121,20 @@ If you save this as a .json file, you can import it directly into Silly Tavern.
 This repo contains branches for various exllama2 quanizations of the model calibratend on a version of the PIPPA dataset.
 
 * Main Branch, Full weights
-* 3.2 bpw -- This will fit comfortably within 48 GB of VRAM at 8192 context.
-* 3.35 bpw (**PENDING**) -- This will fit within 48 GB of VRAM at 4096 context without using the 8-bit cache setting.
-* 3.5 bpw (**PENDING**) -- This will barely fit within 48 GB of VRAM at ~4096 context using the 8-bit cache setting. If you get OOM, try lowering the context size slightly until it fits.
+* 3.2 bpw branch -- This will fit comfortably within 48 GB of VRAM at 8192 context.
+* 3.35 bpw branch -- This will fit within 48 GB of VRAM at 4096 context without using the 8-bit cache setting.
+* 3.0 bpw -- [LoneStriker/Rogue-Rose-103b-v0.2-3.0bpw-h6-exl2-2](https://huggingface.co/LoneStriker/Rogue-Rose-103b-v0.2-3.0bpw-h6-exl2-2)
+* 4.0 bpw -- [LoneStriker/Rogue-Rose-103b-v0.2-4.0bpw-h6-exl2-2](https://huggingface.co/LoneStriker/Rogue-Rose-103b-v0.2-4.0bpw-h6-exl2-2)
+* 5.0 bpw -- [LoneStriker/Rogue-Rose-103b-v0.2-5.0bpw-h6-exl2-2](https://huggingface.co/LoneStriker/Rogue-Rose-103b-v0.2-5.0bpw-h6-exl2-2)
+* GGUF -- [TheBloke/Rogue-Rose-103b-v0.2-GGUF](https://huggingface.co/TheBloke/Rogue-Rose-103b-v0.2-GGUF)
+* AWQ -- [TheBloke/Rogue-Rose-103b-v0.2-AWQ](https://huggingface.co/TheBloke/Rogue-Rose-103b-v0.2-AWQ)
+* GPTQ -- [TheBloke/Rogue-Rose-103b-v0.2-GPTQ](https://huggingface.co/TheBloke/Rogue-Rose-103b-v0.2-GPTQ)
+
 
 ### Licence and usage restrictions
 
 Llama2 license inherited from base models.
+I am not a lawyer and I do not profess to know how multiple licenses intersect in a merge of LLM model weights. You should consult with a lawyer before using any model merge beyond private use.
 
 ### Tools Used
 

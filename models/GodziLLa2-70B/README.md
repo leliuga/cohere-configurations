@@ -10,7 +10,7 @@ datasets:
 - mlabonne/guanaco-llama2-1k
 ---
 
-<img src="https://drive.google.com/uc?export=view&id=1D8wxXkS1nsq3uqbOzOLwgx1cLJhY1nvN" alt="GodziLLa2-70B">
+![godzilla 70b](gz70b.png)
 Released August 11, 2023
 
 ## Model Description
@@ -27,7 +27,10 @@ GodziLLa 2 70B is an experimental combination of various proprietary LoRAs from 
 | Winogrande (5-shot)   | 83.19  |
 | GSM8K (5-shot)        | 43.21  |
 | DROP (3-shot)         | 52.31  |
-| Average               | 67.01  |
+| Average (w/ DROP)     | 67.01  |
+| Average (w/o DROP)    | 69.46  |
+
+Note: As of December 1, 2023, [DROP](https://arxiv.org/abs/1903.00161) is removed from the leaderboard benchmarks.
 
 According to the leaderboard description, here are the benchmarks used for the evaluation:
 - [MMLU](https://arxiv.org/abs/2009.03300) (5-shot) - a test to measure a text model’s multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more.

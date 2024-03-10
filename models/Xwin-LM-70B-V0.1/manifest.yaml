@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9c11a0164b0f4376c411a471ae281545302a4f06
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b8031f64406800015bc27366973068902d48059b
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8515c0083c8a561e3e605da6c3e3ba1689b24e39
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2164e556486c6de00acc7459def37f56f06b8e73
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: adb10bf126cb010f95cbc7a790db1e214abb6f25
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0ec17b6a3fd26ae026555331778b0b7545d11431
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5bbb57d0b1e32fc7ce29f10abdd801891a3c0672
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fc79f58b21380f16cf4119d30e7189584d0d05cd
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2912afb4642d21f0fdef865ed60b379771f35500
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Xwin-LM-70B-V0.1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e1be6a3ae8180648c091fc05edd9659e31bb3a79
       name: Q5_K_S.gguf

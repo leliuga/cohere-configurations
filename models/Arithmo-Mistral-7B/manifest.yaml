@@ -27,19 +27,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 64080468e4d7016297ff69fda222b3fa1b85752f
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f5f2ec542522e7b837206d1bae6fa489b397d429
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e95700f44a0096b27a3655690bb26a4d29e8aba0
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d42468915ff9ac514c25ea11a82919269aac7ba0
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 303f0c8643ebe12de1c886290a9193ebf5ae4c90
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f3daa30c6b104a9371e95c4640b67644be02ff48
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 108638be0eedcbe86983c40f8072ac23d1828bbc
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fa595a349c0fae6a617018991c989e4cbd1acc3b
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ec64c14d75f0ad5c29c38f70157929e13055376
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3dd035ab0662c17e16f88259bb83324c9aac1d2d
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 591d3de8901057d76eee44b841be525d6fd01990
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Arithmo-Mistral-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 49a1c53d893e9804f7c8a6cf49b1c7c26fdb3aff
       name: Q8_0.gguf

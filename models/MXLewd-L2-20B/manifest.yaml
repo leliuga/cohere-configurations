@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 62
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/MXLewd-L2-20B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a432326ddd8ca9b0e44ef0c3c5d31845ed40c21
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/MXLewd-L2-20B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3bc1b3d923dfa346055539b48511c50dc6f9db50
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/MXLewd-L2-20B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5b4fd310638c9fccc79a2c0bd6b603cfaf28618
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/MXLewd-L2-20B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5f272cf7a5656a50eb8d36d3377f7f2ea15acc2d
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/MXLewd-L2-20B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8a836b13292ed5d989972db8c93938d26f81429e
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/MXLewd-L2-20B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 62a99a8ae15c880c42789dc6c769c482ecdc576f
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/MXLewd-L2-20B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2075d22231d2a36723beb07050b6a0de0698e2c
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/MXLewd-L2-20B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b78cbad238edb79373b9068b2caa61975fcaff65
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/MXLewd-L2-20B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 03082776d32f7f690fa18f2fe42a646d6e91af9a
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/MXLewd-L2-20B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6ebec4bd4ba4575cdf701a1fe751dec501f6bca0
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/MXLewd-L2-20B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f99756a7d8192968b6d8b270c8fb51c4a34efcba
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/MXLewd-L2-20B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: de7ff82c005a35a010a127e75ca7d06b76037971
       name: Q8_0.gguf

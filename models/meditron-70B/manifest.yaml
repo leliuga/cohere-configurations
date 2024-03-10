@@ -34,19 +34,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -56,15 +43,8 @@ variants:
     - models/meditron-70B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a698059d9a4d154c77c48481b6e9c0ef9c684fe4
       name: Q2_K.gguf
@@ -78,15 +58,8 @@ variants:
     - models/meditron-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f20a5e8f1368856cf955457eb456bbb52231727f
       name: Q3_K_L.gguf
@@ -100,15 +73,8 @@ variants:
     - models/meditron-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52d17d70da8175487a7fb23ab0fef5c0d6414060
       name: Q3_K_M.gguf
@@ -122,15 +88,8 @@ variants:
     - models/meditron-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 340650cad13b7af3556ba1ffc60b9da44df3f93f
       name: Q3_K_S.gguf
@@ -144,15 +103,8 @@ variants:
     - models/meditron-70B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6869da5753cc01b95898057d043035fc545ac1f2
       name: Q4_0.gguf
@@ -166,15 +118,8 @@ variants:
     - models/meditron-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8654a39e893267abd71582c5123afcb7564d4d80
       name: Q4_K_M.gguf
@@ -188,15 +133,8 @@ variants:
     - models/meditron-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d4231ca4ff9de393e8e9472b16aef9a5cd335d80
       name: Q4_K_S.gguf
@@ -210,15 +148,8 @@ variants:
     - models/meditron-70B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 61d41493e9500af563483b14237e3673b5b520c8
       name: Q5_0.gguf
@@ -232,15 +163,8 @@ variants:
     - models/meditron-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 92b3b3013da7dfda25c4b623ab44e2cd0f518bbe
       name: Q5_K_M.gguf
@@ -254,15 +178,8 @@ variants:
     - models/meditron-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: db35a9f4c690ebdb15c8a9aa8ba6648247ee3d25
       name: Q5_K_S.gguf

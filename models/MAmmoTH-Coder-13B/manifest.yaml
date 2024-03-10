@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f3d26a22df391ca5d73b02cc0fc8cb3881ab0a00
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e230ce0534a71789af9fb16abd16e3046144ff0
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e55d2781c6da266076be3e0a5251854dd1c5d13a
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ad2700f841a1931acb4e737daf5eef8613fe4673
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d940cc1fce4ea8e23fa3dd5d55156288f886908b
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d65c432f0c0e595c0d28f3fd11d80ce664485b90
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a1648b2cf2fbe3e254330aa8f5650e82ac4cbccf
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4b4192f89e40af591a6654f5f92abc297921f885
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5d854dedbd7237407b54073a94b4737bb6ed777b
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 248ae914afcc49eff3ab08c5cf0bf528f8603859
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb15e90c8ca601dfa198c3eae9716a24f7490e40
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/MAmmoTH-Coder-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aac906f5fdc63c9f9eba73c63d0b9f785c465762
       name: Q8_0.gguf

@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: deac60223d2038b81d5e9bfd77483c2091195d0c
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f8d7f8f8fd5910c745abb5e46a14aa3b7af798fa
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 04866ab8c6dd13b9daca186d901dd7a2d95723bf
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e8874cee907fde3e03ab3b8044c53705ff24df55
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee2b81260350691e63daeb91bc5dcabecea2aa9e
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 64394531cdfbe44c828ff4a15c79147b65d56de2
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1c03945a1a010d51006d82d8a376247611517982
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: afa7d9bfce75d53746dd1d2df22b6978de7e4586
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4505f2b4b5f57ef6bd36adbca273c1e9a6ce8cbb
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e093a1237591856a40b986d045f10c52a0660fc4
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6e08d55f2d4404f2f3084d5b686062310275d718
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Marcoroni-neural-chat-7B-v1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dc0ccbbdb522d26b56f55dce6e2961d9ad0aed2e
       name: Q8_0.gguf

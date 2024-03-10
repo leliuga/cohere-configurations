@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0db983e3314420405f26c795c88e204786563062
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d2765a2871e01d442b335398764e505b97cc566
       name: Q3_K_M.gguf
@@ -92,15 +65,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4cf7814da9ddcf82124ce19d6d8275287d90800c
       name: Q4_0.gguf
@@ -114,15 +80,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a0ae02df046bcf1c12089f57b59e61732270924c
       name: Q4_K_M.gguf
@@ -136,15 +95,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a4572e335cf9f1b6389add714f18d0ea0799e63
       name: Q5_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e9b99e7d31b7e3db0b51b991909c2e2cc3fd93be
       name: Q5_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2af11df29bc6b4b3ae55138d67d1cfef07878f04
       name: Q6_K.gguf
@@ -202,15 +140,8 @@ variants:
     - models/SOLARC-MOE-10.7Bx4/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac0648091603e55846cac814fdfd106139389e72
       name: Q8_0.gguf

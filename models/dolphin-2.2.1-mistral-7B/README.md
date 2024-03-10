@@ -13,7 +13,7 @@ language:
 Dolphin 2.2.1 🐬
 https://erichartford.com/dolphin
 
-Join Our Discord! https://discord.gg/vT3sktQ3zb 
+Join Our Discord! https://discord.gg/cognitivecomputations  
 
 This is a checkpoint release, to fix overfit training.  ie, it was responding with CoT even when I didn't request it, and also it was too compliant even when the request made no sense.  This one should be better.
 

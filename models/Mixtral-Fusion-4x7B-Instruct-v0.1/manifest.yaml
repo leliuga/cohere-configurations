@@ -29,19 +29,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 33dfd6683ffb6ff18e952ec193c7069df7d9747e
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 604213ec93443c72130861a7d788eebf122d0c10
       name: Q3_K_M.gguf
@@ -95,15 +68,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 230433f073ee880f3cde0d5167f6221b1acab6bc
       name: Q4_0.gguf
@@ -117,15 +83,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2fa869a166dc211e625f494bf69588865bd917a9
       name: Q4_K_M.gguf
@@ -139,15 +98,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 51aa218a357320927be974d6fc7a4f14e3868c4f
       name: Q5_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f54f81e7f1aba598d0beaebe3dcd2670fe6ddb0d
       name: Q5_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9380577335fac65a5c9f6f1d192b631f7d841d1b
       name: Q6_K.gguf
@@ -205,15 +143,8 @@ variants:
     - models/Mixtral-Fusion-4x7B-Instruct-v0.1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8a67fc0183292bc20f5044ba28b16769b2de4099
       name: Q8_0.gguf

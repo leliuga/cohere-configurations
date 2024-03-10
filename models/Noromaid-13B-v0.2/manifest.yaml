@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 77023c1d57f1b3a5dce96e38b4e3452f1dd7c4ab
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5b30726841c993b6f49dfcdd83c024485f9156ab
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 516ff06749a28c154a675496fa112c158955eedb
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 41ee1a262832482e334ff569fe3f987fd17acabf
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fad4d4dc89f574d57a02f62e374c64cbfd8a4e49
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 567e1bc7de74545086a56ad5b7d7b9cbf5e139c5
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bbf5d38cb7f773e4ab518b7ade0e7b81e868245f
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c82a34e9c9ff53717351015935f406b035eb82f
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4394c6b92428fed6b9c70c15d45b9442fb00c535
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 452a2250e8a2f1cb64a498855083e4dcc2da958d
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25c1c5bb1db6dc11522a7b579cf605e9e97a9384
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Noromaid-13B-v0.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7bfc860758e162bd734b14141a919ac7dc79c4dc
       name: Q8_0.gguf

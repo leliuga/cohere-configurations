@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 87c77a7559536ae47509fb59b3890a15e775f89c
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac03b9afb2ce451adfd0c03590eaca68a897908f
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5e2a2fb5ab9be6f82a0186f6961886e51d4734a6
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 05dbb3c07c497c83d19b471752132f29307c11be
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 45b05a67266b80a815076ef56497c366a0d9440d
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: effce7e7cd55093005a25b09ba434503853da242
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6857604b0b98d2a0247c0cf4b76f8659e80523bc
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8753a40c7f67a5ff0b056b1302940f1394b13862
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a79d79942920239de11d7d7ff8d4d401f0f45162
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 94207acb696b051939df6903b870ff7851a4dce3
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 85ba0371405ccaed8d49b4889d6d54af31df7d26
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Tiamat-7B-1.1-DPO/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fbfda9b3e0791371bc871dfa203a83a106a3c359
       name: Q8_0.gguf

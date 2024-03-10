@@ -1,10 +1,10 @@
 ---
 license: other
-license_name: deepseek
+library_name: transformers
 datasets:
 - ise-uiuc/Magicoder-OSS-Instruct-75K
 - ise-uiuc/Magicoder-Evol-Instruct-110K
-library_name: transformers
+license_name: deepseek
 pipeline_tag: text-generation
 ---
 # 🎩 Magicoder: Source Code Is All You Need

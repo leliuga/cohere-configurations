@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f73fdd8affe26705bcb0f3b3b85fa32486594a9a
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 35ffd26b6bfb6754d0564a4d90be946b2fe25bc9
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d719f3fa3f40ac56cffcebcc3f1f16a88f68cf9c
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3a5d79c73366d41436c22fa0d64c5dfae81290f0
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d9e4fee75c62403b77fb04fc6d8c40fb805dd7dc
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d25f6db4354cecd57bbafac977eef6e6c59855d
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c15ff5765507739d3400154e4c819c913037002f
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f238571e1fdbd2268b712c408b55d1f4daa54b01
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6c3f4780bc988387cc98768473b38c2420811ec
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb4c2174bcf9bc5af8a8f4ef1277b147cd813b29
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0f96d1822700d85e71d38bb3777defbe03d7b79a
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/CarbonVillain-en-10.7B-v4/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dfec315e10690ba9cd9844683bdcc329dd9b9b05
       name: Q8_0.gguf

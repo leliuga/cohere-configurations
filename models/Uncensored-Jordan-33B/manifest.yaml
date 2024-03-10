@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 07726b4c1612fd8451c3309a83f90909298accef
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d888b21ca630bd9cf6beed39e1bdc0efac29616f
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 994954ad74bba6ae7a4bd09a594f582b33f3e054
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9dc02a01dbfdd01fa25bd70d8eebf16f36e6651d
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a88165fab54558001ad679228e1643f4ad6f852
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d91f5ec51e7e2741865289325c295160261031e7
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f2547155c722a46512958e5cd6ddff22457dd1fe
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c9da6248c8e0c567ceb8fae93c80a74fc4d9b014
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f530aea6ff453bec2d4812541c7d3ada4b7622d8
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ca5d6815fb98542a56a1cb74b89b2e91d7fae4c4
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66a82ccd9d1b5825fd84cdd414a485ba23f7f696
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Uncensored-Jordan-33B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 97deab5ab10d0d6628cf388d7c306cf16b41d957
       name: Q8_0.gguf

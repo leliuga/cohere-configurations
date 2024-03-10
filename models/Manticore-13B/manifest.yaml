@@ -36,19 +36,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -58,15 +45,8 @@ variants:
     - models/Manticore-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fa754fa432990a631de6fd7458ddd85c8eb0f52a
       name: Q2_K.gguf
@@ -80,15 +60,8 @@ variants:
     - models/Manticore-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a5610d0e00f03ee1feaf1099feb1f25c6131c3f1
       name: Q3_K_L.gguf
@@ -102,15 +75,8 @@ variants:
     - models/Manticore-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 31d8aeea9779418165c93de4e41c99301608f172
       name: Q3_K_M.gguf
@@ -124,15 +90,8 @@ variants:
     - models/Manticore-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b830aaa480936e44c6ae3869e91a2d756d8334ac
       name: Q3_K_S.gguf
@@ -146,15 +105,8 @@ variants:
     - models/Manticore-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: baa901ade8e035648c67f9343ff2ed4229840fcb
       name: Q4_0.gguf
@@ -168,15 +120,8 @@ variants:
     - models/Manticore-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0b9689c68a54c1c8c64ef2789f44e8a9678d437e
       name: Q4_K_M.gguf
@@ -190,15 +135,8 @@ variants:
     - models/Manticore-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0f411919d0e0a74bf5cbda513e302d98578c14a9
       name: Q4_K_S.gguf
@@ -212,15 +150,8 @@ variants:
     - models/Manticore-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 75c9972773a21e3b0f6319aa558b744325dbe249
       name: Q5_0.gguf
@@ -234,15 +165,8 @@ variants:
     - models/Manticore-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bdc16f9ecee8536c9ede740edee79c29f10851f7
       name: Q5_K_M.gguf
@@ -256,15 +180,8 @@ variants:
     - models/Manticore-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b92d1ceeea5297cb9f6487d78993deaeca2dc4a2
       name: Q5_K_S.gguf
@@ -278,15 +195,8 @@ variants:
     - models/Manticore-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d713d4d47128b416722f5268905e24af36cf5c76
       name: Q6_K.gguf
@@ -300,15 +210,8 @@ variants:
     - models/Manticore-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9ded90e81ddd5bcd1345d183c8b5b5af255aaec9
       name: Q8_0.gguf

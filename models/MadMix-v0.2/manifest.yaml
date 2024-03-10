@@ -29,19 +29,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/MadMix-v0.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4035c2fc068f96dab07a2a12fab4cfd1104fc38a
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/MadMix-v0.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c291c73665b44aca889df59870a78b2150cff355
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/MadMix-v0.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d21ddd63d70b23f16a7daffd548fa786c5d5c4af
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/MadMix-v0.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1234d36d5c86e55a85a59fbe981327a6f372a22a
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/MadMix-v0.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa96a3b67d3a2a1cb01d21e8729524f45d2b8cd4
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/MadMix-v0.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3140906f27f7aade689ce960704dc82025fb6f96
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/MadMix-v0.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7c9745049cfadfe2c0684732c487a60155568024
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/MadMix-v0.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: adf6e183c4d8d5eb3e4f5037d6c89e96a2f7779f
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/MadMix-v0.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 632a1383e84c8dd9b0c383e6d33a11b6599adca7
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/MadMix-v0.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cfadf6174c28f1f9dd71cc73b3f9f42b71400c83
       name: Q5_K_S.gguf
@@ -271,15 +188,8 @@ variants:
     - models/MadMix-v0.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3e4d76bc4c9b204be76f02e020cbbbb89fc9c9bd
       name: Q6_K.gguf
@@ -293,15 +203,8 @@ variants:
     - models/MadMix-v0.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5fcae2dbbdcc4fa69d0abe1d58b9e664e2bd841b
       name: Q8_0.gguf

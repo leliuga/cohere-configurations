@@ -1,0 +1,228 @@
+id: neuronovo-7B-v0.3
+parent_id: Neuronovo/neuronovo-7B-v0.3
+name: Neuronovo 7B V0.3
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Neuronovo
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- dataset:Intel/orca_dpo_pairs
+- dataset:mlabonne/chatml_dpo_pairs
+- base_model:Neuronovo/neuronovo-7B-v0.3
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 40
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 55a6678fd13ce8b2758a3ee33554217b4a26223d
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q2_K.gguf
+      size: 3338954720
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 26470acbf0f77ddf03d10ad90840192e599263ed
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q3_K_L.gguf
+      size: 4736387040
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 02adc2da8181bc9b51ece16cb5329ea18989c2fa
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q3_K_M.gguf
+      size: 4353656800
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 4f9b526f16e199b3caf249d7630780c07066aeb3
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q3_K_S.gguf
+      size: 3914565600
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: c268fe766f3b4c523118728d7a5668561050a0ba
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q4_0.gguf
+      size: 5090650080
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 3879af026e34cfe40059e571a6b0f633ee8741d8
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q4_K_M.gguf
+      size: 5415053280
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 29a81413f97cf5082d27869269a82ec54de6e529
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q4_K_S.gguf
+      size: 5129447392
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 0a839330104e396f4cb541930383560f32625965
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q5_0.gguf
+      size: 6197553120
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 1ca12d6d82ac9ef63f0aba30300950598515e5fb
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q5_K_M.gguf
+      size: 6364669920
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: ffab0d7749fc25fdc7da8bcce99b5d9bd900a21a
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q5_K_S.gguf
+      size: 6197553120
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 493b5eb5c476c2f64108ac71e418f5ec442538a4
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q6_K.gguf
+      size: 7373637600
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/neuronovo-7B-v0.3/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 23e0e1369ca2aef34d406414f9e633d4c8f4feb1
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/neuronovo-7B-v0.3-GGUF/resolve/main/neuronovo-7b-v0.3.Q8_0.gguf
+      size: 9550006240
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

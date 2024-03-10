@@ -11,7 +11,7 @@ language:
 ---
 # **BLOSSOM-v3.1-yi-34b**
 
-Try blossom online demo! [Blossom Chat[🚀](https://blossom-chat.com/)](https://huggingface.co/spaces/Azure99/BlossomChat)
+[💻Github](https://github.com/Azure99/BlossomLM) • [🚀Blossom Chat Demo](https://blossom-chat.com/)
 
 ### Introduction
 

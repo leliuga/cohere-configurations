@@ -4,6 +4,9 @@ language:
 library_name: transformers
 pipeline_tag: text-generation
 license: cc-by-nc-sa-4.0
+tags:
+- moe
+- merge
 ---
 **The license is `cc-by-nc-sa-4.0`.**  
   

@@ -29,19 +29,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd193b49acdbe031a5757040b35a8a1b8b06c884
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6f36918e29dac3c4e157b8d14ecbf9b67343b772
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1017a113431e195fbc25ea85e19fe6af27b75c92
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4518a36157916e71e9701e7e8925c307e8394e62
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5a1930089b39708d34d2f0c1cdf20e271efa92cd
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 95e125824aff68a8da5a02415c839134a61c417c
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 352ce4a1baf1556b983ad383a0d8a6c37f2565ac
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84cac1ad9437f8421221ddb18ec0237f91233231
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5840c69055c76cdac01fe44c13520a15da5101d9
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/llama2_70b_chat_uncensored/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e470068a12607f39df2d43184067c234dfe6fb22
       name: Q5_K_S.gguf

@@ -1,0 +1,224 @@
+id: PiVoT-SUS-RP
+parent_id: maywell/PiVoT-SUS-RP
+name: Pivot SUS RP
+description: ""
+architecture: llama
+licence: apache-2.0
+object: model
+owned_by: Jeonghwan Park
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- yi
+- base_model:maywell/PiVoT-SUS-RP
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 8192
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 538ac82e7aeac294b14c7c2a92474c121cad79ef
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q2_K.gguf
+      size: 12766742592
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 89681386ce049e8ebade5cb00973cc6e200725ad
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q3_K_L.gguf
+      size: 18139445312
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: bf2471b535ce992431c9422a82b2870ea56f4b1b
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q3_K_M.gguf
+      size: 16654923840
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 45af3c1235ee2e9deec78d72bb864a79633629e8
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q3_K_S.gguf
+      size: 14960293952
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 267c62d06395b3f04147b790089e0f940148892e
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q4_0.gguf
+      size: 19466528832
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 4f0f74841b4b9934225a4b0852a44f0acef4ab97
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q4_K_M.gguf
+      size: 20658710592
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 17aab2b832ca1192523c38bfc6a3d9bc96ed996c
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q4_K_S.gguf
+      size: 19598649408
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: d3387e5e9380b75a28659286d23679503f4c750d
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q5_0.gguf
+      size: 23707691072
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: cb86b75fed137523c34ab5482c21854622e293b4
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q5_K_M.gguf
+      size: 24321845312
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 5856a308807e9ecf85bf36db23930bde9f4e06c9
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q5_K_S.gguf
+      size: 23707691072
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 324615d5368081d8a6f387667d55d1fa909d304b
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q6_K.gguf
+      size: 28213925952
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/PiVoT-SUS-RP/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: f365a3fa5d4d39d7e3022a25a6aaf1c637ad3604
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/PiVoT-SUS-RP-GGUF/resolve/main/pivot-sus-rp.Q8_0.gguf
+      size: 36542281792
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

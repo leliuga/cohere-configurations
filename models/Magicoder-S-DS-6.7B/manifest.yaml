@@ -28,19 +28,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9222175d779287b38b5a58fc0d3ec7c6c99ef7b2
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 889e68f7b52206cbbd90f00d0e89e23f9bae9ee1
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: be3b04e6c075ed10adc573b403881bda6160f996
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 675ff61658cab5929982c2a5743f405c661407fb
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0207500e6c9beda20df00affd901d41e1cfce305
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 075e0a55b57e8ccebc78d4101af5de0d21ed49d9
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 48b931975a1dc383ac2666762028f657abe316ff
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9f1a4224d3a61ab46264e9b78e5fe7a15e1663ef
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a2b3ef03c12ea4455adcdf6756340cf1bd9f690
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b8e74bc990aa6ec35e4f6ddae7306cff5741fd6b
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a9775ad8003d5b619afdd8a3d032dbfb7f6a0a2
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/Magicoder-S-DS-6.7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c750d3d919ad8f9b8cf864ee6d661253c52bfdc
       name: Q8_0.gguf

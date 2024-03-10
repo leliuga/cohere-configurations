@@ -23,19 +23,6 @@ config:
   key_value_head_size: 4
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +32,8 @@ variants:
     - models/dragon-yi-6B-v0/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 30c84b480d995755ef318c266aa73f6e15d5b755
       name: Q2_K.gguf
@@ -67,15 +47,8 @@ variants:
     - models/dragon-yi-6B-v0/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5ff132baa6117f36df6f2c8645521c722751059b
       name: Q3_K_L.gguf
@@ -89,15 +62,8 @@ variants:
     - models/dragon-yi-6B-v0/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ad674454653d2ed0a222158df3ee80d0ffd6f8d2
       name: Q3_K_M.gguf
@@ -111,15 +77,8 @@ variants:
     - models/dragon-yi-6B-v0/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 448fb636befaa18eb96bd372d0989530281eef8c
       name: Q3_K_S.gguf
@@ -133,15 +92,8 @@ variants:
     - models/dragon-yi-6B-v0/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5a6be2a6ce6e42b95febe73b224298cb6e35f4bb
       name: Q4_0.gguf
@@ -155,15 +107,8 @@ variants:
     - models/dragon-yi-6B-v0/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 21af6cde3f6ecd4861b7983424cabea9e6768826
       name: Q4_K_M.gguf
@@ -177,15 +122,8 @@ variants:
     - models/dragon-yi-6B-v0/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 971938bd5b78958015a62c25b865c5a92413c4c3
       name: Q4_K_S.gguf
@@ -199,15 +137,8 @@ variants:
     - models/dragon-yi-6B-v0/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c956617edb7a282f738d2fd17fcc5e51b387ec67
       name: Q5_0.gguf
@@ -221,15 +152,8 @@ variants:
     - models/dragon-yi-6B-v0/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6aad68dfbbc16291608a4e10ffd1fef34a955d50
       name: Q5_K_M.gguf
@@ -243,15 +167,8 @@ variants:
     - models/dragon-yi-6B-v0/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c5a24ddb2c5aa83d36dda363fa6ac4fe93f0300
       name: Q5_K_S.gguf
@@ -265,15 +182,8 @@ variants:
     - models/dragon-yi-6B-v0/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6543a7514aa7484af05180ab2e94ada9b5fff5bc
       name: Q6_K.gguf
@@ -287,15 +197,8 @@ variants:
     - models/dragon-yi-6B-v0/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 155114c22556cb7484c26c854337a90f962b4450
       name: Q8_0.gguf

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 18801b509914d5f1594a44e9084ce0d7e15ef298
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f2dac170d94414a93c68782c085826cb1203a3ad
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 198873a34393fa2d013a7c63b82548e199c60972
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e60ff4f25bae1393aee10c371481376475a0f8b3
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d844c8e6dd61be17488d12dc4db1fa44632c620f
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 49c25d62def41efbe807544d286b2ae0b817c2bf
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 05cba84369e4761e6e9bd385d46db192257113c0
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 79e00adae203c2e5f0141c9fc6222a7d94f5f1fd
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3061b7429b37604fdee6aa6fa153057f4e293308
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bb88f772bfd0c9f5da58b8a895f98a6280f15489
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a68cb89140a4d703910dae812477b5fd1df4024
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/ReMM-v2.1-L2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7a0200a997fab826646a44f5ddd3985d655808e6
       name: Q8_0.gguf

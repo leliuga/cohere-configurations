@@ -1,0 +1,234 @@
+id: medicine-LLM
+parent_id: AdaptLLM/medicine-LLM
+name: Medicine LLM
+description: ""
+architecture: llama
+licence: other
+object: model
+owned_by: AdaptLLM
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- biology
+- medical
+- text-generation
+- en
+- dataset:Open-Orca/OpenOrca
+- dataset:GAIR/lima
+- dataset:WizardLM/WizardLM_evol_instruct_V2_196k
+- dataset:EleutherAI/pile
+- arxiv:2309.09530
+- base_model:AdaptLLM/medicine-LLM
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32001
+  context_size: 0
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 0
+  intermediate_size: 11008
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 92e648cc9d330057b82364db0d3c97ff2cc6e4e9
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q2_K.gguf
+      size: 2532868416
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d770beae3c0c251e914b680456bb4439bdc76886
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q3_K_L.gguf
+      size: 3597116128
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: fc3951db678cf5d69b54426bdf8aeb601e61c866
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q3_K_M.gguf
+      size: 3298009824
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 3636b4155f53c4263ecca0b90032ed908ae17429
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q3_K_S.gguf
+      size: 2948309728
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 084860dbe7fa027a1889322c430139cd70da5f9b
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q4_0.gguf
+      size: 3825812736
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 28f0fcea7e1c882d0c3a35f20bfb5746e176e794
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q4_K_M.gguf
+      size: 4081009920
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 722164c65ee9225386978e152cb53a95d5cfc517
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q4_K_S.gguf
+      size: 3856745728
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e2433102c689e61f9708642d4bd85e3ea6cf969b
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q5_0.gguf
+      size: 4651697920
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e2bc580b3fea1eb4b2d2b715a293ebc69bce9bf0
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q5_K_M.gguf
+      size: 4783163136
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 84923b17c743a20781073b464684f6769d604d5e
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q5_K_S.gguf
+      size: 4651697920
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b0762209cfaa6e6bb5302b048acd7f184914a5cf
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q6_K.gguf
+      size: 5529200928
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/medicine-LLM/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 7a457e5d8053bc500aa817b950a9425f36e085cc
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/medicine-LLM-GGUF/resolve/main/medicine-llm.Q8_0.gguf
+      size: 7161098464
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### User Input:\n{prompt}\n\n### Assistant Output:\n"

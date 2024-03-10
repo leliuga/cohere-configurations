@@ -1,0 +1,172 @@
+id: Norobara-ZLoss-8x7B
+parent_id: Doctor-Shotgun/Norobara-ZLoss-8x7B
+name: Norobara ZLoss 8X7B
+description: ""
+architecture: mixtral
+licence: ""
+object: model
+owned_by: Doctor Shotgun
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- text-generation
+- en
+- dataset:LDJnr/Capybara
+- dataset:unalignment/toxic-dpo-v0.1
+- dataset:LDJnr/Verified-Camel
+- dataset:HuggingFaceH4/no_robots
+- dataset:Doctor-Shotgun/no-robots-sharegpt
+- dataset:Doctor-Shotgun/capybara-sharegpt
+- base_model:Doctor-Shotgun/Norobara-ZLoss-8x7B
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: dca9390c2bccf9f77e9a97c54edab797f43c5fe7
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q2_K.gguf
+      size: 15644971456
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e8b738dfbb949811ba102e9b463603d371f833c7
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q3_K_M.gguf
+      size: 20364292544
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e0354b10ea2edf800fe892efc8aa54ca504da8c4
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q4_0.gguf
+      size: 26442469824
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 6480b1d488e3142906b305de20ebc99636a9a1f4
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q4_K_M.gguf
+      size: 26442469824
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 47ca64a8794c9c949206ff637cc58b4fcb13bddf
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q5_0.gguf
+      size: 32230216128
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: a08b7f056b40413b0d13b482e9e1f04f7b16f51d
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q5_K_M.gguf
+      size: 32230216128
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 4d189dba3a157679a5339260a42bd31c8c76678a
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q6_K.gguf
+      size: 38379696576
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Norobara-ZLoss-8x7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 67afc7369c05c7d8fc3d23145356a71029c51092
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Norobara-ZLoss-8x7B-GGUF/resolve/main/norobara-zloss-8x7b.Q8_0.gguf
+      size: 49625199040
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### Instruction:\n{system_message}\n\n### Input:\n{prompt}\n\n### Response:\n"

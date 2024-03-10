@@ -1,11 +1,11 @@
 ---
 license: other
 datasets:
-- ehartford/wizard_vicuna_70k_unfiltered
+- georgesung/wizard_vicuna_70k_unfiltered
 ---
 
 # Overview
-Fine-tuned [Llama-2 7B](https://huggingface.co/TheBloke/Llama-2-7B-fp16) with an uncensored/unfiltered Wizard-Vicuna conversation dataset [ehartford/wizard_vicuna_70k_unfiltered](https://huggingface.co/datasets/ehartford/wizard_vicuna_70k_unfiltered).
+Fine-tuned [Llama-2 7B](https://huggingface.co/TheBloke/Llama-2-7B-fp16) with an uncensored/unfiltered Wizard-Vicuna conversation dataset (originally from [ehartford/wizard_vicuna_70k_unfiltered](https://huggingface.co/datasets/ehartford/wizard_vicuna_70k_unfiltered)).
 Used QLoRA for fine-tuning. Trained for one epoch on a 24GB GPU (NVIDIA A10G) instance, took ~19 hours to train.
 
 The version here is the fp16 HuggingFace model.

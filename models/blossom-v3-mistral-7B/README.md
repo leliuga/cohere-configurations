@@ -11,6 +11,8 @@ language:
 ---
 # **BLOSSOM-v3-mistral-7b**
 
+[💻Github](https://github.com/Azure99/BlossomLM) • [🚀Blossom Chat Demo](https://blossom-chat.com/)
+
 ### Introduction
 
 Blossom is a conversational large language model, fine-tuned on the Blossom Orca/Wizard/Chat/Math mixed dataset based on the Mistral-7B-v0.1 pre-trained model. Blossom possesses robust general capabilities and context comprehension. Additionally, the high-quality Chinese and English datasets used for training have been made open source.

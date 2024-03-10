@@ -26,19 +26,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/UtopiaXL-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dbe79765fab978822619ce4ac8efbe5a474b7643
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/UtopiaXL-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7368fe405e0de387f7d54a8993b2a47ffa9f4860
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/UtopiaXL-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c05ffca9ce0da2036ecb714571d03000b5a9ee1f
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/UtopiaXL-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20a5bbff20dee3e61ddc4266be08d233e078a30d
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/UtopiaXL-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d9474687526da761da04af1762a070e24113f506
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/UtopiaXL-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f6da21f3df04e4ef89b20fb60695bf8f6df61728
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/UtopiaXL-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66a245e0d0c59489d8c2f8de0c66adaa7c09ba57
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/UtopiaXL-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7ca26ff9abc6c1f26a91a0cae3f43e9b3c78f997
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/UtopiaXL-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fd5d7c9d5cf905d05434e85d2a2df704ffe9f55d
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/UtopiaXL-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8943abc7dbbd94bb99efbe5ad83f6a283d1761dd
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/UtopiaXL-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1541c916c3b6dfd01792780fe5637b87818c6d31
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/UtopiaXL-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac565fdf79a6c02f6bf5401c954045caecff5fed
       name: Q8_0.gguf

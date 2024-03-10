@@ -24,19 +24,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: de62f6f389a2fc47438a9da4331d1aba7a018605
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d75357a9ff6268342f17feb48ffc25e1a92cea1
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c1c3e009856b6260121e2e2b6285e09cecfe3fb3
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e1433dda8c0a23b3fc2812169f44a3bbca802c4e
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f3d67beefa12f0efa9cc4542e39edfe15ede92e9
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b724b92b63be14c4c629e322c05637e39eb19026
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 055a6b3eee9eae932441e95595ae1de41ab635af
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c9cba76e0cac876f4a10e33e646e0f1d4be2d32b
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c0a193541ad77e6dc617dad8be9063361eddfd10
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f36dd959f8d7b629414ed0d9775d9541b48730a3
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 46e28004469b60aa3aae7ea8250185cab78a9fea
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/YuLan-Chat-2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f8254c55c048d3c3a22d857dbd40be4238c5cc1a
       name: Q8_0.gguf

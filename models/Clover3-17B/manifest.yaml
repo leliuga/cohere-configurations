@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 76
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Clover3-17B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 909b4c787d0325fbeb831cb161fd3d2d36afd582
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Clover3-17B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f92cb65fe5a3e4b1b34b3965edcd23a8bfa2d8e1
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Clover3-17B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c95aeff7c2504056f8b2f8c3be0a67e4104045fb
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Clover3-17B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 073ebf7bd3332a0380a4f6e73df5674b4c490417
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Clover3-17B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: de438788b87e75d1c9b1dc75bc28a32f6cf4f7a2
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Clover3-17B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fc1414fcd3796d7f8d27e297193c4c1c744a1dca
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Clover3-17B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 56ea4c9b248426dd47bcd9a29e772794f68e7f21
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Clover3-17B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 15dfdeb8f62767ed8c8dc7e69a92237c9907548b
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Clover3-17B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 876ba3acc884acb8efbc743c0f875f1153172b5b
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Clover3-17B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 89c4f5904e45671d29e9c08107aec6dbb823d963
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Clover3-17B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5a27478321e6bfb44d418a39bd1868c651c1682
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Clover3-17B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "79"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84a3b26ec663912bdcf68ba30836084c12f71fd4
       name: Q8_0.gguf

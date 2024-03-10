@@ -34,19 +34,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -56,15 +43,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5afa8d22d9aaebabe8691b34cfaa9e3265aa69a6
       name: Q2_K.gguf
@@ -78,15 +58,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4bfefcb442ff0196bf16edc726b86e24efddf9cf
       name: Q3_K_L.gguf
@@ -100,15 +73,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1e33ffbe4e334e2af384cc6b589adf0b91e5398f
       name: Q3_K_M.gguf
@@ -122,15 +88,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20788ac4073552dde61c7eaa04bf71c6b0690985
       name: Q3_K_S.gguf
@@ -144,15 +103,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 553682cc0fcfeb7e1ffcc3695dcbc54bbe5f9261
       name: Q4_0.gguf
@@ -166,15 +118,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cac8866fc743893c98364163fd6279995a525d42
       name: Q4_K_M.gguf
@@ -188,15 +133,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 253370171440982d02f9b5e970e7b7accda5b8c7
       name: Q4_K_S.gguf
@@ -210,15 +148,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2558313df1c1599e475ce59d93d20c3dc75102e
       name: Q5_0.gguf
@@ -232,15 +163,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 49aad5b8daa070af5ef260e639e071718170ec14
       name: Q5_K_M.gguf
@@ -254,15 +178,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a6cbbb20175ac50acec1778aab1f8bebb11b96db
       name: Q5_K_S.gguf
@@ -276,15 +193,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e6daa52242e4f02feed9bb2fc7451e7ae9babbc7
       name: Q6_K.gguf
@@ -298,15 +208,8 @@ variants:
     - models/Leo-Mistral-Hessianai-7B-Chat/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 58157fd38380154293603df6271bcd0c8c2035f1
       name: Q8_0.gguf

@@ -32,19 +32,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -54,15 +41,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9bead129e93a277723a8c85b84a368c3ba35f9c3
       name: Q2_K.gguf
@@ -76,15 +56,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c0e599306c704f726d4876df19f1296d0d237027
       name: Q3_K_L.gguf
@@ -98,15 +71,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 370c3893a6a9e1d1a43eb86a61832b2e69b80844
       name: Q3_K_M.gguf
@@ -120,15 +86,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 232f48088a8524162b377b88afb3221f6bf5bbf2
       name: Q3_K_S.gguf
@@ -142,15 +101,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 85a7b94209768fe800eca4237bd4c6804ce51aec
       name: Q4_0.gguf
@@ -164,15 +116,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1913926330297f376c1126bdb9e1bc1ffa4ed535
       name: Q4_K_M.gguf
@@ -186,15 +131,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d3a8249906768be0cbd7de2558b8253c55a74439
       name: Q4_K_S.gguf
@@ -208,15 +146,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c07980725b1f56f9790609f1323d2770528e2b5d
       name: Q5_0.gguf
@@ -230,15 +161,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a26d50cb3761867f869be4dab54851339c61de98
       name: Q5_K_M.gguf
@@ -252,15 +176,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 06d9863ba9e25a211807ba4703983bfd8148a501
       name: Q5_K_S.gguf
@@ -274,15 +191,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da3f9bd75e26c43b87c49f06a543f127c19dfce7
       name: Q6_K.gguf
@@ -296,15 +206,8 @@ variants:
     - models/OpenHermes-2-Mistral-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 644d9a01bc50ca4370ce1f597113332bf0c9135a
       name: Q8_0.gguf

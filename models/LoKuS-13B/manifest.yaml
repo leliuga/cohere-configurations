@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/LoKuS-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b86a59553e3ab8fc23a8224158a18876ccc81798
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/LoKuS-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e669634da83f45de873578893a5270fe7f1fe14
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/LoKuS-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52429eed0f2b9af0651c0d1d0b72057c7d5b0540
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/LoKuS-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9b9a1794a408141308b31322a6a25f5e4813c1f9
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/LoKuS-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f4691c1811a14e0eda5789c3770b48d0fecdace6
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/LoKuS-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dfadb6d8fcfcf389fbd940fd94333a05f8559127
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/LoKuS-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f6fbe5eb3c480eea360d5517f984092b673083ca
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/LoKuS-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bc6f30a8b4185b8de46577d805884198794bec4a
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/LoKuS-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f543379a7cc66527d84a18dbd4331d6ff2812a52
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/LoKuS-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 95ac6a1e5f199dadd0c46321647ed0425292c4e8
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/LoKuS-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 24a25a83fe489036edb3616d49a51917c4df6e34
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/LoKuS-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84e3f4833aa9566a5354770c7d60cb7b5fdf749d
       name: Q8_0.gguf

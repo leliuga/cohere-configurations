@@ -26,19 +26,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q2_K/Q2_K.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6dfab31a8dc6a2feb6e0ed80b2e2f699913af8af
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b7f0e5f5e091c9b4cbfdecfa85ab8e9961457ec9
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 307cc5d16431f32a1c3370438fc6abc309674f59
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c388942433e26dba2af69597fea93d6f6f13138
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q4_0/Q4_0.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e9bf1a9bf68e583656b45e144670d897ca7eda93
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 704f3af6ac064655f25e276a4d3ace25f352d44b
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1af2f52eede9e5fc343bc85563f626da38ba8376
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q5_0/Q5_0.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 19f2c4def7cccc5bc4ee1b0d6e5f70bb44fce73a
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3771b5b4d7ade2f50263dc12daf3b1a57cdc9fc8
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 07fa390ab5d028517ac4aed78cf5eecc06ee58f6
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q6_K/Q6_K.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c23eed458ae9843b70602b7426d4290562e7e1d3
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Yarn-Llama-2-7B-128K/Q8_0/Q8_0.gguf
     - --ctx-size
     - "131072"
-    - --batch-size
-    - "524288"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7a4066485b98599945bce706fbdaf69f4963cc7f
       name: Q8_0.gguf

@@ -5,6 +5,8 @@ language:
 ---
 ![image/png](Tiamat.png)
 # Tiamat
+**Note:** Now available in an [even fancier version, including DPO training!](https://huggingface.co/Gryphe/Tiamat-7b-1.1-DPO)
+
 Aka I wanted something like [Eric Hartford's Samantha](https://erichartford.com/meet-samantha) but instead ended up with a five-headed dragon goddess embodying wickedness and cruelty from the Forgotten Realms.
 
 **Obligatory Disclaimer:** Tiamat is **not** nice.

@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 89fe539bc988f59e064398075ea0801b15a7aacf
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66779cf3e99cb7fe15d9e76588c29fd2997ae3d1
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b7e5d61e8d1add3cb09a71cd9fc954a3741b1281
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a22ff9b0a50f90498a1d3e00ce73fbea73825e6
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5923196b253d4a1f0f4b30f29f5a46dfc5d801e
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 62a71a4c44b060bdda97ab82c32b104e1e2c25f0
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 002746468f116df9b14aef375f2f751caca78598
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1aea332e99e1108adeb35fa66451c39eb8239287
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c9a3115a4fe205b6f93397eeda9554037cc68a5
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2374ec9d93791e8a686560b95d0534f87f971338
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 964d36074f86f89846dc3596ea600ca30f8234db
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Firefly-Llama2-13B-v1.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 88082638cefafbfdb6329e9c1bda1711b5bcf500
       name: Q8_0.gguf

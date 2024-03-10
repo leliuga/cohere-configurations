@@ -33,19 +33,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -55,15 +42,8 @@ variants:
     - models/Pygmalion-2-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8815494abb7ac1889b4179eb6f037751e3bc0138
       name: Q2_K.gguf
@@ -77,15 +57,8 @@ variants:
     - models/Pygmalion-2-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7568998f82e8958c9b21cc6c5ee77484c660cadf
       name: Q3_K_L.gguf
@@ -99,15 +72,8 @@ variants:
     - models/Pygmalion-2-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6ff9c3d5b7727f2e1b7d3ab94c81e7e77a971d99
       name: Q3_K_M.gguf
@@ -121,15 +87,8 @@ variants:
     - models/Pygmalion-2-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 528fa59cdb1c2c325c831032f8cdf5cd00d8dad6
       name: Q3_K_S.gguf
@@ -143,15 +102,8 @@ variants:
     - models/Pygmalion-2-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 96104913ce4c59caf53acf7a357b04473ff509e4
       name: Q4_0.gguf
@@ -165,15 +117,8 @@ variants:
     - models/Pygmalion-2-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6e75627d021c09fa65fd8acc46c5dca34419da38
       name: Q4_K_M.gguf
@@ -187,15 +132,8 @@ variants:
     - models/Pygmalion-2-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 35ca08d181398c9fcbee251d0007ba51c99a4a07
       name: Q4_K_S.gguf
@@ -209,15 +147,8 @@ variants:
     - models/Pygmalion-2-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b0f0e580096b01a0c0c5f2294583021535039126
       name: Q5_0.gguf
@@ -231,15 +162,8 @@ variants:
     - models/Pygmalion-2-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c6da848e96611b10631d530ae244fbdc806c0386
       name: Q5_K_M.gguf
@@ -253,15 +177,8 @@ variants:
     - models/Pygmalion-2-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0955a1726bca812ab6fdd706f4ddb94260a341e7
       name: Q5_K_S.gguf
@@ -275,15 +192,8 @@ variants:
     - models/Pygmalion-2-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 138538866f6e1525797623a0b1ebf625230f366a
       name: Q6_K.gguf
@@ -297,15 +207,8 @@ variants:
     - models/Pygmalion-2-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 44a28a876b133c593162078565998b8f658944c7
       name: Q8_0.gguf

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0da37a2d3b4dc701a63344e425e215092154fffe
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee200a2f1215f2b6da005ddd62ca2fb890c09be1
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 529fe0793d5cd4b39e370d3e25d5031e376b4b26
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b5bb3240f44d17be0120484240d61ecba4f83f5a
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9881aa97ea0b87a66d70e18f8ac0f22926c2b894
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 45e5295a1484ab79f0cd997ad3f8c2bb243c49db
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6ee766a3c1a44383417d1761e6fdfa0c9941c63
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 238fd5854fbd50f71a98c96ee860282b7306298e
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9d31038246af7940aff4e557f63453f34844d8f1
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Airoboros-L2-70B-2.1-Creative/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f4624b9d7ac12993b89f9c8a37fe2a402384517d
       name: Q5_K_S.gguf

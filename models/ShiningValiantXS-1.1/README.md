@@ -22,21 +22,19 @@ license: llama2
 Shining Valiant XS is a chat model built on the Llama 2 architecture, finetuned on our data for insight, creativity, passion, and friendliness.
   - Uses the llama-2-13b-chat model, with safetensors
   - Trained through multiple finetuning runs on public and private data
-  - the personality of our 70b [Shining Valiant](https://huggingface.co/ValiantLabs/ShiningValiant) model, now at 13b!
+  - the personality of our 70b [Shining Valiant](https://huggingface.co/ValiantLabs/ShiningValiant) model, now at 13b! **Our new release features greatly expanded personality capability**, bringing a more immersive chat experience!
 
 ## Version
 
-This is Version **1.1** of Shining Valiant XS.
+This is Version **1.2** of Shining Valiant XS. We've greatly expanded our personality dataset and fixed some bugs to deliver our strongest real-chat experience so far.
 
-Version 1.2 is now in training. (We're also exploring new models and architectures!)
+(We're also exploring **new models and architectures**, to deliver helpful open source capabilities for users and creators!)
 
-New models are released for everyone once our team's training and validation process is complete.
+Previous versions remain available in the repository. New models will be released for everyone once our team's training and validation process is complete.
 
 ## Evaluation
 
-| Model                 | Avg    | ARC   | HS    | MMLU   | TQA   | WG    | GSM   |
-|-----------------------|--------|-------|-------|--------|-------|-------|-------|
-| **Shining Valiant XS 1.1**   | 62.48  | 64.42 | 83.58 | 60.37  | 55.00 | 76.80 | 34.72 |
+Version 1.2 is awaiting evaluation from the Open LLM leaderboard.
 
 ## Prompting Guide
 Shining Valiant XS uses the same prompt format as Llama 2 Chat - feel free to use your existing prompts and scripts!
@@ -49,13 +47,14 @@ A few examples of different formats:
 3. [INST] << SYS >> You are an intelligent, helpful AI assistant. << /SYS >> Deep dive about a country with interesting history: [/INST]
 
 ## The Model
-Shining Valiant XS is built on top of Dynamic Factor, which uses Llama 2's 13b parameter architecture and features upgraded general capability.
+Shining Valiant XS is built on top of Diamond Force, which uses Llama 2's 13b parameter architecture and features upgraded general and chat capability.
 
 From there, we've created Shining Valiant XS through multiple finetuning runs on different compositions of our private dataset, the same one we use for our [Shining Valiant](https://huggingface.co/ValiantLabs/ShiningValiant) model.
 
 Our private data focuses primarily on applying Shining Valiant's personality: she's friendly, enthusiastic, insightful, knowledgeable, and loves to learn!
 
-We are actively working on expanding and improving the Shining Valiant dataset for use in future releases of the Shining Valiant series of models.
+With this release, the personality component of our Shining Valiant dataset has been greatly improved. We're excited to use it in future releases of this model and others.
+
 
 
 

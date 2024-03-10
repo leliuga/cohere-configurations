@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 10dce3ab773d12f6ba8716f176e6dac005844305
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a61d977abb1afefed72cae241f6b8831dc38289f
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 651ac6b8df60871d5394d586e076990a775ae0d8
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6732cdd519bc4183971d5213c828cbeb6ea279fa
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 89f27ae19ca8221d16690d2db0769bed6dea9cac
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e6702c6b9ca222d1787b79651abab0b4f1b8beaf
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e68e3866c9005ecaced9b1359e9bab4df535bf48
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e4f2dfe44e0c1d5c4a323c48315eea6b921cbc07
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 08f0057e2071bbcc965149125862c4b0b1d394ab
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 30206eca67f2de06eaa3d9086d2b3c4d7847cc04
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b9f284b409fb2fbaae4a3ab5e1703ade5ddec8a0
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/You_can_cry_Snowman-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea5955cbb33e80be5977958e2df5bae7890a3608
       name: Q8_0.gguf

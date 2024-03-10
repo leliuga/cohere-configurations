@@ -2,6 +2,9 @@
 license: cc-by-nc-sa-4.0
 language:
 - en
+tags:
+- merge
+- slerp
 ---
 
 # CarbonVillain
@@ -9,9 +12,15 @@ language:
 
 This model is an experimental version created using [mergekit](https://github.com/cg123/mergekit).  
 - merge models
-  - jeonsworld/CarbonVillain-en-10.7B-v1
-  - jeonsworld/CarbonVillain-en-10.7B-v2
+  - [jeonsworld/CarbonVillain-en-10.7B-v1](https://huggingface.co/jeonsworld/CarbonVillain-en-10.7B-v1)
+  - [jeonsworld/CarbonVillain-en-10.7B-v2](https://huggingface.co/jeonsworld/CarbonVillain-en-10.7B-v2)
 - method: slerp
+
+*Ranked 1st 2023.12.30*  
+
+
+> thanks to [KyujinHan](https://huggingface.co/kyujinpy), [Yağız Çalık](https://huggingface.co/Weyaxi) and [VAGO solutions](https://huggingface.co/VAGOsolutions)  
+
 
 # Prompt Template(s)
 

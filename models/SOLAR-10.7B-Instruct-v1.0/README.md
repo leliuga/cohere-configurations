@@ -12,7 +12,9 @@ base_model:
 ---
 
 <p align="left">
-    <img src="https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0/resolve/main/solar_logo.png" width="150"/>
+  <a href="https://go.upstage.ai/solar-obt-hf-modelcardv1-instruct">
+    <img src="https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0/resolve/main/solar-api-banner.png" width="100%"/>
+  </a>
 <p>
 
 # **Meet 10.7B Solar: Elevating Performance with Upstage Depth UP Scaling!**

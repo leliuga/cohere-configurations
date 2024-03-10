@@ -6,7 +6,7 @@ architecture: llama
 licence: apache-2.0
 object: model
 owned_by: Fredithefish
-pipeline: conversational
+pipeline: text-generation
 languages: []
 tags:
 - transformers
@@ -27,19 +27,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cd4202612275bd1f3c4e7673a6b0d12ce62c4f09
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd9334b44d66a60b7b32dd77052196a48463ea8d
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7bb3f3bc915adef1c47b6da2dbac30d6489992ee
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ddae9e694dad0a6261df1e799b964be131682617
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 10753916b1bbd9d58aea71456dd51e0eff95aaf2
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c78cbcc65b630216ad017efd2dab76cea2df7396
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66c0b3131c1c449d5bf7e05408edbf413f2d737b
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4ba98554b77f427b8a911dc5e3becceb38fb48fb
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5c2cabedf9c13b69fca9cf8e82465210b3f62ff
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cb6f7eba51b385c216f55e333c0be6d85be89d87
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 21a7b01bd2931772a8d759c2ffb67820a1d20307
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Guanaco-7B-Uncensored/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 303ceb6c6dbdb3916fd2d19622c200c1f4994852
       name: Q8_0.gguf

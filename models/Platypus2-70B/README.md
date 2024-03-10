@@ -12,18 +12,6 @@ Platypus-70B is an instruction fine-tuned model based on the LLaMa2-70B transfor
 
 ![Platty](./Best_Platty_small.jpeg)
 
-### Benchmark Metrics
-
-| Metric                | Value |
-|-----------------------|-------|
-| MMLU (5-shot)         | 70.48 |
-| ARC (25-shot)         | 71.84 |
-| HellaSwag (10-shot)   | 87.94 |
-| TruthfulQA (0-shot)   | 62.26 |
-| Avg.                  | 73.13 |
-
-We use state-of-the-art [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) to run the benchmark tests above, using the same version as the HuggingFace LLM Leaderboard. Please see below for detailed instructions on reproducing benchmark results.
-
 ### Model Details
 
 * **Trained by**: Cole Hunter & Ariel Lee
@@ -117,3 +105,16 @@ Please see the Responsible Use Guide available at https://ai.meta.com/llama/resp
     url={https://openreview.net/forum?id=nZeVKeeFYf9}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_garage-bAInd__Platypus2-70B)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 64.16   |
+| ARC (25-shot)         | 70.65          |
+| HellaSwag (10-shot)   | 87.15    |
+| MMLU (5-shot)         | 70.08         |
+| TruthfulQA (0-shot)   | 52.37   |
+| Winogrande (5-shot)   | 84.37   |
+| GSM8K (5-shot)        | 33.06        |
+| DROP (3-shot)         | 51.41         |

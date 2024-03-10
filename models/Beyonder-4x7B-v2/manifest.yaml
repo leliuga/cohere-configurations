@@ -1,0 +1,171 @@
+id: Beyonder-4x7B-v2
+parent_id: mlabonne/Beyonder-4x7B-v2
+name: Beyonder 4X7B v2
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Maxime Labonne
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- moe
+- base_model:mlabonne/Beyonder-4x7B-v2
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8f7f78b07f8a302d32e6eb0807f040351f7b9a95
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q2_K.gguf
+      size: 8061644992
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 1a54397dcc313b9ee20217dea6946fda01759566
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q3_K_M.gguf
+      size: 10523381952
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 09390cea5b68cb8cd9868c4f9dea3685d833c767
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q4_0.gguf
+      size: 13623603392
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 2de899a093061806dae8c1b454b2980d478440a5
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q4_K_M.gguf
+      size: 13640904896
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: a1e43b7e6802547fc39f6c5a9028750feb36968e
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q5_0.gguf
+      size: 16626331840
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 79c208d24670fee7f00717412e855cb60afe8d67
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q5_K_M.gguf
+      size: 16635244736
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d22081ea37cf085ad2fa4424ee085db8c7ab7ec9
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q6_K.gguf
+      size: 19816730816
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Beyonder-4x7B-v2/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e920ce537b7d8e08c3d22155d6646dbb244a08b1
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Beyonder-4x7B-v2-GGUF/resolve/main/beyonder-4x7b-v2.Q8_0.gguf
+      size: 25666261184
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

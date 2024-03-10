@@ -30,19 +30,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -52,15 +39,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 604676276d45ff99a5ad8f01dd85615d8115a839
       name: Q2_K.gguf
@@ -74,15 +54,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6bee0e6974be267abbe4bc34952e256cf655fa53
       name: Q3_K_L.gguf
@@ -96,15 +69,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4ae0a7a7d0df7c267913964422bd07f58e32d574
       name: Q3_K_M.gguf
@@ -118,15 +84,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 00e15b6270e454694d1badd989bd3c34805e66f9
       name: Q3_K_S.gguf
@@ -140,15 +99,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ef7f4157d71b964d1fbbedb290b1f14aa36ce807
       name: Q4_0.gguf
@@ -162,15 +114,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ff4753af8553a06842b4a306dacf9b4b88c9022f
       name: Q4_K_M.gguf
@@ -184,15 +129,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d89fc2a34caa561d55dd090f42f4dcad1b08855d
       name: Q4_K_S.gguf
@@ -206,15 +144,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c740cac44371ad9e65c1819508cfd5f79470e65b
       name: Q5_0.gguf
@@ -228,15 +159,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a23a8e65f6e417ff81d88668fd4ecda6a7c6de2
       name: Q5_K_M.gguf
@@ -250,15 +174,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d52ffc665cbffd0e986cba67da7d5fd51eacbd70
       name: Q5_K_S.gguf
@@ -272,15 +189,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1d077d37ac5a35e1b79a53b97047cc26383422a9
       name: Q6_K.gguf
@@ -294,15 +204,8 @@ variants:
     - models/blossom-v3-mistral-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 96b758894a4b3cf83461d087f151861e24e313cf
       name: Q8_0.gguf

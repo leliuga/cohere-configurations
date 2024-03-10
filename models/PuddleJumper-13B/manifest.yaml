@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/PuddleJumper-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4bdfe77e0fd3ef92ab59dc78e6fba7be9e86e34f
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/PuddleJumper-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f214e2707e621b34e8262707261a42c1a5ff3079
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/PuddleJumper-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f55abf4943a61583c2348a04c20dacd96d6e2520
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/PuddleJumper-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 30af7a31582c2598c3fe7fd219a33ba2502ab6b7
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/PuddleJumper-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a40db57efdbdd4a3cd181f4654e3929767ed21f5
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/PuddleJumper-13B/Q4_1/Q4_1.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91b27545b8cda11e73c127eac021a0d3ab133ccd
       name: Q4_1.gguf
@@ -181,15 +126,8 @@ variants:
     - models/PuddleJumper-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 75f94d3ff562a4d582f5ad7cd7da153ca7c6e729
       name: Q4_K_M.gguf
@@ -203,15 +141,8 @@ variants:
     - models/PuddleJumper-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 071a2a4276ab65aae7e684736ea6184cdf086bbe
       name: Q4_K_S.gguf
@@ -225,15 +156,8 @@ variants:
     - models/PuddleJumper-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da64a513d49a19428387c20da8da453fd624c571
       name: Q5_0.gguf
@@ -247,15 +171,8 @@ variants:
     - models/PuddleJumper-13B/Q5_1/Q5_1.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8655584be6199e0bdc9a6bcc16f5a693907c6dcf
       name: Q5_1.gguf
@@ -269,15 +186,8 @@ variants:
     - models/PuddleJumper-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6d19414bfaa4ab02bb1f1f60ab0675012dbb71ad
       name: Q5_K_M.gguf
@@ -291,15 +201,8 @@ variants:
     - models/PuddleJumper-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 592bb75968f516c9111b78a9e7b69720a3211090
       name: Q5_K_S.gguf
@@ -313,15 +216,8 @@ variants:
     - models/PuddleJumper-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 26aed088f90376bbb50975a8e432847671b0afb5
       name: Q6_K.gguf
@@ -335,15 +231,8 @@ variants:
     - models/PuddleJumper-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 40aaabaa9499c880a70f037dcdecd2ae64fe31ad
       name: Q8_0.gguf

@@ -1,9 +1,112 @@
 ---
-license: llama2
 language:
 - en
+license: llama2
 datasets:
 - ehartford/samantha-data
+model-index:
+- name: Samantha-1.11-CodeLlama-34b
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 56.57
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/Samantha-1.11-CodeLlama-34b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 75.47
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/Samantha-1.11-CodeLlama-34b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 53.51
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/Samantha-1.11-CodeLlama-34b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 50.46
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/Samantha-1.11-CodeLlama-34b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 73.48
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/Samantha-1.11-CodeLlama-34b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 19.33
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/Samantha-1.11-CodeLlama-34b
+      name: Open LLM Leaderboard
 ---
 
 This Samantha is special.  Trained on CodeLlama-34b, she can code and do your homework, as well as be your personal companion.
@@ -120,3 +223,17 @@ Detailed results can be found [here](https://huggingface.co/datasets/open-llm-le
 | Winogrande (5-shot)   | 73.48   |
 | GSM8K (5-shot)        | 19.33        |
 | DROP (3-shot)         | 8.97         |
+
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_ehartford__Samantha-1.11-CodeLlama-34b)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |54.80|
+|AI2 Reasoning Challenge (25-Shot)|56.57|
+|HellaSwag (10-Shot)              |75.47|
+|MMLU (5-Shot)                    |53.51|
+|TruthfulQA (0-shot)              |50.46|
+|Winogrande (5-shot)              |73.48|
+|GSM8k (5-shot)                   |19.33|
+

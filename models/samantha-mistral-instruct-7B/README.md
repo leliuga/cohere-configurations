@@ -4,6 +4,8 @@ license: apache-2.0
 
 Trained on [mistral-7b-instruct](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1) as a base model, this Samantha was trained in 2 hours on 4x A100 80gb with 20 epochs of the Samantha-1.1 dataset.
 
+Join our Discord! https://discord.gg/vT3sktQ3zb
+
 My gratitude goes to my sponsors, a16z and Microsoft for Startups.
 
 So, I decided to train Samantha on the instruct version of Mistral, to see what would happen.  It turns out she's a very good and capable general assistant.  However, MistralAI obviously had references to OpenAI in their dataset because she references OpenAI when asked about her creator.  (so I trained another Samantha on mistral-base too)

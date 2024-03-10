@@ -23,22 +23,9 @@ config:
   context_size: 2048
   embedding_size: 4096
   attention_head_size: 32
-  key_value_head_size: 0
+  key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/sabia-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e0c38da1b3adf7af4ab65763aa29c76866d2accc
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/sabia-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 90c2e4e6f13e76821a29ddc4d5df03444f121f23
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/sabia-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c0fca17f5d031b2dd5dd504a68471cbffd7adde
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/sabia-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a0ba096930596a9798ebab7b349ff7d057a6be7
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/sabia-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 125d8652e8c6d7ced62604280e2a86b0b9d880a9
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/sabia-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7e56387cbfebd9ae18d0a4de81043db4d70e8e45
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/sabia-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d061846372a5bcfb1da6c178ae0077c2d225cc71
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/sabia-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71175eb10d54e730a358b4dd09158dbd259ef899
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/sabia-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3caa6638a3f6223b901c27b273f5b23ceb519289
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/sabia-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8b88339683c8a8d2ff58b63af2a02d45895bc824
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/sabia-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a0875bfb33fec00b532736bc64ad569bb2d7ccf7
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/sabia-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 93f60340be8d378b80e6f937f478ba24d9cd5ac4
       name: Q8_0.gguf

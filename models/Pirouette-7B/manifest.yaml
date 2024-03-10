@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Pirouette-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9d2bab466bf416fe621cffd0b3913677aecf0262
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Pirouette-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a2c18bcd5d81ffe8ee2aeef135cd30ccacee20e
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Pirouette-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fbafa9b9ddbb984bd1b0107572859829e89aa846
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Pirouette-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3cf036aa503849805000c0a83a053beae15afeb6
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Pirouette-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 139fbb3645b2801a6b52f260a02aca7c2989abf3
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Pirouette-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6a387967dcc472564fd1578aa30b103a414e4adf
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Pirouette-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5ee409024304c3f9a066779b6c4e1183308c896
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Pirouette-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a94bdeccf02c53e8e09d703f1f7976bb449dce5
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Pirouette-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 45243b552d11d1285e08045371a6449e53d64e8b
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Pirouette-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a4f95d22df34dbc7645b8fe222f1f24201eaf845
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Pirouette-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d1c966ce837cb10bda1ccd798e56ad401948e1c7
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Pirouette-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0833bc23a6fa6f59c8089b711005aa458a94d949
       name: Q8_0.gguf

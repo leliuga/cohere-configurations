@@ -87,6 +87,9 @@ model-index:
       name: accuracy
 tags:
 - merge
+base_model:
+- teknium/OpenHermes-2.5-Mistral-7B
+- Intel/neural-chat-7b-v3-3
 ---
 ![image/png](https://cdn-uploads.huggingface.co/production/uploads/6468ce47e134d050a58aa89c/x44nNbPTpv0zGTqA1Jb2q.png)
 
@@ -170,3 +173,7 @@ Detailed results can be found [here](https://huggingface.co/datasets/open-llm-le
 | TruthfulQA (0-shot)   | 62.78  |
 | Winogrande (5-shot)   | 79.16  |
 | GSM8K (5-shot)        | 67.78        |
+
+If you would like to support me:
+
+[☕ Buy Me a Coffee](https://www.buymeacoffee.com/weyaxi)

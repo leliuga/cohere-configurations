@@ -1,13 +1,116 @@
 ---
 license: other
-license_name: yi-license
-license_link: LICENSE
-datasets:
-- adamo1139/AEZAKMI_v2
 tags:
 - llm
 - fine-tune
 - yi
+datasets:
+- adamo1139/AEZAKMI_v2
+license_name: yi-license
+license_link: LICENSE
+model-index:
+- name: Yi-34B-200K-AEZAKMI-v2
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 67.92
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=adamo1139/Yi-34B-200K-AEZAKMI-v2
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 85.61
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=adamo1139/Yi-34B-200K-AEZAKMI-v2
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 75.22
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=adamo1139/Yi-34B-200K-AEZAKMI-v2
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 56.74
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=adamo1139/Yi-34B-200K-AEZAKMI-v2
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 81.61
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=adamo1139/Yi-34B-200K-AEZAKMI-v2
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 58.91
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=adamo1139/Yi-34B-200K-AEZAKMI-v2
+      name: Open LLM Leaderboard
 ---
 
 ## Model description
@@ -116,3 +219,16 @@ I will probably be working on de-contaminating base Yi-34B model now. \
 My second run of AEZAKMI v2 fine-tune was just 0.15 epochs and I really like how natural this model is and how rich is it's vocabulary. I will try to train less to hit the sweetspot. \
 I will be uploading LoRA adapter for that second run that was just 0.15 epochs. \
 I believe that I might have gotten what I want if I would have stopped training sooner. I don't have checkpoints older than 1500 steps back so I would need to re-run training to get it back.
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_adamo1139__Yi-34B-200K-AEZAKMI-v2)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |71.00|
+|AI2 Reasoning Challenge (25-Shot)|67.92|
+|HellaSwag (10-Shot)              |85.61|
+|MMLU (5-Shot)                    |75.22|
+|TruthfulQA (0-shot)              |56.74|
+|Winogrande (5-shot)              |81.61|
+|GSM8k (5-shot)                   |58.91|
+

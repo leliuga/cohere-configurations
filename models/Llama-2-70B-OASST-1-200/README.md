@@ -36,3 +36,14 @@ Input prompt example:
 The input ends with the `<|assistant|>` token to signal that the model should 
 start generating the assistant reply.
 
+### Citation
+```
+@misc{jordiclive_llama2_70b_oasst_1_200,
+  title={{Open-Assistant Llama2 70B SFT OASST}},
+  author={{Jordan Clive}},
+  howpublished={\url{https://huggingface.co/jordiclive/Llama-2-70b-oasst-1-200}},
+  year={2023},
+  note={Apache 2.0 License. Finetuned on OASST top-1 threads. Languages supported: English, German, Spanish, French.},
+  url={https://huggingface.co/jordiclive/Llama-2-70b-oasst-1-200},
+}
+```

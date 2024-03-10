@@ -1,0 +1,233 @@
+id: Lumosia-MoE-4x10.7
+parent_id: Steelskull/Lumosia-MoE-4x10.7
+name: Lumosia MoE 4X10.7
+description: ""
+architecture: mixtral
+licence: apache-2.0
+object: model
+owned_by: Steel
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- moe
+- merge
+- mergekit
+- lazymergekit
+- DopeorNope/SOLARC-M-10.7B
+- maywell/PiVoT-10.7B-Mistral-v0.2-RP
+- kyujinpy/Sakura-SOLAR-Instruct
+- jeonsworld/CarbonVillain-en-10.7B-v1
+- base_model:Steelskull/Lumosia-MoE-4x10.7
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 3b451529c0186ef4046f3e3d160fcdc45f0c07f9
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q2_K.gguf
+      size: 12015432352
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: c17ee518f9e7c12c430fcbb9e04c443df3d99879
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q3_K_L.gguf
+      size: 15825638048
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 4c069f6ead4d74c337d21c6d43c81e5bb76a3d7c
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q3_K_M.gguf
+      size: 15700857504
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: c5af219bac29d6077d9e3a6b79f809d8b53613ff
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q3_K_S.gguf
+      size: 15566115488
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 38b81ae2a786ade19adbada29a4a8dc9ec3a0d93
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q4_0.gguf
+      size: 20343009952
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 2549180d09eb8158ab2e5ab18d471469b4743068
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q4_K_M.gguf
+      size: 20368962208
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 8e4a19e25f7a4dfce1913837898660d8c9f72981
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q4_K_S.gguf
+      size: 20345107104
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: fdcef759d925b091b6bf0a9c77811f5cb57d34a1
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q5_0.gguf
+      size: 24838910624
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 0e518dd6bf372c564f4aaa7b5808799ca43b33cf
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q5_K_M.gguf
+      size: 24852279968
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: f3d751c2d0548c3816e50077442978fd8b19440d
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q5_K_S.gguf
+      size: 24838910624
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: cdd92108d62dc10353bab0a84a26f807a1a3c339
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q6_K.gguf
+      size: 29615805088
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lumosia-MoE-4x10.7/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: bfb97681aa9e6d0a31f3617d67a6f668ce9a71fc
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Lumosia-MoE-4x10.7-GGUF/resolve/main/lumosia-moe-4x10.7.Q8_0.gguf
+      size: 38358356640
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "### System:\n\n### USER:{prompt}\n\n### Assistant:\n"
