@@ -69,8 +69,8 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 ghcr.io/lel
 
 ## Supported Models (923)
 
-| ID  | Variants | Vocab Size | Context Size | Embedding Size | Read more |
-| --- | -------- | ------- | --------- | --------- |
+| ID      | Variants      | Vocab Size     | Context Size     | Embedding Size     | Read more                             |
+| ------- | ------------- | -------------- | ---------------- | ------------------ | ------------------------------------- |
 | 13B-BlueMethod | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 2048 | 5120 | [README.md](models/13B-BlueMethod/README.md) |
 | 13B-Chimera | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 2048 | 5120 | [README.md](models/13B-Chimera/README.md) |
 | 13B-HyperMantis | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 2048 | 5120 | [README.md](models/13B-HyperMantis/README.md) |
