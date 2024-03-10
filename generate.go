@@ -89,8 +89,8 @@ docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 ghcr.io/lel
 
 ## Supported Models ({{len .}})
 
-| ID  | Variants | Vocab Size | Context Size | Embedding Size | Read more |
-| --- | -------- | ------- | --------- | --------- |{{range .}}
+| ID      | Variants      | Vocab Size     | Context Size     | Embedding Size     | Read more                             |
+| ------- | ------------- | -------------- | ---------------- | ------------------ | ------------------------------------- |{{range .}}
 | {{.ID}} | {{.Variants}} | {{.VocabSize}} | {{.ContextSize}} | {{.EmbeddingSize}} | [README.md](models/{{.ID}}/README.md) |{{end}}
 
 ## Memory/Disk Requirements
