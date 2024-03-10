@@ -78,13 +78,15 @@ Multimodal
 
 ## Requirements
 
-1. [Docker](https://docs.docker.com/get-docker/)
-2. [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+1. [Nerdctl](https://github.com/containerd/nerdctl) or [Podman](https://podman.io/getting-started/installation) or [Docker](https://docs.docker.com/get-docker/)
+3. [Using GPUs inside containers](https://github.com/containerd/nerdctl/blob/main/docs/gpu.md)
 
 ## Usage
 
 ` + "``` bash" + `
-docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run <id>/<variant>
+nerdctl run --rm --gpus all -v ` + "`pwd`" + `/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run <id>/<variant>
+
+# example for LLaMA-2 $ nerdctl run --rm --gpus all -v ` + "`pwd`" + `/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct/Q4_0
 ` + "```" + `
 
 ## Supported Models ({{len .}})
