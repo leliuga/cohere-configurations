@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2b525ca4bbb89ab560c3ec8902aa8f7f5da943f7
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b62035df433fc765ef64eb3b518f9215205570fe
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 90ff97b0811052f355b6cd6f0535740df19ef7f1
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 74d938cc4e882fd0e059a2fc165a6ad06e79d992
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 001a42d3b709198e0b3c2d6d50574c9c160ecbc9
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ab11bfc44a60f14220182079f095ad04c5f1e037
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8a8ab884dc95d388a5fbfd19f0832535e6d6097d
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0821afe0fa7ea60057469e9793cdc50db5b519df
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aec1cf095b0a3f162a7d572a98c117a467ca98e4
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 057c792b2922b99e45f86a7616970464028f9afd
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71934be17d5898cd2f0045110a52630cc91ecdce
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/LMCocktail-10.7B-v1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a81d418555c1f6808419ee0a92f165b598190f97
       name: Q8_0.gguf

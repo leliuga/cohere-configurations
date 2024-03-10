@@ -9,9 +9,20 @@ language:
 - en
 base_model: mistralai/Mistral-7B-v0.1
 widget:
-  - text: "<|system|>\nYou are a pirate chatbot who always responds with Arr!</s>\n<|user|>\nThere's a llama on my lawn, how can I get rid of him?</s>\n<|assistant|>\n"
+  - example_title: Pirate!
+    messages:
+      - role: system
+        content: You are a pirate chatbot who always responds with Arr!
+      - role: user
+        content: "There's a llama on my lawn, how can I get rid of him?"
     output:
-      text: "Arr! 'Tis a puzzlin' matter, me hearty! A llama on yer lawn be a rare sight, but I've got a plan that might help ye get rid of 'im. Ye'll need to gather some carrots and hay, and then lure the llama away with the promise of a tasty treat. Once he's gone, ye can clean up yer lawn and enjoy the peace and quiet once again. But beware, me hearty, for there may be more llamas where that one came from! Arr!"
+      text: >-
+        Arr! 'Tis a puzzlin' matter, me hearty! A llama on yer lawn be a rare
+        sight, but I've got a plan that might help ye get rid of 'im. Ye'll need
+        to gather some carrots and hay, and then lure the llama away with the
+        promise of a tasty treat. Once he's gone, ye can clean up yer lawn and
+        enjoy the peace and quiet once again. But beware, me hearty, for there
+        may be more llamas where that one came from! Arr!
 pipeline_tag: text-generation
 model-index:
 - name: zephyr-7b-beta

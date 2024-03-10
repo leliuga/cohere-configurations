@@ -30,19 +30,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -52,15 +39,8 @@ variants:
     - models/LlongOrca-7B-16K/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7620d2a0be1be433a99e0b391bf6c22749e7b1e0
       name: Q2_K.gguf
@@ -74,15 +54,8 @@ variants:
     - models/LlongOrca-7B-16K/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9f16ae6c7b83fc25b3dece13b81d69a3a66f9559
       name: Q3_K_L.gguf
@@ -96,15 +69,8 @@ variants:
     - models/LlongOrca-7B-16K/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5a191e667b0de9d7c18dbfe973c2899d70140516
       name: Q3_K_M.gguf
@@ -118,15 +84,8 @@ variants:
     - models/LlongOrca-7B-16K/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a2f1e74c214005bbdf6d3cc8a72e28a91de1df9
       name: Q3_K_S.gguf
@@ -140,15 +99,8 @@ variants:
     - models/LlongOrca-7B-16K/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 98516ca3ca0d361e11f0bde72b7f3c667040abb7
       name: Q4_0.gguf
@@ -162,15 +114,8 @@ variants:
     - models/LlongOrca-7B-16K/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 645fd24a3aeaddf757fa7a81416bedc47e0c0ebb
       name: Q4_K_M.gguf
@@ -184,15 +129,8 @@ variants:
     - models/LlongOrca-7B-16K/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f154cf2af80431ce0f9b35cd67c788d9ca573e42
       name: Q4_K_S.gguf
@@ -206,15 +144,8 @@ variants:
     - models/LlongOrca-7B-16K/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 908b4ffaa6a36fc916e4be121a6a17fa96644801
       name: Q5_0.gguf
@@ -228,15 +159,8 @@ variants:
     - models/LlongOrca-7B-16K/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 49a97651e53dce5f318bbe7288993af1e763d4c4
       name: Q5_K_M.gguf
@@ -250,15 +174,8 @@ variants:
     - models/LlongOrca-7B-16K/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5038624ab84a892c7784fba07aec9a5e7be37ae
       name: Q5_K_S.gguf
@@ -272,15 +189,8 @@ variants:
     - models/LlongOrca-7B-16K/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d1fe475699ca54e94eac116815239b5429dcfe7b
       name: Q6_K.gguf
@@ -294,15 +204,8 @@ variants:
     - models/LlongOrca-7B-16K/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7f36679cdaea115b7623db9fbb6f1e8544216c6a
       name: Q8_0.gguf

@@ -8,6 +8,9 @@ datasets:
 language:
 - en
 base_model: meta-llama/Llama-2-70b-hf
+license: other
+license_name: ai2-impact-license-low-risk
+license_link: https://allenai.org/impact-license
 ---
 
 

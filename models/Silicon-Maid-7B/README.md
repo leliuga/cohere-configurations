@@ -105,4 +105,14 @@ Below is an instruction that describes a task. Write a response that appropriate
 ### Response:
 ```
 
+### Other Benchmarks
 
+| Model | Average | AGIEval | GPT4All | TruthfulQA | Bigbench |
+|---|---:|---:|---:|---:|---:|
+| [OpenPipe/mistral-ft-optimized-1218](https://huggingface.co/OpenPipe/mistral-ft-optimized-1218) [📄](https://gist.github.com/mlabonne/36c412889c4acfad7061f269a31f9055) | 56.85 | 44.74 | 75.6 | 59.89 | 47.17 |
+| [**Silicon-Maid-7B**](https://huggingface.co/SanjiWatsuki/Silicon-Maid-7B) [📄](https://gist.github.com/DHNishi/315ba1abba27af930f5f546af3515735) | **56.45**|  44.74|  74.26|      61.5|   45.32|
+| [mlabonne/NeuralHermes-2.5-Mistral-7B](https://huggingface.co/mlabonne/NeuralHermes-2.5-Mistral-7B) [📄](https://gist.github.com/mlabonne/14687f1eb3425b166db511f31f8e66f6) | 53.51 | 43.67 | 73.24 | 55.37 | 41.76 |
+| [teknium/OpenHermes-2.5-Mistral-7B](https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B) [📄](https://gist.github.com/mlabonne/88b21dd9698ffed75d6163ebdc2f6cc8) | 52.42 | 42.75 | 72.99 | 52.99 | 40.94 |
+| [openchat/openchat_3.5](https://huggingface.co/openchat/openchat_3.5) [📄](https://gist.github.com/mlabonne/e23d7d8418619cf5b1ca10da391ac629) | 51.34 | 42.67 | 72.92 | 47.27 | 42.51 |
+| [berkeley-nest/Starling-LM-7B-alpha](https://huggingface.co/berkeley-nest/Starling-LM-7B-alpha) [📄](https://gist.github.com/mlabonne/c31cc46169ef3004c0df250017d5cac9) | 51.16 | 42.06 | 72.72 | 47.33 | 42.53 |
+| [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) [📄](https://gist.github.com/mlabonne/32a36f448fd36a3100c325d51d01c0a1) | 50.99 | 37.33 | 71.83 | 55.1 | 39.7 |

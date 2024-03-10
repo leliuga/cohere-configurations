@@ -2,7 +2,7 @@ id: phi-2
 parent_id: microsoft/phi-2
 name: Phi 2
 description: ""
-architecture: phi-msft
+architecture: phi
 licence: other
 object: model
 owned_by: Microsoft
@@ -18,28 +18,16 @@ tags:
 - en
 - base_model:microsoft/phi-2
 - license:other
+- has_space
 - region:us
 config:
   vocab_size: 51200
-  context_size: 0
-  embedding_size: 0
-  attention_head_size: 0
-  key_value_head_size: 0
-  intermediate_size: 0
-  hidden_layer_size: 0
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
+  context_size: 2048
+  embedding_size: 2560
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 10240
+  hidden_layer_size: 32
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,16 +36,9 @@ variants:
     - --model
     - models/phi-2/Q2_K/Q2_K.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: fe681f7e8f2e5c283095eaf88e363476f1d4ccaf
       name: Q2_K.gguf
@@ -70,16 +51,9 @@ variants:
     - --model
     - models/phi-2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: b017027a11bf3ebe3a9ce0c9ea16d7615c9918bc
       name: Q3_K_L.gguf
@@ -92,16 +66,9 @@ variants:
     - --model
     - models/phi-2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 59b3a1364d4cf99f9c949de88a7060012ace096b
       name: Q3_K_M.gguf
@@ -114,16 +81,9 @@ variants:
     - --model
     - models/phi-2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 221c8b2d50a5429cac9c1773f02eb8f2fa0a0914
       name: Q3_K_S.gguf
@@ -136,16 +96,9 @@ variants:
     - --model
     - models/phi-2/Q4_0/Q4_0.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 32d1353681a93ea0f1b550f0a0175c91a84e7059
       name: Q4_0.gguf
@@ -158,16 +111,9 @@ variants:
     - --model
     - models/phi-2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 49b912fc8a98cdb06ed2311947855cf37d97d0ef
       name: Q4_K_M.gguf
@@ -180,16 +126,9 @@ variants:
     - --model
     - models/phi-2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 06747aa3062360e8aee1af09634c180a1944438c
       name: Q4_K_S.gguf
@@ -202,16 +141,9 @@ variants:
     - --model
     - models/phi-2/Q5_0/Q5_0.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 04bf05cf6315f47dba928a24f383c19428f87122
       name: Q5_0.gguf
@@ -224,16 +156,9 @@ variants:
     - --model
     - models/phi-2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 9e382a278828089b7f08660e36897cb5f1c9a12f
       name: Q5_K_M.gguf
@@ -246,16 +171,9 @@ variants:
     - --model
     - models/phi-2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 47bd0fb6fba1d2f0a57b38d2ce77413c315546c3
       name: Q5_K_S.gguf
@@ -268,16 +186,9 @@ variants:
     - --model
     - models/phi-2/Q6_K/Q6_K.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: 48fe1d1112f6980e30c293b09f6f970005f3be18
       name: Q6_K.gguf
@@ -290,16 +201,9 @@ variants:
     - --model
     - models/phi-2/Q8_0/Q8_0.gguf
     - --ctx-size
-    - "0"
-    - --batch-size
-    - "0"
+    - "2048"
     - --n-gpu-layers
-    - "3"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
+    - "35"
     artifacts:
     - id: c3df81d19ba39aad0e0b28502555057d62dc61b8
       name: Q8_0.gguf
@@ -309,7 +213,7 @@ inference:
   chat:
     options:
       frequency_penalty: 0.0
-      max_tokens: 0
+      max_tokens: 2048
       "n": 1
       presence_penalty: 0.0
       stop:

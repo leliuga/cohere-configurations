@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 120
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Lila-103B-L2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "123"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da0aa79715ada2fb6f09618fc52fff6dcbaa9bad
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Lila-103B-L2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "123"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 60cf1bae3b076f6db6f717a4a9509b325fd34384
       name: Q3_K_M.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Lila-103B-L2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "123"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1ced042de682f782f0f594e9ca3a6fe24a4fb9d4
       name: Q3_K_S.gguf

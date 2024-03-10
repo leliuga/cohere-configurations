@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 62
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Norocetacean-20B-10k/Q2_K/Q2_K.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ccbcdcf9486a26cfa8e59581308b779edbdc6100
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Norocetacean-20B-10k/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fff208e27faf7c1551f4be5b7c47c7a9f69614ea
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Norocetacean-20B-10k/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ece12d5d033f823eb52051463fae25407af08984
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Norocetacean-20B-10k/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 30dfb88729a59bafcda8480cbea5c45bea75cfd2
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Norocetacean-20B-10k/Q4_0/Q4_0.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c8a2dfad30f5aa8cbc8ef70b06ca6afc44c11cfb
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Norocetacean-20B-10k/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: be9b3f820f0dea69c82d47f1d1795e6955be60bc
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Norocetacean-20B-10k/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 43e38fb4b888963f0507d86c792023678e69b2e3
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Norocetacean-20B-10k/Q5_0/Q5_0.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8ce25519f06322f36efd337874a97748a743ffbf
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Norocetacean-20B-10k/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9880704bea067b61f9b401c39a5a21f6781a286a
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Norocetacean-20B-10k/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25819a2940724f0b1f3cd6330e665fddba97cbc2
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Norocetacean-20B-10k/Q6_K/Q6_K.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 910267f8ead22937f78b934d747dc1a69a91bde8
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Norocetacean-20B-10k/Q8_0/Q8_0.gguf
     - --ctx-size
     - "10240"
-    - --batch-size
-    - "40960"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1dade60fc2fae993ce8af3b23fd3c9cbf10199db
       name: Q8_0.gguf

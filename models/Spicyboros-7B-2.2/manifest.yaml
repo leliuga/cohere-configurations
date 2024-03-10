@@ -26,19 +26,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bc03b29d17448e038b96d551c0df9022ff6121f4
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5083cc640af0d2b8b58b2856932da765a5f7b05e
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0aa8e4b4209843f23ec9b0583d688cd48262827a
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e7e51f14983fbda5043c47679fcf8dafb276f4d4
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3ddda24648bed128502dbe59f49c235d40822db1
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6e2ea1b4649e53f63314352c85d0d1a7fb3261d0
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 148f97117386c6f6b001973d5ea67a2c65bedd73
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 59db238765474175afd924030772932a4034c379
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d788175918e683ed47ee2d7fe3fdc3d60541b3c
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 64af6596a23cab008238715eadccae4ee9307dd7
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 944f107efeff6e52fffe37d48b592f57cd38fc81
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/Spicyboros-7B-2.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5c45b26b2c6a05dfca224dbf68cc154d794e4e7a
       name: Q8_0.gguf

@@ -1,0 +1,60 @@
+id: Goliath-longLORA-120b-rope8-32k-fp16
+parent_id: grimulkan/Goliath-longLORA-120b-rope8-32k-fp16
+name: Goliath LongLORA 120B Rope8 32K
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Grimulkan
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:grimulkan/Goliath-longLORA-120b-rope8-32k-fp16
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 137
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Goliath-longLORA-120b-rope8-32k-fp16/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "140"
+    artifacts:
+    - id: 69bf7421a665a2a8c264b5195ab037473607faee
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Goliath-longLORA-120b-rope8-32k-fp16-GGUF/resolve/main/goliath-longlora-120b-rope8-32k-fp16.Q2_K.gguf
+      size: 43245727168
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

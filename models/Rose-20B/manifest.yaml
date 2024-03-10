@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 62
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Rose-20B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: db9155cd7d5fc789b7049da1028692f27123870a
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Rose-20B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2a871180b27b75808cc6c8efa708897416ae7aee
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Rose-20B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2cf0512538e5842f8a8de66b87b84157b57047c0
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Rose-20B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 76f0301a872641a16ad2af04223e411a0e581692
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Rose-20B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 015990420716903303394f9aef32a826ff18f6d2
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Rose-20B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c5890b10323b1b896825753b5d125d98221117c7
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Rose-20B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9be40a359d6a4c797e2d1d4271ac38d0a90fb586
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Rose-20B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c1cbd658acc7e2dbf75f2ea96b24fffe9cac36b6
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Rose-20B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e56bd55eb5653272842087e32a8733654b3f5578
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Rose-20B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3affab60bc13ad0663afec2bf6c49b6a2bca414
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Rose-20B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b7fc5adbb8acbcfa2655d0ac5e036a676c9caf91
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Rose-20B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cd7e848b56b6921b4e3668be3edadf3248904e01
       name: Q8_0.gguf

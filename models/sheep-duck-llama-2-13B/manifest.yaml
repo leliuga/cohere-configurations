@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dba4daebc422387f5371b8d5b898e87d0ff19995
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 16a035d10ec4ff0bc037a9d00d31d1365f65a04c
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 599a8022da8787d3f9e5787f02ac6f30808f5056
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1afdcec6325953ef16af366d3a54a3388c4c2a0a
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 652c8d5f6c221ffb5218afea7adf55ec3b5733e9
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4d78192831d60b41cf279ca39a4d193bf195d0bc
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4d7e5b74502445c890b472c6671c7d2a78d6f84d
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ec3457a4d78f317fbb07df8d7289ded958a102f
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4bde3eca119e0c8343eb92cc5842effac632bd83
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5124cc8e5338458b8ff19a292c3a2d2d2055de4d
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cfd4e4fb3bfb085cab4d6f9fcc22d5b628039466
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/sheep-duck-llama-2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ca35e90ebed9d84d76761ec22bb17c70e0c890d2
       name: Q8_0.gguf

@@ -16,6 +16,7 @@ tags:
 - dataset:umd-zhou-lab/claude2_alpaca
 - base_model:umd-zhou-lab/claude2-alpaca-13B
 - license:llama2
+- has_space
 - text-generation-inference
 - region:us
 config:
@@ -26,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +36,8 @@ variants:
     - models/claude2-alpaca-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 94591016d51ae993109ae4a5b8be1e966efc313e
       name: Q2_K.gguf
@@ -70,15 +51,8 @@ variants:
     - models/claude2-alpaca-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d340bc5de24b67cc43eb9657531c71c1d538eacb
       name: Q3_K_L.gguf
@@ -92,15 +66,8 @@ variants:
     - models/claude2-alpaca-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 27159fec564d7e24c5fb376f35fca508e5dd57de
       name: Q3_K_M.gguf
@@ -114,15 +81,8 @@ variants:
     - models/claude2-alpaca-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c029c5797b98dc00099b4fae5faabfb3249a2b6
       name: Q3_K_S.gguf
@@ -136,15 +96,8 @@ variants:
     - models/claude2-alpaca-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 42dd1d149f23129412827e4f221430b19e4faacc
       name: Q4_0.gguf
@@ -158,15 +111,8 @@ variants:
     - models/claude2-alpaca-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f1818868be95a30d96ce916691a67c7262986a35
       name: Q4_K_M.gguf
@@ -180,15 +126,8 @@ variants:
     - models/claude2-alpaca-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd8b4059326d6298570eaa384363363945c17cd3
       name: Q4_K_S.gguf
@@ -202,15 +141,8 @@ variants:
     - models/claude2-alpaca-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 49ce4e1561cd2fe0f1a036267cf0672b6e307829
       name: Q5_0.gguf
@@ -224,15 +156,8 @@ variants:
     - models/claude2-alpaca-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e91afdc032b50a97b460c4648e41ae9e1050d74d
       name: Q5_K_M.gguf
@@ -246,15 +171,8 @@ variants:
     - models/claude2-alpaca-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d65921278d4d78be09f99c3f131c8c5a099c5c7d
       name: Q5_K_S.gguf
@@ -268,15 +186,8 @@ variants:
     - models/claude2-alpaca-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f752bb9d4f86e2e52949d6e6f90d0a4d0aa77ca6
       name: Q6_K.gguf
@@ -290,15 +201,8 @@ variants:
     - models/claude2-alpaca-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: abd8d990280e7878d23d49c139be1867ea678734
       name: Q8_0.gguf

@@ -33,19 +33,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -55,15 +42,8 @@ variants:
     - models/notus-7B-v1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2bee24c071b625c958c4e2acfbb96592b4ff3e02
       name: Q2_K.gguf
@@ -77,15 +57,8 @@ variants:
     - models/notus-7B-v1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8e836d8d27ffb2bc36bef8a3771ea6328985b5d6
       name: Q3_K_L.gguf
@@ -99,15 +72,8 @@ variants:
     - models/notus-7B-v1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e7f130d406d35543eb920d417f1d37d732fe7016
       name: Q3_K_M.gguf
@@ -121,15 +87,8 @@ variants:
     - models/notus-7B-v1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e66e54705dc956984285133ae7ac398dbdbeb34
       name: Q3_K_S.gguf
@@ -143,15 +102,8 @@ variants:
     - models/notus-7B-v1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 025b398382bad7281e61a65802dc9802bec900d8
       name: Q4_0.gguf
@@ -165,15 +117,8 @@ variants:
     - models/notus-7B-v1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c02cf7f4c90b68389e06c9aa2a11bab54ee842d
       name: Q4_K_M.gguf
@@ -187,15 +132,8 @@ variants:
     - models/notus-7B-v1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dc8a633e556395af82a7b5029199ffaabd5f359b
       name: Q4_K_S.gguf
@@ -209,15 +147,8 @@ variants:
     - models/notus-7B-v1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e9155d9cd8f6c082b1911bc89b70e44155854026
       name: Q5_0.gguf
@@ -231,15 +162,8 @@ variants:
     - models/notus-7B-v1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 11426ffa6d02e93ae14ed670c27053e8bf1b74e6
       name: Q5_K_M.gguf
@@ -253,15 +177,8 @@ variants:
     - models/notus-7B-v1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa44f27602e0580877c97076e5c889f254930cb9
       name: Q5_K_S.gguf
@@ -275,15 +192,8 @@ variants:
     - models/notus-7B-v1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d4d01360ee0c3b42dfb7a256d5119f323ffb78d2
       name: Q6_K.gguf
@@ -297,15 +207,8 @@ variants:
     - models/notus-7B-v1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d735f2d32bd5692fdf02b63675a942b93ab52b3
       name: Q8_0.gguf

@@ -17,8 +17,18 @@ Links to other models can be found in the index.
 |Model|Swallow-hf|Swallow-instruct-hf|
 |---|---|---|
 |7B| [Link](https://huggingface.co/tokyotech-llm/Swallow-7b-hf) | [Link](https://huggingface.co/tokyotech-llm/Swallow-7b-instruct-hf)|
+|7B-Plus| [Link](https://huggingface.co/tokyotech-llm/Swallow-7b-plus-hf) | Coming Soon |
 |13B| [Link](https://huggingface.co/tokyotech-llm/Swallow-13b-hf) | [Link](https://huggingface.co/tokyotech-llm/Swallow-13b-instruct-hf)|
 |70B| [Link](https://huggingface.co/tokyotech-llm/Swallow-70b-hf) | [Link](https://huggingface.co/tokyotech-llm/Swallow-70b-instruct-hf)|
+
+## Swallow Model Index NVE (No Vocabulary Expansion)
+|Model|Swallow-NVE-hf|Swallow-NVE-instruct-hf|
+|---|---|---|
+|7B| [Link](https://huggingface.co/tokyotech-llm/Swallow-7b-NVE-hf) | [Link](https://huggingface.co/tokyotech-llm/Swallow-7b-NVE-instruct-hf)|
+|13B| [Link](https://huggingface.co/tokyotech-llm/Swallow-13b-NVE-hf) | Coming Soon |
+|70B| [Link](https://huggingface.co/tokyotech-llm/Swallow-70b-NVE-hf) | [Link](https://huggingface.co/tokyotech-llm/Swallow-70b-NVE-instruct-hf)|
+
+We released the 7B and 70B models without vocabulary expansion on January 26th, 2024. The 13B model was released on February 4th, 2024, and its instruction-tuned version is coming soon. Swallow-7B-Plus is a model that has been trained with a larger number of Japanese tokens compared to Swallow-7B and its release date is March 2nd, 2024.
 
 
 ![logo](./logo.png)
@@ -42,12 +52,31 @@ Read our [blog post](https://zenn.dev/tokyotech_lm/articles/d6cb3a8fdfc907) or o
 |Model|Size|JCommonsenseQA|JEMHopQA|NIILC|JSQuAD|XL-Sum|MGSM|WMT20-en-ja|WMT20-ja-en|
 |---|---|---|---|---|---|---|---|---|---|
 |   |   |4-shot|4-shot|4-shot|4-shot|1-shot|4-shot|4-shot|4-shot|
-|Llama 2|7B|0.3852|0.4240|0.3410|0.7917|0.1905|0.0760|0.1783|0.1738|
-|Swallow|7B|0.4808|0.5078|0.5968|0.8573|0.1830|0.1240|0.2510|0.1511|
-|Llama 2|13B|0.6997|0.4415|0.4170|0.8533|0.2139|0.1320|0.2146|0.1982|
-|Swallow|13B|0.7837|0.5063|0.6398|0.9005|0.2168|0.2040|0.2720|0.1771|
-|Llama 2|70B|0.8686|0.4656|0.5256|0.9080|**0.2361**|0.3560|0.2643|**0.2398**|
-|Swallow|70B|**0.9348**|**0.6290**|**0.6960**|**0.9176**|0.2266|**0.4840**|**0.3043**|0.2298|
+| Llama 2 | 7B | 0.3852 | 0.4240 | 0.3410 | 0.7917 | 0.1905 | 0.0760 | 0.1783 | 0.1738 |
+| Swallow | 7B | 0.4808 | 0.5078 | 0.5968 | 0.8573 | 0.1830 | 0.1240 | 0.2510 | 0.1511 |
+| Swallow-Plus | 7B | 0.5478 | 0.5493 | 0.6030 | 0.8544 | 0.1806 | 0.1360 | 0.2568 | 0.1441 |
+| Swallow-NVE | 7B | 0.5433 | 0.5425 | 0.5729 | 0.8684 | 0.2117 | 0.1200 | 0.2405 | 0.1512 |
+| Llama 2 | 13B | 0.6997 | 0.4415 | 0.4170 | 0.8533 | 0.2139 | 0.1320 | 0.2146 | 0.1982 |
+| Swallow | 13B | 0.7837 | 0.5063 | 0.6398 | 0.9005 | 0.2168 | 0.2040 | 0.2720 | 0.1771 |
+| Swallow-NVE | 13B | 0.7712 | 0.5438 | 0.6351 | 0.9030 | 0.2294 | 0.2120 | 0.2735 | 0.1817 |
+| Llama 2 | 70B | 0.8686 | 0.4656 | 0.5256 | 0.9080 | 0.2361 | 0.3560 | 0.2643 | **0.2398** |
+| Swallow | 70B | 0.9348 | **0.6290** | 0.6960 | 0.9176 | 0.2266 | **0.4840** | **0.3043** | 0.2298 |
+| Swallow-NVE | 70B | **0.9410** | 0.5759 | **0.7024** | **0.9254** | **0.2758** | 0.4720 | 0.3042 | 0.2322 |
+### English version
+
+|Model|Size|OpenBookQA|TriviaQA|HellaSwag|SQuAD2.0|XWINO|GSM8K|
+|---|---|---|---|---|---|---|---|
+|   |   |8-shot|8-shot|8-shot|8-shot|8-shot|8-shot|
+| Llama 2 | 7B    | 0.3580     | 0.6265   | 0.5860    | 0.3207   | 0.9049 | 0.1410 |
+| Swallow | 7B    | 0.3180     | 0.4836   | 0.5308    | 0.3125   | 0.8817 | 0.1130 |
+| Swallow-Plus | 7B | 0.3280     | 0.4558   | 0.5259    | 0.3134   | 0.8929 | 0.1061 |
+| Swallow-NVE | 7B | 0.3180     | 0.5079   | 0.5329    | 0.2919   | 0.8817 | 0.0986 |
+| Llama 2 | 13B   | 0.3760     | 0.7255   | 0.6148    | 0.3681   | 0.9140 | 0.2403 |
+| Swallow | 13B   | 0.3500     | 0.5852   | 0.5660    | 0.3406   | 0.9075 | 0.2039 |
+| Swallow-NVE | 13B | 0.3460     | 0.6025   | 0.5700    | 0.3478   | 0.9006 | 0.1751 |
+| Llama 2 | 70B   | **0.4280** | **0.8239** | **0.6742** | **0.3770** | **0.9290** | **0.5284** |
+| Swallow | 70B   | 0.4220     | 0.7756   | 0.6458    | 0.3745   | 0.9204 | 0.4867 |
+| Swallow-NVE | 70B | 0.4240     | 0.7817   | 0.6439    | 0.3451   | 0.9256 | 0.4943 |
 
 ## Usage
 

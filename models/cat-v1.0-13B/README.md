@@ -5,6 +5,7 @@ language:
 tags:
 - llama
 - llama 2
+license: mit
 ---
 ## This model is made available on HuggingFace with the permission of Kaltsit.
 

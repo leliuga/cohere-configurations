@@ -1,8 +1,5 @@
 ---
 inference: false
-license: other
-license_name: microsoft-research-license
-license_link: https://huggingface.co/WizardLM/WizardMath-7B-V1.1/resolve/main/LICENSE
 language:
 - en
 pipeline_tag: text-generation

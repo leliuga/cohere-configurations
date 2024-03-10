@@ -29,19 +29,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c851af55c6d2f441cab84b4652f493e5c131c6c1
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f725ff6271a537b293552d00e456ad4d34eb7cc2
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 051de8b7fb48e8a66109e58c4f9dfbdebbf1fcd3
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: af6f5758933c6a557bead4f7902a95589aef8d30
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 290b55752f357d4d41bc95a92fb55e92741d1930
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 413ce449f6027f66503694a56a84407d4b406121
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 37e567cf5423dee74f3e850b051c9aadef6351f2
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 534c9ff83c52a3190156f6dc98e9db76e4f7efb5
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b7008cd1dc42f8d19f9e4e104107d3d0cdf2c27c
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ba1be31c26a71ca84309e277644697c33e20606e
       name: Q5_K_S.gguf
@@ -271,15 +188,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5c32bb0cb78ff8ddb2900dec5f9b90b106ab412a
       name: Q6_K.gguf
@@ -293,15 +203,8 @@ variants:
     - models/japanese-stablelm-instruct-gamma-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 676476b1c0997473834cec05dbefffb9bcb9c13b
       name: Q8_0.gguf

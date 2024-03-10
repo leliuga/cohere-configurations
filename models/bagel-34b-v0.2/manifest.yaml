@@ -52,19 +52,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -74,15 +61,8 @@ variants:
     - models/bagel-34b-v0.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4eeecf34fa0ac27c8c66c860323059bd6157c6cf
       name: Q2_K.gguf
@@ -96,15 +76,8 @@ variants:
     - models/bagel-34b-v0.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c82196d82050632c4ff73bc5de985fae71cc550
       name: Q3_K_L.gguf
@@ -118,15 +91,8 @@ variants:
     - models/bagel-34b-v0.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 73e6bcd0a7f3c657ffb0fa7f8ecfcf4c62fd7a4b
       name: Q3_K_M.gguf
@@ -140,15 +106,8 @@ variants:
     - models/bagel-34b-v0.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 753ad358178da0f320961c20e806d9b5fd5bbc3a
       name: Q3_K_S.gguf
@@ -162,15 +121,8 @@ variants:
     - models/bagel-34b-v0.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f18c15071e26e7537edfc0b76ac78cccffbea3cf
       name: Q4_0.gguf
@@ -184,15 +136,8 @@ variants:
     - models/bagel-34b-v0.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df49a34eb28ecfd78d3538d707f68177737814dc
       name: Q4_K_M.gguf
@@ -206,15 +151,8 @@ variants:
     - models/bagel-34b-v0.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 298e7640a71eade18486c4c745632f1ea352774d
       name: Q4_K_S.gguf
@@ -228,15 +166,8 @@ variants:
     - models/bagel-34b-v0.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e8a61cb45d8a9b2f4e689a9b1a127919bc571214
       name: Q5_0.gguf
@@ -250,15 +181,8 @@ variants:
     - models/bagel-34b-v0.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3f4fbb71acd51096f7972265b67830f651001a64
       name: Q5_K_M.gguf
@@ -272,15 +196,8 @@ variants:
     - models/bagel-34b-v0.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 81ec37ec8dfb2f253a42232a1a60bc527dffd1f4
       name: Q5_K_S.gguf
@@ -294,15 +211,8 @@ variants:
     - models/bagel-34b-v0.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 658ad37e94d35a4fcc843d043f019db9e3e23ec4
       name: Q6_K.gguf
@@ -316,15 +226,8 @@ variants:
     - models/bagel-34b-v0.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a57d0300ff82bd2e836609ae7533df35079e177b
       name: Q8_0.gguf

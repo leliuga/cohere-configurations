@@ -1,0 +1,208 @@
+id: KafkaLM-70B-German-V0.1
+parent_id: seedboxai/KafkaLM-70B-German-V0.1
+name: KafkaLM 70B German V0.1
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: Seedbox
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- llama2
+- deutsch
+- german
+- seedbox
+- text-generation
+- de
+- dataset:seedboxai/multitask_german_examples_32k
+- base_model:seedboxai/KafkaLM-70B-German-V0.1
+- license:llama2
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 8192
+  attention_head_size: 64
+  key_value_head_size: 8
+  intermediate_size: 28672
+  hidden_layer_size: 80
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 015e308086606f882e9b007c35db3989a7f3f7f8
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q2_K.gguf
+      size: 25462436928
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 3c7fd498fe676a388de02f199551b417911ffd64
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q3_K_L.gguf
+      size: 36147835968
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: abc1c71d18ef96aeab279db9e7c655b37178dfbb
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q3_K_M.gguf
+      size: 33274737728
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 82885d674a2219c5288e5806da5b8b44a6800b76
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q3_K_S.gguf
+      size: 29919294528
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 6b7a8f63bcccaeb3bdb0d036bed6cbef05cd00b4
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q4_0.gguf
+      size: 38872249408
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: dce95495e4c9121ca70164bf7b8f9f9085a6cfb1
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q4_K_M.gguf
+      size: 41422910528
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 7232100d0eb063b1fc9457ac4993d38b7b53442a
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q4_K_S.gguf
+      size: 39249736768
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 5ac1f5feee47c235c11e4f367a0c9b897e98c83c
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q5_0.gguf
+      size: 47461397568
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: c3ddb2f2157718edca378aaf5fdef1bed19b8feb
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q5_K_M.gguf
+      size: 48753767488
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/KafkaLM-70B-German-V0.1/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "83"
+    artifacts:
+    - id: 23c64cce068e15a74b7a550467b1d5c9a0225be1
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/KafkaLM-70B-German-V0.1-GGUF/resolve/main/kafkalm-70b-german-v0.1.Q5_K_S.gguf
+      size: 47461397568
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|system|>
+        {system_message}</s>
+        <|user|>
+        {prompt}</s>
+        <|assistant|>

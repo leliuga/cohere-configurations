@@ -26,19 +26,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 62
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3a20629086ac878d8950288562706eb7a60d17f
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3aa113a610e74d2068a11bd296ba6f09e1376b83
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3caa4c62dce97999f6d722a13f65ad079a6662d8
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9fff3a4cb78840223c7c4d11694df7dce5600ab8
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 15bac7c4525de08000b70ff2669a6d775112fb60
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1778650e8b4c4f557705799008ac7456ca8dfa2e
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7f7b501fb55441adfe9e0adc31c88cc4d89a013e
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e220381f75d215c07ce84628bfe63bc5462f65df
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ad36d4d470725a18a62a4e10abb2a65fd22855b
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d8c5a36f8898e311c178757b365f20cc4df8e4fa
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c5202e69d0e98243aeac820eb89a6af03cc6ea36
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/PsyMedRP-v1-20B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1cfa9ac77ef6a162ce87fd8f5727ff31df14b6c6
       name: Q8_0.gguf

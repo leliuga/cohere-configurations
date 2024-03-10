@@ -22,7 +22,13 @@ The .yml config files for mergekit with the exact merges can be found in the ["R
 EXL2: [6bpw](https://huggingface.co/Kooten/DaringMaid-20B-6bpw-exl2), [3bpw](https://huggingface.co/Kooten/DaringMaid-20B-3bpw-exl2)
 
 [GGUF](https://huggingface.co/Kooten/DaringMaid-20B-GGUF):
+***New quants:*** [IQ2-XS](https://huggingface.co/Kooten/DaringMaid-20B-GGUF/blob/main/DaringMaid-20B-IQ2_XS.gguf), [IQ2-XXS](https://huggingface.co/Kooten/DaringMaid-20B-GGUF/blob/main/DaringMaid-20B-IQ2_XXS.gguf)
+
+
 [Q3_K_M](https://huggingface.co/Kooten/DaringMaid-20B-GGUF/blob/main/DaringMaid-20B-Q3_K_M.gguf) - [Q4_K_M](https://huggingface.co/Kooten/DaringMaid-20B-GGUF/blob/main/DaringMaid-20B-Q4_K_M.gguf) - [Q5_K_M](https://huggingface.co/Kooten/DaringMaid-20B-GGUF/blob/main/DaringMaid-20B-Q5_K_M.gguf) 
+
+***Additional Quants from TheBloke:*** [GPTQ](https://huggingface.co/TheBloke/DaringMaid-20B-GPTQ), [AWQ](https://huggingface.co/TheBloke/DaringMaid-20B-AWQ), [GGUF](https://huggingface.co/TheBloke/DaringMaid-20B-GGUF)
+
 
 ## Prompt template:
 I have been using Undi/Ikaris SillyTavern presets for Noromaid: [Context](https://files.catbox.moe/ifmhai.json), [Instruct](https://files.catbox.moe/ttw1l9.json).

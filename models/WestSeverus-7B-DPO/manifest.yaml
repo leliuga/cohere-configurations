@@ -1,0 +1,226 @@
+id: WestSeverus-7B-DPO
+parent_id: PetroGPT/WestSeverus-7B-DPO
+name: WestSeverus 7B DPO
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: PetroGPT
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- arxiv:1910.09700
+- base_model:PetroGPT/WestSeverus-7B-DPO
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9c3ada170f3432286fafb100601cb205ea5eaee9
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q2_K.gguf
+      size: 2719241920
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e2303f215093a1dc279927d4fae44c9e220fae30
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q3_K_L.gguf
+      size: 3822024384
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 72705378d3f48659219764ce8c0e59146339d10e
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q3_K_M.gguf
+      size: 3518985920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d0ac68609a2a0e82916e86c9322e9279c16e226a
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q3_K_S.gguf
+      size: 3164567232
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 3c2cfba20770bed337e0019f877de51e79150b74
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q4_0.gguf
+      size: 4108916416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: cd0c6082abf47c609836bc10feec24ae90a4943d
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q4_K_M.gguf
+      size: 4368438976
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 89b9394bf5218bd108ebf5aaf56f5e08b3b02b57
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q4_K_S.gguf
+      size: 4140373696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 035c76eb37c1d084623109fa0001741f8204b145
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q5_0.gguf
+      size: 4997715648
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f6ed4a5e1cb2ba1940c035116e3fc758f98a5910
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q5_K_M.gguf
+      size: 5131409088
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 672ea523b8a73f8043d31617d285732c05a095b2
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q5_K_S.gguf
+      size: 4997715648
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 1c9a67328c26fbb9380243a43ebeedcf3ac4f1e9
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q6_K.gguf
+      size: 5942064832
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/WestSeverus-7B-DPO/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9db1068f77de7e97eede106fc697fc2f9f0f39c7
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/WestSeverus-7B-DPO-GGUF/resolve/main/westseverus-7b-dpo.Q8_0.gguf
+      size: 7695857344
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

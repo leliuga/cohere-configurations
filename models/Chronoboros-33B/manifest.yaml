@@ -24,19 +24,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Chronoboros-33B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a7186484cc386be9e681ae7e64652eabda9858e
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Chronoboros-33B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6dc4a10da4955e1f9f7fd1737d77be5a8d989ab5
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Chronoboros-33B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a745fa7238c2ddba9dc396c9fb91bb6a6456c743
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Chronoboros-33B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20da16a48cf42ecbf5269b96819b483a69bd6732
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Chronoboros-33B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0eea6d04b13c2b9bea412f68b076c9bf7e9f1fe4
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Chronoboros-33B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dad94fb5f2a409e213dbd708761d7149cf3d6819
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Chronoboros-33B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 63935f234c68cf01da1e5d56901394e29709d7f8
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Chronoboros-33B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d1a9ae0992e54e028a583dec0faed163d81b8d7
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Chronoboros-33B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea50803126fe57c73ac023a5d069dc14adc1d4da
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Chronoboros-33B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e0341e6b4e2fc9aa30e218dd350dfa2589e78436
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Chronoboros-33B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b78965e2caa81afbe5201aef2861a0ff4ffcd29b
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Chronoboros-33B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52fa03e11952d3121e6b85cfc946c1a7984330b4
       name: Q8_0.gguf

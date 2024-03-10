@@ -38,19 +38,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -60,15 +47,8 @@ variants:
     - models/Naberius-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d71f4e5c34d392eea28344a553e6c50018fa7cce
       name: Q2_K.gguf
@@ -82,15 +62,8 @@ variants:
     - models/Naberius-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3674e62a5122056f46b716a5ebe620b4b7d31361
       name: Q3_K_L.gguf
@@ -104,15 +77,8 @@ variants:
     - models/Naberius-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 65cb9a14922059a9730c12a54dbf3f7cb5e1f160
       name: Q3_K_M.gguf
@@ -126,15 +92,8 @@ variants:
     - models/Naberius-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1e76d49296ee27293f0d26f0f5b307d995df3707
       name: Q3_K_S.gguf
@@ -148,15 +107,8 @@ variants:
     - models/Naberius-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c07929a02c2c4b2264532d26bd61ddf5ac087591
       name: Q4_0.gguf
@@ -170,15 +122,8 @@ variants:
     - models/Naberius-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 03b5effd5a39ac94be938f9f468871011b6ae442
       name: Q4_K_M.gguf
@@ -192,15 +137,8 @@ variants:
     - models/Naberius-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a16388857a0d1e0bf430f20fcd0e5bac465128e
       name: Q4_K_S.gguf
@@ -214,15 +152,8 @@ variants:
     - models/Naberius-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 237f433f450c428178898515b2ce5fca03d1359c
       name: Q5_0.gguf
@@ -236,15 +167,8 @@ variants:
     - models/Naberius-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 93c12b3dd163953ac4f51722725d0a98402bc268
       name: Q5_K_M.gguf
@@ -258,15 +182,8 @@ variants:
     - models/Naberius-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1c89aad85da8d2f2a7b6744a5cb824b36b0ecc55
       name: Q5_K_S.gguf
@@ -280,15 +197,8 @@ variants:
     - models/Naberius-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 005627657bf0256cbfa8585a7abff7ec61da9c7e
       name: Q6_K.gguf
@@ -302,15 +212,8 @@ variants:
     - models/Naberius-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20fda9d46e2430920fc9ca3ac40c8d5de943787b
       name: Q8_0.gguf

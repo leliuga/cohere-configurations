@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 56
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Pandora-v1-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 873d7b127482f5c1a22f8831a93cf0f5af7fbc9f
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Pandora-v1-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a55e8a1263726d0aa8e7ab20d7d2c5e503d1e461
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Pandora-v1-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0bbb3ca320085358d62ac0f7299cb2b7ff75cf88
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Pandora-v1-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4af61a7bda1550e47735cef96afb1ee41737f5ed
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Pandora-v1-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a91f6838caf1073a3b900c62efb2b3b07487214e
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Pandora-v1-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e56b647a346b783f48ea894466dbd4a2de754584
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Pandora-v1-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ec71244b5c5e0992dff8004fc887b7f95541ff99
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Pandora-v1-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c8d372551118955b4a04ad63219cd30e95afbf9
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Pandora-v1-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b49a3e49debad4e2a33d7d6ac2beca166a24d230
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Pandora-v1-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 12f0e6bf285b4a80e8a87ddf01c9950e113040a3
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Pandora-v1-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2db56814c2f2e6db0022a3e4461dea00d1ad58dc
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Pandora-v1-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "59"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1b0d65b921408d7bd7abc846221edc8a0704182d
       name: Q8_0.gguf

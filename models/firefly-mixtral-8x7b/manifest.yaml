@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6d33f1994451156901e33c73f30c2c8a4f9c2aad
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a848f30fc8e552653b808eccb8636e3454b2fb81
       name: Q3_K_M.gguf
@@ -91,15 +64,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b334f043efa88252295bb1f21fb3e7951d473344
       name: Q4_0.gguf
@@ -113,15 +79,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 586b3272a3a096873a25731e6959c05acfafbcd4
       name: Q4_K_M.gguf
@@ -135,15 +94,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aecd9c7352062cdd61be88c3b578ba773c695d22
       name: Q5_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7f9d95c601f06a41e701bf65d182043207572993
       name: Q5_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2fc29f90f59371668ed033b3483150e9a66150a
       name: Q6_K.gguf
@@ -201,15 +139,8 @@ variants:
     - models/firefly-mixtral-8x7b/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 41731a72e4a8e550ebdcacc44071df279c66bd87
       name: Q8_0.gguf

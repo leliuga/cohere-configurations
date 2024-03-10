@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/GPlatty-30B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d1e8191f3deab6ae8ed209e9a7f6467d744582b6
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/GPlatty-30B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6e3e3fd5ea65d65ab3d595a389d1695fe48e2041
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/GPlatty-30B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d8a634344f543bd06c532506bfacfc65e219d2f0
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/GPlatty-30B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 53fecbbfe0f9af6891bb57f268f9061838a6a0b4
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/GPlatty-30B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4286353954242f5960c246c6b56f6e62bd5e6d00
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/GPlatty-30B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 79332e5040d05f3bf320cd84b8f14598c985eaa1
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/GPlatty-30B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6e14cd4907552cdad6179aae624261c566257549
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/GPlatty-30B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fdbcf7d8699b56ae600d167247eea1664671ecc4
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/GPlatty-30B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2b1791b60a68d934cb0975f2444c51e78b5f929a
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/GPlatty-30B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 213cd1c164f39d3779e7d520b81633359756a5e4
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/GPlatty-30B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25dce303ac540ae8d871cca1399fd1308ba47773
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/GPlatty-30B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dd3618e445c96fb5770a707011a218a723a533be
       name: Q8_0.gguf

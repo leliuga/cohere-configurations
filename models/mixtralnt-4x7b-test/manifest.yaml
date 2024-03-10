@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1cc94685c3cd54c2b6f48e9b5a0669dc6a80a25e
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8173d63a5a590f3084eb3e390827070c417c7636
       name: Q3_K_M.gguf
@@ -90,15 +63,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2322dd8c57724823066dc5d89f230717899d5eb8
       name: Q4_0.gguf
@@ -112,15 +78,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3a8b797fe8850bca29a4f1d1d6cf7d87494aafd
       name: Q4_K_M.gguf
@@ -134,15 +93,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 82141abc1d2aac2ea755ef0e6563c3a334b93a46
       name: Q5_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 46481e65b2fe6eb8671ea0e3048f166c30a88758
       name: Q5_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 838e2d06a8d63bb1f8a61568d92e3dede9184830
       name: Q6_K.gguf
@@ -200,15 +138,8 @@ variants:
     - models/mixtralnt-4x7b-test/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 53d67cf7299b1bf385b5f92ec937a0255574f48b
       name: Q8_0.gguf

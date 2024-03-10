@@ -5,6 +5,9 @@ datasets:
 - bigcode/starcoderdata
 - mc4
 - allenai/dolma
+language:
+- fi
+- en
 ---
 <div align="center">
 <img src="./poro-logo.png" width="200px">
@@ -12,9 +15,7 @@ datasets:
 
 # Poro 34B Model Card
 
-_**NOTE:** This is a **research checkpoint** of a model for which **training has not been completed.** It is being provided in its current state for research and testing purposes. **Care should be taken when using the outputs of the model.** Once pretraining has completed we intend to release additional instruction-tuned and chat-tuned varieties._
-
-Poro is a 34B parameter decoder-only transformer pretrained on Finnish, English and code.  It is being trained on 1 trillion tokens (700 billion as of this release). Poro is a fully open source model and is made available under the Apache 2.0 License.
+Poro is a 34B parameter decoder-only transformer pretrained on Finnish, English and code.  It is being trained on 1 trillion tokens. Poro is a fully open source model and is made available under the Apache 2.0 License.
 
 Poro was created in a collaboration between [SiloGen](https://www.silo.ai/silogen) from [Silo AI](https://www.silo.ai/), the [TurkuNLP group](https://turkunlp.org/) of the University of Turku, and [High Performance Language Technologies](https://hplt-project.org/) (HPLT). Training was conducted on the [LUMI supercomputer](https://www.lumi-supercomputer.eu/), using compute resources generously provided by [CSC](https://csc.fi/) - IT Center for Science, Finland.
 
@@ -49,6 +50,9 @@ Checkpoints are available as branches in the repository.  Checkpoints will be re
 * [500B](https://huggingface.co/LumiOpen/Poro-34B/tree/500B)
 * [600B](https://huggingface.co/LumiOpen/Poro-34B/tree/600B)
 * [700B](https://huggingface.co/LumiOpen/Poro-34B/tree/700B)
+* [800B](https://huggingface.co/LumiOpen/Poro-34B/tree/800B)
+* [900B](https://huggingface.co/LumiOpen/Poro-34B/tree/900B)
+* [1000B](https://huggingface.co/LumiOpen/Poro-34B/tree/1000B)
 
 The transformers library allows you to load a checkpoint from a branch as follows:
 
@@ -109,13 +113,9 @@ The Finnish dataset is a combination of many Finnish resources:
 
 ## Evaluation Results
 
-Despite the early training stage, Poro already exceeds the performance of the Finnish-only [FinGPT](https://turkunlp.org/gpt3-finnish) language models on the [FIN-bench](https://github.com/TurkuNLP/FIN-bench) Finnish language benchmark.
-
-Full evaluation results will be published with the final model. 
+Full evaluation results will be published soon.
 
 ## Ethical Considerations and Limitations
-
-_Poro 34B is a release of a partially trained model, and special care should be taken when using any output._
 
 Poro is an advanced language model, primarily optimized for English, Finnish and code, with no meaningful proficiency in any other languages. As with most AI-driven systems, Poro is a product of the vast data it has been trained on, which may reflect the imperfections, biases, and idiosyncrasies of the wider web. Poro may, at times, produce outputs that can be considered inaccurate, prejudiced, or controversial. Users and developers engaging with Poro should exercise discretion and consider additional evaluation and customization to ensure the model's responses align with their specific needs and ethical standards.
 

@@ -3,7 +3,9 @@ license: apache-2.0
 ---
 
 <p align="left">
-    <img src="https://huggingface.co/upstage/SOLAR-10.7B-v1.0/resolve/main/solar_logo.png" width="150"/>
+  <a href="https://go.upstage.ai/solar-obt-hf-modelcardv1">
+    <img src="https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0/resolve/main/solar-api-banner.png" width="100%"/>
+  </a>
 <p>
 
 

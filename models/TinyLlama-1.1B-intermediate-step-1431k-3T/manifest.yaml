@@ -26,19 +26,6 @@ config:
   key_value_head_size: 4
   intermediate_size: 5632
   hidden_layer_size: 22
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a7e3bdbf33f32445b9dedda93a27c3a599b27fd5
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25d9224b2817c78a6c7b647c02c92154a9e1b282
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a79e2e635cf2c249b07a218b3f52b8aca8215389
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea104c6b27e10fd561105e01ca655725e41ec188
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 96e60c6511b6c2a81483d6386d7a3359bb335ad9
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9cd924711a9386fd31d83c11f7423b26ca6cfb62
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 501bec9ff7df44a30ef702da3cbea9c9d01e638b
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5309eb02ea8a756ea1d2043115639ed4fc16b905
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df7bd5606dacdaffcc1e6799f359b281d3d01307
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 59c7a46ec12632b7afd2f7e3b303d134eca8f3ae
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6dc000f3c422b597013f6d646b790d85ca1fbcb4
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/TinyLlama-1.1B-intermediate-step-1431k-3T/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8dc4a4a9a730853486fd895d6067bf05a212edb4
       name: Q8_0.gguf

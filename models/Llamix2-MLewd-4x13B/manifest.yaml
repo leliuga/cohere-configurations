@@ -26,19 +26,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q4_0:
     dtype: Q4_0
@@ -48,15 +35,8 @@ variants:
     - models/Llamix2-MLewd-4x13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 441f172b392e4406619b7e7462f8217df271cc5f
       name: Q4_0.gguf
@@ -70,15 +50,8 @@ variants:
     - models/Llamix2-MLewd-4x13B/Q4_1/Q4_1.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3eb8c3b5463cec0534010b9cd34e09a1954f3155
       name: Q4_1.gguf
@@ -92,15 +65,8 @@ variants:
     - models/Llamix2-MLewd-4x13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2d649601c0d3e0c57bc89558ea501f781ee27173
       name: Q5_0.gguf
@@ -114,15 +80,8 @@ variants:
     - models/Llamix2-MLewd-4x13B/Q5_1/Q5_1.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 532e08a0553f0f9ccdd5ad47b54188900ec06a95
       name: Q5_1.gguf
@@ -136,15 +95,8 @@ variants:
     - models/Llamix2-MLewd-4x13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 47030c93820e9d87edb09736c01436eb383c3ed1
       name: Q8_0.gguf

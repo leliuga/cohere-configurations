@@ -24,19 +24,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f25816bf5f0b3c3886334fba7346b529f3c30abb
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c49d44dfa2c475fc5b48e201d5bbdbb496227bb4
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea8bebab4cbfb4390e1ac8341cbd49af306491a5
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1cc893993886b0d65bfe6a32e199766f04194217
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa916ccbbbe25b15c02f8e054115b92994a237c1
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8387861af54ff058fb5aabbf02b2c121c8758791
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5e78a14f98e179e33777fd6a05c72b83b648c060
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5882297164ca9f93cae9e18c39fa7406ab9bed16
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1684597e36180981bd92e03c1034ed6c16c90320
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f7e5dfe5f57300848cb66b4a6543f27f657dc1c4
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 27bc1de81296aed3eb9de39f84e1dc41838fa44d
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Luna-AI-Llama2-Uncensored/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 923632fb53f8952cd1352bb575f57806d653334f
       name: Q8_0.gguf

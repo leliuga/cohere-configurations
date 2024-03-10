@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/AppleSauce-L2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2acaf1a3c96eea5610b750797d341302703d6505
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/AppleSauce-L2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4118dfaef4e88ba6fa1bfe2899d6fc3d721d4e96
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/AppleSauce-L2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5d81a66a03dd8c6d13628bf1ca4c81d872203b2
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/AppleSauce-L2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6fef150b79e4f998834ebca67da2bb651b6601e5
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/AppleSauce-L2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c91401372ce8c9299406d18036f0aab7128373f
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/AppleSauce-L2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5df2a433d71d66518e24fbf215b99c791e8e4673
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/AppleSauce-L2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d9b498a89e6c283a6496f5fa8d7d405acb087d24
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/AppleSauce-L2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84bd10ab75b297baf0e90dda9796fd679f5a18cd
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/AppleSauce-L2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a03c18712ff4b8594db753098d9702ffe4732e91
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/AppleSauce-L2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 413eb02fa3a8ea4e2dfcc095e7fb562df4e29220
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/AppleSauce-L2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8bd99cf569036520f154c3ce6a602a50deb656a2
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/AppleSauce-L2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 506858d2cd7b1be5c646808b3e5c731286a26cd6
       name: Q8_0.gguf

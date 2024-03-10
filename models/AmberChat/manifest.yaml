@@ -29,19 +29,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/AmberChat/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c9d5104350cb1a671fd5df5991aeb96281f666ca
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/AmberChat/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f7525d500f4cd2d64eafdfc55702431d0ea25ed4
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/AmberChat/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 616dcbcf48b00b01ad1899a7ea3645e1fd6d45ca
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/AmberChat/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f7eebd57bff1063102ad63efa7f319897a4ff3f6
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/AmberChat/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e6e9a4f72f0e24e637b2cb86dbe036915118577f
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/AmberChat/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3f670251279308b99f93214b06763647f73a1b14
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/AmberChat/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5d031247a1d93288a7e0bbbebc304af5fb166b24
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/AmberChat/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f504a342d8b84a501386a04f31644a10f74649ae
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/AmberChat/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 53bd887dabfdbea1d3e07837973b7fe9fee8a5a3
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/AmberChat/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fffc8268775e8400a67d65e1d459a2de8dcf0b64
       name: Q5_K_S.gguf
@@ -271,15 +188,8 @@ variants:
     - models/AmberChat/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 75559c1cb43a9adf03f7ba889daf5ea97d40cd87
       name: Q6_K.gguf
@@ -293,15 +203,8 @@ variants:
     - models/AmberChat/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 09446c416146fb92f75a9c23500cb42e5960e000
       name: Q8_0.gguf

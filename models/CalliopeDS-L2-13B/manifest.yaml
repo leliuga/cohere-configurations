@@ -28,19 +28,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5aa426f5b3c6bb2c60cc37d190bd311a270d5f68
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b2b79428ebec4c84597403348f5f670385aada8e
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 341fa87ad2a290f3f961c28b005d329482c4be81
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f1f0e5a4e2a1e57d43e87a5db60a723f0256ddb5
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cf04591caa110d22ed41ae73780601ff291dd58e
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: adae58005fc0f91391442fcee172b87f623881f2
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd3a61431921ea25bf9a79debd8848685defc74e
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 20a73433b14eaf2dea39a0fff33fbdcd30f0b851
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 03dcbf3218bf5e758390fbbb1e38ec066854d6a2
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 04aa1c28187365d90b2d16b6af3ca1dca0c41b0a
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7c83ecf1d52f4bf76a29840819339dec18e9d56a
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/CalliopeDS-L2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df7ba728be91cac663ca8781a01e52b3f7e2bb66
       name: Q8_0.gguf

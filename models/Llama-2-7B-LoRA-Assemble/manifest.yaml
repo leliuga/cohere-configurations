@@ -24,19 +24,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 438110f91d56394d04686b0fad5a01bce1400bc3
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d72b30990cc0b14201a911296077d4583831d253
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1078400e3b9cc33e54f45d78efbdf197f01d2710
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c71f9d99d783026af7253af8331fd92cd3d0e6d2
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4eb057a010a4d296b6211ce36b13e3ad5fa89b4
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b97af72083f247056d236dd8a0bdb935ea6c3adf
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 62cc5ad898f6002d1364d86c43310f7b3fe228c4
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d4c36dec8643c72c5e1e781ad51ed224d5eec3b1
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9cbd67baebbbf50fb4810e3f33db0d23e2c10766
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7f9d5e3c8fc7c677ee886cde84d9cc3c6426c014
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f59df347b7a08bd1a7f145804b71591787b352d2
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Llama-2-7B-LoRA-Assemble/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6500cfab04f382e5c7d1d93eece223e51d965714
       name: Q8_0.gguf

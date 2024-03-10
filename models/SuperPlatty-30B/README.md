@@ -15,16 +15,6 @@ metrics:
 
 SuperPlatty-30B is a merge of [garage-bAInd/Platypus-30B](https://huggingface.co/lilloukas/Platypus-30B) and [kaiokendev/SuperCOT-LoRA](https://huggingface.co/kaiokendev/SuperCOT-LoRA)
 
-| Metric                | Value |
-|-----------------------|-------|
-| MMLU (5-shot)         | 62.6  |
-| ARC (25-shot)         | 66.1  |
-| HellaSwag (10-shot)   | 83.9  |
-| TruthfulQA (0-shot)   | 54.0  |
-| Avg.                  | 66.6  |
-
-We use state-of-the-art EleutherAI [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) to run the benchmark tests above.
-
 ## Model Details
 
 * **Trained by**: Platypus-30B trained by Cole Hunter & Ariel Lee; SuperCOT-LoRA trained by kaiokendev.
@@ -88,3 +78,16 @@ The base LLaMA model is trained on various data, some of which may contain offen
   year={2021}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_ariellee__SuperPlatty-30B)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 57.89   |
+| ARC (25-shot)         | 65.78          |
+| HellaSwag (10-shot)   | 83.95    |
+| MMLU (5-shot)         | 62.57         |
+| TruthfulQA (0-shot)   | 53.52   |
+| Winogrande (5-shot)   | 80.35   |
+| GSM8K (5-shot)        | 9.63        |
+| DROP (3-shot)         | 49.44         |

@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Swallow-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b490f716f7acd292503a7037dfe36bcff5d2d533
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Swallow-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ea92391170f873cb3f127be836d847a9a76536a
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Swallow-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d525d3b9719a683511424566fddd15dae406520d
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Swallow-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bdc732cdcbad00e94771d7bdd65e73f8fd8419dc
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Swallow-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa1c3978fc7441fcea978f9b36793720cbe2ec06
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Swallow-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cdf8651d469d48fc7c4e57a2d5cc1b49ec0c4bf6
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Swallow-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66de042b84b26dcf749f9035c717e071438a9cdd
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Swallow-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66361b01d9b58b1e9aff235139b132c8c74f1de9
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Swallow-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fcf007472831d3a446653687ac0a9a61a7d3251e
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Swallow-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae5ec5433583dabaa45d34bc92fbd71a12bf8a5a
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Swallow-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 050075f113803aaa52c4220145ec846c829bde42
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Swallow-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4dee9c2086fe8409b1868561d328da10f2342d2
       name: Q8_0.gguf

@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/rpguild-chatml-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5118a05441ff75e46d99b39904e9c14b659362e
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/rpguild-chatml-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6097eecba04541d9362d4cde5ef3e197bf98d780
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/rpguild-chatml-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da7246abfbe27393c912269e198b85fbe48598ad
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/rpguild-chatml-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb6084de2ec2ae109be0b7c93507a1cc1a2fa937
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/rpguild-chatml-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c638a4465eb9fe504dd3935253e183e41c267cdc
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/rpguild-chatml-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a9ee34062abe9f72fe22c9fd74e83df918f39ee6
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/rpguild-chatml-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a71c218b8027ff6c845780b0d5807929037ea425
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/rpguild-chatml-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ba5abbadf3d6337af11f044c6f121e0689fa556f
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/rpguild-chatml-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 502b3079b0012ff217cc6caff16e8268e7666404
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/rpguild-chatml-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a2528b65cd714c093d9d37ed355ec189b17d4755
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/rpguild-chatml-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a25894569c0c7332754fac9ee2ae22e0fb072d22
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/rpguild-chatml-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71e05b41d57f935d57845be224648c5d980446a7
       name: Q8_0.gguf

@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Thespis-13B-v0.6/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c7df7805910463c89d0e1ac4cdebb2fc1e09d88e
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Thespis-13B-v0.6/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9ab021667b0cbb860aeb3caaa274469ef0b13066
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Thespis-13B-v0.6/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3d1b25ee236e5d6f3fc6361586e62e92c8bf1c61
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Thespis-13B-v0.6/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 64e4aaf1f149cb7fef3ae5a57ca299288ced6719
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Thespis-13B-v0.6/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b88f3470f4fc0b5e56dde34ae49bc5707780299f
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Thespis-13B-v0.6/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8303c737fbcf723b55579bdb4d16bfacc123d5dd
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Thespis-13B-v0.6/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e7b7c4d5e7f5dd6e1ffa2f1420f72e87c35b6847
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Thespis-13B-v0.6/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f2e93eb886eafdff59aea3873357d80b9ce5ae49
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Thespis-13B-v0.6/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c69842e6fa40da253162843291acfdf1f5f88f12
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Thespis-13B-v0.6/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f294e1ce24536c04d511952fb5e84e58845a9dda
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Thespis-13B-v0.6/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 363af9a346b0d6a695eb6777bb701e79868f0df2
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Thespis-13B-v0.6/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: db71c5382bf47f7bf2070fc2649a0b57118c99ef
       name: Q8_0.gguf

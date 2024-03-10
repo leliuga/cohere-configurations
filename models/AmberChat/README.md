@@ -33,6 +33,7 @@ We present AmberChat, an instruction following model finetuned from [LLM360/Ambe
 - **Resources for more information:**
   - [Metrics](https://github.com/LLM360/Analysis360)
   - [Fully processed Amber pretraining data](https://huggingface.co/datasets/LLM360/AmberDatasets)
+  - [Finetuning Code](https://github.com/LLM360/amber-train/tree/main/finetune/amberchat)
 
 
 # Loading AmberChat 
@@ -95,10 +96,10 @@ python3 -m fastchat.serve.cli --model-path LLM360/AmberChat
 
 | Model                                                | MT-Bench                                                  | 
 |------------------------------------------------------|------------------------------------------------------------|
-| LLM360/Amber 359 | 2.48750 |
+| **LLM360/AmberChat** | **5.428125** |
+| [LLM360/Amber](https://huggingface.co/LLM360/Amber) | 2.48750 |
 | [Falcon-40B-Instruct](https://huggingface.co/tiiuae/falcon-40b-instruct) | 5.17 |
 | [MPT-7B-Chat](https://huggingface.co/mosaicml/mpt-7b-chat) | 5.42 |
-| **LLM360/AmberChat** | **5.428125** |
 | [Nous-Hermes-13B](https://huggingface.co/NousResearch/Nous-Hermes-13b) | 5.51 |
 
 # Using Quantized Models with Ollama

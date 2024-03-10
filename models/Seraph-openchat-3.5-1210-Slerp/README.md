@@ -1,6 +1,7 @@
-
 ---
 license: apache-2.0
+tags:
+- merge
 ---
 # Seraph-openchat-3.5-1210-Slerp
 

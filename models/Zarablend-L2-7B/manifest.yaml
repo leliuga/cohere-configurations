@@ -25,19 +25,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Zarablend-L2-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 93b1160b4d4e91a58239b9fe7806e5764c8fbdfb
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Zarablend-L2-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5f87dd9c768f9409d547f230ae2e44c83a32df17
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Zarablend-L2-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 856f85a09d36a1d290f41ccd295eaa8fc311e533
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Zarablend-L2-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0856d392da3cbc8522f9fa449e8fea46826b5d74
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Zarablend-L2-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4c1c1a81ae731839effe15adc3fbbf4d0e220b25
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Zarablend-L2-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1b2f1182a6a4b30ad039c9c832b52a2244561941
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Zarablend-L2-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b1282e22df98b0a5af82a0e3d59f7f99c2125078
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Zarablend-L2-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a7399c2f41a37d60cdbcd0c75b6b0f11b331955
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Zarablend-L2-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 460a43402061e5ebc1a244890335088a3b53db5a
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Zarablend-L2-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c94e12fe3fa8e39212e6961b38e198b05930080
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Zarablend-L2-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df2aa4bcd1c4cd90d1cb11db62dc8b8e01efc3ed
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Zarablend-L2-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 961c738c72492cd5f53385b520fb38eeb8d60231
       name: Q8_0.gguf

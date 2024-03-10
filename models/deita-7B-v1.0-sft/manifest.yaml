@@ -27,19 +27,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 05042593b7d85a2deae7309cf5d71eaacf55ca27
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae45159b88a4a4fae343a168c0662dbfe8d6af8e
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f576358a7ff9914779cd78497ef9099acb3ff5fe
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 658729f5131b7c1356b2f738f8786ce699ef2197
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1c1226014902c82aa8b574c85a2b1ce89bfe8f9d
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 973ca9d16f4fbdc5347f8c00447fc394e95b08b2
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8dc97dace8bc1992a8f659c0d66cb60257d6046f
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f01dea2249ae01a4ceebb9b34f92899d41017876
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c8547189e2252f05a92ab3449c5296aedb6b70cf
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 479fa7b798632e138280a6e251a74ec48bbf19b6
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8cfbdd691ad8a1ff74a9c78e11b21b9a84654f4d
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/deita-7B-v1.0-sft/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4ad7587cc777ff94f141a65e255eac543503c0a4
       name: Q8_0.gguf

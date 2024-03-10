@@ -1,6 +1,110 @@
-
 ---
 license: cc-by-nc-4.0
+tags:
+- merge
+model-index:
+- name: SauerkrautLM-UNA-SOLAR-Instruct
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 70.9
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 88.3
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 66.15
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 71.8
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 83.74
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 64.67
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=Weyaxi/SauerkrautLM-UNA-SOLAR-Instruct
+      name: Open LLM Leaderboard
 ---
 ![image/png](https://cdn-uploads.huggingface.co/production/uploads/6468ce47e134d050a58aa89c/8uLgxLFWSN4fGPCS8Qinq.png)
 
@@ -65,15 +169,18 @@ Quantizationed versions of this model is available thanks to [TheBloke](https://
 
 
 # [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
-
 Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_Weyaxi__SauerkrautLM-UNA-SOLAR-Instruct)
 
-| Metric                | Value                     |
-|-----------------------|---------------------------|
-| Avg.                  | 74.26   |
-| ARC (25-shot)         | 70.9          |
-| HellaSwag (10-shot)   | 88.3    |
-| MMLU (5-shot)         | 66.15         |
-| TruthfulQA (0-shot)   | 71.8  |
-| Winogrande (5-shot)   | 83.74  |
-| GSM8K (5-shot)        | 64.67        |
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |74.26|
+|AI2 Reasoning Challenge (25-Shot)|70.90|
+|HellaSwag (10-Shot)              |88.30|
+|MMLU (5-Shot)                    |66.15|
+|TruthfulQA (0-shot)              |71.80|
+|Winogrande (5-shot)              |83.74|
+|GSM8k (5-shot)                   |64.67|
+
+If you would like to support me:
+
+[☕ Buy Me a Coffee](https://www.buymeacoffee.com/weyaxi)

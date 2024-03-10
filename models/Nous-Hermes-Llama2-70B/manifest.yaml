@@ -29,44 +29,17 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q2_K.gguf
+    - models/Nous-Hermes-Llama2-70B/Q2_K/Q2_K.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: a5ad91e02db470d04294b9ed317cd13085ab576b
       name: Q2_K.gguf
@@ -77,25 +50,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q3_K_L.gguf
+    - models/Nous-Hermes-Llama2-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 3f3a8954fec5977855d11b6ec92f6dee98e0d46b
       name: Q3_K_L.gguf
@@ -106,25 +65,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q3_K_M.gguf
+    - models/Nous-Hermes-Llama2-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 489dbb2a50ebcba09132029dcd47f57da055bffb
       name: Q3_K_M.gguf
@@ -135,25 +80,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q3_K_S.gguf
+    - models/Nous-Hermes-Llama2-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 18d05f2cad123ad10b51595b9fa3189f5ff1c441
       name: Q3_K_S.gguf
@@ -164,25 +95,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q4_0.gguf
+    - models/Nous-Hermes-Llama2-70B/Q4_0/Q4_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 8d27b8cb8a48286b4703c4bdbfe1e862aa1fe040
       name: Q4_0.gguf
@@ -193,25 +110,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q4_K_M.gguf
+    - models/Nous-Hermes-Llama2-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 62eaf9a1e9bd0de7096cb80694f78423ab653c68
       name: Q4_K_M.gguf
@@ -222,25 +125,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q4_K_S.gguf
+    - models/Nous-Hermes-Llama2-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 7fbc3f9e599e2a61aea298ddb95889d6faf01d53
       name: Q4_K_S.gguf
@@ -251,25 +140,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q5_0.gguf
+    - models/Nous-Hermes-Llama2-70B/Q5_0/Q5_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 33f6ce18292986ac752dc0523ce25129754057e8
       name: Q5_0.gguf
@@ -280,25 +155,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q5_K_M.gguf
+    - models/Nous-Hermes-Llama2-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 553b4b69879f32d9c7546a61f9949469536e1257
       name: Q5_K_M.gguf
@@ -309,25 +170,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Hermes-Llama2-70B/Q5_K_S.gguf
+    - models/Nous-Hermes-Llama2-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: c47e26d866ccb459db7eb87a416c301afd15f659
       name: Q5_K_S.gguf

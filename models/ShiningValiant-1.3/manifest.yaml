@@ -32,19 +32,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -54,15 +41,8 @@ variants:
     - models/ShiningValiant-1.3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 43d96ef934b6cd91c0b70adf2fe76e3c438d5b56
       name: Q2_K.gguf
@@ -76,15 +56,8 @@ variants:
     - models/ShiningValiant-1.3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b43e6f9d5fff092b6c424e32d3a1408bd53b827c
       name: Q3_K_L.gguf
@@ -98,15 +71,8 @@ variants:
     - models/ShiningValiant-1.3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 12382d6fda4d2459b59610c5264f978c88873f39
       name: Q3_K_M.gguf
@@ -120,15 +86,8 @@ variants:
     - models/ShiningValiant-1.3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 32b072316f429c888968c4cdbe4fae6f20775cd7
       name: Q3_K_S.gguf
@@ -142,15 +101,8 @@ variants:
     - models/ShiningValiant-1.3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ec86654bd86e17121a96686ebf7caeb202da9e79
       name: Q4_0.gguf
@@ -164,15 +116,8 @@ variants:
     - models/ShiningValiant-1.3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d391f657616205ecfc594b9f8e6cca243303ed3e
       name: Q4_K_M.gguf
@@ -186,15 +131,8 @@ variants:
     - models/ShiningValiant-1.3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c0ed684dce0890e6d4b2b3e3763462d7699f1256
       name: Q4_K_S.gguf
@@ -208,15 +146,8 @@ variants:
     - models/ShiningValiant-1.3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 43324a7c65edc4acb1cf4e53ea945746a013e1cc
       name: Q5_0.gguf
@@ -230,15 +161,8 @@ variants:
     - models/ShiningValiant-1.3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84d6c7119b661902e46ba85f0954c5544e907b6f
       name: Q5_K_M.gguf
@@ -252,15 +176,8 @@ variants:
     - models/ShiningValiant-1.3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9c49f85690bb8522577f0eb452febe87f8e6af6b
       name: Q5_K_S.gguf

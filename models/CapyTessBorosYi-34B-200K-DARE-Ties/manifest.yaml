@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1f3599c02e2a03447744990e7aac10afe6a40860
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0286f9c98f190848f06cae1b7519d5aba8e845c4
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c4614ae68c3643f07d7a4b002c340ca979feba90
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 967de91aa9f877c3c7845c88acec92670b006205
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ec0ff760aa3a2e0dfc5cf6425814828ae82e729f
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 44a55ba835ed3f6b36f9bb8209283c4df4751e6c
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7b278de043715798393d045eab9a0fa1ffd3fcab
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a5a9375b3830d92e99858e85f8628e8e99ebab4b
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d565f3d4b77624c7dafb9c4c8e25b25260add027
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e55a6be75297f83b9ff0f5ff5512562a5c9e1897
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6f937eadad3668d28e8e2830d2df014cbb2c859c
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/CapyTessBorosYi-34B-200K-DARE-Ties/Q8_0/Q8_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a1d12c236bcef1d5db995d2d725bd2303adcf97d
       name: Q8_0.gguf

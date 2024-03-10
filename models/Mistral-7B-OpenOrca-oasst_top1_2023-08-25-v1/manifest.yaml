@@ -46,19 +46,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -68,15 +55,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f214d900bc41deaee1462d0c17bcfa1c4cdced43
       name: Q2_K.gguf
@@ -90,15 +70,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5e45d8857f4150b4cf7e85a3124aac0f1664b389
       name: Q3_K_L.gguf
@@ -112,15 +85,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 263dbf05694331d829115af5910d4d6dcafa7d5b
       name: Q3_K_M.gguf
@@ -134,15 +100,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: afde9fd670a9cfb6f039445d0f4764d07946d0f7
       name: Q3_K_S.gguf
@@ -156,15 +115,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25b4b806a8ed0cf917f2074a3452cc29fd10a595
       name: Q4_0.gguf
@@ -178,15 +130,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 39f189a010ba9eac95d951a33dd08bea6571f827
       name: Q4_K_M.gguf
@@ -200,15 +145,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f925a2ed395a75fd74e73f17a7ab9613b77dc75e
       name: Q4_K_S.gguf
@@ -222,15 +160,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6476c06a82511a1a6db7411bd2712e75477eaa47
       name: Q5_0.gguf
@@ -244,15 +175,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7d66482ee3fb90fd295a73e02a924f84d2b6e43d
       name: Q5_K_M.gguf
@@ -266,15 +190,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f04f7018b1a1991b7ea93bdefebfd93d5cfa6476
       name: Q5_K_S.gguf
@@ -288,15 +205,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 337faaa60469a7e75b98f92253327924e580fe63
       name: Q6_K.gguf
@@ -310,15 +220,8 @@ variants:
     - models/Mistral-7B-OpenOrca-oasst_top1_2023-08-25-v1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fc3d8c4978ec28cfe4cb38a3c8d4c284d5c9adc7
       name: Q8_0.gguf

@@ -28,19 +28,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1ed4d8ad794a9c34bed0d4193414d6d8b17ae027
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e48e49d8b88af5c5abaeb3e3de9b3d80770d7105
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 35f50c061a6040f57ab11e6bf0c88270fe973ad7
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 49b7b75d0773748aea8c40915e23076949887455
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ccdee7e0a6defa876b06e39d64bec399c1f5a4a5
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 04247399fa5da65089be3deae057e5b133a4b628
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 00a7951359ba5b97ece5adb0fa15f610da0f635c
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 73147372dff168c0564d0fffc6d4e818d59c056b
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a5803e1257e649e1b8ac6c6e0554d49051b7ccef
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c436c197203ac4503bdfa218d39ccaf881cd839
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 00339d8f8abb57b22a65395319e5bc650623ce26
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/Vigogne-2-13B-Instruct/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 00b05b99964d52b8ec0fd344f3a6a5353d21982a
       name: Q8_0.gguf

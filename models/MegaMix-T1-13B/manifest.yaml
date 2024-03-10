@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/MegaMix-T1-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1f00c96e4baba2007d3c4c753cfea703dce7b191
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/MegaMix-T1-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6495aecef0725400f5b96054c8a85785a7b3a283
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/MegaMix-T1-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66c5eff94c86305df71213992f65d660ddeacfdd
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/MegaMix-T1-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ec723e6c59ce9f077668d56ec1ee307797893eb0
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/MegaMix-T1-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bf9cbae3ac676f5f0e67200dbbf7ff4139c845b9
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/MegaMix-T1-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b5b07076a21b3cd4bdee2d1825d852d5e550dadb
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/MegaMix-T1-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 549f3a7b19f893e9fe1159752b149925a371901e
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/MegaMix-T1-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c11119d13bc7a8193d1f7c9fe01cb81063f43007
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/MegaMix-T1-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02720ec1ff8f0c47e31653a0f933d6a17254c564
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/MegaMix-T1-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 93ba864bb37ee8abdeae789b50781da5a5c62ab0
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/MegaMix-T1-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae965649d34ab66aa138a6d21b810f990e9317a1
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/MegaMix-T1-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 847c83418dadbcd0ec8094338955eec7543ed3d5
       name: Q8_0.gguf

@@ -1,5 +1,5 @@
 ---
-license: other
+license: mit
 license_name: microsoft-research-license
 license_link: LICENSE
 datasets:
@@ -18,13 +18,13 @@ Dolphin 2.6 Phi-2 🐬
 
 Eric Hartford and Fernando Fernandes
 
-Discord https://discord.gg/SmbBewAM
+Joing our Discord https://discord.gg/cognitivecomputations 
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/ldkN1J0WIDQwU4vutGYiD.png" width="600" />
 
 This model's training was sponsored by [convai](https://www.convai.com/).
 
-This model is based on [Phi-2](https://huggingface.co/microsoft/phi-2) and is governed by Microsoft's microsoft-research-license which is prohibits commercial use
+This model is based on [Phi-2](https://huggingface.co/microsoft/phi-2) and is governed by MIT licence
 
 trust_remote_code is required.
 
@@ -35,6 +35,22 @@ New in 2.6
 
 This model is uncensored.  I have filtered the dataset to remove alignment and bias.  This makes the model more compliant.  You are advised to implement your own alignment layer before exposing the model as a service.  It will be highly compliant to any requests, even unethical ones.  Please read my blog post about uncensored models.  https://erichartford.com/uncensored-models
 You are responsible for any content you create using this model.  Enjoy responsibly.
+
+## Evaluation
+
+**Open LLM Leaderboard:**
+benchmarked on lm-evaluation-harness v.0.4.1
+
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | **61.7**  |
+| ARC (25-shot)         | 59.81         |
+| HellaSwag (10-shot)   | 74.65  |
+| MMLU (5-shot)         | 55.38|
+| TruthfulQA (0-shot)   | 47.39 |
+| Winogrande (5-shot)   | 74.90  |
+| GSM8K (5-shot)        | 58.07        |
 
 ## Training
 It took 2 days to train 3 epochs on 4x A100s using qLoRA and Axolotl

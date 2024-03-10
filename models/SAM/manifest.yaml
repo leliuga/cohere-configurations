@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/SAM/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e438a8d8075e40646dbd0ce3c4e669b700aacf5b
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/SAM/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4af5901305433cf2e9f05654f3defbab1853d7eb
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/SAM/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: eccdd7f51e95631d152457ef7ec58e2a33def905
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/SAM/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a0e48d88506cd11bbc755b67bb55ff8b89976fac
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/SAM/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2dbbfa6f80965c107cce483e29122714b5fb67a9
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/SAM/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3765369831bc69372041eecbd4e90ff928e3ff23
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/SAM/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 59f671833a5283764194e10e68834879ebcab443
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/SAM/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f55b95f1fb46d4637b4da0228a26111a4719a824
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/SAM/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: de9f4446f5434cdd98b02c5956f477667a2102ec
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/SAM/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df841105d75a0d0bf6a2225a5c77bc9698a47317
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/SAM/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a2ff2e27a2525e26aa91aab8e58d1ae94d4d5196
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/SAM/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cd0251c5dd1a58ede722300d4a133ced9994e0b2
       name: Q8_0.gguf

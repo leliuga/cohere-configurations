@@ -52,19 +52,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -74,15 +61,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7d72d2b05af3ddede2983a4c5e47e515e33cc8ed
       name: Q2_K.gguf
@@ -96,15 +76,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f97d5c52e25e6a3ca8c5125085a5f49169a20427
       name: Q3_K_L.gguf
@@ -118,15 +91,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dc9f7f43f059754187179efcabdbcf8effeac971
       name: Q3_K_M.gguf
@@ -140,15 +106,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c40811f99fa9af13235726f689788e75562fa6ae
       name: Q3_K_S.gguf
@@ -162,15 +121,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f4cfe0ebcef8c9025bf02b29f79bcadc075fafed
       name: Q4_0.gguf
@@ -184,15 +136,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e3111e9508ff648aa0a1afba2241972423998eba
       name: Q4_K_M.gguf
@@ -206,15 +151,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 805c413a64b20fd4bf370500dd934ab8953bedc1
       name: Q4_K_S.gguf
@@ -228,15 +166,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4d0d2ae6f73c29c344e48955c9b67af9e30091b3
       name: Q5_0.gguf
@@ -250,15 +181,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91c00657cb3f991c4fd05b503f1a9b2c30c58948
       name: Q5_K_M.gguf
@@ -272,15 +196,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 82d8d5a7f023c82023c86b4910859fb8dea2dc5e
       name: Q5_K_S.gguf
@@ -294,15 +211,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 95d203567283d6d2dfd0cd2400d03c0af90c7de4
       name: Q6_K.gguf
@@ -316,15 +226,8 @@ variants:
     - models/nontoxic-bagel-34b-v0.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c260b38c37ba3a10e428d935a15faa2e5de37ca3
       name: Q8_0.gguf

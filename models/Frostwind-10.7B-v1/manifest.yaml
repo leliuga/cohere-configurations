@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b8c5fdf9b57673a47bb86817f829a4dc8292ad35
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 913a071f148314d1faec4e85a94046b18ddb6cc0
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d09362e8b642e9d3b2d7b52ec1ff3c9635e3846
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac3ca1c56e93fd2222ec4ccf9747e42c1b4a3ecf
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d7a4f924ce460bf56e0c492126ad310c98e41387
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7c77a8f8539ee61d0f866fc4272c54786dd145a7
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c61f34c27d59f917d67f7ea468020ba6d4656a96
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3581d577ead930120a97191502c0b3d10413970f
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6925f61720a4c36965ee42304eee74aa93adb259
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a708f3085da25f57ff532bb21de8c33c7a8baa8e
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b9cef5c46e78f58f74b739748ec878396f40b838
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Frostwind-10.7B-v1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cea2e2b3dc41a9e5d1c42d56c31674c793ff6479
       name: Q8_0.gguf

@@ -1,0 +1,97 @@
+id: Cosmosis-3x34B
+parent_id: Weyaxi/Cosmosis-3x34B
+name: Cosmosis 3X34B
+description: ""
+architecture: mixtral
+licence: other
+object: model
+owned_by: Yağız Çalık
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- yi
+- moe
+- base_model:Weyaxi/Cosmosis-3x34B
+- license:other
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 200000
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Cosmosis-3x34B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: a8c06a33799f915cd18f72eb1caf2d52aa3c1b52
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Cosmosis-3x34B-GGUF/resolve/main/cosmosis-3x34b.Q2_K.gguf
+      size: 31899309152
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Cosmosis-3x34B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 9fb82b5a2b387f4fcca60bce736bc9b05e47adf1
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Cosmosis-3x34B-GGUF/resolve/main/cosmosis-3x34b.Q3_K_M.gguf
+      size: 41852191840
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Cosmosis-3x34B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "200000"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 4401b1e0b967e000b043b6774285d0eb56dbb183
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Cosmosis-3x34B-GGUF/resolve/main/cosmosis-3x34b.Q4_0.gguf
+      size: 49196266592
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 200000
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: |
+        <|im_start|>system
+        {system_message}<|im_end|>
+        <|im_start|>user
+        {prompt}<|im_end|>
+        <|im_start|>assistant

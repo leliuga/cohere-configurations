@@ -30,19 +30,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -52,15 +39,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7bf8e44f32823fc2e7875e9f0ff269e6f06d9725
       name: Q2_K.gguf
@@ -74,15 +54,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 897189ed489b56c4922d676dbb876ab02223cbe3
       name: Q3_K_M.gguf
@@ -96,15 +69,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8e4957458a7be994c063747294051841c7ea6c06
       name: Q4_0.gguf
@@ -118,15 +84,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 741afdae5d70182e0cf2747162a19ea32118543a
       name: Q4_K_M.gguf
@@ -140,15 +99,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9e206d9631c7e3d0ce2ad6623a8533903c4a03aa
       name: Q5_0.gguf
@@ -162,15 +114,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 86e6ed0161b1802048bee18360ec44160eda43ee
       name: Q5_K_M.gguf
@@ -184,15 +129,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e905594713be91cc68d9aaf8b776197637fda851
       name: Q6_K.gguf
@@ -206,15 +144,8 @@ variants:
     - models/Starling-LM-alpha-8x7B-MoE/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea8d029693152eb01d93887e6ee18fad47fdfb1e
       name: Q8_0.gguf

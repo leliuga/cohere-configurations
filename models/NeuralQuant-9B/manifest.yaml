@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/NeuralQuant-9B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 12096ec0e7ec6a2999b075545fe3bc7aebd64d09
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/NeuralQuant-9B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f91c0fb2d18e366cf524bda23d0995cd3abd3ce0
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/NeuralQuant-9B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 382382e513ac7da000abe36eca657e9e1d4a1b2e
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/NeuralQuant-9B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d96508c9f808083d3e9f15667abab7613659bb87
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/NeuralQuant-9B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9288db4335da8f1e19f5527f601a4c7f6fbaf3a8
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/NeuralQuant-9B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2fb59a8f7ba073dc96e6f8afdac3a1cd3ec54eb1
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/NeuralQuant-9B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 97e5c371d004561c5d843b0fa3b2a9a7617e2bb7
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/NeuralQuant-9B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 766f37cc8329b2e417101afac57ddbd1fd4fa334
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/NeuralQuant-9B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d2651e57b165969a7b69ca76d797b11e52754802
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/NeuralQuant-9B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4c6ec7f79c97f9f18808a5d5b713f736f821a055
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/NeuralQuant-9B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 82b26a06b7d1f42cc69c6c9bd47ae6193799f749
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/NeuralQuant-9B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 042126a5c1ec95c93f0df2575197a57c0b690f5b
       name: Q8_0.gguf

@@ -34,19 +34,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -56,15 +43,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q2_K/Q2_K.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c9fc5808f0d91bcdb518510530082c57305230d0
       name: Q2_K.gguf
@@ -78,15 +58,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0a70f82b411c3a1888abb0af5ab8ddc14c22a674
       name: Q3_K_L.gguf
@@ -100,15 +73,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 34137ae50107a69844a1db35a15ec90cae5888be
       name: Q3_K_M.gguf
@@ -122,15 +88,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7541e4ffe89d2c5e1666a17046049ea168a883d1
       name: Q3_K_S.gguf
@@ -144,15 +103,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q4_0/Q4_0.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 316510b59161c10b94d04e32ca53bf6610c6c555
       name: Q4_0.gguf
@@ -166,15 +118,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 682eaac52937faf788960f4e96a659c2585d16d3
       name: Q4_K_M.gguf
@@ -188,15 +133,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2171ce2f8133c49c87709a793edf8034848d0383
       name: Q4_K_S.gguf
@@ -210,15 +148,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q5_0/Q5_0.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4da1e6efab7c549e6dbd77c7ce18c01428716850
       name: Q5_0.gguf
@@ -232,15 +163,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02f167cfc37f083d47fc2538dac21babc30f4cbd
       name: Q5_K_M.gguf
@@ -254,15 +178,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0912e4b329289c9ceabdb6e41c6acfc6ff8c5c6a
       name: Q5_K_S.gguf
@@ -276,15 +193,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q6_K/Q6_K.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 47b071e88f2a6a983063f480033913939dc8fd52
       name: Q6_K.gguf
@@ -298,15 +208,8 @@ variants:
     - models/openbuddy-llama2-13b64k-v15/Q8_0/Q8_0.gguf
     - --ctx-size
     - "65536"
-    - --batch-size
-    - "262144"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a7a7f2181fe841e9e8ba6073d9e1a9c7225366cd
       name: Q8_0.gguf

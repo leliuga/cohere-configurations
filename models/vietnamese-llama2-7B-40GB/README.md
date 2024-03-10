@@ -77,3 +77,13 @@ For those employing the models from this project for commercial purposes, develo
 **Acknowledgments**
 
 We extend our gratitude to PHPC - Phenikaa University and NVIDIA for their generous provision of computing resources for model training. Our appreciation also goes out to binhvq and the other authors for their diligent efforts in collecting and preparing the Vietnamese text corpus.
+
+### Please cite our manuscript if this dataset is used for your work
+```
+  @article{duc2024towards,
+    title={Towards Comprehensive Vietnamese Retrieval-Augmented Generation and Large Language Models},
+    author={Nguyen Quang Duc, Le Hai Son, Nguyen Duc Nhan, Nguyen Dich Nhat Minh, Le Thanh Huong, Dinh Viet Sang},
+    journal={arXiv preprint arXiv:2403.01616},
+    year={2024}
+  }
+```

@@ -7,6 +7,17 @@ tags:
 datasets:
 - akjindal53244/Arithmo-Data
 ---
+
+## [January 2024] New Model Release: Arithmo2-Mistral-7B
+
+**Arithmo2-Mistral-7B** model improves initially released Arithmo-Mistral-7B model on both GSM8K and MATH benchmarks. Specifically, there is **absolute** improvement of:
+- +1.7% on GSM8K
+- +3.0% on GSM8K PoT
+- +1.9% on MATH
+
+<b>Note</b>: <span style="color:red"><b>It is recommended to use Arithmo2-Mistral-7B model</b></span>. Here is the [merged model](https://huggingface.co/upaya07/Arithmo2-Mistral-7B) and corresponding [LoRA Adapter](https://huggingface.co/upaya07/Arithmo2-Mistral-7B-adapter).
+
+
 # Model Card for Model ID
 
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](CODE_LICENSE)
@@ -154,6 +165,28 @@ Results for all models except `Arithmo-Mistral-7B` are taken from [MetaMath](htt
 
 
 If you are interested in reproducing the resullts, visit https://github.com/akjindal53244/Arithmo-Mistral-7B#reproducing-results section.
+
+
+### Support My Work
+
+Building LLMs takes time and resources; if you find my work interesting, your support would be epic!
+<a href="https://www.buymeacoffee.com/a_little_learner" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+
+### Citation
+To cite Arithmo models:
+```
+@misc{jindal_2023_arithmo,
+  author = {Jindal, Ashvini},
+  title = {Arithmo-Mistral-7B: Mathematical Reasoning Model},
+  howpublished = {Hugging Face},
+  month = {October},
+  year = {2023},
+  url = {https://huggingface.co/akjindal53244/Arithmo-Mistral-7B}
+}
+```
+
+
 
 <h2 id="References">References</h2>
 

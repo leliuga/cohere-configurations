@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 28c558474d26a4f02d3818547453222265e04546
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c25ba6c775a3037a3a503d345604ae6be41e233d
       name: Q3_K_M.gguf
@@ -90,15 +63,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 759a0a6c99daca41ea9881691b9e2c9a3fd8d22f
       name: Q4_0.gguf
@@ -112,15 +78,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4d1b8a476e63a99f82988392872c2fb4e5e4530b
       name: Q4_K_M.gguf
@@ -134,15 +93,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ce1b93885bd437e419e21eb2dfe496e73c7ef4dd
       name: Q5_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0e38de69a44563d8d44fe4a2095c22c140f90beb
       name: Q5_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 26fae7bab62c55c93268dc1695045db9fceb84f7
       name: Q6_K.gguf
@@ -200,15 +138,8 @@ variants:
     - models/sonya-7B-x8-MoE/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb15a55186db63ad5aea65f099714f8268158eae
       name: Q8_0.gguf

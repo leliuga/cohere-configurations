@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Hexoteric-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9bc6e94d321fefafb24d5618ee82f172fba8e798
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Hexoteric-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b36eebbc6b016fe4e7e032944dba7ba364f173b8
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Hexoteric-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 541b03644296833102fcf05933ac7d6811137a92
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Hexoteric-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e607de41c6391a421bf8696878b79d83161d9f17
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Hexoteric-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c20fe8ec44e04bfe3c8cffe9ecce66bbd54f3a43
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Hexoteric-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6ee42c59860139662974f710039e19e58447e62e
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Hexoteric-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7ad43c56373a997fc040ef04d2f2925f134d95df
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Hexoteric-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 996a80f2a4d6cb961b914ec143dec469d10fd570
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Hexoteric-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6a50c71ab86eb18e1ff904588e3b1d7793a93fd5
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Hexoteric-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 320d23ec35f765ffe4a493d6f7a545cefe402cc8
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Hexoteric-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 042f50187b9be72bb4571bdb34fa470e47366e10
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Hexoteric-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c6ae1d1588972954174ee8d4b7e16aacee21c301
       name: Q8_0.gguf

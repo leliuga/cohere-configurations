@@ -15,6 +15,10 @@ tags:
 This is official model checkpoint for Asclepius-13B [(arxiv)](https://arxiv.org/abs/2309.00237).
 This model is the first publicly shareable clinical LLM, trained with synthetic data.
 
+## UPDATE
+### 2024.01.10
+- Asclepius-R, the variant of Asclepius that trained on MIMIC-III discharge summaries, is now available on [Physionet](https://physionet.org/content/asclepius-r/1.0.0/)!
+  
 ## Model Details
 
 ### Model Description

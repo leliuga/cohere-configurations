@@ -31,19 +31,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -53,15 +40,8 @@ variants:
     - models/tora-13B-v1.0/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 059fd4eb5b25e51999ae8691e87a7e8ffffa6f5f
       name: Q2_K.gguf
@@ -75,15 +55,8 @@ variants:
     - models/tora-13B-v1.0/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4cbe87b24c68a47790962ad24db9695b8cb6bdcb
       name: Q3_K_L.gguf
@@ -97,15 +70,8 @@ variants:
     - models/tora-13B-v1.0/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dd3715bd6ecca2d4d76f3d515e90ef050913f2ea
       name: Q3_K_M.gguf
@@ -119,15 +85,8 @@ variants:
     - models/tora-13B-v1.0/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 18903d58ab4e293f16d8248f013153350b4774de
       name: Q3_K_S.gguf
@@ -141,15 +100,8 @@ variants:
     - models/tora-13B-v1.0/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2f702921e13b1a301347eaad4fcd9e6e9f5069d9
       name: Q4_0.gguf
@@ -163,15 +115,8 @@ variants:
     - models/tora-13B-v1.0/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 010d34ee3539ffb83de3479c27bac4029c01d61e
       name: Q4_K_M.gguf
@@ -185,15 +130,8 @@ variants:
     - models/tora-13B-v1.0/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0c780d2e447a2891056ec1d5643612dd3500c1fa
       name: Q4_K_S.gguf
@@ -207,15 +145,8 @@ variants:
     - models/tora-13B-v1.0/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2748ab94b238d5aa62727a75b15d8eed5fe67cbf
       name: Q5_0.gguf
@@ -229,15 +160,8 @@ variants:
     - models/tora-13B-v1.0/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 35589dc53616f13bb22274e88f441090a12f14be
       name: Q5_K_M.gguf
@@ -251,15 +175,8 @@ variants:
     - models/tora-13B-v1.0/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7888f015e8b4db047bddef576bc102bdfba2843e
       name: Q5_K_S.gguf
@@ -273,15 +190,8 @@ variants:
     - models/tora-13B-v1.0/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8c442e03effe8543f3d6b9e0d4ddee39414f56e7
       name: Q6_K.gguf
@@ -295,15 +205,8 @@ variants:
     - models/tora-13B-v1.0/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ce4fa3f5f5f77d52fdde6ae7bafaad17eee8828
       name: Q8_0.gguf

@@ -23,19 +23,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 6912
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +32,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91b79d8543c3a122e49a76bcd8d18da89be72fd2
       name: Q2_K.gguf
@@ -67,15 +47,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2584058b272f0f3055ab7cd174826f58380ca9f4
       name: Q3_K_L.gguf
@@ -89,15 +62,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d995ae585eafc4503600b09c4931868cd5db12bd
       name: Q3_K_M.gguf
@@ -111,15 +77,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 046bea69d5ddad34b862277a50da195d2a3b093b
       name: Q3_K_S.gguf
@@ -133,15 +92,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4b8a0eb4595cfc45b73508b92921db737fbcf66a
       name: Q4_0.gguf
@@ -155,15 +107,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3af3a1b44cf2939925702313f8ba33eaa61123a
       name: Q4_K_M.gguf
@@ -177,15 +122,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ebb029cd9c037169e23125301d4193c8e4519dae
       name: Q4_K_S.gguf
@@ -199,15 +137,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1dfe106fc0fc58baad415331d4b372899886c516
       name: Q5_0.gguf
@@ -221,15 +152,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8f0f1bd88afaabb0625d355301eb7e42a451a85f
       name: Q5_K_M.gguf
@@ -243,15 +167,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cc8f23f55cdef77458dc5775af596af11bcab6af
       name: Q5_K_S.gguf
@@ -265,15 +182,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 942d3f4eef2680341d7ba28b582ec389c19aa9ab
       name: Q6_K.gguf
@@ -287,15 +197,8 @@ variants:
     - models/bling-stable-lm-3b-4e1t-v0/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f4527095b95fb67e80ba70964addb717a2a0097b
       name: Q8_0.gguf

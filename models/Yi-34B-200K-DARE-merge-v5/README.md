@@ -11,6 +11,11 @@ tags:
 - merge
 ---
 
+# Succeeded by a new merge: https://huggingface.co/brucethemoose/Yi-34B-200K-DARE-merge-v7
+
+***
+
+
 [**Nous-Capybara-34B**](https://huggingface.co/NousResearch/Nous-Capybara-34B/), [**Tess-M-v1.4**](https://huggingface.co/migtissera/Tess-34B-v1.4), [**Airoboros-3_1-yi-34b-200k**](https://huggingface.co/bhenrym14/airoboros-3_1-yi-34b-200k), [**PlatYi-34B-200K-Q**](https://huggingface.co/kyujinpy/PlatYi-34B-200k-Q-FastChat), [**Pallas-0.4**](https://huggingface.co/Mihaiii/Pallas-0.4), [**Yi-34B-200K-AEZAKMI-v2**](https://huggingface.co/adamo1139/Yi-34B-200K-AEZAKMI-v2), and a tiny bit of [**SUS-Chat-34B**](https://huggingface.co/SUSTech/SUS-Chat-34B) merged with a new, experimental implementation of "dare ties" via mergekit. See:
 
 > [Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch](https://github.com/yule-BUAA/MergeLM)

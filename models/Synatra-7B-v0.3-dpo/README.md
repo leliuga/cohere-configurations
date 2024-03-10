@@ -13,9 +13,8 @@ Wanna be a sponser? (Please) Contact me on Telegram **AlzarTakkarsen**
 
 # **License**
 
-This model is strictly [*non-commercial*](https://creativecommons.org/licenses/by-sa/4.0/) (**cc-by-sa-4.0**) use, Under **5K MAU**
-The "Model" is completely free (ie. base model, derivates, merges/mixes) to use for non-commercial purposes as long as the the included **cc-by-sa-4.0** license in any parent repository, and the non-commercial use statute remains, regardless of other models' licences. 
-If your service has over **5K MAU** contact me for license approval.
+This model is strictly [*cc-by-sa-4.0*](https://creativecommons.org/licenses/by-sa/4.0/) use, Under **5K MAU**
+The "Model" is completely free (ie. base model, derivates, merges/mixes) to use for non-commercial purposes as long as the the included **cc-by-sa-4.0** license in any parent repository, and the non-commercial use statute remains, regardless of other models' licences.
 
 # **Model Details**
 **Base Model**  

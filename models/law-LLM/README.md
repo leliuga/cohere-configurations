@@ -13,17 +13,19 @@ tags:
 - legal
 ---
 
-# Adapt (Large) Language Models to Domains
-This repo contains the domain-specific base model developed from **LLaMA-1-7B**, using the method in our paper [Adapting Large Language Models via Reading Comprehension](https://huggingface.co/papers/2309.09530).
+# Domain Adaptation of Large Language Models
+This repo contains the domain-specific base model developed from **LLaMA-1-7B**, using the method in our **ICLR 2024** paper [Adapting Large Language Models via Reading Comprehension](https://huggingface.co/papers/2309.09530).
 
 We explore **continued pre-training on domain-specific corpora** for large language models. While this approach enriches LLMs with domain knowledge, it significantly hurts their prompting ability for question answering. Inspired by human learning via reading comprehension, we propose a simple method to **transform large-scale pre-training corpora into reading comprehension texts**, consistently improving prompting performance across tasks in biomedicine, finance, and law domains. **Our 7B model competes with much larger domain-specific models like BloombergGPT-50B**. 
 
 ### 🤗 We are currently working hard on developing models across different domains, scales and architectures! Please stay tuned! 🤗
 
 **************************** **Updates** ****************************
-* 12/19: Released our [13B base models](https://huggingface.co/AdaptLLM/law-LLM-13B) developed from LLaMA-1-13B.
-* 12/8: Released our [chat models](https://huggingface.co/AdaptLLM/law-chat) developed from LLaMA-2-Chat-7B.
-* 9/18: Released our [paper](https://huggingface.co/papers/2309.09530), [code](https://github.com/microsoft/LMOps), [data](https://huggingface.co/datasets/AdaptLLM/law-tasks), and [base models](https://huggingface.co/AdaptLLM/law-LLM) developed from LLaMA-1-7B.
+* 2024/1/16: 🎉 Our [research paper](https://huggingface.co/papers/2309.09530) has been accepted by ICLR 2024!!!🎉
+* 2023/12/19: Released our [13B base models](https://huggingface.co/AdaptLLM/law-LLM-13B) developed from LLaMA-1-13B.
+* 2023/12/8: Released our [chat models](https://huggingface.co/AdaptLLM/law-chat) developed from LLaMA-2-Chat-7B.
+* 2023/9/18: Released our [paper](https://huggingface.co/papers/2309.09530), [code](https://github.com/microsoft/LMOps), [data](https://huggingface.co/datasets/AdaptLLM/law-tasks), and [base models](https://huggingface.co/AdaptLLM/law-LLM) developed from LLaMA-1-7B.
+
 
 ## Domain-Specific LLaMA-1
 ### LLaMA-1-7B
@@ -39,7 +41,7 @@ Moreover, we scale up our base model to LLaMA-1-13B to see if **our method is si
 ## Domain-Specific LLaMA-2-Chat
 Our method is also effective for aligned models! LLaMA-2-Chat requires a [specific data format](https://huggingface.co/blog/llama2#how-to-prompt-llama-2), and our **reading comprehension can perfectly fit the data format** by transforming the reading comprehension into a multi-turn conversation. We have also open-sourced chat models in different domains: [Biomedicine-Chat](https://huggingface.co/AdaptLLM/medicine-chat), [Finance-Chat](https://huggingface.co/AdaptLLM/finance-chat) and [Law-Chat](https://huggingface.co/AdaptLLM/law-chat)
 
-For example, to chat with the law model:
+For example, to chat with the law base model (**🤗we highly recommend switching to the [chat model](https://huggingface.co/AdaptLLM/law-chat) for better response quality!**):
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -77,10 +79,9 @@ To easily reproduce our results, we have uploaded the filled-in zero/few-shot in
 If you find our work helpful, please cite us:
 ```bibtex
 @article{adaptllm,
-  title        = {Adapting Large Language Models via Reading Comprehension},
-  author       = {Daixuan Cheng and Shaohan Huang and Furu Wei},
-  journal      = {CoRR},
-  volume       = {abs/2309.09530},
-  year         = {2023}
+  title={Adapting large language models via reading comprehension},
+  author={Cheng, Daixuan and Huang, Shaohan and Wei, Furu},
+  journal={arXiv preprint arXiv:2309.09530},
+  year={2023}
 }
 ```

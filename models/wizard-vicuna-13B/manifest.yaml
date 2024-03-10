@@ -26,19 +26,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/wizard-vicuna-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee221c09303e07786137134cb6436bc09873705d
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/wizard-vicuna-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a9914d97322d7a5fb6d8417d4876d5fbb808cd58
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/wizard-vicuna-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: eab5b35bd03eadfdf9118a0a917a405364cfd687
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/wizard-vicuna-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5e61e3a7d35411611ee2e77e477147c7a55b5eb
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/wizard-vicuna-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 87c7677caa6514072f588daa237ca64c46ad85a9
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/wizard-vicuna-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7bc873f98c244628a9cae8c36904c26ed8056009
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/wizard-vicuna-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e48c3e22a74df8968affbbceca3a0032fdfd2ff
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/wizard-vicuna-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: deb1ea94790575d21124ac7fab66ce6b896796c3
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/wizard-vicuna-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 722a50d5ff8405c615b8bfcbd87c6415b02ddb36
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/wizard-vicuna-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84bbe92c44f2b02de801ab0e638a231db40d5ef0
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/wizard-vicuna-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0ed05805b06755e9527aada0b20a9854695f09d7
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/wizard-vicuna-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52a9f1fbadc3887d0688883ccf312c838a874545
       name: Q8_0.gguf

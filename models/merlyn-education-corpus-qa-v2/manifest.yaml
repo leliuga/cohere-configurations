@@ -26,19 +26,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c7d6d06b6e3eaf128bf7495569b2375202b23abc
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 05599275005a5fec7c249b664c4925a9c2971ae6
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71f8610f445c1d76e8d867f79a9bc558b66d84e4
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fd7bf43133fa3a61894b8f2909cd6512cfaf5620
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4a4620b44c805dae36bd289a60c76bbd8d3f7a74
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 68e45c1b9ab89738482b1cec8e7837b7b34ab462
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6f9958bebf0139c33c88b1c2ce2ab6b894a51f34
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 650063f22fbc9630c732b5a898acb64e138915b8
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 591ca038fc86fc52b8a87d69d3f4e6990936c76e
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5538f895709d2ae49ca5a3aa3197898ef89ef07
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3752b7ab931115665af2b62dba3a13d7e3c3ce6
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/merlyn-education-corpus-qa-v2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a50ae3842fde739632460e802c1c9597cbea63fb
       name: Q8_0.gguf

@@ -16,7 +16,7 @@ tags:
 
 **This is not an instruction-tuned model** - It may not be able to follow  human instructions without using one/few-shot learning or instruction fine-tuning. The model does not have any moderation mechanisms, and may generate harmful or inappropriate responses. 
 
-The Instruct model (chat-model) will be released soon.
+The Instruct model (chat-model) will be released soon. The beta version register is open at https://opentyphoon.ai/ or follow us for future model release https://twitter.com/opentyphoon.
 
 <div align="center">
 <img src="https://storage.googleapis.com/scb10x-ai-lab-public/assets/typhoon_benchmark.png" alt="Typhoon benchmark" width="100%" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
@@ -46,6 +46,13 @@ For full details of this model, please read our [paper](https://arxiv.org/abs/23
 
 This model is a pretrained base model. Thus, it may not be able to follow  human instructions without using one/few-shot learning or instruction fine-tuning. The model does not have any moderation mechanisms, and may generate harmful or inappropriate responses.
 
+## Follow us
+
+https://twitter.com/opentyphoon
+
+## Support / Ask any question
+
+https://discord.gg/CqyBscMFpg
 
 ## SCB10X AI Team
  
@@ -63,4 +70,5 @@ This model is a pretrained base model. Thus, it may not be able to follow  human
 
 ## Contact Us
 
-- E-mail: kasima@scb10x.com
+- General & Collaboration: kasima@scb10x.com, pathomporn@scb10x.com
+- Technical: kunat@scb10x.com

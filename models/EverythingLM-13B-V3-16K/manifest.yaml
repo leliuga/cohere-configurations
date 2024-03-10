@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c99e3aef37768a2d304934621497349f916fad9
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1fc566b2b171066be259cdaf38516317b74e8ccd
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d13b9d85a271787b8d8ffe44cdfce4bfc67cb01d
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 36fe81ec36a65dea5d275a3e22dcf6104911863c
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b8e7c28e487393e55496e131108d90738c5dec99
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6805b5748ae63a898ae2b303d898b7ec62499fda
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 06c316312aca81a227c085137a8f73744eaaf048
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 97732a504c1a93ed06005da9cb29c42fb090d77a
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 53548cbde4649a9832a2f0fe02d5f2fe034aa286
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f725ed9f42742dbbed0defc8a0294eab9d6390d9
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5120f440aafde6520ff2f32e5e020bb87f4656a0
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/EverythingLM-13B-V3-16K/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cca62a74a549e28988f264cf7ff44e3fbeb382d1
       name: Q8_0.gguf

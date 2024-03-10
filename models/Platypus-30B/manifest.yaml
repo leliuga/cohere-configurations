@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Platypus-30B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac6b24eccba91dd2ac252c6bd7a1e7c00a1fc6ec
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Platypus-30B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b44f129de8cfd0ba5f3db9a304a07973bdc9c63d
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Platypus-30B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d04ef5d8a877168eb3ee5ef2e098734e380af7c
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Platypus-30B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d411b7359f028a01cab8ece6b1c499b6657b0de6
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Platypus-30B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d674bc684c5a2623f75ca79544ec9560292419a7
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Platypus-30B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d46c8957cb90904f1d9b8fc4d472e32fad3c22a5
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Platypus-30B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 015a651f29855e14b0c0c147bfb380d139776d14
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Platypus-30B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 469eba2308ad541d62425a820994f6650ea3d7cc
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Platypus-30B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d077610b6d32bb53e2aebf161abfa1687e1c5c14
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Platypus-30B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f3e70cee600e55288a7f94f97548f448ae369a28
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Platypus-30B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0c7b2091e2241e35784c7227c4927af264d930c1
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Platypus-30B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 53734cf010b82e13cec335529dbd520bb4b7940e
       name: Q8_0.gguf

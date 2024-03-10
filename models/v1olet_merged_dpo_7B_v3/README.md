@@ -4,7 +4,8 @@ language:
 - en
 ---
 
-We are ranked *4th* on the overall leaderboard and **1st** in the 7B leaderboard! 🔥🔥🔥
+*[December 2023]* We are ranked *4th* on the overall leaderboard and **1st** in the 7B leaderboard! 
+🔥🔥🔥🔥
 
 ![image/png](https://cdn-uploads.huggingface.co/production/uploads/63c06fba8d1175e3399c16e6/yEPpr0V-D9V4m1a2pMuQs.png)
 
@@ -19,6 +20,7 @@ Train for 1 epoch.
 You can use alpaca template.
 ```
 template_format = """{system}
+
 ### Instruction:
 {prompt}
 

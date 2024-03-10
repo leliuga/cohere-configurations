@@ -6,6 +6,8 @@ Trained on [mistral-7b](https://huggingface.co/mistralai/Mistral-7B-v0.1) as a b
 
 My gratitude goes to my sponsors, a16z and Microsoft for Startups.
 
+Join our Discord! https://discord.gg/cognitivecomputations 
+
 After first training Samantha on mistral-instruct, and seeing how she interacts, I felt that training on the base model would provide a more genuine Samantha experience.  So I trained this one.
 
 NEW!  This Samantha is trained using ChatML prompt format instead of Vicuna-1.1.  All of my future models will use ChatML prompt format.

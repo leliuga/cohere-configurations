@@ -28,19 +28,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d05089d17c8d54257dc63dbfa82282dfc1b6bdb
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6395f2254c1f4498a55ebbcf1aa78a1107d68b6
       name: Q3_K_M.gguf
@@ -94,15 +67,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2000f67265463892386f2cf4f06d44c87a0392f1
       name: Q4_0.gguf
@@ -116,15 +82,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a4c296aee5bc82dffd4d97795e023fd154000dc1
       name: Q4_K_M.gguf
@@ -138,15 +97,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 381c91e83bee79ffb90c738d59be2c3faf1ef6fb
       name: Q5_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 68b7f296a0d5b2d2bd72b07d00c3b61409986efc
       name: Q5_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52c57b2cafb21d3c56ec7f6c640bad43a3bcb8d2
       name: Q6_K.gguf
@@ -204,15 +142,8 @@ variants:
     - models/UNAversal-8x7B-v1beta/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee8f9a29db02d006e1ea9bea4884fa183414fd0e
       name: Q8_0.gguf

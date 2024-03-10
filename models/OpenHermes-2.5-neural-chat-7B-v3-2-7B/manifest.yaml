@@ -25,19 +25,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1f1ef2e259561cbd0a10da55aba5f67c5a4dd7c2
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ed335199993f22bb891f8d81c203da581e7d14bc
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e712bb694f6c870d3c34e29d7733878a61953d50
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd442ac9cb61debba7decbc566122b78dd10f3bd
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bb9eef43ceacc91901d057411872d5dfa220a1d2
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6622c1ddccc42e19bed0a9602cc81fd1def02689
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 74ffca64b70b7a9c2485d5c0f54ed8fee0d0ca52
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 065454bf9917c9af914e25cb4312085c914de6f8
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71e1c9934d36d7e8877ca55b596ecccb1f0d3812
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4ad8a4ec4c870a93b2546b6c0748e748f07c9bea
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9eba92422b5cb10febbfc5a0471fa99eb74f5ca8
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/OpenHermes-2.5-neural-chat-7B-v3-2-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8e49d26a160cfe17b0077c470e41eabb8cc43601
       name: Q8_0.gguf

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 48
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Nyxene-v2-11B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a4011591d5188ded7680dc9184f0b7c1b459c73f
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Nyxene-v2-11B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 45bb5cc29bc5933c218850ea5d1f8bc34577b1fa
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Nyxene-v2-11B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fb2f9fa9bd2efe538662f9e6fde8bf78f9d131bd
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Nyxene-v2-11B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 099eb173ee63f3e45a1484d8f6a72e214fea94c5
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Nyxene-v2-11B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8c87fd5b99574e77c1ab7f3a9f8c687b4f7f1cb2
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Nyxene-v2-11B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e07aec0e52410157bb30c4a1fe9bf35d0249fa96
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Nyxene-v2-11B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f42a586b1083b7714542054c3e575d35d91a81b3
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Nyxene-v2-11B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a7b0f7d716ff3a460765bec50fdb2a414beff2ac
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Nyxene-v2-11B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d1ac4f3af12dc6f863e0e296c71237b02bc0739e
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Nyxene-v2-11B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ad93840c5b77144fcb66629452057782f5e887ba
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Nyxene-v2-11B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa997ece2d6b9481de180a27c348a39782376d1c
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Nyxene-v2-11B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "51"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ebfe9de48c34675b9e387afc4fe95f3a87c0e6aa
       name: Q8_0.gguf

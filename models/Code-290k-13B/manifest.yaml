@@ -1,0 +1,229 @@
+id: Code-290k-13B
+parent_id: ajibawa-2023/Code-290k-13B
+name: Code 290K 13B
+description: ""
+architecture: llama
+licence: cc-by-nc-nd-4.0
+object: model
+owned_by: Feynman Innovations
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- code
+- en
+- dataset:ajibawa-2023/Code-290k-ShareGPT
+- base_model:ajibawa-2023/Code-290k-13B
+- license:cc-by-nc-nd-4.0
+- has_space
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 5120
+  attention_head_size: 40
+  key_value_head_size: 40
+  intermediate_size: 13824
+  hidden_layer_size: 40
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 7c468ce2ccdc9896b13d8da1ef01cbac5fb79955
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q2_K.gguf
+      size: 4854269952
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 4f464cac41de6b8b0271961480900651c637496c
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q3_K_L.gguf
+      size: 6929559552
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: fee5e61e588d47c993e0a66262b5bdb5109a188c
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q3_K_M.gguf
+      size: 6337769472
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 09df4ce1d9154c92311888cc7b34e773deec4c60
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q3_K_S.gguf
+      size: 5658980352
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 3cb8f45fa3d64d8e2602c580b32296610f2a1daf
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q4_0.gguf
+      size: 7365834752
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: f020314bafcf6325884a4286c9ee28efa1094fcd
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q4_K_M.gguf
+      size: 7865956352
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: e251bc9a9bbe909362b23f79f8108654bc3426b1
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q4_K_S.gguf
+      size: 7423178752
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 471f954b410e47aca1086ce6932aa32842109b0d
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q5_0.gguf
+      size: 8972285952
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 174698a789ffaa5f050b44756f41310ee702ca05
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q5_K_M.gguf
+      size: 9229924352
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 65f64f6c0a020b193a6e2c38469ade7297949a70
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q5_K_S.gguf
+      size: 8972285952
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: eb5294db63ea0ecc72a681ff343c93ad44221cc3
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q6_K.gguf
+      size: 10679140352
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Code-290k-13B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 5d13b56ce38b74858a492ca20112c20a449fe2b1
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Code-290k-13B-GGUF/resolve/main/code-290k-13b.Q8_0.gguf
+      size: 13831319552
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "This is a conversation with your helpful AI assistant. AI assistant can generate Code in various Programming Languages along with necessary explanation.\n\nContext\nYou are a helpful AI assistant.\n\nUSER: {prompt}\nASSISTANT:\n"

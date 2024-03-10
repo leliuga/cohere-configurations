@@ -15,93 +15,185 @@ model-index:
       type: text-generation
       name: TruthfulQA (MC2)
     dataset:
-      type: text-generation
       name: truthful_qa
+      type: text-generation
       config: multiple_choice
       split: validation
     metrics:
-      - type: accuracy
-        value: 65.13
-        verified: true
+    - type: accuracy
+      value: 65.13
+      verified: true
   - task:
       type: text-generation
       name: ARC-Challenge
     dataset:
-      type: text-generation
       name: ai2_arc
+      type: text-generation
       config: ARC-Challenge
       split: test
     metrics:
-      - type: accuracy
-        value: 68.17
-        verified: true
+    - type: accuracy
+      value: 68.17
+      verified: true
   - task:
       type: text-generation
       name: HellaSwag
     dataset:
-      type: text-generation
       name: Rowan/hellaswag
+      type: text-generation
       split: test
     metrics:
-      - type: accuracy
-        value: 85.34
-        verified: true
+    - type: accuracy
+      value: 85.34
+      verified: true
+    - type: accuracy
+      value: 83.57
   - task:
       type: text-generation
       name: Winogrande
     dataset:
-      type: text-generation
       name: winogrande
+      type: text-generation
       config: winogrande_debiased
       split: test
     metrics:
-      - type: accuracy
-        value: 78.85
-        verified: true
+    - type: accuracy
+      value: 78.85
+      verified: true
   - task:
       type: text-generation
       name: MMLU
     dataset:
-      type: text-generation
       name: cais/mmlu
+      type: text-generation
       config: all
       split: test
     metrics:
-      - type: accuracy
-        value: 62.47
-        verified: true
-  - task:
-      type: text-generation
-      name: PiQA
-    dataset:
-      type: text-generation
-      name: piqa
-      split: test
-    metrics:
-      - type: accuracy
-        value: 83.57
+    - type: accuracy
+      value: 62.47
+      verified: true
   - task:
       type: text-generation
       name: DROP
     dataset:
-      type: text-generation
       name: drop
+      type: text-generation
       split: validation
     metrics:
-      - type: accuracy
-        value: 38.74
-        verified: true
+    - type: accuracy
+      value: 38.74
+      verified: true
   - task:
       type: text-generation
       name: PubMedQA
     dataset:
-      type: text-generation
       name: bigbio/pubmed_qa
+      type: text-generation
       config: pubmed_qa_artificial_bigbio_qa
       split: validation
     metrics:
-      - type: accuracy
-        value: 76.0
+    - type: accuracy
+      value: 76.0
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 68.17
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/juanako-7b-UNA
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 85.34
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/juanako-7b-UNA
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 62.47
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/juanako-7b-UNA
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 65.13
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/juanako-7b-UNA
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 78.85
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/juanako-7b-UNA
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 44.81
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=fblgit/juanako-7b-UNA
+      name: Open LLM Leaderboard
 ---
 
 # juanako-7b-UNA (Uniform Neural Alignment)
@@ -369,3 +461,17 @@ Thanks to all the brilliant humans behind the creation of AI, here some of the o
     archivePrefix={arXiv},
 }
 ```
+
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_fblgit__juanako-7b-UNA)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |67.46|
+|AI2 Reasoning Challenge (25-Shot)|68.17|
+|HellaSwag (10-Shot)              |85.34|
+|MMLU (5-Shot)                    |62.47|
+|TruthfulQA (0-shot)              |65.13|
+|Winogrande (5-shot)              |78.85|
+|GSM8k (5-shot)                   |44.81|
+

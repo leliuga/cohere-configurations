@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b46cab72a8db296cfc579c77588eea2962998767
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e8564a35d12abb391a39fc8cd76368833152f78e
       name: Q3_K_M.gguf
@@ -90,15 +63,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4892709be4401bfdf78378e5cf5ecb9781f17214
       name: Q4_0.gguf
@@ -112,15 +78,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0c42867ea36be84d89079a1c9151dfcc1c97e034
       name: Q4_K_M.gguf
@@ -134,15 +93,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 250ad6a34e2db217720f0b68db31b7865555ce3c
       name: Q5_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2e39af6b8b4a244564899dd3c617591aeb60a314
       name: Q5_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5d437c32e5689ebdefbacc3822658d7ed796d00f
       name: Q6_K.gguf
@@ -200,15 +138,8 @@ variants:
     - models/trinity-v1.2-x8-MoE/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 460191f02ad6248c7cf5766f854f838548a07929
       name: Q8_0.gguf

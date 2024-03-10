@@ -1,19 +1,123 @@
 ---
+language:
+- en
+license: other
 datasets:
 - ehartford/dolphin
 - jondurbin/airoboros-2.2.1
 - ehartford/samantha-data
 - ehartford/WizardLM_evol_instruct_V2_196k_unfiltered_merged_split
-language:
-- en
-license: other
 license_name: yi-license
 license_link: LICENSE
+model-index:
+- name: dolphin-2.2-yi-34b-200k
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 42.15
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/dolphin-2.2-yi-34b-200k
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 68.18
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/dolphin-2.2-yi-34b-200k
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 55.47
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/dolphin-2.2-yi-34b-200k
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 45.93
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/dolphin-2.2-yi-34b-200k
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 64.56
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/dolphin-2.2-yi-34b-200k
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 3.71
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ehartford/dolphin-2.2-yi-34b-200k
+      name: Open LLM Leaderboard
 ---
 
 Dolphin 2.2 🐬
 https://erichartford.com/dolphin
-Discord https://discord.gg/SmbBewAM
+
+Join our Discord! https://discord.gg/cognitivecomputations 
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/63111b2d88942700629f5771/KqsVXIvBd3akEjvijzww7.png" width="600" />
 
@@ -93,4 +197,18 @@ Both theories have their strengths and weaknesses, and neither has achieved wide
 
 [I also have some swag you can buy](https://fa7113.myshopify.com/)
 
+
+
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_ehartford__dolphin-2.2-yi-34b-200k)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |46.67|
+|AI2 Reasoning Challenge (25-Shot)|42.15|
+|HellaSwag (10-Shot)              |68.18|
+|MMLU (5-Shot)                    |55.47|
+|TruthfulQA (0-shot)              |45.93|
+|Winogrande (5-shot)              |64.56|
+|GSM8k (5-shot)                   | 3.71|
 

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 62
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Nethena-20B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e8ee0772aeb0656e0690cc03e794491b8e602f15
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Nethena-20B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84ce195f09240414728eba45c99d4667357b5a75
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Nethena-20B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d83a244537386bb16745f6a4d2cfbc20d759e181
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Nethena-20B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fc86d3c528dbdb2afad185c1face6c3df084a9c0
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Nethena-20B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7fa345c5597d6bfaa73addd6d303a5609e602e00
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Nethena-20B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 969b699bb9750d58533db5fa31e3d38a76121b2b
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Nethena-20B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fe0a25a6228c0ce5f227cdff1bacc77345732c03
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Nethena-20B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3560fd574f20d40bc76304801e77485a48c28e44
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Nethena-20B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac813ceebcbbee71e864c92e32fcc61fbb8dec0b
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Nethena-20B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c42229cd085a2edbde67280213358caa0d6b3c53
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Nethena-20B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7ddf31c43a3f27e0a6ff553a9acf6e23e2ca71ae
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Nethena-20B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b1231242793c67e479bed533d56e68749c4fbb37
       name: Q8_0.gguf

@@ -1,0 +1,226 @@
+id: HamSter-0.1
+parent_id: PotatoOff/HamSter-0.1
+name: Hamster 0.1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Christian
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- en
+- base_model:PotatoOff/HamSter-0.1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 1c540f924e84599bb0d373e9dd049fc2cbffd690
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q2_K.gguf
+      size: 2701416672
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 870886094eab3f7415a125aba9a54a186d305280
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q3_K_L.gguf
+      size: 3822024928
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: ea809bd6ebdd707c89218475e1d85aee197bbdf7
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q3_K_M.gguf
+      size: 3518986464
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9a67ff46dbfc4804871b437fbc1ff230ca0851b8
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q3_K_S.gguf
+      size: 3164567776
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 1075adf3e0705bf51b05c382cc317035c1d83794
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q4_0.gguf
+      size: 4108916960
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b6b6286458646010cd8078f9dfb87fdec52b87bc
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q4_K_M.gguf
+      size: 4368439520
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 1f3808a8a2eae2e1fdb8592e694c42c7294bd56c
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q4_K_S.gguf
+      size: 4140374240
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 5945f588b0910d17734a754aab48b9a920aa374a
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q5_0.gguf
+      size: 4997716192
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: cea6cd172668e0b191eca739a0e6ffaf2d71a74e
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q5_K_M.gguf
+      size: 5131409632
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 2281a0df06d5685fc14d85e1701b56e6f9a067fb
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q5_K_S.gguf
+      size: 4997716192
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: fefc5f7732dc3a78504e33ef7527d5c8ae99ed95
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q6_K.gguf
+      size: 5942065376
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/HamSter-0.1/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b6b76b4cd43e797545b3f2f93d2a032ae2f544c4
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/HamSter-0.1-GGUF/resolve/main/hamster-0.1.Q8_0.gguf
+      size: 7695857888
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] {prompt} [/INST]\n"

@@ -1,0 +1,230 @@
+id: Lelantos-Maid-DPO-7B
+parent_id: SanjiWatsuki/Lelantos-Maid-DPO-7B
+name: Lelantos Maid DPO 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Sanji Watsuki
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- mergekit
+- lazymergekit
+- SanjiWatsuki/Lelantos-DPO-7B
+- NeverSleep/Noromaid-7B-0.4-DPO
+- base_model:SanjiWatsuki/Lelantos-Maid-DPO-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32002
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: ea157dd15901c1c7f6d6c50312740f0f9b570ad1
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q2_K.gguf
+      size: 2719251456
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 973a23f0d6a132f81dd3905032f7d8a564e913be
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q3_K_L.gguf
+      size: 3822034752
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b746afdd825e0e802cf908a71122313b8699e2cd
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q3_K_M.gguf
+      size: 3518996288
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: a301a8cdcdb339f2d053ca6fd9a3befc4e54b5f9
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q3_K_S.gguf
+      size: 3164577600
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 7b30154af57568ee6e2d2e0fc24995d3339f511d
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q4_0.gguf
+      size: 4108927872
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8d01b45d49b10b00aabfb838b15cb31be900f248
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q4_K_M.gguf
+      size: 4368450432
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: c44b1457829c6457006b678e82ab8bd42412b9fc
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q4_K_S.gguf
+      size: 4140385152
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 45213003f8e04910a66a0acdf8b7318159a528f8
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q5_0.gguf
+      size: 4997728128
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 78d43b82ccfe6709f576d5dc2e9c1688dc510f0d
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q5_K_M.gguf
+      size: 5131421568
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9e016031c57b727f434fefc0a8e1ca3f0c5f7fc4
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q5_K_S.gguf
+      size: 4997728128
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: c82b2f5c2c9b6c812b829da48d12f604513be948
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q6_K.gguf
+      size: 5942078400
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Lelantos-Maid-DPO-7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 96b5a1e877bf38d917e00191a9fbde8a5e951e7c
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Lelantos-Maid-DPO-7B-GGUF/resolve/main/lelantos-maid-dpo-7b.Q8_0.gguf
+      size: 7695874880
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -16,6 +16,7 @@ tags:
 - augmentation
 - german
 - mixtral
+- moe
 datasets:
 - argilla/distilabel-math-preference-dpo
 ---
@@ -42,8 +43,8 @@ Aligned with **DPO**
 
 | Model | HF    | GPTQ  | GGUF  | AWQ  |
 |-------|-------|-------|-------|-------|
-| SauerkrautLM-Mixtral-8x7B-Instruct  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B-Instruct) | coming soon | coming soon | coming soon |
-| SauerkrautLM-Mixtral-8x7B  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B) | coming soon | coming soon | coming soon |
+| SauerkrautLM-Mixtral-8x7B-Instruct  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B-Instruct) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-Instruct-GPTQ) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-Instruct-GGUF) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-Instruct-AWQ) |
+| SauerkrautLM-Mixtral-8x7B  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-GPTQ) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-GGUF) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-AWQ) |
 
 ## Model Details
 **SauerkrautLM-Mixtral-8x7B-Instruct**
@@ -82,7 +83,7 @@ Our results, with `result < 0.1, %:` being well below 0.9, indicate that our dat
 
 ### Prompt Template:
 ```
-[INST] Instruction [/INST] Model answer [INST] Follow-up instruction [/INST]
+<s> [INST] Instruction [/INST] Model answer</s> [INST] Follow-up instruction [/INST]
 ```
 ## Evaluation
 ![Harness](https://vago-solutions.de/wp-content/uploads/2023/12/MOE_Instruct.png "SauerkrautLM-Mixtral-8x7B-Instruct Harness")

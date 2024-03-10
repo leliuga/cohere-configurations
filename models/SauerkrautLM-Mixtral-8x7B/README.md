@@ -17,6 +17,7 @@ tags:
 - augmentation
 - german
 - mixtral
+- moe
 datasets:
 - Open-Orca/SlimOrca
 - argilla/distilabel-math-preference-dpo
@@ -43,8 +44,8 @@ Finetuned and aligned with **SFT** and **DPO**
 
 | Model | HF    | GPTQ  | GGUF  | AWQ  |
 |-------|-------|-------|-------|-------|
-| SauerkrautLM-Mixtral-8x7B  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B) | coming soon | coming soon | coming soon |
-| SauerkrautLM-Mixtral-8x7B-Instruct  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B-Instruct) | coming soon | coming soon | coming soon |
+| SauerkrautLM-Mixtral-8x7B  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-GPTQ) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-GGUF) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-AWQ) |
+| SauerkrautLM-Mixtral-8x7B-Instruct  | [Link](https://huggingface.co/VAGOsolutions/SauerkrautLM-Mixtral-8x7B-Instruct) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-Instruct-GPTQ) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-Instruct-GGUF) | [Link](https://huggingface.co/TheBloke/SauerkrautLM-Mixtral-8x7B-Instruct-AWQ) |
 
 ## Model Details
 **SauerkrautLM-Mixtral-8x7B**

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 17920
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/llama-30b-supercot/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 11e7a37863c8e1d774d49bb1c821ba038c185e21
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/llama-30b-supercot/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3ef8add139550cb1ca1195cc6217d0a28f0cdd30
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/llama-30b-supercot/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f91dce6e0b4a9699caf01814b49e53d8d4606bc5
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/llama-30b-supercot/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bcb1ae5663d1251d4b87064693a3d93bc5ff42c5
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/llama-30b-supercot/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7b27f7182a4e1e164cb213eaf00e3cfd7853305d
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/llama-30b-supercot/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 02ec9598606de24bcfcc09e014fd1a00a2e99978
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/llama-30b-supercot/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f0fe59274aea1b1244ca3dfdc851b3c8d7613244
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/llama-30b-supercot/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d6c9dc3afce9be964b9c18c69b62f7e10a610e98
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/llama-30b-supercot/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e647d53e263dcc10580b208bbe95e11ae366b902
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/llama-30b-supercot/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 31f9df5ebbdb0bed816d516596afe0dfbd8d6176
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/llama-30b-supercot/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e2e73a1c6b32cb663e4f8dc7e0b59e821d6d60d6
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/llama-30b-supercot/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da57e113ab16f0a98bb40aeb0a402b9ba9f2e917
       name: Q8_0.gguf

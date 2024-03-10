@@ -30,19 +30,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -52,15 +39,8 @@ variants:
     - models/Orca-2-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2e57746c456b79f7ab18a268e88fe550d8ec1d31
       name: Q2_K.gguf
@@ -74,15 +54,8 @@ variants:
     - models/Orca-2-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c30838ef170604b92fb46c4e507daec00dcd0fd
       name: Q3_K_L.gguf
@@ -96,15 +69,8 @@ variants:
     - models/Orca-2-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9e01e665fb2494af3b649bc78cd8ed6dcb467e15
       name: Q3_K_M.gguf
@@ -118,15 +84,8 @@ variants:
     - models/Orca-2-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52181945c63eeaeae709116c522c580f13014ef3
       name: Q3_K_S.gguf
@@ -140,15 +99,8 @@ variants:
     - models/Orca-2-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cd5e40d20e5f28e318f174c47b585d6ddd370947
       name: Q4_0.gguf
@@ -162,15 +114,8 @@ variants:
     - models/Orca-2-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e43364c9011c0c710cff7f56db49896976533621
       name: Q4_K_M.gguf
@@ -184,15 +129,8 @@ variants:
     - models/Orca-2-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bd9fca01559df961114b74bb8abdf477316f8489
       name: Q4_K_S.gguf
@@ -206,15 +144,8 @@ variants:
     - models/Orca-2-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac6c49a1c45ddbf1c19a19acba854d511a11b700
       name: Q5_0.gguf
@@ -228,15 +159,8 @@ variants:
     - models/Orca-2-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7e52fa2a19d165a5ca7571000a26c4b210b33cd0
       name: Q5_K_M.gguf
@@ -250,15 +174,8 @@ variants:
     - models/Orca-2-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e7eab09531276c918efa1ab2c86477601a57fd50
       name: Q5_K_S.gguf
@@ -272,15 +189,8 @@ variants:
     - models/Orca-2-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: afa76836c20f13512d07fa353cac6a43473451c8
       name: Q6_K.gguf
@@ -294,15 +204,8 @@ variants:
     - models/Orca-2-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5147b8df6beaf295873869262261e7c76562988
       name: Q8_0.gguf

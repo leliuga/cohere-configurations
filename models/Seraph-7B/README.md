@@ -195,3 +195,7 @@ Detailed results can be found [here](https://huggingface.co/datasets/open-llm-le
 | TruthfulQA (0-shot)   | 59.49 |
 | Winogrande (5-shot)   | 80.66  |
 | GSM8K (5-shot)        | 71.87        |
+
+If you would like to support me:
+
+[☕ Buy Me a Coffee](https://www.buymeacoffee.com/weyaxi)

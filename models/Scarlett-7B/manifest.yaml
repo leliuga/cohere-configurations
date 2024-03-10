@@ -25,19 +25,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Scarlett-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7888b771a9990d9e191bad32950c5a6a6dcd9f4d
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Scarlett-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8838c161e5bd6d01e3a2694ba5515824c1535b7c
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Scarlett-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 829a6cc855894054dcd459628986337b5f00a76f
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Scarlett-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a2c06292ef0ae0c4a32784d95845fca1369f70e6
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Scarlett-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b75d4aa32509a3913e3177e2f1658a3d18c94b8b
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Scarlett-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c1ac3cd95ed4c69b4772a7006af112f05af85852
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Scarlett-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e9d2e89fc38048e4c51f87a07efa127957d69048
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Scarlett-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c597a9a3771ebbfb3b3ba1d19557bf259b1a8ab3
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Scarlett-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6a1ffa36d9d948b59d2c75746441614b24a6f1d4
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Scarlett-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1535bb2ca37adcd6d068773cd2382ea89b8869b4
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Scarlett-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7584c473de73d36635b99feb069fdd424ccc1dce
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Scarlett-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8efa1495f4d3b6dbda2bc3da0619a46fe8553ef5
       name: Q8_0.gguf

@@ -1,0 +1,231 @@
+id: DareVox-7B
+parent_id: abideen/DareVox-7B
+name: DareVox 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Zain ul Abideen
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- merge
+- mergekit
+- lazymergekit
+- teknium/OpenHermes-2.5-Mistral-7B
+- abacusai/Slerp-CM-mist-dpo
+- berkeley-nest/Starling-LM-7B-alpha
+- base_model:abideen/DareVox-7B
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 3ac047594c25a96b4755c1e80ca6d5be977a40f2
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q2_K.gguf
+      size: 2719241920
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 021737bb78e0d564ec5a6652ed70a3d323035e67
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q3_K_L.gguf
+      size: 3822024384
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 07deca25c878c82faeb113cf4a49bfde68aca03b
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q3_K_M.gguf
+      size: 3518985920
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 6adc35a31b8ba05bb27144395e14d0d7c3ef60d7
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q3_K_S.gguf
+      size: 3164567232
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 0616f1d0700720e83551780cc9c7f1b4c7bb2515
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q4_0.gguf
+      size: 4108916416
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d0c358f01c6712f457f4dd8349111215fb87939c
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q4_K_M.gguf
+      size: 4368438976
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: af9c21feb0c7d396111b4bffc9bba57b47ccce3c
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q4_K_S.gguf
+      size: 4140373696
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e29ddfa6272ccac4e7afe3f3f79225631a98004e
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q5_0.gguf
+      size: 4997715648
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 944bca2a2f07ff6d0db1794216283d572cc21355
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q5_K_M.gguf
+      size: 5131409088
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 6f5f9fe34be46ffb8dfc5a36288a24cf2be38652
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q5_K_S.gguf
+      size: 4997715648
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: da1c88c1de954b05d5145087ace2587fd18a769d
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q6_K.gguf
+      size: 5942064832
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/DareVox-7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 90da1dedbe4e0cac645ee83d091e6c023528e833
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/DareVox-7B-GGUF/resolve/main/darevox-7b.Q8_0.gguf
+      size: 7695857344
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

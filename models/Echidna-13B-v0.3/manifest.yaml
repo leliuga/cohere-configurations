@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Echidna-13B-v0.3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f0c557ea338b61b8071e040ef6c51d3709cedf1f
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Echidna-13B-v0.3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3d4d169b3f8067b82b68976074d8e64537385002
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Echidna-13B-v0.3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1278e377ff8008e9de4c5ce68f01e04e78b564b8
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Echidna-13B-v0.3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c20e98aaa93728888ea1ad232f2dbc415a2c2eb2
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Echidna-13B-v0.3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7a1d34a3e64f18b304acfc72712ebc9028b27632
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Echidna-13B-v0.3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 46e6c454f495a150434ea18ee2172279fe32751d
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Echidna-13B-v0.3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 89075cc93d39db5e2eee2ea60b358ebf9d4ff88f
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Echidna-13B-v0.3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5a6988c5723cabf32bc8c9b7b4deec02c6df3de5
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Echidna-13B-v0.3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c3e6eaab4c7cf8e9e094079191b31f12a6e77a7f
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Echidna-13B-v0.3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5860b05139f523bcd6a920e6d9c6dcad53a0ac7a
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Echidna-13B-v0.3/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b23150abc5d218ca1beede3d00cc118f8d1d223f
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Echidna-13B-v0.3/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3f123e8e15c3d04dc5846017dc0347db2e00fbf3
       name: Q8_0.gguf

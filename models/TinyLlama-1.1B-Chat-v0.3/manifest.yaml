@@ -28,19 +28,6 @@ config:
   key_value_head_size: 4
   intermediate_size: 5632
   hidden_layer_size: 22
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 76c6298ccbae45fc16f0628a70a8984da68bed3b
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 07ce5ba31cc1d3b12cd3f8e65ac7de00a842f706
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a220086edf5b4a17026f10d0097c547d2039f3c9
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d5a4c177d64e6c780f3aea4ff6e96dd43482324a
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 925444d6c24745cdbb9c1b476fef2b980c4aed2e
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae9a7fa91d3f2dce2ff4c376cfcb8924a3875347
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 23ed3bde9e8471f3cd764e9c66605ac3524d40a6
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b7943af987ddee4f37e7ebb589ffef598f95593f
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fc3865d2896fbdad7618cadfc15f24565132330e
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d744a5d72b7bc6554043ebc75e0693e0353425a
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 829144d661283d1be1819e440b622aec44a8796e
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/TinyLlama-1.1B-Chat-v0.3/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "25"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da0da642f1c4983d6d5a5f669cd9cd601788fde0
       name: Q8_0.gguf

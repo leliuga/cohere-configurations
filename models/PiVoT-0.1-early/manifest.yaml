@@ -29,19 +29,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/PiVoT-0.1-early/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9eb3d698ef0e5077174e6da3695b134c41fdb389
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/PiVoT-0.1-early/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4da99eef9b60ee400947ac681094d762a74f90ba
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/PiVoT-0.1-early/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ace832bca4eb4d0a0e99371c2bc7bd7abd4f6f0b
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/PiVoT-0.1-early/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e65ed4e6720a713a3b3ce609a26326b277926a3a
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/PiVoT-0.1-early/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c7a1fdb0034b647a25ca500d7f4282bf607aca1
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/PiVoT-0.1-early/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5d5d8c87ccd25f36d08b503c3f2746a27f7e2447
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/PiVoT-0.1-early/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ee3523bf10ed9ded8a68d1261b70f6797a20dbdd
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/PiVoT-0.1-early/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8ab7650ef47f73cd1ea33f01a17c0dc2706d0a00
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/PiVoT-0.1-early/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c6ce4101f5e80d53ec9f3b00efd07c43bbe4cc1e
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/PiVoT-0.1-early/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c68f8b0d9e32e963c4b72892f986123589c49e8
       name: Q5_K_S.gguf
@@ -271,15 +188,8 @@ variants:
     - models/PiVoT-0.1-early/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 418624474cd178cbefa6e3f226af74e6956adfc2
       name: Q6_K.gguf
@@ -293,15 +203,8 @@ variants:
     - models/PiVoT-0.1-early/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bc08873501bd6fdd455cce8a9ae4feda51adae85
       name: Q8_0.gguf

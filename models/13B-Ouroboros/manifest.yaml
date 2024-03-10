@@ -40,19 +40,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -62,15 +49,8 @@ variants:
     - models/13B-Ouroboros/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c64d8ffb81177cde9677f60802643cd50b925e99
       name: Q2_K.gguf
@@ -84,15 +64,8 @@ variants:
     - models/13B-Ouroboros/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 766147ff3d0d7be9f2d9a5ac65abc86e77c36c2d
       name: Q3_K_L.gguf
@@ -106,15 +79,8 @@ variants:
     - models/13B-Ouroboros/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df89c0df5807b083d6833cb455d332acde7b5084
       name: Q3_K_M.gguf
@@ -128,15 +94,8 @@ variants:
     - models/13B-Ouroboros/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8e0183e739aa944d1a431c554cab3ff579258e48
       name: Q3_K_S.gguf
@@ -150,15 +109,8 @@ variants:
     - models/13B-Ouroboros/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 58e2374f698c53478f2aff9d5f7b7707c43e3f6e
       name: Q4_0.gguf
@@ -172,15 +124,8 @@ variants:
     - models/13B-Ouroboros/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c984b3082ebb5cfbcc70ee22b5e024ae3905b0c8
       name: Q4_K_M.gguf
@@ -194,15 +139,8 @@ variants:
     - models/13B-Ouroboros/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e76142cce9ad458d11eaf258fcea2059cde40d5b
       name: Q4_K_S.gguf
@@ -216,15 +154,8 @@ variants:
     - models/13B-Ouroboros/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c66ddf0bb0507c1a42a9acfb75a6e94f76821505
       name: Q5_0.gguf
@@ -238,15 +169,8 @@ variants:
     - models/13B-Ouroboros/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d4ba6aefb726ebf59598f6cad39ea99443122790
       name: Q5_K_M.gguf
@@ -260,15 +184,8 @@ variants:
     - models/13B-Ouroboros/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 75c0f33aebfc1e3a250ea9ea1dfb54c816794740
       name: Q5_K_S.gguf
@@ -282,15 +199,8 @@ variants:
     - models/13B-Ouroboros/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 247e50b299c281436480f2850f6a760b4fe6ca9b
       name: Q6_K.gguf
@@ -304,15 +214,8 @@ variants:
     - models/13B-Ouroboros/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f027d9eeda42f60e43dd5bf61e44f65a65cb97e5
       name: Q8_0.gguf

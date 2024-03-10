@@ -12,18 +12,6 @@ Stable-Platypus-13B is a merge of [`garage-bAInd/Platypus2-13B`](https://hugging
 
 ![Platty](./Best_Platty_small.jpeg)
 
-### Benchmark Metrics
-
-| Metric                | Value |
-|-----------------------|-------|
-| MMLU (5-shot)         |   58.30   |
-| ARC (25-shot)         |   62.71   |
-| HellaSwag (10-shot)   |   82.29   |
-| TruthfulQA (0-shot)   |   52.52   |
-| Avg.                  |   63.96   |
-
-We use state-of-the-art [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) to run the benchmark tests above, using the same version as the HuggingFace LLM Leaderboard. Please see below for detailed instructions on reproducing benchmark results.
-
 ### Model Details
 
 * **Trained by**: **Platypus2-13B** trained by Cole Hunter & Ariel Lee; **StableBeluga-13B** trained by StabilityAI
@@ -118,3 +106,16 @@ Please see the Responsible Use Guide available at https://ai.meta.com/llama/resp
     url={https://openreview.net/forum?id=nZeVKeeFYf9}
 }
 ```
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_garage-bAInd__Stable-Platypus2-13B)
+
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | 54.25   |
+| ARC (25-shot)         | 62.71          |
+| HellaSwag (10-shot)   | 82.29    |
+| MMLU (5-shot)         | 58.3         |
+| TruthfulQA (0-shot)   | 52.52   |
+| Winogrande (5-shot)   | 76.87   |
+| GSM8K (5-shot)        | 1.82        |
+| DROP (3-shot)         | 45.22         |

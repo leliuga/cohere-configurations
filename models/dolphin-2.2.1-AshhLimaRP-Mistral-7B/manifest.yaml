@@ -26,19 +26,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 04ffa0aedf65d74eaf8379f55974bf29c08f9d2c
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6f258032d5a8295ed9d0a99a95d16788a8ab7bf9
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 21a1a921466abd2572547d951aa80145e3c9e097
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 14c0ad91915f727f096069d6fade7808b43ed35f
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 842065cffa7ad7c670051bd2f5868d9b60f5be76
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 86010dc9907ef3008270ad38d64e1d027d2e3f7c
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2913a04053d126efa74701d8574224760d69127c
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b88f4107dcafe80cf90e8baa72dcea3985eda1e0
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 38e0fbc2281a3020524a609337d19df7ffb3006d
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 032d5ba6b71cf349dd10258ce41fe435c7883caf
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a25bbd1569a458d99d40325dfd1e0490dca2580a
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/dolphin-2.2.1-AshhLimaRP-Mistral-7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e82b97d5761f5dadd8d1417ca7fe7a84e81ae608
       name: Q8_0.gguf

@@ -10,7 +10,7 @@ tags:
 - RLHF
 - RLAIF
 ---
-# Starling-RM-7B-alpha
+# Starling-LM-7B-alpha
 
 <!-- Provide a quick summary of what the model is/does. -->
 

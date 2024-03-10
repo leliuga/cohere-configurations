@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/apricot-wildflower-20/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 102dc94845a4397a8e83a73fce577aa8fa63d136
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/apricot-wildflower-20/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d24df16df5a4de2c857c63d41bc571a033f034a3
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/apricot-wildflower-20/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: daf074d15fda91e6e27dadf992dfb8e60e4355ec
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/apricot-wildflower-20/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4608b32a91964b63956622aab128f74d9926dcd6
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/apricot-wildflower-20/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2c83621e3e4ac6741013eb035c730a193aeb0d41
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/apricot-wildflower-20/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 70a6c7f211808c9de0b1fa7838f28abfe6a2fff7
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/apricot-wildflower-20/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e09875b252f15ccd960bc8d01f0206995458015b
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/apricot-wildflower-20/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f7d19f53c99550f835aed51d478cfecfebb8d390
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/apricot-wildflower-20/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c64d0e1539fd15eecaf689c0b96eb1da37cef14
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/apricot-wildflower-20/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6d2d3338a98360beb5c83a1929a7c8038b30c6ac
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/apricot-wildflower-20/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3e73933feaec85b91fcacd3b462698f843d035c5
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/apricot-wildflower-20/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71b8a54d52efb313fad2fe192ace73be85bf8394
       name: Q8_0.gguf

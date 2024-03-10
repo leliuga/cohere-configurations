@@ -14,6 +14,8 @@ model-index:
 license: apache-2.0
 language:
 - en
+datasets:
+- teknium/OpenHermes-2.5
 ---
 
 # OpenHermes 2.5 - Mistral 7B

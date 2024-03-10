@@ -34,19 +34,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -56,15 +43,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 989a8edd06c402ba9db450693a6b25b41434e8cd
       name: Q2_K.gguf
@@ -78,15 +58,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9b2aa4b61cb8cc33d0413f9ce17b863ecde0bb52
       name: Q3_K_M.gguf
@@ -100,15 +73,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0d25b026a84145be86b52b8a285df4de942145af
       name: Q4_0.gguf
@@ -122,15 +88,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2995439c942eddd8fda3dc6eadfbf38dab544d0
       name: Q4_K_M.gguf
@@ -144,15 +103,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9a12cd0ab4ddfaacd41b5e72870f118868f5c2f6
       name: Q5_0.gguf
@@ -166,15 +118,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1c28d1dc53da9833da16b5971dcffd74edc45a32
       name: Q5_K_M.gguf
@@ -188,15 +133,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1165c47f04e41a060fc8c501f00d64284701bb6d
       name: Q6_K.gguf
@@ -210,15 +148,8 @@ variants:
     - models/dolphin-2.5-mixtral-8x7b/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fa6f008d07dddcc22487ec779879816bcce5f79f
       name: Q8_0.gguf

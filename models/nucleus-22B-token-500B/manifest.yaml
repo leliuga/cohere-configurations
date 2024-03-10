@@ -25,19 +25,6 @@ config:
   key_value_head_size: 52
   intermediate_size: 17920
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/nucleus-22B-token-500B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b00c055c856d02e7a7515bb3a9bfc57401609518
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/nucleus-22B-token-500B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a31b7d2f7b4cf165d57fd0efb1327a135694e741
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/nucleus-22B-token-500B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae53b1df1aeb758759531897d969fd91e8225e6f
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/nucleus-22B-token-500B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 523ff1125199a9c9dfe99baf090083c1485b886c
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/nucleus-22B-token-500B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 78699f2bd3babce2393986d19bbf6c5c4cea071c
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/nucleus-22B-token-500B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f8b18cd54e12915c26d9059eb38ddb41ade1230e
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/nucleus-22B-token-500B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1c35cea3be3b6c3837e51bdf95e1851f86eb9016
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/nucleus-22B-token-500B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ff79e194d489ac8ee8521a6eb16f4f101f04dbe1
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/nucleus-22B-token-500B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c2a009ea9c7e8134e432762e89df26ba7b5232b3
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/nucleus-22B-token-500B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3a3d92f741bb1bff0451e24517f931989556f468
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/nucleus-22B-token-500B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a542dacb1c95f8ea488141e0b0852191058de513
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/nucleus-22B-token-500B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5244d7ec1fc98647e45ba4cccaa10b397a054e8b
       name: Q8_0.gguf

@@ -1,0 +1,225 @@
+id: LLaMA-Pro-8B
+parent_id: TencentARC/LLaMA-Pro-8B
+name: Llama Pro 8B
+description: ""
+architecture: llama
+licence: llama2
+object: model
+owned_by: ARC Lab, Tencent PCG
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- llama
+- base_model:TencentARC/LLaMA-Pro-8B
+- license:llama2
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 4096
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 11008
+  hidden_layer_size: 40
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 69c010a875087c4b8056253dc1d0deaa721ab8a9
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q2_K.gguf
+      size: 3494608896
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: f49fcecf9d690180cd4f3f88161147458aafec94
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q3_K_L.gguf
+      size: 4455243776
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 58ea0e39020ade10de2a4947e178a4a6ec44c723
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q3_K_M.gguf
+      size: 4077494272
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 129a1ab25cda3514ef62982a761f3c687aaab435
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q3_K_S.gguf
+      size: 3644235776
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 026de1e62d5e6510e5c8b09eabdc235dffdf2255
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q4_0.gguf
+      size: 4736761856
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 73dceb267a14eaca265eeda8bbf36cefbf74f7d1
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q4_K_M.gguf
+      size: 5055758336
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 6a1280940f94ae0084d11a8bb5aa88bb6a16cfa2
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q4_K_S.gguf
+      size: 4767694848
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 2b7d64119997a63bbf514451c7768138766459ba
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q5_0.gguf
+      size: 5765021696
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 5d3e80e3a970faeff48b1c26041e3364333deaa2
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q5_K_M.gguf
+      size: 5929353216
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 28c20f3a6416f620b006159bf57495909a0f04b6
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q5_K_S.gguf
+      size: 5765021696
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: be11672f5ede261521ed0ae420b13a275e22340a
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q6_K.gguf
+      size: 6857547776
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/LLaMA-Pro-8B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "4096"
+    - --n-gpu-layers
+    - "43"
+    artifacts:
+    - id: 126bb905f8013be50d7eb00d93f82d8df7183f71
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/LLaMA-Pro-8B-GGUF/resolve/main/llama-pro-8b.Q8_0.gguf
+      size: 8881545216
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 4096
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

@@ -1,0 +1,227 @@
+id: Panda-7B-v0.1
+parent_id: NeuralNovel/Panda-7B-v0.1
+name: Panda 7B V0.1
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Lee Jackson
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- dataset:NeuralNovel/Creative-Logic-Problem-Solver-v1
+- dataset:NeuralNovel/Neural-Story-v1
+- base_model:NeuralNovel/Panda-7B-v0.1
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8fb3bb4ee0861ce45da81f3200ae5c67adf13983
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q2_K.gguf
+      size: 3083098336
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 861834f14b27cd4d3b4989a3539757f59caa0542
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q3_K_L.gguf
+      size: 3822024928
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d175de6bfa4f2d14f51cdfd954ee1d307516ed25
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q3_K_M.gguf
+      size: 3518986464
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 65a258095aa08d21bb7326712fb91233bc23cd00
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q3_K_S.gguf
+      size: 3164567776
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 4f27f26c30a234096869ce1de2946da796ce1ed7
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q4_0.gguf
+      size: 4108916960
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 4626634c1149a3f0d156d65a9254a4ff9117a6b4
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q4_K_M.gguf
+      size: 4368439520
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b6139b41a104e7083878edc0916bac5d3060ae75
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q4_K_S.gguf
+      size: 4140374240
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: a47d1814ffc41d00314ab2ac1e703297594849df
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q5_0.gguf
+      size: 4997716192
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 34ad8c37160a24a7b4e97db9673380ca134c431c
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q5_K_M.gguf
+      size: 5131409632
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: db6a40ad6647b1896b71b49f5f617d2820d3dd35
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q5_K_S.gguf
+      size: 4997716192
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d31504861cdf841b6d5a33b7c25ad57017370f69
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q6_K.gguf
+      size: 5942065376
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/Panda-7B-v0.1/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f4fba169433b46a08354d1c61df57b9ecb3abe34
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/Panda-7B-v0.1-GGUF/resolve/main/panda-7b-v0.1.Q8_0.gguf
+      size: 7695857888
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

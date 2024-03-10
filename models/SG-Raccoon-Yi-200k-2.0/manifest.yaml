@@ -6,7 +6,7 @@ architecture: llama
 licence: other
 object: model
 owned_by: Marco Lironi
-pipeline: conversational
+pipeline: text-generation
 languages: []
 tags:
 - transformers
@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 98
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q2_K/Q2_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5db5dd2418d29085675a745f04b943437f50cf95
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6a7986c4f615a3fac6b6d723474593b5fd935fc4
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5c306559f93a2737f684e3121507cef8e188799
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7b68b81c577f871c455e2caefc4a91dabde5d94f
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q4_0/Q4_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 40a603407e14b00d7cc03bd42d4c1dcef6c3a686
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6b13d4f64cf62e25a788a42197105bcae3a1cecb
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4bf8640ba0b5cadd3846efa94f6fb2cf74ae2cc8
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q5_0/Q5_0.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2ebebfea2a9d6f81475abdb33f34c44af4075b0e
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2f242927e15db709d17085e07d04a30f93a673e0
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c0d17e9ce4bb3611217720a7b467f9b37fcf60b
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/SG-Raccoon-Yi-200k-2.0/Q6_K/Q6_K.gguf
     - --ctx-size
     - "200000"
-    - --batch-size
-    - "800000"
     - --n-gpu-layers
     - "101"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7e0cc7c8b7dc05ee96d46bffb397242adec35a00
       name: Q6_K.gguf

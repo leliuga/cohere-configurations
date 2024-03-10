@@ -32,19 +32,6 @@ config:
   key_value_head_size: 0
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -54,15 +41,8 @@ variants:
     - models/law-LLM-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2bf9c8fd0a46e4636e0d890bd7b2945b0a04a409
       name: Q2_K.gguf
@@ -76,15 +56,8 @@ variants:
     - models/law-LLM-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a96a2ecd70aa1817773f24d311ac119fcce34ea1
       name: Q3_K_L.gguf
@@ -98,15 +71,8 @@ variants:
     - models/law-LLM-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9cfca71174eefafaa4b0c35e2e83734e940d0d7d
       name: Q3_K_M.gguf
@@ -120,15 +86,8 @@ variants:
     - models/law-LLM-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ac9e39810444a84d80f1072246c1163a4c27d32f
       name: Q3_K_S.gguf
@@ -142,15 +101,8 @@ variants:
     - models/law-LLM-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6499cceb90e7092823248b1c336f64533d4b7a9a
       name: Q4_0.gguf
@@ -164,15 +116,8 @@ variants:
     - models/law-LLM-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25cf9b2aebbb92891f1a09ad0cd44ce734d38617
       name: Q4_K_M.gguf
@@ -186,15 +131,8 @@ variants:
     - models/law-LLM-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 84397437472fb4766229f43598545b1a16c15417
       name: Q4_K_S.gguf
@@ -208,15 +146,8 @@ variants:
     - models/law-LLM-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6f87a20b5aace7547770cc71ebb9a2227c283f5a
       name: Q5_0.gguf
@@ -230,15 +161,8 @@ variants:
     - models/law-LLM-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b7d2080ccb047e48bb496931bffc56ac7241cf09
       name: Q5_K_M.gguf
@@ -252,15 +176,8 @@ variants:
     - models/law-LLM-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c56ba64a8b325ad489ae5d1e105e079bc8985b41
       name: Q5_K_S.gguf
@@ -274,15 +191,8 @@ variants:
     - models/law-LLM-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4ba7167c8628627b531efb81763bf430b5964747
       name: Q6_K.gguf
@@ -296,15 +206,8 @@ variants:
     - models/law-LLM-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b1dba9bcefbc9cc20568d156528308ee68a94661
       name: Q8_0.gguf

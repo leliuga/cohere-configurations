@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b50e4bb8325ddb75cabac7eea5378121b5942685
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b3350d8c8278699d86cdf82a66e8b382c0cea3aa
       name: Q3_K_M.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c7c9863bd9390b395d6a3722052e6181e7a5ceb0
       name: Q4_0.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 44648f52e62606d3e7c0c764c9cb3da05c71d8d1
       name: Q4_K_M.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a5da9c06dd418a2cda62858bd3e227d2e0769791
       name: Q5_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a1f8497f7cac60a9b7d56a2d9a23e6cdc989fb6f
       name: Q5_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4f743518c5421582def10eff6f3a6eb4f9d43915
       name: Q6_K.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Falkor-8x7B-MoE/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a640bdf84f753e90ef9f096c484aac9ef24b86b4
       name: Q8_0.gguf

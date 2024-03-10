@@ -30,44 +30,17 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q2_K.gguf
+    - models/Nous-Capybara-7B/Q2_K/Q2_K.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: d138ce6367e62cbc1edb379bb4e799e08fda6187
       name: Q2_K.gguf
@@ -78,25 +51,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q3_K_L.gguf
+    - models/Nous-Capybara-7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 60d46c39c3eeeea3bfb506393b409864042280c8
       name: Q3_K_L.gguf
@@ -107,25 +66,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q3_K_M.gguf
+    - models/Nous-Capybara-7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 18a4fb66a32f0eca839f1a16b87eafb5f15abf6b
       name: Q3_K_M.gguf
@@ -136,25 +81,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q3_K_S.gguf
+    - models/Nous-Capybara-7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 3334f6eaf396fc0ba32156bb0070058fdf0f4781
       name: Q3_K_S.gguf
@@ -165,25 +96,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q4_0.gguf
+    - models/Nous-Capybara-7B/Q4_0/Q4_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 7ba3ad70f29d40dd4adc616acd05ea91d629906b
       name: Q4_0.gguf
@@ -194,25 +111,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q4_K_M.gguf
+    - models/Nous-Capybara-7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 87e760df05817a1a47c52851aa95bfc1ee520a63
       name: Q4_K_M.gguf
@@ -223,25 +126,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q4_K_S.gguf
+    - models/Nous-Capybara-7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: fca42eef2f3de8d66a174176d48eff47074e0e33
       name: Q4_K_S.gguf
@@ -252,25 +141,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q5_0.gguf
+    - models/Nous-Capybara-7B/Q5_0/Q5_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: 83b84cc3ee9640d372b40a6171613cab9bdbd10d
       name: Q5_0.gguf
@@ -281,25 +156,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q5_K_M.gguf
+    - models/Nous-Capybara-7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: dac2b284533b9f86663baa30e87a3632ca2c46a9
       name: Q5_K_M.gguf
@@ -310,25 +171,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q5_K_S.gguf
+    - models/Nous-Capybara-7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: df8b87d92375a541263e7cbdce6efd631db45ecd
       name: Q5_K_S.gguf
@@ -339,25 +186,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q6_K.gguf
+    - models/Nous-Capybara-7B/Q6_K/Q6_K.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: f3651907a2e77454577df529070bd961bb58de2e
       name: Q6_K.gguf
@@ -368,25 +201,11 @@ variants:
     backend: llama-backend
     backend_arguments:
     - --model
-    - models/Nous-Capybara-7B/Q8_0.gguf
+    - models/Nous-Capybara-7B/Q8_0/Q8_0.gguf
     - --ctx-size
-    - "4096"
-    - --batch-size
     - "4096"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --no-mmap
-    - "false"
-    - --mlock
-    - "true"
-    - --numa
-    - "true"
-    - --cont-batching
-    - "true"
-    - --embedding
-    - "false"
     artifacts:
     - id: e404a1144a3f150c8b8d4dec3a3dd1b2cd6f0174
       name: Q8_0.gguf

@@ -25,19 +25,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -47,15 +34,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 417b5d961bccdd51da142d60209347d7657144e3
       name: Q2_K.gguf
@@ -69,15 +49,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 76f282feb87c7083d01444efcd078e7cae36b9da
       name: Q3_K_L.gguf
@@ -91,15 +64,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 65a1e40a0f0b82153765d152d8c3a219dd6641bf
       name: Q3_K_M.gguf
@@ -113,15 +79,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: eb18bdc10a241c43380c6ff52b4895bd9e024295
       name: Q3_K_S.gguf
@@ -135,15 +94,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: baf16ea100f51de6b9a7dbdebf92ef39e41e4504
       name: Q4_0.gguf
@@ -157,15 +109,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 35377316cc65e4e4f0b39dab06ef6d21d0caf3f3
       name: Q4_K_M.gguf
@@ -179,15 +124,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 69cd1416b846107dc5d4febb77724f7e9368e3ac
       name: Q4_K_S.gguf
@@ -201,15 +139,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d945382c6cf4a3cb828eb0f90fced4bd9955afcc
       name: Q5_0.gguf
@@ -223,15 +154,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 05cd2ab8965e96aeeb673621d9d71b1d8aa4e14e
       name: Q5_K_M.gguf
@@ -245,15 +169,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 57f6955cc99bf3157ac98f0c00ce23e55d5d0e5c
       name: Q5_K_S.gguf
@@ -267,15 +184,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 38efd933f32a034dbdeca7216732b10994e87d9e
       name: Q6_K.gguf
@@ -289,15 +199,8 @@ variants:
     - models/Stheno-Inverted-L2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae6d28a70907067152081bca3b1789734cf904ad
       name: Q8_0.gguf

@@ -1,0 +1,241 @@
+id: stable-code-3b
+parent_id: stabilityai/stable-code-3b
+name: Stable Code 3B
+description: ""
+architecture: stablelm
+licence: other
+object: model
+owned_by: Stability AI
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- stablelm_epoch
+- causal-lm
+- code
+- en
+- dataset:tiiuae/falcon-refinedweb
+- dataset:bigcode/the-stack-github-issues
+- dataset:bigcode/commitpackft
+- dataset:bigcode/starcoderdata
+- dataset:EleutherAI/proof-pile-2
+- dataset:meta-math/MetaMathQA
+- arxiv:2307.09288
+- arxiv:2104.09864
+- arxiv:2204.06745
+- arxiv:2305.06161
+- arxiv:2310.10631
+- arxiv:2309.12284
+- arxiv:1910.02054
+- base_model:stabilityai/stable-code-3b
+- license:other
+- model-index
+- region:us
+config:
+  vocab_size: 50304
+  context_size: 16384
+  embedding_size: 2560
+  attention_head_size: 32
+  key_value_head_size: 32
+  intermediate_size: 6912
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 58ba43bd0bbea06eecbd1b83b026ac4512b8970a
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q2_K.gguf
+      size: 1083755520
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8ef6f4d082409d0f87d17312b7b60fec5c87f9ba
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q3_K_L.gguf
+      size: 1508564480
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d6fd0786748267d557d313c62954c8299655c6fc
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q3_K_M.gguf
+      size: 1391418880
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 91194d2bf6cfbc4b43e0b3085b49911807db3279
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q3_K_S.gguf
+      size: 1254448640
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e31ddfb04a3432919e216cced46da64842f48d24
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q4_0.gguf
+      size: 1608570880
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 4b0392b6938aa0242de50002bb4384021bc2de19
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q4_K_M.gguf
+      size: 1708595200
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8c06913a007e1824fb0f8e513e08fd0c066d8ba2
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q4_K_S.gguf
+      size: 1620695040
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: c2ed5d7da2ff229fe4f3429c398b619a3f809181
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q5_0.gguf
+      size: 1941862400
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f82bda7d421066154833b5e7a50ddbeb8ae3118e
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q5_K_M.gguf
+      size: 1993390080
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 4477138bd9fd8ba1378f1bf7aadd8943dd973ac4
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q5_K_S.gguf
+      size: 1941862400
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: b750f0c59418416cb774ab77bc2f33823443887a
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q6_K.gguf
+      size: 2295984640
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/stable-code-3b/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "16384"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 98056b5c1f4c46e82945f0c3d0fc9a16b757dc0e
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q8_0.gguf
+      size: 2972925440
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 16384
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

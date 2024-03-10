@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 995ec8c3a295e2f7e93dedc23a2b07d8916458a1
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 91be46f1eadd51cba75155a5ef6b1d94ef371379
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: bf929f5366a71f6a1659583b4827c277507af6c3
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3d068916a0320a68ae86aab42bef5de53446c86a
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e999d974d6a32e8661bb6c370edd063b557f15cb
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6249a00004cc2804326aa553cd20915ae4297b3a
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e021f40a588c2ef12572d2d3cf51d0d4275c0f65
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1a84f7097f4535b2ab6f7ca7de0f01652b092baa
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f805e54c8c62a05c6e0029066416b2fff4c8e617
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 32c4f25e7862da9f05069a0685a3511dff40b0e0
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e0be299d1a8dbc2f68a92b298ad4bb096f11cc86
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Mythalion-Kimiko-v2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c59ce4cc7c8b712b4b3966840cec0008b8a291a4
       name: Q8_0.gguf

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f182c0c586dc1c8005adf77e18c10230d21e0a75
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 09f1205e198a89f751c0297ec031a833a3d6cd7a
       name: Q3_K_M.gguf
@@ -90,15 +63,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e5724814a25d6cbd385c7070be2f83c8f117d918
       name: Q4_0.gguf
@@ -112,15 +78,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: de5124b8e615d108003eea5d4617af5c2d433a2b
       name: Q4_K_M.gguf
@@ -134,15 +93,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e1861708419e5564f1ea9e0e0709f4f4070e112a
       name: Q5_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6c9aa48e8a08260ee0b7cffadb9a8470c9cc6c84
       name: Q5_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d92b8d8ff54cf7f14824d3490703b31e94428ff
       name: Q6_K.gguf
@@ -200,15 +138,8 @@ variants:
     - models/openbuddy-mixtral-8x7b-v15.2/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cc9ee9a7eedac756df4a3372d1dfd29de4d39b64
       name: Q8_0.gguf

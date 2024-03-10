@@ -29,19 +29,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 14336
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -51,15 +38,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7ff59b9f5c94bd8251e2bb4da3bf4446567d0bd1
       name: Q2_K.gguf
@@ -73,15 +53,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3cec1020aeba3a2f23f3f5d8f6feb5a0728ea83b
       name: Q3_K_L.gguf
@@ -95,15 +68,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 92c92ad8aa0ef94db173ca7d366632247c86bef5
       name: Q3_K_M.gguf
@@ -117,15 +83,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8b02798c4f9086a2b9103010ef9ec1d3abdb9e08
       name: Q3_K_S.gguf
@@ -139,15 +98,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0a6dd753839e7c78ff015200f8bca31f04ad16ed
       name: Q4_0.gguf
@@ -161,15 +113,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a37ccf9ce5351ba64b38c6fdd4c5b81135bd9546
       name: Q4_K_M.gguf
@@ -183,15 +128,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e39e90ca4f4a63d1dd2391894a1b48107e280191
       name: Q4_K_S.gguf
@@ -205,15 +143,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ffc2c8bb04af70eb54786a15013ee4b735f7988d
       name: Q5_0.gguf
@@ -227,15 +158,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a12d82d66e0b724c7370416aff5c59cb7db2c238
       name: Q5_K_M.gguf
@@ -249,15 +173,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9bda099826de848154dfbde460e71e50f49a2c89
       name: Q5_K_S.gguf
@@ -271,15 +188,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3e99f2ba5150ab5bcb3a7d33f78176e3067ae11a
       name: Q6_K.gguf
@@ -293,15 +203,8 @@ variants:
     - models/Autolycus-Mistral_7B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "32768"
-    - --batch-size
-    - "131072"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: aa3bbd11829c4767259ade11bcd82d85f7094c6a
       name: Q8_0.gguf

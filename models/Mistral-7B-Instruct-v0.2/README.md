@@ -3,7 +3,11 @@ license: apache-2.0
 pipeline_tag: text-generation
 tags:
 - finetuned
-inference: false
+inference: true
+widget:
+- messages:
+  - role: user
+    content: What is your favorite condiment?
 ---
 
 # Model Card for Mistral-7B-Instruct-v0.2

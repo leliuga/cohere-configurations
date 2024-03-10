@@ -27,19 +27,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q2_K/Q2_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4802354a948de73b64c7aff3de14200ba9353ee7
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a5497bbe820a9c993bfb8d69f7f78e519f4a72af
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a359dd39b7b6ee5977422cb772bc2aa2d430bb15
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ed426e57d18a6aab878cf161dbbc565e7f0e7353
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q4_0/Q4_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a453ce9593f75455d0c67ad45f96955e09b2111a
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df4c38b1942a02348b8fe09de7e40c12407b17c9
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4e3ce5cc35834c62dd129e10023d5e5d1ad6a357
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q5_0/Q5_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2fc1c301469af68992ec54d37de5027b4ff387d8
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 97f5212f50649786dbbdeeef6190b79b2adfdf93
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0501fc8701e4c8ce5685ad0c1e5116fd0ebbb82a
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q6_K/Q6_K.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3e11c4eb18864c7b816ad54e20aa2569486e9472
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/llama-2-7B-Guanaco-QLoRA/Q8_0/Q8_0.gguf
     - --ctx-size
     - "2048"
-    - --batch-size
-    - "8192"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 99c3745c510effd032fd2c5f99019a25f575ca3c
       name: Q8_0.gguf

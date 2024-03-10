@@ -33,19 +33,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 28672
   hidden_layer_size: 80
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -55,15 +42,8 @@ variants:
     - models/GodziLLa2-70B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8ec88f9d9c06d6821bc605eb31a4baab1caba2b5
       name: Q2_K.gguf
@@ -77,15 +57,8 @@ variants:
     - models/GodziLLa2-70B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 374e9f0ff5f464fe8c253893feaa28e2e2c7f27d
       name: Q3_K_L.gguf
@@ -99,15 +72,8 @@ variants:
     - models/GodziLLa2-70B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0b5ffb004be11177f3c17211bab814d8b6302188
       name: Q3_K_M.gguf
@@ -121,15 +87,8 @@ variants:
     - models/GodziLLa2-70B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3cb7fc184283c650573d09ddd670b77b540bbcce
       name: Q3_K_S.gguf
@@ -143,15 +102,8 @@ variants:
     - models/GodziLLa2-70B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e257b5d59c23a6c8c3a9202372cc5b9f2ef4ff58
       name: Q4_0.gguf
@@ -165,15 +117,8 @@ variants:
     - models/GodziLLa2-70B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0455bf452dd98828390f5d1db1ee5c92a43ad36f
       name: Q4_K_M.gguf
@@ -187,15 +132,8 @@ variants:
     - models/GodziLLa2-70B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 66207561fbab2c962fecef5846b66ef233416393
       name: Q4_K_S.gguf
@@ -209,15 +147,8 @@ variants:
     - models/GodziLLa2-70B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b998209d50e2b9b49bf2641d721510e09b8e6210
       name: Q5_0.gguf
@@ -231,15 +162,8 @@ variants:
     - models/GodziLLa2-70B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4ee9ab1df7aa519ee51e5bc3b273a645d09c3ae7
       name: Q5_K_M.gguf
@@ -253,15 +177,8 @@ variants:
     - models/GodziLLa2-70B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "83"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 67048ee4d024179b4e9d7c06dca093c6558ef4a4
       name: Q5_K_S.gguf

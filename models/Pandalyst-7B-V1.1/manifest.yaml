@@ -27,19 +27,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q2_K/Q2_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f982f5ad306ec76997a84ee7d230e03ba0f945ee
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 69a14b5c480047f45ac725ac8ff5a3db4c2d2807
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6bbda03c78f60c119a31cc0f15dfc53db53cbf46
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4448ca376ccfeed4dbf156e5e08d03e76466b75d
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q4_0/Q4_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: da84d2fbeaad91e2e158d4238c5aecc15cd75c97
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f80a80b0830e6b5a43b110b129939813c756f024
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0fcee1226b05aa9e8696366f46c6434147cf9a23
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q5_0/Q5_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e0268591af0cef2c9e94dc6d1344459b2b2cfc7e
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9d31e15e9c984c95637dbe204286826bb9e95aa5
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 5ad13f96c1df05c94053f6d420241da5b43653d6
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q6_K/Q6_K.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 16003e9b26403afff9645ee0fd174106653f96b4
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/Pandalyst-7B-V1.1/Q8_0/Q8_0.gguf
     - --ctx-size
     - "16384"
-    - --batch-size
-    - "65536"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 848a3a5dffdcf036eef346dac1353dbd47e6f887
       name: Q8_0.gguf

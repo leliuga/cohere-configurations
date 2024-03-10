@@ -32,19 +32,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -54,15 +41,8 @@ variants:
     - models/Trurl-2-13B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f289d032e00b62e4565dd519223c91b46829600f
       name: Q2_K.gguf
@@ -76,15 +56,8 @@ variants:
     - models/Trurl-2-13B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 11bc8c1f3002556c8a5b31f6cde6a176e275887a
       name: Q3_K_L.gguf
@@ -98,15 +71,8 @@ variants:
     - models/Trurl-2-13B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f197de8a0cc717ae7a17674e22513d152d5de76a
       name: Q3_K_M.gguf
@@ -120,15 +86,8 @@ variants:
     - models/Trurl-2-13B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 491ef3ca93452dc7f1744219d3945f88c64f7332
       name: Q3_K_S.gguf
@@ -142,15 +101,8 @@ variants:
     - models/Trurl-2-13B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 662a5b4858751544f71196049478f2e0567320d7
       name: Q4_0.gguf
@@ -164,15 +116,8 @@ variants:
     - models/Trurl-2-13B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 12228aec7dced2256f1a324fab4be69dec747aa1
       name: Q4_K_M.gguf
@@ -186,15 +131,8 @@ variants:
     - models/Trurl-2-13B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 41a28e24cff1578ab753948cad8cd18130dbcfd2
       name: Q4_K_S.gguf
@@ -208,15 +146,8 @@ variants:
     - models/Trurl-2-13B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 284600583581b5fe7ae86e8f6b401d3ebb3c5b8c
       name: Q5_0.gguf
@@ -230,15 +161,8 @@ variants:
     - models/Trurl-2-13B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7469b47f0e45b426b49b6a37d4407b3ffda4ebdf
       name: Q5_K_M.gguf
@@ -252,15 +176,8 @@ variants:
     - models/Trurl-2-13B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2b058d1014785475b56213cae451d273d90a21a2
       name: Q5_K_S.gguf
@@ -274,15 +191,8 @@ variants:
     - models/Trurl-2-13B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8f705a48e76f91a4244967b089c0ae170069fa8d
       name: Q6_K.gguf
@@ -296,15 +206,8 @@ variants:
     - models/Trurl-2-13B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1eba5d6619fe2b629555d1bcce0845bce752ac67
       name: Q8_0.gguf

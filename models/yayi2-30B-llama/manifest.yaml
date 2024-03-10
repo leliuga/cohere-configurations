@@ -26,19 +26,6 @@ config:
   key_value_head_size: 1
   intermediate_size: 16384
   hidden_layer_size: 64
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -48,15 +35,8 @@ variants:
     - models/yayi2-30B-llama/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 54932e3c4de4f85133080567ef8a39ee2a4ae763
       name: Q2_K.gguf
@@ -70,15 +50,8 @@ variants:
     - models/yayi2-30B-llama/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 45d02373ade727241540c73e46db6752ac8671d6
       name: Q3_K_L.gguf
@@ -92,15 +65,8 @@ variants:
     - models/yayi2-30B-llama/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3a14dd08799f227f77a6d7b8933078b6b8616882
       name: Q3_K_M.gguf
@@ -114,15 +80,8 @@ variants:
     - models/yayi2-30B-llama/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 41659a3d111c0710b87b294b4e1c8599b3252c9f
       name: Q3_K_S.gguf
@@ -136,15 +95,8 @@ variants:
     - models/yayi2-30B-llama/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 38128d3069c4fe27d7dfa0be3aeca34ddd4387ec
       name: Q4_0.gguf
@@ -158,15 +110,8 @@ variants:
     - models/yayi2-30B-llama/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8592cdf6e752e6209de521febdceb6c9dde28e5a
       name: Q4_K_M.gguf
@@ -180,15 +125,8 @@ variants:
     - models/yayi2-30B-llama/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a7bb481ec2d2f64f4b78474efed579fbd88d5f26
       name: Q4_K_S.gguf
@@ -202,15 +140,8 @@ variants:
     - models/yayi2-30B-llama/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7042160d26e377286e686960f7aaf3e41b994c2c
       name: Q5_0.gguf
@@ -224,15 +155,8 @@ variants:
     - models/yayi2-30B-llama/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d799d378ccbc8eb8f84e05d189f31dcab7861a9e
       name: Q5_K_M.gguf
@@ -246,15 +170,8 @@ variants:
     - models/yayi2-30B-llama/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 52fed7966cfbc31a38a5d9cce941af0eb1ce1dae
       name: Q5_K_S.gguf
@@ -268,15 +185,8 @@ variants:
     - models/yayi2-30B-llama/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c31e2ad50556436eefa451dcfc30b4d57363b59a
       name: Q6_K.gguf
@@ -290,15 +200,8 @@ variants:
     - models/yayi2-30B-llama/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "67"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0b0410e6aaaa4f185557e57b07448343033bc5be
       name: Q8_0.gguf

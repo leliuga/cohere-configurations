@@ -1,0 +1,228 @@
+id: speechless-mistral-moloras-7B
+parent_id: uukuguy/speechless-mistral-moloras-7b
+name: Speechless Mistral Moloras 7B
+description: ""
+architecture: mistral
+licence: apache-2.0
+object: model
+owned_by: Jiangwen Su
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mistral
+- text-generation
+- en
+- dataset:yahma/alpaca-cleaned
+- base_model:uukuguy/speechless-mistral-moloras-7b
+- license:apache-2.0
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 32768
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 32
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: fe6df8121a8b34b2761a3320b43581bf9655c3e0
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q2_K.gguf
+      size: 3084034208
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: d8bf3b97243c8203bca84916b00a62220538985e
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q3_K_L.gguf
+      size: 3822960800
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 9a4ff0f12631a7f4026b71475f7f28a167910711
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q3_K_M.gguf
+      size: 3519922336
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: cff0591028836dddd8a91c3b69af1e3481db65ca
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q3_K_S.gguf
+      size: 3165503648
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 688bebe32dea8c3ca03dff83be6728a3fca8d025
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q4_0.gguf
+      size: 4109852832
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 3645e4b52bb977d828a1c6282a0d21b29fd64f2c
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q4_K_M.gguf
+      size: 4369375392
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 92a80c3642457dc93c73b4d3c5dd17f86f33e200
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q4_K_S.gguf
+      size: 4141310112
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f5388be060fd42430664cf5e33a0d26a56d17137
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q5_0.gguf
+      size: 4998652064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 8d52d4bafaa8232286937ad6d5c29a970af7bf4e
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q5_K_M.gguf
+      size: 5132345504
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: 85f89acf8cec14a7dcfb5ef3dd309cc6c045a611
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q5_K_S.gguf
+      size: 4998652064
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: f5c21585d3d39c464e9652d3ad2da923131c14aa
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q6_K.gguf
+      size: 5943001248
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/speechless-mistral-moloras-7B/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "35"
+    artifacts:
+    - id: e50ca39fed711de9c25449aafd91eee6ebfeae55
+      name: Q8_0.gguf
+      uri: https://huggingface.co/TheBloke/speechless-mistral-moloras-7B-GGUF/resolve/main/speechless-mistral-moloras-7b.Q8_0.gguf
+      size: 7696793760
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "{prompt}\n"

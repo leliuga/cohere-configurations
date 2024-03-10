@@ -1,8 +1,110 @@
 ---
-language: "en"  # Example: en
-license: "apache-2.0" #"cc-by-4.0"  # Example: apache-2.0 or any license from https://hf.co/docs/hub/repositories-licenses
-library_name: "transformers"  # Optional. Example: keras or any library from https://github.com/huggingface/hub-docs/blob/main/js/src/lib/interfaces/Libraries.ts
-
+language: en
+license: apache-2.0
+library_name: transformers
+model-index:
+- name: digital-socrates-13b
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 58.36
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=allenai/digital-socrates-13b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 80.14
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=allenai/digital-socrates-13b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 57.01
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=allenai/digital-socrates-13b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 44.47
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=allenai/digital-socrates-13b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 74.59
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=allenai/digital-socrates-13b
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 29.49
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=allenai/digital-socrates-13b
+      name: Open LLM Leaderboard
 ---
 
 This is the Digital Socrates 13B (DS-13B) model described in our paper: <b>Digital Socrates: Evaluating LLMs through explanation critiques</b> (arXiv link: https://arxiv.org/abs/2311.09613). 
@@ -124,3 +226,16 @@ Explanation score: 2
 For more details about Digital Socrates, please refer to our:
 * 📄Paper: https://arxiv.org/abs/2311.09613
 * 💻Dataset: https://allenai.org/data/digital-socrates
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_allenai__digital-socrates-13b)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |57.34|
+|AI2 Reasoning Challenge (25-Shot)|58.36|
+|HellaSwag (10-Shot)              |80.14|
+|MMLU (5-Shot)                    |57.01|
+|TruthfulQA (0-shot)              |44.47|
+|Winogrande (5-shot)              |74.59|
+|GSM8k (5-shot)                   |29.49|
+

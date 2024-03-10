@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Spring-Dragon/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8e2be094d397392b145e33647a17b6275beaca19
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Spring-Dragon/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 01477a223265bce78eb51b9c414b9b55069b8d3d
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Spring-Dragon/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8609ecdce93e77940f8d9740d39334889d401c89
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Spring-Dragon/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1363146af5772d87b5663c4faade1bcb859e06c2
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Spring-Dragon/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e750590f7fd65977c8c7cc36914e6fc8ac38437b
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Spring-Dragon/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: cd6d3f37776be221e7d66eb293a0b56b158e1d04
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Spring-Dragon/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 377f681dce7ff13ce3e3545e79bef91166afd9b7
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Spring-Dragon/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dbb75867176be6023de1a735574926f3b68b9ca0
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Spring-Dragon/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6d366c44ca5e2c267f6648aba290b47b3e10c3be
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Spring-Dragon/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea038321b6d6e9bf0dc294d6db99dfd70abe4b08
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Spring-Dragon/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7958a4896c58860097a24a8ab6e91f4c2eee4ae4
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Spring-Dragon/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9c07492864d294c55b54e52d9d6f3d8e871f31c8
       name: Q8_0.gguf

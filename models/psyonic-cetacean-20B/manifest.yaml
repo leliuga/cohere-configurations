@@ -27,19 +27,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 62
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -49,15 +36,8 @@ variants:
     - models/psyonic-cetacean-20B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 869e81460df5b11b95ac7d845f50721b00ed734d
       name: Q2_K.gguf
@@ -71,15 +51,8 @@ variants:
     - models/psyonic-cetacean-20B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8795bf112e2d549edcdf12278e0904e8f17c3204
       name: Q3_K_L.gguf
@@ -93,15 +66,8 @@ variants:
     - models/psyonic-cetacean-20B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ad5ee1e8b2bb918c873b0238f69282a3f77cc2e5
       name: Q3_K_M.gguf
@@ -115,15 +81,8 @@ variants:
     - models/psyonic-cetacean-20B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71f60691541871886c93df1a6f641563b1daaf2a
       name: Q3_K_S.gguf
@@ -137,15 +96,8 @@ variants:
     - models/psyonic-cetacean-20B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 7b555e5d2a1d04cc492bbd981820c0efe3d4b444
       name: Q4_0.gguf
@@ -159,15 +111,8 @@ variants:
     - models/psyonic-cetacean-20B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 8d15869bafefbf422aa6b137b99b4a81271b893f
       name: Q4_K_M.gguf
@@ -181,15 +126,8 @@ variants:
     - models/psyonic-cetacean-20B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: dd970c8789267dc10e09bb2a69a1630ea6113ca9
       name: Q4_K_S.gguf
@@ -203,15 +141,8 @@ variants:
     - models/psyonic-cetacean-20B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3b5f5243d4af655786bf79ca25e1903b2064bc78
       name: Q5_0.gguf
@@ -225,15 +156,8 @@ variants:
     - models/psyonic-cetacean-20B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 036072a2084eab30148666ebc71ea0c9481d230c
       name: Q5_K_M.gguf
@@ -247,15 +171,8 @@ variants:
     - models/psyonic-cetacean-20B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: e0cac633453c4d463416132f291c9c70ccd312c7
       name: Q5_K_S.gguf
@@ -269,15 +186,8 @@ variants:
     - models/psyonic-cetacean-20B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d69266d7b956c861cc7a506ea45d3e8d0afb4f25
       name: Q6_K.gguf
@@ -291,15 +201,8 @@ variants:
     - models/psyonic-cetacean-20B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "65"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: adab5d23f7da7957ffab0cbaed41d610a8ac7c2f
       name: Q8_0.gguf

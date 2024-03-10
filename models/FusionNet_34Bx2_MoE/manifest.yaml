@@ -1,0 +1,213 @@
+id: FusionNet_34Bx2_MoE
+parent_id: TomGrc/FusionNet_34Bx2_MoE
+name: FusionNet 34Bx2 MoE
+description: ""
+architecture: mixtral
+licence: mit
+object: model
+owned_by: Suqin Zhang
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- moe
+- text-generation
+- en
+- base_model:TomGrc/FusionNet_34Bx2_MoE
+- license:mit
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 64000
+  context_size: 32768
+  embedding_size: 7168
+  attention_head_size: 56
+  key_value_head_size: 8
+  intermediate_size: 20480
+  hidden_layer_size: 60
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 5510d1efc3abb8088110174d453f62ff61ac336c
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q2_K.gguf
+      size: 22391949280
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: fd24bb4cc2b3752a5ed2d2177878e8919cac8f6d
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q3_K_L.gguf
+      size: 31766116320
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: c7bf256ef9351264cffa6f993249c2f6a37c23ec
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q3_K_M.gguf
+      size: 29235640288
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: e36b5bd7d68c1215d1beec9a1cdafd4961ff2ead
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q3_K_S.gguf
+      size: 26316142560
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 06cf44605431b8d6f4fe6ee75fa5c8f941943dfc
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q4_0.gguf
+      size: 34331830240
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 86680e10c0a06466745893e42ab015c8d534ff5a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q4_K_M.gguf
+      size: 36659423200
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 3e77e82adcfa9d0001b907be4a584d525ce0c162
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q4_K_S.gguf
+      size: 34592401376
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: d4842e1f4aa588c95e0038b788442659c80c177c
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q5_0.gguf
+      size: 41876006880
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 23ed813d593e610e688c934f57f88f6d0ba99716
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q5_K_M.gguf
+      size: 43075069920
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: 3970b65b11f3c333ef4ac92de0a46e069085e0df
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q5_K_S.gguf
+      size: 41876006880
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/FusionNet_34Bx2_MoE/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "32768"
+    - --n-gpu-layers
+    - "63"
+    artifacts:
+    - id: bde839e5583776a040d52e1d90e539afb0d599c3
+      name: Q6_K.gguf
+      uri: https://huggingface.co/TheBloke/FusionNet_34Bx2_MoE-GGUF/resolve/main/fusionnet_34bx2_moe.Q6_K.gguf
+      size: 49891694560
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 32768
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "[INST] <<SYS>>\n{system_message}\n<</SYS>>\n{prompt} [/INST]\n"

@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c04de308c834590eab5238e5c64a273bccb2e447
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fec3b3189f6002a51d6a573a65a74627c65b3632
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3176458b0d12408e8cfeaede965191f8ef99d487
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 54ff4efc5a4a5c539a33ccf5a63b0af1136b5532
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9308dcd8e2bc3237681801b0a93d1b138805d42b
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 77dc0a85544e7ee7078f5b5ed67afd8d29f19847
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 653c8b0ed0f49ea4e175cc82b690237d10cf1724
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b98b6499a7fef5c618156c7a414ba207de89e770
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 88ac4028e3aa215bd41a86843954fb107b741073
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 40f9f4cbd0b56d7934b2e5f146ac704ec9030dec
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 0b180c557894132e6d38a62f4b5d73a0b555773e
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/Augmental-13B-v1.50_B/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 10bb3a59b10de9f5d509c55791e6b28bff78919f
       name: Q8_0.gguf

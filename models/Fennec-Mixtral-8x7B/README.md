@@ -1,5 +1,7 @@
 ---
-base_model: mistralai/Mixtral-8x7B-Instruct-v0.1
+language:
+- en
+license: apache-2.0
 tags:
 - mixtral
 - instruct
@@ -8,12 +10,11 @@ tags:
 - gpt4
 - synthetic data
 - distillation
+- moe
+base_model: mistralai/Mixtral-8x7B-Instruct-v0.1
 model-index:
 - name: OpenHermes-Mixtral-8x7B
   results: []
-license: apache-2.0
-language:
-- en
 ---
 
 # OpenHermes - Mixtral 8x7B

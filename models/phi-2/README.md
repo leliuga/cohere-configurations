@@ -1,7 +1,5 @@
 ---
-inference: false
-license: other
-license_name: microsoft-research-license
+license: mit
 license_link: https://huggingface.co/microsoft/phi-2/resolve/main/LICENSE
 language:
 - en
@@ -17,9 +15,19 @@ Phi-2 is a Transformer with **2.7 billion** parameters. It was trained using the
 
 Our model hasn't been fine-tuned through reinforcement learning from human feedback. The intention behind crafting this open-source model is to provide the research community with a non-restricted small model to explore vital safety challenges, such as reducing toxicity, understanding societal biases, enhancing controllability, and more.
 
+## How to Use
+
+Phi-2 has been integrated in the development version (4.37.0.dev) of `transformers`. Until the official version is released through `pip`, ensure that you are doing one of the following:
+
+* When loading the model, ensure that `trust_remote_code=True` is passed as an argument of the `from_pretrained()` function.
+
+* Update your local `transformers` to the development version: `pip uninstall -y transformers && pip install git+https://github.com/huggingface/transformers`. The previous command is an alternative to cloning and installing from the source.
+
+The current `transformers` version can be verified with: `pip list | grep transformers`.
+
 ## Intended Uses
 
-Phi-2 is intended for research purposes only. Given the nature of the training data, the Phi-2 model is best suited for prompts using the QA format, the chat format, and the code format.
+Given the nature of the training data, the Phi-2 model is best suited for prompts using the QA format, the chat format, and the code format.
 
 ### QA Format:
 
@@ -34,6 +42,7 @@ To encourage the model to write more concise answers, you can also try the follo
 Instruct: Write a detailed analogy between mathematics and a lighthouse.
 Output: Mathematics is like a lighthouse. Just as a lighthouse guides ships safely to shore, mathematics provides a guiding light in the world of numbers and logic. It helps us navigate through complex problems and find solutions. Just as a lighthouse emits a steady beam of light, mathematics provides a consistent framework for reasoning and problem-solving. It illuminates the path to understanding and helps us make sense of the world around us.
 ```
+
 where the model generates the text after "Output:".
 
 ### Chat Format:
@@ -66,35 +75,18 @@ def print_prime(n):
            primes.append(num)
    print(primes)
 ```
+
 where the model generates the text after the comments.
 
 **Notes:**
-* Phi-2 is intended for research purposes. The model-generated text/code should be treated as a starting point rather than a definitive solution for potential use cases. Users should be cautious when employing these models in their applications.
-* Direct adoption for production tasks is out of the scope of this research project. As a result, the Phi-2 model has not been tested to ensure that it performs adequately for any production-level application. Please refer to the limitation sections of this document for more details.
-* If you are using `transformers>=4.36.0`, always load the model with `trust_remote_code=True` to prevent side-effects.
+
+* Phi-2 is intended for QA, chat, and code purposes. The model-generated text/code should be treated as a starting point rather than a definitive solution for potential use cases. Users should be cautious when employing these models in their applications.
+
+* Direct adoption for production tasks without evaluation is out of scope of this project. As a result, the Phi-2 model has not been tested to ensure that it performs adequately for any production-level application. Please refer to the limitation sections of this document for more details.
+
+* If you are using `transformers<4.37.0`, always load the model with `trust_remote_code=True` to prevent side-effects.
 
 ## Sample Code
-
-There are four types of execution mode:
-
-1. FP16 / Flash-Attention / CUDA:
-   ```python
-   model = AutoModelForCausalLM.from_pretrained("microsoft/phi-2", torch_dtype="auto", flash_attn=True, flash_rotary=True, fused_dense=True, device_map="cuda", trust_remote_code=True)
-   ```
-2. FP16 / CUDA:
-   ```python
-   model = AutoModelForCausalLM.from_pretrained("microsoft/phi-2", torch_dtype="auto", device_map="cuda", trust_remote_code=True)
-   ```
-3. FP32 / CUDA:
-   ```python
-   model = AutoModelForCausalLM.from_pretrained("microsoft/phi-2", torch_dtype=torch.float32, device_map="cuda", trust_remote_code=True)
-   ```
-4. FP32 / CPU:
-   ```python
-   model = AutoModelForCausalLM.from_pretrained("microsoft/phi-2", torch_dtype=torch.float32, device_map="cpu", trust_remote_code=True)
-   ```
-
-To ensure the maximum compatibility, we recommend using the second execution mode (FP16 / CUDA), as follows:
 
 ```python
 import torch
@@ -115,9 +107,6 @@ text = tokenizer.batch_decode(outputs)[0]
 print(text)
 ```
 
-**Remark:** In the generation function, our model currently does not support beam search (`num_beams > 1`).
-Furthermore, in the forward pass of the model, we currently do not support outputting hidden states or attention values, or using custom input embeddings.
-
 ## Limitations of Phi-2
 
 * Generate Inaccurate Code and Facts: The model may produce incorrect code snippets and statements. Users should treat these outputs as suggestions or starting points, not as definitive or accurate solutions.
@@ -128,9 +117,9 @@ Furthermore, in the forward pass of the model, we currently do not support outpu
 
 * Language Limitations: The model is primarily designed to understand standard English. Informal English, slang, or any other languages might pose challenges to its comprehension, leading to potential misinterpretations or errors in response.
 
-* Potential Societal Biases: Phi-2 is not entirely free from societal biases despite efforts in assuring trainig data safety. There's a possibility it may generate content that mirrors these societal biases, particularly if prompted or instructed to do so. We urge users to be aware of this and to exercise caution and critical thinking when interpreting model outputs.
+* Potential Societal Biases: Phi-2 is not entirely free from societal biases despite efforts in assuring training data safety. There's a possibility it may generate content that mirrors these societal biases, particularly if prompted or instructed to do so. We urge users to be aware of this and to exercise caution and critical thinking when interpreting model outputs.
 
-* Toxicity: Despite being trained with carefully selected data, the model can still produce harmful content if explicitly prompted or instructed to do so. We chose to release the model for research purposes only -- We hope to help the open-source community develop the most effective ways to reduce the toxicity of a model directly after pretraining.
+* Toxicity: Despite being trained with carefully selected data, the model can still produce harmful content if explicitly prompted or instructed to do so. We chose to release the model to help the open-source community develop the most effective ways to reduce the toxicity of a model directly after pretraining.
 
 * Verbosity: Phi-2 being a base model often produces irrelevant or extra text and responses following its first answer to user prompts within a single turn. This is due to its training dataset being primarily textbooks, which results in textbook-like responses.
 
@@ -160,7 +149,7 @@ Furthermore, in the forward pass of the model, we currently do not support outpu
 
 ### License
 
-The model is licensed under the [microsoft-research-license](https://huggingface.co/microsoft/phi-2/resolve/main/LICENSE).
+The model is licensed under the [MIT license](https://huggingface.co/microsoft/phi-2/resolve/main/LICENSE).
 
 ## Trademarks
 

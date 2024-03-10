@@ -24,19 +24,6 @@ config:
   key_value_head_size: 40
   intermediate_size: 13824
   hidden_layer_size: 40
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -46,15 +33,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a99c8698328c64801fe390aa383abebfab5b3ff6
       name: Q2_K.gguf
@@ -68,15 +48,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: a4272fb27377a49a181cf31dc12c4bdb5542186b
       name: Q3_K_L.gguf
@@ -90,15 +63,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d0b1d45627b9ba171834b076bad2794787c7d05b
       name: Q3_K_M.gguf
@@ -112,15 +78,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c99dfd1e60215117c2add9f5e9367543fa8a6057
       name: Q3_K_S.gguf
@@ -134,15 +93,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3c92aa7d1c43df9fcc69d578d356a1edabb06729
       name: Q4_0.gguf
@@ -156,15 +108,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: c76c94719e9364fca9d5275494ebe1e1e01bed7f
       name: Q4_K_M.gguf
@@ -178,15 +123,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 01d8d33211c0bcd646f8a4395e781e152d4a11e4
       name: Q4_K_S.gguf
@@ -200,15 +138,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: fba6c29068ead94f3b110844ce7b96e3f7db44d7
       name: Q5_0.gguf
@@ -222,15 +153,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b3fcf80eb11192c0d40322e61f4c8312b4c7b2ce
       name: Q5_K_M.gguf
@@ -244,15 +168,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b574d84f5725eb9b809c53df15acee5423153d0b
       name: Q5_K_S.gguf
@@ -266,15 +183,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 6b958e13a3657dc800362b1dd1c7e6f86cb7264f
       name: Q6_K.gguf
@@ -288,15 +198,8 @@ variants:
     - models/LLaMA2-13B-TiefighterLR/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "43"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ea90b014e508886a5ced81e961726e0f4590c5a7
       name: Q8_0.gguf

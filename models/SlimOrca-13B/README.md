@@ -1,10 +1,113 @@
 ---
+language:
+- en
 license: cc-by-nc-nd-4.0
 datasets:
 - Open-Orca/SlimOrca
 - ajibawa-2023/SlimOrca-ShareGPT
-language:
-- en
+model-index:
+- name: SlimOrca-13B
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 60.15
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ajibawa-2023/SlimOrca-13B
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 81.4
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ajibawa-2023/SlimOrca-13B
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 57.04
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ajibawa-2023/SlimOrca-13B
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 49.37
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ajibawa-2023/SlimOrca-13B
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 74.43
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ajibawa-2023/SlimOrca-13B
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 39.95
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=ajibawa-2023/SlimOrca-13B
+      name: Open LLM Leaderboard
 ---
 
 **SlimOrca-13B: A General Purpose Intelligent Model**
@@ -69,4 +172,18 @@ Example 2
 
 ![Example 2](https://cdn-uploads.huggingface.co/production/uploads/64aea8ff67511bd3d965697b/riNaxJeTWdCEE4dNP8GWp.png)
 
+
+
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_ajibawa-2023__SlimOrca-13B)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |60.39|
+|AI2 Reasoning Challenge (25-Shot)|60.15|
+|HellaSwag (10-Shot)              |81.40|
+|MMLU (5-Shot)                    |57.04|
+|TruthfulQA (0-shot)              |49.37|
+|Winogrande (5-shot)              |74.43|
+|GSM8k (5-shot)                   |39.95|
 

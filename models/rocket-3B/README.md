@@ -1,11 +1,11 @@
 ---
+language:
+- en
+license: cc-by-sa-4.0
+base_model: stabilityai/stablelm-3b-4e1t
 model-index:
 - name: rocket-3b
   results: []
-license: cc-by-sa-4.0
-language:
-- en
-base_model: stabilityai/stablelm-3b-4e1t
 ---
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/6501bfe0493fd9c8c2e32402/BmbkjOkcTm-YMa-unolmJ.png" alt="Rocket Logo" width="800" style="margin-left:'auto' margin-right:'auto' display:'block'"/>
@@ -22,7 +22,7 @@ base_model: stabilityai/stablelm-3b-4e1t
 
 
 ## Performance
-Despite its compact dimensions, the model achieves outstanding scores in both MT-Bench [MT-Bench](https://huggingface.co/spaces/lmsys/mt-bench) and [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) benchmarks, surpassing the performance of considerably larger models. 
+Despite its compact dimensions, the model achieves outstanding scores in both [MT-Bench](https://huggingface.co/spaces/lmsys/mt-bench) and [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) benchmarks, surpassing the performance of considerably larger models. 
 
 | Model | Size | Alignment | MT-Bench (score) | AlpacaEval (win rate %) |
 |-------------|-----|----|---------------|--------------|
@@ -63,18 +63,18 @@ In AlpacaEval, Rocket 🦝 achieves a near 80% win rate, coupled with an average
 | **Rocket** 🦝 | **79.75** | **1.42** | **1242** |
 
 
-## Other benchmarks
+## [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_pansophic__rocket-3B)
 
-| Metric                | Value                     |
-|-----------------------|---------------------------|
-| Average               | 51.00             |
-| ARC (25-shot)         | 50.51          |
-| HellaSwag (10-shot)   | 76.45    |
-| MMLU (5-shot)        | 45.51        |
-| TruthfulQA (0-shot)   | 54.38   |
-| Winogrande (5-shot)   | 67.8   |
-| GSM8K (5-shot)        | 37.91        |
-| DROP (3-shot)        | 24.49        |
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |55.77|
+|AI2 Reasoning Challenge (25-Shot)|50.60|
+|HellaSwag (10-Shot)              |76.69|
+|MMLU (5-Shot)                    |47.10|
+|TruthfulQA (0-shot)              |55.82|
+|Winogrande (5-shot)              |67.96|
+|GSM8k (5-shot)                   |36.47|
 
 
 ## Intended uses & limitations

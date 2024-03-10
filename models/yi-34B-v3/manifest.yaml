@@ -23,19 +23,6 @@ config:
   key_value_head_size: 8
   intermediate_size: 20480
   hidden_layer_size: 60
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -45,15 +32,8 @@ variants:
     - models/yi-34B-v3/Q2_K/Q2_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 195cd1f5d76331cb20c039fe0a4c72a13d7ec0de
       name: Q2_K.gguf
@@ -67,15 +47,8 @@ variants:
     - models/yi-34B-v3/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f7171d6f11bd5130fc28370de914dea2c31532a3
       name: Q3_K_L.gguf
@@ -89,15 +62,8 @@ variants:
     - models/yi-34B-v3/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ffdb98af8e29e783d3d3190b1ba872eb1aa9a108
       name: Q3_K_M.gguf
@@ -111,15 +77,8 @@ variants:
     - models/yi-34B-v3/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 99c58a4921b63cc2fc069b089f70cf3d3d655967
       name: Q3_K_S.gguf
@@ -133,15 +92,8 @@ variants:
     - models/yi-34B-v3/Q4_0/Q4_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 46f992047bf6ff710c5462b3556f455477f0b465
       name: Q4_0.gguf
@@ -155,15 +107,8 @@ variants:
     - models/yi-34B-v3/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 55e3150aef6797245e920f98d2e7b8a9f4ca9621
       name: Q4_K_M.gguf
@@ -177,15 +122,8 @@ variants:
     - models/yi-34B-v3/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1d6b197b6d1911ab01fce84414f6e8aa1ed266d2
       name: Q4_K_S.gguf
@@ -199,15 +137,8 @@ variants:
     - models/yi-34B-v3/Q5_0/Q5_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 4d521e41117a80bb1031b62e4fa80c2ec98db5f6
       name: Q5_0.gguf
@@ -221,15 +152,8 @@ variants:
     - models/yi-34B-v3/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: d9c9d91b23854e45d6c053e32325f487ba0ced99
       name: Q5_K_M.gguf
@@ -243,15 +167,8 @@ variants:
     - models/yi-34B-v3/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: ae624255c65577a0842ab79afbddd982364b76ec
       name: Q5_K_S.gguf
@@ -265,15 +182,8 @@ variants:
     - models/yi-34B-v3/Q6_K/Q6_K.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 3a4ae28a55e89cc83caa88063ff40c67d9986b2b
       name: Q6_K.gguf
@@ -287,15 +197,8 @@ variants:
     - models/yi-34B-v3/Q8_0/Q8_0.gguf
     - --ctx-size
     - "8192"
-    - --batch-size
-    - "32768"
     - --n-gpu-layers
     - "63"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: df05aeaad7246180257b320a722727f5f950e5a7
       name: Q8_0.gguf

@@ -1,0 +1,135 @@
+id: sonya-medium-x8-MoE
+parent_id: dillfrescott/sonya-medium-x8-MoE
+name: Sonya Medium x8 MoE
+description: ""
+architecture: mixtral
+licence: wtfpl
+object: model
+owned_by: Cross Nastasi
+pipeline: ""
+languages: []
+tags:
+- transformers
+- gguf
+- mixtral
+- base_model:dillfrescott/sonya-medium-x8-MoE
+- license:wtfpl
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 32000
+  context_size: 8192
+  embedding_size: 4096
+  attention_head_size: 32
+  key_value_head_size: 8
+  intermediate_size: 14336
+  hidden_layer_size: 48
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/sonya-medium-x8-MoE/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: 4740c7f294601c427b932d6a778042044bae6055
+      name: Q2_K.gguf
+      uri: https://huggingface.co/TheBloke/sonya-medium-x8-MoE-GGUF/resolve/main/sonya-medium-x8-moe.Q2_K.gguf
+      size: 23391357056
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/sonya-medium-x8-MoE/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: b2f77ffde0fdcf204ef455ec49e8bfc189da8c6a
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/TheBloke/sonya-medium-x8-MoE-GGUF/resolve/main/sonya-medium-x8-moe.Q3_K_M.gguf
+      size: 30463682688
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/sonya-medium-x8-MoE/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: ca7322fb97c5f2549024282c880adaa1657949e1
+      name: Q4_0.gguf
+      uri: https://huggingface.co/TheBloke/sonya-medium-x8-MoE-GGUF/resolve/main/sonya-medium-x8-moe.Q4_0.gguf
+      size: 39572244608
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/sonya-medium-x8-MoE/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: c4e6d7d249e7c6d620903983db58bd81f0580cb0
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/TheBloke/sonya-medium-x8-MoE-GGUF/resolve/main/sonya-medium-x8-moe.Q4_K_M.gguf
+      size: 39572244608
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/sonya-medium-x8-MoE/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: be66b62b0b369b6a1d9a60f2e38b46e316cc45c0
+      name: Q5_0.gguf
+      uri: https://huggingface.co/TheBloke/sonya-medium-x8-MoE-GGUF/resolve/main/sonya-medium-x8-moe.Q5_0.gguf
+      size: 48245672064
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/sonya-medium-x8-MoE/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "51"
+    artifacts:
+    - id: d1a054b10388f93c0eb7b6f8aa3a04483387961f
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/TheBloke/sonya-medium-x8-MoE-GGUF/resolve/main/sonya-medium-x8-moe.Q5_K_M.gguf
+      size: 48245672064
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n"

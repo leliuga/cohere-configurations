@@ -28,19 +28,6 @@ config:
   key_value_head_size: 32
   intermediate_size: 11008
   hidden_layer_size: 32
-  tokens:
-    bos:
-      index: 1
-      value: <s>
-    eos:
-      index: 2
-      value: </s>
-    lf:
-      index: 13
-      value: <0x0A>
-    unk:
-      index: 0
-      value: <unk>
 variants:
   Q2_K:
     dtype: Q2_K
@@ -50,15 +37,8 @@ variants:
     - models/prometheus-7B-v1.0/Q2_K/Q2_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: eda6e628eeaa4265b0079e21f81a3bfb1cf97625
       name: Q2_K.gguf
@@ -72,15 +52,8 @@ variants:
     - models/prometheus-7B-v1.0/Q3_K_L/Q3_K_L.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 2106f2150eb0cc14cbc3eb149cde300300764d5e
       name: Q3_K_L.gguf
@@ -94,15 +67,8 @@ variants:
     - models/prometheus-7B-v1.0/Q3_K_M/Q3_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: db69f8f5c64103dba85c889e6beeb8edee184b36
       name: Q3_K_M.gguf
@@ -116,15 +82,8 @@ variants:
     - models/prometheus-7B-v1.0/Q3_K_S/Q3_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 21b21f45a8a71db9abc83510ccf4d68933b3439d
       name: Q3_K_S.gguf
@@ -138,15 +97,8 @@ variants:
     - models/prometheus-7B-v1.0/Q4_0/Q4_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: f961a49540a5d7369ac2fd936b54fbe48da59ac0
       name: Q4_0.gguf
@@ -160,15 +112,8 @@ variants:
     - models/prometheus-7B-v1.0/Q4_K_M/Q4_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1674b0d3c5e9ec5732a54e49deacf33b07512244
       name: Q4_K_M.gguf
@@ -182,15 +127,8 @@ variants:
     - models/prometheus-7B-v1.0/Q4_K_S/Q4_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 1ba67c6655294a7c0e2b4127b6041a87cbb693d5
       name: Q4_K_S.gguf
@@ -204,15 +142,8 @@ variants:
     - models/prometheus-7B-v1.0/Q5_0/Q5_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 71208ea88f0fca04df2094b245e89224946c7ca5
       name: Q5_0.gguf
@@ -226,15 +157,8 @@ variants:
     - models/prometheus-7B-v1.0/Q5_K_M/Q5_K_M.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 9bf5e0fa5d9f8cd0890333e6a72e429c37e5454f
       name: Q5_K_M.gguf
@@ -248,15 +172,8 @@ variants:
     - models/prometheus-7B-v1.0/Q5_K_S/Q5_K_S.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 25a6d7259ed3b2a7fcc62257d91eb50f7666234f
       name: Q5_K_S.gguf
@@ -270,15 +187,8 @@ variants:
     - models/prometheus-7B-v1.0/Q6_K/Q6_K.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: 055c3348ac42e8a8d14a0965d88ca04822c6044b
       name: Q6_K.gguf
@@ -292,15 +202,8 @@ variants:
     - models/prometheus-7B-v1.0/Q8_0/Q8_0.gguf
     - --ctx-size
     - "4096"
-    - --batch-size
-    - "16384"
     - --n-gpu-layers
     - "35"
-    - --parallel
-    - "4"
-    - --mlock
-    - --numa
-    - --cont-batching
     artifacts:
     - id: b547173ba4d381d5609cc99ff466a3a174c07018
       name: Q8_0.gguf
