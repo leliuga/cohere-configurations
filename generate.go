@@ -13,9 +13,6 @@ import (
 )
 
 const (
-	// BACKENDS_PATH is the path to the backends directory
-	BACKENDS_PATH = "backends"
-
 	// MODELS_PATH is the path to the models directory
 	MODELS_PATH = "models"
 )
@@ -31,52 +28,53 @@ This repository contains the inference configurations for the Co:Here
 
 ### Supported Transformer Architectures by Co:Here
 
-- [X] LLaMA 🦙
-- [x] LLaMA 2 🦙🦙
-- [X] Falcon
 - [X] Alpaca
-- [X] GPT-2
-- [X] GPT4All
+- [X] Aquila 1 & 2
+- [X] Baichuan 1 & 2 + derivations
+- [X] Bert & Nomic-Bert
+- [X] Bloom
 - [X] Chinese LLaMA / Alpaca and Chinese LLaMA-2 / Alpaca-2
+- [X] CodeShell
+- [X] Deepseek
+- [X] Falcon
+- [X] GPT-2 && GPT-J && GPT-NeoX
+- [X] Gemma
+- [X] InternLM2
+- [X] Koala
+- [X] LLaMA 1 & 2
+- [X] MPT
+- [X] Mamba
+- [X] MiniCPM
+- [X] Mistral v0.1 & v0.2
+- [X] Mixtral MoE
+- [X] Orion 14B
+- [X] OpenBuddy 🐶 (Multilingual)
+- [X] Phi 1 & 1.5 & 2
+- [X] Persimmon 8B
+- [X] PLaMo 13B
+- [X] Pygmalion/Metharme
+- [X] Qwen 1 & 2
+- [X] Refact
+- [X] StableLM
+- [X] Starcoder 1 & 2
 - [X] Vigogne (French)
 - [X] Vicuna
-- [X] Koala
-- [X] OpenBuddy 🐶 (Multilingual)
-- [X] Pygmalion/Metharme
 - [X] WizardLM
-- [X] Baichuan 1 & 2 + derivations
-- [X] Aquila 1 & 2
-- [X] Starcoder
-- [X] Mistral AI v0.1 & v0.2
-- [X] Refact
-- [X] Persimmon 8B
-- [X] MPT
-- [X] Bloom
-- [X] StableLM-3b-4e1t
-- [x] Yi
-- [x] Deepseek
-- [x] Qwen
-- [x] Mixtral MoE
-- [x] Phi 2
-- [x] PLaMo 13B
+- [X] Yi
 
 Multimodal
 
-- [x] Llava 1.5
-- [x] Bakllava
+- [x] BakLLaVA
+- [x] LLaVA 1.5 & 1.6
+- [x] MobileVLM 1.7B & 3B
 - [x] Obsidian
 - [x] ShareGPT4V
-
-### Supported backends
-- [X] llama-backend
-- [ ] bert-backend
-- [ ] bart-backend
-- [ ] t5-backend
-- [ ] rwkv-backend
+- [x] Yi-VL
 
 ### Supported platforms
+
 - [X] linux/amd64
-- [ ] darwin/amd64
+- [ ] linux/arm64
 
 ## Requirements
 
@@ -86,14 +84,14 @@ Multimodal
 ## Usage
 
 ` + "``` bash" + `
-docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 github.com/leliuga/cohere run <id>/<variant>
+docker run -it --rm --gpus all -v ./models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run <id>/<variant>
 ` + "```" + `
 
 ## Supported Models ({{len .}})
 
-| ID  | Variants | Context | Embedding | Read more |
+| ID  | Variants | Vocab Size | Context Size | Embedding Size | Read more |
 | --- | -------- | ------- | --------- | --------- |{{range .}}
-| {{.ID}} | {{.Variants}} | {{.ContextSize}} | {{.EmbeddingSize}} | [README.md](models/{{.ID}}/README.md) |{{end}}
+| {{.ID}} | {{.Variants}} | {{.VocabSize}} | {{.ContextSize}} | {{.EmbeddingSize}} | [README.md](models/{{.ID}}/README.md) |{{end}}
 
 ## Memory/Disk Requirements
 As the models are currently fully loaded into memory, you will need adequate disk space to save them and sufficient RAM to load them. At the moment, memory and disk requirements are the same.
@@ -129,9 +127,11 @@ This project is licensed under the Mozilla Public License Version 2.0 License - 
 )
 
 type (
+	// Model is a struct that contains the model configuration.
 	Model struct {
 		ID     string `json:"id"`
 		Config struct {
+			VocabSize     uint64 `json:"vocab_size"`
 			ContextSize   uint64 `json:"context_size"`
 			EmbeddingSize uint64 `json:"embedding_size"`
 		} `json:"config"`
@@ -140,9 +140,11 @@ type (
 		} `json:"variants"`
 	}
 
+	// Item is a struct that contains the model aggregated information.
 	Item struct {
 		ID            string `json:"id"`
 		Variants      string `json:"variants"`
+		VocabSize     uint64 `json:"vocab_size"`
 		ContextSize   uint64 `json:"context_size"`
 		EmbeddingSize uint64 `json:"embedding_size"`
 	}
@@ -195,11 +197,12 @@ func main() {
 		items = append(items, Item{
 			ID:            model.ID,
 			Variants:      strings.Join(variants, " "),
+			VocabSize:     model.Config.VocabSize,
 			ContextSize:   model.Config.ContextSize,
 			EmbeddingSize: model.Config.EmbeddingSize,
 		})
 
-		klog.InfoS("Added model", "area", "generate", "model", model.ID, "variants", variants, "context", model.Config.ContextSize, "embedding", model.Config.EmbeddingSize)
+		klog.InfoS("Added model", "area", "generate", "model", model.ID, "variants", variants, "vocab_size", model.Config.VocabSize, "context_size", model.Config.ContextSize, "embedding_size", model.Config.EmbeddingSize)
 		return nil
 	}); err != nil {
 		klog.ErrorS(err, "Failed to walk models", "area", "generate", "path", MODELS_PATH)
