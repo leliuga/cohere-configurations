@@ -185,17 +185,8 @@ To easily reproduce our results, we have uploaded the filled-in zero/few-shot in
 
 **Note:** those filled-in instructions are specifically tailored for models before alignment and do NOT fit for the specific data format required for chat models.
 
-## Citation
-If you find our work helpful, please cite us:
-```bibtex
-@article{adaptllm,
-  title={Adapting large language models via reading comprehension},
-  author={Cheng, Daixuan and Huang, Shaohan and Wei, Furu},
-  journal={arXiv preprint arXiv:2309.09530},
-  year={2023}
-}
-```
-# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+
+## [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
 Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_AdaptLLM__medicine-chat)
 
 |             Metric              |Value|
@@ -208,3 +199,15 @@ Detailed results can be found [here](https://huggingface.co/datasets/open-llm-le
 |Winogrande (5-shot)              |75.69|
 |GSM8k (5-shot)                   |18.95|
 
+## Citation
+If you find our work helpful, please cite us:
+```bibtex
+@inproceedings{
+cheng2024adapting,
+title={Adapting Large Language Models via Reading Comprehension},
+author={Daixuan Cheng and Shaohan Huang and Furu Wei},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=y886UXPEZ0}
+}
+```
