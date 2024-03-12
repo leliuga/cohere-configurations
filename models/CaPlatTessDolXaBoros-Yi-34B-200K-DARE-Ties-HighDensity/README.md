@@ -1,14 +1,117 @@
 ---
-license: other
-license_name: yi-license
-license_link: https://huggingface.co/01-ai/Yi-34B/blob/main/LICENSE
 language:
 - en
+license: other
 library_name: transformers
-pipeline_tag: text-generation
 tags:
 - text-generation-inference
 - merge
+license_name: yi-license
+license_link: https://huggingface.co/01-ai/Yi-34B/blob/main/LICENSE
+pipeline_tag: text-generation
+model-index:
+- name: CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+  results:
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: AI2 Reasoning Challenge (25-Shot)
+      type: ai2_arc
+      config: ARC-Challenge
+      split: test
+      args:
+        num_few_shot: 25
+    metrics:
+    - type: acc_norm
+      value: 67.41
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: HellaSwag (10-Shot)
+      type: hellaswag
+      split: validation
+      args:
+        num_few_shot: 10
+    metrics:
+    - type: acc_norm
+      value: 85.77
+      name: normalized accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: MMLU (5-Shot)
+      type: cais/mmlu
+      config: all
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 77.44
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: TruthfulQA (0-shot)
+      type: truthful_qa
+      config: multiple_choice
+      split: validation
+      args:
+        num_few_shot: 0
+    metrics:
+    - type: mc2
+      value: 57.84
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: Winogrande (5-shot)
+      type: winogrande
+      config: winogrande_xl
+      split: validation
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 83.11
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+      name: Open LLM Leaderboard
+  - task:
+      type: text-generation
+      name: Text Generation
+    dataset:
+      name: GSM8k (5-shot)
+      type: gsm8k
+      config: main
+      split: test
+      args:
+        num_few_shot: 5
+    metrics:
+    - type: acc
+      value: 61.33
+      name: accuracy
+    source:
+      url: https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard?query=brucethemoose/CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity
+      name: Open LLM Leaderboard
 ---
 
 ### Possibly obsolete, replaced by https://huggingface.co/brucethemoose/Yi-34B-200K-DARE-merge-v5
@@ -112,3 +215,16 @@ https://huggingface.co/fblgit/una-xaberius-34b-v1beta
 https://huggingface.co/chargoddard/Yi-34B-200K-Llama
 
 https://huggingface.co/01-ai/Yi-34B-200K
+# [Open LLM Leaderboard Evaluation Results](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+Detailed results can be found [here](https://huggingface.co/datasets/open-llm-leaderboard/details_brucethemoose__CaPlatTessDolXaBoros-Yi-34B-200K-DARE-Ties-HighDensity)
+
+|             Metric              |Value|
+|---------------------------------|----:|
+|Avg.                             |72.15|
+|AI2 Reasoning Challenge (25-Shot)|67.41|
+|HellaSwag (10-Shot)              |85.77|
+|MMLU (5-Shot)                    |77.44|
+|TruthfulQA (0-shot)              |57.84|
+|Winogrande (5-shot)              |83.11|
+|GSM8k (5-shot)                   |61.33|
+

@@ -70,7 +70,7 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct/Q4_0
 ```
 
-## Supported Models (1001)
+## Supported Models (1000)
 
 | ID      | Variants      | Vocab Size     | Context Size     | Embedding Size     | Read more                             |
 | ------- | ------------- | -------------- | ---------------- | ------------------ | ------------------------------------- |
@@ -432,7 +432,6 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 | MythoMix-L2-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 4096 | 5120 | [README.md](models/MythoMix-L2-13B/README.md) |
 | Naberius-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32002 | 32768 | 4096 | [README.md](models/Naberius-7B/README.md) |
 | Nanbeige-16B-Base | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 59136 | 4096 | 5120 | [README.md](models/Nanbeige-16B-Base/README.md) |
-| Nanbeige-16B-Base-32K | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 59392 | 4096 | 5120 | [README.md](models/Nanbeige-16B-Base-32K/README.md) |
 | Nanbeige-16B-Chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 59136 | 4096 | 5120 | [README.md](models/Nanbeige-16B-Chat/README.md) |
 | Nete-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 4096 | 5120 | [README.md](models/Nete-13B/README.md) |
 | Nethena-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 4096 | 5120 | [README.md](models/Nethena-13B/README.md) |

@@ -79,10 +79,12 @@ To easily reproduce our results, we have uploaded the filled-in zero/few-shot in
 ## Citation
 If you find our work helpful, please cite us:
 ```bibtex
-@article{adaptllm,
-  title={Adapting large language models via reading comprehension},
-  author={Cheng, Daixuan and Huang, Shaohan and Wei, Furu},
-  journal={arXiv preprint arXiv:2309.09530},
-  year={2023}
+@inproceedings{
+cheng2024adapting,
+title={Adapting Large Language Models via Reading Comprehension},
+author={Daixuan Cheng and Shaohan Huang and Furu Wei},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=y886UXPEZ0}
 }
 ```
