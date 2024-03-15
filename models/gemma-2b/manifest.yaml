@@ -1,0 +1,228 @@
+id: gemma-2b
+parent_id: google/gemma-2b
+name: gemma-2b
+description: ""
+architecture: gemma
+licence: other
+object: model
+created: 1710529675
+owned_by: Google
+pipeline: text-generation
+languages: []
+tags:
+- transformers
+- gguf
+- gemma
+- text-generation
+- base_model:google/gemma-2b
+- license:other
+- autotrain_compatible
+- text-generation-inference
+- region:us
+config:
+  vocab_size: 256000
+  context_size: 8192
+  embedding_size: 2048
+  attention_head_size: 8
+  key_value_head_size: 1
+  intermediate_size: 16384
+  hidden_layer_size: 18
+variants:
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: ad423e241610ac67a9fb4d642b1795adc96b4772
+      name: Q2_K.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q2_K.gguf
+      size: 1157923936
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 70242f9fc5bb30abe38823128d380f01f928cf25
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q3_K_L.gguf
+      size: 1465590880
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: a039eafefe7279f0936f040b829ddaad4da68d7a
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q3_K_M.gguf
+      size: 1383801952
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: e595614f9e2f62f31a37fba87fcda889d975aa2d
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q3_K_S.gguf
+      size: 1287980128
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 3dc6544d9444f4d03598d9b5bcb338c61f12514d
+      name: Q4_0.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q4_0.gguf
+      size: 1551189088
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 5fdde74f8909c595cba86585436f4be1d1536148
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q4_K_M.gguf
+      size: 1630262368
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 5f4f4dc18a8e5005e8c39907d891a013f01a451c
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q4_K_S.gguf
+      size: 1559839840
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: b5ac787d682fe927a59235dc5c65bf032dcdcd12
+      name: Q5_0.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q5_0.gguf
+      size: 1798915168
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 74a4614c33937627f82de73143da978d1030b66d
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q5_K_M.gguf
+      size: 1839649888
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: e3f303f6c9663738751317e86a0ef61fa185b51c
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q5_K_S.gguf
+      size: 1798915168
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 66064c4b87cf05bbd5c6c1c505dd307f89328980
+      name: Q6_K.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q6_K.gguf
+      size: 2062124128
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/gemma-2b/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "8192"
+    - --n-gpu-layers
+    - "21"
+    artifacts:
+    - id: 34b364c088a856307b00001903b0ae3aff5fa4df
+      name: Q8_0.gguf
+      uri: https://huggingface.co/leliuga/gemma-2b-GGUF/resolve/main/gemma-2b.Q8_0.gguf
+      size: 2669069408
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 8192
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: ""

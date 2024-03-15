@@ -70,7 +70,7 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct:Q4_0
 ```
 
-## Supported Models (1004)
+## Supported Models (1007)
 
 | ID      | Variants      | Vocab Size     | Context Size     | Embedding Size     | Read more                             |
 | ------- | ------------- | -------------- | ---------------- | ------------------ | ------------------------------------- |
@@ -876,6 +876,8 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 | firefly-llama2-13B-chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 55296 | 4096 | 5120 | [README.md](models/firefly-llama2-13B-chat/README.md) |
 | firefly-llama2-7B-chat | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 55296 | 4096 | 4096 | [README.md](models/firefly-llama2-7B-chat/README.md) |
 | firefly-mixtral-8x7b | Q2_K Q3_K_M Q4_0 Q4_K_M Q5_0 Q5_K_M Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/firefly-mixtral-8x7b/README.md) |
+| gemma-2b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 256000 | 8192 | 2048 | [README.md](models/gemma-2b/README.md) |
+| gemma-2b-it | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 256000 | 8192 | 2048 | [README.md](models/gemma-2b-it/README.md) |
 | genz-13B-v2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 4096 | 5120 | [README.md](models/genz-13B-v2/README.md) |
 | go-bruins | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/go-bruins/README.md) |
 | go-bruins-v2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/go-bruins-v2/README.md) |
@@ -926,6 +928,7 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 | llemma_7b | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32016 | 4096 | 4096 | [README.md](models/llemma_7b/README.md) |
 | loyal-piano-m7 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/loyal-piano-m7/README.md) |
 | lzlv_70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 32000 | 4096 | 8192 | [README.md](models/lzlv_70B/README.md) |
+| mamba-2.8b-hf | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 50280 | 0 | 2560 | [README.md](models/mamba-2.8b-hf/README.md) |
 | manticore-13b-chat-pyg | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 2048 | 5120 | [README.md](models/manticore-13b-chat-pyg/README.md) |
 | med42-70B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S | 32000 | 2048 | 8192 | [README.md](models/med42-70B/README.md) |
 | medalpaca-13B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32001 | 0 | 5120 | [README.md](models/medalpaca-13B/README.md) |
