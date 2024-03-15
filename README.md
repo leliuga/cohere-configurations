@@ -70,7 +70,7 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct/Q4_0
 ```
 
-## Supported Models (1002)
+## Supported Models (1004)
 
 | ID      | Variants      | Vocab Size     | Context Size     | Embedding Size     | Read more                             |
 | ------- | ------------- | -------------- | ---------------- | ------------------ | ------------------------------------- |
@@ -950,6 +950,8 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 | neural-chat-7B-v3-3 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/neural-chat-7B-v3-3/README.md) |
 | neural-chat-7B-v3-3-wizardmath-dare-me | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/neural-chat-7B-v3-3-wizardmath-dare-me/README.md) |
 | neuronovo-7B-v0.3 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/neuronovo-7B-v0.3/README.md) |
+| nomic-embed-text-v1 | F16 F32 Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 30528 | 0 | 768 | [README.md](models/nomic-embed-text-v1/README.md) |
+| nomic-embed-text-v1.5 | F16 F32 Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 30528 | 0 | 768 | [README.md](models/nomic-embed-text-v1.5/README.md) |
 | nontoxic-bagel-34b-v0.2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 64000 | 200000 | 7168 | [README.md](models/nontoxic-bagel-34b-v0.2/README.md) |
 | notus-7B-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/notus-7B-v1/README.md) |
 | notux-8x7b-v1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/notux-8x7b-v1/README.md) |

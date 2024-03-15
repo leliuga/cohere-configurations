@@ -1,0 +1,270 @@
+id: nomic-embed-text-v1.5
+parent_id: nomic-ai/nomic-embed-text-v1.5
+name: nomic-embed-text-v1.5
+description: ""
+architecture: nomic_bert
+licence: apache-2.0
+object: model
+created: 1707947709
+owned_by: Nomic
+pipeline: sentence-similarity
+languages: []
+tags:
+- gguf
+- feature-extraction
+- sentence-similarity
+- en
+- base_model:nomic-ai/nomic-embed-text-v1.5
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 30528
+  context_size: 0
+  embedding_size: 768
+  attention_head_size: 0
+  key_value_head_size: 0
+  intermediate_size: 0
+  hidden_layer_size: 0
+variants:
+  F16:
+    dtype: F16
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/f16/f16.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: d7f9650c6271af9d27f6951932f1e78598c09dff
+      name: F16.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.f16.gguf
+      size: 274290560
+  F32:
+    dtype: F32
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/f32/f32.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 83d1cb119b58f3e762673bd19c4b5328e290363b
+      name: F32.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.f32.gguf
+      size: 547664768
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 07535855b8d7fd54dec2c308a667f9132165f552
+      name: Q2_K.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q2_K.gguf
+      size: 49361088
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: c720bcf4e154d917c48f8632c017ebae3bf4fc96
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q3_K_L.gguf
+      size: 71593088
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: cbe01ddfff3546f9e4c57d543a8425d722883968
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q3_K_M.gguf
+      size: 67169408
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 65d87c3b1d89fd154922c1f2650a26fc80e1f845
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q3_K_S.gguf
+      size: 59649152
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 0cf64556c799dd6a76d1f7adf6e642141579267a
+      name: Q4_0.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q4_0.gguf
+      size: 77802880
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 3ffffbe7cb3ad218f1f492c8acdc9c6b73c6e79a
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q4_K_M.gguf
+      size: 84106624
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 0fc7b93cd5da0be2d31e2aa33c6718816305d705
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q4_K_S.gguf
+      size: 78097792
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 0629d0ac7399224820a90bb579988a9277a60342
+      name: Q5_0.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q5_0.gguf
+      size: 94888768
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: d11e910d929f0eded42897900d9ddcfa31c19462
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q5_K_M.gguf
+      size: 99588928
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 09ae7cce5a5324fce25391914e778e1d6af2ebcc
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q5_K_S.gguf
+      size: 94888768
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 914db4d36e9b457472380a3d586c01884b88e6c1
+      name: Q6_K.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q6_K.gguf
+      size: 113042528
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/nomic-embed-text-v1.5/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "0"
+    - --n-gpu-layers
+    - "3"
+    - --embedding
+    artifacts:
+    - id: 846e212fbafa07defa263cee974d5ac9985adcaa
+      name: Q8_0.gguf
+      uri: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF/resolve/main/nomic-embed-text-v1.5.Q8_0.gguf
+      size: 146146432
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 0
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: ""
