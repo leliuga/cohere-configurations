@@ -70,7 +70,7 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct/Q4_0
 ```
 
-## Supported Models (1000)
+## Supported Models (1002)
 
 | ID      | Variants      | Vocab Size     | Context Size     | Embedding Size     | Read more                             |
 | ------- | ------------- | -------------- | ---------------- | ------------------ | ------------------------------------- |
@@ -798,6 +798,8 @@ nerdctl run -d --name cohere --rm --gpus all -v `pwd`/models/:/app/models -p 300
 | airoboros-mistral2.2-7B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/airoboros-mistral2.2-7B/README.md) |
 | airochronos-33B | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 2048 | 6656 | [README.md](models/airochronos-33B/README.md) |
 | alfred-40B-1023 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 65024 | 0 | 8192 | [README.md](models/alfred-40B-1023/README.md) |
+| all-MiniLM-L12-v2 | F16 F32 Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 30522 | 512 | 384 | [README.md](models/all-MiniLM-L12-v2/README.md) |
+| all-MiniLM-L6-v2 | F16 F32 Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 30522 | 512 | 384 | [README.md](models/all-MiniLM-L6-v2/README.md) |
 | apricot-wildflower-20 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/apricot-wildflower-20/README.md) |
 | bagel-34b-v0.2 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 64000 | 200000 | 7168 | [README.md](models/bagel-34b-v0.2/README.md) |
 | bagel-7B-v0.1 | Q2_K Q3_K_L Q3_K_M Q3_K_S Q4_0 Q4_K_M Q4_K_S Q5_0 Q5_K_M Q5_K_S Q6_K Q8_0 | 32000 | 32768 | 4096 | [README.md](models/bagel-7B-v0.1/README.md) |

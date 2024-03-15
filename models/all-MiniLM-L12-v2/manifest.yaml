@@ -1,0 +1,294 @@
+id: all-MiniLM-L12-v2
+parent_id: sentence-transformers/all-MiniLM-L12-v2
+name: all-MiniLM-L12-v2
+description: ""
+architecture: bert
+licence: apache-2.0
+object: model
+created: 1710504897
+owned_by: Sentence Transformers
+pipeline: sentence-similarity
+languages: []
+tags:
+- sentence-transformers
+- gguf
+- bert
+- feature-extraction
+- sentence-similarity
+- transformers
+- en
+- dataset:s2orc
+- dataset:flax-sentence-embeddings/stackexchange_xml
+- dataset:ms_marco
+- dataset:gooaq
+- dataset:yahoo_answers_topics
+- dataset:code_search_net
+- dataset:search_qa
+- dataset:eli5
+- dataset:snli
+- dataset:multi_nli
+- dataset:wikihow
+- dataset:natural_questions
+- dataset:trivia_qa
+- dataset:embedding-data/sentence-compression
+- dataset:embedding-data/flickr30k-captions
+- dataset:embedding-data/altlex
+- dataset:embedding-data/simple-wiki
+- dataset:embedding-data/QQP
+- dataset:embedding-data/SPECTER
+- dataset:embedding-data/PAQ_pairs
+- dataset:embedding-data/WikiAnswers
+- base_model:sentence-transformers/all-MiniLM-L12-v2
+- license:apache-2.0
+- region:us
+config:
+  vocab_size: 30522
+  context_size: 512
+  embedding_size: 384
+  attention_head_size: 12
+  key_value_head_size: 0
+  intermediate_size: 1536
+  hidden_layer_size: 12
+variants:
+  F16:
+    dtype: F16
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/F16/F16.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 32b64f315ad76422a24f851aec895dff57400513
+      name: F16.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.F16.gguf
+      size: 67308128
+  F32:
+    dtype: F32
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/F32/F32.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: ff3becbe4f82d7c8870c5a22a72222513d1cee2b
+      name: F32.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.F32.gguf
+      size: 133609568
+  Q2_K:
+    dtype: Q2_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q2_K/Q2_K.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 0376f6a4c8efb3e7a474d777d9ab1919258e22b5
+      name: Q2_K.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q2_K.gguf
+      size: 24856864
+  Q3_K_L:
+    dtype: Q3_K_L
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q3_K_L/Q3_K_L.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 48aeafe912d5a6ab26539edd6a32b0ee2e7b364f
+      name: Q3_K_L.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q3_K_L.gguf
+      size: 27345184
+  Q3_K_M:
+    dtype: Q3_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q3_K_M/Q3_K_M.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 259a060e189d926403d3b773fc0da8068f392c23
+      name: Q3_K_M.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q3_K_M.gguf
+      size: 26331424
+  Q3_K_S:
+    dtype: Q3_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q3_K_S/Q3_K_S.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: b4e5961d7f38dec6c193a4fcacf2a265580baf7c
+      name: Q3_K_S.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q3_K_S.gguf
+      size: 24856864
+  Q4_0:
+    dtype: Q4_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q4_0/Q4_0.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 9454000bda5aa4fe66b91621cb29680b6c720147
+      name: Q4_0.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q4_0.gguf
+      size: 25796896
+  Q4_K_M:
+    dtype: Q4_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q4_K_M/Q4_K_M.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 3e0b343c277fad70f95ff5ed11c07f3dc5a41a80
+      name: Q4_K_M.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q4_K_M.gguf
+      size: 28810528
+  Q4_K_S:
+    dtype: Q4_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q4_K_S/Q4_K_S.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 33c0e61438f7690112848f7bd0797999005d450e
+      name: Q4_K_S.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q4_K_S.gguf
+      size: 27824416
+  Q5_0:
+    dtype: Q5_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q5_0/Q5_0.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: feec17eb3e6d2fb845ae0fb575275a86c34ca22b
+      name: Q5_0.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q5_0.gguf
+      size: 28451104
+  Q5_K_M:
+    dtype: Q5_K_M
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q5_K_M/Q5_K_M.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 7faf39c9512eeebcf90e33b16766db0cbb2b40f5
+      name: Q5_K_M.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q5_K_M.gguf
+      size: 30082336
+  Q5_K_S:
+    dtype: Q5_K_S
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q5_K_S/Q5_K_S.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 2544417cafcedf336c08b90d2fbe6c40d32617ea
+      name: Q5_K_S.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q5_K_S.gguf
+      size: 29335840
+  Q6_K:
+    dtype: Q6_K
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q6_K/Q6_K.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: 897d69aacf847607479038def01ad3a41d9a2807
+      name: Q6_K.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q6_K.gguf
+      size: 34699552
+  Q8_0:
+    dtype: Q8_0
+    backend: llama-backend
+    backend_arguments:
+    - --model
+    - models/all-MiniLM-L12-v2/Q8_0/Q8_0.gguf
+    - --ctx-size
+    - "512"
+    - --n-gpu-layers
+    - "15"
+    - --embedding
+    artifacts:
+    - id: e84fd6ad38a84328c5b482ba1e0d054e2472f057
+      name: Q8_0.gguf
+      uri: https://huggingface.co/leliuga/all-MiniLM-L12-v2-GGUF/resolve/main/all-MiniLM-L12-v2.Q8_0.gguf
+      size: 36413728
+inference:
+  chat:
+    options:
+      frequency_penalty: 0.0
+      max_tokens: 512
+      "n": 1
+      presence_penalty: 0.0
+      stop:
+      - </s>
+      - "User:"
+      - "Co:Here:"
+      stream: true
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.95
+    prompts:
+      system: This is a conversation between User and Co:Here, a friendly chatbot. Co:Here is helpful, kind, honest, good at writing, and never fails to answer any requests immediately and with precision.
+      template: ""
