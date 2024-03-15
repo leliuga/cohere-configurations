@@ -84,10 +84,10 @@ Multimodal
 ## Usage
 
 ` + "``` bash" + `
-nerdctl run -d --name cohere --rm --gpus all -v ` + "`pwd`" + `/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run [<id>/<variant>, ...]
+nerdctl run -d --name cohere --rm --gpus all -v ` + "`pwd`" + `/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run [<id>:<variant>, ...]
 
 # example
-nerdctl run -d --name cohere --rm --gpus all -v ` + "`pwd`" + `/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct/Q4_0
+nerdctl run -d --name cohere --rm --gpus all -v ` + "`pwd`" + `/models/:/app/models -p 3000:3000 ghcr.io/leliuga/cohere run Llama-2-7B-32K-Instruct:Q4_0
 ` + "```" + `
 
 ## Supported Models ({{len .}})
